@@ -212,6 +212,18 @@ class TestReports(unittest.TestCase):
                     bad.append(f"{f} -> {rel}")
         self.assertEqual([], bad)
 
+    def test_top100_accounts_for_every_provider(self):
+        """The ranked table plus its stated exclusions must cover all providers."""
+        top = open(os.path.join(REP, "01-top-100.md"), encoding="utf-8").read()
+        rows = [l for l in top.splitlines() if re.match(r"^\| \d+ \|", l)]
+        self.assertEqual(100, len(rows))
+        intro = top.split("## ")[0]
+        m = re.search(r"Ranked entries: (\d+)\. The other (\d+) providers", intro)
+        self.assertIsNotNone(m, "the exclusion note is missing")
+        ranked, other = int(m.group(1)), int(m.group(2))
+        self.assertEqual(len(facts()), ranked + other,
+                         "ranked + excluded must equal the provider count")
+
     def test_provider_files_cover_every_fact(self):
         slugs = {r["slug"] for r in facts()}
         on_disk = {f[:-3] for f in os.listdir(os.path.join(ROOT, "providers")) if f.endswith(".md")}

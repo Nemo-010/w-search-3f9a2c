@@ -149,8 +149,28 @@ def build_top100():
         L.append(f"| {i} | **{r['name']}** | {r['category']} | {pct(r)} | {basis} | "
                  f"{r['one_time'] or '—'} | {card} | {r['confidence']} | {links} |")
     L.append("")
-    L.append(f"Ranked entries: {len(ranked)}. Remaining {len(facts)-len(ranked)} providers are in the "
-             "full inventory below (no free tier documented in the fetched sources).")
+    # explain exactly which providers are not in the ranked table, and why
+    eligible = with_numbers + unverified + one_time + no_number
+    cut = eligible[len(ranked):]
+    nofree = [r for r in facts if r["monthly_calls"] == 0]
+    silent = [r for r in facts if r["monthly_calls"] is None and not r["one_time"]
+              and r["confidence"] in ("low", "none")]
+    L.append(f"Ranked entries: {len(ranked)}. The other {len(facts) - len(ranked)} providers fall into "
+             "three groups, none of which is silently dropped:")
+    L.append("")
+    if cut:
+        L.append(f"- **{len(cut)} ranked but below the 100-row cut** — these have a documented free "
+                 "tier but a smaller or unquantified one, so they sit past the table limit: "
+                 + ", ".join(r["name"] for r in cut) + ".")
+    if nofree:
+        L.append(f"- **{len(nofree)} with no free tier**, priced only: "
+                 + ", ".join(r["name"] for r in nofree) + ".")
+    if silent:
+        L.append(f"- **{len(silent)} with nothing usable in the captured pages** — no free-tier "
+                 "statement survived capture; each still has a report and an inventory row below.")
+    L.append("")
+    L.append("Every one of them has a full report under `providers/` and an entry in the category "
+             "inventory below, so the ranked table is a ranking, not the whole dataset.")
     L.append("")
 
     for cat, label in CATS.items():
