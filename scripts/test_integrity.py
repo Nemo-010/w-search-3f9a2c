@@ -113,8 +113,48 @@ class TestReports(unittest.TestCase):
         on_disk = {f[:-3] for f in os.listdir(os.path.join(ROOT, "providers")) if f.endswith(".md")}
         self.assertEqual(set(), slugs - on_disk)
 
+    def test_deep_reviews_exist_and_cite_snapshots(self):
+        path = os.path.join(REP, "03-deep-reviews.md")
+        self.assertTrue(os.path.exists(path), "reports/03-deep-reviews.md missing")
+        txt = open(path, encoding="utf-8").read()
+        cited = re.findall(r"`(data/snapshots/[^`]+)`", txt)
+        self.assertGreaterEqual(len(cited), 8, "deep reviews cite too few snapshots")
+        missing = [c for c in cited if not os.path.exists(os.path.join(ROOT, c))]
+        self.assertEqual([], missing, "deep reviews cite absent snapshots")
+
+    def test_deep_reviews_cover_the_requested_providers(self):
+        txt = open(os.path.join(REP, "03-deep-reviews.md"), encoding="utf-8").read()
+        for n in range(1, 9):
+            self.assertIn(f"## {n}. ", txt, f"deep review {n} missing")
+
+    def test_deep_review_quotes_match_their_snapshot(self):
+        """Every blockquote in the deep reviews must be verbatim in the cited snapshot."""
+        txt = open(os.path.join(REP, "03-deep-reviews.md"), encoding="utf-8").read()
+        bad = []
+        # a review quote is a "> text" line followed by "> — url (`snapshot`)"
+        lines = txt.splitlines()
+        for i, line in enumerate(lines):
+            if not line.startswith("> ") or line.startswith("> —"):
+                continue
+            quote = line[2:].strip()
+            if not quote:
+                continue
+            att = next((l for l in lines[i + 1:i + 4] if l.startswith("> —")), None)
+            if not att or "`data/snapshots/" not in att:
+                bad.append(f"unattributed quote: {quote[:50]!r}")
+                continue
+            snap = "data/snapshots/" + att.split("`data/snapshots/", 1)[1].split("`", 1)[0]
+            path = os.path.join(ROOT, snap)
+            if not os.path.exists(path):
+                bad.append(f"{snap}: absent")
+                continue
+            body = norm(open(path, encoding="utf-8", errors="replace").read())
+            if norm(quote) not in body:
+                bad.append(f"{snap}: {quote[:50]!r}")
+        self.assertEqual([], bad)
+
     def test_reports_are_reproducible(self):
-        names = ("01-top-100.md", "02-post-analysis.md")
+        names = ("01-top-100.md", "02-post-analysis.md", "03-deep-reviews.md")
 
         def snap():
             out = {}
@@ -124,8 +164,9 @@ class TestReports(unittest.TestCase):
             return out
 
         before = snap()
-        subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "build_reports.py")],
-                       cwd=ROOT, check=True, capture_output=True)
+        for script in ("build_reports.py", "build_reviews.py"):
+            subprocess.run([sys.executable, os.path.join(ROOT, "scripts", script)],
+                           cwd=ROOT, check=True, capture_output=True)
         after = snap()
         for f in before:
             self.assertEqual(before[f], after[f], f"{f} is not reproducible from data/")
