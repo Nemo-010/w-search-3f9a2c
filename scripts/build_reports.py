@@ -199,6 +199,25 @@ def build_post_analysis(ranked):
              + ", ".join(f"{r['name']} {fmt(r['monthly_calls']*5)}" for r in sorted(
                  [x for x in facts if x["monthly_calls"] and x.get("verified", True)], key=rank_key)[:6]) + ".")
     L.append("")
+    # the sum is a call count, not a page-fetch count: say what the big rows are
+    L.append("**Read the total as calls, not as pages.** It adds allowances that are not "
+             "interchangeable: a DOI lookup, a news search, a weather reading and a rendered page all "
+             "count as one call here. The two largest rows are the clearest cases:")
+    L.append("")
+    for slug in ("unpaywall", "naver"):
+        r = next((x for x in facts if x["slug"] == slug), None)
+        if r and r["monthly_calls"] and r.get("verified", True):
+            L.append(f"- {r['name']} ({fmt(r['monthly_calls']*5)}/month at 5 accounts) — "
+                     f"{r['monthly_note']}")
+    L.append("")
+    web_only = [x for x in facts if x["monthly_calls"] and x.get("verified", True)
+                and x["category"] in ("ai-search", "serp-scrape", "browser", "search-engine", "reader")]
+    L.append("Restricting the sum to categories that actually fetch or search the open web "
+             f"(`ai-search`, `serp-scrape`, `browser`, `search-engine`, `reader`) gives "
+             f"**{fmt(sum(x['monthly_calls'] * 5 for x in web_only))} calls/month** across "
+             f"{len(web_only)} providers. That is the number to plan a web gateway against; the "
+             "larger total above is only meaningful as a ceiling.")
+    L.append("")
     unver = [r for r in facts if r["monthly_calls"] and not r.get("verified", True)]
     if unver:
         L.append("Reported but not re-verified in this snapshot run (excluded from the total above):")

@@ -300,8 +300,10 @@ FACTS = {
    one_time=None, card=False, bonus=[], confidence=H,
    quote="Get 100 screenshots per month for free, no credit card required.",
    url="https://apiflash.com/", snap="apiflash/home.txt"),
- "screenshotone": dict(monthly_calls=100, monthly_note="Free plan (100 screenshots/month commonly advertised; not captured in snapshot)",
-   one_time=None, card=None, bonus=[], confidence=L, quote="", url="https://screenshotone.com/pricing/", snap="screenshotone/pricing.txt"),
+ "screenshotone": dict(monthly_calls=100, monthly_note="Free: up to 100 screenshots of any URL per month, including rendering HTML and PDF",
+   one_time=None, card=None, bonus=[], confidence=H,
+   quote="You can take up to 100 screenshots of any URL for free per month, including rendering HTML and PDF.",
+   url="https://screenshotone.com/pricing/", snap="screenshotone/pricing.txt"),
  "urlbox": dict(monthly_calls=0, monthly_note="No free tier documented; paid from $49/mo (5,000 renders)",
    one_time=None, card=None, bonus=[], confidence=H,
    quote="Hi-Fi from $49/mo (5,000 renders), Ultra from $99/mo (15,000 renders)",
@@ -385,8 +387,8 @@ FACTS = {
  "crossref": dict(monthly_calls=None, monthly_note="Free REST API, polite pool benefits with mailto",
    one_time=None, card=False, bonus=[], confidence=H, quote="",
    url="https://www.crossref.org/documentation/retrieve-metadata/rest-api/", snap="crossref/docs.txt"),
- "unpaywall": dict(monthly_calls=3000000, monthly_note="Free API: 100,000 requests/day (~3M/month) with email in request",
-   one_time=None, card=False, bonus=[], confidence=M,
+ "unpaywall": dict(monthly_calls=3000000, monthly_note="Free API: 100,000 calls/day (~3M/month) with an email in the request",
+   one_time=None, card=False, bonus=[], confidence=H,
    quote="Please limit use to 100,000 calls per day.",
    url="https://unpaywall.org/products/api", snap="unpaywall/jsdoc.txt"),
  "doaj": dict(monthly_calls=None, monthly_note="Free API, no key",
@@ -526,8 +528,8 @@ FACTS = {
 
 # Numbers documented elsewhere but not captured verbatim in this snapshot run.
 UNVERIFIED = {"kakao", "ipapi-co", "stackexchange", "newsdata", "thenewsapi",
-              "googlebooks", "unpaywall", "hn-algolia", "nyt", "serpwow",
-              "valueserp", "screenshotone", "scrapeninja"}
+              "googlebooks", "hn-algolia", "nyt", "serpwow",
+              "valueserp", "scrapeninja"}
 
 CAT_ORDER = {"ai-search": 1, "serp-scrape": 2, "browser": 3, "search-engine": 4, "reader": 5,
              "archive": 6, "news": 7, "academic": 8, "misc-api": 9, "llm-search": 10,

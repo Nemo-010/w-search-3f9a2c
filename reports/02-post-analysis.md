@@ -8,6 +8,7 @@ Method: documented recurring monthly free volume × 5. One-time grants are kept 
 
 | Provider | Per account /mo | ×5 | Basis |
 |----------|---:|---:|-------|
+| Unpaywall | 3,000,000 | **15,000,000** | Free API: 100,000 calls/day (~3M/month) with an email in the request |
 | Naver Search API | 750,000 | **3,750,000** | Naver search API: 25,000 calls/day free (~750k/month) with client ID/secret |
 | TinyFish | 360,000 | **1,800,000** | Search free up to 12,000 requests/day (~360k/month) |
 | Open-Meteo | 300,000 | **1,500,000** | Free API: 10,000 calls/day non-commercial (~300k/month), no key or signup |
@@ -40,15 +41,22 @@ Method: documented recurring monthly free volume × 5. One-time grants are kept 
 | SerpStack | 100 | **500** | Free plan: 100 searches/month, non-commercial, JSON only |
 | ApiFlash | 100 | **500** | 100 screenshots/month free, no card |
 | Microlink | 100 | **500** | Free plan: 100 requests/month, no card |
+| ScreenshotOne | 100 | **500** | Free: up to 100 screenshots of any URL per month, including rendering HTML and P |
 | Mediastack | 100 | **500** | Free plan: 100 requests/month, delayed news, all sources/languages, HTTPS |
 | Zenserp | 50 | **250** | 50 free searches/month, no strings attached |
-| **Total** | | **8,062,250** | |
+| **Total** | | **23,062,750** | |
 
-Documented recurring free volume across all re-verified providers, 5 accounts each: **8,062,250 calls/month**. The largest single contributors: Naver Search API 3,750,000, TinyFish 1,800,000, Open-Meteo 1,500,000, Keenable 500,000, The Guardian Open Platform 75,000, ScrapingAnt 50,000.
+Documented recurring free volume across all re-verified providers, 5 accounts each: **23,062,750 calls/month**. The largest single contributors: Unpaywall 15,000,000, Naver Search API 3,750,000, TinyFish 1,800,000, Open-Meteo 1,500,000, Keenable 500,000, The Guardian Open Platform 75,000.
+
+**Read the total as calls, not as pages.** It adds allowances that are not interchangeable: a DOI lookup, a news search, a weather reading and a rendered page all count as one call here. The two largest rows are the clearest cases:
+
+- Unpaywall (15,000,000/month at 5 accounts) — Free API: 100,000 calls/day (~3M/month) with an email in the request
+- Naver Search API (3,750,000/month at 5 accounts) — Naver search API: 25,000 calls/day free (~750k/month) with client ID/secret
+
+Restricting the sum to categories that actually fetch or search the open web (`ai-search`, `serp-scrape`, `browser`, `search-engine`, `reader`) gives **6,339,750 calls/month** across 26 providers. That is the number to plan a web gateway against; the larger total above is only meaningful as a ceiling.
 
 Reported but not re-verified in this snapshot run (excluded from the total above):
 
-- Unpaywall: 3,000,000/month reported — Free API: 100,000 requests/day (~3M/month) with email in request (`unpaywall`, confidence medium)
 - Kakao/Daum Search API: 900,000/month reported — Kakao/Daum search API: 30,000 calls/day free (~900k/month) (not re-verified in this snapshot run) (`kakao`, confidence low)
 - ipapi.co: 30,000/month reported — Free: 1,000 requests/day (~30k/month), no key, HTTPS on free tier (`ipapi-co`, confidence low)
 - StackExchange API: 9,000/month reported — Free: 300 requests/day without key, 10,000/day with a free key (`stackexchange`, confidence medium)
@@ -59,7 +67,6 @@ Reported but not re-verified in this snapshot run (excluded from the total above
 - New York Times API: 500/month reported — Free API keys with per-endpoint daily limits (commonly 500/day); not captured (`nyt`, confidence low)
 - SerpWow: 100/month reported — Free trial (100 requests commonly advertised; number not in fetched snapshot) (`serpwow`, confidence low)
 - ValueSERP: 100/month reported — Free trial plan (100 searches/month commonly advertised; number not present in fetched snapshot) (`valueserp`, confidence low)
-- ScreenshotOne: 100/month reported — Free plan (100 screenshots/month commonly advertised; not captured in snapshot) (`screenshotone`, confidence low)
 
 One-time, first-month totals (not recurring, ×5 accounts where the grant is per account):
 

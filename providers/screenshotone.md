@@ -9,10 +9,12 @@
 ## Free tier
 
 - Documented recurring free volume: **100**
-- Detail: Free plan (100 screenshots/month commonly advertised; not captured in snapshot)
-- Confidence: **low**
+- Detail: Free: up to 100 screenshots of any URL per month, including rendering HTML and PDF
+- Confidence: **high**
 
 ## Evidence
+
+> You can take up to 100 screenshots of any URL for free per month, including rendering HTML and PDF.
 
 Source: https://screenshotone.com/pricing/  
 Snapshot: `data/snapshots/screenshotone/pricing.txt`  

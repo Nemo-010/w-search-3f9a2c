@@ -2489,15 +2489,15 @@
   "ok_sources": 6,
   "llms_ok": true,
   "monthly_calls": 100,
-  "monthly_note": "Free plan (100 screenshots/month commonly advertised; not captured in snapshot)",
+  "monthly_note": "Free: up to 100 screenshots of any URL per month, including rendering HTML and PDF",
   "one_time": null,
   "card": null,
   "bonus": [],
-  "confidence": "low",
-  "verified": false,
+  "confidence": "high",
+  "verified": true,
   "evidence": [
    {
-    "quote": "",
+    "quote": "You can take up to 100 screenshots of any URL for free per month, including rendering HTML and PDF.",
     "url": "https://screenshotone.com/pricing/",
     "snapshot": "data/snapshots/screenshotone/pricing.txt"
    }
@@ -3403,12 +3403,12 @@
   "ok_sources": 4,
   "llms_ok": true,
   "monthly_calls": 3000000,
-  "monthly_note": "Free API: 100,000 requests/day (~3M/month) with email in request",
+  "monthly_note": "Free API: 100,000 calls/day (~3M/month) with an email in the request",
   "one_time": null,
   "card": false,
   "bonus": [],
-  "confidence": "medium",
-  "verified": false,
+  "confidence": "high",
+  "verified": true,
   "evidence": [
    {
     "quote": "Please limit use to 100,000 calls per day.",

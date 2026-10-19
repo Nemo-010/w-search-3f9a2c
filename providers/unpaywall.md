@@ -9,9 +9,9 @@
 ## Free tier
 
 - Documented recurring free volume: **3,000,000**
-- Detail: Free API: 100,000 requests/day (~3M/month) with email in request
+- Detail: Free API: 100,000 calls/day (~3M/month) with an email in the request
 - Card required for free tier: no
-- Confidence: **medium**
+- Confidence: **high**
 
 ## Evidence
 
