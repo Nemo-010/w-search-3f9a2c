@@ -296,9 +296,10 @@ def build_post_analysis(ranked):
     L.append("Read the rate-sample column before the percentage. Rates cover the provider's own answer "
              "on treg's routed workload, not a controlled head-to-head scrape of identical URLs.")
     L.append("")
+    n_rows = sum(len(v) for v in leader["task_results"].values())
     L.append("These numbers move: the window is rolling, so a re-fetch an hour later shifts every "
-             "count slightly. Comparing the 07:18Z and 08:20Z captures the same day, six of sixty-five "
-             "success rates changed and all by 0.2 points or less (tinyfish search 86.8 -> 86.7, exa "
+             "count slightly. Comparing the 07:18Z and 08:20Z captures the same day, six of the "
+             f"{n_rows} rows changed and all by 0.2 points or less (tinyfish search 86.8 -> 86.7, exa "
              "fetch 89.2 -> 89.0, crawl4ai fetch 45.2 -> 45.3, you fetch 43.3 -> 43.1, branddev search "
              "78.1 -> 78.2, justoneapi youtube 70.5 -> 70.6). Treat differences smaller than about a "
              "point as noise, and read the rate-sample column before treating any gap as real.")

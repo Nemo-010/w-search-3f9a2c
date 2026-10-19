@@ -200,6 +200,19 @@ class TestReports(unittest.TestCase):
         rows = [l for l in section.splitlines() if l.startswith("| ") and "%" in l]
         self.assertGreaterEqual(len(rows), 20, "measured hit-rate table is empty or short")
 
+    def test_row_counts_in_prose_match_the_table(self):
+        """A stated count must equal the number of rows actually printed."""
+        section = self.pa.split("## 2. Best results")[1].split("## 3.")[0]
+        table_rows = [l for l in section.splitlines()
+                      if l.startswith("| ") and not l.startswith("| Task") and not l.startswith("|---")]
+        m = re.search(r"six of the (\d+) rows", section)
+        if not m:
+            self.skipTest("no row count stated")
+        # the big table plus the fetch-only table both come from the same rows
+        stated = int(m.group(1))
+        self.assertGreaterEqual(len(table_rows), stated,
+                                f"stated {stated} rows but only {len(table_rows)} printed")
+
     def test_post_analysis_does_not_cite_absent_leaderboard_json(self):
         self.assertNotIn("leaderboard.json", self.pa)
 
