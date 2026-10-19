@@ -4,7 +4,7 @@
 - Home: https://spider.cloud/
 - Pricing: https://spider.cloud/pricing
 - Docs: https://spider.cloud/docs/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/spider/llms.txt`
+- llms.txt: https://spider.cloud/llms.txt
 - First Wayback capture of domain: 20240422 (spider.cloud)
 
 ## Free tier

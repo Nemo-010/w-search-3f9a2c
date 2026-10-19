@@ -4,7 +4,7 @@
 - Home: https://mediastack.com/
 - Pricing: https://mediastack.com/pricing
 - Docs: https://mediastack.com/documentation
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/mediastack/llms.txt`
+- llms.txt: https://mediastack.com/llms.txt
 - First Wayback capture of domain: 20040124 (mediastack.com)
 
 ## Free tier

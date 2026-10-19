@@ -4,7 +4,7 @@
 - Home: https://www.coingecko.com/en/api
 - Pricing: https://www.coingecko.com/en/api/pricing
 - Docs: https://docs.coingecko.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/coingecko/llms.txt`
+- llms.txt: https://docs.coingecko.com/llms.txt
 - First Wayback capture of domain: 20140410 (coingecko.com)
 
 ## Free tier

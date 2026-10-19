@@ -4,7 +4,7 @@
 - Home: https://developers.kakao.com/docs/latest/en/daum-search/common
 - Pricing: https://developers.kakao.com/docs/latest/en/daum-search/common
 - Docs: https://developers.kakao.com/docs/latest/en/daum-search/common
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 0
 - First Wayback capture of domain: 20040102 (kakao.com)
 
 ## Free tier

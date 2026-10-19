@@ -4,7 +4,7 @@
 - Home: https://api.archives-ouvertes.fr/docs
 - Pricing: —
 - Docs: https://api.archives-ouvertes.fr/docs
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/hal/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20070110 (archives-ouvertes.fr)
 
 ## Free tier

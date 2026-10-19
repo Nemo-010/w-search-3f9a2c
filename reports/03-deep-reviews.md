@@ -185,7 +185,7 @@ No independent measurement: this provider is not routed by the treg Web Arena le
 | Home | https://www.zenrows.com/ |
 | Pricing | https://www.zenrows.com/pricing |
 | Docs | https://docs.zenrows.com/ |
-| llms.txt | none published at the probed paths |
+| llms.txt | https://docs.zenrows.com/llms.txt |
 | Recurring free volume | **5,000 calls/month** |
 | Evidence confidence | **high** |
 | Facts row | `data/facts.json` → `zenrows` |
@@ -209,7 +209,7 @@ No independent measurement: this provider is not routed by the treg Web Arena le
 | Home | https://brightdata.com/ |
 | Pricing | https://brightdata.com/pricing |
 | Docs | https://docs.brightdata.com/ |
-| llms.txt | none published at the probed paths |
+| llms.txt | https://docs.brightdata.com/llms.txt |
 | Recurring free volume | **5,000 calls/month** |
 | One-time grant | $2 trial credit (7 days) + $5 bonus when payment method added |
 | Card for free tier | no |

@@ -4,7 +4,7 @@
 - Home: https://www.linkup.so/
 - Pricing: https://www.linkup.so/pricing
 - Docs: https://docs.linkup.so/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/linkup/llms.txt`
+- llms.txt: https://docs.linkup.so/llms.txt
 - First Wayback capture of domain: 20240501 (linkup.so)
 
 ## Free tier

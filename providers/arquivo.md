@@ -4,7 +4,7 @@
 - Home: https://arquivo.pt/
 - Pricing: —
 - Docs: https://arquivo.pt/api
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20090211 (arquivo.pt)
 
 ## Free tier

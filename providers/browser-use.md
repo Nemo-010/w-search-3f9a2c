@@ -4,7 +4,7 @@
 - Home: https://browser-use.com/
 - Pricing: https://browser-use.com/pricing
 - Docs: https://docs.browser-use.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/browser-use/llms.txt`
+- llms.txt: https://docs.browser-use.com/llms.txt
 - First Wayback capture of domain: 20241113 (browser-use.com)
 
 ## Free tier

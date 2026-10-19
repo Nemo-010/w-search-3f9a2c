@@ -4,7 +4,7 @@
 - Home: https://www.newscatcherapi.com/
 - Pricing: https://www.newscatcherapi.com/pricing
 - Docs: https://docs.newscatcherapi.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/newscatcher/llms.txt`
+- llms.txt: https://docs.newscatcherapi.com/llms.txt
 - First Wayback capture of domain: 20200512 (newscatcherapi.com)
 
 ## Free tier

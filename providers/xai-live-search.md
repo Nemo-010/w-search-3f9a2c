@@ -4,7 +4,7 @@
 - Home: https://docs.x.ai/docs/guides/live-search
 - Pricing: https://docs.x.ai/docs/models
 - Docs: https://docs.x.ai/docs/guides/live-search
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 403
 - First Wayback capture of domain: 20110222 (x.ai)
 
 ## Free tier

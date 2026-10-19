@@ -4,7 +4,7 @@
 - Home: https://brand.dev/
 - Pricing: https://brand.dev/pricing
 - Docs: https://docs.brand.dev/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/branddev/llms.txt`
+- llms.txt: https://docs.brand.dev/llms.txt
 - First Wayback capture of domain: 20230724 (brand.dev)
 
 ## Free tier

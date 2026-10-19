@@ -1,6 +1,6 @@
-.PHONY: fetch fetch-fresh digest maturity reports check check-full test all
+.PHONY: fetch fetch-fresh digest maturity llms facts reports check check-full test all
 
-all: fetch digest maturity facts reports test
+all: fetch digest maturity llms facts reports test
 
 fetch:
 	python3 scripts/fetch.py
@@ -14,6 +14,9 @@ digest:
 
 maturity:
 	python3 scripts/maturity.py
+
+llms:
+	python3 scripts/llms.py
 
 facts:
 	python3 scripts/facts.py

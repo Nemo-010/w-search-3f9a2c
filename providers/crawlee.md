@@ -4,7 +4,7 @@
 - Home: https://crawlee.dev/
 - Pricing: —
 - Docs: https://crawlee.dev/docs/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/crawlee/llms.txt`
+- llms.txt: https://crawlee.dev/llms.txt
 - First Wayback capture of domain: 20220804 (crawlee.dev)
 
 ## Free tier

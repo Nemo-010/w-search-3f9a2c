@@ -4,7 +4,7 @@
 - Home: https://open-platform.theguardian.com/
 - Pricing: https://open-platform.theguardian.com/access/
 - Docs: https://open-platform.theguardian.com/documentation/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 0
 
 ## Free tier
 

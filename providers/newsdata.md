@@ -4,7 +4,7 @@
 - Home: https://newsdata.io/
 - Pricing: https://newsdata.io/pricing
 - Docs: https://newsdata.io/documentation
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/newsdata/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20210417 (newsdata.io)
 
 ## Free tier

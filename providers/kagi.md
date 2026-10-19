@@ -4,7 +4,7 @@
 - Home: https://kagi.com/api
 - Pricing: https://kagi.com/api/pricing
 - Docs: https://help.kagi.com/kagi/api/search.html
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/kagi/llms.txt`
+- llms.txt: https://kagi.com/api/docs/llms.txt
 - First Wayback capture of domain: 20040304 (kagi.com)
 
 ## Free tier

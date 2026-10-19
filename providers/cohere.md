@@ -4,7 +4,7 @@
 - Home: https://docs.cohere.com/
 - Pricing: https://cohere.com/pricing
 - Docs: https://docs.cohere.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/cohere/llms.txt`
+- llms.txt: https://docs.cohere.com/llms.txt
 - First Wayback capture of domain: 20040127 (cohere.com)
 
 ## Free tier

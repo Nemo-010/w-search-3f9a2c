@@ -4,7 +4,7 @@
 - Home: https://librey.org/
 - Pricing: —
 - Docs: https://github.com/Ahwxorg/LibreY
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/librey/llms.txt`
+- llms.txt: none usable — belongs to github.com, not the provider
 - First Wayback capture of domain: 20230831 (librey.org)
 
 ## Free tier

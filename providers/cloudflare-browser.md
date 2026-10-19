@@ -4,7 +4,7 @@
 - Home: https://developers.cloudflare.com/browser-rendering/
 - Pricing: https://developers.cloudflare.com/browser-rendering/platform/pricing/
 - Docs: https://developers.cloudflare.com/browser-rendering/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/cloudflare-browser/llms.txt`
+- llms.txt: https://developers.cloudflare.com/browser-rendering/llms.txt
 - First Wayback capture of domain: 20090901 (cloudflare.com)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://docs.figshare.com/
 - Pricing: —
 - Docs: https://docs.figshare.com/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20110113 (figshare.com)
 
 ## Free tier

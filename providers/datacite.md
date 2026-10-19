@@ -4,7 +4,7 @@
 - Home: https://support.datacite.org/docs/api
 - Pricing: —
 - Docs: https://support.datacite.org/docs/api
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20170708 (support.datacite.org)
 
 ## Free tier

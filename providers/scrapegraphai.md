@@ -4,7 +4,7 @@
 - Home: https://scrapegraphai.com/
 - Pricing: https://scrapegraphai.com/pricing
 - Docs: https://docs.scrapegraphai.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scrapegraphai/llms.txt`
+- llms.txt: https://docs.scrapegraphai.com/llms.txt
 - First Wayback capture of domain: 20240509 (scrapegraphai.com)
 
 ## Free tier

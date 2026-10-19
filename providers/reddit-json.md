@@ -4,7 +4,7 @@
 - Home: https://www.reddit.com/dev/api/
 - Pricing: —
 - Docs: https://www.reddit.com/dev/api/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20050725 (reddit.com)
 
 ## Free tier

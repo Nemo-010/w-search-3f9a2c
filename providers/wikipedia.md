@@ -4,7 +4,7 @@
 - Home: https://api.wikimedia.org/
 - Pricing: —
 - Docs: https://api.wikimedia.org/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/wikipedia/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20040413 (wikimedia.org)
 
 ## Free tier

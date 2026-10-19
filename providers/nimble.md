@@ -4,7 +4,7 @@
 - Home: https://nimbleway.com/
 - Pricing: https://nimbleway.com/pricing
 - Docs: https://docs.nimbleway.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/nimble/llms.txt`
+- llms.txt: https://docs.nimbleway.com/llms.txt
 - First Wayback capture of domain: 20130717 (nimbleway.com)
 
 ## Free tier

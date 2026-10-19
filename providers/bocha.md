@@ -4,7 +4,7 @@
 - Home: https://open.bochaai.com/
 - Pricing: —
 - Docs: —
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20241011 (open.bochaai.com)
 
 ## Free tier

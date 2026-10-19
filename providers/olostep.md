@@ -4,7 +4,7 @@
 - Home: https://www.olostep.com/
 - Pricing: https://www.olostep.com/pricing
 - Docs: https://docs.olostep.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/olostep/llms.txt`
+- llms.txt: https://docs.olostep.com/llms.txt
 - First Wayback capture of domain: 20230724 (olostep.com)
 
 ## Free tier

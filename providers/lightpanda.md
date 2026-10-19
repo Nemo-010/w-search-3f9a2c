@@ -4,7 +4,7 @@
 - Home: https://lightpanda.io/
 - Pricing: https://lightpanda.io/
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/lightpanda/llms.txt`
+- llms.txt: https://lightpanda.io/llms.txt
 - First Wayback capture of domain: 20240322 (lightpanda.io)
 
 ## Free tier

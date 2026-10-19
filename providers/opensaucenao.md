@@ -4,7 +4,7 @@
 - Home: https://saucenao.com/
 - Pricing: https://saucenao.com/user.php?page=search-api
 - Docs: https://saucenao.com/user.php?page=search-api
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 403
 - First Wayback capture of domain: 20081101 (saucenao.com)
 
 ## Free tier

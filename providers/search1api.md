@@ -4,7 +4,7 @@
 - Home: https://search1api.com/
 - Pricing: https://search1api.com/pricing
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/search1api/llms.txt`
+- llms.txt: https://search1api.com/llms.txt
 - First Wayback capture of domain: 20240402 (search1api.com)
 
 ## Free tier

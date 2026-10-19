@@ -4,7 +4,7 @@
 - Home: https://urlscan.io/
 - Pricing: https://urlscan.io/pricing/
 - Docs: https://urlscan.io/docs/api/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/urlscan/llms.txt`
+- llms.txt: https://docs.urlscan.io/llms.txt
 - First Wayback capture of domain: 20170314 (urlscan.io)
 
 ## Free tier

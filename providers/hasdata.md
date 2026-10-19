@@ -4,7 +4,7 @@
 - Home: https://hasdata.com/
 - Pricing: https://hasdata.com/pricing
 - Docs: https://docs.hasdata.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/hasdata/llms.txt`
+- llms.txt: https://docs.hasdata.com/llms.txt
 - First Wayback capture of domain: 20110207 (hasdata.com)
 
 ## Free tier

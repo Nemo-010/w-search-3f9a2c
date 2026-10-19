@@ -4,7 +4,7 @@
 - Home: https://brave.com/search/api/
 - Pricing: https://brave.com/search/api/#pricing
 - Docs: https://api.search.brave.com/app/documentation
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 0
 - First Wayback capture of domain: 20040102 (brave.com)
 
 ## Free tier

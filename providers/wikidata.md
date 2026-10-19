@@ -4,7 +4,7 @@
 - Home: https://query.wikidata.org/
 - Pricing: —
 - Docs: https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20150919 (query.wikidata.org)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://github.com/khoj-ai/khoj
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/khoj/llms.txt`
+- llms.txt: https://docs.github.com/llms.txt
 - GitHub: khoj-ai/khoj — ★37741, created 2021-08-16, last push 2026-08-02, license AGPL-3.0
 
 ## Free tier

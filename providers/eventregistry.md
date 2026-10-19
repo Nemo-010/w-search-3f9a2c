@@ -4,7 +4,7 @@
 - Home: https://eventregistry.org/
 - Pricing: https://eventregistry.org/pricing
 - Docs: https://eventregistry.org/documentation
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/eventregistry/llms.txt`
+- llms.txt: https://eventregistry.org/llms.txt
 - First Wayback capture of domain: 20121223 (eventregistry.org)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://www.onkernel.com/
 - Pricing: https://www.onkernel.com/pricing
 - Docs: https://docs.onkernel.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/kernel/llms.txt`
+- llms.txt: https://docs.onkernel.com/llms.txt
 - First Wayback capture of domain: 20170616 (onkernel.com)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://serper.dev/
 - Pricing: https://serper.dev/pricing
 - Docs: https://docs.serper.dev/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20221006 (serper.dev)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://serpapi.com/
 - Pricing: https://serpapi.com/pricing
 - Docs: https://serpapi.com/search-api
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/serpapi/llms.txt`
+- llms.txt: https://serpapi.com/llms.txt
 - First Wayback capture of domain: 20130413 (serpapi.com)
 
 ## Free tier

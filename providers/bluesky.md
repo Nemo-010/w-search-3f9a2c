@@ -4,7 +4,7 @@
 - Home: https://docs.bsky.app/
 - Pricing: —
 - Docs: https://docs.bsky.app/docs/api/app-bsky-feed-search-posts
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/bluesky/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20221018 (bsky.app)
 
 ## Free tier

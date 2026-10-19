@@ -4,7 +4,7 @@
 - Home: https://github.com/firecrawl/firecrawl
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/firecrawl-oss/llms.txt`
+- llms.txt: https://docs.github.com/llms.txt
 - GitHub: firecrawl/firecrawl — ★192859, created 2024-04-15, last push 2026-10-19, license AGPL-3.0
 
 ## Free tier

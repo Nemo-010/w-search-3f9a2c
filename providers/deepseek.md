@@ -4,7 +4,7 @@
 - Home: https://platform.deepseek.com/
 - Pricing: https://api-docs.deepseek.com/quick_start/pricing
 - Docs: https://api-docs.deepseek.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/deepseek/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20040827 (deepseek.com)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://teclis.com/
 - Pricing: —
 - Docs: —
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20040128 (teclis.com)
 
 ## Free tier

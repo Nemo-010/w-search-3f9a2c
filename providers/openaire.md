@@ -4,7 +4,7 @@
 - Home: https://www.openaire.eu/
 - Pricing: —
 - Docs: https://graph.openaire.eu/docs/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20100116 (openaire.eu)
 
 ## Free tier

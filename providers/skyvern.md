@@ -4,7 +4,7 @@
 - Home: https://www.skyvern.com/
 - Pricing: https://www.skyvern.com/pricing
 - Docs: https://docs.skyvern.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/skyvern/llms.txt`
+- llms.txt: https://docs.skyvern.com/llms.txt
 - First Wayback capture of domain: 20130424 (skyvern.com)
 
 ## Free tier

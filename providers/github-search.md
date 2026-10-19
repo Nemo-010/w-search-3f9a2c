@@ -4,7 +4,7 @@
 - Home: https://docs.github.com/en/rest/search
 - Pricing: —
 - Docs: https://docs.github.com/en/rest/search
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 
 ## Free tier
 

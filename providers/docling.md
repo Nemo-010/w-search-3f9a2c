@@ -4,7 +4,7 @@
 - Home: https://github.com/docling-project/docling
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/docling/llms.txt`
+- llms.txt: https://docs.github.com/llms.txt
 - GitHub: docling-project/docling — ★69086, created 2024-07-09, last push 2026-10-18, license MIT
 
 ## Free tier

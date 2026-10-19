@@ -539,6 +539,8 @@ CAT_ORDER = {"ai-search": 1, "serp-scrape": 2, "browser": 3, "search-engine": 4,
 def main():
     cands = json.load(open(os.path.join(DATA, "candidates.json")))["providers"]
     summary = {r["slug"]: r for r in json.load(open(os.path.join(DATA, "fetch_summary.json")))}
+    llms = json.load(open(os.path.join(DATA, "llms.json"))) if os.path.exists(
+        os.path.join(DATA, "llms.json")) else {}
     out = []
     for p in cands:
         slug = p["slug"]
@@ -547,11 +549,16 @@ def main():
             "home": p["home"], "pricing": p["pricing"], "docs": p["docs"], "llms": p["llms"],
             "github": summary.get(slug, {}).get("github"),
             "ok_sources": summary.get(slug, {}).get("ok_sources", 0),
-            "llms_ok": summary.get(slug, {}).get("llms_ok", False),
+            # llms_ok is True only when a real llms.txt was verified by scripts/llms.py,
+            # not merely when a probe returned HTTP 200
+            "llms_ok": bool((llms.get(slug) or {}).get("url")),
+            "llms_bytes": (llms.get(slug) or {}).get("bytes"),
+            "llms_reject": (llms.get(slug) or {}).get("reason"),
         }
         f = FACTS.get(slug)
         if f:
             base.update(f)
+            # prefer the verified URL from llms.json over the configured one
             base["verified"] = f.get("verified", True) and slug not in UNVERIFIED
             base["evidence"] = [{"quote": f.get("quote", ""), "url": f.get("url", ""),
                                  "snapshot": ("data/snapshots/" + f["snap"]) if f.get("snap") else ""}]
@@ -560,6 +567,9 @@ def main():
             base.update({"monthly_calls": None, "monthly_note": "",
                          "one_time": None, "card": None, "bonus": [], "confidence": "none",
                          "verified": False, "evidence": []})
+        # a URL verified by scripts/llms.py always wins over the configured one
+        verified_llms = (llms.get(slug) or {}).get("url")
+        base["llms"] = verified_llms or None
         out.append(base)
     out.sort(key=lambda r: (CAT_ORDER.get(r["category"], 99), r["name"].lower()))
     json.dump(out, open(os.path.join(DATA, "facts.json"), "w"), indent=1)

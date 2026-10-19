@@ -4,7 +4,7 @@
 - Home: https://netnut.io/
 - Pricing: https://netnut.io/pricing/
 - Docs: https://help.netnut.io/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/netnut/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20170114 (netnut.io)
 
 ## Free tier

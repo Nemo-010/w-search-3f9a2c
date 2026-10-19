@@ -4,7 +4,7 @@
 - Home: https://www.base-search.net/
 - Pricing: https://www.base-search.net/about/en/
 - Docs: https://api.base-search.net/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/openalex-base/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20070427 (base-search.net)
 
 ## Free tier

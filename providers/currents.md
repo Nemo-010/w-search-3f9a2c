@@ -4,7 +4,7 @@
 - Home: https://currentsapi.services/
 - Pricing: https://currentsapi.services/en/pricing
 - Docs: https://currentsapi.services/en/docs/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/currents/llms.txt`
+- llms.txt: https://currentsapi.services/llms.txt
 - First Wayback capture of domain: 20200104 (currentsapi.services)
 
 ## Free tier

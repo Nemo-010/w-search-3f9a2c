@@ -4,7 +4,7 @@
 - Home: https://www.crossref.org/documentation/retrieve-metadata/rest-api/
 - Pricing: —
 - Docs: https://www.crossref.org/documentation/retrieve-metadata/rest-api/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20040325 (crossref.org)
 
 ## Free tier

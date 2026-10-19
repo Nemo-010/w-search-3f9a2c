@@ -4,7 +4,7 @@
 - Home: https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool
 - Pricing: https://www.anthropic.com/pricing
 - Docs: https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/anthropic-websearch/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20040123 (anthropic.com)
 
 ## Free tier

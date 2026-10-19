@@ -4,7 +4,7 @@
 - Home: https://openrouter.ai/
 - Pricing: https://openrouter.ai/pricing
 - Docs: https://openrouter.ai/docs
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/openrouter/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20230525 (openrouter.ai)
 
 ## Free tier

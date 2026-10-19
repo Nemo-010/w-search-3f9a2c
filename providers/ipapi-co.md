@@ -4,7 +4,7 @@
 - Home: https://ipapi.co/
 - Pricing: https://ipapi.co/pricing/
 - Docs: https://ipapi.co/api/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/ipapi-co/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 
 ## Free tier
 

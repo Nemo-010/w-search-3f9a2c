@@ -4,7 +4,7 @@
 - Home: https://www.gdeltproject.org/
 - Pricing: —
 - Docs: https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20140131 (gdeltproject.org)
 
 ## Free tier

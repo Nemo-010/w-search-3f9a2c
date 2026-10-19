@@ -4,7 +4,7 @@
 - Home: https://www.semanticscholar.org/product/api
 - Pricing: https://www.semanticscholar.org/product/api
 - Docs: https://api.semanticscholar.org/api-docs/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20151103 (semanticscholar.org)
 
 ## Free tier

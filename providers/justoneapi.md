@@ -4,7 +4,7 @@
 - Home: https://justoneapi.com/
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/justoneapi/llms.txt`
+- llms.txt: https://justoneapi.com/llms.txt
 - First Wayback capture of domain: 20250712 (justoneapi.com)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://github.com/projectdiscovery/katana
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/katana/llms.txt`
+- llms.txt: https://docs.github.com/llms.txt
 - GitHub: projectdiscovery/katana — ★17686, created 2021-01-02, last push 2026-10-13, license MIT
 
 ## Free tier

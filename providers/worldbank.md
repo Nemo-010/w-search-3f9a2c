@@ -4,7 +4,7 @@
 - Home: https://datahelpdesk.worldbank.org/knowledgebase/topics/125589
 - Pricing: —
 - Docs: https://datahelpdesk.worldbank.org/knowledgebase/topics/125589
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 0
 - First Wayback capture of domain: 20130401 (datahelpdesk.worldbank.org)
 
 ## Free tier

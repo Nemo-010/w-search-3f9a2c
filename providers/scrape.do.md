@@ -4,7 +4,7 @@
 - Home: https://scrape.do/
 - Pricing: https://scrape.do/pricing/
 - Docs: https://scrape.do/docs/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scrape.do/llms.txt`
+- llms.txt: https://scrape.do/llms.txt
 - First Wayback capture of domain: 20201031 (scrape.do)
 
 ## Free tier

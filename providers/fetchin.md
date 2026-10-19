@@ -4,7 +4,7 @@
 - Home: https://fetchin.io/
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/fetchin/llms.txt`
+- llms.txt: https://fetchin.io/docs/llms.txt
 
 ## Free tier
 

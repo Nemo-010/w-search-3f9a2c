@@ -4,7 +4,7 @@
 - Home: https://github.com/benbusby/whoogle-search
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/whoogle/llms.txt`
+- llms.txt: https://docs.github.com/llms.txt
 - GitHub: benbusby/whoogle-search — ★11564, created 2020-01-21, last push 2026-08-14, license MIT
 
 ## Free tier

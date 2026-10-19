@@ -4,7 +4,7 @@
 - Home: https://www.octoparse.com/
 - Pricing: https://www.octoparse.com/pricing
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/octoparse/llms.txt`
+- llms.txt: https://www.octoparse.com/llms.txt
 - First Wayback capture of domain: 20160324 (octoparse.com)
 
 ## Free tier

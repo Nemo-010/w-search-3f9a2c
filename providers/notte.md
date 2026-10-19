@@ -4,7 +4,7 @@
 - Home: https://www.notte.cc/
 - Pricing: https://www.notte.cc/pricing
 - Docs: https://docs.notte.cc/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/notte/llms.txt`
+- llms.txt: https://docs.notte.cc/llms.txt
 - First Wayback capture of domain: 20240925 (notte.cc)
 
 ## Free tier

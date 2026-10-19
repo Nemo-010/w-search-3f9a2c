@@ -4,7 +4,7 @@
 - Home: https://www.ncbi.nlm.nih.gov/books/NBK25501/
 - Pricing: —
 - Docs: https://www.ncbi.nlm.nih.gov/books/NBK25501/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/pubmed/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20040105 (ncbi.nlm.nih.gov)
 
 ## Free tier

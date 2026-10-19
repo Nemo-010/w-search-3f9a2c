@@ -4,7 +4,7 @@
 - Home: https://scrapeops.io/proxy-api/
 - Pricing: https://scrapeops.io/pricing/
 - Docs: https://scrapeops.io/docs/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20211207 (scrapeops.io)
 
 ## Free tier

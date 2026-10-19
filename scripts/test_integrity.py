@@ -57,6 +57,46 @@ class TestEvidence(unittest.TestCase):
                         break
         self.assertEqual([], bad, "evidence quotes not present in their snapshot")
 
+    def test_llms_urls_are_verified_markdown_indexes(self):
+        """A linked llms.txt must exist, be markdown, and belong to the provider."""
+        bad = []
+        for r in facts():
+            url = r.get("llms")
+            if not url:
+                continue
+            if not r.get("llms_ok"):
+                bad.append(f"{r['slug']}: has a url but is not verified")
+            path = os.path.join(ROOT, "data", "snapshots", r["slug"], "llms.txt")
+            if not os.path.exists(path):
+                bad.append(f"{r['slug']}: no snapshot for {url}")
+                continue
+            body = open(path, "rb").read()
+            if not body:
+                bad.append(f"{r['slug']}: empty body")
+                continue
+            head = body[:400].decode("utf-8", "replace").lstrip().lower()
+            if head.startswith(("<!doctype", "<html", "<head", "<?xml")):
+                bad.append(f"{r['slug']}: serves HTML at a .txt path")
+            text = body[:1500].decode("utf-8", "replace")
+            if not re.search(r"^#{1,3} |^> ", text, re.M):
+                bad.append(f"{r['slug']}: not a markdown index")
+        self.assertEqual([], bad)
+
+    def test_top100_links_only_verified_llms_files(self):
+        top = open(os.path.join(REP, "01-top-100.md"), encoding="utf-8").read()
+        rows = [l for l in top.splitlines() if re.match(r"^\| \d+ \|", l)]
+        unverified = {r["slug"] for r in facts() if r.get("llms") and not r.get("llms_ok")}
+        self.assertEqual(set(), unverified)
+        by_name = {r["name"]: r for r in facts()}
+        bad = []
+        for line in rows:
+            cells = line.split("|")
+            name = re.sub(r"[*`]", "", cells[2]).strip()
+            r = by_name.get(name)
+            if r and "[llms](" in line and not r.get("llms_ok"):
+                bad.append(name)
+        self.assertEqual([], bad)
+
     def test_bonus_claims_appear_in_the_providers_own_snapshots(self):
         """A signup bonus is a factual claim about a provider's offer, so the words
         must be in a page captured from that provider."""

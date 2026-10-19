@@ -4,7 +4,7 @@
 - Home: https://www.browserbase.com/
 - Pricing: https://www.browserbase.com/pricing
 - Docs: https://docs.browserbase.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/browserbase/llms.txt`
+- llms.txt: https://docs.browserbase.com/llms.txt
 - First Wayback capture of domain: 20040121 (browserbase.com)
 
 ## Free tier

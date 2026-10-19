@@ -4,7 +4,7 @@
 - Home: https://rapidapi.com/
 - Pricing: https://rapidapi.com/products/hub/pricing
 - Docs: https://docs.rapidapi.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/rapidapi/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20130617 (rapidapi.com)
 
 ## Free tier

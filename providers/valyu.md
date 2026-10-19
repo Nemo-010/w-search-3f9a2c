@@ -4,7 +4,7 @@
 - Home: https://valyu.ai/
 - Pricing: https://docs.valyu.ai/pricing
 - Docs: https://docs.valyu.ai/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/valyu/llms.txt`
+- llms.txt: https://docs.valyu.ai/llms.txt
 - First Wayback capture of domain: 20200626 (valyu.ai)
 
 ## Free tier

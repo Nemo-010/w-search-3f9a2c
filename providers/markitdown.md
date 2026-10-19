@@ -4,7 +4,7 @@
 - Home: https://github.com/microsoft/markitdown
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/markitdown/llms.txt`
+- llms.txt: https://docs.github.com/llms.txt
 - GitHub: microsoft/markitdown — ★190961, created 2024-11-13, last push 2026-10-04, license MIT
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://commoncrawl.org/
 - Pricing: —
 - Docs: https://commoncrawl.org/cc-index
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20080328 (commoncrawl.org)
 
 ## Free tier

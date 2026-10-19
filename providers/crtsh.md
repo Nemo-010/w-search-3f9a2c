@@ -4,7 +4,7 @@
 - Home: https://crt.sh/
 - Pricing: —
 - Docs: https://github.com/crtsh
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/crtsh/llms.txt`
+- llms.txt: none usable — belongs to github.com, not the provider
 - First Wayback capture of domain: 20151224 (crt.sh)
 
 ## Free tier

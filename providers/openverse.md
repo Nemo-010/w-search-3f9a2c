@@ -4,7 +4,7 @@
 - Home: https://api.openverse.org/
 - Pricing: https://api.openverse.org/
 - Docs: https://api.openverse.org/v1/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20040123 (openverse.org)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://fivefilters.org/content-only/
 - Pricing: https://fivefilters.org/content-only/#download
 - Docs: https://fivefilters.org/content-only/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20091111 (fivefilters.org)
 
 ## Free tier

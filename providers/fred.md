@@ -4,7 +4,7 @@
 - Home: https://fred.stlouisfed.org/docs/api/fred/
 - Pricing: —
 - Docs: https://fred.stlouisfed.org/docs/api/fred/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/fred/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20160617 (fred.stlouisfed.org)
 
 ## Free tier

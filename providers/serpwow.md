@@ -4,7 +4,7 @@
 - Home: https://www.serpwow.com/
 - Pricing: https://www.serpwow.com/pricing
 - Docs: https://www.serpwow.com/docs
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/serpwow/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20190719 (serpwow.com)
 
 ## Free tier

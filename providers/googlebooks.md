@@ -4,7 +4,7 @@
 - Home: https://developers.google.com/books
 - Pricing: —
 - Docs: https://developers.google.com/books
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20040103 (google.com)
 
 ## Free tier

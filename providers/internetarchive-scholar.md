@@ -4,7 +4,7 @@
 - Home: https://scholar.archive.org/
 - Pricing: —
 - Docs: https://scholar.archive.org/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 0
 - First Wayback capture of domain: 20201004 (scholar.archive.org)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://hn.algolia.com/api
 - Pricing: —
 - Docs: https://hn.algolia.com/api
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20140127 (hn.algolia.com)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://zenserp.com/
 - Pricing: https://zenserp.com/pricing
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/zenserp/llms.txt`
+- llms.txt: https://zenserp.com/llms.txt
 - First Wayback capture of domain: 20190314 (zenserp.com)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://github.com/browserbase/stagehand
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/stagehand/llms.txt`
+- llms.txt: https://docs.github.com/llms.txt
 - GitHub: browserbase/stagehand — ★25729, created 2024-03-24, last push 2026-10-18, license MIT
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://restcountries.com/
 - Pricing: —
 - Docs: https://restcountries.com/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/restcountries/llms.txt`
+- llms.txt: https://restcountries.com/llms.txt
 - First Wayback capture of domain: 20210228 (restcountries.com)
 
 ## Free tier

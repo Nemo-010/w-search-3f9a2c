@@ -4,7 +4,7 @@
 - Home: https://searchcans.com/
 - Pricing: https://searchcans.com/pricing
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/searchcans/llms.txt`
+- llms.txt: https://searchcans.com/llms.txt
 - First Wayback capture of domain: 20260121 (searchcans.com)
 
 ## Free tier

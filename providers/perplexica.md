@@ -4,7 +4,7 @@
 - Home: https://github.com/ItzCrazyKns/Perplexica
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/perplexica/llms.txt`
+- llms.txt: https://docs.github.com/llms.txt
 - GitHub: ItzCrazyKns/Vane — ★37392, created 2024-04-09, last push 2026-09-01, license MIT
 
 ## Free tier

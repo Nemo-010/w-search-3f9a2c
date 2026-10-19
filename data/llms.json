@@ -1,0 +1,992 @@
+{
+ "4get": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "agenty": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "airtop": {
+  "bytes": 2989,
+  "reason": "ok",
+  "url": "https://docs.airtop.ai/llms.txt"
+ },
+ "anchor": {
+  "bytes": 283,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "anthropic-websearch": {
+  "bytes": 4119,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "anyapi": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "apiflash": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "apify": {
+  "bytes": 98265,
+  "reason": "ok",
+  "url": "https://docs.apify.com/llms.txt"
+ },
+ "arquivo": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "arxiv": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "bing-api": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "biorxiv": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "bluesky": {
+  "bytes": 26,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "bocha": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "branddev": {
+  "bytes": 30666,
+  "reason": "ok",
+  "url": "https://docs.brand.dev/llms.txt"
+ },
+ "brave": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "brightdata": {
+  "bytes": 13239,
+  "reason": "ok",
+  "url": "https://docs.brightdata.com/llms.txt"
+ },
+ "browse-ai": {
+  "bytes": 14346,
+  "reason": "ok",
+  "url": "https://www.browse.ai/llms.txt"
+ },
+ "browser-use": {
+  "bytes": 46936,
+  "reason": "ok",
+  "url": "https://docs.browser-use.com/llms.txt"
+ },
+ "browserbase": {
+  "bytes": 39750,
+  "reason": "ok",
+  "url": "https://docs.browserbase.com/llms.txt"
+ },
+ "browserless": {
+  "bytes": 3255,
+  "reason": "ok",
+  "url": "https://docs.browserless.io/llms.txt"
+ },
+ "cloro": {
+  "bytes": 19667,
+  "reason": "ok",
+  "url": "https://cloro.dev/llms.txt"
+ },
+ "cloudflare-browser": {
+  "bytes": 11950,
+  "reason": "ok",
+  "url": "https://developers.cloudflare.com/browser-rendering/llms.txt"
+ },
+ "cohere": {
+  "bytes": 4266,
+  "reason": "ok",
+  "url": "https://docs.cohere.com/llms.txt"
+ },
+ "coingecko": {
+  "bytes": 49119,
+  "reason": "ok",
+  "url": "https://docs.coingecko.com/llms.txt"
+ },
+ "commoncrawl": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "contextdev": {
+  "bytes": 30666,
+  "reason": "ok",
+  "url": "https://docs.context.dev/llms.txt"
+ },
+ "core": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "crawl4ai": {
+  "bytes": 20387,
+  "reason": "ok",
+  "url": "https://crawl4ai.com/llms.txt"
+ },
+ "crawlbase": {
+  "bytes": 49573,
+  "reason": "ok",
+  "url": "https://crawlbase.com/llms.txt"
+ },
+ "crawlee": {
+  "bytes": 30822,
+  "reason": "ok",
+  "url": "https://crawlee.dev/llms.txt"
+ },
+ "crossref": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "crtsh": {
+  "bytes": 28642,
+  "reason": "belongs to github.com, not the provider",
+  "url": null
+ },
+ "currents": {
+  "bytes": 4061,
+  "reason": "ok",
+  "url": "https://currentsapi.services/llms.txt"
+ },
+ "datacite": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "dataforseo": {
+  "bytes": 0,
+  "reason": "empty body",
+  "url": null
+ },
+ "dbpedia": {
+  "bytes": 9451,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "decodo": {
+  "bytes": 17730,
+  "reason": "ok",
+  "url": "https://help.decodo.com/llms.txt"
+ },
+ "deepseek": {
+  "bytes": 3894,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "diffbot": {
+  "bytes": 943,
+  "reason": "ok",
+  "url": "https://www.diffbot.com/llms.txt"
+ },
+ "doaj": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "docling": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "duckduckgo-ia": {
+  "bytes": 489,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "europepmc": {
+  "bytes": 7933,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "eventregistry": {
+  "bytes": 9130,
+  "reason": "ok",
+  "url": "https://eventregistry.org/llms.txt"
+ },
+ "exa": {
+  "bytes": 26411,
+  "reason": "ok",
+  "url": "https://exa.ai/docs/llms.txt"
+ },
+ "fetchin": {
+  "bytes": 3178,
+  "reason": "ok",
+  "url": "https://fetchin.io/docs/llms.txt"
+ },
+ "fiber": {
+  "bytes": 13409,
+  "reason": "ok",
+  "url": "https://fiber.ai/llms.txt"
+ },
+ "figshare": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "firecrawl": {
+  "bytes": 9313,
+  "reason": "ok",
+  "url": "https://docs.firecrawl.dev/llms.txt"
+ },
+ "firecrawl-oss": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "fivefilters-ftr": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "fred": {
+  "bytes": 4512,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "gdelt": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "gemini-grounding": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "github-search": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "gnews": {
+  "bytes": 2382,
+  "reason": "ok",
+  "url": "https://gnews.io/docs/v4/llms.txt"
+ },
+ "google-cse": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "googlebooks": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "gpt-researcher": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "groq": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "guardian": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "hal": {
+  "bytes": 870,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "hasdata": {
+  "bytes": 13059,
+  "reason": "ok",
+  "url": "https://docs.hasdata.com/llms.txt"
+ },
+ "hn-algolia": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "hyperbrowser": {
+  "bytes": 26946,
+  "reason": "ok",
+  "url": "https://docs.hyperbrowser.ai/llms.txt"
+ },
+ "internetarchive-scholar": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "ip-api": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "ipapi-co": {
+  "bytes": 13017,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "itunes": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "jina": {
+  "bytes": 27145,
+  "reason": "ok",
+  "url": "https://docs.jina.ai/llms.txt"
+ },
+ "justoneapi": {
+  "bytes": 148607,
+  "reason": "ok",
+  "url": "https://justoneapi.com/llms.txt"
+ },
+ "kagi": {
+  "bytes": 104,
+  "reason": "ok",
+  "url": "https://kagi.com/api/docs/llms.txt"
+ },
+ "kakao": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "katana": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "keenable": {
+  "bytes": 8529,
+  "reason": "ok",
+  "url": "https://docs.keenable.ai/llms.txt"
+ },
+ "kernel": {
+  "bytes": 67761,
+  "reason": "ok",
+  "url": "https://docs.onkernel.com/llms.txt"
+ },
+ "khoj": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "librey": {
+  "bytes": 28642,
+  "reason": "belongs to github.com, not the provider",
+  "url": null
+ },
+ "lightpanda": {
+  "bytes": 9926,
+  "reason": "ok",
+  "url": "https://lightpanda.io/llms.txt"
+ },
+ "linkup": {
+  "bytes": 20929,
+  "reason": "ok",
+  "url": "https://docs.linkup.so/llms.txt"
+ },
+ "litescrape": {
+  "bytes": 65904,
+  "reason": "ok",
+  "url": "https://litescrape.com/llms.txt"
+ },
+ "marginalia": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "markitdown": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "mastodon": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "maxun": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "mediastack": {
+  "bytes": 3725,
+  "reason": "ok",
+  "url": "https://mediastack.com/llms.txt"
+ },
+ "microlink": {
+  "bytes": 108411,
+  "reason": "ok",
+  "url": "https://microlink.io/llms.txt"
+ },
+ "mineru": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "minimax": {
+  "bytes": 3572,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "mistral": {
+  "bytes": 69858,
+  "reason": "ok",
+  "url": "https://docs.mistral.ai/llms.txt"
+ },
+ "mojeek": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "moonshot": {
+  "bytes": 17,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "morphic": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "mwmbl": {
+  "bytes": 28642,
+  "reason": "belongs to github.com, not the provider",
+  "url": null
+ },
+ "naver": {
+  "bytes": 0,
+  "reason": "empty body",
+  "url": null
+ },
+ "netnut": {
+  "bytes": 45,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "newsapi": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "newscatcher": {
+  "bytes": 37386,
+  "reason": "ok",
+  "url": "https://docs.newscatcherapi.com/llms.txt"
+ },
+ "newsdata": {
+  "bytes": 59,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "nimble": {
+  "bytes": 7599,
+  "reason": "ok",
+  "url": "https://docs.nimbleway.com/llms.txt"
+ },
+ "nodemaven": {
+  "bytes": 23335,
+  "reason": "ok",
+  "url": "https://nodemaven.com/llms.txt"
+ },
+ "nominatim": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "notte": {
+  "bytes": 6280,
+  "reason": "ok",
+  "url": "https://docs.notte.cc/llms.txt"
+ },
+ "nyt": {
+  "bytes": 0,
+  "reason": "empty body",
+  "url": null
+ },
+ "octen": {
+  "bytes": 7899,
+  "reason": "ok",
+  "url": "https://docs.octen.ai/llms.txt"
+ },
+ "octoparse": {
+  "bytes": 43447,
+  "reason": "ok",
+  "url": "https://www.octoparse.com/llms.txt"
+ },
+ "olostep": {
+  "bytes": 18247,
+  "reason": "ok",
+  "url": "https://docs.olostep.com/llms.txt"
+ },
+ "open-meteo": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "openai-websearch": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "openaire": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "openalex": {
+  "bytes": 34907,
+  "reason": "ok",
+  "url": "https://docs.openalex.org/llms.txt"
+ },
+ "openalex-base": {
+  "bytes": 1514,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "openlibrary": {
+  "bytes": 4880,
+  "reason": "ok",
+  "url": "https://docs.openlibrary.org/llms.txt"
+ },
+ "openrouter": {
+  "bytes": 11085,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "opensaucenao": {
+  "bytes": 0,
+  "reason": "HTTP 403",
+  "url": null
+ },
+ "openverse": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "osf": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "oxylabs": {
+  "bytes": 59433,
+  "reason": "ok",
+  "url": "https://developers.oxylabs.io/llms.txt"
+ },
+ "parallel": {
+  "bytes": 26191,
+  "reason": "ok",
+  "url": "https://docs.parallel.ai/llms.txt"
+ },
+ "parsehub": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "perplexica": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "perplexity": {
+  "bytes": 37512,
+  "reason": "ok",
+  "url": "https://docs.perplexity.ai/llms.txt"
+ },
+ "playwright": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "presearch": {
+  "bytes": 0,
+  "reason": "HTTP 530",
+  "url": null
+ },
+ "pubmed": {
+  "bytes": 165,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "qwen": {
+  "bytes": 0,
+  "reason": "empty body",
+  "url": null
+ },
+ "rainforest": {
+  "bytes": 11618,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "rapidapi": {
+  "bytes": 7,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "rdap": {
+  "bytes": 0,
+  "reason": "HTTP 400",
+  "url": null
+ },
+ "reddit-json": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "restcountries": {
+  "bytes": 4714,
+  "reason": "ok",
+  "url": "https://restcountries.com/llms.txt"
+ },
+ "rightdao": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "scite": {
+  "bytes": 20220,
+  "reason": "ok",
+  "url": "https://scite.ai/llms.txt"
+ },
+ "scrape.do": {
+  "bytes": 18034,
+  "reason": "ok",
+  "url": "https://scrape.do/llms.txt"
+ },
+ "scrapecreators": {
+  "bytes": 4051,
+  "reason": "ok",
+  "url": "https://docs.scrapecreators.com/llms.txt"
+ },
+ "scrapegraphai": {
+  "bytes": 21154,
+  "reason": "ok",
+  "url": "https://docs.scrapegraphai.com/llms.txt"
+ },
+ "scrapehero": {
+  "bytes": 9261,
+  "reason": "ok",
+  "url": "https://www.scrapehero.com/llms.txt"
+ },
+ "scrapeninja": {
+  "bytes": 4546,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "scrapeops": {
+  "bytes": 6608,
+  "reason": "ok",
+  "url": "https://scrapeops.io/llms.txt"
+ },
+ "scrapeops-proxy": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "scraperapi": {
+  "bytes": 6719,
+  "reason": "ok",
+  "url": "https://docs.scraperapi.com/llms.txt"
+ },
+ "scraperbox": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "scrapfly": {
+  "bytes": 22746,
+  "reason": "ok",
+  "url": "https://scrapfly.io/docs/llms.txt"
+ },
+ "scrapingant": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "scrapingbee": {
+  "bytes": 6204,
+  "reason": "ok",
+  "url": "https://www.scrapingbee.com/llms.txt"
+ },
+ "scrapingdog": {
+  "bytes": 16945,
+  "reason": "ok",
+  "url": "https://www.scrapingdog.com/llms.txt"
+ },
+ "scrapy": {
+  "bytes": 3111,
+  "reason": "ok",
+  "url": "https://docs.scrapy.org/llms.txt"
+ },
+ "screenshotapi": {
+  "bytes": 10202,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "screenshotone": {
+  "bytes": 926,
+  "reason": "ok",
+  "url": "https://screenshotone.com/docs/llms.txt"
+ },
+ "search1api": {
+  "bytes": 1641,
+  "reason": "ok",
+  "url": "https://search1api.com/llms.txt"
+ },
+ "searchcans": {
+  "bytes": 21407,
+  "reason": "ok",
+  "url": "https://searchcans.com/llms.txt"
+ },
+ "searxng": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "semanticscholar": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "serpapi": {
+  "bytes": 29382,
+  "reason": "ok",
+  "url": "https://serpapi.com/llms.txt"
+ },
+ "serpdog": {
+  "bytes": 5364,
+  "reason": "ok",
+  "url": "https://docs.serpdog.io/llms.txt"
+ },
+ "serper": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "serply": {
+  "bytes": 1162,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "serpstack": {
+  "bytes": 3985,
+  "reason": "ok",
+  "url": "https://serpstack.com/llms.txt"
+ },
+ "serpwow": {
+  "bytes": 10230,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "simplescraper": {
+  "bytes": 57,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "skyvern": {
+  "bytes": 19434,
+  "reason": "ok",
+  "url": "https://docs.skyvern.com/llms.txt"
+ },
+ "spider": {
+  "bytes": 14831,
+  "reason": "ok",
+  "url": "https://spider.cloud/llms.txt"
+ },
+ "stackexchange": {
+  "bytes": 0,
+  "reason": "HTTP 400",
+  "url": null
+ },
+ "stagehand": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "steel": {
+  "bytes": 29062,
+  "reason": "ok",
+  "url": "https://docs.steel.dev/llms.txt"
+ },
+ "storm": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "stract": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "tavily": {
+  "bytes": 18662,
+  "reason": "ok",
+  "url": "https://docs.tavily.com/llms.txt"
+ },
+ "teclis": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "thenewsapi": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "tikhub": {
+  "bytes": 4698,
+  "reason": "ok",
+  "url": "https://docs.tikhub.io/llms.txt"
+ },
+ "tinyfish": {
+  "bytes": 16785,
+  "reason": "ok",
+  "url": "https://docs.tinyfish.ai/llms.txt"
+ },
+ "trafilatura": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "treg": {
+  "bytes": 57618,
+  "reason": "ok",
+  "url": "https://treg.to/llms.txt"
+ },
+ "unpaywall": {
+  "bytes": 9,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "urlbox": {
+  "bytes": 36535,
+  "reason": "ok",
+  "url": "https://urlbox.com/docs/llms.txt"
+ },
+ "urlscan": {
+  "bytes": 2796,
+  "reason": "ok",
+  "url": "https://docs.urlscan.io/llms.txt"
+ },
+ "urltomarkdown": {
+  "bytes": 0,
+  "reason": "HTTP 403",
+  "url": null
+ },
+ "uspto": {
+  "bytes": 0,
+  "reason": "empty body",
+  "url": null
+ },
+ "valueserp": {
+  "bytes": 5964,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "valyu": {
+  "bytes": 2666,
+  "reason": "ok",
+  "url": "https://docs.valyu.ai/llms.txt"
+ },
+ "wayback": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "webscraperio": {
+  "bytes": 924,
+  "reason": "ok",
+  "url": "https://webscraper.io/llms.txt"
+ },
+ "webz": {
+  "bytes": 26694,
+  "reason": "ok",
+  "url": "https://docs.webz.io/llms.txt"
+ },
+ "whoogle": {
+  "bytes": 28642,
+  "reason": "ok",
+  "url": "https://docs.github.com/llms.txt"
+ },
+ "wiby": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "wikidata": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "wikipedia": {
+  "bytes": 7139,
+  "reason": "not a markdown index (no heading or summary)",
+  "url": null
+ },
+ "worldbank": {
+  "bytes": 0,
+  "reason": "HTTP 0",
+  "url": null
+ },
+ "xai-live-search": {
+  "bytes": 0,
+  "reason": "HTTP 403",
+  "url": null
+ },
+ "yep": {
+  "bytes": 5302,
+  "reason": "ok",
+  "url": "https://yep.com/llms.txt"
+ },
+ "you": {
+  "bytes": 22649,
+  "reason": "ok",
+  "url": "https://you.com/docs/llms.txt"
+ },
+ "zenodo": {
+  "bytes": 0,
+  "reason": "HTTP 404",
+  "url": null
+ },
+ "zenrows": {
+  "bytes": 21390,
+  "reason": "ok",
+  "url": "https://docs.zenrows.com/llms.txt"
+ },
+ "zenserp": {
+  "bytes": 4942,
+  "reason": "ok",
+  "url": "https://zenserp.com/llms.txt"
+ },
+ "zhipu": {
+  "bytes": 8981,
+  "reason": "ok",
+  "url": "https://docs.z.ai/llms.txt"
+ },
+ "zyte": {
+  "bytes": 6514,
+  "reason": "ok",
+  "url": "https://docs.zyte.com/llms.txt"
+ }
+}

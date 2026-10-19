@@ -4,7 +4,7 @@
 - Home: https://info.arxiv.org/help/api/index.html
 - Pricing: —
 - Docs: https://info.arxiv.org/help/api/index.html
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20221207 (info.arxiv.org)
 
 ## Free tier

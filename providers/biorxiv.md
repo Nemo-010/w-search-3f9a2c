@@ -4,7 +4,7 @@
 - Home: https://api.biorxiv.org/
 - Pricing: —
 - Docs: https://api.biorxiv.org/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20130715 (biorxiv.org)
 
 ## Free tier

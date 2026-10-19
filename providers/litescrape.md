@@ -4,7 +4,7 @@
 - Home: https://litescrape.com/
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/litescrape/llms.txt`
+- llms.txt: https://litescrape.com/llms.txt
 - First Wayback capture of domain: 20261009 (litescrape.com)
 
 ## Free tier

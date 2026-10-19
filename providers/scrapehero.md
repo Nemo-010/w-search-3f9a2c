@@ -4,7 +4,7 @@
 - Home: https://www.scrapehero.com/
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scrapehero/llms.txt`
+- llms.txt: https://www.scrapehero.com/llms.txt
 - First Wayback capture of domain: 20140804 (scrapehero.com)
 
 ## Free tier

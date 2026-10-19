@@ -4,7 +4,7 @@
 - Home: https://github.com/getmaxun/maxun
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/maxun/llms.txt`
+- llms.txt: https://docs.github.com/llms.txt
 - GitHub: getmaxun/maxun — ★17901, created 2023-10-23, last push 2026-10-18, license AGPL-3.0
 
 ## Free tier

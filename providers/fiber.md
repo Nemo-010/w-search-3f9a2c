@@ -4,7 +4,7 @@
 - Home: https://fiber.ai/
 - Pricing: —
 - Docs: —
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/fiber/llms.txt`
+- llms.txt: https://fiber.ai/llms.txt
 - First Wayback capture of domain: 20211204 (fiber.ai)
 
 ## Free tier

@@ -4,7 +4,7 @@
 - Home: https://docs.joinmastodon.org/api/
 - Pricing: —
 - Docs: https://docs.joinmastodon.org/api/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20170603 (joinmastodon.org)
 
 ## Free tier

@@ -53,8 +53,8 @@ def prov_md(r):
     L.append(f"- Docs: {r['docs'] or '—'}")
     if r["llms"]:
         L.append(f"- llms.txt: {r['llms']}")
-    elif r["llms_ok"]:
-        L.append("- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/%s/llms.txt`" % r["slug"])
+    elif r.get("llms_reject"):
+        L.append(f"- llms.txt: none usable — {r['llms_reject']}")
     else:
         L.append("- llms.txt: none found at the probed locations")
     if r.get("github"):
@@ -483,7 +483,11 @@ def build_readme(ranked):
              "search engines, readers, archives, news, academic and general free APIs "
              "(`data/candidates.json`).")
     L.append("2. Public pages fetched: home, pricing, docs and `llms.txt`/`llms-full.txt` where "
-             "published (683 successful fetches, 134 providers ship an llms.txt). "
+             "published (683 successful fetches). An `llms.txt` is counted only when "
+             "`scripts/llms.py` verifies the body is a markdown index served by the provider's own "
+             "domain: of 198 probes, 99 pass. Probes returning 200 but serving an HTML page, an "
+             "empty body, a robots-style rules file, or GitHub's own docs file are rejected, and the "
+             "reject reason is recorded per provider in `data/llms.json`. "
              "Raw bytes are gzipped in `data/snapshots/<slug>/` with SHA-256, HTTP status and "
              "final URL in `meta.json`.")
     L.append("3. Facts: `data/facts.json`, one entry per provider; each quantified number carries "
@@ -500,6 +504,7 @@ def build_readme(ranked):
     L.append("```sh")
     L.append("make fetch        # re-download every provider page (refreshes snapshots)")
     L.append("make digest       # rebuild per-provider fact digests")
+    L.append("make llms         # re-verify llms.txt availability from the snapshots")
     L.append("make reports      # rebuild all reports from data/facts.json")
     L.append("make test         # integrity tests: every quote verbatim, every path resolves")
     L.append("make check        # verify every source URL still resolves and hashes match")

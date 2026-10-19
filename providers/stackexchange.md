@@ -4,7 +4,7 @@
 - Home: https://api.stackexchange.com/
 - Pricing: —
 - Docs: https://api.stackexchange.com/docs
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 400
 - First Wayback capture of domain: 20040324 (stackexchange.com)
 
 ## Free tier

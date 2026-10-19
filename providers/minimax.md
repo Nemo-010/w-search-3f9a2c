@@ -4,7 +4,7 @@
 - Home: https://www.minimax.io/
 - Pricing: https://www.minimax.io/platform/document
 - Docs: https://www.minimax.io/platform/document
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/minimax/llms.txt`
+- llms.txt: none usable — not a markdown index (no heading or summary)
 - First Wayback capture of domain: 20211217 (minimax.io)
 
 ## Free tier

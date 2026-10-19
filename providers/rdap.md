@@ -4,7 +4,7 @@
 - Home: https://rdap.org/
 - Pricing: —
 - Docs: https://about.rdap.org/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 400
 - First Wayback capture of domain: 20111118 (rdap.org)
 
 ## Free tier

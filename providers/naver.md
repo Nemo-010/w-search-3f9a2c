@@ -4,7 +4,7 @@
 - Home: https://developers.naver.com/docs/serviceapi/search/blog/blog.md
 - Pricing: https://developers.naver.com/docs/serviceapi/search/blog/blog.md
 - Docs: https://developers.naver.com/docs/serviceapi/search/blog/blog.md
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/naver/llms.txt`
+- llms.txt: none usable — empty body
 - First Wayback capture of domain: 20040130 (naver.com)
 
 ## Free tier

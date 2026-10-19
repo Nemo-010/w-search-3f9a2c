@@ -4,7 +4,7 @@
 - Home: https://crawlbase.com/
 - Pricing: https://crawlbase.com/pricing
 - Docs: https://crawlbase.com/docs/
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/crawlbase/llms.txt`
+- llms.txt: https://crawlbase.com/llms.txt
 - First Wayback capture of domain: 20131122 (crawlbase.com)
 
 ## Free tier

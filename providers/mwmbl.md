@@ -4,7 +4,7 @@
 - Home: https://mwmbl.org/
 - Pricing: —
 - Docs: https://github.com/mwmbl/mwmbl
-- llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/mwmbl/llms.txt`
+- llms.txt: none usable — belongs to github.com, not the provider
 - First Wayback capture of domain: 20211226 (mwmbl.org)
 
 ## Free tier

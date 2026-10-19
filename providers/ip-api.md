@@ -4,7 +4,7 @@
 - Home: https://ip-api.com/
 - Pricing: —
 - Docs: https://ip-api.com/docs/api:json
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 0
 - First Wayback capture of domain: 20120801 (ip-api.com)
 
 ## Free tier

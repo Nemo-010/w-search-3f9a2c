@@ -4,7 +4,7 @@
 - Home: https://searxng.org/
 - Pricing: —
 - Docs: https://docs.searxng.org/
-- llms.txt: none found at the probed locations
+- llms.txt: none usable — HTTP 404
 - First Wayback capture of domain: 20220103 (searxng.org)
 
 ## Free tier
