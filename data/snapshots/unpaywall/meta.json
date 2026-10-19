@@ -68,6 +68,17 @@
    "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
    "fetched_at": "2026-10-19T06:05:17+00:00",
    "text_bytes": 9
+  },
+  "jsdoc": {
+   "url": "https://unpaywall.org/js/app.75eab46f.js",
+   "status": 200,
+   "final_url": "https://unpaywall.org/js/app.75eab46f.js",
+   "content_type": "application/javascript; charset=UTF-8",
+   "bytes": 190237,
+   "truncated": false,
+   "sha256": "651a3ff84b34c084b9028351ca9b530ff07f19ead569f2772c4e93fdee08d861",
+   "fetched_at": "2026-10-19T07:48:04+00:00",
+   "text_bytes": 190211
   }
  }
 }

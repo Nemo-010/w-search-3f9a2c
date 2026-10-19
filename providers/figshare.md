@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://docs.figshare.com/  
-Snapshot: `data/snapshots/figshare/home.txt`  
+Snapshot: `data/snapshots/figshare/docs.txt`  
 
 ## Measurement note
 

@@ -17,7 +17,7 @@
 ## Evidence
 
 Source: https://console.groq.com/docs/compound  
-Snapshot: `data/snapshots/groq/home.txt`  
+Snapshot: `data/snapshots/groq/pricing.txt`  
 
 ## Measurement note
 

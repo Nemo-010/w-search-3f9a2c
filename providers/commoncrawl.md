@@ -17,7 +17,7 @@
 ## Evidence
 
 Source: https://commoncrawl.org/cc-index  
-Snapshot: `data/snapshots/commoncrawl/docs.txt`  
+Snapshot: `data/snapshots/commoncrawl/home.txt`  
 
 ## Measurement note
 

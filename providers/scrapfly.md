@@ -17,10 +17,10 @@
 
 ## Evidence
 
-> Usage-based, priced per API credit. Free tier: 1,000 credits, no card, no time limit.
+> Free tier: 1,000 credits, no card, no time limit.
 
 Source: https://scrapfly.io/pricing  
-Snapshot: `data/snapshots/scrapfly/pricing.txt`  
+Snapshot: `data/snapshots/scrapfly/home.txt`  
 
 ## Measurement note
 

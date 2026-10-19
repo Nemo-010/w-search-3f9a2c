@@ -18,7 +18,7 @@
 
 ## Evidence
 
-> Free $10 credits every month plus a $10 onboarding bonus. No payment method required.
+> Free $10 credits every month plus a $10 onboarding bonus. No payment method required
 
 Source: https://exa.ai/pricing  
 Snapshot: `data/snapshots/exa/pricing.txt`  

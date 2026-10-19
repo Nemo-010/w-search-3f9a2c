@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://api.biorxiv.org/  
-Snapshot: `data/snapshots/biorxiv/home.txt`  
+Snapshot: `data/snapshots/biorxiv/docs.txt`  
 
 ## Measurement note
 

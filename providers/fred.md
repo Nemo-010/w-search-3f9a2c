@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://fred.stlouisfed.org/docs/api/fred/  
-Snapshot: `data/snapshots/fred/home.txt`  
+Snapshot: `data/snapshots/fred/docs.txt`  
 
 ## Measurement note
 

@@ -15,7 +15,7 @@
 ## Evidence
 
 Source: https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool  
-Snapshot: `data/snapshots/anthropic-websearch/home.txt`  
+Snapshot: `data/snapshots/anthropic-websearch/docs.txt`  
 
 ## Measurement note
 

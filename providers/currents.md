@@ -16,10 +16,10 @@
 
 ## Evidence
 
-> Start with 250 requests per day, no credit card required.
+> 250 free requests per day, no credit card required.
 
 Source: https://currentsapi.services/en/pricing  
-Snapshot: `data/snapshots/currents/pricing.txt`  
+Snapshot: `data/snapshots/currents/home.txt`  
 
 ## Measurement note
 

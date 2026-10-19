@@ -14,10 +14,10 @@
 
 ## Evidence
 
-> Retired 2025-08-11 for new signups.
+> Bing Search APIs will be retired on August 11, 2025. Any existing instances of Bing Search APIs will be decommissioned completely, and the product will no longer be available to be used or new customer signup.
 
-Source: https://www.microsoft.com/en-us/bing/apis/bing-web-search-api  
-Snapshot: `data/snapshots/bing-api/home.txt`  
+Source: https://learn.microsoft.com/en-us/lifecycle/announcements/bing-search-api-retirement  
+Snapshot: `data/snapshots/bing-api/lifecycle.txt`  
 
 ## Measurement note
 

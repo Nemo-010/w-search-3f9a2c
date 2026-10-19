@@ -17,7 +17,7 @@
 
 ## Evidence
 
-> Search is free up to 12,000 requests per day. Beyond that, requests need a positive wallet balance. Fetch is free up to 1,000 URLs per day.
+> Search is free up to 12,000 requests per day. Beyond that, requests need a positive wallet balance.
 
 Source: https://docs.tinyfish.ai/search-api/index.md  
 Snapshot: `data/snapshots/tinyfish/search-doc.txt`  

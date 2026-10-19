@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://ipapi.co/api/  
-Snapshot: `data/snapshots/ipapi-co/api.txt`  
+Snapshot: `data/snapshots/ipapi-co/docs.txt`  
 
 ## Measurement note
 

@@ -74,6 +74,17 @@
    "truncated": false,
    "sha256": "5bb147ef3e4821463e485b5f76acf495ad9f27bae2e86620952873a7ad89e041",
    "fetched_at": "2026-10-19T05:54:42+00:00"
+  },
+  "bots": {
+   "url": "https://archive.org/developers/bots.html",
+   "status": 200,
+   "final_url": "https://archive.org/developers/bots.html",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 28225,
+   "truncated": false,
+   "sha256": "a9501d1d96a1612f083c6ad5206f907f8a229a0ec6a16ebca44adaf200b18ac3",
+   "fetched_at": "2026-10-19T07:47:56+00:00",
+   "text_bytes": 5095
   }
  }
 }

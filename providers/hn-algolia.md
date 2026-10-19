@@ -16,10 +16,10 @@
 
 ## Evidence
 
-> Hacker News Search API rate limit 10,000 requests/hour (documented; page not captured)
+> There is currently no rate limit.
 
-Source: https://hn.algolia.com/api  
-Snapshot: `data/snapshots/hn-algolia/home.txt`  
+Source: https://raw.githubusercontent.com/HackerNews/API/master/README.md  
+Snapshot: `data/snapshots/hn-algolia/readme.txt`  
 
 ## Measurement note
 

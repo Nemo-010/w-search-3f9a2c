@@ -14,9 +14,10 @@
 
 ## Evidence
 
-> 50 non-JS requests monthly, 500 JS-enabled requests monthly.
+> Every new ScrapeNinja customer gets 50MB of premium traffic.
 
-Source: https://github.com/hamodywe/awesome-scrape-free-apis  
+Source: https://scrapeninja.net/llms.txt  
+Snapshot: `data/snapshots/scrapeninja/llms.txt`  
 
 ## Measurement note
 

@@ -44,6 +44,17 @@
    "truncated": false,
    "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
    "fetched_at": "2026-10-19T05:54:47+00:00"
+  },
+  "readme": {
+   "url": "https://raw.githubusercontent.com/HackerNews/API/master/README.md",
+   "status": 200,
+   "final_url": "https://raw.githubusercontent.com/HackerNews/API/master/README.md",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 12878,
+   "truncated": false,
+   "sha256": "d05432c450dbf604b62611ec012cdf18ca15e31005a3c2ab071d6bb8de82e61b",
+   "fetched_at": "2026-10-19T07:48:04+00:00",
+   "text_bytes": 12878
   }
  }
 }

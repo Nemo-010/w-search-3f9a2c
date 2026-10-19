@@ -18,10 +18,10 @@
 
 ## Evidence
 
-> Start with free credits—no credit card required.
+> Call live You.com APIs: Product MCP at https://api.you.com/mcp (keyless `?profile=free` exposes `you-search` and `you-discover`.
 
-Source: https://you.com/docs/welcome.md  
-Snapshot: `data/snapshots/you/welcome.txt`  
+Source: https://you.com/docs/llms.txt  
+Snapshot: `data/snapshots/you/llms.txt`  
 
 ## Measurement note
 

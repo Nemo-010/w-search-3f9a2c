@@ -17,7 +17,7 @@
 ## Evidence
 
 Source: https://docs.joinmastodon.org/api/  
-Snapshot: `data/snapshots/mastodon/home.txt`  
+Snapshot: `data/snapshots/mastodon/docs.txt`  
 
 ## Measurement note
 

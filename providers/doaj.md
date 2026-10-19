@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://doaj.org/api/docs  
-Snapshot: `data/snapshots/doaj/home.txt`  
+Snapshot: `data/snapshots/doaj/docs.txt`  
 
 ## Measurement note
 

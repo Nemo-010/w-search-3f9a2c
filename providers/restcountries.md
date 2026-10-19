@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://restcountries.com/  
-Snapshot: `data/snapshots/restcountries/home.txt`  
+Snapshot: `data/snapshots/restcountries/docs.txt`  
 
 ## Measurement note
 

@@ -14,7 +14,7 @@
 
 ## Evidence
 
-> 검색은 검색 API를 사용하며, 검색 API의 하루 호출 한도는 25,000회입니다. (the daily call limit for the search API is 25,000)
+> 검색은 검색 API를 사용하며, 검색 API의 하루 호출 한도는 25,000회입니다.
 
 Source: https://developers.naver.com/docs/serviceapi/search/blog/blog.md  
 Snapshot: `data/snapshots/naver/docs.txt`  

@@ -14,7 +14,7 @@ Compiled 2026-10-19. Every claim is tied to a snapshot in `data/snapshots/`.
 2. Public pages fetched: home, pricing, docs and `llms.txt`/`llms-full.txt` where published (683 successful fetches, 134 providers ship an llms.txt). Raw bytes are gzipped in `data/snapshots/<slug>/` with SHA-256, HTTP status and final URL in `meta.json`.
 3. Facts: `data/facts.json`, one entry per provider; each quantified number carries the verbatim quote and source URL. Confidence: `high` = explicit official number, `medium` = official statement without a number, `low` = not present in fetched pages, `none` = no free tier found.
 4. Maturity: first Wayback capture per domain (`data/maturity.json`) and GitHub stars for OSS entries.
-5. Hit rates: treg Web Arena leaderboard snapshot (30-day live routing data) in `data/snapshots/treg/leaderboard.json`.
+5. Hit rates: treg Web Arena leaderboard snapshot (30-day live routing data) in `data/snapshots/treg/leaderboard.txt`.
 
 ## Re-verify
 
@@ -22,6 +22,7 @@ Compiled 2026-10-19. Every claim is tied to a snapshot in `data/snapshots/`.
 make fetch        # re-download every provider page (refreshes snapshots)
 make digest       # rebuild per-provider fact digests
 make reports      # rebuild all reports from data/facts.json
+make test         # integrity tests: every quote verbatim, every path resolves
 make check        # verify every source URL still resolves and hashes match
 ```
 

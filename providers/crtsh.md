@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://crt.sh/  
-Snapshot: `data/snapshots/crtsh/home.txt`  
+Snapshot: `data/snapshots/crtsh/docs.txt`  
 
 ## Measurement note
 

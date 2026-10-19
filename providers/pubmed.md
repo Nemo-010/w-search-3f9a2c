@@ -17,7 +17,7 @@
 ## Evidence
 
 Source: https://www.ncbi.nlm.nih.gov/books/NBK25501/  
-Snapshot: `data/snapshots/pubmed/home.txt`  
+Snapshot: `data/snapshots/pubmed/docs.txt`  
 
 ## Measurement note
 

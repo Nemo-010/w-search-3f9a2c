@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://api.openverse.org/v1/  
-Snapshot: `data/snapshots/openverse/home.txt`  
+Snapshot: `data/snapshots/openverse/docs.txt`  
 
 ## Measurement note
 

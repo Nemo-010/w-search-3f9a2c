@@ -1,0 +1,66 @@
+Bing Search APIs Retiring on August 11, 2025 - Microsoft Lifecycle | Microsoft Learn 
+ Skip to main content
+ Skip to Ask Learn chat experience
+ This browser is no longer supported. 
+ Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+ Download Microsoft Edge
+ More info about Internet Explorer and Microsoft Edge
+ Table of contents 
+ Exit editor mode 
+ Ask Learn 
+ Ask Learn 
+ Reading mode 
+ Table of contents 
+ Read in English 
+ Add 
+ Add to Plans 
+ Edit 
+ Copy Markdown 
+ Print 
+ Note 
+ Access to this page requires authorization. You can try signing in or changing directories .
+ Access to this page requires authorization. You can try changing directories .
+ Bing Search APIs retiring on August 11, 2025  
+ Feedback 
+ Summarize this article for me
+ In this article
+ Bing Search APIs will be retired on August 11, 2025. Any existing instances of Bing Search APIs will be decommissioned completely, and the product will no longer be available to be used or new customer signup.   
+ Customers are encouraged to migrate to Grounding with Bing Search as part of Azure AI Agents . Grounding with Bing Search allows Azure AI Agents to incorporate real-time public web data when generating responses with an LLM. 
+ Additional resources 
+ How to use Grounding with Bing Search in Azure AI Agent Service - Azure OpenAI | Microsoft Learn 
+ Bing Search APIs | Microsoft Bing 
+ Feedback 
+ Was this page helpful?
+ Yes 
+ No 
+ No 
+ Need help with this topic?
+ Want to try using Ask Learn to clarify or guide you through this topic?
+ Ask Learn 
+ Ask Learn 
+ Suggest a fix? 
+ Additional resources
+ Last updated on 
+ 2025-05-16
+ In this article 
+ Was this page helpful?
+ Need help with this topic?
+ Want to try using Ask Learn to clarify or guide you through this topic?
+ Ask Learn 
+ Ask Learn 
+ Suggest a fix? 
+ en-us 
+ Your Privacy Choices 
+ Theme 
+ Light 
+ Dark 
+ High contrast 
+ AI Disclaimer 
+ Previous Versions 
+ Blog 
+ Contribute 
+ Privacy 
+ Consumer Health Privacy 
+ Terms of Use 
+ Trademarks 
+ © Microsoft 2026

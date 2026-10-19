@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://developers.zenodo.org/  
-Snapshot: `data/snapshots/zenodo/home.txt`  
+Snapshot: `data/snapshots/zenodo/docs.txt`  
 
 ## Measurement note
 

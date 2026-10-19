@@ -171,7 +171,7 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Free $10 credits every month plus a $10 onboarding bonus. No payment method required.",
+    "quote": "Free $10 credits every month plus a $10 onboarding bonus. No payment method required",
     "url": "https://exa.ai/pricing",
     "snapshot": "data/snapshots/exa/pricing.txt"
    }
@@ -374,7 +374,7 @@
    {
     "quote": "The world's cheapest SERP API Google, Bing, DuckDuckGo, and Maps as JSON, for a flat $0.15 per 1,000 requests.",
     "url": "https://litescrape.com/",
-    "snapshot": "data/snapshots/litescrape/llms.txt"
+    "snapshot": "data/snapshots/litescrape/home.txt"
    }
   ]
  },
@@ -472,9 +472,9 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Start building for free Get started with our APIs in seconds. Run up to 5,000 requests per month for free.",
+    "quote": "Run up to 5,000 requests per month for free.",
     "url": "https://parallel.ai/",
-    "snapshot": "data/snapshots/parallel/pricing.txt"
+    "snapshot": "data/snapshots/parallel/home.txt"
    }
   ]
  },
@@ -681,7 +681,7 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Search is free up to 12,000 requests per day. Beyond that, requests need a positive wallet balance. Fetch is free up to 1,000 URLs per day.",
+    "quote": "Search is free up to 12,000 requests per day. Beyond that, requests need a positive wallet balance.",
     "url": "https://docs.tinyfish.ai/search-api/index.md",
     "snapshot": "data/snapshots/tinyfish/search-doc.txt"
    }
@@ -765,9 +765,9 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Start with free credits\u2014no credit card required.",
-    "url": "https://you.com/docs/welcome.md",
-    "snapshot": "data/snapshots/you/welcome.txt"
+    "quote": "Call live You.com APIs: Product MCP at https://api.you.com/mcp (keyless `?profile=free` exposes `you-search` and `you-discover`.",
+    "url": "https://you.com/docs/llms.txt",
+    "snapshot": "data/snapshots/you/llms.txt"
    }
   ]
  },
@@ -1070,7 +1070,7 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Free trial options for Oxylabs products (not captured in fetched pages).",
+    "quote": "One API for search and retrieval \u2013 start free, scale when you're ready.",
     "url": "https://oxylabs.io/",
     "snapshot": "data/snapshots/oxylabs/home.txt"
    }
@@ -1184,9 +1184,9 @@
   "verified": false,
   "evidence": [
    {
-    "quote": "50 non-JS requests monthly, 500 JS-enabled requests monthly.",
-    "url": "https://github.com/hamodywe/awesome-scrape-free-apis",
-    "snapshot": ""
+    "quote": "Every new ScrapeNinja customer gets 50MB of premium traffic.",
+    "url": "https://scrapeninja.net/llms.txt",
+    "snapshot": "data/snapshots/scrapeninja/llms.txt"
    }
   ]
  },
@@ -1286,9 +1286,9 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Usage-based, priced per API credit. Free tier: 1,000 credits, no card, no time limit.",
+    "quote": "Free tier: 1,000 credits, no card, no time limit.",
     "url": "https://scrapfly.io/pricing",
-    "snapshot": "data/snapshots/scrapfly/pricing.txt"
+    "snapshot": "data/snapshots/scrapfly/home.txt"
    }
   ]
  },
@@ -1516,9 +1516,9 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "the Free Plan includes 100 searches per month with global locations, the proxy network, all search types, and HTTPS, returning JSON only, restricted to non-commercial use",
+    "quote": "Free Plan includes 100 searches per month with global locations, the proxy network, all search types, and HTTPS, returning JSON only, restricted to non-commercial use and without support",
     "url": "https://serpstack.com/pricing",
-    "snapshot": "data/snapshots/serpstack/pricing.txt"
+    "snapshot": "data/snapshots/serpstack/llms.txt"
    }
   ]
  },
@@ -1995,9 +1995,9 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Retired 2025-08-11 for new signups.",
-    "url": "https://www.microsoft.com/en-us/bing/apis/bing-web-search-api",
-    "snapshot": "data/snapshots/bing-api/home.txt"
+    "quote": "Bing Search APIs will be retired on August 11, 2025. Any existing instances of Bing Search APIs will be decommissioned completely, and the product will no longer be available to be used or new customer signup.",
+    "url": "https://learn.microsoft.com/en-us/lifecycle/announcements/bing-search-api-retirement",
+    "snapshot": "data/snapshots/bing-api/lifecycle.txt"
    }
   ]
  },
@@ -2043,7 +2043,7 @@
    {
     "quote": "",
     "url": "https://duckduckgo.com/api",
-    "snapshot": "data/snapshots/duckduckgo-ia/home.txt"
+    "snapshot": "data/snapshots/duckduckgo-ia/llms-full.txt"
    }
   ]
  },
@@ -2115,9 +2115,9 @@
   "verified": false,
   "evidence": [
    {
-    "quote": "Kakao Developers search API daily quota 30,000 (documented; page not captured in snapshots)",
+    "quote": "Kakao API applies monthly and daily quotas for stable service. You can check the currently applied quota information in the Quota .",
     "url": "https://developers.kakao.com/docs/latest/en/daum-search/common",
-    "snapshot": "data/snapshots/kakao/home.txt"
+    "snapshot": "data/snapshots/kakao/docs2.txt"
    }
   ]
  },
@@ -2217,7 +2217,7 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "\uac80\uc0c9\uc740 \uac80\uc0c9 API\ub97c \uc0ac\uc6a9\ud558\uba70, \uac80\uc0c9 API\uc758 \ud558\ub8e8 \ud638\ucd9c \ud55c\ub3c4\ub294 25,000\ud68c\uc785\ub2c8\ub2e4. (the daily call limit for the search API is 25,000)",
+    "quote": "\uac80\uc0c9\uc740 \uac80\uc0c9 API\ub97c \uc0ac\uc6a9\ud558\uba70, \uac80\uc0c9 API\uc758 \ud558\ub8e8 \ud638\ucd9c \ud55c\ub3c4\ub294 25,000\ud68c\uc785\ub2c8\ub2e4.",
     "url": "https://developers.naver.com/docs/serviceapi/search/blog/blog.md",
     "snapshot": "data/snapshots/naver/docs.txt"
    }
@@ -2599,7 +2599,7 @@
    {
     "quote": "",
     "url": "https://commoncrawl.org/cc-index",
-    "snapshot": "data/snapshots/commoncrawl/docs.txt"
+    "snapshot": "data/snapshots/commoncrawl/home.txt"
    }
   ]
  },
@@ -2671,9 +2671,9 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Wayback Machine APIs are free (rate-limited).",
-    "url": "https://archive.org/help/wayback_api.jsp",
-    "snapshot": "data/snapshots/wayback/docs.txt"
+    "quote": "Automated tools should respect rate limits: Add delays between requests for bulk operations Honor 429 Too Many Requests responses and Retry-Afte",
+    "url": "https://archive.org/developers/bots.html",
+    "snapshot": "data/snapshots/wayback/bots.txt"
    }
   ]
  },
@@ -2699,9 +2699,9 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Start with 250 requests per day, no credit card required.",
+    "quote": "250 free requests per day, no credit card required.",
     "url": "https://currentsapi.services/en/pricing",
-    "snapshot": "data/snapshots/currents/pricing.txt"
+    "snapshot": "data/snapshots/currents/home.txt"
    }
   ]
  },
@@ -2929,7 +2929,7 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Up to 1 call per second \n Up to 500 calls per day \n Free for non-commercial usage",
+    "quote": "Up to 1 call per second Up to 500 calls per day Access to article text Access to over 1,900,000 pieces of content Free for non-commercial usage",
     "url": "https://open-platform.theguardian.com/access/",
     "snapshot": "data/snapshots/guardian/docs2b.txt"
    }
@@ -3003,7 +3003,7 @@
    {
     "quote": "",
     "url": "https://info.arxiv.org/help/api/index.html",
-    "snapshot": "data/snapshots/arxiv/home.txt"
+    "snapshot": "data/snapshots/arxiv/docs.txt"
    }
   ]
  },
@@ -3049,7 +3049,7 @@
    {
     "quote": "",
     "url": "https://api.biorxiv.org/",
-    "snapshot": "data/snapshots/biorxiv/home.txt"
+    "snapshot": "data/snapshots/biorxiv/docs.txt"
    }
   ]
  },
@@ -3077,7 +3077,7 @@
    {
     "quote": "",
     "url": "https://core.ac.uk/services/api",
-    "snapshot": "data/snapshots/core/home.txt"
+    "snapshot": "data/snapshots/core/docs.txt"
    }
   ]
  },
@@ -3129,7 +3129,7 @@
    {
     "quote": "",
     "url": "https://support.datacite.org/docs/api",
-    "snapshot": "data/snapshots/datacite/home.txt"
+    "snapshot": "data/snapshots/datacite/docs.txt"
    }
   ]
  },
@@ -3155,7 +3155,7 @@
    {
     "quote": "",
     "url": "https://doaj.org/api/docs",
-    "snapshot": "data/snapshots/doaj/home.txt"
+    "snapshot": "data/snapshots/doaj/docs.txt"
    }
   ]
  },
@@ -3181,7 +3181,7 @@
    {
     "quote": "",
     "url": "https://europepmc.org/RestfulWebService",
-    "snapshot": "data/snapshots/europepmc/home.txt"
+    "snapshot": "data/snapshots/europepmc/docs.txt"
    }
   ]
  },
@@ -3207,7 +3207,7 @@
    {
     "quote": "",
     "url": "https://docs.figshare.com/",
-    "snapshot": "data/snapshots/figshare/home.txt"
+    "snapshot": "data/snapshots/figshare/docs.txt"
    }
   ]
  },
@@ -3233,7 +3233,7 @@
    {
     "quote": "",
     "url": "https://api.archives-ouvertes.fr/docs",
-    "snapshot": "data/snapshots/hal/home.txt"
+    "snapshot": "data/snapshots/hal/docs.txt"
    }
   ]
  },
@@ -3313,7 +3313,7 @@
    {
     "quote": "",
     "url": "https://developer.osf.io/",
-    "snapshot": "data/snapshots/osf/home.txt"
+    "snapshot": "data/snapshots/osf/docs.txt"
    }
   ]
  },
@@ -3341,7 +3341,7 @@
    {
     "quote": "",
     "url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
-    "snapshot": "data/snapshots/pubmed/home.txt"
+    "snapshot": "data/snapshots/pubmed/docs.txt"
    }
   ]
  },
@@ -3411,9 +3411,9 @@
   "verified": false,
   "evidence": [
    {
-    "quote": "Unpaywall API is free for 100,000 calls per day (documented; page not captured in snapshots)",
+    "quote": "Please limit use to 100,000 calls per day.",
     "url": "https://unpaywall.org/products/api",
-    "snapshot": "data/snapshots/unpaywall/home.txt"
+    "snapshot": "data/snapshots/unpaywall/jsdoc.txt"
    }
   ]
  },
@@ -3439,7 +3439,7 @@
    {
     "quote": "",
     "url": "https://developers.zenodo.org/",
-    "snapshot": "data/snapshots/zenodo/home.txt"
+    "snapshot": "data/snapshots/zenodo/docs.txt"
    }
   ]
  },
@@ -3521,7 +3521,7 @@
    {
     "quote": "",
     "url": "https://crt.sh/",
-    "snapshot": "data/snapshots/crtsh/home.txt"
+    "snapshot": "data/snapshots/crtsh/docs.txt"
    }
   ]
  },
@@ -3573,7 +3573,7 @@
    {
     "quote": "",
     "url": "https://fred.stlouisfed.org/docs/api/fred/",
-    "snapshot": "data/snapshots/fred/home.txt"
+    "snapshot": "data/snapshots/fred/docs.txt"
    }
   ]
  },
@@ -3625,7 +3625,7 @@
    {
     "quote": "",
     "url": "https://developers.google.com/books",
-    "snapshot": "data/snapshots/googlebooks/home.txt"
+    "snapshot": "data/snapshots/googlebooks/docs.txt"
    }
   ]
  },
@@ -3651,9 +3651,9 @@
   "verified": false,
   "evidence": [
    {
-    "quote": "Hacker News Search API rate limit 10,000 requests/hour (documented; page not captured)",
-    "url": "https://hn.algolia.com/api",
-    "snapshot": "data/snapshots/hn-algolia/home.txt"
+    "quote": "There is currently no rate limit.",
+    "url": "https://raw.githubusercontent.com/HackerNews/API/master/README.md",
+    "snapshot": "data/snapshots/hn-algolia/readme.txt"
    }
   ]
  },
@@ -3705,7 +3705,7 @@
    {
     "quote": "",
     "url": "https://ipapi.co/api/",
-    "snapshot": "data/snapshots/ipapi-co/api.txt"
+    "snapshot": "data/snapshots/ipapi-co/docs.txt"
    }
   ]
  },
@@ -3731,7 +3731,7 @@
    {
     "quote": "",
     "url": "https://performance-partners.apple.com/search-api",
-    "snapshot": "data/snapshots/itunes/home.txt"
+    "snapshot": "data/snapshots/itunes/docs.txt"
    }
   ]
  },
@@ -3759,7 +3759,7 @@
    {
     "quote": "",
     "url": "https://docs.joinmastodon.org/api/",
-    "snapshot": "data/snapshots/mastodon/home.txt"
+    "snapshot": "data/snapshots/mastodon/docs.txt"
    }
   ]
  },
@@ -3867,7 +3867,7 @@
    {
     "quote": "",
     "url": "https://api.openverse.org/v1/",
-    "snapshot": "data/snapshots/openverse/home.txt"
+    "snapshot": "data/snapshots/openverse/docs.txt"
    }
   ]
  },
@@ -3945,7 +3945,7 @@
    {
     "quote": "",
     "url": "https://restcountries.com/",
-    "snapshot": "data/snapshots/restcountries/home.txt"
+    "snapshot": "data/snapshots/restcountries/docs.txt"
    }
   ]
  },
@@ -3999,7 +3999,7 @@
    {
     "quote": "",
     "url": "https://developer.uspto.gov/",
-    "snapshot": "data/snapshots/uspto/home.txt"
+    "snapshot": "data/snapshots/uspto/docs.txt"
    }
   ]
  },
@@ -4079,7 +4079,7 @@
    {
     "quote": "",
     "url": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
-    "snapshot": "data/snapshots/worldbank/home.txt"
+    "snapshot": "data/snapshots/worldbank/docs.txt"
    }
   ]
  },
@@ -4125,7 +4125,7 @@
    {
     "quote": "",
     "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool",
-    "snapshot": "data/snapshots/anthropic-websearch/home.txt"
+    "snapshot": "data/snapshots/anthropic-websearch/docs.txt"
    }
   ]
  },
@@ -4177,9 +4177,9 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "It costs $0.75 per 1,000 searches, and a few dollars of balance lasts a long time.",
+    "quote": "$0.75 per 1,000 successful searches or fetches (empty results are free).",
     "url": "https://github.com/ry0narushima/bettersearch/blob/main/SKILL.md",
-    "snapshot": ""
+    "snapshot": "data/snapshots/deepseek/skill.txt"
    }
   ]
  },
@@ -4235,7 +4235,7 @@
    {
     "quote": "",
     "url": "https://console.groq.com/docs/compound",
-    "snapshot": "data/snapshots/groq/home.txt"
+    "snapshot": "data/snapshots/groq/pricing.txt"
    }
   ]
  },
@@ -4281,7 +4281,7 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Yes, Mistral's Free plan provides limited access to Vibe , including our latest models, chat, search, creation",
+    "quote": "Does Mistral have a free plan? Yes, Mistral\u2019s Free plan provides limited access to Vibe , including our latest models, chat, search, creation, and Vibe for code for agentic coding in your terminal.",
     "url": "https://mistral.ai/pricing",
     "snapshot": "data/snapshots/mistral/pricing.txt"
    }
@@ -4327,9 +4327,9 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "OpenAI API pricing is usage-based; no free credits.",
-    "url": "https://platform.openai.com/docs/guides/tools-web-search",
-    "snapshot": "data/snapshots/openai-websearch/home.txt"
+    "quote": "ChatGPT API Start creating with OpenAI\u2019s powerful models.",
+    "url": "https://openai.com/api/pricing/",
+    "snapshot": "data/snapshots/openai-websearch/pricing.txt"
    }
   ]
  },

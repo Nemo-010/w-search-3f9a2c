@@ -14,10 +14,10 @@
 
 ## Evidence
 
-> the Free Plan includes 100 searches per month with global locations, the proxy network, all search types, and HTTPS, returning JSON only, restricted to non-commercial use
+> Free Plan includes 100 searches per month with global locations, the proxy network, all search types, and HTTPS, returning JSON only, restricted to non-commercial use and without support
 
 Source: https://serpstack.com/pricing  
-Snapshot: `data/snapshots/serpstack/pricing.txt`  
+Snapshot: `data/snapshots/serpstack/llms.txt`  
 
 ## Measurement note
 

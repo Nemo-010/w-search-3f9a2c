@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://developer.uspto.gov/  
-Snapshot: `data/snapshots/uspto/home.txt`  
+Snapshot: `data/snapshots/uspto/docs.txt`  
 
 ## Measurement note
 

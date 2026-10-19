@@ -14,9 +14,10 @@
 
 ## Evidence
 
-> It costs $0.75 per 1,000 searches, and a few dollars of balance lasts a long time.
+> $0.75 per 1,000 successful searches or fetches (empty results are free).
 
 Source: https://github.com/ry0narushima/bettersearch/blob/main/SKILL.md  
+Snapshot: `data/snapshots/deepseek/skill.txt`  
 
 ## Measurement note
 

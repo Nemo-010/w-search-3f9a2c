@@ -66,6 +66,16 @@
    "truncated": false,
    "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
    "fetched_at": "2026-10-19T05:54:23+00:00"
+  },
+  "pricing2": {
+   "url": "https://scrapeninja.net/pricing",
+   "status": 404,
+   "final_url": "https://scrapeninja.net/pricing",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 196,
+   "truncated": false,
+   "sha256": "14ee54a9dfebe8ebef030d3b94d718ede4357549ff628a5807c62bff8dbc1ae5",
+   "fetched_at": "2026-10-19T07:50:27+00:00"
   }
  }
 }

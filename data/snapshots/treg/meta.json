@@ -36,6 +36,17 @@
    "sha256": "8f71b954cd014a493a7e6032d99dae511f68b806f88bd347c2c9d4577a8a7bdf",
    "fetched_at": "2026-10-19T05:54:09+00:00",
    "text_bytes": 5549
+  },
+  "leaderboard": {
+   "url": "https://treg.to/web-arena/api/leaderboard",
+   "status": 200,
+   "final_url": "https://treg.to/web-arena/api/leaderboard",
+   "content_type": "application/json",
+   "bytes": 21169,
+   "truncated": false,
+   "sha256": "8eca70edf713b93f55d649066fa83b11867ba01b01325daf0b56f0dd574a49a7",
+   "fetched_at": "2026-10-19T07:39:35+00:00",
+   "text_bytes": 21169
   }
  }
 }

@@ -14,10 +14,10 @@
 
 ## Evidence
 
-> OpenAI API pricing is usage-based; no free credits.
+> ChatGPT API Start creating with OpenAI’s powerful models.
 
-Source: https://platform.openai.com/docs/guides/tools-web-search  
-Snapshot: `data/snapshots/openai-websearch/home.txt`  
+Source: https://openai.com/api/pricing/  
+Snapshot: `data/snapshots/openai-websearch/pricing.txt`  
 
 ## Measurement note
 

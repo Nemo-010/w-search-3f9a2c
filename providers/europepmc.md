@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://europepmc.org/RestfulWebService  
-Snapshot: `data/snapshots/europepmc/home.txt`  
+Snapshot: `data/snapshots/europepmc/docs.txt`  
 
 ## Measurement note
 

@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://performance-partners.apple.com/search-api  
-Snapshot: `data/snapshots/itunes/home.txt`  
+Snapshot: `data/snapshots/itunes/docs.txt`  
 
 ## Measurement note
 

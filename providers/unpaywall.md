@@ -15,10 +15,10 @@
 
 ## Evidence
 
-> Unpaywall API is free for 100,000 calls per day (documented; page not captured in snapshots)
+> Please limit use to 100,000 calls per day.
 
 Source: https://unpaywall.org/products/api  
-Snapshot: `data/snapshots/unpaywall/home.txt`  
+Snapshot: `data/snapshots/unpaywall/jsdoc.txt`  
 
 ## Measurement note
 

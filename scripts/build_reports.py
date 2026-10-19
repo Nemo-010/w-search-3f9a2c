@@ -20,8 +20,12 @@ TODAY = "2026-10-19"
 
 facts = json.load(open(os.path.join(DATA, "facts.json")))
 mat = json.load(open(os.path.join(DATA, "maturity.json")))
-leader = json.load(open(os.path.join(DATA, "snapshots", "treg", "leaderboard.json"))) \
-    if os.path.exists(os.path.join(DATA, "snapshots", "treg", "leaderboard.json")) else None
+LEADERBOARD = os.path.join(DATA, "snapshots", "treg", "leaderboard.txt")
+leader = json.load(open(LEADERBOARD)) if os.path.exists(LEADERBOARD) else None
+if leader is None:
+    raise SystemExit("missing %s: section 2 of the post-analysis needs the treg leaderboard "
+                     "snapshot. Run scripts/fetch_url.py treg leaderboard "
+                     "https://treg.to/web-arena/api/leaderboard" % LEADERBOARD)
 
 CATS = {"ai-search": "AI search / web access APIs", "serp-scrape": "SERP + scrape/crawl APIs",
         "browser": "Browser automation clouds", "search-engine": "Search engines / metasearch",
@@ -141,7 +145,7 @@ def build_top100():
             f"[home]({r['home']})" if r["home"] else "",
             f"[pricing]({r['pricing']})" if r["pricing"] else "",
             f"[llms]({r['llms']})" if r["llms"] else "",
-            f"[report](providers/{r['slug']}.md)"] if x)
+            f"[report](../providers/{r['slug']}.md)"] if x)
         L.append(f"| {i} | **{r['name']}** | {r['category']} | {pct(r)} | {basis} | "
                  f"{r['one_time'] or '—'} | {card} | {r['confidence']} | {links} |")
     L.append("")
@@ -163,7 +167,7 @@ def build_top100():
                 line += f" — one-time: {r['one_time']}"
             L.append(line)
             L.append(f"- Links: home {r['home'] or '—'} · pricing {r['pricing'] or '—'} · llms.txt {r['llms'] or '—'}")
-            L.append(f"- Confidence: {r['confidence']} · [full report](providers/{r['slug']}.md)")
+            L.append(f"- Confidence: {r['confidence']} · [full report](../providers/{r['slug']}.md)")
             L.append("")
     open(os.path.join(REP, "01-top-100.md"), "w").write("\n".join(L))
     return ranked
@@ -222,31 +226,101 @@ def build_post_analysis(ranked):
     # 2. best results / bot protection
     L.append("## 2. Best results and hardest bot protection")
     L.append("")
-    L.append("Two separate evidence classes, kept apart:")
+    L.append("Two separate evidence classes, kept apart.")
     L.append("")
-    L.append("**Measured (independent):** the treg Web Arena leaderboard records per-provider hit "
-             "rate, median latency and price on live routed calls over a 30-day window. Snapshot: "
-             "`data/snapshots/treg/leaderboard.json`, updated 2026-10-19T05:43Z.")
+    L.append("**Measured (independent).** treg's Web Arena leaderboard aggregates live routed calls "
+             "over a 30-day window: per provider, per task, the share of calls that returned a usable "
+             "result, plus median provider latency and the catalog price at capture time. Snapshot: "
+             "`data/snapshots/treg/leaderboard.txt`, `updated_at` "
+             f"`{leader['updated_at']}`, window {leader['window_days']} days, observed since "
+             f"`{leader['observed_since'][:10]}`, cached calls and treg refusals excluded, minimum "
+             f"{leader['minimum_comparable_runs']} comparable runs and "
+             f"{leader['minimum_hit_samples']} hit samples per row.")
     L.append("")
-    if leader:
-        L.append("| Task | Provider | Success rate | Sample (runs) | Median ms | Price/call |")
-        L.append("|------|----------|---:|---:|---:|---:|")
-        for task, rows in leader["task_results"].items():
-            for r in rows[:8]:
-                sr = r.get("success_rate")
-                L.append(f"| {task} | {r['provider']} | {sr if sr is not None else '—'}% | {r.get('runs')} | "
-                         f"{r.get('median_provider_ms')} | {r.get('current_catalog_price_usd')} |")
+    L.append("`success_rate` is successes over `hit_samples` (the calls where a hit or miss was "
+             "recorded); `runs` is every routed run including the ones without a recorded hit, so the "
+             "two denominators differ. `ok calls` is `success_rate × hit_samples`, rounded.")
+    L.append("")
+    L.append("| Task | Provider | Success rate | ok calls | Rate samples | Routed runs | Median ms | Price/call |")
+    L.append("|------|----------|---:|---:|---:|---:|---:|---:|")
+    for task, rows in leader["task_results"].items():
+        for r in rows:
+            sr = r.get("success_rate")
+            n = r.get("hit_samples") or 0
+            price = r.get("current_catalog_price_usd")
+            unit = r.get("price_unit") or ""
+            ok = f"{round(sr * n / 100):,}" if sr is not None and n else "—"
+            L.append(f"| {task} | {r['provider']} | {sr if sr is not None else '—'}% | {ok} | "
+                     f"{n:,} | {r.get('runs'):,} | {r.get('median_provider_ms')} | "
+                     f"{('$' + format(price, '.6g') + ' / ' + unit) if price is not None else '—'} |")
+    L.append("")
+    L.append("Read the rate-sample column before the percentage. Rates cover the provider's own answer "
+             "on treg's routed workload, not a controlled head-to-head scrape of identical URLs.")
+    L.append("")
+
+    # measured leaderboards per task, with the volume caveat made explicit
+    L.append("**Who actually returns results, by task.** Derived from the table above.")
+    L.append("")
+    for task, rows in leader["task_results"].items():
+        best = max(rows, key=lambda r: (r.get("success_rate") or 0))
+        heaviest = max(rows, key=lambda r: r.get("runs") or 0)
+        top = sorted(rows, key=lambda r: -(r.get("success_rate") or 0))[:3]
+        L.append(f"- `{task}`: best measured "
+                 + ", ".join(f"{r['provider']} {r.get('success_rate')}% (n={r.get('hit_samples'):,})"
+                             for r in top)
+                 + f". Highest routed volume: {heaviest['provider']} "
+                   f"({heaviest.get('runs'):,} runs, {heaviest.get('success_rate')}%).")
+    L.append("")
+
+    # bot protection: fetch is the discriminating task
+    fetch_rows = leader["task_results"].get("fetch", [])
+    if fetch_rows:
+        L.append("**Hardest bot protection.** The `fetch` task is the one that exercises anti-bot "
+                 "defences: it asks a provider to retrieve a real page, so a challenge page, a 403 or "
+                 "an empty body counts as a miss. Measured spread on that task:")
         L.append("")
-        L.append("Read the sample column before the percentage: a 100% rate on 6 runs is weaker "
-                 "evidence than 97% on 2,499. Rates cover the provider's own response, not a "
-                 "controlled head-to-head scrape of the same URLs.")
+        L.append("| Provider | Fetch success | ok calls | Rate samples | Routed runs | Median ms |")
+        L.append("|----------|---:|---:|---:|---:|---:|")
+        for r in fetch_rows:
+            n = r.get("hit_samples") or 0
+            sr = r.get("success_rate")
+            ok = f"{round(sr * n / 100):,}" if sr is not None and n else "—"
+            L.append(f"| {r['provider']} | {sr}% | {ok} | {n:,} | {r.get('runs'):,} | "
+                     f"{r.get('median_provider_ms')} |")
+        L.append("")
+        hi = max(fetch_rows, key=lambda r: (r.get("success_rate") or 0))
+        lo = min(fetch_rows, key=lambda r: (r.get("success_rate") or 0))
+        search_rows = leader["task_results"].get("search", [])
+        gap = ""
+        for srow in search_rows:
+            if srow["provider"] == hi["provider"] and srow.get("success_rate") is not None:
+                gap = (f" {hi['provider']} scores {srow.get('success_rate')}% on `search` against "
+                       f"{hi.get('success_rate')}% on `fetch`, so a search hit rate says nothing "
+                       "about page retrieval.")
+        L.append(f"Spread: {hi['provider']} {hi.get('success_rate')}% down to {lo['provider']} "
+                 f"{lo.get('success_rate')}%, on {hi.get('hit_samples'):,} and "
+                 f"{lo.get('hit_samples'):,} rate samples respectively.{gap}")
+        L.append("")
+        L.append("What this does and does not show. It shows which provider was the one that returned "
+                 "the page when treg routed a fetch to it. It does not isolate the defence that was "
+                 "hit (Cloudflare interstitial, DataDome, plain 403, JS-only shell), it does not "
+                 "separate a residential from a datacenter egress, and a provider that fails is not "
+                 "necessarily blocked — it may simply have timed out or returned an empty body. No "
+                 "vendor publishes a per-defence breakdown, so any claim of the form \"provider X "
+                 "beats Cloudflare\" is not testable from this data and is not made here.")
+        L.append("")
+
+    L.append("**Vendor-claimed (not independently measured here).** Quotes from the providers' own "
+             "pages that assert a success or unblocking rate:")
     L.append("")
-    L.append("**Vendor-claimed (not independently measured here):**")
-    L.append("")
+    claimed = 0
     for r in facts:
-        q = r["evidence"][0]["quote"] if r.get("evidence") else ""
-        if re.search(r"99\.9\d%|99\.\d+% success", q or ""):
-            L.append(f"- {r['name']}: “{q[:160]}” — {r['evidence'][0]['url']}")
+        q = (r["evidence"][0]["quote"] if r.get("evidence") else "") or ""
+        if re.search(r"\d+(\.\d+)?%\s*(success|of requests)|99\.\d+%", q):
+            L.append(f"- {r['name']}: “{q[:200]}” — {r['evidence'][0]['url']}")
+            claimed += 1
+    if not claimed:
+        L.append("- None of the fetched pages in this snapshot states a numeric success rate.")
     L.append("")
 
     # 3. one-time vs monthly
@@ -345,7 +419,7 @@ def build_readme(ranked):
     L.append("4. Maturity: first Wayback capture per domain (`data/maturity.json`) and GitHub stars "
              "for OSS entries.")
     L.append("5. Hit rates: treg Web Arena leaderboard snapshot (30-day live routing data) in "
-             "`data/snapshots/treg/leaderboard.json`.")
+             "`data/snapshots/treg/leaderboard.txt`.")
     L.append("")
     L.append("## Re-verify")
     L.append("")
@@ -353,6 +427,7 @@ def build_readme(ranked):
     L.append("make fetch        # re-download every provider page (refreshes snapshots)")
     L.append("make digest       # rebuild per-provider fact digests")
     L.append("make reports      # rebuild all reports from data/facts.json")
+    L.append("make test         # integrity tests: every quote verbatim, every path resolves")
     L.append("make check        # verify every source URL still resolves and hashes match")
     L.append("```")
     L.append("")
@@ -373,12 +448,6 @@ def build_readme(ranked):
 
 def main():
     os.makedirs(PROV, exist_ok=True)
-    # copy leaderboard into snapshots dir for the generator
-    lb = os.path.join(DATA, "snapshots", "treg", "leaderboard.json")
-    if not os.path.exists(lb):
-        src = os.path.join(DATA, "..", "..", "tmp", "src_treg_to_web-arena_api_leaderboard")
-        if os.path.exists(src):
-            json.dump(json.load(open(src)), open(lb, "w"))
     ranked = build_top100()
     build_post_analysis(ranked)
     build_readme(ranked)

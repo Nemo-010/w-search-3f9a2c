@@ -64,6 +64,17 @@
    "truncated": false,
    "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
    "fetched_at": "2026-10-19T05:54:33+00:00"
+  },
+  "lifecycle": {
+   "url": "https://learn.microsoft.com/en-us/lifecycle/announcements/bing-search-api-retirement",
+   "status": 200,
+   "final_url": "https://learn.microsoft.com/en-us/lifecycle/announcements/bing-search-api-retirement",
+   "content_type": "text/html",
+   "bytes": 46988,
+   "truncated": false,
+   "sha256": "303c658d80ec01bfe4712048436086917b8012d879aa8f2a2ad2ae6107bdc371",
+   "fetched_at": "2026-10-19T07:47:55+00:00",
+   "text_bytes": 2062
   }
  }
 }

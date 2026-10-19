@@ -17,7 +17,7 @@
 ## Evidence
 
 Source: https://core.ac.uk/services/api  
-Snapshot: `data/snapshots/core/home.txt`  
+Snapshot: `data/snapshots/core/docs.txt`  
 
 ## Measurement note
 

@@ -14,7 +14,7 @@
 
 ## Evidence
 
-> Free trial options for Oxylabs products (not captured in fetched pages).
+> One API for search and retrieval – start free, scale when you're ready.
 
 Source: https://oxylabs.io/  
 Snapshot: `data/snapshots/oxylabs/home.txt`  

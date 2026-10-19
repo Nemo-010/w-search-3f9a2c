@@ -15,9 +15,7 @@
 
 ## Evidence
 
-> Up to 1 call per second 
- Up to 500 calls per day 
- Free for non-commercial usage
+> Up to 1 call per second Up to 500 calls per day Access to article text Access to over 1,900,000 pieces of content Free for non-commercial usage
 
 Source: https://open-platform.theguardian.com/access/  
 Snapshot: `data/snapshots/guardian/docs2b.txt`  

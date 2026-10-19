@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://support.datacite.org/docs/api  
-Snapshot: `data/snapshots/datacite/home.txt`  
+Snapshot: `data/snapshots/datacite/docs.txt`  
 
 ## Measurement note
 

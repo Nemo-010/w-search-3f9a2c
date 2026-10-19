@@ -16,7 +16,7 @@
 
 ## Evidence
 
-> Yes, Mistral's Free plan provides limited access to Vibe , including our latest models, chat, search, creation
+> Does Mistral have a free plan? Yes, Mistral’s Free plan provides limited access to Vibe , including our latest models, chat, search, creation, and Vibe for code for agentic coding in your terminal.
 
 Source: https://mistral.ai/pricing  
 Snapshot: `data/snapshots/mistral/pricing.txt`  

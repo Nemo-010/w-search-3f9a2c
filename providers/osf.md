@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://developer.osf.io/  
-Snapshot: `data/snapshots/osf/home.txt`  
+Snapshot: `data/snapshots/osf/docs.txt`  
 
 ## Measurement note
 

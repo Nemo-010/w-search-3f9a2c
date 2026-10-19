@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://developers.google.com/books  
-Snapshot: `data/snapshots/googlebooks/home.txt`  
+Snapshot: `data/snapshots/googlebooks/docs.txt`  
 
 ## Measurement note
 

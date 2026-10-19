@@ -17,10 +17,10 @@
 
 ## Evidence
 
-> Start building for free Get started with our APIs in seconds. Run up to 5,000 requests per month for free.
+> Run up to 5,000 requests per month for free.
 
 Source: https://parallel.ai/  
-Snapshot: `data/snapshots/parallel/pricing.txt`  
+Snapshot: `data/snapshots/parallel/home.txt`  
 
 ## Measurement note
 

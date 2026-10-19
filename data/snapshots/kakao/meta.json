@@ -53,6 +53,17 @@
    "truncated": false,
    "sha256": "eb7deb0c37bb189b9c126115ecdbcdd8e81950774f8d0cad615f83f41d2201c1",
    "fetched_at": "2026-10-19T06:05:15+00:00"
+  },
+  "docs2": {
+   "url": "https://developers.kakao.com/docs/latest/en/daum-search/common",
+   "status": 200,
+   "final_url": "https://developers.kakao.com/docs/en/daum-search/common",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 185944,
+   "truncated": false,
+   "sha256": "6485a2bba0ec0dd2104f34777c0c843f2733d554bef3588295439c87193feebf",
+   "fetched_at": "2026-10-19T07:48:42+00:00",
+   "text_bytes": 4512
   }
  }
 }

@@ -17,7 +17,7 @@
 > The world's cheapest SERP API Google, Bing, DuckDuckGo, and Maps as JSON, for a flat $0.15 per 1,000 requests.
 
 Source: https://litescrape.com/  
-Snapshot: `data/snapshots/litescrape/llms.txt`  
+Snapshot: `data/snapshots/litescrape/home.txt`  
 
 ## Measurement note
 

@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://duckduckgo.com/api  
-Snapshot: `data/snapshots/duckduckgo-ia/home.txt`  
+Snapshot: `data/snapshots/duckduckgo-ia/llms-full.txt`  
 
 ## Measurement note
 

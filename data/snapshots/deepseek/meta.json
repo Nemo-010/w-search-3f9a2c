@@ -97,6 +97,17 @@
    "truncated": false,
    "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
    "fetched_at": "2026-10-19T05:54:59+00:00"
+  },
+  "skill": {
+   "url": "https://raw.githubusercontent.com/ry0narushima/bettersearch/main/SKILL.md",
+   "status": 200,
+   "final_url": "https://raw.githubusercontent.com/ry0narushima/bettersearch/main/SKILL.md",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 7387,
+   "truncated": false,
+   "sha256": "bd09eb02798a22c0bbd382d5a476571698ffff9dcd125ee62bcc192febe2d2aa",
+   "fetched_at": "2026-10-19T07:50:57+00:00",
+   "text_bytes": 7387
   }
  }
 }

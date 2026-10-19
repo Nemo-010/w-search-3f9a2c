@@ -16,10 +16,10 @@
 
 ## Evidence
 
-> Wayback Machine APIs are free (rate-limited).
+> Automated tools should respect rate limits: Add delays between requests for bulk operations Honor 429 Too Many Requests responses and Retry-Afte
 
-Source: https://archive.org/help/wayback_api.jsp  
-Snapshot: `data/snapshots/wayback/docs.txt`  
+Source: https://archive.org/developers/bots.html  
+Snapshot: `data/snapshots/wayback/bots.txt`  
 
 ## Measurement note
 

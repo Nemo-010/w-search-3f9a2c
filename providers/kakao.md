@@ -14,10 +14,10 @@
 
 ## Evidence
 
-> Kakao Developers search API daily quota 30,000 (documented; page not captured in snapshots)
+> Kakao API applies monthly and daily quotas for stable service. You can check the currently applied quota information in the Quota .
 
 Source: https://developers.kakao.com/docs/latest/en/daum-search/common  
-Snapshot: `data/snapshots/kakao/home.txt`  
+Snapshot: `data/snapshots/kakao/docs2.txt`  
 
 ## Measurement note
 

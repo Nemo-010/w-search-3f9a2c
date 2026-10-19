@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://api.archives-ouvertes.fr/docs  
-Snapshot: `data/snapshots/hal/home.txt`  
+Snapshot: `data/snapshots/hal/docs.txt`  
 
 ## Measurement note
 

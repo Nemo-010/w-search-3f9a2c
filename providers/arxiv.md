@@ -16,7 +16,7 @@
 ## Evidence
 
 Source: https://info.arxiv.org/help/api/index.html  
-Snapshot: `data/snapshots/arxiv/home.txt`  
+Snapshot: `data/snapshots/arxiv/docs.txt`  
 
 ## Measurement note
 
