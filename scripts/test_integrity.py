@@ -126,6 +126,47 @@ class TestEvidence(unittest.TestCase):
         self.assertEqual([], bad)
 
 
+class TestStandalone(unittest.TestCase):
+    """The repo must work from a fresh clone with no machine-specific state."""
+
+    def test_no_absolute_machine_paths_in_sources(self):
+        bad = []
+        for root, dirs, files in os.walk(ROOT):
+            dirs[:] = [d for d in dirs if d not in (".git", "__pycache__", "snapshots")]
+            for f in files:
+                if not f.endswith((".md", ".py", ".sh")) or f == "test_integrity.py":
+                    continue
+                path = os.path.join(root, f)
+                txt = open(path, encoding="utf-8", errors="replace").read()
+                for m in re.finditer(r"(/workspace/|/home/\w|/Users/)", txt):
+                    bad.append(f"{os.path.relpath(path, ROOT)}: "
+                               f"{txt[max(0, m.start() - 30):m.start() + 40]!r}")
+        self.assertEqual([], bad, "hard-coded machine paths")
+
+    def test_scripts_run_from_any_working_directory(self):
+        """Every script must locate the repo from its own path, not from cwd."""
+        import subprocess
+        for script in ("facts.py", "build_reports.py", "build_reviews.py", "llms.py"):
+            r = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", script)],
+                               cwd="/tmp", capture_output=True, text=True)
+            self.assertEqual(0, r.returncode, f"{script} failed outside the repo: {r.stderr[-300:]}")
+
+    def test_every_snapshot_cited_by_facts_is_committed(self):
+        """A snapshot path that exists only locally would break the clone."""
+        import subprocess
+        tracked = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True)
+        if tracked.returncode != 0:
+            self.skipTest("not a git checkout")
+        present = set(tracked.stdout.split())
+        missing = []
+        for r in facts():
+            for e in r.get("evidence") or []:
+                sp = e.get("snapshot")
+                if sp and sp not in present:
+                    missing.append(f"{r['slug']} -> {sp}")
+        self.assertEqual([], missing, "evidence snapshot not committed")
+
+
 class TestLeaderboard(unittest.TestCase):
     def setUp(self):
         self.path = os.path.join(DATA, "snapshots", "treg", "leaderboard.txt")

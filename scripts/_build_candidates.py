@@ -236,8 +236,10 @@ for p in P:
     seen.add(p["slug"]); out.append(p)
 
 import datetime
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 doc={"generated": datetime.date.today().isoformat(), "note":"candidate provider inventory; URLs fetched by scripts/fetch.py", "providers": out}
-with open("/workspace/wsearch/data/candidates.json","w") as f:
+with open(os.path.join(ROOT, "data", "candidates.json"), "w") as f:
     json.dump(doc,f,indent=1)
 print("providers:", len(out))
 from collections import Counter
