@@ -65,6 +65,16 @@
    "truncated": false,
    "sha256": "2ca1354a7cebf649cf16ba1bcf8ea7e12ebda46f06ff5792e42646204f276ebb",
    "fetched_at": "2026-10-19T05:54:20+00:00"
+  },
+  "docs-credits": {
+   "url": "https://docs.scrapingant.com/web-scraping-api/credits",
+   "status": 404,
+   "final_url": "https://docs.scrapingant.com/web-scraping-api/credits",
+   "content_type": "text/html",
+   "bytes": 153,
+   "truncated": false,
+   "sha256": "3248b01d461ed11b7d34871bee9879ba2536c0ae5c47f16638e9aaae0ec5a481",
+   "fetched_at": "2026-10-19T06:26:52+00:00"
   }
  }
 }

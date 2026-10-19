@@ -79,6 +79,17 @@
    "sha256": "d4fec665c7e67c4a5f56717203cb84ee77406ddedd54084a6c6dd966a3edd144",
    "fetched_at": "2026-10-19T06:25:52+00:00",
    "text_bytes": 12327
+  },
+  "search-ref": {
+   "url": "https://docs.tinyfish.ai/search-api/reference.md",
+   "status": 200,
+   "final_url": "https://docs.tinyfish.ai/search-api/reference.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 9385,
+   "truncated": false,
+   "sha256": "88a0618c73266bf32319f8124922b2cc1978aaf4eb85d680c3b5ab6bdc787da0",
+   "fetched_at": "2026-10-19T06:26:52+00:00",
+   "text_bytes": 9365
   }
  }
 }
