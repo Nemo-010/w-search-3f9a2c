@@ -12,7 +12,6 @@
 - Documented recurring free volume: not quantified in fetched sources
 - Detail: Free developer tier (rate-limited); Compound models include built-in web search
 - Card required for free tier: no
-- Signup extras: free tier for developers
 - Confidence: **low**
 
 ## Evidence

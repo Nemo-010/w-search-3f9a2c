@@ -345,19 +345,44 @@ def build_post_analysis(ranked):
     # 3. one-time vs monthly
     L.append("## 3. One-time vs monthly credits")
     L.append("")
-    monthly = [r for r in facts if r["monthly_calls"]]
+    monthly_only = [r for r in facts if r["monthly_calls"] and not r["one_time"]]
     onetime = [r for r in facts if r["one_time"] and r["monthly_calls"] is None]
     both = [r for r in facts if r["one_time"] and r["monthly_calls"]]
-    neither = [r for r in facts if r["monthly_calls"] is None and not r["one_time"]]
-    L.append(f"- **Recurring monthly free volume documented:** {len(monthly)} providers.")
-    L.append(f"- **Recurring + one-time bonus:** {len(both)} providers ({', '.join(r['name'] for r in both) or '—'}).")
-    L.append(f"- **One-time only:** {len(onetime)} providers ({', '.join(r['name'] for r in onetime) or '—'}).")
-    L.append(f"- **Free tier exists but no number in fetched sources, or no free tier:** {len(neither)} providers.")
+    monthly = monthly_only + both
+    nofree = [r for r in facts if r["monthly_calls"] == 0]
+    silent = [r for r in facts if r["monthly_calls"] is None and not r["one_time"]
+              and r["confidence"] in ("high", "medium")]
+    unknown = [r for r in facts if r["monthly_calls"] is None and not r["one_time"]
+               and r["confidence"] in ("low", "none")]
+    parts = len(monthly_only) + len(onetime) + len(both) + len(nofree) + len(silent) + len(unknown)
+    assert parts == len(facts), (parts, len(facts))
+    L.append("The six buckets below partition all "
+             f"{len(facts)} providers, so no row is counted twice or dropped.")
     L.append("")
-    L.append("Practical reading: a free tier that resets monthly is a permanent budget; a one-time "
-             "grant is a trial. Providers that document both (Exa, Bright Data, Valyu partly, "
-             "Zyte + bonus patterns) give the longest runway.")
+    L.append(f"- **Recurring monthly free volume documented:** {len(monthly)} providers, "
+             f"{len(monthly_only)} of them recurring only.")
+    L.append(f"- **Recurring volume plus a one-time bonus:** {len(both)} providers "
+             f"({', '.join(r['name'] for r in both) or '—'}).")
+    L.append(f"- **One-time grant only, no recurring volume:** {len(onetime)} providers "
+             f"({', '.join(r['name'] for r in onetime) or '—'}).")
+    L.append(f"- **Free tier documented but no published number:** {len(silent)} providers "
+             "(rate-limited or unpriced free access; excluded from every total).")
+    L.append(f"- **No free tier, priced only:** {len(nofree)} providers "
+             f"({', '.join(r['name'] for r in nofree) or '—'}).")
+    L.append(f"- **Nothing usable found in the captured pages:** {len(unknown)} providers.")
     L.append("")
+    L.append("Practical reading: a grant that resets monthly is a standing budget; a one-time grant "
+             "is a trial with an expiry. Five providers document both. The distinction that matters "
+             "for a gateway is not the size of the grant but whether the allowance returns: a "
+             "provider with a small monthly reset is usable indefinitely, while a large one-time "
+             "grant buys a fixed number of calls and then stops.")
+    L.append("")
+    if both:
+        L.append("| Provider | Recurring /month | One-time grant |")
+        L.append("|----------|---:|-------|")
+        for r in sorted(both, key=rank_key):
+            L.append(f"| {r['name']} | {fmt(r['monthly_calls'])} | {r['one_time']} |")
+        L.append("")
 
     # 4. maturity
     L.append("## 4. Maturity, popularity, market awareness")
@@ -424,10 +449,17 @@ def build_post_analysis(ranked):
         src = r["evidence"][0]["url"] if r.get("evidence") else (r["home"] or "")
         L.append(f"| {r['name']} | {'; '.join(r['bonus'])} | {src} |")
     L.append("")
-    L.append("Common patterns: work-email upgrades (Valyu doubles the grant), payment-method bonuses "
-             "(Bright Data +$5), startup programs (Exa up to $1,000, Linkup $5,000), agent-payment "
-             "rails (x402 on Tavily/Exa/Keenable, MPP on Exa), and free model/API tiers that require "
-             "no card at all.")
+    L.append("Common patterns, and what each is actually worth: work-email upgrades (Valyu doubles "
+             "the signup grant to $20), payment-method bonuses (Bright Data adds $5 but converts a "
+             "no-card free tier into a card-on-file account), startup programmes (Exa up to $1,000; "
+             "Linkup up to $5,000, but application-based rather than automatic), agent-payment rails "
+             "that need no account at all (x402 on Tavily, Exa and Keenable), and free tiers that "
+             "require no card from the start.")
+    L.append("")
+    L.append("The last group is the one that matters for a gateway that must not stop working: a "
+             "keyless path (Tavily keyless Search/Extract, Jina Reader, Firecrawl keyless scrape, "
+             "Keenable keyless calls) keeps a fallback alive after every monthly allowance is spent, "
+             "at a lower rate and with no account to lose.")
     L.append("")
     open(os.path.join(REP, "02-post-analysis.md"), "w").write("\n".join(L))
 

@@ -12,7 +12,6 @@
 - Documented recurring free volume: not quantified in fetched sources
 - Detail: Free plan for chat/Vibe with limited access incl. web search; API has a free tier (rate-limited)
 - Card required for free tier: no
-- Signup extras: La Plateforme free tier for API experiments
 - Confidence: **medium**
 
 ## Evidence

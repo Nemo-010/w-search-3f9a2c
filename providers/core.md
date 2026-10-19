@@ -12,7 +12,6 @@
 - Documented recurring free volume: not quantified in fetched sources
 - Detail: Free API key with rate limits (registration required)
 - Card required for free tier: no
-- Signup extras: open access full texts
 - Confidence: **medium**
 
 ## Evidence

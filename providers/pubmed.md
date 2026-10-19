@@ -12,7 +12,6 @@
 - Documented recurring free volume: not quantified in fetched sources
 - Detail: Free E-utilities, 3 requests/sec without key (10/sec with key)
 - Card required for free tier: no
-- Signup extras: higher rate with free NCBI key
 - Confidence: **medium**
 
 ## Evidence

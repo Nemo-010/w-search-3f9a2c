@@ -12,7 +12,6 @@
 - Documented recurring free volume: not quantified in fetched sources
 - Detail: Free CDX/Memento APIs; rate-limited by request rate, no key
 - Card required for free tier: no
-- Signup extras: no key required
 - Confidence: **high**
 
 ## Evidence

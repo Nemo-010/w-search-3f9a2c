@@ -12,7 +12,6 @@
 - Documented recurring free volume: not quantified in fetched sources
 - Detail: Free Algolia-backed HN search API; documented 10,000 requests/hour rate limit
 - Card required for free tier: no
-- Signup extras: no key
 - Confidence: **medium**
 
 ## Evidence

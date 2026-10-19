@@ -57,6 +57,29 @@ class TestEvidence(unittest.TestCase):
                         break
         self.assertEqual([], bad, "evidence quotes not present in their snapshot")
 
+    def test_bonus_claims_appear_in_the_providers_own_snapshots(self):
+        """A signup bonus is a factual claim about a provider's offer, so the words
+        must be in a page captured from that provider."""
+        bad = []
+        for r in facts():
+            if not r.get("bonus"):
+                continue
+            d = os.path.join(ROOT, "data", "snapshots", r["slug"])
+            if not os.path.isdir(d):
+                bad.append(f"{r['slug']}: no snapshot dir for bonus {r['bonus']}")
+                continue
+            body = " ".join(
+                open(os.path.join(d, f), encoding="utf-8", errors="replace").read()
+                for f in sorted(os.listdir(d)) if f.endswith(".txt"))
+            body = body.lower()
+            for claim in r["bonus"]:
+                words = [w for w in re.findall(r"[A-Za-z]{5,}", claim)]
+                hits = [w for w in words if w.lower() in body]
+                # require that the distinctive words of the claim are present
+                if words and len(hits) < max(1, len(set(w.lower() for w in words)) // 2):
+                    bad.append(f"{r['slug']}: {claim!r} not found in snapshots")
+        self.assertEqual([], bad, "bonus claims not supported by a captured page")
+
     def test_quantified_facts_cite_an_evidence_url(self):
         bad = [r["slug"] for r in facts()
                if r["monthly_calls"] and not any(e.get("url") for e in r.get("evidence") or [])]

@@ -213,12 +213,24 @@ What this does and does not show. It shows which provider was the one that retur
 
 ## 3. One-time vs monthly credits
 
-- **Recurring monthly free volume documented:** 46 providers.
-- **Recurring + one-time bonus:** 5 providers (Exa, Parallel, Bright Data, Airtop, Hyperbrowser).
-- **One-time only:** 23 providers (Octen, ScrapeGraphAI, Search1API, TikHub, treg, Valyu, You.com, Apify, Crawlbase, DataForSEO, ScrapeOps, ScraperAPI, Scrapfly, ScrapingBee, ScrapingDog, SearchCans, Serply, Web Scraper, Zyte, Notte, Skyvern, Steel.dev, NewsCatcher).
-- **Free tier exists but no number in fetched sources, or no free tier:** 123 providers.
+The six buckets below partition all 198 providers, so no row is counted twice or dropped.
 
-Practical reading: a free tier that resets monthly is a permanent budget; a one-time grant is a trial. Providers that document both (Exa, Bright Data, Valyu partly, Zyte + bonus patterns) give the longest runway.
+- **Recurring monthly free volume documented:** 46 providers, 41 of them recurring only.
+- **Recurring volume plus a one-time bonus:** 5 providers (Exa, Parallel, Bright Data, Airtop, Hyperbrowser).
+- **One-time grant only, no recurring volume:** 23 providers (Octen, ScrapeGraphAI, Search1API, TikHub, treg, Valyu, You.com, Apify, Crawlbase, DataForSEO, ScrapeOps, ScraperAPI, Scrapfly, ScrapingBee, ScrapingDog, SearchCans, Serply, Web Scraper, Zyte, Notte, Skyvern, Steel.dev, NewsCatcher).
+- **Free tier documented but no published number:** 50 providers (rate-limited or unpriced free access; excluded from every total).
+- **No free tier, priced only:** 6 providers (Perplexity, Bing Web Search API, Urlbox, Anthropic Web Search, DeepSeek, OpenAI Web Search).
+- **Nothing usable found in the captured pages:** 73 providers.
+
+Practical reading: a grant that resets monthly is a standing budget; a one-time grant is a trial with an expiry. Five providers document both. The distinction that matters for a gateway is not the size of the grant but whether the allowance returns: a provider with a small monthly reset is usable indefinitely, while a large one-time grant buys a fixed number of calls and then stops.
+
+| Provider | Recurring /month | One-time grant |
+|----------|---:|-------|
+| Parallel | 5,000 | signup credit for new accounts |
+| Bright Data | 5,000 | $2 trial credit (7 days) + $5 bonus when payment method added |
+| Hyperbrowser | 5,000 | 5,000 credits |
+| Exa | 2,500 | $10 onboarding bonus credits |
+| Airtop | 1,000 | 30,000 credits one-time signup grant (starts at 31,000) |
 
 ## 4. Maturity, popularity, market awareness
 
@@ -471,27 +483,21 @@ Documented extras beyond the base free tier (as stated in the fetched pricing/do
 | Google Programmable Search | Programmable Search Engine UI free | https://developers.google.com/custom-search/v1/overview |
 | Marginalia | no ads, no tracking | https://api.marginalia.nu/ |
 | Mwmbl | open source | https://mwmbl.org/ |
-| Stract | open source | https://stract.com/ |
 | Microlink | every feature unlocked on free plan | https://microlink.io/pricing |
 | Common Crawl | petabytes of crawl data free | https://commoncrawl.org/cc-index |
-| Wayback Machine CDX | no key required | https://archive.org/developers/bots.html |
 | Currents API | real-time and historical news on free tier | https://currentsapi.services/en/pricing |
 | The Guardian Open Platform | free for non-commercial usage | https://open-platform.theguardian.com/access/ |
-| CORE | open access full texts | https://core.ac.uk/services/api |
 | OpenAlex | free API key issued in one call for agents | https://help.openalex.org/access/pricing/ |
-| PubMed E-utilities | higher rate with free NCBI key | https://www.ncbi.nlm.nih.gov/books/NBK25501/ |
 | Bluesky AT Protocol | open protocol | https://docs.bsky.app/ |
 | CoinGecko | free demo key for all users | https://docs.coingecko.com/ |
-| Hacker News (Algolia) | no key | https://raw.githubusercontent.com/HackerNews/API/master/README.md |
-| Mastodon API | self-hostable | https://docs.joinmastodon.org/api/ |
 | Open Library | free monthly data dumps | https://openlibrary.org/developers/api |
 | Open-Meteo | no key, no sign-up | https://open-meteo.com/en/pricing |
 | StackExchange API | free app key raises quota | https://api.stackexchange.com/docs |
 | Wikimedia REST | free community access on Enterprise | https://api.wikimedia.org/ |
 | Cohere | evaluation keys free | https://docs.cohere.com/docs/rate-limits |
 | Google Gemini Grounding | Gemini free tier includes grounding quota | https://ai.google.dev/gemini-api/docs/pricing |
-| Groq Compound | free tier for developers | https://console.groq.com/docs/compound |
-| Mistral | La Plateforme free tier for API experiments | https://mistral.ai/pricing |
 | OpenRouter | free model pool; deposit raises daily free-model cap | https://openrouter.ai/docs |
 
-Common patterns: work-email upgrades (Valyu doubles the grant), payment-method bonuses (Bright Data +$5), startup programs (Exa up to $1,000, Linkup $5,000), agent-payment rails (x402 on Tavily/Exa/Keenable, MPP on Exa), and free model/API tiers that require no card at all.
+Common patterns, and what each is actually worth: work-email upgrades (Valyu doubles the signup grant to $20), payment-method bonuses (Bright Data adds $5 but converts a no-card free tier into a card-on-file account), startup programmes (Exa up to $1,000; Linkup up to $5,000, but application-based rather than automatic), agent-payment rails that need no account at all (x402 on Tavily, Exa and Keenable), and free tiers that require no card from the start.
+
+The last group is the one that matters for a gateway that must not stop working: a keyless path (Tavily keyless Search/Extract, Jina Reader, Firecrawl keyless scrape, Keenable keyless calls) keeps a fallback alive after every monthly allowance is spent, at a lower rate and with no account to lose.

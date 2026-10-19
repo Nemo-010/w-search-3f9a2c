@@ -2298,9 +2298,7 @@
   "monthly_note": "Free open-source search engine with public REST API",
   "one_time": null,
   "card": null,
-  "bonus": [
-   "open source"
-  ],
+  "bonus": [],
   "confidence": "medium",
   "verified": true,
   "evidence": [
@@ -2664,9 +2662,7 @@
   "monthly_note": "Free CDX/Memento APIs; rate-limited by request rate, no key",
   "one_time": null,
   "card": false,
-  "bonus": [
-   "no key required"
-  ],
+  "bonus": [],
   "confidence": "high",
   "verified": true,
   "evidence": [
@@ -3068,9 +3064,7 @@
   "monthly_note": "Free API key with rate limits (registration required)",
   "one_time": null,
   "card": false,
-  "bonus": [
-   "open access full texts"
-  ],
+  "bonus": [],
   "confidence": "medium",
   "verified": true,
   "evidence": [
@@ -3332,9 +3326,7 @@
   "monthly_note": "Free E-utilities, 3 requests/sec without key (10/sec with key)",
   "one_time": null,
   "card": false,
-  "bonus": [
-   "higher rate with free NCBI key"
-  ],
+  "bonus": [],
   "confidence": "medium",
   "verified": true,
   "evidence": [
@@ -3644,9 +3636,7 @@
   "monthly_note": "Free Algolia-backed HN search API; documented 10,000 requests/hour rate limit",
   "one_time": null,
   "card": false,
-  "bonus": [
-   "no key"
-  ],
+  "bonus": [],
   "confidence": "medium",
   "verified": false,
   "evidence": [
@@ -3750,9 +3740,7 @@
   "monthly_note": "Free per-instance API, rate limits per instance",
   "one_time": null,
   "card": false,
-  "bonus": [
-   "self-hostable"
-  ],
+  "bonus": [],
   "confidence": "medium",
   "verified": true,
   "evidence": [
@@ -4226,9 +4214,7 @@
   "monthly_note": "Free developer tier (rate-limited); Compound models include built-in web search",
   "one_time": null,
   "card": false,
-  "bonus": [
-   "free tier for developers"
-  ],
+  "bonus": [],
   "confidence": "low",
   "verified": true,
   "evidence": [
@@ -4274,9 +4260,7 @@
   "monthly_note": "Free plan for chat/Vibe with limited access incl. web search; API has a free tier (rate-limited)",
   "one_time": null,
   "card": false,
-  "bonus": [
-   "La Plateforme free tier for API experiments"
-  ],
+  "bonus": [],
   "confidence": "medium",
   "verified": true,
   "evidence": [

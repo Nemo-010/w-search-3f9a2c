@@ -11,7 +11,6 @@
 
 - Documented recurring free volume: not quantified in fetched sources
 - Detail: Free open-source search engine with public REST API
-- Signup extras: open source
 - Confidence: **medium**
 
 ## Evidence
