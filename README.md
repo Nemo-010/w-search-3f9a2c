@@ -6,6 +6,7 @@ Compiled 2026-10-19. Every claim is tied to a snapshot in `data/snapshots/`.
 
 - `reports/01-top-100.md` — 198 providers, ranked: documented recurring monthly free volume first, one-time grants second, unquantified free tiers last.
 - `reports/02-post-analysis.md` — 5-account totals, measured hit rates vs vendor claims, one-time vs monthly, maturity, signup bonuses.
+- `reports/03-deep-reviews.md` — 8 provider reviews (Tavily, Exa, Firecrawl, Jina, Brave, ZenRows, Bright Data, ScrapingAnt) generated from the same data.
 - `providers/<slug>.md` — one report per provider with links, free-tier facts, evidence quote and snapshot path.
 
 ## Method
@@ -35,5 +36,9 @@ make check        # verify every source URL still resolves and hashes match
 - Where a provider publishes prices in JS-rendered tables only, the number may be marked `low`/`none` even if a plan exists.
 - Credit-to-call conversions use the provider's own rate card; they are noted per row.
 - No terms-of-service analysis is included; this is a technical inventory.
+- An allowance is a documented call count, not a page count: a DOI lookup and a rendered page both count as one call, so the headline total is a ceiling. `reports/02-post-analysis.md` section 1 gives the web-only subtotal as well.
+- Measured hit rates come from one third-party router's workload (treg). They say which provider returned the page when it was asked, not which anti-bot system was in the way, and they are not a controlled head-to-head scrape of identical URLs.
+- A provider with no number here may still have a free tier: a JS-rendered pricing table, a login wall or a region block can hide it from capture. Absence of a number is not evidence of absence of a free tier.
+- This inventory lists what providers document. It makes no claim that any given use of them is permitted by their terms.
 
 License: 0BSD (see `LICENSE`).
