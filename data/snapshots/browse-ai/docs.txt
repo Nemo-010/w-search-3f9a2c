@@ -1,0 +1,30 @@
+Browse AI API documentation and examples | Browse AI 
+ API Documentation Help Center Integrations Pricing API Documentation Help Center Integrations Pricing Log in Sign up Dashboard Open Search Search Keyboard Shortcut: CTRL ⌃ k Introduction Core Resources System Open Group Robots Open Group Tasks Open Group Monitors Open Group Webhooks Open Group Bulk Runs Open Group Powered by Scalar Open Menu v2 OpenAPI 3.1.0 Browse AI API Documentation Download OpenAPI Document json Download OpenAPI Document yaml 
+ Authenticate every request with your Browse AI API key, sent as a Bearer token in the Authorization header. Generate your API key . 
+ Still using the deprecated v1 API? See its documentation here . 
+ Server Server: https://api.browse.ai/v2 Authentication Required Selected Auth Type: bearerAuth 
+ Your Browse AI API key, sent as a Bearer token. Generate an API key . 
+ Bearer Token : Show Password Client Libraries Shell Ruby Node.js PHP Python More Select from all clients Node.js Fetch System (Collapsed) ​ Copy link 
+ This tag is used for endpoints that are used to check the status of Browse AI infrastructure 
+ System Operations get /status Show More Robots (Collapsed) ​ Copy link 
+ A robot can be trained do almost anything you do manually on the web. For example: 
+ Open a webpage, 
+ Log in, 
+ Click on buttons, 
+ Fill out forms, 
+ Extract structured data from a webpage into a spreadsheet, 
+ Take screenshots, 
+ Monitor specific parts of webpages for visual or content changes. 
+ Robots are created either by using Prebuilt Robots or using Browse AI Recorder and its click-and-extract interface. Every robot has a few input parameters (like the webpage address) that you can adjust every time you run it. 
+ Robots Operations get /robots get /robots/{robotId} patch /robots/{robotId}/cookies Show More Tasks (Collapsed) ​ Copy link 
+ Each robot is trained to perform a certain task. Every time you run that robot, it will perform that task and the details, including the extracted data, will be stored under that task. 
+ If you set up a monitoring robot to monitor a webpage for changes daily, it will have to run a task every day or about 30 tasks per month for you. 
+ Tasks Operations get /robots/{robotId}/tasks post /robots/{robotId}/tasks get /robots/{robotId}/tasks/{taskId} Show More Monitors (Collapsed) ​ Copy link 
+ Each robot on Browse AI can optionally have one or more monitors. Monitoring robots come with one monitor by default. 
+ For example, if you set up a monitoring robot to monitor a category page on an e-commerce site for changes daily, you can set up additional monitors to monitor other category pages on the same site using the same robot. 
+ Each monitor can have different input parameters and schedule. 
+ Monitors Operations get /robots/{robotId}/monitors post /robots/{robotId}/monitors get /robots/{robotId}/monitors/{monitorId} patch /robots/{robotId}/monitors/{monitorId} delete /robots/{robotId}/monitors/{monitorId} Show More Webhooks (Collapsed) ​ Copy link 
+ After a robot finishes a task, its webhooks will be called. 
+ Webhooks Operations get /robots/{robotId}/webhooks post /robots/{robotId}/webhooks delete /robots/{robotId}/webhooks/{webhookId} post Task Finished post Table Export Finished (Beta) Show More Bulk Runs (Collapsed) ​ Copy link 
+ You can run up to 50,000 tasks at once using a robot with different input parameters for each task. 
+ Bulk Runs Operations post /robots/{robotId}/bulk-runs get /robots/{robotId}/bulk-runs get /robots/{robotId}/bulk-runs/{bulkRunId} Show More

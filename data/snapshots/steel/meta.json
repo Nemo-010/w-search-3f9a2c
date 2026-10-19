@@ -1,0 +1,85 @@
+{
+ "slug": "steel",
+ "name": "Steel.dev",
+ "category": "browser",
+ "fetched_at": "2026-10-19T05:54:23+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://steel.dev/pricing",
+   "status": 200,
+   "final_url": "https://steel.dev/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 142732,
+   "truncated": false,
+   "sha256": "d8fc6171b2d19b80e674f85b8d033826a4e419569a7fbb7a1b2db4dc09bc8f2b",
+   "fetched_at": "2026-10-19T05:59:39+00:00",
+   "text_bytes": 3173
+  },
+  "docs": {
+   "url": "https://docs.steel.dev/",
+   "status": 200,
+   "final_url": "https://docs.steel.dev/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 214326,
+   "truncated": false,
+   "sha256": "97e9151ca01ce8e0a4e6f49528d74496268b5ced4e10bd1255951788df953678",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 1850
+  },
+  "home": {
+   "url": "https://steel.dev/",
+   "status": 200,
+   "final_url": "https://steel.dev/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 519841,
+   "truncated": false,
+   "sha256": "efce5c003b8f5c216948b998745df9a1397d971f768fb1d100dd07667453e506",
+   "fetched_at": "2026-10-19T05:54:25+00:00",
+   "text_bytes": 12502
+  },
+  "llms": {
+   "url": "https://docs.steel.dev/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.steel.dev/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 29062,
+   "truncated": false,
+   "sha256": "fc6d8ebb50af9371d927d4511c3cb4632d06f55df4890f36d5762fcebe779e1a",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 29041
+  },
+  "llms-full": {
+   "url": "https://steel.dev/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.steel.dev/llms-full.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 797874,
+   "truncated": false,
+   "sha256": "200ea583bfa65f958048e771714a704e01b4549d545a8a80c12dcadba12afa47",
+   "fetched_at": "2026-10-19T05:54:31+00:00",
+   "text_bytes": 796916
+  },
+  "llms-https://steel.dev/llms.txt": {
+   "url": "https://steel.dev/llms.txt",
+   "status": 200,
+   "final_url": "https://steel.dev/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 24870,
+   "truncated": false,
+   "sha256": "b5c193e3ccea14e1a572196f268cc4bd4576ebca7ebdd1b59452518a6557cb52",
+   "fetched_at": "2026-10-19T05:54:28+00:00",
+   "text_bytes": 24866
+  },
+  "llms-https://steel.dev/docs/llms.txt": {
+   "url": "https://steel.dev/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.steel.dev/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 29062,
+   "truncated": false,
+   "sha256": "fc6d8ebb50af9371d927d4511c3cb4632d06f55df4890f36d5762fcebe779e1a",
+   "fetched_at": "2026-10-19T05:54:30+00:00",
+   "text_bytes": 29041
+  }
+ }
+}

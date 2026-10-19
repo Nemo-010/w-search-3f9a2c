@@ -1,0 +1,51 @@
+{
+ "slug": "qwen",
+ "name": "Alibaba Qwen (DashScope)",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:53+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://help.aliyun.com/zh/dashscope/",
+   "status": 200,
+   "final_url": "https://help.aliyun.com/zh/dashscope/",
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 25231,
+   "truncated": false,
+   "sha256": "1e1a52a88071f3d67ff468e42a7f3659ccdc69ae237e135e462247762ef9d925",
+   "fetched_at": "2026-10-19T05:54:53+00:00",
+   "text_bytes": 600
+  },
+  "llms": {
+   "url": "https://help.aliyun.com/zh/dashscope/llms.txt",
+   "status": 200,
+   "final_url": "https://help.aliyun.com/zh/dashscope/llms.txt",
+   "content_type": "text/plain;charset=UTF-8",
+   "bytes": 51,
+   "truncated": false,
+   "sha256": "730981295bf767e3c62a0d9a3f0c5908696595698fb9c38aa620d4974cb0830a",
+   "fetched_at": "2026-10-19T05:54:55+00:00",
+   "text_bytes": 51
+  },
+  "llms-https://help.aliyun.com/zh/dashscope/docs/llms.txt": {
+   "url": "https://help.aliyun.com/zh/dashscope/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://help.aliyun.com/zh/dashscope/docs/llms.txt",
+   "content_type": "text/plain;charset=UTF-8",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-19T05:54:58+00:00",
+   "text_bytes": 0
+  },
+  "llms-err-978e21": {
+   "url": "https://docs.help.aliyun.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.help.aliyun.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:55:01+00:00"
+  }
+ }
+}

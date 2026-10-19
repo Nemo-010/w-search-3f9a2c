@@ -1,0 +1,71 @@
+{
+ "slug": "tavily",
+ "name": "Tavily AI",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://docs.tavily.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.tavily.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 18662,
+   "truncated": false,
+   "sha256": "85e0cb8b7a9af6a4dad686067e133ebdb4eab55b81083ed569848f836f289763",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 18628
+  },
+  "llms-full": {
+   "url": "https://docs.tavily.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.tavily.com/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 755948,
+   "truncated": false,
+   "sha256": "c25e9b9d344eab46aa1503e43af5eb4ec59aefca3320fb78b19e448603aec34e",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 755145
+  },
+  "pricing-err-ab65e9": {
+   "url": "https://www.tavily.com/#pricing",
+   "status": 403,
+   "final_url": "https://www.tavily.com/#pricing",
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "985ce3cb81807e3e33a0bf0e87f11efded1387b0ee5d3cd41ac5787cda7e478a",
+   "fetched_at": "2026-10-19T05:54:02+00:00"
+  },
+  "docs": {
+   "url": "https://docs.tavily.com/",
+   "status": 200,
+   "final_url": "https://docs.tavily.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 629028,
+   "truncated": false,
+   "sha256": "b19f029b5da98cd93c642ece53ec74ffbc25cf931d3c601dfd55017ef8e58d77",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 7004
+  },
+  "home-err-5fd6d4": {
+   "url": "https://tavily.com/",
+   "status": 403,
+   "final_url": "https://tavily.com/",
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "4f2584ad21a30132e7133f62ceff08df1efb3139e167b7d1b73c00f1f85a6c82",
+   "fetched_at": "2026-10-19T05:54:03+00:00"
+  },
+  "billing-md": {
+   "url": "https://docs.tavily.com/documentation/billing.md",
+   "status": 404,
+   "final_url": "https://docs.tavily.com/documentation/billing.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 607,
+   "truncated": false,
+   "sha256": "52beb11c991f5b788875908ba41a353c5ce5faf7d15b527592eb5ebae3a11c53",
+   "fetched_at": "2026-10-19T05:58:01+00:00"
+  }
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "slug": "biorxiv",
+ "name": "bioRxiv API",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:45+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://api.biorxiv.org/",
+   "status": 200,
+   "final_url": "https://api.biorxiv.org/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 15899,
+   "truncated": false,
+   "sha256": "ac8302fbc99e14273f33c16268b2a12065c204fe888ff2aa52ab31dda1f5c2b4",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 10808
+  },
+  "llms-err-5d5ef7": {
+   "url": "https://api.biorxiv.org/llms.txt",
+   "status": 404,
+   "final_url": "https://api.biorxiv.org/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 196,
+   "truncated": false,
+   "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  },
+  "llms-err-380732": {
+   "url": "https://api.biorxiv.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://api.biorxiv.org/docs/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 196,
+   "truncated": false,
+   "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  }
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "slug": "openrouter",
+ "name": "OpenRouter",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:53+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://openrouter.ai/pricing",
+   "status": 200,
+   "final_url": "https://openrouter.ai/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 301211,
+   "truncated": false,
+   "sha256": "40f31ef4e468fdd8fa4a5dce9ab42e709f7a3a72be3981d6c22793af3d0059da",
+   "fetched_at": "2026-10-19T05:54:53+00:00",
+   "text_bytes": 10924
+  },
+  "docs": {
+   "url": "https://openrouter.ai/docs",
+   "status": 200,
+   "final_url": "https://openrouter.ai/docs/quickstart",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 720914,
+   "truncated": false,
+   "sha256": "5247a263562c18853034bedfd1c8d4ada311b3c6eeed24eeec8e90c9ba9ba002",
+   "fetched_at": "2026-10-19T05:54:54+00:00",
+   "text_bytes": 11059
+  },
+  "home": {
+   "url": "https://openrouter.ai/",
+   "status": 200,
+   "final_url": "https://openrouter.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 181418,
+   "truncated": false,
+   "sha256": "1203cc6a58e1fae8a04bfd60d7e4ed0bbdfe4049d334459191d8d66464e8467f",
+   "fetched_at": "2026-10-19T05:54:55+00:00",
+   "text_bytes": 3268
+  },
+  "llms": {
+   "url": "https://openrouter.ai/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://openrouter.ai/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 35743,
+   "truncated": false,
+   "sha256": "0e9def4c23077ceb36b96cf0af0336bac27084ecfbff7117c5f7ad128ce85609",
+   "fetched_at": "2026-10-19T05:54:55+00:00",
+   "text_bytes": 35718
+  },
+  "llms-full": {
+   "url": "https://docs.openrouter.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://openrouter.ai/docs/quickstart",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 720914,
+   "truncated": false,
+   "sha256": "f6db3365f6deead0f96b12ddd49d3d0c718e2eeadd9b30499ac014b8e117a6e2",
+   "fetched_at": "2026-10-19T05:55:00+00:00",
+   "text_bytes": 11059
+  },
+  "llms-https://openrouter.ai/llms.txt": {
+   "url": "https://openrouter.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://openrouter.ai/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 8786,
+   "truncated": false,
+   "sha256": "3f37ecfb802b97e187bd5a71d5d4f6438d1b73f38d2850680781a46e6eb247cb",
+   "fetched_at": "2026-10-19T05:54:57+00:00",
+   "text_bytes": 8780
+  },
+  "llms-https://docs.openrouter.ai/llms.txt": {
+   "url": "https://docs.openrouter.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://openrouter.ai/docs/quickstart",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 720914,
+   "truncated": false,
+   "sha256": "a368b77b729526453b55def1dd41a2b8146a4b12020b282cc687a370d8968754",
+   "fetched_at": "2026-10-19T05:54:59+00:00",
+   "text_bytes": 11059
+  }
+ }
+}

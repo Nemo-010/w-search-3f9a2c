@@ -1,0 +1,72 @@
+{
+ "slug": "scrapingbee",
+ "name": "ScrapingBee",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:08+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.scrapingbee.com/pricing/",
+   "status": 200,
+   "final_url": "https://www.scrapingbee.com/pricing/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 225443,
+   "truncated": false,
+   "sha256": "24d75d3ff37debb1b55616135e5266571e87ed7257155868c75ca1558c8261c4",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 3707
+  },
+  "docs": {
+   "url": "https://www.scrapingbee.com/documentation/",
+   "status": 200,
+   "final_url": "https://www.scrapingbee.com/documentation/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 779636,
+   "truncated": false,
+   "sha256": "f06a0c0017a05a79a2b28505cc275d9075c2b5f2517edb928b7acbe7e267492a",
+   "fetched_at": "2026-10-19T05:54:10+00:00",
+   "text_bytes": 245883
+  },
+  "home": {
+   "url": "https://www.scrapingbee.com/",
+   "status": 200,
+   "final_url": "https://www.scrapingbee.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 404411,
+   "truncated": false,
+   "sha256": "d9dcf2a657ad06556769cbd07f9f4628b66d7c9c9b0ea4ee26ba9dbbd7198d14",
+   "fetched_at": "2026-10-19T05:54:11+00:00",
+   "text_bytes": 19693
+  },
+  "llms-err-e1adac": {
+   "url": "https://www.scrapingbee.com/documentation/llms.txt",
+   "status": 404,
+   "final_url": "https://www.scrapingbee.com/documentation/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 198604,
+   "truncated": false,
+   "sha256": "cd7554fbbc545909d5f05b7f0f7a656d734df4901aa699ac384dd4da62ce3c53",
+   "fetched_at": "2026-10-19T05:54:12+00:00"
+  },
+  "llms": {
+   "url": "https://www.scrapingbee.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.scrapingbee.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 6204,
+   "truncated": false,
+   "sha256": "bcca23fa6de91d2325457663da15ffb6214cc295a66ac775fb90278b9325138c",
+   "fetched_at": "2026-10-19T05:54:13+00:00",
+   "text_bytes": 6132
+  },
+  "llms-err-eb9a04": {
+   "url": "https://www.scrapingbee.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.scrapingbee.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 198604,
+   "truncated": false,
+   "sha256": "cd7554fbbc545909d5f05b7f0f7a656d734df4901aa699ac384dd4da62ce3c53",
+   "fetched_at": "2026-10-19T05:54:13+00:00"
+  }
+ }
+}

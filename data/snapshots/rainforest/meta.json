@@ -1,0 +1,74 @@
+{
+ "slug": "rainforest",
+ "name": "Rainforest API",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:19+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.rainforestapi.com/pricing",
+   "status": 200,
+   "final_url": "https://trajectdata.com/ecommerce/rainforest-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 364226,
+   "truncated": false,
+   "sha256": "edb56b212e0a738f01f368c7ab32f8bb883554755bdfd757291f23975b87f9df",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 11560
+  },
+  "docs": {
+   "url": "https://www.rainforestapi.com/docs",
+   "status": 200,
+   "final_url": "https://docs.trajectdata.com/rainforestapi",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 231827,
+   "truncated": false,
+   "sha256": "8d957ec82f4580fad296142a5b95b3c4b9570061590614105c60ad9210d2dc4c",
+   "fetched_at": "2026-10-19T05:54:21+00:00",
+   "text_bytes": 2019
+  },
+  "home": {
+   "url": "https://www.rainforestapi.com/",
+   "status": 200,
+   "final_url": "https://trajectdata.com/ecommerce/rainforest-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 364226,
+   "truncated": false,
+   "sha256": "49db8be65bf0edd35490c16f1824d6ffccdab3f792b0506a33c06d7ecf0025e7",
+   "fetched_at": "2026-10-19T05:54:22+00:00",
+   "text_bytes": 11560
+  },
+  "llms": {
+   "url": "https://www.rainforestapi.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://trajectdata.com/ecommerce/rainforest-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 364226,
+   "truncated": false,
+   "sha256": "672a2ae51b7e341adad62044da8644acfe5392e48df4347b087403c395467aef",
+   "fetched_at": "2026-10-19T05:54:23+00:00",
+   "text_bytes": 11560
+  },
+  "llms-full": {
+   "url": "https://www.rainforestapi.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://trajectdata.com/ecommerce/rainforest-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 364226,
+   "truncated": false,
+   "sha256": "d1053e1ebd4e5669d564548e00203e0d5be2700b0c4e622bcab75ef925fb1667",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 11560
+  },
+  "llms-https://www.rainforestapi.com/llms.txt": {
+   "url": "https://www.rainforestapi.com/llms.txt",
+   "status": 200,
+   "final_url": "https://trajectdata.com/ecommerce/rainforest-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 364226,
+   "truncated": false,
+   "sha256": "bf86a670da6b6005ba4fa062b150632eee6abc4707133dcf15027cfe3e8ebf70",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 11560
+  }
+ }
+}

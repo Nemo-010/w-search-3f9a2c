@@ -1,0 +1,90 @@
+News API – Search News and Blog Articles on the Web 
+ News API 
+ Get started 
+ Documentation 
+ Pricing 
+ Login 
+ Get API key 
+ menu 
+ close 
+ Get started 
+ Documentation 
+ Pricing 
+ Login 
+ Get API key 
+ Search worldwide news with code 
+ Locate articles and breaking news headlines from news sources and blogs across the web with our JSON API 
+ Get API Key arrow_forward 
+ arrow_back 
+ All articles mentioning Apple from yesterday, sorted by popular publishers first 
+ arrow_forward 
+ GET 
+ https://newsapi.org/v2/everything? q=apple & from=2026-10-18 & to=2026-10-18 & sortBy=popularity &apiKey=API_KEY 
+ arrow_back 
+ All articles about Tesla from the last month, sorted by recent first 
+ arrow_forward 
+ GET 
+ https://newsapi.org/v2/everything? q=tesla &from=2026-09-19&sortBy=publishedAt&apiKey=API_KEY 
+ arrow_back 
+ Top business headlines in the US right now 
+ arrow_forward 
+ GET 
+ https://newsapi.org/v2/top-headlines? country=us & category=business &apiKey=API_KEY 
+ arrow_back 
+ Top headlines from TechCrunch right now 
+ arrow_forward 
+ GET 
+ https://newsapi.org/v2/top-headlines? sources=techcrunch &apiKey=API_KEY 
+ arrow_back 
+ All articles published by the Wall Street Journal in the last 6 months, sorted by recent first 
+ arrow_forward 
+ GET 
+ https://newsapi.org/v2/everything? domains=wsj.com &apiKey=API_KEY 
+ Trusted by over 500,000 developers, including at 
+ News API is a simple, easy-to-use REST API that returns JSON search results for current and historic news articles published by over 150,000 worldwide sources. 
+ Worldwide Scale 
+ Search through hundreds of millions of articles in 14 languages from 55 countries. 
+ Easy Integration 
+ Get JSON results with simple HTTP GET requests, or use one of the SDKs available in your language. 
+ Free for Development 
+ Jump right into a trial if you're 
+ in development. No credit card required. 
+ Use powerful search and filter options 
+ Keywords and phrases 
+ Search with singular keywords, or surround complete phrases with quotation marks for exact-match: q=tesla or q="elon musk" 
+ Specify words which must appear in articles, and words that must not , to remove irrelevent results: q=gamestop +stonks -sell 
+ Boolean operators AND / OR / NOT and brackets are supported so you can do this: q=(crypto AND bitcoin) NOT ethereum 
+ Limit your search specifically within titles, or content: qInTitle="title search" 
+ Dates and timeframes 
+ Interested in articles less than 2 weeks old? from=2026-10-05 
+ Focus on news from a specific period in the past from=2024-10-03&to=2024-10-17 
+ Or leave blank to get the up-to-the-minute latest news 
+ Publishers 
+ Limit your searches to a single publisher by entering their domain name domains=techcrunch.com 
+ Or a selection of publishers: domains=techcrunch.com,engadget.com,thenextweb.com 
+ And remove unwanted publishers: excludeDomains=breitbart.com,clickhole.com 
+ Languages 
+ Limit your search to one of 14 languages: language=en , language=jp 
+ “Ascender AI has a mission to apply AI to the media, and NewsAPI is one of our most valuable resources. Ascender is redefining how users interact with complex information, and the NewsAPI feed is an essential showcase for our technologies.” 
+ Braddock Gaskill 
+ CEO, Ascender AI 
+ “News API has been the integral element allowing us to offer relevant and timely political news to our users – allowing them to take immediate action to contact their representatives using generated call scripts based on the articles they read.” 
+ Brandon Peterson 
+ Founder at Capitol Call 
+ “NewsAPI is a key input into our NLP algorithms which scan the world of unstructured data to infer environmental, social and governance factors for companies and countries. The service is blazing fast and extremely intuitive.” 
+ Qayyum Rajan 
+ CEO & Data Engineer at ESG Analytics 
+ Get API Key arrow_forward 
+ News API 
+ Get started 
+ Documentation 
+ News sources 
+ Pricing 
+ Google News API 
+ Company 
+ Privacy policy 
+ Terms of service 
+ Support 
+ Contact 
+ Twitter 
+ Github

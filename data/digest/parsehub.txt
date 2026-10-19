@@ -1,0 +1,5 @@
+# ParseHub (parsehub) category=serp-scrape
+home=https://www.parsehub.com/ pricing=https://www.parsehub.com/pricing docs=None llms=None
+sources_ok: pricing:https://www.parsehub.com/pricing, home:https://www.parsehub.com/
+--- ranked fact lines ---
+[pricing] ParseHub | Free web scraping - The most powerful web scraper

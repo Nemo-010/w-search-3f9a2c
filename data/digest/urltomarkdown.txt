@@ -1,0 +1,4 @@
+# URLtoMarkdown (urltomarkdown) category=reader
+home=https://urltomarkdown.com/ pricing=None docs=None llms=None
+sources_ok: home:https://urltomarkdown.com/
+--- ranked fact lines ---

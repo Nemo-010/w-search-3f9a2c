@@ -1,0 +1,111 @@
+# Scite API
+
+- [Documentation](https://docs.scite.ai/introduction.md): Build tools to find, understand, and use scientific research with Scite.
+- [Quickstart](https://docs.scite.ai/quickstart.md): Retrieve a paper, check its citation tally, and run your first authenticated search.
+- [Get API key](https://docs.scite.ai/authentication.md): Authenticate with an API key or Enterprise credentials.
+- [For agents](https://docs.scite.ai/agents.md): Give ChatGPT, Claude, Microsoft 365 Copilot, and other AI agents access to Scite documentation and citation data.
+- [Glossary](https://docs.scite.ai/concepts/glossary.md): Quick reference for Scite-specific terminology used across the API.
+- [Citations & Tallies](https://docs.scite.ai/concepts/citation-model.md): How Scite models citations: targets, sources, Smart Citations, and tallies.
+- [Search](https://docs.scite.ai/guides/search.md): Query Scite's publication metadata and citation data with Boolean terms and 25+ filters.
+- [Smart Citations](https://docs.scite.ai/guides/smart-citations.md): Get tallies, browse the citation graph, and look up journal-level Smart Citation data.
+- [Scite Zotero plugin](https://docs.scite.ai/guides/zotero-plugin.md): Install Scite's free Zotero plugin to see Smart Citation tallies and open Scite Reports from your Zotero library.
+- [Papers & Authors](https://docs.scite.ai/guides/papers-and-authors.md): Look up publication metadata by DOI or PMID, and author-level metadata and citation statistics.
+- [Overview](https://docs.scite.ai/guides/evidence/overview.md): Search patents, grants, clinical trials, and regulatory records alongside citation data.
+- [Patents](https://docs.scite.ai/guides/evidence/patents.md): Search patent filings with family, forward-citation, assignee, and legal-event data.
+- [Clinical Trials](https://docs.scite.ai/guides/evidence/clinical-trials.md): Search registered clinical trials with phase, status, sponsor, and intervention filters.
+- [Grants](https://docs.scite.ai/guides/evidence/grants.md): Search research grant awards from NIH RePORTER, NSF, and other funding sources.
+- [Drugs](https://docs.scite.ai/guides/evidence/drugs.md): Search FDA drug labels, Orange Book listings, and Drugs@FDA application records.
+- [Device Clearances](https://docs.scite.ai/guides/evidence/devices.md): Search FDA 510(k) device clearance decisions and their summary PDFs.
+- [Adverse Events](https://docs.scite.ai/guides/evidence/adverse-events.md): Search FDA MAUDE device and FAERS drug adverse-event reports.
+- [Safety Alerts](https://docs.scite.ai/guides/evidence/safety-alerts.md): Search UK MHRA safety alerts, including full alert document content.
+- [Collections](https://docs.scite.ai/guides/collections.md): Create collections of papers and monitor how their citations develop over time.
+- [Reference Check](https://docs.scite.ai/guides/reference-check.md): Submit a document and have its references evaluated and linked using Scite's data.
+- [Assistant](https://docs.scite.ai/guides/assistant.md): Ask research questions and get answers backed by citation evidence.
+- [Scite MCP](https://docs.scite.ai/mcp/overview.md): Use Scite inside ChatGPT, Claude, Microsoft 365 Copilot, and other AI tools to search the literature and retrieve citation data.
+- [Tool reference](https://docs.scite.ai/mcp/tools/overview.md): The full Scite MCP tool catalog, grouped by task, with the access each tool requires.
+- [Literature tools](https://docs.scite.ai/mcp/tools/literature.md): Search the scientific literature, read full-text excerpts, and retrieve Smart Citations through MCP.
+- [Evidence tools](https://docs.scite.ai/mcp/tools/evidence.md): Search patents, clinical trials, grants, FDA device and drug records, adverse events, and safety alerts through MCP.
+- [Collection tools](https://docs.scite.ai/mcp/tools/collections.md): Create, read, and maintain saved sets of papers through MCP.
+- [Prompts](https://docs.scite.ai/mcp/prompts.md): Prebuilt research workflows the Scite MCP server ships, ready to invoke from any MCP client.
+- [Pricing and plans](https://docs.scite.ai/pricing-and-plans.md): Compare Scite plans, API access, MCP credits, usage limits, and options for organizations.
+- [Errors and rate limits](https://docs.scite.ai/errors-and-rate-limits.md): Handle authentication failures, missing scopes, invalid requests, and rate limits.
+- [Enterprise access and SSO](https://docs.scite.ai/enterprise-access-and-sso.md): Configure institutional access to Scite with SAML 2.0 SSO, OpenAthens, IP ranges, email domains, or managed user lists.
+- [Changelog](https://docs.scite.ai/changelog.md): Notable changes to the Scite API and these docs.
+- [Get Scite journal index for ISSN](https://docs.scite.ai/api-reference/journal/get-scite-journal-index-for-issn.md): Read the Scite Journal Index for a single ISSN.
+- [Get Scite journal index for multiple ISSNs](https://docs.scite.ai/api-reference/journal/get-scite-journal-index-for-multiple-issns.md): Get multiple Scite journal indices for multiple ISSNs.
+- [Get Issn Editorial Notices](https://docs.scite.ai/api-reference/journal/get-issn-editorial-notices.md): Get multiple editorial notice aggregations for multiple ISSNs.
+- [Get Smart Citation tallies for a journal](https://docs.scite.ai/api-reference/journal/get-smart-citation-tallies-for-a-journal.md): Get tally information for a journal given a valid ISSN.
+- [Get yearly Scite index for a journal](https://docs.scite.ai/api-reference/journal/get-yearly-scite-index-for-a-journal.md): Get Scite index information for a journal given its slug     or a valid ISSN, and an optional list of years.
+- [Get count of publications for a journal dashboard by slug/ISSN](https://docs.scite.ai/api-reference/journal/get-count-of-publications-for-a-journal-dashboard-by-slugissn.md): Get count of publications for Scite journal dashboard by valid ISSN.
+- [Receive citations with the DOI as a target paper](https://docs.scite.ai/api-reference/smart-citation-graph/receive-citations-with-the-doi-as-a-target-paper.md): Get citations made toward a given DOI.
+- [Receive citations with the DOI as a source paper](https://docs.scite.ai/api-reference/smart-citation-graph/receive-citations-with-the-doi-as-a-source-paper.md): Get citations made from a given DOI.
+- [Retrieve distinct references to a publication](https://docs.scite.ai/api-reference/references/retrieve-distinct-references-to-a-publication.md): Gets distinct references to a given DOI.
+- [Retrieve distinct references from a publication](https://docs.scite.ai/api-reference/references/retrieve-distinct-references-from-a-publication.md): Gets distinct references from a given DOI.
+- [Start an Assistant query](https://docs.scite.ai/api-reference/assistant/start-an-assistant-query.md): Submit a question to the Scite Assistant. Returns a task ID that you poll via `GET /api_partner/assistant/tasks/{task_id}`.
+- [Get Assistant Task](https://docs.scite.ai/api-reference/assistant/get-assistant-task.md): Poll the status and results of an assistant task. Call this endpoint repeatedly until the status is `SUCCESS`.
+- [Get recommended papers to read given a DOI](https://docs.scite.ai/api-reference/paper-recommendations/get-recommended-papers-to-read-given-a-doi.md): Return a ranked list of papers related to the supplied DOI. Each item includes publication metadata, a citation tally when available, and a recommendation score.
+- [Get search results from a query](https://docs.scite.ai/api-reference/search/get-search-results-from-a-query.md): Search publication metadata and citation statements with Boolean terms, filters, sorting, pagination, and optional aggregations. Citation snippet text is hidden on self-service keys.
+- [Create a collection from a list of DOIs or a search query](https://docs.scite.ai/api-reference/collections/create-a-collection-from-a-list-of-dois-or-a-search-query.md): Either 'dois' or 'query' is required to create a dashboard. If both are provided, 'query' will be used.
+- [Get a collection by slug](https://docs.scite.ai/api-reference/collections/get-a-collection-by-slug.md): Retrieve a collection by its Scite-generated slug. The key and account must have Collections access.
+- [Update a collection by slug](https://docs.scite.ai/api-reference/collections/update-a-collection-by-slug.md): Only DOI collections can be updated via this endpoint. Use `/create` for search query based collections.
+- [Delete a collection by slug](https://docs.scite.ai/api-reference/collections/delete-a-collection-by-slug.md): Delete a collection by its Scite-generated slug. This operation requires Collections access and a key created with the Write preset or equivalent fine-grained scope.
+- [Get multiple papers (bulk, GET with body — prefer POST)](https://docs.scite.ai/api-reference/papers/get-multiple-papers-bulk-get-with-body-—-prefer-post.md): Get multiple papers.
+- [Get multiple papers (bulk, POST)](https://docs.scite.ai/api-reference/papers/get-multiple-papers-bulk-post.md): Get multiple papers.
+- [Get Papers by Target](https://docs.scite.ai/api-reference/papers/get-papers-by-target.md): Get papers citing a given DOI.
+- [Resolve PMID to DOI](https://docs.scite.ai/api-reference/papers/resolve-pmid-to-doi.md): Resolve a PubMed ID (PMID) to a DOI without requiring the paper to exist in the Scite database.
+- [Get Single Paper](https://docs.scite.ai/api-reference/papers/get-single-paper.md): Get paper metadata for DOI.
+- [Search patents](https://docs.scite.ai/api-reference/evidence/search-patents.md): Search patents with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+- [Get patent schema](https://docs.scite.ai/api-reference/evidence/get-patent-schema.md): Returns all queryable and facetable fields for the patents dataset.
+- [Get patent facets](https://docs.scite.ai/api-reference/evidence/get-patent-facets.md): Return facet counts for patents without fetching full result records. Requires the dataset's Evidence scope.
+- [Get patent detail](https://docs.scite.ai/api-reference/evidence/get-patent-detail.md): Retrieve one patents record by its identifier. Requires the dataset's Evidence scope.
+- [Search grants](https://docs.scite.ai/api-reference/evidence/search-grants.md): Search research grants with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+- [Get grants schema](https://docs.scite.ai/api-reference/evidence/get-grants-schema.md): Returns all queryable and facetable fields for the grants dataset.
+- [Get grants facets](https://docs.scite.ai/api-reference/evidence/get-grants-facets.md): Return facet counts for research grants without fetching full result records. Requires the dataset's Evidence scope.
+- [Get grant detail](https://docs.scite.ai/api-reference/evidence/get-grant-detail.md): Retrieve one research grants record by its identifier. Requires the dataset's Evidence scope.
+- [Search clinical trials](https://docs.scite.ai/api-reference/evidence/search-clinical-trials.md): Search clinical trials with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+- [Get clinical trials schema](https://docs.scite.ai/api-reference/evidence/get-clinical-trials-schema.md): Returns all queryable and facetable fields for the clinical trials dataset.
+- [Get clinical trials facets](https://docs.scite.ai/api-reference/evidence/get-clinical-trials-facets.md): Return facet counts for clinical trials without fetching full result records. Requires the dataset's Evidence scope.
+- [Get clinical trial detail](https://docs.scite.ai/api-reference/evidence/get-clinical-trial-detail.md): Retrieve one clinical trials record by its identifier. Requires the dataset's Evidence scope.
+- [Search device 510(k) clearances](https://docs.scite.ai/api-reference/evidence/search-device-510k-clearances.md): Search FDA 510(k) device clearances with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+- [Get device 510(k) schema](https://docs.scite.ai/api-reference/evidence/get-device-510k-schema.md): Returns all queryable and facetable fields for the device 510(k) dataset.
+- [Get device 510(k) facets](https://docs.scite.ai/api-reference/evidence/get-device-510k-facets.md): Return facet counts for FDA 510(k) device clearances without fetching full result records. Requires the dataset's Evidence scope.
+- [Get device 510(k) detail](https://docs.scite.ai/api-reference/evidence/get-device-510k-detail.md): Retrieve one FDA 510(k) device clearances record by its identifier. Requires the dataset's Evidence scope.
+- [Search 510(k) summary PDFs](https://docs.scite.ai/api-reference/evidence/search-510k-summary-pdfs.md): Search FDA 510(k) summary PDFs with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+- [Get 510(k) summary PDFs schema](https://docs.scite.ai/api-reference/evidence/get-510k-summary-pdfs-schema.md): Return the filterable and sortable field definitions for FDA 510(k) summary PDFs. Requires the dataset's Evidence scope.
+- [Get 510(k) summary PDFs facets](https://docs.scite.ai/api-reference/evidence/get-510k-summary-pdfs-facets.md): Return facet counts for FDA 510(k) summary PDFs without fetching full result records. Requires the dataset's Evidence scope.
+- [Get 510(k) summary PDF detail](https://docs.scite.ai/api-reference/evidence/get-510k-summary-pdf-detail.md): Retrieve one FDA 510(k) summary PDFs record by its identifier. Requires the dataset's Evidence scope.
+- [Search MHRA alerts](https://docs.scite.ai/api-reference/evidence/search-mhra-alerts.md): Search MHRA safety alerts with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+- [Get MHRA schema](https://docs.scite.ai/api-reference/evidence/get-mhra-schema.md): Return the filterable and sortable field definitions for MHRA safety alerts. Requires the dataset's Evidence scope.
+- [Get MHRA facets](https://docs.scite.ai/api-reference/evidence/get-mhra-facets.md): Return facet counts for MHRA safety alerts without fetching full result records. Requires the dataset's Evidence scope.
+- [Get MHRA alert detail](https://docs.scite.ai/api-reference/evidence/get-mhra-alert-detail.md): Retrieve one MHRA safety alerts record by its identifier. Requires the dataset's Evidence scope.
+- [Search MAUDE adverse event reports](https://docs.scite.ai/api-reference/evidence/search-maude-adverse-event-reports.md): Search FDA MAUDE device adverse-event reports with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+- [Get MAUDE schema](https://docs.scite.ai/api-reference/evidence/get-maude-schema.md): Return the filterable and sortable field definitions for FDA MAUDE device adverse-event reports. Requires the dataset's Evidence scope.
+- [Get MAUDE facets](https://docs.scite.ai/api-reference/evidence/get-maude-facets.md): Return facet counts for FDA MAUDE device adverse-event reports without fetching full result records. Requires the dataset's Evidence scope.
+- [Get MAUDE report detail](https://docs.scite.ai/api-reference/evidence/get-maude-report-detail.md): Retrieve one FDA MAUDE device adverse-event reports record by its identifier. Requires the dataset's Evidence scope.
+- [Search FAERS drug adverse event reports](https://docs.scite.ai/api-reference/evidence/search-faers-drug-adverse-event-reports.md): Search FDA FAERS drug adverse-event reports with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+- [Get FAERS schema](https://docs.scite.ai/api-reference/evidence/get-faers-schema.md): Return the filterable and sortable field definitions for FDA FAERS drug adverse-event reports. Requires the dataset's Evidence scope.
+- [Get FAERS facets](https://docs.scite.ai/api-reference/evidence/get-faers-facets.md): Return facet counts for FDA FAERS drug adverse-event reports without fetching full result records. Requires the dataset's Evidence scope.
+- [Get FAERS report detail](https://docs.scite.ai/api-reference/evidence/get-faers-report-detail.md): Retrieve one FDA FAERS drug adverse-event reports record by its identifier. Requires the dataset's Evidence scope.
+- [Search FDA drug labels, Orange Book, and Drugs@FDA](https://docs.scite.ai/api-reference/evidence/search-fda-drug-labels-orange-book-and-drugs@fda.md): Search FDA drug labels, Orange Book, and Drugs@FDA records with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+- [Get drugs schema](https://docs.scite.ai/api-reference/evidence/get-drugs-schema.md): Return the filterable and sortable field definitions for FDA drug labels, Orange Book, and Drugs@FDA records. Requires the dataset's Evidence scope.
+- [Get drugs facets](https://docs.scite.ai/api-reference/evidence/get-drugs-facets.md): Return facet counts for FDA drug labels, Orange Book, and Drugs@FDA records without fetching full result records. Requires the dataset's Evidence scope.
+- [Get drug detail](https://docs.scite.ai/api-reference/evidence/get-drug-detail.md): Retrieve one FDA drug labels, Orange Book, and Drugs@FDA records record by its identifier. Requires the dataset's Evidence scope.
+- [Get multiple tallies (bulk, GET with body — prefer POST)](https://docs.scite.ai/api-reference/tallies/get-multiple-tallies-bulk-get-with-body-—-prefer-post.md): Get multiple smart citation tallies.
+- [Get multiple tallies (bulk, POST)](https://docs.scite.ai/api-reference/tallies/get-multiple-tallies-bulk-post.md): Get multiple smart citation tallies.
+- [Get Section Tally](https://docs.scite.ai/api-reference/tallies/get-section-tally.md): Get section tally for given DOI
+- [Get Section Tallies](https://docs.scite.ai/api-reference/tallies/get-section-tallies.md): Get multiple section tallies.
+- [Get Tally](https://docs.scite.ai/api-reference/tallies/get-tally.md): Get smart citation tally for given DOI.
+- [Get Aggregate Tally](https://docs.scite.ai/api-reference/tallies/get-aggregate-tally.md): Get the sum of multiple tallies by DOI.
+- [Post Reference Check](https://docs.scite.ai/api-reference/reference-check/post-reference-check.md): Schedule a document for processing.
+- [Get Result](https://docs.scite.ai/api-reference/reference-check/get-result.md): Retrieve reference check job status.
+- [Cancel Task](https://docs.scite.ai/api-reference/reference-check/cancel-task.md): Cancel task that is scheduled/in progress.
+- [Get Result Url](https://docs.scite.ai/api-reference/reference-check/get-result-url.md): Get URL for task result.
+- [Retrieve author metadata and papers by author slug.](https://docs.scite.ai/api-reference/authors/retrieve-author-metadata-and-papers-by-author-slug.md): Retrieve author metadata and papers by author slug. Note that these endpoints require an API token for usage.
+- [Retrieve aggregated citation statistics for an author.](https://docs.scite.ai/api-reference/authors/retrieve-aggregated-citation-statistics-for-an-author.md): Retrieve aggregated citation statistics for an author without fetching all papers.
+
+## OpenAPI Specs
+
+- [openapi](/openapi.json)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

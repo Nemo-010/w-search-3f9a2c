@@ -1,0 +1,4 @@
+# ScrapeOps Proxy (scrapeops-proxy) category=marketplace
+home=https://scrapeops.io/proxy-api/ pricing=https://scrapeops.io/pricing/ docs=https://scrapeops.io/docs/ llms=None
+sources_ok: 
+--- ranked fact lines ---

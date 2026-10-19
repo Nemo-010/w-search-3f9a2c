@@ -1,0 +1,85 @@
+{
+ "slug": "browser-use",
+ "name": "Browser Use (OSS)",
+ "category": "oss",
+ "fetched_at": "2026-10-19T05:54:59+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://browser-use.com/pricing",
+   "status": 200,
+   "final_url": "https://browser-use.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 102842,
+   "truncated": false,
+   "sha256": "c8aba6c391d12d62ad45100cf207879db5d7095b0d37197ada05ba7fe4f55a67",
+   "fetched_at": "2026-10-19T05:54:59+00:00",
+   "text_bytes": 6546
+  },
+  "docs": {
+   "url": "https://docs.browser-use.com/",
+   "status": 200,
+   "final_url": "https://docs.browser-use.com/cloud/quickstart",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 480465,
+   "truncated": false,
+   "sha256": "1fd031dd1eca3c7b910433e8a80e332a0f6cfa5979e8d83a1cd2e38e2e7c9bc2",
+   "fetched_at": "2026-10-19T05:55:00+00:00",
+   "text_bytes": 4943
+  },
+  "home": {
+   "url": "https://browser-use.com/",
+   "status": 200,
+   "final_url": "https://browser-use.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 242358,
+   "truncated": false,
+   "sha256": "419e21abe82a2e5e6c3f8c46d81d206a372dee71dc54b4d4f27a599629613331",
+   "fetched_at": "2026-10-19T05:55:01+00:00",
+   "text_bytes": 4435
+  },
+  "llms": {
+   "url": "https://docs.browser-use.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.browser-use.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 46936,
+   "truncated": false,
+   "sha256": "e228ae6e70cdf82f9f352ed1487e798747cf657f2720bc80a90fbb791747612d",
+   "fetched_at": "2026-10-19T05:55:02+00:00",
+   "text_bytes": 46891
+  },
+  "llms-full": {
+   "url": "https://browser-use.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.browser-use.com/.well-known/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 538162,
+   "truncated": false,
+   "sha256": "698c437fa62d9d85f07c713c26397160ad1254e37a06c1b2e5bc8fcfe398fb2b",
+   "fetched_at": "2026-10-19T05:55:05+00:00",
+   "text_bytes": 537658
+  },
+  "llms-https://browser-use.com/llms.txt": {
+   "url": "https://browser-use.com/llms.txt",
+   "status": 200,
+   "final_url": "https://browser-use.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 36507,
+   "truncated": false,
+   "sha256": "0aed6407c996a78a0c818124c9d50dc3fc93835cbc8bf89630b2a9ed248d5b19",
+   "fetched_at": "2026-10-19T05:55:03+00:00",
+   "text_bytes": 36498
+  },
+  "llms-https://browser-use.com/docs/llms.txt": {
+   "url": "https://browser-use.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.browser-use.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 46936,
+   "truncated": false,
+   "sha256": "e228ae6e70cdf82f9f352ed1487e798747cf657f2720bc80a90fbb791747612d",
+   "fetched_at": "2026-10-19T05:55:04+00:00",
+   "text_bytes": 46891
+  }
+ }
+}

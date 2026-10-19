@@ -1,0 +1,61 @@
+# Scrapfly (scrapfly) category=serp-scrape
+home=https://scrapfly.io/ pricing=https://scrapfly.io/pricing docs=https://scrapfly.io/docs/ llms=None
+sources_ok: pricing:https://scrapfly.io/pricing, docs:https://scrapfly.io/docs/, home:https://scrapfly.io/, llms:https://scrapfly.io/docs/llms.txt, llms-https://scrapfly.io/llms.txt:https://scrapfly.io/llms.txt, llms-https://docs.scrapfly.io/llms.txt:https://docs.scrapfly.io/llms.txt
+--- ranked fact lines ---
+[pricing] From 1,000 free credits to $30k+ enterprise contracts .
+[home] Yes. The Enterprise tier is $500 / month (5.5M credits, 100 concurrent requests, premium support, team management). Custom plans above 5.5M credits / month include MSA, DPA, BAA, and HIPAA, dedicated residential proxy pools, committed concurrency, premium support, and custom log retention. Contact sales@scrapfly.io . See pricing for the full grid.
+[pricing] Same credit pool spans five APIs. Pick the tool per request, a simple HTTP scrape costs 1 credit, a full managed browser session costs more. No contracts to switch products.
+[pricing] At this volume the effective per-credit rate keeps dropping. Custom contracts at Scrapfly start at $1.2k/mo and scale to $30k+/mo — same API, same compliance, dedicated infrastructure.
+[pricing] Usage-based. One API key across every Scrapfly product. 1,000 free credits, no credit card.
+[pricing] per 1k credits, prepaid
+[pricing] 1,000 free credits on signup
+[pricing] 1,000 free credits to evaluate
+[pricing] Free key, 1,000 credits, no card required.
+[pricing] No. 1,000 credits on signup, no card required, every product usable. Keep the free key forever for smoke tests and prototypes.
+[home] 1,000 free credits. No credit card.
+[home] Free account, 1,000 credits, no credit card. One key, every product.
+[pricing] Extra at $3.50 / 10k
+[pricing] Extra at $2.00 / 10k
+[pricing] Extra at $1.20 / 10k
+[pricing] Failed request $0, never charged on error
+[home] Get Free Credits
+[pricing] Yes, above 5.5M credits per month. Custom plans include volume discounts, dedicated proxy pools, committed concurrency, premium support, and a signed DPA. Contact sales .
+[pricing] 1,000 credits on signup.
+[pricing] Get Free Key
+[pricing] API credits / month
+[pricing] Credits scale with request cost. Simple HTTP on a datacenter IP is 1 credit; adding browser rendering, residential IPs, or screenshot capture increases the multiplier. See the full matrix in the docs .
+[pricing] 1 credit HTTP scrape on datacenter IP
+[pricing] 5 credits + JS rendering or Unblocker
+[pricing] 25 credits + residential proxies
+[pricing] 60 credits screenshot capture (full-page)
+[pricing] upstream 4xx/5xx and failed scrapes are free
+[pricing] 1,000 credits on signup. No credit card, no time limit. Every product usable, prototype and smoke-test forever.
+[pricing] Get free key →
+[pricing] // API credits per month
+[pricing] Get Free API Key
+[pricing] One scrape costs a variable number of credits depending on the configuration. HTTP scrape on a datacenter IP is 1 credit; adding browser rendering or residential proxies increases the cost. See the credit-cost table above, or the full matrix in the docs .
+[pricing] Is the free tier time-limited?
+[pricing] Same API, same Unblocker engine, same compliance stack. Prototype on the free tier, scale to production agentic workloads, sign an MSA when procurement asks.
+[docs] Free educational platform. From beginner tutorials to advanced techniques.
+[home] Pay on success. Failed requests are free.
+[home] Failed requests are free. You only pay for successful scrapes.
+[home] Scrape public Twitter (X.com) profiles and tweets with Python in 2026, and learn why guest tokens and doc_ids break DIY scrapers.
+--- llms/readme head ---
+# Scrapfly Documentation
+> Complete index of Scrapfly product documentation as Markdown. Append `.md` to any docs URL to receive the page as `text/markdown` instead of HTML — works on every page below and on any future docs page.
+> For the high-level platform overview (what Scrapfly does, when an agent should reach for it, quickstart, auth, errors, pricing) see https://scrapfly.io/llms.txt
+## Onboarding
+- https://scrapfly.io/docs/onboarding.md
+- https://scrapfly.io/docs/onboarding/golang.md
+- https://scrapfly.io/docs/onboarding/typescript.md
+## Scrape API
+- https://scrapfly.io/docs/scrape-api/batch.md
+- https://scrapfly.io/docs/scrape-api/billing.md
+- https://scrapfly.io/docs/scrape-api/cache.md
+- https://scrapfly.io/docs/scrape-api/classify.md
+- https://scrapfly.io/docs/scrape-api/custom.md
+- https://scrapfly.io/docs/scrape-api/debug.md
+- https://scrapfly.io/docs/scrape-api/dns.md
+- https://scrapfly.io/docs/scrape-api/error/ERR::ACCOUNT::PAYMENT_REQUIRED.md
+- https://scrapfly.io/docs/scrape-api/error/ERR::ACCOUNT::SUSPENDED.md
+- https://scrapfly.io/docs/scrape-api/error/ERR::API::INTERNAL_ERROR.md

@@ -1,0 +1,103 @@
+Mojeek Search API 
+ Skip to main content 
+ Company About Vision, values & history Press & Media Contact, media & assets Careers Join the team Contact Us Get in touch Products Mojeek Ads Reach new audiences Focus Search the web you want Web Search API Embedded web search Site Search API Embedded site search Simple Search Boxes Extensible search widgets Help & Support Support Support guides & information Browsers Browser guides Mobile Mobile guides API Docs Developer documentation Engage Blog Latest updates from us Community Join the discussion Newsletter Get updates by email ✕ Search Web Images News Substack Company About Press & Media Careers Contact Us Products Mojeek Ads Focus Web Search API Site Search API Simple Search Boxes Help & Support Support Browsers Mobile API Docs Engage Blog Community Newsletter 
+ Mojeek Search API 
+ Connect AI agents to the real-time web. 
+ Get Started 
+ Independent Index 
+ Global index with billions of fresh webpages. 
+ 90-Day Retention 
+ Standard 90-day data retention with ZDR available on request. 
+ European Compliance 
+ Search API built for regulatory compliance (EU Data Act etc). 
+ Zero Sub-Processors 
+ End-to-end European infrastructure powering every search result. 
+ Fast Retrieval 
+ Quick search results based on third party industry speed tests. 
+ Trusted Crawler 
+ Established MojeekBot which respects Robots Exclusion Protocol. 
+ Highly Customisable 
+ Configure by country, language, ranking, clustering and more. 
+ Renewable Energy 
+ 100% green energy powering our data centre and all your searches. 
+ Pricing Plans 
+ Clear and competitive PAYG pricing for AI applications and Search products with no minimum commitment, no automatic payments and can cancel anytime. 
+ Queries per Second 
+ Daily Query Limit 
+ Storage Rights 
+ AI Usage 
+ Web Search 
+ Focus 
+ Results Per Request 
+ Startup 
+ £2 per 1,000 requests 
+ 5 Queries /sec 
+ 100,000 Queries /day 
+ Storage Rights 
+ AI Usage 
+ Web Search 
+ Focus 
+ Up to 10 
+ Contact 
+ Business 
+ £3 per 1,000 requests 
+ 10 Queries /sec 
+ 400,000 Queries /day 
+ Storage Rights 
+ AI Usage 
+ Web Search 
+ Focus 
+ Up to 40 
+ Contact 
+ Enterprise 
+ Let's talk
+ Custom
+ No Limit
+ Storage Rights 
+ AI Usage 
+ Web Search 
+ Focus 
+ Up to 100 
+ Contact 
+ Prices exclude indirect taxes such as VAT, sales tax, GST etc. 
+ All Search API plans include full set of advanced search commands and operators, customisable by country and language boosting, site clustering, title and description lengths, optional safesearch and more. 
+ Custom Search API plans for large-scale deployments include Zero Data Retention and enterprise-grade support including NDAs, invoicing and authority, keyword and semantic scores. 
+ Developer Documentation 
+ Quickstart 
+ Request Parameters 
+ Results Scoring Parameters 
+ JSON Response Format 
+ XML Response Format 
+ Read Docs 
+ Search API Benefits 
+ Trusted global Search API built for European market compliance with partners in Government, Healthcare, Finance, Education, Technology, Legal etc. 
+ Trusted Robots Exclusion Protocol crawler 
+ Quick retrieval from independent index 
+ Display advertising alongside search results 
+ Guaranteed DPA with no sub-processors 
+ Unique European data sovereignty 
+ Mix and reorder search results ranking 
+ Sustainable data centre using green energy 
+ Contact Us 
+ FAQ 
+ Is there a free Search API available for testing? 
+ Yes, sign up to our Startup Plan and claim a free credit. A bank card is required to open an account however no automatic payments are processed and you can cancel anytime. Check out our Quickstart guide with an example of recommended parameters to start testing. 
+ Can I see your Terms of Service Agreement? 
+ Yes, please read our Search API Terms of Service Agreement which covers our services, permissions, exclusions, warranties etc. These terms are also available when you open your Mojeek Search API account. 
+ What data outputs does the Search API provide? 
+ Our Search API is used across a broad range of use cases with results consisting of URL, page title and query dependent snippets. These are customisable by country, language, ranking, clustering and more so see our Documentation to configure results for your project. 
+ Can I retain or store data outside of my account? 
+ Yes, our Business Plan and Enterprise Plan have storage rights which permit indefinite data retention. The Startup Plan enables you to cache results for one hour so, if you need storage rights, simply upgrade to our Business Plan. 
+ Can I combine search results with other data sources? 
+ Yes, you can combine our Search API results with other data sources such as other web search suppliers. You can also modify the data however please read our Terms of Service Agreement for all permissions and exclusions. 
+ Can I display advertising alongside Search API results? 
+ Yes, you’re welcome to display search results alongside third party advertising. We don’t require attribution however please see Terms of Service Agreement for all the details. 
+ Can I use search results for commercial purposes? 
+ Yes, you can use our Search API for commercial reasons, such as your own subscription service, as long as you adhere to our Terms of Service Agreement and policies. 
+ How are payments processed for your Search API? 
+ Our PAYG plans do not process automatic payments and you can set alerts on your account to control your budget. Payments are processed by Stripe Payments Europe Ltd and you can cancel anytime. Invoicing is available on Enterprise Plans. 
+ Are any sub-processors used to deliver results? 
+ No, our infrastructure is owned and operated in Europe with no sub-processors or third parties used in the provision of search results. Mojeek Search API is the “Processor” and you’re the “Controller” when processing queries. 
+ Do I need to consider any copyright laws? 
+ Our Search API provides publicly available URLs, page titles and query dependent snippets from webpages that don’t block Mojeek from crawling or indexing them. We do not grant any rights to use third party content on these webpages so customers must comply with publisher copyright terms. 
+ Search Web Images News Substack Company About Press & Media Careers Contact Us Products Mojeek Ads Focus Web Search API Site Search API Simple Search Boxes Help & Support Support Browsers Mobile API Docs Subscribe to our newsletter About Products Support Blog Privacy Terms Settings

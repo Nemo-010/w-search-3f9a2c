@@ -1,0 +1,38 @@
+# Parallel (parallel) category=ai-search
+home=https://parallel.ai/ pricing=https://docs.parallel.ai/resources/pricing docs=https://docs.parallel.ai/ llms=https://docs.parallel.ai/llms.txt
+sources_ok: llms:https://docs.parallel.ai/llms.txt, llms-full:https://docs.parallel.ai/llms-full.txt, pricing:https://docs.parallel.ai/resources/pricing, docs:https://docs.parallel.ai/, home:https://parallel.ai/
+--- ranked fact lines ---
+[pricing] By default, the Search API returns 10 page results and their excerpts per request. Pricing varies by mode .
+[pricing] Component Cost ($/1000) Per 1,000 turbo or fast requests (default 10 results) 1 Per 1,000 basic or advanced requests (default 10 results) 5 Per 1,000 additional page results & excerpts 1
+[pricing] Image Search is priced per request. Pricing varies by mode , and each request can return up to 20 results at no additional cost.
+[pricing] Component Cost ($/1000) Per 1,000 fast requests 1 Per 1,000 advanced requests 5
+[pricing] Component Cost ($/1000) Per 1,000 URLs 1
+[pricing] Task API pricing is based on the processor you select. Cost is per 1,000 Task Runs.
+[pricing] Responses API pricing is based on the reasoning.effort tier you select. Cost is per 1,000 requests. You are only charged for successful responses.
+[pricing] total cost = cost per 1,000 × number of executions / 1000 \text{total cost} = \text{cost per 1,000} \times \text{number of executions} / 1000 total cost = cost per 1,000 × number of executions /1000
+[pricing] Generator Fixed Cost Per Match Best For preview $0.10 $0.00 Testing queries (~10 candidates) base $0.25 $0.03 Broad, common queries where you expect many matches core $2.00 $0.15 Specific queries with moderate expected matches pro $10.00 $1.00 Highly specific queries with rare or hard-to-find matches
+[pricing] Entity Search is a fast, synchronous people-and-company search, the real-time counterpart to FindAll. It is priced per request, including 100 results by default.
+[pricing] Component Cost ($/1000) Per 1,000 requests (default 100 results) 5 Per 1,000 additional results 0.05
+[docs] # Up to 20 URLs per request. Pages that fail to fetch appear in extract.errors.
+[docs] # high-volume workloads, or mode="basic" for quick retrieval with deeper context per call.
+[home] Parallel - Web Infrastructure for AI Agents Introducing Parallel Search Fast: A web search API for agents that’s fast, cheap, and accurate. Learn more. [ Learn more. ] ( https://parallel.ai/blog/parallel-search-fast ) Introducing Parallel Search Fast. Learn more. Human Machine Where agents find answers Web infrastructure for AI to search, extract, monitor, and reason over the world's information S
+[llms] - [Data Connectors](https://docs.parallel.ai/resources/data-connectors.md): Connect Task Runs to sources beyond the public web: Index Partners included by default, free and pay-per-use connectors you select per run, or a license you already hold
+--- llms/readme head ---
+# Parallel
+> Parallel's web APIs (Search, Extract, Task/Deep Research, Responses, FindAll, and Monitor) give AI agents and developers high-quality, low-latency access to the web for research, content extraction, entity discovery, and continuous monitoring. For Search and Extract, use /v1/search and /v1/extract for all new integrations and agent tool calls; use /v1beta/search and /v1beta/extract only when maintaining an existing integration that already uses them. The request bodies changed too: on /v1/extract, full_content, fetch_policy and excerpt_settings go inside advanced_settings, and sending the v1beta top-level excerpts, full_content and fetch_policy to /v1/extract returns a 422. Do not substitute /v1 for the documented FindAll or Ingest endpoint paths.
+- [Parallel API Overview](https://docs.parallel.ai/getting-started/overview.md): Explore Parallel's web API products for building intelligent applications.
+- [Choose an API](https://docs.parallel.ai/getting-started/choose-an-api.md): Find the right Parallel API for what you're building.
+- [Parallel API Pricing](https://docs.parallel.ai/getting-started/pricing.md)
+- [API Rate Limits](https://docs.parallel.ai/getting-started/rate-limits.md): Default API rate limits for Search, Image Search, Extract, Tasks, Chat, FindAll, and Monitor endpoints
+- [Search API Quickstart](https://docs.parallel.ai/search/search-quickstart.md): Execute natural language web searches and retrieve LLM-optimized excerpts with the Parallel Search API
+- [Search API Best Practices](https://docs.parallel.ai/search/best-practices.md): Configure objectives and search queries for the Parallel Search API and tool-calling agents
+- [How to Eval Parallel Search](https://docs.parallel.ai/search/evaluating-search.md): An end-to-end guide for evaluating Parallel Search for your agent.
+- [Search Modes](https://docs.parallel.ai/search/modes.md): Configure the Search API mode for your use case
+- [Migrate to Parallel Search](https://docs.parallel.ai/search/migrate-to-parallel.md): Move from Exa, Tavily, SERP APIs, or built-in model search to the Parallel Search API
+- [Search indexed web content for coding agents](https://docs.parallel.ai/search/indexed-content-for-agents.md): Give coding agents documentation excerpts from the Parallel web index without a live source-page fetch
+- [Advanced Search Settings](https://docs.parallel.ai/search/advanced-search-settings.md): Advanced configuration for source policy, fetch policy, excerpt settings, location, and result count
+- [Source Policy](https://docs.parallel.ai/search/source-policy.md)
+- [Search MCP](https://docs.parallel.ai/search/search-mcp.md)
+- [Upgrade from Beta to GA](https://docs.parallel.ai/search/search-migration-guide.md): Migrate from Beta to GA (V1) Search API
+- [Image Search API Quickstart](https://docs.parallel.ai/image-search/image-search-quickstart.md): Find relevant images on the web from keyword queries and a natural language objective with the Parallel Image Search API
+- [Image Search API Best Practices](https://docs.parallel.ai/image-search/best-practices.md): Request fields and query guidance for the Parallel Image Search API

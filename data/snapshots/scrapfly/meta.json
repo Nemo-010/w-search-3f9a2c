@@ -1,0 +1,74 @@
+{
+ "slug": "scrapfly",
+ "name": "Scrapfly",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:09+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://scrapfly.io/pricing",
+   "status": 200,
+   "final_url": "https://scrapfly.io/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 203428,
+   "truncated": false,
+   "sha256": "83859c2cd1ab3826c15383a11f674cf31dbe67e76ca2973aac0e9b0005754f30",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 15928
+  },
+  "docs": {
+   "url": "https://scrapfly.io/docs/",
+   "status": 200,
+   "final_url": "https://scrapfly.io/docs",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 202261,
+   "truncated": false,
+   "sha256": "29cf0d244c8c6215a997960267807e58470e0866473035053411fc061367a05f",
+   "fetched_at": "2026-10-19T05:54:11+00:00",
+   "text_bytes": 9746
+  },
+  "home": {
+   "url": "https://scrapfly.io/",
+   "status": 200,
+   "final_url": "https://scrapfly.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 260462,
+   "truncated": false,
+   "sha256": "4241f8d40412ae67c6cfa9d15fd9abb3412ed304b50c6819716d2155a0618732",
+   "fetched_at": "2026-10-19T05:54:13+00:00",
+   "text_bytes": 20362
+  },
+  "llms": {
+   "url": "https://scrapfly.io/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://scrapfly.io/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 22746,
+   "truncated": false,
+   "sha256": "2decfe4b33e28c86250e19411ad20191eeb2d0796ff084eb67fe005d80da510b",
+   "fetched_at": "2026-10-19T05:54:15+00:00",
+   "text_bytes": 22744
+  },
+  "llms-https://scrapfly.io/llms.txt": {
+   "url": "https://scrapfly.io/llms.txt",
+   "status": 200,
+   "final_url": "https://scrapfly.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 6602,
+   "truncated": false,
+   "sha256": "a14bde0c03e2af4367da1ef6d44ee24200fc5d05a1a572a9e63269241c715e2d",
+   "fetched_at": "2026-10-19T05:54:16+00:00",
+   "text_bytes": 6558
+  },
+  "llms-https://docs.scrapfly.io/llms.txt": {
+   "url": "https://docs.scrapfly.io/llms.txt",
+   "status": 200,
+   "final_url": "https://scrapfly.io/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 22746,
+   "truncated": false,
+   "sha256": "2decfe4b33e28c86250e19411ad20191eeb2d0796ff084eb67fe005d80da510b",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 22744
+  }
+ }
+}

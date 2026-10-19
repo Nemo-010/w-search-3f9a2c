@@ -1,0 +1,74 @@
+{
+ "slug": "zenserp",
+ "name": "Zenserp",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:16+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://zenserp.com/pricing",
+   "status": 200,
+   "final_url": "https://zenserp.com/pricing-plans/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 157511,
+   "truncated": false,
+   "sha256": "8f8f21e0492a56bc08b6910610fdc6f8a28043c4458660f3939d868fa3c9b12c",
+   "fetched_at": "2026-10-19T05:54:16+00:00",
+   "text_bytes": 9113
+  },
+  "home": {
+   "url": "https://zenserp.com/",
+   "status": 200,
+   "final_url": "https://zenserp.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 185225,
+   "truncated": false,
+   "sha256": "1c184c12b3a1901883e58d6f96f5482222b0b112975377cd572d39ee7e92db61",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 11776
+  },
+  "llms": {
+   "url": "https://zenserp.com/llms.txt",
+   "status": 200,
+   "final_url": "https://zenserp.com/llms.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 5140,
+   "truncated": false,
+   "sha256": "01c5147b974b508f5ae2cd5802f5708e96319c9ca6f8855266a2f83a0d8a6dc4",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 5132
+  },
+  "llms-full": {
+   "url": "https://zenserp.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://zenserp.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 185225,
+   "truncated": false,
+   "sha256": "74a6b0aafd89e516fdd83cfcc7d59149326a3b205960df14ec8a02b0abac9f21",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 11776
+  },
+  "llms-https://zenserp.com/docs/llms.txt": {
+   "url": "https://zenserp.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://zenserp.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 185225,
+   "truncated": false,
+   "sha256": "373f8eafe3c478dd349793925e062162577a595918b63d17d0e7e3bf90cc1daa",
+   "fetched_at": "2026-10-19T05:54:22+00:00",
+   "text_bytes": 11776
+  },
+  "llms-https://docs.zenserp.com/llms.txt": {
+   "url": "https://docs.zenserp.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.zenserp.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 4942,
+   "truncated": false,
+   "sha256": "f7b8ea93e67f337e5c182b50ad3ddba1b4b4ad42093d741836368237f1adab01",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 4924
+  }
+ }
+}

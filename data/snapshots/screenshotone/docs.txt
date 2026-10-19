@@ -1,0 +1,28 @@
+Getting Started | ScreenshotOne Docs Skip to content Search Ctrl K Cancel Getting Started Guides Blog Changelog Customers Pricing LinkedIn X GitHub Email Menu Docs Getting Started MCP Animated Screenshots Async and Webhooks Caching HEAD Requests Screenshot URL Charging Extra Credits Signed Links Bulk Screenshots Get Usage Concurrency API keys IP Ranges Notifications Organizations and Roles Skills Changelog Wire Transfers and Invoicing Reference Screenshot Options Devices (Viewport Presets) Errors llms.txt llms-full.txt SDKs and Code Examples Go Java Ruby Python C# (.NET) PHP JavaScript and TypeScript (Node.js) No-code Integrations Overview Make Zapier Bubble n8n Clay Guides All Guides Fail rendering if the content contains a string Upload to S3 Social card image checklist Full-page screenshots How to screenshot an area of a site How to use proxies Rendering performance Screenshot authenticated pages Customize websites before screenshotting How to bypass CAPTCHAs How to handle API errors How to render Google Documents as JPEG, PNG or WebP screenshots How to render Google Slides as scrolling screenshots with ScreenshotOne How to render screenshots with different emoji styles How to slice full-page screenshots How to take screenshots of multiple URLs How to Unblock ScreenshotOne in Cloudflare How to export request logs How to screenshot e-commerce websites How to reduce proxy bandwidth Website screenshot localization How to translate and render a website as a screenshot Detect website fonts LinkedIn X GitHub Email On this page Overview First Touch Requests Access key Responses Errors On this page Overview First Touch Requests Access key Responses Errors Getting Started Copy page You can use the API to generate invoices in PDF format for any given URL or HTML. Or make hundreds of screenshots of your site with different options to check that the site looks as expected. 
+ Whatever use case you have, I get you covered. If there is a feature missing, please, contact me, and I will try to help you as fast as possible. 
+ First Touch Section titled “First Touch” 
+ ScreenshotOne API is straightforward to use. There is an example of an actual request to an API: 
+ 1 GET https://api.screenshotone.com/take?url=https://apple.com&access_key=<access key> "> 
+ The result is:
+ Sign up to get your ScreenshotOne API key and start taking screenshots. 
+ Requests Section titled “Requests” 
+ ScreenshotOne API supports both GET and POST HTTP requests. 
+ Use HTTPS over HTTP Always call the ScreenshotOne API over HTTPS. HTTP remains available for compatibility with legacy integrations, but support for HTTP will be disabled in the future. HTTP does not encrypt requests and can expose API keys, authorization headers, cookies, and other sensitive data while they are in transit. Migrate any HTTP integration to https://api.screenshotone.com as soon as possible. 
+ To take a screenshot of the site with GET HTTP request, send a request to: 
+ 1 https://api.screenshotone.com/take?[options] 
+ Takes and returns a screenshot of the given site with specified options . 
+ If you send a POST HTTP request to take a screenshot, you should specify options as JSON in the body of the request: 
+ 1 POST https://api.screenshotone.com/take 2 Content-Type: application/json 3 { 4 ...[options] 5 } 
+ The maximum POST request body size is 100 MiB . If your HTML or Markdown input is larger, prefer hosting it and passing its URL instead of embedding the full content directly in the request body. Do not put large html or markdown values in the URL query string; use the JSON body. 
+ Access key Section titled “Access key” 
+ You can specify the access key as part of GET parameters, POST JSON body, or as a header X-Access-Key . 
+ Responses Section titled “Responses” 
+ The response format depends on the given options. You might request API to return an image of PNG type or raw HTML instead of rendering it. 
+ API returns the Content-Type header set according to the relevant MIME type for the requested format in options. 
+ Since API returns binary in the data, you can safely put the request URL to ScreenshotOne API directly into the <img> and <meta> tags: 
+ 1 <img 2 src="https://api.screenshotone.com/take?url=apple.com&access_key=<your access key>" 3 alt="A screenshot of apple.com" 4 /> " alt="A screenshot of apple.com"/>"> 
+ Errors Section titled “Errors” 
+ The request might return an error due to an internal error, invalid options or when the limit is reached. ScreenshotOne API follows the HTTP status code semantic and returns JSON in case of an error: 
+ 1 GET https://api.screenshotone.com/?[options] 2 
+ 3 Content-Type: application/json 4 { 5 "error": { 6      "code": "an_error_code", 7          "message": "An error message" 8      } 9 } 
+ The API will always return a human-readable error message, error code, and suitable HTTP status code . Next MCP

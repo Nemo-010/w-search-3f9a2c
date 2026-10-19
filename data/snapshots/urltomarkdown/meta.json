@@ -1,0 +1,49 @@
+{
+ "slug": "urltomarkdown",
+ "name": "URLtoMarkdown",
+ "category": "reader",
+ "fetched_at": "2026-10-19T05:54:35+00:00",
+ "sources": {
+  "home": {
+   "url": "https://urltomarkdown.com/",
+   "status": 200,
+   "final_url": "https://urltomarkdown.com/",
+   "content_type": "text/html",
+   "bytes": 4184,
+   "truncated": false,
+   "sha256": "6ab9807b1850f2df0c8e177e42b207807b7f55333c8f00cdb5243cdc341b4d28",
+   "fetched_at": "2026-10-19T05:54:35+00:00",
+   "text_bytes": 214
+  },
+  "llms-err-9183cf": {
+   "url": "https://urltomarkdown.com/llms.txt",
+   "status": 403,
+   "final_url": "https://urltomarkdown.com/llms.txt",
+   "content_type": "application/xml",
+   "bytes": 263,
+   "truncated": false,
+   "sha256": "ae41e61bef8523233be8883ca24c6dd19cd28baefbde551d1effa01ecc0a300f",
+   "fetched_at": "2026-10-19T05:54:36+00:00"
+  },
+  "llms-err-6032a4": {
+   "url": "https://urltomarkdown.com/docs/llms.txt",
+   "status": 403,
+   "final_url": "https://urltomarkdown.com/docs/llms.txt",
+   "content_type": "application/xml",
+   "bytes": 263,
+   "truncated": false,
+   "sha256": "36669f8c9f39a159865d445ceb40b15cff2f778a44d17c83fe7713db781b1aa4",
+   "fetched_at": "2026-10-19T05:54:37+00:00"
+  },
+  "llms-err-ce3780": {
+   "url": "https://docs.urltomarkdown.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.urltomarkdown.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:37+00:00"
+  }
+ }
+}

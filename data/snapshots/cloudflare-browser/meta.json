@@ -1,0 +1,72 @@
+{
+ "slug": "cloudflare-browser",
+ "name": "Cloudflare Browser Rendering",
+ "category": "browser",
+ "fetched_at": "2026-10-19T05:54:25+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://developers.cloudflare.com/browser-rendering/platform/pricing/",
+   "status": 200,
+   "final_url": "https://developers.cloudflare.com/browser-run/pricing/",
+   "content_type": "text/html",
+   "bytes": 118850,
+   "truncated": false,
+   "sha256": "ecca80d9c9047de1a8e37ed3fc21089be4448f3094f491e1caf9fba5a661c9bd",
+   "fetched_at": "2026-10-19T06:01:32+00:00",
+   "text_bytes": 7155
+  },
+  "docs": {
+   "url": "https://developers.cloudflare.com/browser-rendering/",
+   "status": 200,
+   "final_url": "https://developers.cloudflare.com/browser-run/",
+   "content_type": "text/html",
+   "bytes": 139643,
+   "truncated": false,
+   "sha256": "afe70d49918088271cd71797a46f6267d0bd918087cf0f6faee4da7a9a4c09d6",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 6521
+  },
+  "llms": {
+   "url": "https://developers.cloudflare.com/browser-rendering/llms.txt",
+   "status": 200,
+   "final_url": "https://developers.cloudflare.com/browser-run/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 11950,
+   "truncated": false,
+   "sha256": "f5ec33cc022db343ba112b316ece3d21462ed81b353c2d697e1708e6a07cdc61",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 11950
+  },
+  "llms-full": {
+   "url": "https://developers.cloudflare.com/browser-rendering/llms-full.txt",
+   "status": 200,
+   "final_url": "https://developers.cloudflare.com/browser-rendering/llms-full.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 422037,
+   "truncated": false,
+   "sha256": "35e1da6443015f44718fcc97817c5edcc641318d2210b296234991d45cc26a53",
+   "fetched_at": "2026-10-19T05:54:28+00:00",
+   "text_bytes": 421572
+  },
+  "llms-err-b77290": {
+   "url": "https://developers.cloudflare.com/browser-rendering/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://developers.cloudflare.com/browser-rendering/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 70793,
+   "truncated": false,
+   "sha256": "b7bb8224e051b184678fdb3713713e4c5226f04ef836a2a4dbe979d7fea72554",
+   "fetched_at": "2026-10-19T05:54:30+00:00"
+  },
+  "llms-err-232a84": {
+   "url": "https://docs.developers.cloudflare.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.developers.cloudflare.com/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:54:30+00:00"
+  }
+ }
+}

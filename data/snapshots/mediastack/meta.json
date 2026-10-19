@@ -1,0 +1,82 @@
+{
+ "slug": "mediastack",
+ "name": "Mediastack",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:39+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://mediastack.com/pricing",
+   "status": 200,
+   "final_url": "https://mediastack.com/pricing",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 153906,
+   "truncated": false,
+   "sha256": "566be3a930c547e6ca454c4b25a10602ca035614c8d8aa0875b7e70b7de5bb79",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 5687
+  },
+  "docs": {
+   "url": "https://mediastack.com/documentation",
+   "status": 200,
+   "final_url": "https://docs.apilayer.com/mediastack/docs/api-documentation?utm_source=MediastackHomePage&utm_medium=Referral",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 78614,
+   "truncated": false,
+   "sha256": "a5169fae0f45abb6f55be17ccf04f2678e8d0e492b7e3d07789f53b3c05d5ae0",
+   "fetched_at": "2026-10-19T05:54:40+00:00",
+   "text_bytes": 61
+  },
+  "home": {
+   "url": "https://mediastack.com/",
+   "status": 200,
+   "final_url": "https://mediastack.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 144986,
+   "truncated": false,
+   "sha256": "77c64f2e4d4c1bb5441f210ce4d49a8349315c21c26f4494a96e7ec74533c152",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 4890
+  },
+  "llms-err-3f772c": {
+   "url": "https://mediastack.com/documentation/llms.txt",
+   "status": 404,
+   "final_url": "https://mediastack.com/documentation/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 133837,
+   "truncated": false,
+   "sha256": "1055dad8d4f79e2caeaef9de4a32668368a32e9f372b4725a049b370b4a09e42",
+   "fetched_at": "2026-10-19T05:54:41+00:00"
+  },
+  "llms": {
+   "url": "https://mediastack.com/llms.txt",
+   "status": 200,
+   "final_url": "https://mediastack.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 3725,
+   "truncated": false,
+   "sha256": "7e6cabc4688890dab700521c18b1884689dc36fbadbb36c95ba5464daa6756f3",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 3721
+  },
+  "llms-err-2b068d": {
+   "url": "https://mediastack.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://mediastack.com/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 133828,
+   "truncated": false,
+   "sha256": "c15b3ea990503795cad2b4fdc0940d17dc8399b64e14953e39885418247f969a",
+   "fetched_at": "2026-10-19T05:54:43+00:00"
+  },
+  "llms-err-f4b84b": {
+   "url": "https://docs.mediastack.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.mediastack.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:43+00:00"
+  }
+ }
+}

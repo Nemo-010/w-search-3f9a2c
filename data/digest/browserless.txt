@@ -1,0 +1,31 @@
+# Browserless (browserless) category=browser
+home=https://www.browserless.io/ pricing=https://www.browserless.io/pricing docs=https://docs.browserless.io/ llms=None
+sources_ok: pricing:https://www.browserless.io/pricing, docs:https://docs.browserless.io/, home:https://www.browserless.io/, llms:https://docs.browserless.io/llms.txt, llms-full:https://docs.browserless.io/llms-full.txt, llms-https://www.browserless.io/llms.txt:https://www.browserless.io/llms.txt
+--- ranked fact lines ---
+[docs] https://www.browserless.io/signup/email?plan=free for the free tier.
+[docs] 2. **Token.** It's on the account dashboard at
+[docs] private-fleet token gets a 401 from this shared host. If
+[docs] to their project. On a 401, don't assume the token is bad: check the
+[docs] smaller version before acting. Writing a config file is not a free
+[docs] 401 that looks like a bad token. This is the one place the real value has
+[docs] - **A private-fleet token against a shared-fleet URL returns 401**, and
+[docs] Step 3 check ran and succeeded, it proved the token and the account;
+[docs] 5. Re-read what you're about to send them and make sure no token is in
+[llms] - [Sign Up](https://browserless.io/signup/email?plan=free): create a free account
+--- llms/readme head ---
+# Browserless
+> Browserless is a cloud browser automation platform. Connect Puppeteer, Playwright, or Selenium to managed headless browsers over WebSocket, or use BrowserQL, REST APIs, and MCP for scraping, screenshots, PDFs, and AI-driven browsing.
+For full technical documentation, see [docs.browserless.io](https://docs.browserless.io/) or the [detailed llms.txt](https://docs.browserless.io/llms.txt).
+## Quick Start
+- [BaaS Quick Start](https://docs.browserless.io/baas/quick-start): connect existing Puppeteer or Playwright code to Browserless in minutes
+- [BrowserQL Quick Start](https://docs.browserless.io/browserql/getting-started): first BrowserQL request and workflow
+- [API Comparison](https://docs.browserless.io/overview/comparison): choose between BrowserQL, BaaS, and REST APIs
+- [Connection URLs](https://docs.browserless.io/overview/connection-urls): shared-fleet and private-fleet connection patterns
+## APIs
+- [Browsers as a Service (BaaS)](https://docs.browserless.io/baas/start): remote browser automation for existing Puppeteer, Playwright, or Selenium code
+- [BrowserQL](https://docs.browserless.io/browserql/start): GraphQL-based browser automation with stealth, conditional logic, and structured extraction
+- [REST APIs](https://docs.browserless.io/rest-apis/intro): one-shot HTTP endpoints for screenshots, PDFs, scraping, search, and more
+- [OpenAPI Reference](https://docs.browserless.io/open-api): full REST API specification
+## AI and MCP
+- [Browserless MCP Server](https://docs.browserless.io/mcp/browserless-mcp-server): Model Context Protocol server with smart scrape, function, download, export, search, map, performance, and crawl tools
+- [AI Integrations](https://docs.browserless.io/ai-integrations/start): Browser Use, Stagehand, LangChain, Claude Code, n8n, Make, Zapier, and more

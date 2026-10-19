@@ -1,0 +1,6 @@
+# DuckDuckGo Instant Answer (duckduckgo-ia) category=search-engine
+home=https://duckduckgo.com/api pricing=https://duckduckgo.com/api docs=https://duckduckgo.com/api llms=None
+sources_ok: pricing:https://duckduckgo.com/api, llms:https://duckduckgo.com/api/llms.txt, llms-full:https://duckduckgo.com/api/docs/llms-full.txt, llms-https://duckduckgo.com/api/docs/llms.txt:https://duckduckgo.com/api/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+DuckDuckGo - Protection. Privacy. Peace of mind. Duck.ai Search Homepage Themes Settings Downloads iOS Browser Android Browser Mac Browser Windows Browser Browser Extensions More from DuckDuckGo Duck.ai Email Protection Newsletter Blog Podcast Collaborations NEW Learn More What’s New Compare Privacy About Our Browser About DuckDuckGo Other Resources Help Community Careers Privacy Policy Terms of Service Press Kit Advertise on Search Search Duck.ai Protection. Privacy. Peace of mind.

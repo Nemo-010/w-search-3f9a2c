@@ -1,0 +1,4 @@
+# Google Books API (googlebooks) category=misc-api
+home=https://developers.google.com/books pricing=None docs=https://developers.google.com/books llms=None
+sources_ok: docs:https://developers.google.com/books
+--- ranked fact lines ---

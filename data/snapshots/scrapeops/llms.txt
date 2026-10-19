@@ -1,0 +1,99 @@
+# ScrapeOps
+
+> Web scraping infrastructure: proxy APIs, residential proxies, monitoring, scheduling, and structured data extraction.
+
+- Website: https://scrapeops.io
+- Full docs index: https://scrapeops.io/llms-full.txt
+
+---
+
+## Products
+
+- [Proxy API Aggregator](https://scrapeops.io/proxy-api-aggregator/) — Smart proxy routing with anti-bot bypass and JS rendering.
+- [Residential Proxy Aggregator](https://scrapeops.io/residential-mobile-proxy-aggregator/) — Premium residential and mobile proxies.
+- [Monitoring & Scheduling](https://scrapeops.io/monitoring-scheduling/) — Scraper monitoring, alerts, and job scheduling.
+- [Parser API](https://scrapeops.io/parser-api/) — HTML to structured JSON conversion.
+- [AI Scraper Builder](https://scrapeops.io/ai-web-scraping-assistant/scraper-builder) — AI-powered scraper generation.
+
+---
+
+## Core Docs
+
+- [Documentation Home](https://scrapeops.io/docs/intro) — Overview of all ScrapeOps products and quickstart guides.
+- [Proxy API Quickstart](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/quickstart) — Get started with the Proxy API Aggregator.
+- [Residential Proxy Overview](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/overview) — Get started with residential proxies.
+- [Monitoring Overview](https://scrapeops.io/docs/monitoring/overview) — Set up scraper monitoring and alerts.
+- [Server & Scheduler Overview](https://scrapeops.io/docs/servers-scheduling/overview) — Deploy and schedule scrapers.
+- [MCP Server](https://scrapeops.io/docs/mcp/overview) — Model Context Protocol server for AI IDEs.
+- [Parser API Overview](https://scrapeops.io/docs/parser-api/overview) — Convert HTML to structured JSON.
+- [Data APIs Overview](https://scrapeops.io/docs/data-api/overview) — Direct structured data from Amazon, eBay, Walmart, Redfin, Indeed.
+
+---
+
+## Key Reference
+
+- [Proxy API Features](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/functionality-list) — Complete list of Proxy API parameters.
+- [Anti-Bot Bypass](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/anti-bot-bypass) — Bypass Cloudflare, DataDome, PerimeterX.
+- [Headless Browser](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/headless-browser) — Render JavaScript-heavy pages.
+- [LLM Extract](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/llm-extract) — AI-powered structured data extraction.
+- [Geo-Targeting](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/country-geotargeting) — Route requests through specific countries.
+
+---
+
+## Integrations
+
+- [Python + Scrapy](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/python-scrapy-example) — Proxy API with Scrapy.
+- [Node.js + Puppeteer](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/nodejs-puppeteer-example) — Proxy API with Puppeteer.
+- [Node.js + Playwright](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/nodejs-playwright-example) — Proxy API with Playwright.
+- [Scrapy Monitoring SDK](https://scrapeops.io/docs/monitoring/python-scrapy/sdk-integration) — Monitor Scrapy spiders.
+- [n8n Node](https://scrapeops.io/docs/n8n/overview) — ScrapeOps in n8n workflow automation.
+
+---
+
+## Tools
+
+- [Proxy Comparison Tool](https://scrapeops.io/proxy-providers/comparison/) — Compare proxy providers by price, features, and performance.
+- [Website Scraping Guides](https://scrapeops.io/websites/) — Step-by-step guides for scraping popular websites.
+
+---
+
+## Playbooks & Blog
+
+- [Blog Home](https://scrapeops.io/blog/) — Latest articles and updates.
+- [Web Scraping Playbook](https://scrapeops.io/web-scraping-playbook/) — General web scraping guides, anti-bot bypass, and best practices.
+- [Python Scrapy Playbook](https://scrapeops.io/python-scrapy-playbook/) — Comprehensive Scrapy tutorials and guides.
+- [Python Web Scraping Playbook](https://scrapeops.io/python-web-scraping-playbook/) — Python scraping with Requests, BeautifulSoup, and more.
+- [Selenium Playbook](https://scrapeops.io/selenium-web-scraping-playbook/) — Selenium browser automation guides.
+- [Puppeteer Playbook](https://scrapeops.io/puppeteer-web-scraping-playbook/) — Puppeteer scraping tutorials.
+- [Playwright Playbook](https://scrapeops.io/playwright-web-scraping-playbook/) — Playwright automation guides.
+- [Node.js Playbook](https://scrapeops.io/nodejs-web-scraping-playbook/) — Node.js scraping tutorials.
+
+---
+
+## Featured Articles
+
+- [The State of Web Scraping 2025](https://scrapeops.io/web-scraping-playbook/the-state-of-web-scraping-2025/) — Biggest trends and developments in web scraping for 2025.
+- [The Proxy Paradox](https://scrapeops.io/blog/proxy-paradox/) — How web scraping got harder even as proxies got cheaper.
+- [Scraping Shock](https://scrapeops.io/blog/scraping-shock/) — Why web data is getting too expensive to scrape.
+- [Web Scraping Market Report 2025](https://scrapeops.io/web-scraping-playbook/web-scraping-market-report-2025/) — Numbers, trends, and challenges shaping the industry.
+- [Y Combinator's Web Scraping Investments](https://scrapeops.io/web-scraping-playbook/yc-web-scraping-market-evolution/) — How YC backing reveals the future of web scraping and AI.
+- [How To Bypass Cloudflare in 2026](https://scrapeops.io/web-scraping-playbook/how-to-bypass-cloudflare/) — Bypass Cloudflare's anti-bot protection for reliable scraping.
+
+---
+
+## Product Updates
+
+- [Product Updates Overview](https://scrapeops.io/product-updates/) — Latest releases and changelog.
+- [Proxy API Updates](https://scrapeops.io/product-updates/proxy-api-aggregator/) — Proxy API changelog.
+- [Residential Proxy Updates](https://scrapeops.io/product-updates/residential-proxy-aggregator/) — Residential proxy changelog.
+- [MCP Server Updates](https://scrapeops.io/product-updates/mcp-server/) — MCP server changelog.
+- [Parser API Updates](https://scrapeops.io/product-updates/parser-api/) — Parser API changelog.
+- [Data APIs Updates](https://scrapeops.io/product-updates/structured-data-apis/) — Structured data APIs changelog.
+
+---
+
+## Quick Links
+
+- [Dashboard Demo](https://scrapeops.io/app/login/demo) — Try the ScrapeOps dashboard.
+- [Sign Up (Free)](https://scrapeops.io/app/register/proxy) — Get your API key.
+- [Fake User Agents API](https://scrapeops.io/docs/fake-user-agent-headers-api/overview) — Free API for random user agents.

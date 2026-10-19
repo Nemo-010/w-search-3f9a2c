@@ -1,0 +1,379 @@
+# Notte - Full Documentation for LLMs
+
+> This is the complete context file for LLMs. For the summary version, see [llms.txt](https://notte.cc/llms.txt). If you are an AI coding agent, see [SKILL.md](https://notte.cc/skill.md) for executable instructions.
+
+## What is Notte?
+
+Notte is a full-stack browser platform for AI agents. It provides cloud-hosted browser sessions, AI-powered web agents, and serverless browser functions. Everything needed to automate complex, multi-step workflows on the web.
+
+Notte is backed by Y Combinator (W25) and is SOC 2 Type II compliant.
+
+## Core Products
+
+### 1. Browser Sessions
+
+Cloud-hosted browser instances that serve as the foundation for all automation. Sessions are Playwright-compatible via Chrome DevTools Protocol (CDP).
+
+Key features:
+- Instant startup on a global edge network
+- Built-in anti-detection (stealth mode, browser fingerprint rotation)
+- Residential proxy routing (automatic or custom)
+- CAPTCHA solving (reCAPTCHA, hCaptcha, Cloudflare Turnstile)
+- Cloudflare Web Bot Auth support
+- Ad blocking
+- Browser profiles for persistent state across sessions
+- Browser extensions support
+- Multi-region deployment (US, EU, APAC)
+- Static IP addresses
+- Live view: watch sessions in real time
+- Full session recordings (MP4 replay)
+- Cookie management (get/set)
+- File upload and download
+- Network log capture
+
+Session configuration options:
+- `proxy`: enable residential proxy (`true`/`false` or custom proxy URL)
+- `stealth`: enable anti-detection (`true`/`false`)
+- `captcha_solve`: enable automatic CAPTCHA solving
+- `ad_block`: enable ad and tracker blocking
+- `profile_id`: reuse a persistent browser profile
+- `region`: geographic region (`us-east`, `us-west`, `eu-west`, `ap-southeast`)
+- `timeout`: session timeout in seconds
+- `browser_type`: `chromium` or `chrome`
+- `open_viewer`: open live view URL
+
+### 2. Browser Agents
+
+AI-powered agents that autonomously navigate websites, complete tasks, and extract information using natural language instructions.
+
+Key features:
+- Natural language task specification
+- Vision capabilities (agents can see and reason about page content)
+- Structured output via Pydantic models
+- Step-by-step execution with configurable max_steps
+- Automatic error recovery and retry logic
+- Agent fallback: spawn an AI agent when deterministic scripts fail
+- Full replay and debugging with step-by-step inspection
+- Agent-to-Function conversion (turn agent runs into reusable code)
+
+Agent configuration options:
+- `task`: natural language description of what to do
+- `url`: starting URL
+- `max_steps`: maximum number of actions the agent can take
+- `model`: LLM model to use
+- `response_format`: Pydantic model for structured output
+- `session`: existing session to use (or creates one automatically)
+
+### 3. Browser Functions
+
+Serverless browser automations deployed as API endpoints.
+
+Key features:
+- Deploy any automation as a callable API endpoint
+- Version management
+- Scheduled execution via cron expressions
+- Input parameters with validation
+- JSON-serializable output
+- Fork shared functions into your own account
+- Download function code as Python files
+
+### 4. Persona Identities
+
+Complete digital identities for web automation: email, phone, credentials.
+
+Key features:
+- Auto-generated email addresses
+- Phone numbers with SMS/voice receive capability
+- Credential generation and secure storage in vaults
+- Account creation automation
+- Two-factor authentication (2FA) handling
+- Email and SMS reading from within agent code
+
+### 5. Secret Vaults
+
+Enterprise-grade credential management.
+
+Key features:
+- Store website credentials (username/password pairs)
+- Store credit card information
+- Credentials are NEVER forwarded to LLM calls or external services
+- Per-domain credential lookup
+- Password generation
+
+### 6. Scraping
+
+Extract content and structured data from any web page.
+
+Key features:
+- Convert pages to clean markdown
+- Extract structured data into typed Pydantic models
+- Custom extraction instructions
+- Works with JavaScript-heavy sites (full browser rendering)
+
+### 7. Anything API
+
+Turn any browser workflow into a production API with a single call.
+
+Key features:
+- Describe a workflow in natural language
+- Get a production-ready API endpoint
+- No code writing required
+
+## SDKs and Tools
+
+### Python SDK
+
+```bash
+pip install notte-sdk
+```
+
+Requires Python 3.11+.
+
+```python
+from notte_sdk import NotteClient
+
+client = NotteClient()  # Uses NOTTE_API_KEY env var
+
+# Start a session
+with client.Session(proxy=True, stealth=True) as session:
+    cdp_url = session.cdp_url()
+    # Use with Playwright, Puppeteer, or Selenium
+
+# Run an agent
+with client.Session() as session:
+    agent = client.Agent(session=session, max_steps=10)
+    result = agent.run(task="Find pricing for...", url="https://example.com")
+
+# Scrape with structured output
+from pydantic import BaseModel
+class MyData(BaseModel):
+    title: str
+    price: float
+
+result = client.scrape(url="https://...", response_format=MyData)
+```
+
+### Node.js SDK
+
+```bash
+npm install notte-sdk
+```
+
+```typescript
+import { NotteClient } from 'notte-sdk';
+
+const client = new NotteClient();
+
+// Start a session
+const session = await client.sessions.start({ proxy: true, stealth: true });
+console.log(session.cdpUrl); // Connect with Playwright/Puppeteer
+
+// Run an agent
+const agent = await client.agents.start({
+  sessionId: session.id,
+  task: "Find pricing information",
+  url: "https://example.com",
+  maxSteps: 10,
+});
+const result = await agent.run();
+
+// Clean up
+await client.sessions.stop(session.id);
+```
+
+### CLI
+
+```bash
+brew tap nottelabs/notte-cli https://github.com/nottelabs/notte-cli.git
+brew install notte
+```
+
+```bash
+notte sessions start          # Start browser
+notte page goto <url>         # Navigate
+notte page observe            # List interactive elements
+notte page click "@B1"        # Click element
+notte page fill "@I1" "text"  # Fill input
+notte page scrape             # Extract data
+notte page screenshot         # Capture page
+notte sessions stop           # Clean up
+```
+
+### MCP Server
+
+For Claude Desktop, Cursor, Windsurf, and other MCP-compatible tools. First start the local MCP server with `pip install notte-sdk && notte-mcp`, then add this config:
+
+```json
+{
+  "mcpServers": {
+    "notte-mcp": {
+      "command": "npx",
+      "args": ["mcp-remote", "http://localhost:8001/sse"],
+      "env": { "NOTTE_API_KEY": "<your-key>" }
+    }
+  }
+}
+```
+
+MCP tools: `notte_operator`, `notte_observe`, `notte_screenshot`, `notte_scrape`, `notte_step`, `notte_start_session`, `notte_list_sessions`, `notte_stop_session`.
+
+## API Reference
+
+Base URL: `https://api.notte.cc`
+
+Authentication: Bearer token in the `Authorization` header.
+
+```
+Authorization: Bearer <your-api-key>
+```
+
+### Sessions API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/sessions/start` | Start a new browser session |
+| POST | `/sessions/{id}/stop` | Stop a session |
+| GET | `/sessions/{id}/status` | Get session status |
+| GET | `/sessions/{id}/cdp-url` | Get CDP WebSocket URL |
+| POST | `/sessions/{id}/page/goto` | Navigate to a URL |
+| POST | `/sessions/{id}/page/observe` | List interactive elements |
+| POST | `/sessions/{id}/page/execute` | Execute an action |
+| POST | `/sessions/{id}/page/scrape` | Scrape page content |
+| POST | `/sessions/{id}/page/screenshot` | Take a screenshot |
+| GET | `/sessions/{id}/cookies` | Get session cookies |
+| POST | `/sessions/{id}/cookies` | Set session cookies |
+| GET | `/sessions/{id}/network-logs` | Get network logs |
+| GET | `/sessions/{id}/replay` | Get session replay |
+| GET | `/sessions/{id}/script` | Get recorded session script |
+
+### Agents API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/agents/start` | Start an agent |
+| POST | `/agents/{id}/stop` | Stop an agent |
+| GET | `/agents/{id}/status` | Get agent status |
+| GET | `/agents/{id}/script` | Get agent execution script |
+
+### Functions API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/functions/{id}/run` | Run a function |
+| POST | `/functions/{id}/fork` | Fork a shared function |
+| POST | `/functions/{id}/schedule` | Set a cron schedule |
+| DELETE | `/functions/{id}/schedule` | Remove a schedule |
+
+### Scraping API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/scrape` | Scrape a URL (no session needed) |
+
+### Personas API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/personas/{id}` | Get persona details |
+| GET | `/personas/{id}/emails` | Read persona emails |
+| GET | `/personas/{id}/sms` | Read persona SMS |
+
+### Vaults API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/vaults` | Create a vault |
+| GET | `/vaults/{id}/credentials` | Get credentials |
+
+### Profiles API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/profiles` | Create a browser profile |
+| GET | `/profiles` | List profiles |
+| GET | `/profiles/{id}` | Get a profile |
+| DELETE | `/profiles/{id}` | Delete a profile |
+
+### Storage API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/storage/upload` | Upload a file |
+| GET | `/storage/download/{id}` | Download a file |
+
+### Anything API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/anything/start` | Start an Anything workflow |
+
+## Rate Limits
+
+API responses include rate limit headers:
+- `X-RateLimit-Limit`: maximum requests per window
+- `X-RateLimit-Remaining`: remaining requests
+- `X-RateLimit-Reset`: window reset time (UTC epoch)
+
+HTTP 429 is returned when limits are exceeded. The SDK handles retries automatically.
+
+## Error Codes
+
+| Code | Meaning |
+|------|---------|
+| 400 | Bad request, check parameters |
+| 401 | Authentication failed, check API key |
+| 403 | Forbidden, insufficient permissions |
+| 404 | Resource not found |
+| 422 | Validation error, check request body |
+| 429 | Rate limit exceeded, retry after backoff |
+| 500 | Internal server error |
+| 529 | Cluster overloaded, retry later |
+
+## Integrations
+
+Notte integrates with:
+- Playwright: connect via CDP for full Playwright control
+- Puppeteer: connect via CDP
+- Selenium: connect via CDP
+- Steel: use Steel as external browser provider
+- Kernel.sh: use Kernel as external browser provider
+- Stagehand: use Notte cloud browsers with Stagehand
+- OpenAI CUA: run OpenAI Computer Use Agent on Notte sessions
+- Massive: residential proxy integration
+- Cloudflare Web Bot Auth: signed browser identity for Cloudflare-protected sites
+
+## Pricing
+
+Credit-based pricing with transparent usage rates. Plans grant credits and operational limits, and credits are spent on browser sessions, functions, proxies, and LLM tokens.
+
+See https://notte.cc/pricing#rate-limits for live usage rates, plan credits, and rate limits.
+
+## Trust and Security
+
+- SOC 2 Type II certified
+- All sessions run in isolated containers
+- Credentials never forwarded to LLMs
+- End-to-end encryption
+- Bug bounty program: https://docs.notte.cc/legal/bug-bounty
+
+## Benchmarks
+
+Notte built BrowserArena (https://www.browserarena.ai), an open-source benchmark comparing cloud browser infrastructure providers on speed, reliability, and cost. The benchmark is reproducible on Railway and designed to be community-approved. Use it to compare Notte against Browserbase, Steel, Kernel, and other cloud browser providers.
+
+## Company
+
+- Website: https://notte.cc
+- Documentation: https://docs.notte.cc
+- Console: https://console.notte.cc
+- GitHub: https://github.com/nottelabs/notte
+- Blog: https://notte.cc/blog
+- Slack Community: https://www.notte.cc/slack
+- X/Twitter: https://x.com/nottecore
+- LinkedIn: https://linkedin.com/company/notte
+- Y Combinator: https://www.ycombinator.com/companies/notte
+- Contact: hello@notte.cc
+- Sales: https://cal.com/team/notte/demo
+
+## OpenAPI Spec
+
+Machine-readable API specification: https://api.notte.cc/openapi.json

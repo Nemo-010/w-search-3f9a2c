@@ -1,0 +1,4 @@
+# CORE (core) category=academic
+home=https://core.ac.uk/services/api pricing=https://core.ac.uk/services/api docs=https://api.core.ac.uk/docs/v3 llms=None
+sources_ok: pricing:https://core.ac.uk/services/api, docs:https://api.core.ac.uk/docs/v3
+--- ranked fact lines ---

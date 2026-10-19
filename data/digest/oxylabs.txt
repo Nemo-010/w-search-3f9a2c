@@ -1,0 +1,30 @@
+# Oxylabs (oxylabs) category=serp-scrape
+home=https://oxylabs.io/ pricing=https://oxylabs.io/pricing docs=https://developers.oxylabs.io/ llms=None
+sources_ok: pricing:https://oxylabs.io/pricing, docs:https://developers.oxylabs.io/, home:https://oxylabs.io/, llms:https://developers.oxylabs.io/llms.txt, llms-full:https://docs.oxylabs.io/llms-full.txt, llms-https://oxylabs.io/llms.txt:https://oxylabs.io/llms.txt, llms-https://docs.oxylabs.io/llms.txt:https://docs.oxylabs.io/llms.txt
+--- ranked fact lines ---
+[llms] - [Proxy Rotation](https://developers.oxylabs.io/products/proxies/dedicated-datacenter-proxies/self-service/proxy-rotation.md): Enable proxy rotation for Dedicated Datacenter Proxies using port 8000. Get random IPs per request with optional country-specific rotation.
+[llms] - [Proxy Rotator - Optional](https://developers.oxylabs.io/products/proxies/dedicated-datacenter-proxies/enterprise/proxy-rotator-optional.md): Proxy Rotator provides single endpoint access to your Enterprise Dedicated Datacenter Proxies list. Get different IPs per request with session control.
+[llms] - [Whitelisting IPs](https://developers.oxylabs.io/products/proxies/isp-proxies/whitelisting-ips.md): Learn how to use ISP Proxies with password-free authentication. Secure your connection by adding trusted IPs to the whitelist via the dashboard.
+[llms] - [Free Datacenter IPs](https://developers.oxylabs.io/products/proxies/datacenter-proxies/free-datacenter-ips.md): Free datacenter IPs provide an opportunity to easily test Oxylabs proxies. However, for full product functionality and flexibility consider migrating to paid plans.
+[llms] - [Oxy® Proxy Extension for Chrome](https://developers.oxylabs.io/integrations/proxy-integrations/oxy-proxy-extension-for-chrome.md): Oxy® Proxy Extension for Chrome setup with Oxylabs Proxies – a quick integration guide. Free proxy manager that works with any provider.
+[llms] - [Start using Mobile Proxies](https://developers.oxylabs.io/help-center/getting-started/start-using-mobile-proxies.md): Find out how to start using Oxylabs Mobile Proxies for block-free web scraping.
+[llms] - [Start using ISP Proxies](https://developers.oxylabs.io/help-center/getting-started/start-using-isp-proxies.md): Find out how to start using Oxylabs ISP Proxies for stable and block-free web scraping.
+--- llms/readme head ---
+# Oxylabs Documentation
+## Getting Started
+- [Introduction](https://developers.oxylabs.io/introduction.md): Find everything you need to use Oxylabs’ products effectively, from detailed product documentation to additional resources like the help center, changelog, and more.
+- [Changelog](https://developers.oxylabs.io/changelog.md): Track the latest Oxylabs product updates, feature releases, and improvements. Stay informed on what's new with our tools and documentation.
+- [Quick Start: Web API](https://developers.oxylabs.io/get-started/quick-start-web-api.md): Get from an API key to your first Oxylabs Web API search and scrape in just five minutes.
+- [Quick Start: Proxies](https://developers.oxylabs.io/get-started/quick-start-proxies.md): Start using Oxylabs proxies in just a few minutes with a simple step-by-step guide.
+- [Quick Start: Web Unblocker](https://developers.oxylabs.io/get-started/quick-start-web-unblocker.md): Start using Oxylabs Web Unblocker in just a few minutes with a simple step-by-step guide.
+- [Quick Start: Agent Browser](https://developers.oxylabs.io/get-started/quick-start-agent-browser.md): Start using Oxylabs Agent Browser in just a few minutes with a simple step-by-step guide.
+- [Overview](https://developers.oxylabs.io/dashboard/overview.md): Oxylabs Dashboard is where you activate products, monitor spending, and manage your account. All in one place to set up and manage as you like.
+- [Product Instances](https://developers.oxylabs.io/dashboard/product-instances.md): Learn how to create, configure, and manage product instances in the Oxylabs Dashboard.
+- [Credit-Based Billing](https://developers.oxylabs.io/dashboard/credit-based-billing.md): Understand how the Oxylabs Dashboard's shared credit balance works across all your products.
+- [Upgrading, Downgrading, Top-Ups](https://developers.oxylabs.io/dashboard/upgrading-downgrading-top-ups.md): Learn how to change your plan or add credits without changing your recurring commitment, and when to choose one over the other.
+- [Payments & Invoices](https://developers.oxylabs.io/dashboard/payments-and-invoices.md): Manage your payment methods and billing details, and learn more about invoices and subscription cancellations.
+- [Team & Account Settings](https://developers.oxylabs.io/dashboard/team-and-account-settings.md): Manage your team members, account settings, and notification preferences in the Oxylabs Dashboard.
+- [Managing IP Products](https://developers.oxylabs.io/dashboard/managing-ip-products.md): Learn how to manage your IPs, understand per-IP billing, and see what happens to your proxy list when your plan changes.
+- [Dashboard API](https://developers.oxylabs.io/dashboard/dashboard-api.md): Programmatic access to Oxylabs product users for tracking usage statistics with the Dashboard API.
+- [Have a Question?](https://developers.oxylabs.io/have-a-question.md): Discover the ways to contact Oxylabs 24/7 support team.
+## Products

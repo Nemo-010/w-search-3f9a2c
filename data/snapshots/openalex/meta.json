@@ -1,0 +1,61 @@
+{
+ "slug": "openalex",
+ "name": "OpenAlex",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:42+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://docs.openalex.org/",
+   "status": 200,
+   "final_url": "https://help.openalex.org/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 20753,
+   "truncated": false,
+   "sha256": "4da0d6bd341a2db9ce877ea6fcd78d15908150f09d83b02fa43c2e8845c37077",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 1354
+  },
+  "home": {
+   "url": "https://openalex.org/",
+   "status": 200,
+   "final_url": "https://openalex.org/",
+   "content_type": "text/html;charset=utf-8",
+   "bytes": 6683,
+   "truncated": false,
+   "sha256": "76abe7f1cead61b42fcf9283e919da75c065a424f234c0d5d43e9966f6e139e5",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 56
+  },
+  "llms": {
+   "url": "https://docs.openalex.org/llms.txt",
+   "status": 200,
+   "final_url": "https://help.openalex.org/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 34907,
+   "truncated": false,
+   "sha256": "7167ae5565c7969cf22708f8f0c84aaf132bc9b4404f25bee4d4be37fbfb3fb9",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 34773
+  },
+  "llms-err-264812": {
+   "url": "https://openalex.org/llms.txt",
+   "status": 403,
+   "final_url": "https://openalex.org/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5779,
+   "truncated": false,
+   "sha256": "86733e050c3244f930d90750b8e853f57a29bd78fde471d63e54c7a50712e5fa",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  },
+  "llms-err-785367": {
+   "url": "https://openalex.org/docs/llms.txt",
+   "status": 403,
+   "final_url": "https://openalex.org/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5815,
+   "truncated": false,
+   "sha256": "8b96c776e8ad9391ae499ec30783d22f5d25651edf2796531568b8fe6ca0142f",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  }
+ }
+}

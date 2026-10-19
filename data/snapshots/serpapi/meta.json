@@ -1,0 +1,82 @@
+{
+ "slug": "serpapi",
+ "name": "SerpApi",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:07+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://serpapi.com/pricing",
+   "status": 200,
+   "final_url": "https://serpapi.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 180051,
+   "truncated": false,
+   "sha256": "038882b724bcbb0006102b12f9d391bf63b714d991897011172cfc23a7e7f821",
+   "fetched_at": "2026-10-19T05:59:44+00:00",
+   "text_bytes": 14158
+  },
+  "docs": {
+   "url": "https://serpapi.com/search-api",
+   "status": 200,
+   "final_url": "https://serpapi.com/search-api",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 393130,
+   "truncated": false,
+   "sha256": "d3f8b3cf8bc07f33d980b62d52cfd2d26ddef1394f6b46fecfa601b7d2b0c953",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 90209
+  },
+  "home": {
+   "url": "https://serpapi.com/",
+   "status": 200,
+   "final_url": "https://serpapi.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 170693,
+   "truncated": false,
+   "sha256": "241a63fdf77fb08da23eda2aaf36d8a7a7bfa5d4ec86c6602cde51e9e80b43bc",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 16501
+  },
+  "llms-err-7d19b9": {
+   "url": "https://serpapi.com/search-api/llms.txt",
+   "status": 404,
+   "final_url": "https://serpapi.com/search-api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 2332,
+   "truncated": false,
+   "sha256": "f2145c4f3c65ef170d177bcb13caecb81eb97e6145a528b4d2182a6ae259ec74",
+   "fetched_at": "2026-10-19T05:54:08+00:00"
+  },
+  "llms": {
+   "url": "https://serpapi.com/llms.txt",
+   "status": 200,
+   "final_url": "https://serpapi.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 29382,
+   "truncated": false,
+   "sha256": "28f2518bdcb2167d9f721a636efe20ccf6e650dba15d46bd3bced24b52e8f7b7",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 29382
+  },
+  "llms-err-fa60fa": {
+   "url": "https://serpapi.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://serpapi.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 2332,
+   "truncated": false,
+   "sha256": "f2145c4f3c65ef170d177bcb13caecb81eb97e6145a528b4d2182a6ae259ec74",
+   "fetched_at": "2026-10-19T05:54:09+00:00"
+  },
+  "llms-err-1ea347": {
+   "url": "https://docs.serpapi.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.serpapi.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:09+00:00"
+  }
+ }
+}

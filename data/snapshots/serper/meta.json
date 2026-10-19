@@ -1,0 +1,81 @@
+{
+ "slug": "serper",
+ "name": "Serper",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:07+00:00",
+ "sources": {
+  "pricing-err-db30da": {
+   "url": "https://serper.dev/pricing",
+   "status": 404,
+   "final_url": "https://serper.dev/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 40915,
+   "truncated": false,
+   "sha256": "fe49f2205f29ca66310053801fb9c8db2cc3ea8d6379df35bfe93423e581ce95",
+   "fetched_at": "2026-10-19T05:54:07+00:00"
+  },
+  "docs-err-d3880e": {
+   "url": "https://docs.serper.dev/",
+   "status": 0,
+   "final_url": "https://docs.serper.dev/",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:08+00:00"
+  },
+  "home": {
+   "url": "https://serper.dev/",
+   "status": 200,
+   "final_url": "https://serper.dev/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1044299,
+   "truncated": false,
+   "sha256": "8ed492cde5bbff986ac441dacafcd3a90bcbdc32600bbe12b89983d81b15b0a9",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 95459
+  },
+  "llms-err-bac848": {
+   "url": "https://docs.serper.dev/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.serper.dev/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:09+00:00"
+  },
+  "llms-err-abf259": {
+   "url": "https://serper.dev/llms.txt",
+   "status": 404,
+   "final_url": "https://serper.dev/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 40915,
+   "truncated": false,
+   "sha256": "fe49f2205f29ca66310053801fb9c8db2cc3ea8d6379df35bfe93423e581ce95",
+   "fetched_at": "2026-10-19T05:54:09+00:00"
+  },
+  "llms-err-c54d1a": {
+   "url": "https://serper.dev/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://serper.dev/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 40915,
+   "truncated": false,
+   "sha256": "fe49f2205f29ca66310053801fb9c8db2cc3ea8d6379df35bfe93423e581ce95",
+   "fetched_at": "2026-10-19T05:54:09+00:00"
+  },
+  "pricing": {
+   "url": "https://r.jina.ai/https://serper.dev/pricing",
+   "status": 200,
+   "final_url": "https://r.jina.ai/https://serper.dev/pricing",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 309,
+   "truncated": false,
+   "sha256": "87b2ddb64d3853db735df0b4a33883b514db526955a2fb745ed5e1ba8cdde478",
+   "fetched_at": "2026-10-19T05:58:02+00:00",
+   "text_bytes": 309,
+   "via": "r.jina.ai reader proxy"
+  }
+ }
+}

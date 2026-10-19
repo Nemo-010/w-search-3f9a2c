@@ -1,0 +1,95 @@
+{
+ "slug": "linkup",
+ "name": "Linkup",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.linkup.so/pricing",
+   "status": 200,
+   "final_url": "https://www.linkup.so/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 98293,
+   "truncated": false,
+   "sha256": "1b3c7f06159fcf69deb13906ddec7eda2d817798be4cfa3d7a4e70893fe70e18",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 1464
+  },
+  "docs": {
+   "url": "https://docs.linkup.so/",
+   "status": 200,
+   "final_url": "https://docs.linkup.so/pages/documentation/get-started/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 348482,
+   "truncated": false,
+   "sha256": "e0872524cae79999ff0fd0126ccd795109699fe2ad9083b0cb857bcc0355c564",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 3870
+  },
+  "home": {
+   "url": "https://www.linkup.so/",
+   "status": 200,
+   "final_url": "https://www.linkup.so/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 213192,
+   "truncated": false,
+   "sha256": "76e1987c4d847dcfc3b824fc80a6f80b2c508146acd2818cd20bc82d30a3793f",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 4293
+  },
+  "llms": {
+   "url": "https://docs.linkup.so/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.linkup.so/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 16369,
+   "truncated": false,
+   "sha256": "5d5558eeb827121a97fc88123b8b0572b48300e8805f40ff679cff742edebf0b",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 16363
+  },
+  "llms-full": {
+   "url": "https://docs.linkup.so/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.linkup.so/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 560559,
+   "truncated": false,
+   "sha256": "056da768038fe7f6741256006e0ca5dc3e1af4c8829bc526414b8eb988c99ab0",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 560070
+  },
+  "llms-https://www.linkup.so/llms.txt": {
+   "url": "https://www.linkup.so/llms.txt",
+   "status": 200,
+   "final_url": "https://www.linkup.so/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 20929,
+   "truncated": false,
+   "sha256": "730397ef9f52b8c73d0c7b6ebf768038526f2c05e1c5ee3c1d5c943e549df3e5",
+   "fetched_at": "2026-10-19T05:54:05+00:00",
+   "text_bytes": 20897
+  },
+  "llms-err-100018": {
+   "url": "https://www.linkup.so/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.linkup.so/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 39478,
+   "truncated": false,
+   "sha256": "8ac47972703728ec0e60ae53f7d87caf39353dc1653abf5aced4f909f02e5dc5",
+   "fetched_at": "2026-10-19T05:54:06+00:00"
+  },
+  "startups": {
+   "url": "https://www.linkup.so/startups",
+   "status": 200,
+   "final_url": "https://www.linkup.so/startups",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 71040,
+   "truncated": false,
+   "sha256": "a2fc32c684b4ecf6198f13cb5c752dfa3579a315f9d6763a5b6faa784425b3ea",
+   "fetched_at": "2026-10-19T05:58:16+00:00",
+   "text_bytes": 1278
+  }
+ }
+}

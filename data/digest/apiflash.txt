@@ -1,0 +1,7 @@
+# ApiFlash (apiflash) category=reader
+home=https://apiflash.com/ pricing=https://apiflash.com/#pricing docs=https://apiflash.com/documentation llms=None
+sources_ok: pricing:https://apiflash.com/#pricing, docs:https://apiflash.com/documentation, home:https://apiflash.com/
+--- ranked fact lines ---
+[pricing] Get 100 screenshots per month for free, no credit card required.
+[pricing] Get for free
+[pricing] Sign up for free

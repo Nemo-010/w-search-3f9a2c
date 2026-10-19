@@ -1,0 +1,84 @@
+{
+ "slug": "valyu",
+ "name": "Valyu",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://docs.valyu.ai/pricing",
+   "status": 200,
+   "final_url": "https://docs.valyu.ai/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 423385,
+   "truncated": false,
+   "sha256": "34e83bffc45fcd8189eec5a10d0bf64dbac8d9e37f5738b3e0acae6bc459c488",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 6858
+  },
+  "docs": {
+   "url": "https://docs.valyu.ai/",
+   "status": 200,
+   "final_url": "https://docs.valyu.ai/home",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 456149,
+   "truncated": false,
+   "sha256": "031a1193b902fc47a32973bef3e2af702aaff96e5686912232c28243a2125d38",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 5106
+  },
+  "home": {
+   "url": "https://valyu.ai/",
+   "status": 200,
+   "final_url": "https://www.valyu.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 354694,
+   "truncated": false,
+   "sha256": "bb2fab8a6ccfd2df7eda1006587147916a3d817b1f1363e2bf96e4e52327286f",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 7611
+  },
+  "llms": {
+   "url": "https://docs.valyu.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.valyu.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 6913,
+   "truncated": false,
+   "sha256": "81835e729cf6d791d8a3f1a77fdf203f8f1aafbddccbb0d017614f81ebba43da",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 6913
+  },
+  "llms-full": {
+   "url": "https://valyu.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.valyu.ai/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 45924,
+   "truncated": false,
+   "sha256": "b312f0a919325c78b4d2abac08fa6d1f732fcf176d85e8b8ac355255fa267bd6",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 45726
+  },
+  "llms-https://valyu.ai/llms.txt": {
+   "url": "https://valyu.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://www.valyu.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 2666,
+   "truncated": false,
+   "sha256": "50c09c6f9df57272bfc0a9dc18b7b54a4249a87b4b208248a5f6ccaf5c13b914",
+   "fetched_at": "2026-10-19T05:54:05+00:00",
+   "text_bytes": 2664
+  },
+  "llms-err-d48c8e": {
+   "url": "https://valyu.ai/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://valyu.ai/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7278,
+   "truncated": false,
+   "sha256": "2c3db4816f96e6a27ea58c8d4cc157b50c0708e14546e1ad67790a0b6019a2e0",
+   "fetched_at": "2026-10-19T05:54:08+00:00"
+  }
+ }
+}

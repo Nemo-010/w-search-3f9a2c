@@ -1,0 +1,15 @@
+version: 1.0
+
+Default rules
+
+model: * allow: / disallow: /internal/ disallow: /admin/ disallow:
+/private/ disallow: /pricing-hidden/
+
+Purposes
+
+purpose: inference purpose: training disallowed
+
+Metadata
+
+sitemap: https://anchorbrowser.io/sitemap.xml contact:
+support@anchorbrowser.io

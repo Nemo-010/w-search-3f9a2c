@@ -1,0 +1,82 @@
+{
+ "slug": "urlscan",
+ "name": "urlscan.io",
+ "category": "archive",
+ "fetched_at": "2026-10-19T05:54:38+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://urlscan.io/pricing/",
+   "status": 200,
+   "final_url": "https://urlscan.io/pricing/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 43148,
+   "truncated": false,
+   "sha256": "89679ac2bf766e65a6440392a67066a0cee2c65ffdd2fae5736bf6015d977e99",
+   "fetched_at": "2026-10-19T05:54:38+00:00",
+   "text_bytes": 8907
+  },
+  "docs": {
+   "url": "https://urlscan.io/docs/api/",
+   "status": 200,
+   "final_url": "https://urlscan.io/docs/api/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 30750,
+   "truncated": false,
+   "sha256": "9f1d7eb5a020bd779946dfc751aef073d32f329fb2610884855f4f293f3e209a",
+   "fetched_at": "2026-10-19T06:01:30+00:00",
+   "text_bytes": 14257
+  },
+  "home": {
+   "url": "https://urlscan.io/",
+   "status": 200,
+   "final_url": "https://urlscan.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 45979,
+   "truncated": false,
+   "sha256": "4601e2e8f57d6da07cc8513d6b4b233bea9e1428c35662a0fca1257a1c3101de",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 785
+  },
+  "llms-err-4453d7": {
+   "url": "https://urlscan.io/docs/api/llms.txt",
+   "status": 404,
+   "final_url": "https://urlscan.io/docs/api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 8679,
+   "truncated": false,
+   "sha256": "f7778bca2980fc13efc7ddc95d5c246a7bab60c84364bd03658a8e48f18f6d08",
+   "fetched_at": "2026-10-19T05:54:40+00:00"
+  },
+  "llms-err-2eb33a": {
+   "url": "https://urlscan.io/llms.txt",
+   "status": 404,
+   "final_url": "https://urlscan.io/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 8673,
+   "truncated": false,
+   "sha256": "21a2efb0323d8ceefd31be7c2acd479d9531c08f96ad30f054a2143273e6164c",
+   "fetched_at": "2026-10-19T05:54:41+00:00"
+  },
+  "llms-err-2b990e": {
+   "url": "https://urlscan.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://urlscan.io/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 8679,
+   "truncated": false,
+   "sha256": "421f1f46d2c587a8e8504c0aa59e4570b6ffb4e64aaed04256ddf7bab86d73ac",
+   "fetched_at": "2026-10-19T05:54:42+00:00"
+  },
+  "llms": {
+   "url": "https://docs.urlscan.io/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.urlscan.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 2796,
+   "truncated": false,
+   "sha256": "0aafdadfd5745e767310a06d8a5addda1f1d119c7b4ceae0a70296e00129cae1",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 2796
+  }
+ }
+}

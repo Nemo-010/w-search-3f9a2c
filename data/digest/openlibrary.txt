@@ -1,0 +1,26 @@
+# Open Library (openlibrary) category=misc-api
+home=https://openlibrary.org/developers/api pricing=None docs=https://openlibrary.org/developers/api llms=None
+sources_ok: docs:https://openlibrary.org/developers/api, llms:https://docs.openlibrary.org/llms.txt, llms-full:https://docs.openlibrary.org/llms-full.txt
+--- ranked fact lines ---
+[docs] These APIs are not intended to serve as a bulk data backend or high-traffic commercial infrastructure. For bulk access, please download our free monthly data dumps or contact us at openlibrary@archive.org .
+[docs] is a free, easy-to-use book discovery tool designed to help readers find books that match their interests, age group, and reading level.
+[docs] is a free citation tool for students and researchers that uses Open Library's Books API to verify and resolve book references.
+--- llms/readme head ---
+# Open Library Docs
+> Documentation for openlibrary.org featuring guides and resources for developers, designers, librarians, and contributors
+One web page for every book ever published
+## Table of Contents
+### Welcome to Open Library
+- [Code of Conduct](/everyone/code-of-conduct.md)
+- [Community Call](/everyone/community-call.md)
+- [Documentation Guide](/everyone/documentation.md)
+- [Fellowships](/everyone/fellowships.md)
+- [Google Summer of Code](/everyone/google-summer-of-code.md)
+- [Hacktoberfest](/everyone/hacktoberfest.md)
+- [History](/everyone/history.md)
+- [Internationalization](/everyone/internationalization.md)
+- [Slack](/everyone/slack.md)
+### Developers Handbook
+- [Quick Start](/developers/quick-start.md)
+- [Contributing](/developers/CONTRIBUTING.md)
+- [Good First Issues](/developers/good-first-issues.md)

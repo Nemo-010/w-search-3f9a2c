@@ -1,0 +1,127 @@
+Google Search API & Reader API (Web to Text) | SearchCans 
+ Earn free credits — refer friends, redeem promo codes & share on social. 
+Claim credits
+APIs
+ SERP APIs Google Search API Popular Google Shopping API Google Images API Google News API Google Videos API Google Short Videos API Bing Search API YouTube Search API Coming Soon Utility APIs Reader API (Web to Text) File Extraction API New Web Screenshot API Platform Error Codes Rate Limits & Parallel Lanes Proxy Tiers & Credit Rules Country & Language Account API 
+View All APIs →
+Pricing
+Playground
+Blog
+ Search APIs, Reader, and AI data workflows 
+Google Search API & Reader API (Web to Text) for AI Agents
+Search live results. Extract source content. Ground AI responses.
+Real-time SERP results from Google and Bing , plus clean Markdown or HTML from any URL, PDF, or Office document. One API key, no hourly rate limits, from $0.56 per 1,000 requests .
+100 free credits on signup. No payment method required.
+Get started free
+View Pricing
+ quick_start_demo.py Quick Start Copy SearchCans API Quick Start Example import requests
+headers = {
+ "Authorization": "Bearer YOUR_KEY",
+ "Content-Type": "application/json"
+}
+# 1. Search Google (SERP API)
+search_resp = requests.post(
+ "https://www.searchcans.com/api/v1/search",
+ headers=headers,
+ json={
+ "s": "AI Agents", # Search query
+ "t": "google", # Engine type
+ "d": 20000 # 20s server timeout
+ },
+ timeout=30 # 30s client timeout
+)
+# Get the first URL result
+first_url = search_resp.json()['data'][0]['url']
+# 2. Extract Content (Reader API)
+reader_resp = requests.post(
+ "https://www.searchcans.com/api/v1/url",
+ headers=headers,
+ json={
+ "s": first_url, # Source URL
+ "t": "url",
+ "w": 3000 # Wait 3s for JS (use 5000ms+ for heavy sites)
+ },
+ timeout=30 # 30s client timeout
+)
+# Output clean LLM-ready Markdown
+print(reader_resp.json()['data']['markdown']) 
+Search, extract, and ground AI workflows with one API platform.
+Choose the API path that fits your workflow. Every product uses the same key and credit pool from your first test request to production.
+ Google Search API & JSON SERP 
+Get real-time Google and Bing SERP results as structured JSON for search features, monitoring, and production applications.
+ Reader API: Web to Text & URL to Markdown 
+Convert web pages, PDFs, and Office documents into clean Markdown or HTML for retrieval and documentation workflows.
+ Search API for AI Agents & RAG 
+Pair live SERP results with Reader extraction to give AI agents, RAG pipelines, and LLM workflows current web context.
+ Parallel Lanes, No Hourly Caps 
+Add concurrent lanes when jobs queue, then raise throughput without changing API keys or integrations.
+ Prepaid API Credits 
+Start with free credits, then add prepaid credits when needed. Current plans require no recurring subscription.
+Also includes
+ Shopping ,
+ Images ,
+ News ,
+ Video SERP APIs,
+ plus File Extraction 
+and Web Screenshot —
+ see all APIs → Live Performance API Status 
+Real-time success rates across our Google SERP, Bing Search, and Reader APIs.
+Simple prepaid pricing for search and extraction
+Start with free credits. Buy what you need — no subscription. Add more concurrency with Lane Stacking when you need it.
+All plans include full access to the Google SERP, Bing Search, and Reader APIs.
+ View Documentation → Standard $18.00 $90.00 
+-80%
+ 20K credits
+ $0.90/1K credits
+ Get 20,000 credits 2 Parallel Lanes ? What are Parallel Lanes? A lane is one request running now. This plan has 2 lanes, so 2 requests can run at the same time. When one finishes, that lane is ready again. ≈2,400 throughput per hour ? How is throughput estimated? Throughput (RPM) = Lanes × (60s / 3s avg. latency). At 3s average latency, 1 lane ≈ 20 RPM ≈ 1,200 requests/hour. Real-time results Fast response time Email technical support Credits valid for 6 months Choose Plan 
+Choose Plan
+Most Popular
+ Starter $99.00 $495.00 
+-80%
+ 132K credits
+ $0.75/1K credits
+ Get 132,000 credits 5 Parallel Lanes ? What are Parallel Lanes? A lane is one request running now. This plan has 5 lanes, so 5 requests can run at the same time. When one finishes, that lane is ready again. ≈6,000 throughput per hour ? How is throughput estimated? Throughput (RPM) = Lanes × (60s / 3s avg. latency). At 3s average latency, 1 lane ≈ 20 RPM ≈ 1,200 requests/hour. Real-time results Faster response priority Email technical support Eligible for Lane Stacking ? What is Lane Stacking? Add another eligible plan and your lanes add up in one account. More lanes mean more requests can run at the same time. 1× $99 = 5 Lanes 2× $99 = 10 Lanes $99 + $597 = 42 Lanes Credits valid for 6 months Choose Plan 
+Choose Plan
+ Pro $597.00 $2985.00 
+-80%
+ 995K credits
+ $0.60/1K credits
+ ~1 Million credits 37 Parallel Lanes ? What are Parallel Lanes? A lane is one request running now. This plan has 37 lanes, so 37 requests can run at the same time. When one finishes, that lane is ready again. ≈44,400 throughput per hour ? How is throughput estimated? Throughput (RPM) = Lanes × (60s / 3s avg. latency). At 3s average latency, 1 lane ≈ 20 RPM ≈ 1,200 requests/hour. Real-time results Priority Request Routing Tier-1 Developer Support Eligible for Lane Stacking ? What is Lane Stacking? Add another eligible plan and your lanes add up in one account. More lanes mean more requests can run at the same time. 1× $99 = 5 Lanes 2× $99 = 10 Lanes $99 + $597 = 42 Lanes Credits valid for 6 months Choose Plan 
+Choose Plan
+ Ultimate $1680.00 $8400.00 
+-80%
+ 3M credits
+ $0.56/1K credits
+ Get 3,000,000 credits 113 Parallel Lanes ? What are Parallel Lanes? A lane is one request running now. This plan has 113 lanes, so 113 requests can run at the same time. When one finishes, that lane is ready again. ≈135,600 throughput per hour ? How is throughput estimated? Throughput (RPM) = Lanes × (60s / 3s avg. latency). At 3s average latency, 1 lane ≈ 20 RPM ≈ 1,200 requests/hour. Dedicated Cluster Node Zero Queue Latency Dedicated account manager Eligible for Lane Stacking ? What is Lane Stacking? Add another eligible plan and your lanes add up in one account. More lanes mean more requests can run at the same time. 1× $99 = 5 Lanes 2× $99 = 10 Lanes $99 + $597 = 42 Lanes Credits valid for 6 months Choose Plan 
+Choose Plan
+View all pricing details →
+ Earn credits beyond your first 100 
+Earn additional bonus credits through referrals, approved social sharing, and available promo codes.
+ Create a free account to explore rewards → Why teams choose SearchCans Start free. Pay only when you use it. Scale when you need to. 
+Try the full product free. Pay only when your usage proves out. Add throughput when your workload demands it.
+ Test before you pay Full access for 100 free credits. No payment method required to start. Pay only when you're ready Current prepaid packs have predictable pricing and no recurring subscription required. Scale concurrency when you need it Parallel Lanes and Lane Stacking add concurrency when jobs queue — no rebuild required. 
+No Rate Limits: Parallel Lanes — Scale Without Hourly Caps
+Start on our shared cluster for testing and early production. When you need more concurrent requests, stack eligible plans for more lanes — or move to a Dedicated Cluster Node to skip the queue entirely.
+ How concurrency maps to throughput A quick way to size the right plan for agents, batch jobs, and queued workloads — before you scale up. 1 lane = 1 live request Estimated hourly throughput ≈ lanes × 3600 ÷ average request seconds If a request averages 3 seconds, 1 lane ≈ 1,200 requests/hour and 5 lanes ≈ 6,000 requests/hour . 
+View all plans
+ Free $0 / forever For testing & side projects Get started free 1 Parallel Search Lane 100 Free Credits Shared Cluster Resources CUSTOM Enterprise Custom pricing For high-volume & compliance Contact Sales Custom Parallel Lanes Dedicated Cluster Node SLA & Priority Support Lane Stacking in one line Eligible paid plans stack their lanes in one account — raise concurrency without switching products or rotating keys. When Lane Stacking helps When your usage is proven and requests start queuing, stack another plan to raise live concurrency — no integration changes. 
+Latest from Our Blog
+Best practices, integration guides, and product updates.
+View All Articles
+Ready to make your first API call?
+Create an account, get your API key, and start with 100 free credits.
+Get started free
+View Pricing
+Search and extraction infrastructure for AI agents.
+Powered by Vcans 
+The agentic workflow platform behind SearchCans' high-throughput APIs.
+ SERP APIs Google Search API Google Shopping API Google Images API Google News API Google Videos API Google Short Videos API Bing Search API Utility APIs Reader API (Web to Text) File Extraction API Web Screenshot API Platform Error Codes Rate Limits & Parallel Lanes Proxy Tiers & Credit Rules Country & Language Account API Product Pricing All APIs Playground Blog API Status Support Contact Us FAQ Legal Terms of Service Privacy Policy Cookie Policy Cookie settings How We Compare Alternative to SerpApi Alternative to Brave Alternative to SearchApi Alternative to ScrapingBee Alternative to DataForSEO ** All prices exclude sales tax/VAT/GST. © 2024-2026 SearchCans. All rights reserved. · 
+API v0 (Legacy · sunset 2026-12-31)
+ Privacy preferences 
+Essential storage keeps SearchCans working. You can separately control analytics and advertising.
+ Cookie Policy 
+Accept all
+Reject optional
+Customize
+ Essential Security, sign-in, payments and saved choices Always active Analytics Site usage, CTA and conversion measurement Advertising Ad attribution and campaign measurement 
+Save choices

@@ -1,0 +1,84 @@
+{
+ "slug": "airtop",
+ "name": "Airtop",
+ "category": "browser",
+ "fetched_at": "2026-10-19T05:54:24+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.airtop.ai/pricing",
+   "status": 200,
+   "final_url": "https://www.airtop.ai/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 124110,
+   "truncated": false,
+   "sha256": "4c76988bdd4e82024379fcdb009acde6e8581cfa61182f54747e0cc3a173d317",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 2489
+  },
+  "docs": {
+   "url": "https://docs.airtop.ai/",
+   "status": 200,
+   "final_url": "https://docs.airtop.ai/guides/getting-started/what-is-airtop.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 7680,
+   "truncated": false,
+   "sha256": "4b4f7f3b749f900d17294315b5fb273eebeb259b9f9f465f2dc83ce5c9763564",
+   "fetched_at": "2026-10-19T05:54:25+00:00",
+   "text_bytes": 7680
+  },
+  "home": {
+   "url": "https://www.airtop.ai/",
+   "status": 200,
+   "final_url": "https://www.airtop.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 169644,
+   "truncated": false,
+   "sha256": "f7236f809d1e2766c3777c2f66ce89f80e80ee0959a7d76f44f6970e3d0b4e3c",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 4917
+  },
+  "llms": {
+   "url": "https://docs.airtop.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.airtop.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 10183,
+   "truncated": false,
+   "sha256": "f7de1936748fdbb76cb5f9ac604d5f280ac0da5224e652b7b14747b27311f10c",
+   "fetched_at": "2026-10-19T05:54:28+00:00",
+   "text_bytes": 10183
+  },
+  "llms-full": {
+   "url": "https://www.airtop.ai/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.airtop.ai/help/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 47439,
+   "truncated": false,
+   "sha256": "c9cffdf7c6606d80030b35821243dbace1d0595a7820023c97f7faef9501e162",
+   "fetched_at": "2026-10-19T05:54:33+00:00",
+   "text_bytes": 47307
+  },
+  "llms-err-cadb15": {
+   "url": "https://www.airtop.ai/llms.txt",
+   "status": 404,
+   "final_url": "https://www.airtop.ai/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 70958,
+   "truncated": false,
+   "sha256": "f59bc9420a60ff820fd305bc9f1f16d0bdfdddfcf4b6335a5b81b743016451e5",
+   "fetched_at": "2026-10-19T05:54:31+00:00"
+  },
+  "llms-https://www.airtop.ai/docs/llms.txt": {
+   "url": "https://www.airtop.ai/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.airtop.ai/help/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 2989,
+   "truncated": false,
+   "sha256": "8b0b90e9414f823d5edc863a3350be4d55ddea6069a360b3506b2b5e692114a5",
+   "fetched_at": "2026-10-19T05:54:32+00:00",
+   "text_bytes": 2987
+  }
+ }
+}

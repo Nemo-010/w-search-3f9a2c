@@ -1,0 +1,27 @@
+# ScrapeOps (scrapeops) category=serp-scrape
+home=https://scrapeops.io/ pricing=https://scrapeops.io/pricing/ docs=https://scrapeops.io/docs/ llms=None
+sources_ok: home:https://scrapeops.io/, llms:https://scrapeops.io/llms.txt, llms-full:https://scrapeops.io/llms-full.txt
+--- ranked fact lines ---
+[llms] - [Sign Up (Free)](https://scrapeops.io/app/register/proxy) — Get your API key.
+[llms] - [Fake User Agents API](https://scrapeops.io/docs/fake-user-agent-headers-api/overview) — Free API for random user agents.
+[llms-full] Free API for generating random user agents and browser headers for web scraping.
+[llms-full] - [Free Proxies Tested](https://scrapeops.io/web-scraping-playbook/free-proxies-tested)
+[llms-full] - **Sign Up (Free):** https://scrapeops.io/app/register/proxy
+--- llms/readme head ---
+# ScrapeOps
+> Web scraping infrastructure: proxy APIs, residential proxies, monitoring, scheduling, and structured data extraction.
+- Website: https://scrapeops.io
+- Full docs index: https://scrapeops.io/llms-full.txt
+---
+## Products
+- [Proxy API Aggregator](https://scrapeops.io/proxy-api-aggregator/) — Smart proxy routing with anti-bot bypass and JS rendering.
+- [Residential Proxy Aggregator](https://scrapeops.io/residential-mobile-proxy-aggregator/) — Premium residential and mobile proxies.
+- [Monitoring & Scheduling](https://scrapeops.io/monitoring-scheduling/) — Scraper monitoring, alerts, and job scheduling.
+- [Parser API](https://scrapeops.io/parser-api/) — HTML to structured JSON conversion.
+- [AI Scraper Builder](https://scrapeops.io/ai-web-scraping-assistant/scraper-builder) — AI-powered scraper generation.
+---
+## Core Docs
+- [Documentation Home](https://scrapeops.io/docs/intro) — Overview of all ScrapeOps products and quickstart guides.
+- [Proxy API Quickstart](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/quickstart) — Get started with the Proxy API Aggregator.
+- [Residential Proxy Overview](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/overview) — Get started with residential proxies.
+- [Monitoring Overview](https://scrapeops.io/docs/monitoring/overview) — Set up scraper monitoring and alerts.

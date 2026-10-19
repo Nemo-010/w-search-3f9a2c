@@ -1,0 +1,68 @@
+{
+ "slug": "khoj",
+ "name": "Khoj (OSS)",
+ "category": "oss",
+ "fetched_at": "2026-10-19T05:54:56+00:00",
+ "sources": {
+  "readme": {
+   "url": "https://raw.githubusercontent.com/khoj-ai/khoj/HEAD/README.md",
+   "status": 200,
+   "final_url": "https://raw.githubusercontent.com/khoj-ai/khoj/HEAD/README.md",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 4701,
+   "truncated": false,
+   "sha256": "f43b29f1ad9d5792d4a2b1d46454c26249212c5f93e59923adc718463a3ac1ba",
+   "fetched_at": "2026-10-19T05:54:56+00:00",
+   "text_bytes": 4657
+  },
+  "llms-err-f3a536": {
+   "url": "https://github.com/khoj-ai/khoj/llms.txt",
+   "status": 404,
+   "final_url": "https://github.com/khoj-ai/khoj/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9,
+   "truncated": false,
+   "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+   "fetched_at": "2026-10-19T05:54:57+00:00"
+  },
+  "llms-err-e4ef57": {
+   "url": "https://github.com/khoj-ai/khoj/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://github.com/khoj-ai/khoj/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9,
+   "truncated": false,
+   "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+   "fetched_at": "2026-10-19T05:54:58+00:00"
+  },
+  "llms": {
+   "url": "https://docs.github.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.github.com/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 28642,
+   "truncated": false,
+   "sha256": "c10af0cdb5576f81fd29373cf56ac65608d24c3e4c935c7993d2bba27d56af4e",
+   "fetched_at": "2026-10-19T05:54:58+00:00",
+   "text_bytes": 28634
+  }
+ },
+ "github": {
+  "full_name": "khoj-ai/khoj",
+  "stargazers_count": 37741,
+  "forks_count": 2521,
+  "created_at": "2021-08-16T01:48:44Z",
+  "pushed_at": "2026-08-02T01:55:40Z",
+  "license": {
+   "key": "agpl-3.0",
+   "name": "GNU Affero General Public License v3.0",
+   "spdx_id": "AGPL-3.0",
+   "url": "https://api.github.com/licenses/agpl-3.0",
+   "node_id": "MDc6TGljZW5zZTE="
+  },
+  "archived": false,
+  "open_issues_count": 169,
+  "subscribers_count": 183,
+  "description": "Your AI second brain. Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, gemini, llama, qwen, mistral). Get started - free."
+ }
+}

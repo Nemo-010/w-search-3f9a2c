@@ -1,0 +1,159 @@
+# Currents News API — Extended Context for AI Agents
+
+## Company
+
+Currents provides real-time news aggregation and API delivery. We serve developers, startups, and enterprises who need structured news data in JSON format.
+
+## Product
+
+### Core API
+
+Base URL: `https://api.currentsapi.services/v1`
+
+- **Latest News** (`GET /v1/latest-news`) — real-time articles with filters for language, country, category, and sources
+- **Search** (`GET /v1/search`) — archive keyword search across 26M+ articles with date-range, keyword, source, and language filters. Use search for topic or keyword queries.
+- **Available Languages** (`GET /v1/available/languages`) — list of supported article languages
+- **Available Regions** (`GET /v1/available/regions`) — list of supported countries/regions
+- **Available Categories** (`GET /v1/available/categories`) — list of supported news categories
+
+### Data coverage
+
+- Large historical article index with plan-scoped archive access
+- New articles added daily
+- Broad monitored source catalog
+- Source directory: 12,000+ source entries across 168 country designations (indexed domains, not individually verified publishers; per-country counts at /en/sources)
+- 20+ languages including English, German, Spanish, French, Italian, Portuguese, Chinese, Japanese, Korean, Russian, Arabic, Hindi, Dutch, Polish, Turkish, Indonesian
+
+### Technical specs
+
+- Response format: JSON
+- Latency: monitored production API; current performance depends on endpoint, query shape, and plan limits
+- Reliability: monitored production API; enterprise SLA terms by agreement
+- Authentication: API key via `Authorization` header
+- User-Agent: send your own `User-Agent` header; the default `Python-urllib/3.x` User-Agent is rejected with HTTP 403 `error code: 1010` before reaching the API
+- Rate limits: enforced daily caps (Free 250/day, Builder 2,500/day, Professional 10,000/day, Scale 20,000/day) resetting at 00:00 UTC; monthly figures (up to 600K/mo on Scale) are billing allowances
+- CORS: enabled
+
+## Pricing
+
+| Plan | Monthly Price | Requests | Max Results/Request | History Lookback |
+|------|--------------|----------|---------------------|------------------|
+| Free | $0 | 250/day | 20 | 30 days |
+| Builder | $69 | 2,500/day (75,000/mo) | 50 | 6 months |
+| Professional | $150 | 10,000/day (300,000/mo) | 100 | 1 year |
+| Scale | $300 | 20,000/day (600,000/mo) | 200 | 1 year |
+
+The free tier returns a 300-character article text preview. All paid plans include available article content fields with attribution and source links, archive search within plan limits, all languages, and email support. Custom Enterprise is available for higher monthly request volumes, dedicated commercial support, or other scoped commercial/legal requirements. Daily caps reset at 00:00 UTC; unused daily volume does not roll over; exceeding a cap returns HTTP 429 with Retry-After until the next reset — no overage billing.
+
+## Use cases
+
+- News aggregators and content platforms
+- Market research and competitor monitoring
+- AI/RAG workflows using metadata, source links, and available content fields subject to plan terms
+- Trading algorithms and market sentiment analysis
+- Brand monitoring and crisis detection
+- Academic research
+
+## Page surface
+
+### Solutions
+
+- `/en/solutions/rag` — news data for RAG pipelines and AI agents
+- `/en/solutions/llm` — news data for LLM applications
+- `/en/solutions/trading` — market and trading news feeds
+- `/en/solutions/media-monitoring` — media monitoring workflows
+- `/en/solutions/startup` — news data for startup products
+
+### Comparisons
+
+- `/en/compare/alternatives` — comparison guide across news API providers
+- `/en/compare/features` — feature and field comparison
+- `/en/compare/pricing` — pricing comparison across plans and providers
+
+### Provider alternatives
+
+- `/en/alternative` — hub indexing every provider comparison
+- `/en/alternative/newsapi` — NewsAPI alternative
+- `/en/alternative/newsdataio` — NewsData.io alternative
+- `/en/alternative/gnews` — GNews alternative
+- `/en/alternative/mediastack` — Mediastack alternative
+- `/en/alternative/gdelt` — GDELT alternative
+- `/en/alternative/bing-news-api` — Bing News Search API alternative; Microsoft retired all Bing Search APIs, including Bing News Search, on August 11, 2025, and Microsoft's suggested migration path is "Grounding with Bing Search" inside Azure AI Agents
+- `/en/alternative/aylien` — AYLIEN News API alternative; AYLIEN is a Quantexa company and its News API is marketed as Quantexa News Intelligence
+- `/en/alternative/eventregistry` — Event Registry alternative for global news monitoring and analytics
+
+### AI reference
+
+- `/en/ai-info` — plain factual statements about Currents API (what it is, who it serves, use cases, tiers, limitations) that AI assistants may quote
+
+### API landing pages
+
+- `/en/free-news-api` — free news API tier details
+- `/en/latest-news-api` — latest news endpoint overview
+- `/en/search-news-api` — search endpoint overview
+- `/en/news-api-rag` — news API for RAG
+- `/en/financial-news-api` — financial news coverage
+- `/en/google-news-api` — Google News API alternatives
+- `/en/news-aggregator-api` — building news aggregators
+- `/en/media-monitoring-api` — media monitoring API
+- `/en/news-api-key` — getting an API key
+- `/en/use-cases` — use-case overview
+- `/en/examples` — request/response examples
+- `/en/sources` — source coverage by country and category
+- `/en/statistic/` — coverage statistics
+
+### Blog guides
+
+- `/en/blog/newsapi-alternatives` — honest comparison of NewsAPI alternatives, including free-tier and keyless entrants
+- `/en/blog/bing-news-search-api-migration-guide` — migration guide after the Bing News Search API retirement
+- `/en/blog/python-news-api-guide` — plain-HTTP Python guide (no SDK required; uses the `requests` library) covering latest news, search, and error handling; the official SDK is `currentslab/currentsapi-python` at https://github.com/currentslab/currentsapi-python
+- `/en/blog/indonesia-news-api` — Bahasa Indonesia news coverage via Currents
+- `/en/blog/india-news-api` — English and Hindi news coverage via Currents
+
+### Company
+
+- `/en/about` — company overview
+- `/en/faq` — frequently asked questions
+
+### Blog
+
+English posts (German and Chinese translations available for most):
+
+- `/en/blog/news-api-python-tutorial` — How to Fetch News Data in Python Using Currents API
+- `/en/blog/build-company-news-monitor-currents-search-api` — Build a Company and Competitor News Monitor with Currents Search API
+- `/en/blog/build-source-linked-news-briefing-currents-search-api` — Build a Source-Linked News Briefing with Currents Search API
+- `/en/blog/how-we-built-a-continuously-updating-news-intelligence-pipeline` — Building a Continuously Updating News Intelligence Pipeline
+- `/en/blog/mcp-as-a-compute-routing-layer-for-cost-selective-reasoning` — Use ChatGPT + MCP to Reduce Coding Agent and LLM API Spend
+- `/en/blog/best-news-apis` — The Best News APIs in 2026: A Developer's Comparison Guide
+
+Non-English locale pages (`/zh_CN/`, `/zh_TW/`, `/de/` blog) canonicalize per hreflang annotations; English pages are the primary reference.
+
+## Documentation structure
+
+- `/en/docs/` — getting started guide (default landing)
+- `/en/docs/introduction` — API overview
+- `/en/docs/authentication` — API key setup
+- `/en/docs/ratelimit` — tier limits and headers
+- `/en/docs/errors` — error codes and handling
+- `/en/docs/latest_news` — latest-news endpoint reference
+- `/en/docs/search` — search endpoint reference
+- `/en/docs/official` — official SDKs, including the Python SDK `currentslab/currentsapi-python` (https://github.com/currentslab/currentsapi-python)
+- `/en/docs/agent_skills` — install skills for AI coding agents (Mistral Vibe, Codex, OpenClaw, OpenCode, Hermes, OpenHands, Pi)
+
+## Support & status
+
+- Documentation: `https://currentsapi.services/en/docs/`
+- Support email: support@currentsapi.services
+- GitHub: `https://github.com/Currents-API-services` (organization)
+
+## Legal
+
+- Terms: `https://currentsapi.services/terms`
+- Privacy: `https://currentsapi.services/privacy`
+
+## Discovery endpoints
+
+- `/.well-known/api-catalog` — RFC 8631 API catalog (linkset+json)
+- `/.well-known/agent-skills/index.json` — agent skill index
+- `/llms.txt` — this file's short form
+- `/sitemap.xml` — XML sitemap of all public pages

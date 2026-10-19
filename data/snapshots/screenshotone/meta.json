@@ -1,0 +1,94 @@
+{
+ "slug": "screenshotone",
+ "name": "ScreenshotOne",
+ "category": "reader",
+ "fetched_at": "2026-10-19T05:54:34+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://screenshotone.com/pricing/",
+   "status": 200,
+   "final_url": "https://screenshotone.com/pricing/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 124368,
+   "truncated": false,
+   "sha256": "ce77fe603ba84b2c07919f19893a0aaac8ee17bda72013b3df619c64ed9af0b3",
+   "fetched_at": "2026-10-19T05:59:44+00:00",
+   "text_bytes": 6311
+  },
+  "docs": {
+   "url": "https://screenshotone.com/docs/",
+   "status": 200,
+   "final_url": "https://screenshotone.com/docs/getting-started/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 65887,
+   "truncated": false,
+   "sha256": "2b500ba82911956e6d130e8ca011d95ce9b01670ca3c10b36ad7c1c7de91ba5d",
+   "fetched_at": "2026-10-19T05:54:35+00:00",
+   "text_bytes": 4874
+  },
+  "home": {
+   "url": "https://screenshotone.com/",
+   "status": 200,
+   "final_url": "https://screenshotone.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 167614,
+   "truncated": false,
+   "sha256": "5f7426f15be0a6d6bc4c7ee3d0f50bed59216dd5ddc9669a4b4df9bd0d3cfe91",
+   "fetched_at": "2026-10-19T05:54:36+00:00",
+   "text_bytes": 17667
+  },
+  "llms": {
+   "url": "https://screenshotone.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://screenshotone.com/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 8486,
+   "truncated": false,
+   "sha256": "706babf181ee70787fbc8651dea29643b39a344747cfbf8b23fe3b5e90f44ee3",
+   "fetched_at": "2026-10-19T05:54:36+00:00",
+   "text_bytes": 8486
+  },
+  "llms-full": {
+   "url": "https://screenshotone.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://screenshotone.com/docs/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 389612,
+   "truncated": false,
+   "sha256": "8ff64175f8f80f85948bf52f52d97a60a75577f781e7cb5396b2a3821a32512e",
+   "fetched_at": "2026-10-19T05:54:37+00:00",
+   "text_bytes": 389365
+  },
+  "llms-https://screenshotone.com/llms.txt": {
+   "url": "https://screenshotone.com/llms.txt",
+   "status": 200,
+   "final_url": "https://screenshotone.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 926,
+   "truncated": false,
+   "sha256": "020833f7048c78bea6d86ff66792cf0711a57f451c29e456ef4a19ee378021bc",
+   "fetched_at": "2026-10-19T05:54:37+00:00",
+   "text_bytes": 926
+  },
+  "llms-err-b5d6b0": {
+   "url": "https://docs.screenshotone.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.screenshotone.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:38+00:00"
+  },
+  "pricing2": {
+   "url": "https://screenshotone.com/plans",
+   "status": 404,
+   "final_url": "https://screenshotone.com/plans",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 44164,
+   "truncated": false,
+   "sha256": "db95a9974e812f5f58274952dacf9cbf737425992f7b52e22640a99efeba8690",
+   "fetched_at": "2026-10-19T06:01:30+00:00"
+  }
+ }
+}

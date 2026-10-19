@@ -1,0 +1,70 @@
+{
+ "slug": "gdelt",
+ "name": "GDELT",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:41+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+   "status": 200,
+   "final_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 80455,
+   "truncated": false,
+   "sha256": "54dc1ee1bf079fa859b690c2e72f5f6927ac45ddf701365ffe57866391655e8d",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 40345
+  },
+  "home": {
+   "url": "https://www.gdeltproject.org/",
+   "status": 200,
+   "final_url": "https://gdeltproject.org:443/",
+   "content_type": "text/html",
+   "bytes": 46205,
+   "truncated": false,
+   "sha256": "2c3fe09d2614b7064f1899e9aa4248be78e854a50019e003f437a574874a42b6",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 18200
+  },
+  "llms-err-bd0067": {
+   "url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/llms.txt",
+   "status": 404,
+   "final_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 32411,
+   "truncated": false,
+   "sha256": "34a271729b13b389ce1962a3077b458d463409c4e9df2b8c19c5eee083769594",
+   "fetched_at": "2026-10-19T05:54:42+00:00"
+  },
+  "llms-err-b83326": {
+   "url": "https://www.gdeltproject.org/llms.txt",
+   "status": 404,
+   "final_url": "https://www.gdeltproject.org/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+   "fetched_at": "2026-10-19T05:54:43+00:00"
+  },
+  "llms-err-85e9cc": {
+   "url": "https://www.gdeltproject.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.gdeltproject.org/docs/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  },
+  "llms-err-f6f9da": {
+   "url": "https://docs.blog.gdeltproject.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.blog.gdeltproject.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  }
+ }
+}

@@ -1,0 +1,191 @@
+Discover What is Zyte: Empowering Data Extraction and More 
+ Login 
+ zyte.com 
+ Support 
+ System status 
+ Try free 
+ Menu 
+ Expand 
+ Light mode 
+ Dark mode 
+ Auto light/dark, in light mode 
+ Auto light/dark, in dark mode 
+ Skip to content 
+ Join our Discord community : Connect with the best scraping developers, receive coding support, and access exclusive events! 
+ Zyte documentation 
+ Web scraping 
+ Get started 
+ Tutorials 
+ Main 
+ Set up 
+ Deploy 
+ Avoid bans 
+ Handle JavaScript 
+ Automate extraction 
+ Agentic Web Data 
+ Web Scraping Copilot 
+ Set up 
+ Parse 
+ Crawl 
+ Guides 
+ Exporting scraped data 
+ Amazon S3 
+ Azure Storage 
+ Dropbox 
+ FTP servers 
+ Google Cloud Storage 
+ Google Drive 
+ Google Sheets 
+ SFTP servers 
+ Google BigQuery 
+ Zyte API 
+ Get started 
+ Usage 
+ HTTP 
+ Browser 
+ CDP 
+ Extraction 
+ Custom attributes 
+ Features 
+ Business verification 
+ Proxy mode 
+ Rate limits 
+ Optimization 
+ Errors 
+ API reference 
+ Stats API 
+ Dashboards 
+ Search API 
+ Quickstart 
+ Request parameters 
+ Response schema 
+ Geo-targeting 
+ Examples 
+ IDE 
+ Scripting API 
+ Example scripts 
+ Migration 
+ Browser automation 
+ Bright Data Web Unlocker 
+ ScrapingBee 
+ scrapy-zyte-smartproxy 
+ Zenrows 
+ Zyte Smart Proxy Manager 
+ Pricing 
+ FAQ 
+ Scrapy Cloud 
+ Get started 
+ Usage 
+ Projects 
+ Deployment 
+ Spiders 
+ Jobs 
+ Logs 
+ Items 
+ Download 
+ Scripts 
+ Units 
+ Reference 
+ HTTP API 
+ Jobs API 
+ Periodic Jobs API 
+ Comments API 
+ JobQ API 
+ Job metadata API 
+ Items API 
+ Logs API 
+ Requests API 
+ Activity API 
+ Collections API 
+ Frontier API 
+ Entry Point API 
+ FAQ 
+ Pricing 
+ Coding Agent Add-Ons 
+ Get started 
+ Web Data 
+ Install Agentic Web Data 
+ Zyte MCP 
+ Copilot 
+ Requirements 
+ Install 
+ Features 
+ FAQ 
+ UI 
+ Misc 
+ CA certificate 
+ Legacy 
+ Smart Proxy Manager 
+ Smart Proxy Manager API 
+ Errors Reference 
+ Fetch API (replaced by Zyte API) 
+ Using Headless Browsers with Zyte Smart Proxy Manager 
+ Old Fetch API (obsolete) 
+ Residential 
+ Sessions 
+ Stats API 
+ Smart Proxy Manager Integrations 
+ Using Smart Proxy Manager with C# 
+ Using Smart Proxy Manager with Java 
+ Using Smart Proxy Manager with Node.js 
+ Using Smart Proxy Manager with Objective-C 
+ Using Smart Proxy Manager with PhantomJS, CasperJS, SpookyJS 
+ Using Smart Proxy Manager with PHP 
+ Using Smart Proxy Manager with Playwright 
+ Using Smart Proxy Manager with Puppeteer 
+ Using Smart Proxy Manager with Pyppeteer 
+ Using Smart Proxy Manager with Python 
+ Using Smart Proxy Manager with R 
+ Using Smart Proxy Manager with Ruby 
+ Using Smart Proxy Manager with Scrapy 
+ Using Smart Proxy Manager with Scrapy Cloud 
+ Using Smart Proxy Manager with Selenium 
+ Using Smart Proxy Manager with Selenium Wire 
+ Using Smart Proxy Manager with Splash 
+ Smart Proxy Manager Next Steps 
+ Smart Proxy Manager Troubleshooting 
+ How to fix authentication issues? 
+ How to deal with bans or 503 response from Zyte Smart Proxy Manager? 
+ How to fix concurrency issues? 
+ When and how to use regional IPs? 
+ When and how to use residential IPs? 
+ How to fix timeout errors? 
+ Fetching HTTPS pages with Zyte Smart Proxy Manager 
+ Restricting Zyte Smart Proxy Manager IPs to a specific region 
+ Sending POST request with Zyte Smart Proxy Manager 
+ Using Desktop and Mobile profiles using Zyte Smart Proxy Manager 
+ Using Smart Proxy Manager with Splash and Scrapy 
+ Smart Proxy Manager Account & Billing 
+ Zyte Smart Proxy Manager Usage & Recent Requests 
+ Weekly Digest 
+ Smart Proxy Manager FAQ 
+ SPM to Zyte API via Proxy Mode - Customer FAQ 
+ Back to top 
+ Zyte documentation ¶ 
+ How would you like to get public data from the Internet? 
+Write your own code 
+ New to web scraping? Learn here! 
+ Have some experience? Improve your stack with our solutions below . 
+We do it for you 
+ We can design, build, monitor, and maintain custom web scraping
+solutions. 
+ Talk to us! 
+ https://www.zyte.com/data-extraction/ 
+ At Zyte we have solutions for every web scraping need: 
+Antiban 
+ Get HTTP responses without bans with Zyte
+API . 
+Hosting 
+ Run your code on Scrapy Cloud . 
+ Get started with Scrapy Cloud 
+Browser automation 
+ Get powerful browser automation with
+ Zyte API . 
+Coding Agent Add-Ons 
+ Use Coding Agent Add-Ons to build better web scraping projects faster. 
+ Coding Agent Add-Ons 
+Automatic extraction 
+ Let AI do the parsing for you with Zyte API . 
+ Next 
+ Get started with web scraping 
+ Copyright © 2010-2026, Zyte

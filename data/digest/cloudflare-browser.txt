@@ -1,0 +1,30 @@
+# Cloudflare Browser Rendering (cloudflare-browser) category=browser
+home=https://developers.cloudflare.com/browser-rendering/ pricing=https://developers.cloudflare.com/browser-rendering/platform/pricing/ docs=https://developers.cloudflare.com/browser-rendering/ llms=None
+sources_ok: pricing:https://developers.cloudflare.com/browser-rendering/platform/pricing/, docs:https://developers.cloudflare.com/browser-rendering/, llms:https://developers.cloudflare.com/browser-rendering/llms.txt, llms-full:https://developers.cloudflare.com/browser-rendering/llms-full.txt
+--- ranked fact lines ---
+[pricing] 10 hours per month, then $0.09 per additional hour
+[pricing] 10 browsers ( averaged monthly ), then $2.00 per additional browser
+[pricing] 40 hours × $0.09 per hour = $3.60
+[pricing] 5 browsers × $2.00 per browser = $10.00
+[pricing] $3.60 + $10.00 = $13.60
+[pricing] Workers Free
+[docs] Available on Free and Paid plans
+[docs] Flexible pricing : Pay only for browser time used with generous free tier ( view pricing )
+--- llms/readme head ---
+# Browser Run
+Control and interact with headless browser instances programmatically
+> Links below point directly to Markdown versions of each page. Any page can also be retrieved as Markdown by sending an `Accept: text/markdown` header to the page's URL without the `index.md` suffix (for example, `curl -H "Accept: text/markdown" https://developers.cloudflare.com/browser-run/`).
+>
+> For other Cloudflare products, see the [Cloudflare documentation directory](https://developers.cloudflare.com/llms.txt).
+## Overview
+- [Browser Run](https://developers.cloudflare.com/browser-run/index.md): Control headless browsers with Cloudflare's Workers Browser Run API. Automate tasks, take screenshots, convert pages to PDFs, and test web apps.
+## Get started
+- [Get started](https://developers.cloudflare.com/browser-run/get-started/index.md): Choose an integration method and set up your first Browser Run project using Quick Actions, Puppeteer, or Playwright.
+## Quick Actions
+- [Quick Actions](https://developers.cloudflare.com/browser-run/quick-actions/index.md): Use Browser Run Quick Actions HTTP endpoints to capture screenshots, extract HTML, generate PDFs, and perform other common browser tasks.
+- [/accessibilityTree - Capture accessibility tree](https://developers.cloudflare.com/browser-run/quick-actions/accessibility-tree-endpoint/index.md): Capture the accessibility tree from a webpage after JavaScript execution using the Browser Run /accessibilityTree endpoint.
+- [Reference](https://developers.cloudflare.com/api/resources/browser_rendering/index.md): View the complete Browser Run Quick Actions API reference for all available endpoints and parameters.
+- [/content - Fetch HTML](https://developers.cloudflare.com/browser-run/quick-actions/content-endpoint/index.md): Capture fully rendered HTML from a webpage after JavaScript execution using the Browser Run /content endpoint.
+- [/crawl - Crawl web content](https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/index.md): Scrape and follow links across a website using the Browser Run /crawl endpoint, with configurable depth and output formats.
+- [/json - Capture structured data using AI](https://developers.cloudflare.com/browser-run/quick-actions/json-endpoint/index.md): Extract structured JSON data from webpages using AI with the Browser Run /json endpoint.
+- [/links - Retrieve links from a webpage](https://developers.cloudflare.com/browser-run/quick-actions/links-endpoint/index.md): Extract all links from a webpage, including hidden ones, using the Browser Run /links endpoint.

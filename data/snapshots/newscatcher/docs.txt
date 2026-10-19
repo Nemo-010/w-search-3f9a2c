@@ -1,0 +1,30 @@
+NewsCatcher documentation - newscatcher Documentation Index Fetch the complete documentation index at: /docs/llms.txt Use this file to discover all available pages before exploring further. Skip to main content newscatcher home page Search... ⌘ K Ask Assistant ⌘ I Search API Platform Search API Platform Search... Navigation NewsCatcher documentation Home Web Search API Event Monitors Company Monitors News API Local News API Welcome On this page Welcome to NewsCatcher Our APIs Get started with Web Search API Get started with News API & Local News API Popular use cases Resources Need help? NewsCatcher documentation Copy page Copy page Enterprise APIs for web search, news and local news data Copy page Copy page ​ Welcome to NewsCatcher 
+ NewsCatcher provides enterprise-grade APIs for accessing news data, searching the web for real-world events, and discovering hyper-local news. Whether you’re building news aggregators, conducting market research, developing AI agents, or training large language models, our APIs deliver structured, enriched data from over 140,000 sources worldwide. 
+ ​ Our APIs 
+ CatchAll: Web Search API Recall-first web search delivering thousands of results per query. Built for AI agents that need complete information, not just top results 
+ News API Access 140,000+ news sources with NLP enrichment, advanced search, clustering, and deduplication 
+ Local News API Hyper-local news with intelligent geographic detection, location-based filtering, and NLP features 
+ ​ Get started with Web Search API 
+ The Web Search API is our newest product with a self-service platform. Sign up and start searching immediately with free credits. 
+ Visit platform.newscatcherapi.com/catchall to: 
+ Create an account and get free credits 
+ Issue API keys instantly 
+ Use the platform UI or API directly 
+ Explore event monitors and dynamic schemas 
+ Ready to integrate? Follow the Web Search API Quickstart 
+ ​ Get started with News API & Local News API 
+ These enterprise APIs require a sales consultation to understand your needs and provide appropriate access. 
+ 1 Book a demo Schedule a call with our sales team to discuss your use case 2 Receive trial access Get a trial API key and explore the full capabilities of the API 3 Follow the quickstart 
+ News API Quickstart 
+ Local News API Quickstart 
+ ​ Popular use cases 
+ AI Agents Power AI agents with comprehensive web coverage and complete recall Lead Generation Find all companies matching complex criteria Due Diligence Track lawsuits, regulatory filings, and leadership changes Risk Monitoring Identify emerging risk signals before they escalate Market Intelligence Map competitive activity, growth signals, and market shifts LLM Training Data Build comprehensive datasets from public web sources 
+ ​ Resources 
+ API status - Check uptime and performance 
+ Customer portal - Access support and manage your account 
+ Postman collections - Explore endpoints interactively 
+ Book a demo - Schedule a call with our team 
+ ​ Need help? 
+ Email : support@newscatcherapi.com 
+ GitHub : github.com/Newscatcher 
+ Was this page helpful? Yes No Suggest edits Raise issue linkedin twitter Powered by This documentation is built and hosted on Mintlify, a developer documentation platform Assistant Responses are generated using AI and may contain mistakes.

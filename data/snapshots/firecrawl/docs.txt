@@ -1,0 +1,222 @@
+Introduction | Firecrawl Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Firecrawl Docs home page v2 English Search... ⌘ K Status Support Sign Up firecrawl/firecrawl firecrawl/firecrawl Search... Navigation Get Started Introduction Documentation SDKs API Reference Build with AI Playground Blog Community Changelog Get Started Introduction ChatGPT & Codex Claude & Claude Code Cursor MCP CLI Advanced Scraping Guide Plans and Billing Enterprise Core Endpoints Search Scrape Monitor Interact / Browser Sandbox More Alexandria Parse Map Crawl Agent Quickstarts Node.js Serverless PHP Ruby Python Go Rust Elixir Java .NET Developer Guides Full-Stack Templates Usage Guides LLM SDKs and Frameworks Cookbooks Platforms and frameworks Webhooks Overview Event Types Security Testing Use Cases Overview AI Platforms Lead Enrichment SEO Platforms Deep Research View more Other Overview Debug with Ask Contributing Open Source vs Cloud Contributor Setup Self-hosting On this page Get started Build directly with the API Other ways to get started Install the Firecrawl CLI Set up with an agent Build and test directly What can Firecrawl do? Why Firecrawl? Search Scrape Interact More capabilities Resources Get Started Introduction Copy page Copy page The web data API for AI agents. Search the web, scrape any page, and interact with it through one API. Copy page Copy page Firecrawl is the web data API for AI agents. Search, scrape, and interact with the live web to get clean Markdown or structured data. 
+ ​ Get started 
+ ​ Build directly with the API 
+ Scrape your first page now. No account or API key is required for this request. 
+ cURL # No API key needed to get started — add -H "Authorization: Bearer $FIRECRAWL_API_KEY" for higher rate limits: 
+ curl -s -X POST "https://api.firecrawl.dev/v2/scrape" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{ 
+ "url": "https://firecrawl.dev", 
+ "formats": ["markdown", "html"] 
+ }' 
+ Add an API key when you need higher limits. See the Python SDK , Node SDK , or API reference to build it into your application. 
+ ​ Other ways to get started 
+ ​ Install the Firecrawl CLI 
+ One command installs the Firecrawl CLI, authenticates in your browser, and adds skills to every detected coding agent. 
+ npx -y firecrawl-cli@latest init --all --browser 
+ Restart your coding agent after setup so it can discover the new skills. See
+ CLI for the full setup. 
+ ​ Set up with an agent 
+ Provide your agent with this Firecrawl setup prompt, or see all MCP setup options . 
+ For AI agents: Use llms.txt for an index of the documentation, or llms-full.txt for the full text. 
+ ​ Build and test directly 
+ Get your API key Create a free account for direct API access and higher limits Try it in the Playground Test Firecrawl in the browser without writing code 
+ ​ What can Firecrawl do? 
+ Search Search the web and get full page content from results Scrape Extract content from any URL as markdown, HTML, or structured JSON Interact Continue working with any scraped page: click, fill forms, extract dynamic
+content 
+ ​ Why Firecrawl? 
+ LLM-ready output : Clean markdown, structured JSON, screenshots, and more. 
+ Handles the hard stuff : Proxies, anti-bot, JavaScript rendering, and dynamic content. 
+ Reliable : Built for production with high uptime and consistent results. 
+ Fast : Results in seconds, optimized for high throughput. 
+ MCP Server : Connect Firecrawl to any AI tool via the Model Context Protocol . 
+ Bounty: 5,000 credit reward for solid feedback on Alexandria To qualify, complete a high-signal interview (thoughtful, concrete use cases, etc) with our Firecrawl Feedback Assistant. Only takes a few minutes, can be stopped at any time, and is both human/agent-friendly (just paste the link into your agentic harness!). Haven’t used Alexandria yet? Your take still counts. Start the interview Include your email to be eligible. Interviews are reviewed for quality at the end of each week. 
+ ​ Search 
+ Search the web and get full page content from results in one call. See the Search feature docs for all options. 
+ Python Node cURL CLI from firecrawl import Firecrawl 
+ firecrawl = Firecrawl( 
+ # No API key needed to get started — add one for higher rate limits: 
+ # api_key="fc-YOUR-API-KEY", 
+ ) 
+ results = firecrawl.search( 
+ query = "firecrawl" , 
+ limit = 3 , 
+ ) 
+ print (results) 
+ import { Firecrawl } from 'firecrawl' ; 
+ const firecrawl = new Firecrawl ({ 
+ // No API key needed to get started — add one for higher rate limits: 
+ // apiKey: "fc-YOUR-API-KEY", 
+ }); 
+ const results = await firecrawl . search ( 'firecrawl' , { 
+ limit: 3 , 
+ scrapeOptions: { formats: [ 'markdown' ] } 
+ }); 
+ console . log ( results ); 
+ # No API key needed to get started — add -H "Authorization: Bearer $FIRECRAWL_API_KEY" for higher rate limits: 
+ curl -s -X POST "https://api.firecrawl.dev/v2/search" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{ 
+ "query": "firecrawl", 
+ "limit": 3 
+ }' 
+ # Search the web 
+ firecrawl search "firecrawl web scraping" --limit 5 --pretty 
+ Response SDKs will return the data object directly. cURL will return the complete payload. JSON { 
+ "success" : true , 
+ "data" : { 
+ "web" : [ 
+ { 
+ "url" : "https://www.firecrawl.dev/" , 
+ "title" : "Firecrawl - The Web Data API for AI" , 
+ "description" : "The web crawling, scraping, and search API for AI. Built for scale. Firecrawl delivers the entire internet to AI agents and builders." , 
+ "position" : 1 
+ }, 
+ { 
+ "url" : "https://github.com/firecrawl/firecrawl" , 
+ "title" : "mendableai/firecrawl: Turn entire websites into LLM-ready ... - GitHub" , 
+ "description" : "Firecrawl is an API service that takes a URL, crawls it, and converts it into clean markdown or structured data." , 
+ "position" : 2 
+ }, 
+ ... 
+ ], 
+ "images" : [ 
+ { 
+ "title" : "Quickstart | Firecrawl" , 
+ "imageUrl" : "https://mintlify.s3.us-west-1.amazonaws.com/firecrawl/logo/logo.png" , 
+ "imageWidth" : 5814 , 
+ "imageHeight" : 1200 , 
+ "url" : "https://docs.firecrawl.dev/" , 
+ "position" : 1 
+ }, 
+ ... 
+ ], 
+ "news" : [ 
+ { 
+ "title" : "Y Combinator startup Firecrawl is ready to pay $1M to hire three AI agents as employees" , 
+ "url" : "https://techcrunch.com/2025/05/17/y-combinator-startup-firecrawl-is-ready-to-pay-1m-to-hire-three-ai-agents-as-employees/" , 
+ "snippet" : "It's now placed three new ads on YC's job board for “AI agents only” and has set aside a $1 million budget total to make it happen." , 
+ "date" : "3 months ago" , 
+ "position" : 1 
+ }, 
+ ... 
+ ] 
+ } 
+ } 
+ ​ Scrape 
+ Scrape any URL and get its content in markdown, HTML, or other formats. See the Scrape feature docs for all options. 
+ Python Node cURL CLI from firecrawl import Firecrawl 
+ firecrawl = Firecrawl( 
+ # No API key needed to get started — add one for higher rate limits: 
+ # api_key="fc-YOUR-API-KEY", 
+ ) 
+ # Scrape a website: 
+ doc = firecrawl.scrape( "https://firecrawl.dev" , formats = [ "markdown" , "html" ]) 
+ print (doc) 
+ import { Firecrawl } from 'firecrawl' ; 
+ const firecrawl = new Firecrawl ({ 
+ // No API key needed to get started — add one for higher rate limits: 
+ // apiKey: "fc-YOUR-API-KEY", 
+ }); 
+ // Scrape a website: 
+ const doc = await firecrawl . scrape ( 'https://firecrawl.dev' , { formats: [ 'markdown' , 'html' ] }); 
+ console . log ( doc ); 
+ # No API key needed to get started — add -H "Authorization: Bearer $FIRECRAWL_API_KEY" for higher rate limits: 
+ curl -s -X POST "https://api.firecrawl.dev/v2/scrape" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{ 
+ "url": "https://firecrawl.dev", 
+ "formats": ["markdown", "html"] 
+ }' 
+ # Scrape a URL and get markdown 
+ firecrawl https://firecrawl.dev 
+ # With multiple formats (returns JSON) 
+ firecrawl https://firecrawl.dev --format markdown,html,links --pretty 
+ Response SDKs will return the data object directly. cURL will return the payload exactly as shown below. { 
+ "success" : true , 
+ "data" : { 
+ "markdown" : "Launch Week I is here! [See our Day 2 Release 🚀](https://www.firecrawl.dev/blog/launch-week-i-day-2-doubled-rate-limits)[💥 Get 2 months free..." , 
+ "html" : "<!DOCTYPE html><html lang= \" en \" class= \" light \" style= \" color-scheme: light; \" ><body class= \" __variable_36bd41 __variable_d7dc5d font-inter ..." , 
+ "metadata" : { 
+ "title" : "Home - Firecrawl" , 
+ "description" : "Firecrawl crawls and converts any website into clean markdown." , 
+ "language" : "en" , 
+ "keywords" : "Firecrawl,Markdown,Data,Mendable,Langchain" , 
+ "robots" : "follow, index" , 
+ "ogTitle" : "Firecrawl" , 
+ "ogDescription" : "Turn any website into LLM-ready data." , 
+ "ogUrl" : "https://www.firecrawl.dev/" , 
+ "ogImage" : "https://www.firecrawl.dev/og.png?123" , 
+ "ogLocaleAlternate" : [], 
+ "ogSiteName" : "Firecrawl" , 
+ "sourceURL" : "https://firecrawl.dev" , 
+ "statusCode" : 200 , 
+ "contentType" : "text/html" 
+ } 
+ } 
+ } 
+ ​ Interact 
+ Scrape a page, then keep working with it: click buttons, fill forms, extract dynamic content, or navigate deeper. Describe what you want in plain English or write code for full control. See the Interact feature docs for all options. 
+ Python Node cURL CLI from firecrawl import Firecrawl 
+ app = Firecrawl( 
+ # No API key needed to get started — add one for higher rate limits: 
+ # api_key="fc-YOUR-API-KEY", 
+ ) 
+ # 1. Scrape Amazon's homepage 
+ result = app.scrape( "https://www.amazon.com" , formats = [ "markdown" ]) 
+ scrape_id = result.metadata.scrape_id 
+ # 2. Interact — search for a product and get its price 
+ app.interact(scrape_id, prompt = "Search for iPhone 16 Pro Max" ) 
+ response = app.interact(scrape_id, prompt = "Click on the first result and tell me the price" ) 
+ print (response.output) 
+ # 3. Stop the session 
+ app.stop_interaction(scrape_id) 
+ import { Firecrawl } from 'firecrawl' ; 
+ const app = new Firecrawl ({ 
+ // No API key needed to get started — add one for higher rate limits: 
+ // apiKey: 'fc-YOUR-API-KEY', 
+ }); 
+ // 1. Scrape Amazon's homepage 
+ const result = await app . scrape ( 'https://www.amazon.com' , { formats: [ 'markdown' ] }); 
+ const scrapeId = result . metadata ?. scrapeId ; 
+ // 2. Interact — search for a product and get its price 
+ await app . interact ( scrapeId , { prompt: 'Search for iPhone 16 Pro Max' }); 
+ const response = await app . interact ( scrapeId , { prompt: 'Click on the first result and tell me the price' }); 
+ console . log ( response . output ); 
+ // 3. Stop the session 
+ await app . stopInteraction ( scrapeId ); 
+ # 1. Scrape Amazon's homepage 
+ # No API key needed to get started — add -H "Authorization: Bearer $FIRECRAWL_API_KEY" for higher rate limits: 
+ RESPONSE = $( curl -s -X POST "https://api.firecrawl.dev/v2/scrape" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{"url": "https://www.amazon.com", "formats": ["markdown"]}' ) 
+ SCRAPE_ID = $( echo $RESPONSE | jq -r '.data.metadata.scrapeId' ) 
+ # 2. Interact — search for a product and get its price 
+ curl -s -X POST "https://api.firecrawl.dev/v2/scrape/ $SCRAPE_ID /interact" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{"prompt": "Search for iPhone 16 Pro Max"}' 
+ curl -s -X POST "https://api.firecrawl.dev/v2/scrape/ $SCRAPE_ID /interact" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{"prompt": "Click on the first result and tell me the price"}' 
+ # 3. Stop the session 
+ curl -s -X DELETE "https://api.firecrawl.dev/v2/scrape/ $SCRAPE_ID /interact" 
+ # 1. Scrape Amazon's homepage (scrape ID is saved automatically) 
+ firecrawl scrape https://www.amazon.com 
+ # 2. Interact — search for a product and get its price 
+ firecrawl interact "Search for iPhone 16 Pro Max" 
+ firecrawl interact "Click on the first result and tell me the price" 
+ # 3. Stop the session 
+ firecrawl interact stop 
+ Response Response { 
+ "success" : true , 
+ "cdpUrl" : "wss://browser.firecrawl.dev/..." , 
+ "liveViewUrl" : "https://liveview.firecrawl.dev/..." , 
+ "interactiveLiveViewUrl" : "https://liveview.firecrawl.dev/..." , 
+ "output" : "The iPhone 16 Pro Max (256GB) is priced at $1,199.00." , 
+ "exitCode" : 0 , 
+ "killed" : false 
+ } 
+ ​ More capabilities 
+ Agent Autonomous web data gathering powered by AI Interact Click, fill forms, extract dynamic content Webhooks Async event delivery Browser Sandbox Managed browser sessions for interactive workflows Parse Turn local PDFs, DOCX, XLSX, HTML, and more into Markdown or structured JSON Map Discover all URLs on a website Crawl Recursively gather content from entire sites 
+ ​ Resources 
+ API Reference Complete API documentation with interactive examples SDKs Python, Node.js, CLI, and community SDKs Open Source Self-host Firecrawl or contribute to the project Integrations LangChain, LlamaIndex, OpenAI, and more Suggest edits Raise issue Firecrawl in ChatGPT & Codex Next Firecrawl Docs home page github linkedin website x Get credentials Agent onboarding (SKILL.md) Agent auth (auth.md) Agent docs (llms.txt) Full docs (llms-full.txt) MCP server github linkedin website x Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

@@ -1,0 +1,119 @@
+# Open Library Docs
+
+> Documentation for openlibrary.org featuring guides and resources for developers, designers, librarians, and contributors
+
+One web page for every book ever published
+
+## Table of Contents
+
+### Welcome to Open Library
+
+- [Code of Conduct](/everyone/code-of-conduct.md)
+- [Community Call](/everyone/community-call.md)
+- [Documentation Guide](/everyone/documentation.md)
+- [Fellowships](/everyone/fellowships.md)
+- [Google Summer of Code](/everyone/google-summer-of-code.md)
+- [Hacktoberfest](/everyone/hacktoberfest.md)
+- [History](/everyone/history.md)
+- [Internationalization](/everyone/internationalization.md)
+- [Slack](/everyone/slack.md)
+
+### Developers Handbook
+
+- [Quick Start](/developers/quick-start.md)
+- [Contributing](/developers/CONTRIBUTING.md)
+- [Good First Issues](/developers/good-first-issues.md)
+- [Frontend](/developers/frontend.md)
+- [Backend](/developers/backend.md)
+- [Development Tools](/developers/tools.md)
+
+#### Frontend
+
+- [Making Your First Frontend Change](/developers/frontend/first-frontend-change.md)
+- [Frontend Reference](/developers/frontend/frontend-guide.md)
+- [Building Components](/developers/frontend/building-components.md)
+- [Template Rendering Guide](/developers/frontend/template-rendering.md)
+- [Design Token Guide](/developers/frontend/design-tokens.md)
+- [Jinja Templates](/developers/frontend/jinja.md)
+
+#### Backend
+
+- [Endpoints (Transition)](/developers/backend/endpoints.md)
+- [Backend General](/developers/backend/general.md)
+- [Infogami](/developers/backend/infogami.md)
+- [Local Development Architecture](/developers/backend/local-architecture.md)
+- [Data Model](/developers/backend/understanding-the-data-model.md)
+- [Writing Bots](/developers/backend/writing-bots.md)
+
+#### Development Tools
+
+- [Docker](/developers/tools/docker.md)
+- [Git Troubleshooting](/developers/tools/git-troubleshooting.md)
+- [Git](/developers/tools/git.md)
+- [Pre-Commit Guide](/developers/tools/pre-commit.md)
+- [Testing Guide](/developers/tools/testing.md)
+
+#### misc
+
+- [A/B Testing Guide](/developers/misc/ab-testing.md)
+- [Code Review Practices](/developers/misc/code-review-practices.md)
+- [Coding Recipes](/developers/misc/coding-recipes.md)
+- [Common Issues](/developers/misc/common-issues.md)
+- [Import Production Data Locally](/developers/misc/loading-production-book-data.md)
+- [Project Management](/developers/misc/project-management.md)
+- [Lifecycle of a Network Request](/developers/misc/request-lifecycle.md)
+- [Searching Data Dumps](/developers/misc/searching-data-dumps.md)
+
+### Designers
+
+- [Design Pattern Library](/designers/design-pattern-library.md)
+
+### Librarians
+
+- [Creating Community Lists](/librarians/creating-community-lists.md)
+- [Guide to Identifiers](/librarians/guide-to-identifiers.md)
+- [Library Metadata Standards](/librarians/library-metadata-standards.md)
+- [Mangled MARC](/librarians/mangled-marc.md)
+- [Trusted Book Providers](/librarians/trusted-book-providers.md)
+- [Web Books](/librarians/web-books.md)
+
+### Projects
+
+- [Canonical Books Page](/projects/canonical-books-page.md)
+- [Developing the Reading Log](/projects/developing-the-reading-log.md)
+- [FastAPI Migration](/projects/fastapi-migration.md)
+- [Community Coordinator](/projects/lead-community-coordinator.md)
+- [Community Librarian](/projects/lead-community-librarian.md)
+- [Library Community Congress 2019](/projects/library-community-congress-2019.md)
+- [Orphaned Editions Planning](/projects/orphaned-editions-planning.md)
+- [Wikidata Integration](/projects/wikidata-integration.md)
+
+### Advanced
+
+- [Syncing with Archive.org](/advanced/archive-org-open-library-synchronisation.md)
+- [Data Importing](/advanced/data-importing.md)
+- [Debugging & Performance Profiling](/advanced/debugging-and-performance-profiling.md)
+- [Disaster Recovery](/advanced/disaster-recovery.md)
+- [Feature Flags](/advanced/feature-flagging.md)
+- [Manually Running Dumps](/advanced/generating-data-dumps.md)
+- [OL Project Management](/advanced/howto-open-library-project-management.md)
+- [Creating and Logging In as a New User](/advanced/local-user-setup.md)
+- [Monitoring](/advanced/monitoring.md)
+- [Processing ONIX Feeds](/advanced/processing-onix-feeds.md)
+- [Production Service Architecture](/advanced/production-service-architecture.md)
+- [Provisioning Guide](/advanced/provisioning-guide.md)
+- [Sitemap Generation](/advanced/sitemap-generation.md)
+- [Solr/Search Tech Guide](/advanced/solr.md)
+- [The Import Pipeline](/advanced/the-import-pipeline.md)
+- [Cache Guide](/advanced/using-cache.md)
+- [Outdated](/advanced/outdated.md)
+
+#### Outdated
+
+- [Deployment Scratchpad](/advanced/outdated/deployment-scratchpad.md)
+- [Disaster History Log](/advanced/outdated/disaster-history-log.md)
+- [Community Call Minutes](/advanced/outdated/open-library-community-call-minutes.md)
+
+### Other
+
+- [Communications Team](/communications-team.md)

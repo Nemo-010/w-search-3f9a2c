@@ -1,0 +1,63 @@
+{
+ "slug": "octen",
+ "name": "Octen",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:03+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://docs.octen.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.octen.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 7899,
+   "truncated": false,
+   "sha256": "40f2571721ad66596811d07209a18fd6e9986db3d538d46218a2800ee7a94546",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 7899
+  },
+  "llms-full": {
+   "url": "https://docs.octen.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.octen.ai/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 156977,
+   "truncated": false,
+   "sha256": "c58b44b46200a7317059cd8385754403e5912da57a72458b5bf229006cb90f7c",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 156755
+  },
+  "docs": {
+   "url": "https://docs.octen.ai/",
+   "status": 200,
+   "final_url": "https://docs.octen.ai/overview/welcome",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 274185,
+   "truncated": false,
+   "sha256": "7e3e18f7531326744e28db50704c8a3bcfbef8f5c3009459c97e026e84f76c9f",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 2360
+  },
+  "home": {
+   "url": "https://octen.ai/",
+   "status": 200,
+   "final_url": "https://octen.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 313286,
+   "truncated": false,
+   "sha256": "415370a2063e1e600cb881788c0574bce593911961b986cec00b7bf0461b66cf",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 6995
+  },
+  "pricing": {
+   "url": "https://docs.octen.ai/overview/pricing.md",
+   "status": 200,
+   "final_url": "https://docs.octen.ai/overview/pricing.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 9348,
+   "truncated": false,
+   "sha256": "660bceead18ecc3b5f24a7710185488aa9587b0a227187720e18f4efb0821737",
+   "fetched_at": "2026-10-19T05:58:14+00:00",
+   "text_bytes": 9290
+  }
+ }
+}

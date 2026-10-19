@@ -1,0 +1,72 @@
+{
+ "slug": "scrapingdog",
+ "name": "ScrapingDog",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:08+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.scrapingdog.com/pricing/",
+   "status": 200,
+   "final_url": "https://www.scrapingdog.com/pricing/",
+   "content_type": "text/html",
+   "bytes": 640855,
+   "truncated": false,
+   "sha256": "a33d08cbc4fbdb0b4af3b3ede839e0f1389bf56f14d41f705787ba5f295e1eb9",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 38604
+  },
+  "docs": {
+   "url": "https://docs.scrapingdog.com/",
+   "status": 200,
+   "final_url": "https://www.scrapingdog.com/documentation/",
+   "content_type": "text/html",
+   "bytes": 129965,
+   "truncated": false,
+   "sha256": "2c7459dd6edd91c09de53a3343c9a05e3ca3a5c5578d20e7708d9c9128acb23b",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 6488
+  },
+  "home": {
+   "url": "https://www.scrapingdog.com/",
+   "status": 200,
+   "final_url": "https://www.scrapingdog.com/",
+   "content_type": "text/html",
+   "bytes": 330188,
+   "truncated": false,
+   "sha256": "c20dcd3f2b578104e6c2305d91699e880732b99fd7176a77616624ba7b8fc3ba",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 24645
+  },
+  "llms-err-c7da49": {
+   "url": "https://docs.scrapingdog.com/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.scrapingdog.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 83389,
+   "truncated": false,
+   "sha256": "4ec61bedb569142db593fce1873782c844dfc6e46e6e87441b38464e27ef8fa1",
+   "fetched_at": "2026-10-19T05:54:10+00:00"
+  },
+  "llms": {
+   "url": "https://www.scrapingdog.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.scrapingdog.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 16945,
+   "truncated": false,
+   "sha256": "4f80c1b774f27770d772c3e57b3c2c0c73e95c8848adf6ac520fe6dd9d7332fe",
+   "fetched_at": "2026-10-19T05:54:11+00:00",
+   "text_bytes": 16923
+  },
+  "llms-err-97d4b9": {
+   "url": "https://www.scrapingdog.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.scrapingdog.com/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 83389,
+   "truncated": false,
+   "sha256": "4ec61bedb569142db593fce1873782c844dfc6e46e6e87441b38464e27ef8fa1",
+   "fetched_at": "2026-10-19T05:54:12+00:00"
+  }
+ }
+}

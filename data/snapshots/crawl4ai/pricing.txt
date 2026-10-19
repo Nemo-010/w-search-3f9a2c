@@ -1,0 +1,104 @@
+Crawl4AI - README 
+ skip to playground 
+ Crawl4AI 
+ ☀ 
+ Get a key 
+ README.md 
+ ★ Check OSS self-host version 
+ Sign in 
+ Get a key 
+ ☀ 
+ from the docs You know the library. This is the same crawler, hosted. No browsers, no proxies, no cookies to babysit: one key with free credits every month, and it works in Claude Code, Codex, OpenCode and Cursor. Always open source, forever. Get a key + 1,000 free credits a month → 
+ NEW Finally, your favorite open-source crawler is now a hosted API. Your open-source crawler, now hosted. 
+ Crawl4AI now available on Cloud 
+ One key: /scrape a page to Markdown, /extract it to JSON, /search the web, /serp for Google's results page as data, /answer a question with sources. Free: 10 a minute, 2 at a time, 1,000 credits every month. Plans: 120 a minute, 10 at a time, from $ 10 a month. 
+ #1 Repository Of The Day 1 
+ ★ stars 71,073 
+ downloads 1.9M / mo 
+ python 3.10 | 3.11 | 3.12 | 3.13 
+ license Apache-2.0 
+ chat Discord 
+ scrape 
+ extract 
+ search 
+ answer exp 
+ serp beta 
+ POST api.crawl4ai.com /scrape 
+ $ crawl scrape 
+ ✎ 
+ ▶ Run ≈ Estimate 
+   --instruction 
+ ▶ Run 
+ ▸ deep ground the answer in the top results 
+ Copy full command Live · play limits ✓ 200 OK 
+ # Type a URL above and hit Run - real output renders here 
+ ## What you get # 
+ /scrape URL → clean Markdown, boilerplate stripped, ready for a prompt. 
+ /extract URL + a plain-English ask → typed JSON records. No selectors. 
+ /search query → ranked results as JSON - add rich=1 for follow-ups, related & more. 
+ /answer a question → a direct answer with its sources. Experimental. 
+ /serp query → Google's results page as data: true ranks, every block, localised to a place. For rank tracking. Beta since 8 Oct 2026. 
+ at scale queues, jobs, retries, and solid proxies - handled for you. 
+ ## Use it in Claude Code, Cursor & agents - paste one line # 
+ Same key everywhere. Mint one above and it drops into each line below. 
+ Ask your agent one line in its chat: it reads llms.txt and sets itself up 
+ set up crawl4ai - https://crawl4ai.com/llms.txt with key: sk_live_… Copy 
+ Claude Code, Codex, Cursor, Gemini CLI, OpenCode, OpenClaw, or any agent that reads a URL · open llms.txt 
+ MCP your agent's tools, one line per tool 
+ Claude Code 
+ Codex 
+ OpenCode 
+ Cursor · Windsurf 
+ OpenClaw 
+ any client 
+ claude mcp add --transport http crawl4ai https://api.crawl4ai.com/mcp --header "Authorization: Bearer sk_live_… " Copy 
+ ~/.codex/config.toml 
+ [mcp_servers.crawl4ai] url = "https://api.crawl4ai.com/mcp" http_headers = { Authorization = "Bearer sk_live_… " } Copy 
+ opencode.json 
+ "mcp" : { "crawl4ai" : { "type": "remote", "url": "https://api.crawl4ai.com/mcp", "headers": { "Authorization": "Bearer sk_live_… " } } } Copy 
+ ~/.cursor/mcp.json · Windsurf: ~/.codeium/windsurf/mcp_config.json 
+ "crawl4ai" : { "url": "https://api.crawl4ai.com/mcp", "headers": { "Authorization": "Bearer sk_live_… " } } Copy 
+ ~/.openclaw/openclaw.json, the mcp.servers block 
+ mcp: { servers: { crawl4ai : { url: "https://api.crawl4ai.com/mcp", transport: "streamable-http", headers: { Authorization: "Bearer sk_live_… " } } } } Copy 
+ Claude Desktop, ChatGPT, Gemini CLI, VS Code, n8n, or your own client · streamable HTTP 
+ url https://api.crawl4ai.com/mcp · header Authorization: Bearer sk_live_… Copy 
+ HTTP code or curl, any language: base url + key 
+ export CRAWL4AI_URL=https://api.crawl4ai.com CRAWL4AI_KEY= sk_live_… Copy 
+ curl -s "https://api.crawl4ai.com/search?q=web+scraping" -H "Authorization: Bearer sk_live_… " Copy 
+ ## Self-host, or skip the setup # 
+ // run it yourself Self-host 
+ It's Apache-2.0. pip install crawl4ai , point it at your own boxes and proxies. No gate, no token. It's yours. 
+ ★ Clone the repo 
+ // let us run it Hosted 
+ Or forget the infra. We've operated this crawler at scale for years - proxies, queues, jobs, the hard parts. You keep the key; we keep it fast. 
+ Get a key → 
+ Who runs it better than the people who built it? Self-host for control; host with us to move fast. Same crawler either way. 
+ ## Pricing # 
+ Your favourite open-source crawler, now in the cloud. One monthly plan, credits inside: you pay very little and get more than anywhere else. 
+ Try it now: 20 free credits , no signup. Verify your email for 1,000 free credits every month . 
+ Yearly · 2 months free Monthly 
+ tier price for 
+ Free $0 · no card Prototypes and side projects. 1,000 credits every month, 10 a minute, 2 at a time. Get a key 
+ Starter $ 10 a month 10,000 credits a month, 120 a minute, 10 at a time. Extra credits at $ 1 per 1,000. Start 
+ Builder $ 99 a month 125,000 credits a month, 600 a minute, 20 at a time. Extra credits at $ 0.79 per 1,000. Start 
+ Scale $ 499 a month 750,000 credits a month, 1,500 a minute, 50 at a time. Extra credits at $ 0.67 per 1,000. Start 
+ Enterprise Let's talk Volume, regions, SLA. Contact us 
+ 1 credit = $0.001 · page 0.5 · search 1 · from our archive 0.25 · real browser 1 · hard site 2 * 
+ The same money elsewhere per 1,000 calls, at each seller's cheapest paid plan 
+ a page a web search Google results 
+ Crawl4AI Starter $ 10 a month $ 0.50 browser $ 1.00 · hard site $ 2.00 $ 1.00 $ 1.00 
+ Firecrawl Hobby $19 a month $3.80 $7.60 not offered 
+ Tavily Project $30 a month $1.50 $7.50 not offered 
+ SerpApi Starter $25 a month not offered not offered $25.00 
+ $ 10 here buys 20,000 pages a month; Firecrawl's $19 Hobby plan buys 5,000. Their prices are from their own pricing pages on 14 October 2026 and can change; ours are live at /v1/prices . 
+ * Soft launch Prices and the free credit can change while we learn; the live table is /v1/prices . Extra credits you buy stay yours and never expire. 
+ ## Philosophy # 
+ # we don't hide. every result carries where it came from - the origin travels with the data. # and the whole "block the bots" arms race? a phase. let crawlers crawl. 
+ Built in the open by @unclecode & the community. 
+ GitHub · Docs · Discord · console 
+ Terms · Privacy · Acceptable Use · Security 
+ ⌂ Home 
+ ▶ Playground 
+ ▤ Recipes 
+ ✦ Pricing 
+ ⚿ Get key

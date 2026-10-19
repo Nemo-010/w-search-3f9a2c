@@ -1,0 +1,60 @@
+{
+ "slug": "google-cse",
+ "name": "Google Programmable Search",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:26+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://developers.google.com/custom-search/v1/overview#pricing",
+   "status": 200,
+   "final_url": "https://developers.google.com/custom-search/v1/overview#pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 65370,
+   "truncated": false,
+   "sha256": "ebb2092eb7d6c0d2fa10b46d989e16f641079e695e2328a21ef8cd5bd669a498",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 5758
+  },
+  "docs": {
+   "url": "https://developers.google.com/custom-search/v1/overview",
+   "status": 200,
+   "final_url": "https://developers.google.com/custom-search/v1/overview",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 65366,
+   "truncated": false,
+   "sha256": "4b586c4fb9c0177aa3df6abea4fbf46034946bb5a40b9ef0ae332ab87236d790",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 5758
+  },
+  "llms-err-5443e4": {
+   "url": "https://developers.google.com/custom-search/v1/overview/llms.txt",
+   "status": 404,
+   "final_url": "https://developers.google.com/custom-search/v1/overview/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46788,
+   "truncated": false,
+   "sha256": "88c9544455db29abc72a4b0b178d6a2b0cb75d11b186a69c508d29e6ac6a0bf8",
+   "fetched_at": "2026-10-19T05:54:27+00:00"
+  },
+  "llms-err-4f4735": {
+   "url": "https://developers.google.com/custom-search/v1/overview/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://developers.google.com/custom-search/v1/overview/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46797,
+   "truncated": false,
+   "sha256": "0fd2946ca87d7a7cee5e7b8afe371bf469b4b74ee97325ada2260f143af22d96",
+   "fetched_at": "2026-10-19T05:54:29+00:00"
+  },
+  "llms-err-8cc1d4": {
+   "url": "https://docs.developers.google.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.developers.google.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:30+00:00"
+  }
+ }
+}

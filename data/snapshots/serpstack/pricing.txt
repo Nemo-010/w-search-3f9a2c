@@ -1,0 +1,182 @@
+Affordable Pricing Plans for serpstack SERP API 
+ Pricing 
+ Documentation 
+ FAQ 
+ Affiliates 
+ Blog 
+ Status 
+ Log In 
+ Sign Up Free 
+ Pricing Plans that Scale With You 
+ Monthly Billing 
+ Yearly Billing 
+ Free 
+ Free forever, no exceptions. 
+ $0 
+ per month 
+ $0 
+ per month 
+ Get Free API Key 
+ 100 Searches / mo 
+ Global Locations 
+ Google Search API 
+ Proxy Network 
+ Search Types 
+ JSON only 
+ No Support 
+ HTTPS Encryption 
+ Non-Commercial Use 
+ Basic 
+ Basic level — core features and up to 5,000 monthly searches. 
+ $29.99 
+ per month 
+ or $26.99 if billed yearly 
+ $26.99 
+ per month 
+ billed yearly 
+ Sign Up 
+ 5,000 Searches / mo 
+ + 0.023992 each 
+ Global Locations 
+ Google Search API 
+ Proxy Network 
+ Search Types 
+ JSON & CSV 
+ No Rate Limit 
+ Commercial Use 
+ HTTPS Encryption 
+ Standard Support 
+ Business 
+ Most popular — advanced features and up to 20,000 monthly searches. 
+ $99.99 
+ per month 
+ or $87.99 if billed yearly 
+ $87.99 
+ per month 
+ billed yearly 
+ Sign Up 
+ 20,000 Searches / mo 
+ + 0.019998 each 
+ Global Locations 
+ Google Search API 
+ Proxy Network 
+ Search Types 
+ JSON & CSV 
+ No Rate Limit 
+ Commercial Use 
+ HTTPS Encryption 
+ Standard Support 
+ Business Pro 
+ Professional level — complete set of API features and up to 50,000 monthly searches. 
+ $199.99 
+ per month 
+ or $169.99 if billed yearly 
+ $169.99 
+ per month 
+ billed yearly 
+ Sign Up 
+ 50,000 Searches / mo 
+ + 0.0159992 each 
+ Global Locations 
+ Google Search API 
+ Proxy Network 
+ Search Types 
+ JSON & CSV 
+ No Rate Limit 
+ Commercial Use 
+ HTTPS Encryption 
+ Standard Support 
+ Enterprise 
+ Looking for more? Contact us for a quote. 
+ Custom Pricing 
+ Tailored to your needs 
+ Contact Us 
+ Volume Searches 
+ Global Locations 
+ Google Search API 
+ Proxy Network 
+ Search Types 
+ JSON & CSV 
+ No Rate Limit 
+ HTTPS Encryption 
+ Custom SLA 
+ Commercial Use 
+ Custom Solutions 
+ Full Search Engine Coverage: 
+ Quick Integration 
+ Our SERP API was built to be simple in design, compatible with any major programming language and deliver lightning-fast results. 
+ Simple REST API 
+ Requests are sent using HTTP GET, responses are delivered in lightweight JSON or CSV format. 
+ Easy Documentation 
+ An extensive yet straightforward API documentation will get you started using the API in a matter of minutes. 
+ Solid Tech Support 
+ Our technical support team is great at giving you exactly the information that you need, when you need it. 
+ Advanced Features 
+ Thousands of startups, SMBs and corporations around the world use serpstack to scrape search engine result pages in realtime. 
+ Mobile, Tablet & Desktop 
+ Make use of the capability to scrape SERP pages in milliseconds using mobile, tablet and desktop devices. 
+ Any Location Worldwide 
+ Our API will enable you to gather search results at scale from any city, region or country worldwide. 
+ Full-Page Scraping 
+ A Google SERP consists of a series of elements, including ads, maps, answers, and more — serpstack will deliver it all. 
+ Frequently Asked Questions 
+ SERP Data & API 
+ Where is the API's data coming from? 
+ The serpstack API is using a proxy network and proprietary scraping technology to retrieve SERP data from search engines in an automated fashion whenever API requests are made. SERP data is publicly available and anyone can access it. 
+ How scalable is this service? 
+ The serpstack API is built on top of apilayer cloud infrastructure, a system some of the world's most popular real-time API services are running on, which makes it highly scalable and flexible at any stage. 
+ Which search results are supported? 
+ The serpstack API supports nearly 100% of search result types returned by Google, including web results, image results, video results, news results, shopping results, sponsored ads, questions, and much more. 
+ Plans, Pricing & Payment 
+ What is the difference between free and paid subscriptions? 
+ The serpstack Free Plan is a way of getting familiar with the API, offering basic API functionality and a limitation of 100 monthly searches. As soon as you need a higher volume or advanced API features, you can choose from one of the premium subscriptions or contact us for a custom solution. 
+ Which subscription plan fits my needs? 
+ The most decisive factor when it comes to your technical requirements is the number of monthly SERP API requests you need per month. Other factors include HTTPS encryption and access to search engines other than Google. Signing up for the Free Plan is a great way of getting to know the API and implementing it without any commitments. 
+ Which payment methods are supported? 
+ Payments can be made via credit card (Visa, MasterCard, Discover, Diner's Club, American Express). Enterprise and high-volume customers may request annual bank transfer payments to be enabled. You can change your payment method at any given time in the "Payment" section of your account dashboard. 
+ Can I also pay yearly? 
+ Yes. If you choose annual billing, the total price of your subscription plan will be up to 15% lower than the total amount you would pay with a monthly payment frequency. 
+ How do I cancel/downgrade? 
+ You can initiate a cancellation or downgrade by selecting a new plan and providing at least one reason for your decision. The customer service team will cancel or downgrade your plan. Downgrades are not effective immediately; your premium subscription will remain active until the end of the current billing period. 
+ How do I change between monthly and yearly billing? 
+ To change your subscription from monthly to yearly billing, submit a request on the Contact Us page on the website following these steps: Step 1: Sign in to your account Step 2: Go to Contact Us page Step 3: Fill out the form and choose the “Sales” category for this request. Step 4: In the text box, include your specific request for example “Change from Monthly to Yearly subscription.” 
+ See all Frequently Asked Questions 
+ API Access & Features 
+ What is an API Request? 
+ Pricing is based on the number of monthly API requests (searches) allowed. Each time the serpstack API service is used to look up SERP data, one API request is consumed. API errors are not counted towards your monthly quota. 
+ What happens if I exceed my API Request volume? 
+ Users will be automatically notified via email and in their account dashboard as soon as at least 75%, 90%, and 100% of their monthly API quota has been reached. After reaching 100% of the allowance, overages fees will apply so we make sure you won’t experience any disruptions and your website/application will keep running smoothly. You can learn more about overages billing here . 
+ What is the API's uptime? 
+ Our API's system status is closely monitored around the clock. Every effort is made to ensure the highest possible level of availability and consistency, and we are proud to have an average uptime rate of nearly 100% (99.9%), calculated based on the past 12 months. There is a public API status page available at the following URL: status.serpstack.com . 
+ Ready go get started? Sign up for instant access to our SERP API now Get Basic Plan 
+ PRODUCT 
+ Pricing 
+ List Your API 
+ Why choose us? 
+ Marketplace 
+ Affiliates 
+ DOCS & HELP 
+ Documentation 
+ Blog 
+ FAQs 
+ ACCOUNT 
+ Log In 
+ Forgot Password 
+ FREE Signup 
+ GET IN TOUCH 
+ Contact 
+ Get a quote 
+ Imprint / Legal | Privacy | Terms | Cookie Preference | Sitemap 
+ © 2026 Serpstack API, an APILayer product. All rights reserved. 
+ × 
+ Standard Support 
+ Platinum Support 
+ General review of the issue 
+ Access to knowledge base articles 
+ Email support communication 
+ Regular product updates and fixes 
+ Dedicated account team 
+ Priority Email Support with unlimited communication 
+ Priority bug review and updates 
+ Option for quarterly briefing call with Product Management 
+ Feature requests as priority roadmap input into product

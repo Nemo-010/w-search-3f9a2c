@@ -1,0 +1,64 @@
+RDAP.ORG
+ RDAP.ORG 
+ Home 
+ Web Client 
+ Deployment Dashboard 
+ Validator 
+ GitHub 
+ Feedback 
+ Status 
+ Support 
+ The Registration Data Access Protocol (RDAP) provides access to information about Internet resources ( domain names , autonomous system numbers , and IP addresses ). Unlike WHOIS , which it replaces, RDAP provides: 
+ Machine-readable representations of registration data; 
+ Structured request and response semantics; 
+ Differentiated access; 
+ Internationalisation; 
+ Extensibility. 
+ RDAP.org provides a "bootstrap server", i.e. single end point for RDAP queries. RDAP.org aggregates information about all known RDAP servers. RDAP clients can send RDAP queries to RDAP.org, which will then redirect requests to the appropriate RDAP service. 
+ How To Use RDAP.org 
+ If you are developing an RDAP client, configure it to send HTTP requests to https://rdap.org/<type>/<object> , where <type> is the object type (one of domain , ip , autnum , entity etc) and <object> is the object identifier (eg example.com , 192.168.0.1 , 64496 , etc). 
+ Example using curl and jq : 
+ $ curl -Ls https://rdap.org/domain/example.com | jq . 
+ Example using PowerShell : 
+ > Invoke-WebRequest -Uri "https://rdap.org/domain/example.com" | ConvertFrom-Json | ConvertTo-Json 
+ HTTP Status Codes 
+ 302 – occurs when RDAP.org knows of an RDAP service which is authoritative for the requested resource. Follow the URL listed in the Location header. 
+ 400 – occurs when RDAP.org receives an invalid request (malformed path, unsupported object type, invalid IP address, etc). 
+ 403 – occurs if you've been blocked due to abuse or other misbehaviour. 
+ 404 – occurs when RDAP.org doesn’t know of an RDAP service which is authoritative for the requested resource. RDAP.org only knows about RDAP servers that are registered with IANA . 
+ 429 – occurs if you've been temporarily rate-limited. If you're hitting this limit regularly, then you probably should be using a proper client , or consuming the bootstrap registries themselves (see RFC 9224). 
+ 50x – occurs when RDAP.org is broken in some way, or is undergoing maintenance. 
+ Note that these status codes only apply to the RDAP.org service itself, not the registry RDAP services themselves. 
+ Rate Limits 
+ Cloudflare limits clients to a maximum of 10 requests in 10 seconds: if you exceed this rate you will get a 429 response as described above. If you need to do that many queries, use a proper RDAP client that uses the bootstrap files instead. However, higher limits can be obtained by supporting RDAP.org . 
+ References 
+ These are the authoritative references for the RDAP protocol specifications: 
+ RFC 7480: HTTP Usage in the Registration Data Access Protocol (RDAP) 
+ RFC 7481: Security Services for the Registration Data Access Protocol (RDAP) 
+ RFC 9083: JSON Responses for the Registration Data Access Protocol (RDAP) 
+ RFC 9224: Finding the Authoritative Registration Data (RDAP) Service 
+ RFC 8056: Registration Data Access Protocol (RDAP) Object Tagging 
+ RFC 8977: Registration Data Access Protocol (RDAP) Query Parameters for Result Sorting and Paging 
+ RFC 8982: Registration Data Access Protocol (RDAP) Partial Response 
+ RFC 9082: Registration Data Access Protocol (RDAP) Query Format 
+ RFC 9536: Registration Data Access Protocol (RDAP) Reverse Search 
+ RFC 9537: Redacted Fields in the Registration Data Access Protocol (RDAP) Response 
+ RFC 9560: Federated Authentication for the Registration Data Access Protocol (RDAP) Using OpenID Connect 
+ RFC 9877: Registration Data Access Protocol (RDAP) Extension for Geofeed Data 
+ All generic TLDs (and some ccTLDs) are compliant with the gTLD RDAP Profile . 
+ The Number Resource Organization (NRO) developed the NRO RDAP profile for RIR RDAP services. 
+ Many RDAP servers have also implemented their own custom extensions, some of which may be found in the RDAP Extensions registry at IANA. 
+ The RDAP Book 
+ Andy Newton, one of the creators of RDAP, has published A Guide to the Registration Data Access Protocol (RDAP) , which is a definitive guide to implementing, using, and understanding all aspects of RDAP. 
+ IANA RDAP Service 
+ IANA has recently launched an RDAP service. Each TLD has its own RDAP record at https://rdap.iana.org/domain/{TLD} .
+ Privacy Considerations 
+ RDAP.org collects aggregated statistics on queries, broken down by the originating network (/24 for IPv4 and /48 for IPv6), user agent, HTTP result code, HTTP origin , and enclosing TLD (for domain queries). Individual queries are not logged. You can see how this logging works by reviewing the source code (the ENABLE_OUTPUT_LOGGING environment variable is only set in development environments). Cloudflare also aggregates queries by IP address for rate limiting purposes. 
+ Feedback 
+ If you would like to submit feedback, please email feedback@rdap.org . 
+ Supporting RDAP.ORG 
+ If your organisation depends on RDAP.org, then please consider supporting it , since it's not free to operate and requires ongoing maintenance and management. 
+ About RDAP.org 
+ You can review the code which RDAP.org uses on GitHub . 
+ RDAP.org is maintained by me, Gavin Brown . While I am currently an employee of ICANN, I run this service in my own time and at my own cost. 
+ Copyright 2026 RDAP.ORG.

@@ -1,0 +1,16 @@
+Bluesky Protocol Services 
+ Skip to main content Protocol Services Search Ask AI Get Started · Blog · Atproto English English 日本語 
+ High scale open social unlocked for every builder. Billions of interactions across millions of accounts, streaming to you in realtime . What will you build on the Atmosphere ? Explore the Network → Bluesky Protocol Services, from Bluesky PBC 
+ TS jetstream.ts Copy Run 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import { Jetstream , isCreate } from '@bsky/jetstream' ; 
+ import { app } from '@bsky/sdk/lexicons' ; 
+ const jetstream = new Jetstream ( 'https://jetstream.us-east.bsky.network' ); 
+ const collections = [ app . bsky . graph . follow , app . bsky . feed . repost , app . bsky . feed . post ]; 
+ for await ( const event of jetstream . live ({ collections })) { 
+ if ( isCreate ( event , app . bsky . graph . follow )) { 
+ console . log ( `🌱 ${ event . did } follows ${ event . commit . record . subject }` ); 
+ } else if ( isCreate ( event , app . bsky . feed . repost )) { 
+ console . log ( `♻️ ${ event . did } reposts ${ event . commit . record . subject . uri }` ); 
+ } else if ( isCreate ( event , app . bsky . feed . post ) && event . commit . record . reply ) { 
+ console . log ( `💭 ${ event . did } replies ${ event . commit . record . reply . parent . uri }` ); 
+ } 
+ } Less asking. More building. Open endpoints, no waiting to get started. Free and hostable. Backed by AT Protocol . Lay foundations on top of an open network that can't be taken away. More examples → BLUESKYPROTOCOLSERVICESBLUESKYPROTOCOLSERVICESBLUESKYPROTOCOLSERVICESBLUESKYPROTOCOLSERVICESBLUESKYPROTOCOLSERVICESBLUESKYPROTOCOLSERVICESBLUESKYPROTOCOLSERVICESBLUESKYPROTOCOLSERVICESBLUESKYPROTOCOLSERVICESBLUESKYPROTOCOLSERVICESBLUESKYPROTOCOLSERVICES Jetstream wss://jetstream.us-east.bsky.network Replay data from the network or stream in real time. Slice the data you care about. Learn More → Relay wss://bsky.network Sync the full Atmosphere in a zero trust setting. Build your own independent infrastructure. Learn More → Bluesky API Develop against Bluesky. Work with profiles, posts, threads, relationships, interactions, and feeds. Learn More → HTTP Reference Browse every API endpoint used by Bluesky, with full request and response schemas. Learn More → AT Protocol Tutorials Step-by-step guides for building on the AT Protocol — custom feeds, bots, and more. Learn more → SDKs Reference and community SDKs for TypeScript, Go, and many others. Learn more → Our best success was not computing, but hooking people together . — David Clark A Cloudy Crystal Ball: Visions of the Future , IETF 1992 Docs Bluesky API Jetstream Tutorials AT Protocol Community Bluesky Community-run Discord More GitHub Discussions GitHub Blog Bluesky Protocol Services · 2026 · operated by Bluesky PBC

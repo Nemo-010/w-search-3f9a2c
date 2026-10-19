@@ -1,0 +1,49 @@
+{
+ "slug": "itunes",
+ "name": "iTunes Search API",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:47+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://performance-partners.apple.com/search-api",
+   "status": 200,
+   "final_url": "https://performance-partners.apple.com/search-api",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 82791,
+   "truncated": false,
+   "sha256": "b2ae8eda08f7ca554365b5f509556c694c286e7915aaa032e71b0eb8942d8dd6",
+   "fetched_at": "2026-10-19T05:54:47+00:00",
+   "text_bytes": 15088
+  },
+  "llms-err-ea01fd": {
+   "url": "https://performance-partners.apple.com/search-api/llms.txt",
+   "status": 404,
+   "final_url": "https://performance-partners.apple.com/search-api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1252,
+   "truncated": false,
+   "sha256": "563d4a05ed62a4e0d159d120766b48ee36bda712f8f7f1447f855f670236db28",
+   "fetched_at": "2026-10-19T05:54:48+00:00"
+  },
+  "llms-err-e1c867": {
+   "url": "https://performance-partners.apple.com/search-api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://performance-partners.apple.com/search-api/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1252,
+   "truncated": false,
+   "sha256": "21a0e4e3eb4a298e42c92e95aecf7eea88f8f9fc794e74c8a4b247f55b1fa1f1",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  },
+  "llms-err-09e887": {
+   "url": "https://docs.performance-partners.apple.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.performance-partners.apple.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  }
+ }
+}

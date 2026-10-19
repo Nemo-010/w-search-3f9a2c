@@ -1,0 +1,73 @@
+{
+ "slug": "scrapecreators",
+ "name": "ScrapeCreators",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:06+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://docs.scrapecreators.com/",
+   "status": 200,
+   "final_url": "https://docs.scrapecreators.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 360690,
+   "truncated": false,
+   "sha256": "04c2413896fa0f2b874bc32835990a944ca937c9cb1324c811faa2c3b01b3e3d",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 15290
+  },
+  "home": {
+   "url": "https://www.scrapecreators.com/",
+   "status": 200,
+   "final_url": "https://scrapecreators.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 313152,
+   "truncated": false,
+   "sha256": "a0843bd2c62d109980507bef4c802eb36f4a72cf2d23e11c4d354e61725f5755",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 13465
+  },
+  "llms": {
+   "url": "https://docs.scrapecreators.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.scrapecreators.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 15579,
+   "truncated": false,
+   "sha256": "cebd749c6451438d491b8889b735f6db96961fd262445082798e758cc0c46c65",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 15579
+  },
+  "llms-full": {
+   "url": "https://docs.scrapecreators.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.scrapecreators.com/llms-full.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 360690,
+   "truncated": false,
+   "sha256": "04c2413896fa0f2b874bc32835990a944ca937c9cb1324c811faa2c3b01b3e3d",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 15290
+  },
+  "llms-https://www.scrapecreators.com/llms.txt": {
+   "url": "https://www.scrapecreators.com/llms.txt",
+   "status": 200,
+   "final_url": "https://scrapecreators.com/llms.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 4051,
+   "truncated": false,
+   "sha256": "6c65c789315ed5bae27ea9c277ab33cfdb77e096bf7c0e51b97c24bdcba5c7ec",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 4051
+  },
+  "llms-err-05385f": {
+   "url": "https://www.scrapecreators.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.scrapecreators.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 3449,
+   "truncated": false,
+   "sha256": "8514f0009a58c6e0acb5468f88037732b59b70af5e524f452e3bef8fb33effc5",
+   "fetched_at": "2026-10-19T05:54:12+00:00"
+  }
+ }
+}

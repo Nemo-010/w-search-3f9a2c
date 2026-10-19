@@ -1,0 +1,32 @@
+# TheNewsAPI (thenewsapi) category=news
+home=https://www.thenewsapi.com/ pricing=https://www.thenewsapi.com/pricing docs=https://www.thenewsapi.com/documentation llms=None
+sources_ok: pricing:https://www.thenewsapi.com/pricing, docs:https://www.thenewsapi.com/documentation, home:https://www.thenewsapi.com/
+--- ranked fact lines ---
+[pricing] $0.00/mo if billed annually
+[pricing] $16.00/mo if billed annually
+[pricing] $41.00/mo if billed annually
+[pricing] $66.00/mo if billed annually
+[pricing] $0.00/mo if billed monthly
+[pricing] $19.00/mo if billed monthly
+[pricing] $49.00/mo if billed monthly
+[pricing] $79.00/mo if billed monthly
+[docs] Get instant access to the API with your free API token. No billing details required!
+[docs] As mentioned above, when you sign up for free you will find your API token on your dashboard.
+[docs] "title": "These Are The Four American Companies Worth Over $1 Trillion Each – 24",
+[docs] "snippet": "These Are The Four American Companies Worth Over $1 Trillion...",
+[docs] GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=usd%20%7C%20gbp
+[docs] GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=usd%20%2B%20gbp
+[docs] GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=usd%20%2B%20gbp%20-cad
+[docs] GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=forex%20%2B%20%28usd%20%7C%20gbp%29%20-cad
+[docs] GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=forex%20%2B%20%28usd%20%7C%20gbp%29%20-cad&language=en&categories=business%2Ctech&exclude_categories=travel&published_after=2026-10-12
+[pricing] Custom articles per request
+[home] Get free access to search worldwide news and top stories from over 40,000 sources in 50+ countries.
+[home] Our service is 100% free to use on our free plan - no payment details are required.
+[docs] Sign up for free!
+[docs] you will never be short of content. Even better, it is completely free!
+[docs] If you have any questions or concerns, feel free to contact us .
+[docs] "url": "https://www.gurufocus.com/news/9129134/barclays-faces-scrutiny-over-private-credit-loan-practices",
+[home] Free live and top story JSON news API | The News API
+[home] Free worldwide news API
+[home] GET FREE API KEY
+[home] We provide free access for you to use and test our API. Our API provides the easiest and most comprehensive access to any news data, while also being the most cost effective on the market.

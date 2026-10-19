@@ -1,0 +1,136 @@
+News API Pricing | The News API 
+ Home
+ Documentation
+ Pricing
+ Contact Us
+ Login
+ Sign Up
+ The News API Subscriptions 
+ Monthly 
+ Yearly 20% discount 
+ Free 
+ $ 
+ 0.00 /mo 
+ $0.00/mo if billed annually 
+ 100 requests daily 
+ 3 articles / news request 
+ Headlines data 
+ Top stories data 
+ Real time data 
+ Historical data 
+ Full source access 
+ Full language access 
+ Technical support 
+ Sign up 
+ Basic 
+ $ 
+ 19.00 /mo 
+ $16.00/mo if billed annually 
+ 2,500 requests daily 
+ 25 articles / news request 
+ Headlines data 
+ Top stories data 
+ Real time data 
+ Historical data 
+ Full source access 
+ Full language access 
+ Technical support 
+ Sign up 
+ POPULAR 
+ Standard 
+ $ 
+ 49.00 /mo 
+ $41.00/mo if billed annually 
+ 10,000 requests daily 
+ 50 articles / news request 
+ Headlines data 
+ Top stories data 
+ Real time data 
+ Historical data 
+ Full source access 
+ Full language access 
+ Technical support 
+ Sign up 
+ Pro 
+ $ 
+ 79.00 /mo 
+ $66.00/mo if billed annually 
+ 25,000 requests daily 
+ 100 articles / news request 
+ Headlines data 
+ Top stories data 
+ Real time data 
+ Historical data 
+ Full source access 
+ Full language access 
+ Technical support 
+ Sign up 
+ Free 
+ $ 
+ 0.00 /mo 
+ $0.00/mo if billed monthly 
+ 100 requests daily 
+ 3 articles / news request 
+ Headlines data 
+ Top stories data 
+ Real time data 
+ Historical data 
+ Full source access 
+ Full language access 
+ Technical support 
+ Sign up 
+ Basic 
+ $ 
+ 16.00 /mo 
+ $19.00/mo if billed monthly 
+ 2,500 requests daily 
+ 25 articles / news request 
+ Headlines data 
+ Top stories data 
+ Real time data 
+ Historical data 
+ Full source access 
+ Full language access 
+ Technical support 
+ Sign up 
+ POPULAR 
+ Standard 
+ $ 
+ 41.00 /mo 
+ $49.00/mo if billed monthly 
+ 10,000 requests daily 
+ 50 articles / news request 
+ Headlines data 
+ Top stories data 
+ Real time data 
+ Historical data 
+ Full source access 
+ Full language access 
+ Technical support 
+ Sign up 
+ Pro 
+ $ 
+ 66.00 /mo 
+ $79.00/mo if billed monthly 
+ 25,000 requests daily 
+ 100 articles / news request 
+ Headlines data 
+ Top stories data 
+ Real time data 
+ Historical data 
+ Full source access 
+ Full language access 
+ Technical support 
+ Sign up 
+ Need a custom solution? 
+ If none of the above plans are suitable for your needs, let us know. We would be more than happy to help create
+ a custom solution for you. Some of the customizations we offer include: 
+ Custom daily requests
+ Custom articles per request
+ Custom SLA
+ CUSTOM PLAN 
+ Request Quote 
+ The News API © Copyright 2026 
+ FAQs 
+ Terms and Conditions 
+ Privacy

@@ -1,0 +1,16 @@
+# ScreenshotOne (screenshotone) category=reader
+home=https://screenshotone.com/ pricing=https://screenshotone.com/pricing/ docs=https://screenshotone.com/docs/ llms=None
+sources_ok: pricing:https://screenshotone.com/pricing/, docs:https://screenshotone.com/docs/, home:https://screenshotone.com/, llms:https://screenshotone.com/docs/llms.txt, llms-full:https://screenshotone.com/docs/llms-full.txt, llms-https://screenshotone.com/llms.txt:https://screenshotone.com/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+# ScreenshotOne
+> ScreenshotOne is a hosted website rendering API for screenshots, PDFs, videos, and rendered page content.
+## Product and company
+- [Information for AI](https://screenshotone.com/ai-information/): Capabilities, pricing, limitations, company facts, customer evidence, and official resources.
+- [Pricing](https://screenshotone.com/pricing/): Current plans, allowances, and billing policies.
+- [About](https://screenshotone.com/about/): The founder story.
+## Documentation
+- [Getting started](https://screenshotone.com/docs/getting-started/): Set up the API and make your first request.
+- [Documentation index](https://screenshotone.com/docs/llms.txt): Links to all documentation pages.
+- [Full documentation](https://screenshotone.com/docs/llms-full.txt): API documentation as text.
+- [MCP setup and tools](https://screenshotone.com/docs/mcp/): Connect compatible AI clients and use the hosted MCP server.

@@ -1,0 +1,343 @@
+Nimble Documentation - Nimble Docs Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Nimble Docs home page Search... ⌘ K Ask Assistant ⌘ I Support Book a Demo Ask Nimble Ask Nimble Search... Navigation Nimble Documentation Home Documentation Integrations API Reference Changelog Ask Nimble 
+ Build with Nimble Agents that turn any website into structured knowledge for AI Ask Nimble → Install Plugin → Quickstart Guide → API Reference → 
+ See Nimble in Action 
+ Scalable data collection with stealth unblocking —> Get clean, real-time HTML and structured data from any URL Python TypeScript Go CLI cURL from nimble_python import Nimble 
+ nimble = Nimble( api_key = "YOUR-API-KEY" ) 
+ result = nimble.extract.run( 
+ url = "https://www.nimbleway.com" , 
+ formats = [ "html" , "markdown" ] 
+ ) 
+ import Nimble from "@nimble-way/nimble-js" ; 
+ const nimble = new Nimble ({ apiKey: "YOUR-API-KEY" }); 
+ const result = await nimble . extract . run ({ 
+ url: "https://www.nimbleway.com" , 
+ formats: [ "html" , "markdown" ], 
+ }); 
+ package main 
+ import ( 
+ " context " 
+ nimble " github.com/Nimbleway/nimble-go " 
+ " github.com/Nimbleway/nimble-go/option " 
+ ) 
+ func main () { 
+ client := nimble . NewClient ( option . WithAPIKey ( "YOUR-API-KEY" )) 
+ result , err := client . Extract . Run ( context . Background (), nimble . ExtractRunParams { 
+ URL : "https://www.nimbleway.com" , 
+ Formats : [] string { "html" , "markdown" }, 
+ }) 
+ _ , _ = result , err 
+ } 
+ nimble extract run \ 
+ --url "https://www.nimbleway.com" \ 
+ --format html --format markdown 
+ curl -X POST 'https://sdk.nimbleway.com/v2/extract' \ 
+ --header 'Authorization: Bearer <YOUR-API-KEY>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data-raw '{ 
+ "url": "https://www.nimbleway.com", 
+ "formats": ["html", "markdown"] 
+ }' 
+ { 
+ "url" : "https://www.nimbleway.com" , 
+ "status" : "success" , 
+ "data" : { 
+ "html" : "<!doctype html><html>..." , 
+ "markdown" : "# Nimble SDK \n ..." , 
+ "parsing" : { ... }, 
+ "screenshots" : [ ... ], 
+ "network_capture" : [ ... ], 
+ ... and more 
+ }, 
+ "metadata" : { 
+ "driver" : "vx8" , 
+ ... and more 
+ } 
+ } 
+ Explore Extract Docs → Accurate, real-time web search with —> AI Agents search the live web to retrieve precise information Python TypeScript Go CLI cURL from nimble_python import Nimble 
+ nimble = Nimble( api_key = "YOUR-API-KEY" ) 
+ result = nimble.search( 
+ query = "latest AI developments" , 
+ focus = "general" , 
+ max_results = 5 , 
+ search_depth = "standard" 
+ ) 
+ import Nimble from "@nimble-way/nimble-js" ; 
+ const nimble = new Nimble ({ apiKey: "YOUR-API-KEY" }); 
+ const result = await nimble . search ({ 
+ query: "latest AI developments" , 
+ focus: "general" , 
+ max_results: 5 , 
+ search_depth: "standard" , 
+ }); 
+ package main 
+ import ( 
+ " context " 
+ nimble " github.com/Nimbleway/nimble-go " 
+ " github.com/Nimbleway/nimble-go/option " 
+ " github.com/Nimbleway/nimble-go/packages/param " 
+ ) 
+ func main () { 
+ client := nimble . NewClient ( option . WithAPIKey ( "YOUR-API-KEY" )) 
+ result , err := client . Search ( context . Background (), nimble . SearchParams { 
+ Query : "latest AI developments" , 
+ MaxResults : param . NewOpt ( int64 ( 5 )), 
+ SearchDepth : nimble . SearchParamsSearchDepthStandard , 
+ }) 
+ _ , _ = result , err 
+ } 
+ nimble search \ 
+ --query "latest AI developments" \ 
+ --focus general \ 
+ --max-results 5 \ 
+ --search-depth standard 
+ curl -X POST 'https://sdk.nimbleway.com/v2/search' \ 
+ --header 'Authorization: Bearer <YOUR-API-KEY>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data-raw '{ 
+ "query": "latest AI developments", 
+ "focus": "general", 
+ "max_results": 5, 
+ "search_depth": "standard" 
+ }' 
+ { 
+ "request_id" : "84f08ac1-bb5f-4b6f-8447-2d21cb930416" , 
+ "total_results" : 5 , 
+ "results" : [ 
+ { 
+ "title" : "Latest AI Developments" , 
+ "url" : "https://example.com/ai" , 
+ "description" : "Recent breakthroughs..." 
+ }, 
+ ... and more 
+ ] 
+ } 
+ Explore Search Docs → Fast URL discovery and site structure mapping —> Easily plan extraction workflows Python TypeScript Go CLI cURL from nimble_python import Nimble 
+ nimble = Nimble( api_key = "YOUR-API-KEY" ) 
+ result = nimble.map( 
+ url = "https://www.nimbleway.com" , 
+ sitemap = "include" 
+ ) 
+ import Nimble from "@nimble-way/nimble-js" ; 
+ const nimble = new Nimble ({ apiKey: "YOUR-API-KEY" }); 
+ const result = await nimble . map ({ 
+ url: "https://www.nimbleway.com" , 
+ sitemap: "include" , 
+ }); 
+ package main 
+ import ( 
+ " context " 
+ nimble " github.com/Nimbleway/nimble-go " 
+ " github.com/Nimbleway/nimble-go/option " 
+ ) 
+ func main () { 
+ client := nimble . NewClient ( option . WithAPIKey ( "YOUR-API-KEY" )) 
+ result , err := client . Map ( context . Background (), nimble . MapParams { 
+ URL : "https://www.nimbleway.com" , 
+ Sitemap : nimble . MapParamsSitemapInclude , 
+ }) 
+ _ , _ = result , err 
+ } 
+ nimble map \ 
+ --url "https://www.nimbleway.com" \ 
+ --sitemap include 
+ curl -X POST 'https://sdk.nimbleway.com/v2/map' \ 
+ --header 'Authorization: Bearer <YOUR-API-KEY>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data-raw '{ 
+ "url": "https://www.nimbleway.com", 
+ "sitemap": "include" 
+ }' 
+ { 
+ "success" : true , 
+ "links" : [ 
+ { 
+ "url" : "https://www.nimbleway.com" , 
+ "title" : "Nimble - Web Data Platform" , 
+ "description" : "AI-powered web data collection and extraction platform" 
+ }, 
+ { 
+ "url" : "https://www.nimbleway.com/pricing" , 
+ "title" : "Pricing" , 
+ "description" : "Nimble pricing plans and features" 
+ } 
+ ... and more 
+ ] 
+ } 
+ Explore Map Docs → Extract contents from entire websites in a single request —> Collect large volumes of web data automatically Python TypeScript Go CLI cURL from nimble_python import Nimble 
+ nimble = Nimble( api_key = "YOUR-API-KEY" ) 
+ result = nimble.crawl.run( 
+ url = "https://docs.nimbleway.com/nimble-sdk" , 
+ limit = 4 
+ ) 
+ import Nimble from "@nimble-way/nimble-js" ; 
+ const nimble = new Nimble ({ apiKey: "YOUR-API-KEY" }); 
+ const result = await nimble . crawl . run ({ 
+ url: "https://docs.nimbleway.com/nimble-sdk" , 
+ limit: 4 , 
+ }); 
+ package main 
+ import ( 
+ " context " 
+ nimble " github.com/Nimbleway/nimble-go " 
+ " github.com/Nimbleway/nimble-go/option " 
+ " github.com/Nimbleway/nimble-go/packages/param " 
+ ) 
+ func main () { 
+ client := nimble . NewClient ( option . WithAPIKey ( "YOUR-API-KEY" )) 
+ result , err := client . Crawl . Run ( context . Background (), nimble . CrawlRunParams { 
+ URL : "https://docs.nimbleway.com/nimble-sdk" , 
+ Limit : param . NewOpt ( int64 ( 4 )), 
+ }) 
+ _ , _ = result , err 
+ } 
+ nimble crawl run \ 
+ --url "https://docs.nimbleway.com/nimble-sdk" \ 
+ --limit 4 
+ curl -X POST 'https://sdk.nimbleway.com/v2/crawl' \ 
+ --header 'Authorization: Bearer <YOUR-API-KEY>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data-raw '{ 
+ "url": "https://docs.nimbleway.com/nimble-sdk", 
+ "limit": 4 
+ }' 
+ { 
+ "crawl_id" : "85b21e98-69c5-4aa5-9d25-261a55bbf0db" , 
+ "url" : "https://docs.nimbleway.com/nimble-sdk" , 
+ "status" : "queued" , 
+ "crawl_options" : { 
+ "sitemap" : "include" , 
+ "limit" : 4 , 
+ "max_discovery_depth" : 5 , 
+ ... and more 
+ } 
+ } 
+ Explore Crawl Docs → Agents research the live web and answer with receipts —> Ask like you’d brief an analyst, get a cited answer with a trust report Python TypeScript Go CLI cURL from nimble_python import Nimble 
+ nimble = Nimble( api_key = "YOUR-API-KEY" ) 
+ run = nimble.agents.run( 
+ input = "Compare the pricing of Datadog, Grafana Cloud, and New Relic." , 
+ ) 
+ import Nimble from "@nimble-way/nimble-js" ; 
+ const nimble = new Nimble ({ apiKey: "YOUR-API-KEY" }); 
+ const run = await nimble . agents . run ({ 
+ input: "Compare the pricing of Datadog, Grafana Cloud, and New Relic." , 
+ }); 
+ package main 
+ import ( 
+ " context " 
+ nimble " github.com/Nimbleway/nimble-go " 
+ " github.com/Nimbleway/nimble-go/option " 
+ ) 
+ func main () { 
+ client := nimble . NewClient ( option . WithAPIKey ( "YOUR-API-KEY" )) 
+ run , err := client . Agents . Run ( context . Background (), nimble . AgentRunParams { 
+ Input : "Compare the pricing of Datadog, Grafana Cloud, and New Relic." , 
+ }) 
+ _ , _ = run , err 
+ } 
+ nimble agents run \ 
+ --input "Compare the pricing of Datadog, Grafana Cloud, and New Relic." 
+ curl -X POST 'https://sdk.nimbleway.com/v2/agents/runs' \ 
+ --header 'Authorization: Bearer <YOUR-API-KEY>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data-raw '{ 
+ "input": "Compare the pricing of Datadog, Grafana Cloud, and New Relic." 
+ }' 
+ { 
+ "output" : { 
+ "type" : "text" , 
+ "content" : "Datadog anchors the premium end of the 
+ market, with Pro pricing from $15 per host [1]. 
+ Grafana Cloud undercuts it with a free tier [2]..." , 
+ "trust" : { 
+ "confidence" : "high" , 
+ "claims" : [ 
+ { 
+ "id" : 1 , 
+ "confidence" : "high" , 
+ "reasoning" : "Backed by a primary source (official)" , 
+ "citations" : [ 
+ { "url" : "https://datadoghq.com/pricing" , ... } 
+ ] 
+ }, 
+ ... and more 
+ ] 
+ } 
+ } 
+ } 
+ Explore Agents → Pre-built Extract Templates for popular sites —> Structured data that never breaks, or generate a template for any website Python TypeScript Go CLI cURL from nimble_python import Nimble 
+ nimble = Nimble( api_key = "YOUR-API-KEY" ) 
+ result = nimble.extract.templates.run( 
+ template = "amazon_pdp" , 
+ params = { 
+ "asin" : "B0DKB1GWML" 
+ } 
+ ) 
+ import Nimble from "@nimble-way/nimble-js" ; 
+ const nimble = new Nimble ({ apiKey: "YOUR-API-KEY" }); 
+ const result = await nimble . extract . templates . run ({ 
+ template: "amazon_pdp" , 
+ params: { 
+ asin: "B0DKB1GWML" , 
+ }, 
+ }); 
+ package main 
+ import ( 
+ " context " 
+ nimble " github.com/Nimbleway/nimble-go " 
+ " github.com/Nimbleway/nimble-go/option " 
+ ) 
+ func main () { 
+ client := nimble . NewClient ( option . WithAPIKey ( "YOUR-API-KEY" )) 
+ result , err := client . Extract . Templates . Run ( context . Background (), nimble . ExtractTemplateRunParams { 
+ Template : "amazon_pdp" , 
+ Params : map [ string ] any { 
+ "asin" : "B0DKB1GWML" , 
+ }, 
+ }) 
+ _ , _ = result , err 
+ } 
+ nimble extract:templates run \ 
+ --template amazon_pdp \ 
+ --params '{asin: B0DKB1GWML}' 
+ curl -X POST 'https://sdk.nimbleway.com/v2/extract/templates/run' \ 
+ --header 'Authorization: Bearer <YOUR-API-KEY>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data-raw '{ 
+ "template": "amazon_pdp", 
+ "params": { 
+ "asin": "B0DKB1GWML" 
+ } 
+ }' 
+ { 
+ "url" : "https://www.amazon.com/dp/B0DKB1GWML" , 
+ "data" : { 
+ "html" : "<!doctype html><html>..." , 
+ "parsing" : { 
+ "product_title" : "Apple iPhone 16 Pro Max..." , 
+ "product_description" : "....." , 
+ "brand" : "Apple" , 
+ "web_price" : 819.97 , 
+ "availability" : true , 
+ ... and more 
+ } 
+ }, 
+ "metadata" :{ 
+ "driver" : "vx8" , 
+ ... and more 
+ } 
+ } 
+ Explore Template Docs → Route requests through premium residential IPs —> Scale fast with without getting blocked # Proxy connection string 
+ PROXY = http://account-ACCOUNT-pipeline-PIPELINE-country-US: [email protected] :7000 
+ # Request through US residential IP 
+ curl -x $PROXY https://ipinfo.io/json 
+ { 
+ "ip" : "123.0.0.123" , 
+ "city" : "Los Angeles" , 
+ "region" : "California" , 
+ "country" : "US" , 
+ "loc" : "34.0522,-118.2437" , 
+ "org" : "AS12345 Example ISP" , 
+ "timezone" : "America/Los_Angeles" 
+ } 
+ Explore Proxy Docs → 
+ Web Tools Extract Search Map Crawl Proxy Get Started Ask Nimble Install Plugin Templates Agent Integrations MCP Server LangChain Agent Skills Resources API Reference SDKs Pricing Service Status Nimble Assistant Responses are generated using AI and may contain mistakes. Contact support

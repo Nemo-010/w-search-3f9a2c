@@ -1,0 +1,91 @@
+Kagi Search 
+ Kagi for
+ Teams
+ Libraries
+ API
+ Overview
+ Docs
+ Pricing
+ Pricing
+ Overview
+ API
+ Why pay for search?
+ Blog
+ Sign up for free
+ Sign in
+ Main menu 
+ Menu 
+ Close 
+ API pricing 
+ The highest quality search results. Your system is only as good as its data source. Kagi APIs give your system the edge it needs to perform at its best.
+ Search 
+ Real-time search results from Kagi 
+ $12 
+ /1k requests 
+ Pay only for what you use 
+ Query across web, images, news, videos, and podcasts 
+ Scope results with lenses, country, and language filters 
+ Personalize with domain ranking and custom URL rules 
+ Extra snippets: full, clean page content alongside your results 
+ Get Started 
+ Extract 
+ Clean content from any URL 
+ $4 
+ /1k pages 
+ Pay only for what you use 
+ Extract up to 10 URLs per request 
+ Returns clean Markdown - ready for LLMs 
+ Configurable timeout 
+ JSON or Markdown response format 
+ Get Started 
+ Enterprise 
+ For high volume, scalable workloads 
+ Get a quote 
+ Volume discounts 
+ Custom rate limits 
+ Enterprise-grade support and SLAs 
+ Dedicated onboarding 
+ Contact Sales 
+ We will invoice every 30 days or as soon as your usage reaches $100. For a higher limit please reach out to support .
+ Company 
+ About 
+ Pricing 
+ Privacy & Terms 
+ Live Stats 
+ Careers 
+ Swag 
+ Media 
+ Blog 
+ Assets 
+ Press 
+ Voices 
+ Resources 
+ Get in touch 
+ Changelog 
+ Feedback 
+ Help Docs 
+ FAQ 
+ Specials 
+ © Kagi. 
+ Humanize the Web. 
+ Company 
+ About 
+ Pricing 
+ Privacy & Terms 
+ Live Stats 
+ Careers 
+ Swag 
+ Resources 
+ Get in touch 
+ Changelog 
+ Feedback 
+ Help Docs 
+ FAQ 
+ Specials 
+ Media 
+ Blog 
+ Assets 
+ Press 
+ Voices 
+ © Kagi. 
+ Humanize the Web.

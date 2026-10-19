@@ -1,0 +1,49 @@
+{
+ "slug": "wiby",
+ "name": "Wiby",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:31+00:00",
+ "sources": {
+  "home": {
+   "url": "https://wiby.me/",
+   "status": 200,
+   "final_url": "https://wiby.me/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1537,
+   "truncated": false,
+   "sha256": "92a458272d8e99bfafa9becdfae349583d19f5c86fc8089db8478d74ca1b831b",
+   "fetched_at": "2026-10-19T05:54:31+00:00",
+   "text_bytes": 124
+  },
+  "llms-err-de4491": {
+   "url": "https://wiby.me/llms.txt",
+   "status": 404,
+   "final_url": "https://wiby.me/llms.txt",
+   "content_type": "text/html",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  },
+  "llms-err-a9b935": {
+   "url": "https://wiby.me/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://wiby.me/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  },
+  "llms-err-94329b": {
+   "url": "https://docs.wiby.me/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.wiby.me/llms.txt",
+   "content_type": "",
+   "bytes": 153,
+   "truncated": false,
+   "sha256": "ffb23c0f8dc8d99095eb72271be9e4bdc184a842761a942d57516caaa7887658",
+   "fetched_at": "2026-10-19T05:54:33+00:00"
+  }
+ }
+}

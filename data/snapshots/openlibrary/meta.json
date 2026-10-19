@@ -1,0 +1,61 @@
+{
+ "slug": "openlibrary",
+ "name": "Open Library",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:45+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://openlibrary.org/developers/api",
+   "status": 200,
+   "final_url": "https://openlibrary.org/developers/api",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 61172,
+   "truncated": false,
+   "sha256": "e43f8a0edaba487b36045a03a2cacaffc106c1edd1c7a4c16b764f97aff6af76",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 11772
+  },
+  "llms-err-7a7dee": {
+   "url": "https://openlibrary.org/developers/api/llms.txt",
+   "status": 404,
+   "final_url": "https://openlibrary.org/developers/api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 42691,
+   "truncated": false,
+   "sha256": "b2bf90828efca853cfff1f59e282f818c1ad842d9759257682d83647543298ec",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  },
+  "llms-err-4fc6d0": {
+   "url": "https://openlibrary.org/developers/api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://openlibrary.org/developers/api/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 42711,
+   "truncated": false,
+   "sha256": "b7995395e04c6df14a5628aab8044651bcb7feaccd9111f5a5d5ef23a07e9ea1",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  },
+  "llms": {
+   "url": "https://docs.openlibrary.org/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.openlibrary.org/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 4880,
+   "truncated": false,
+   "sha256": "7f4dfff3e3ff26661bc7e1ed1386b321aa0d14bf08da097a0567672277e1a3b8",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 4880
+  },
+  "llms-full": {
+   "url": "https://docs.openlibrary.org/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.openlibrary.org/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 587525,
+   "truncated": false,
+   "sha256": "c0f36acba207d98da8ff33affe388addb53102acc5f4835ba33278ab55c0230f",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 586942
+  }
+ }
+}

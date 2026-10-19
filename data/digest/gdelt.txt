@@ -1,0 +1,7 @@
+# GDELT (gdelt) category=news
+home=https://www.gdeltproject.org/ pricing=None docs=https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/ llms=None
+sources_ok: docs:https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/, home:https://www.gdeltproject.org/
+--- ranked fact lines ---
+[home] The GDELT World Leaders Index is a free daily PDF report that ranks the world's heads of state each morning according to the average tone of all monitored global news coverage mentioning them in the previous 48 hours. In essence, it is a popularity index that ranks world leaders from most to least popular and how their popularity is changing over time.
+[home] The entire GDELT database is 100% free and open and you can download the raw datafiles, visualize it using the GDELT Analysis Service, or analyze it at limitless scale with Google BigQuery.
+[home] The GDELT Analysis Service is a free cloud-based service that offers a variety of tools and services to allow you to visualize, explore, and export both the GDELT Event Database and the GDELT Global Knowledge Graph. This is a great way to get started exploring GDELT and what it can do for you, even if you don't have a technical background.

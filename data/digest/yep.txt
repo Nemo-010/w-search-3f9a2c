@@ -1,0 +1,25 @@
+# Yep (yep) category=search-engine
+home=https://yep.com/ pricing=None docs=None llms=None
+sources_ok: home:https://yep.com/, llms:https://yep.com/llms.txt, llms-full:https://yep.com/llms-full.txt
+--- ranked fact lines ---
+[llms-full] Balanced costs $4 per 1,000 completed requests. A failed search execution is not charged. Account spend limits can reject a request with `402` before execution.
+[llms-full] The token response provides its lifetime. Cache the access token in workload memory, request a replacement before expiry, and ensure concurrent requests share one refresh. After an unexpected `401`, fetch one new token and retry once; repeated rejection requires operator action.
+[llms-full] 4. Verify token exchange and one intended Yep request.
+[llms-full] | 409 | The account is unavailable or its active-key quota is exhausted. | PublicApiError |
+--- llms/readme head ---
+# Yep developer documentation
+> Search API and MCP integration documentation generated from the public contracts.
+## Getting started
+- [Build with Yep](https://yep.com/en/docs.md): Send a search request or connect an MCP client in a few minutes.
+- [Authentication](https://yep.com/en/docs/authentication.md): Create, store, rotate, and send Yep API credentials safely.
+- [Service accounts](https://yep.com/en/docs/service-accounts.md): Create service accounts for automated workloads and manage their credentials.
+## Search API
+- [HTTP integration](https://yep.com/en/docs/integrations/http.md): Integrate the Search API with stable request, response, and retry handling.
+- [Search for domains](https://yep.com/en/docs/search/domains.md): Find ranked domains when a page-level result set is too narrow.
+- [Errors, limits, and billing](https://yep.com/en/docs/errors-and-limits.md): Handle API failures, request limits, retries, and completed-request billing.
+## Agent API
+- [Choose the Search API or Agent API](https://yep.com/en/docs/agent/choose.md): Choose ranked results or a model-written report for each workload.
+- [Use your own model provider key](https://yep.com/en/docs/agent/byok.md): Connect a model provider key and select an allowlisted model for Agent API and MCP calls.
+## MCP
+- [Connect an MCP client](https://yep.com/en/docs/mcp.md): Choose a client and connect it to the Yep search tool with OAuth.
+- [MCP search tool](https://yep.com/en/docs/mcp/tools/search.md): Input, output, and behavior generated from the advertised MCP tool contract.

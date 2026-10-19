@@ -1,0 +1,59 @@
+{
+ "slug": "openai-websearch",
+ "name": "OpenAI Web Search",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:51+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://openai.com/api/pricing/",
+   "status": 200,
+   "final_url": "https://openai.com/business/pricing/#api",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 864220,
+   "truncated": false,
+   "sha256": "ef83baf17e62f021279d82c92c7a02d858ddc3615f6fe7497eb31dc009ae1a0b",
+   "fetched_at": "2026-10-19T05:54:51+00:00",
+   "text_bytes": 18142
+  },
+  "docs-err-70ff9b": {
+   "url": "https://platform.openai.com/docs/guides/tools-web-search",
+   "status": 403,
+   "final_url": "https://platform.openai.com/docs/guides/tools-web-search",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5482,
+   "truncated": false,
+   "sha256": "39caeec422ab9e86021f0b57db71776f37a3d9bbda8c3e788b63fba02f19a7f1",
+   "fetched_at": "2026-10-19T05:54:51+00:00"
+  },
+  "llms-err-dc9e40": {
+   "url": "https://platform.openai.com/docs/guides/tools-web-search/llms.txt",
+   "status": 403,
+   "final_url": "https://platform.openai.com/docs/guides/tools-web-search/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 4544,
+   "truncated": false,
+   "sha256": "a0e396e1a038aa45b20e055c133e8ea74f5811599be37107ff7c9bc09f135f83",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  },
+  "llms-err-cb5090": {
+   "url": "https://platform.openai.com/docs/guides/tools-web-search/docs/llms.txt",
+   "status": 403,
+   "final_url": "https://platform.openai.com/docs/guides/tools-web-search/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 4544,
+   "truncated": false,
+   "sha256": "b24e2f1cd02ed71fc0f7fc5d5450758281fa808b1307a8d86ca8621b99b245db",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  },
+  "llms-err-3db370": {
+   "url": "https://docs.platform.openai.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.platform.openai.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  }
+ }
+}

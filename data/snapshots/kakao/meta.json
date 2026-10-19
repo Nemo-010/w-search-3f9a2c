@@ -1,0 +1,58 @@
+{
+ "slug": "kakao",
+ "name": "Kakao/Daum Search API",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:33+00:00",
+ "sources": {
+  "pricing-err-5d08e2": {
+   "url": "https://developers.kakao.com/docs/latest/en/daum-search/common",
+   "status": 0,
+   "final_url": "https://developers.kakao.com/docs/latest/en/daum-search/common",
+   "content_type": "",
+   "bytes": 44,
+   "truncated": false,
+   "sha256": "eb7deb0c37bb189b9c126115ecdbcdd8e81950774f8d0cad615f83f41d2201c1",
+   "fetched_at": "2026-10-19T05:54:33+00:00"
+  },
+  "llms-err-babcb6": {
+   "url": "https://developers.kakao.com/docs/latest/en/daum-search/common/llms.txt",
+   "status": 0,
+   "final_url": "https://developers.kakao.com/docs/latest/en/daum-search/common/llms.txt",
+   "content_type": "",
+   "bytes": 44,
+   "truncated": false,
+   "sha256": "eb7deb0c37bb189b9c126115ecdbcdd8e81950774f8d0cad615f83f41d2201c1",
+   "fetched_at": "2026-10-19T05:54:34+00:00"
+  },
+  "llms-err-17209f": {
+   "url": "https://developers.kakao.com/docs/latest/en/daum-search/common/docs/llms.txt",
+   "status": 0,
+   "final_url": "https://developers.kakao.com/docs/latest/en/daum-search/common/docs/llms.txt",
+   "content_type": "",
+   "bytes": 44,
+   "truncated": false,
+   "sha256": "eb7deb0c37bb189b9c126115ecdbcdd8e81950774f8d0cad615f83f41d2201c1",
+   "fetched_at": "2026-10-19T05:54:35+00:00"
+  },
+  "llms-err-15a60c": {
+   "url": "https://docs.developers.kakao.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.developers.kakao.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:36+00:00"
+  },
+  "docs": {
+   "url": "https://developers.kakao.com/docs/latest/en/daum-search/common",
+   "status": 0,
+   "final_url": "https://developers.kakao.com/docs/latest/en/daum-search/common",
+   "content_type": "",
+   "bytes": 44,
+   "truncated": false,
+   "sha256": "eb7deb0c37bb189b9c126115ecdbcdd8e81950774f8d0cad615f83f41d2201c1",
+   "fetched_at": "2026-10-19T06:05:15+00:00"
+  }
+ }
+}

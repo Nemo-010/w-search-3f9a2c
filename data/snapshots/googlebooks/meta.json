@@ -1,0 +1,60 @@
+{
+ "slug": "googlebooks",
+ "name": "Google Books API",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:46+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://developers.google.com/books",
+   "status": 200,
+   "final_url": "https://developers.google.com/books",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 58188,
+   "truncated": false,
+   "sha256": "7e91e0182d8aa14cb45ed3c787a4311be31789060d16f93edbd47cee66e88e4c",
+   "fetched_at": "2026-10-19T05:54:46+00:00",
+   "text_bytes": 2305
+  },
+  "llms-err-967c27": {
+   "url": "https://developers.google.com/books/llms.txt",
+   "status": 404,
+   "final_url": "https://developers.google.com/books/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46772,
+   "truncated": false,
+   "sha256": "8874df3759927925bb1eaa57c7097d84f4f8d8574f052b4221e7d0cc9d0ed843",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  },
+  "llms-err-05d190": {
+   "url": "https://developers.google.com/books/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://developers.google.com/books/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46777,
+   "truncated": false,
+   "sha256": "65ca33661be5f33e06ecdd44127bef9483c0f3f177ca0db291600a2b6b092eb6",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  },
+  "llms-err-8cc1d4": {
+   "url": "https://docs.developers.google.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.developers.google.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  },
+  "docs2": {
+   "url": "https://developers.google.com/books/docs/v1/using",
+   "status": 200,
+   "final_url": "https://developers.google.com/books/docs/v1/using",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 124009,
+   "truncated": false,
+   "sha256": "317af6172626c32eb6590311bae826a3f29d38148e140cd050de323c6641f7fc",
+   "fetched_at": "2026-10-19T06:05:17+00:00",
+   "text_bytes": 40211
+  }
+ }
+}

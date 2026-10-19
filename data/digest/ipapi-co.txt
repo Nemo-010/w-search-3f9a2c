@@ -1,0 +1,50 @@
+# ipapi.co (ipapi-co) category=misc-api
+home=https://ipapi.co/ pricing=https://ipapi.co/pricing/ docs=https://ipapi.co/api/ llms=None
+sources_ok: pricing:https://ipapi.co/pricing/, docs:https://ipapi.co/api/, home:https://ipapi.co/, llms:https://ipapi.co/llms.txt, llms-full:https://ipapi.co/llms-full.txt
+--- ranked fact lines ---
+[pricing] Sign Up $15 + tax
+[pricing] Sign Up $25 + tax
+[pricing] Sign Up $49 + tax
+[pricing] Sign Up $99 + tax
+[pricing] Sign Up $199 + tax
+[pricing] Sign Up $399 + tax
+[pricing] billed $144 / year
+[pricing] Sign Up $144 + tax
+[pricing] billed $240 / year
+[pricing] Sign Up $240 + tax
+[pricing] billed $468 / year
+[pricing] Sign Up $468 + tax
+[pricing] billed $948 / year
+[pricing] Sign Up $948 + tax
+[pricing] billed $1908 / year
+[pricing] Sign Up $1908 + tax
+[pricing] billed $3828 / year
+[pricing] Sign Up $3828 + tax
+[pricing] Under the free trial, you get up-to 1000 IP lookups in a day (approximately 30K/month) for a limited time.
+[pricing] in your API requests. It shouldn't take more than a minute to implement this tiny change when you switch from a free plan to
+[pricing] a paid plan. If you have any concerns or need assistance with the setup, please feel free to contact us.
+[pricing] We have a hassle free, no questions asked cancellation policy. You can cancel your subscription anytime from the
+[pricing] Yes, we offer a free IP location plan for trial & evaluation of our service.
+[pricing] Are there any limits on using the free IP location API ?
+[pricing] system may use heuristics to further restrict free trial API calls under certain conditions.
+[pricing] If you are unable to access the free plan, please contact us .
+[home] Get started for free !
+--- llms/readme head ---
+ipapi - IP Address Lookup and Geolocation API | No SignUp
+Toggle navigation
+ipapi
+Quick Start
+Docs
+Pricing
+Contact
+Account
+IP Lookup
+an
+API
+to find the
+IP address
+location
+timezone
+city
+country
+postal code

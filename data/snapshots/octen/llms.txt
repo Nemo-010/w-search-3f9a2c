@@ -1,0 +1,114 @@
+# Octen Docs
+
+> Octen is the search infrastructure for AI: a real-time web search foundation that lets LLMs, agents, and apps reason with the world's latest information. These are the official technical docs for the Octen API platform.
+
+Every page in this index is linked with a `.md` extension and returns clean Markdown, which is what agents should fetch instead of the HTML page. `https://docs.octen.ai/llms-full.txt` contains the full text of every page in a single file. Requests to any page URL with `Accept: text/markdown` also return Markdown.
+
+## Overview
+
+- [Welcome](https://docs.octen.ai/overview/welcome.md): Real-time access to the world's latest information for LLMs and agents.
+- [Introduction](https://docs.octen.ai/overview/introduction.md): What Octen is and what each API and application does.
+- [Quickstart](https://docs.octen.ai/overview/quickstart.md): Get an API key and make your first search request in minutes.
+- [Build with Coding Agent](https://docs.octen.ai/overview/build-with-coding-agent.md): What a coding agent needs to build an Octen integration.
+- [Pricing](https://docs.octen.ai/overview/pricing.md): Monthly QPS plan subscription plus pay-as-you-go API billing.
+- [Model Gateway Rebate](https://docs.octen.ai/overview/model-gateway-rebate.md): Get 15% of your Model Gateway spend back, automatically.
+
+## Capabilities
+
+### Octen Fast
+
+- [Broad Search](https://docs.octen.ai/capabilities/broad-search.md): One question, many sub-queries, searched concurrently in a single call.
+- [Web Search](https://docs.octen.ai/capabilities/web-search.md): Search the live web for ranked results with highlights and full content.
+- [Image Search](https://docs.octen.ai/capabilities/image-search.md): Search the web for images by text query or reference image.
+- [Video Search](https://docs.octen.ai/capabilities/video-search.md): Search the web for videos with ranked results and rich metadata.
+
+### Octen Premier
+
+- [News Search](https://docs.octen.ai/capabilities/news-search.md): Search live news with related coverage grouped into subjects.
+- [Business Search](https://docs.octen.ai/capabilities/business-search.md): Search business content for companies and people as entity cards.
+
+### Extract
+
+- [Extract](https://docs.octen.ai/capabilities/extract.md): Turn any URL into clean, LLM-ready markdown or text.
+
+### Model Gateway
+
+- [Model Gateway](https://docs.octen.ai/capabilities/model-gateway.md): Frontier models behind one API key, with live web search built in.
+
+### Embedding
+
+- [Text Embedding](https://docs.octen.ai/capabilities/embedding.md): Turn text into semantic vectors with Octen's embedding models.
+- [VL Embedding](https://docs.octen.ai/capabilities/vl-embedding.md): Encode text, images, and videos into one shared vector space.
+
+### Applications
+
+- [Answer](https://docs.octen.ai/capabilities/answer.md): Question to grounded, cited answer in one API call.
+- [Deep Research](https://docs.octen.ai/capabilities/deep-research.md): Autonomous research agent that returns a cited, illustrated report.
+- [Multimodal Chat](https://docs.octen.ai/capabilities/multimodal-chat.md): Chat answers interleaving text, images, and videos from live search.
+- [Grounded Generation](https://docs.octen.ai/capabilities/grounded-generation.md): Generate images and videos grounded in real web references.
+
+## Integrations
+
+- [Octen Skills](https://docs.octen.ai/integrations/octen-skills.md): Add Octen skills to Claude Code, Cursor, Codex, and other agents.
+- [Octen MCP Server](https://docs.octen.ai/integrations/octen-mcp-server.md): Connect Octen to Claude, Cursor, and other MCP-compatible clients.
+- [Octen CLI](https://docs.octen.ai/integrations/octen-cli.md): Wire Octen into your AI client and call the API from your terminal.
+- [Connect Desktop AI Assistants](https://docs.octen.ai/integrations/connect-desktop-ai-assistants.md): Connect desktop AI assistants to Octen via MCP or Agent Skills.
+- [Connect LLMs to Octen Search](https://docs.octen.ai/integrations/connect-llms-to-octen-search.md): Expose Octen Web Search as a function-calling tool for any LLM.
+- [Python SDK](https://docs.octen.ai/integrations/python-sdk.md): Install and use the Octen Python SDK.
+
+## Resources
+
+- [Changelog](https://docs.octen.ai/resources/changelog.md): Product updates, new features, bug fixes, and deprecation notices.
+- [FAQs](https://docs.octen.ai/resources/faqs.md): Common questions about Octen, from integration to billing.
+- [Rate Limits](https://docs.octen.ai/resources/rate-limits.md): QPS rate limits for each Octen API, by plan.
+- [Error Codes](https://docs.octen.ai/resources/error-codes.md): Octen error codes, with the cause and fix for each.
+- [Security & Compliance](https://docs.octen.ai/resources/security-&-compliance.md): How Octen handles customer data, security, and compliance.
+- [SLA](https://docs.octen.ai/resources/sla.md): Availability commitment and Service Credit policy for paid QPS plans.
+- [Status](https://status.octen.ai): Live platform status and incident history.
+- [Discord](https://discord.gg/Y3Yq5qxk7h): Octen community server.
+- [GitHub](https://github.com/Octen-Team): Official Octen SDKs, skills, and example code.
+
+## API Reference
+
+### Octen Fast
+
+- [Broad Search](https://docs.octen.ai/api-reference/broad-search.md): `POST /broad-search` parameters, request and response schema.
+- [Web Search](https://docs.octen.ai/api-reference/search.md): `POST /search` parameters, request and response schema.
+- [Image Search](https://docs.octen.ai/api-reference/image-search.md): `POST /image-search` parameters, request and response schema.
+- [Video Search](https://docs.octen.ai/api-reference/video-search.md): `POST /video-search` parameters, request and response schema.
+
+### Octen Premier
+
+- [News Search](https://docs.octen.ai/api-reference/news-search.md): `POST /news-search` parameters, request and response schema.
+- [Business Search](https://docs.octen.ai/api-reference/business-search.md): `POST /business-search` parameters, request and response schema.
+
+### Extract
+
+- [Extract](https://docs.octen.ai/api-reference/extract.md): `POST /extract` parameters, request and response schema.
+
+### Model Gateway
+
+- [LLM Chat (OpenAI-Compatible)](https://docs.octen.ai/api-reference/chat-completions.md): `POST /v1/chat/completions` parameters, request and response schema.
+- [LLM Chat (Anthropic-Compatible)](https://docs.octen.ai/api-reference/messages.md): `POST /v1/messages` parameters, request and response schema.
+- [Image Generation](https://docs.octen.ai/api-reference/images-generations.md): `POST /v1/images/generations` parameters, request and response schema.
+- [Video Generation](https://docs.octen.ai/api-reference/post-video.md): `POST /v1/videos` parameters, request and response schema.
+- [Video Download](https://docs.octen.ai/api-reference/get-video.md): `GET /v1/videos/{id}` request and response schema.
+
+### Embedding
+
+- [Embedding](https://docs.octen.ai/api-reference/embedding.md): `POST /embedding` parameters, request and response schema.
+
+### VL Embedding
+
+- [VL Embedding](https://docs.octen.ai/api-reference/vl-embedding.md): `POST /vl-embedding` parameters, request and response schema.
+
+### Applications
+
+- [Answer](https://docs.octen.ai/api-reference/answer.md): `POST /answer` parameters, request and response schema.
+- [Deep Research](https://docs.octen.ai/api-reference/deep-research.md): `POST /v1/research` parameters, request and response schema.
+- [Grounded Generation](https://docs.octen.ai/api-reference/post-grounded-generation.md): `POST /v1/grounded-generation` parameters, request and response schema.
+- [Generation Result](https://docs.octen.ai/api-reference/get-grounded-generation.md): `GET /v1/grounded-generation/{generation_id}` request and response schema.
+
+## Optional
+
+- [API Platform](https://octen.ai/platform/api-keys): Create and manage API keys, credits, and QPS plans.

@@ -1,0 +1,4 @@
+# Mastodon API (mastodon) category=misc-api
+home=https://docs.joinmastodon.org/api/ pricing=None docs=https://docs.joinmastodon.org/api/ llms=None
+sources_ok: docs:https://docs.joinmastodon.org/api/
+--- ranked fact lines ---

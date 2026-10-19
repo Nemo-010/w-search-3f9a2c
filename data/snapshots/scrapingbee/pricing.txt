@@ -1,0 +1,54 @@
+Pricing - ScrapingBee Web Scraping API 
+ Pricing Documentation Product HTML API Features Core 
+ AI Data Extraction Extract structured data via AI 
+ Markdown Scraper Get any page as clean Markdown 
+ Screenshots Capture full-page screenshots via API 
+ JavaScript Scenario Click, scroll and type before scraping 
+ CSS/XPath Data Extraction Target exact elements with selectors 
+ View all Developer tools and integrations 
+ CLI Scrape straight from your terminal 
+ MCP Server Connect AI assistants to ScrapingBee 
+ n8n Automate scraping in n8n workflows 
+ Make Add scraping to Make scenarios 
+ Claude Code Use ScrapingBee inside Claude Code 
+ Codex Use ScrapingBee inside Codex 
+ Cursor Scrape without leaving Cursor 
+ View all integrations Dedicated Scraper APIs 
+ Google API Fetch search results into JSON 
+ Employee Search API Turn prompts into employee data 
+ Fast Search API Fetch sub-second web search results 
+ ChatGPT API Collect structured ChatGPT responses 
+ Gemini API Query Gemini for RAG-ready citations 
+ Amazon API Scrape product details and reviews 
+ Walmart API Pull store inventory and pricing data 
+ YouTube API Grab video data and transcripts 
+ View all FAQ Blog Resources Tutorials Knowledge Base Login Sign Up Simple, transparent pricing. Cancel anytime, no questions asked! Standard 
+ Enterprise API Credits 
+ Concurrent requests 
+ JavaScript rendering 
+ Rotating & Premium Proxies 
+ Geotargeting 
+ Screenshots & Extraction Rules 
+ Dedicated Scraping APIs 
+ Priority Email Support Dedicated Account Manager Team Management 
+ Hobby 
+ $19 /mo 75,000 25 - - - Try now Freelance 
+ $49 /mo 250,000 50 - - - Try now Recommended 
+ Startup 
+ $99 /mo 1,000,000 100 - - - Try now Recommended 
+ Business 
+ $249 /mo 3,000,000 200 Try now Recommended 
+ Business + 
+ $599 /mo 8,000,000 400 Try now Recommended 
+ Enterprise 14 
+ $999 /mo 14,000,000 500 Try now Recommended 
+ Enterprise 24 
+ $1,599 /mo 24,000,000 600 Try now Recommended 
+ Enterprise 41 
+ $2,399 /mo 41,000,000 700 Try now Recommended 
+ Enterprise 69 
+ $3,599 /mo 69,000,000 800 Try now Recommended 
+ Enterprise 120 
+ $5,799 /mo 120,000,000 900 Try now All prices are exclusive of VAT. Need more monthly credits or higher concurrency? Talk to Product Expert Not sure which plan you need? Try ScrapingBee with 1,000 free API credits. Sign up 
+ No credit card required. Ready to get started? Get access to 1,000 free scraper API credits, no credit card required! Try ScrapingBee for Free ScrapingBee API handles headless browsers and rotates proxies for you. Company Blog Rebranding Affiliate Program Tools Curl converter Legal Terms of Service Privacy Policy GDPR Compliance Data Processing Agreement Cookie Policy Acceptable Use Policy Legal Notices Product Pricing Status How we compare Alternative to Firecrawl Alternative to Apify Alternative to Tavily Alternative to Exa Scrapers Amazon Scraper ChatGPT Scraper Walmart Scraper Google API HomeDepot Scraper Costco Scraper Expedia Scraper Google Jobs Scraper Google News Scraper Google Play Scraper All Scrapers No code web scraping No code web scraping No code competitor monitoring Learning Web Scraping Web scraping questions A guide to Web Scraping without getting blocked Web Scraping Tools Best Free Proxies Best Mobile proxies Web Scraping vs Web Crawling Rotating and residential proxies Web Scraping with Python Web Scraping with PHP Web Scraping with Java Web Scraping with Ruby Web Scraping with NodeJS Web Scraping with R Web Scraping with C# Web Scraping with C++ Web Scraping with Elixir Web Scraping with Perl Web Scraping with Rust Web Scraping with Go Copyright © 2026 Made in France Auto-mode picks the configuration that successfully scrapes your page · 
+ Try it now

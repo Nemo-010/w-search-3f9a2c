@@ -1,0 +1,384 @@
+# Octoparse Docs
+
+> Developer documentation for Octoparse MCP Server and OpenAPI integrations.
+
+## Home
+
+### GET STARTED
+
+- [Octoparse documentation](https://www.octoparse.com/docs/en/overview.md): No-code scraping, Cloud Extraction, AI integrations, OpenAPI automation, and practical web scraping guides.
+
+### CHANGELOG
+
+- [Octoparse 10.2 release notes](https://www.octoparse.com/docs/en/changelog/august-2026.md): Octoparse 10.2 introduces AI Field Fixer, Checkpoint resume, the Smart Decision Engine, and improved Cookie consent handling.
+- [July 2026 release notes](https://www.octoparse.com/docs/en/changelog/july-2026.md): July 2026 Octoparse CLI updates improve blocked-page detection, candidate selection, row-limit completion, and reliable process exit.
+- [April 2026 release notes](https://www.octoparse.com/docs/en/changelog/april-2026.md): April 2026 updates and improvements to Octoparse integrations.
+
+## Academy
+
+### GET STARTED
+
+- [Octoparse academy](https://www.octoparse.com/docs/en/academy/index.md): Web scraping explained — concepts, mechanics, use cases, and site-specific guides for the no-code era.
+
+### WEB SCRAPING BASICS
+
+- [What is web scraping?](https://www.octoparse.com/docs/en/academy/what-is-web-scraping.md): Web scraping is the automated extraction of structured data from websites. Learn how it works, where it's used, and how it differs from APIs and manual collection.
+- [What is no-code web scraping?](https://www.octoparse.com/docs/en/academy/what-is-no-code-web-scraping.md): No-code web scraping lets non-developers extract data from websites visually — without writing Python, XPath, or HTTP code. Learn the model, capabilities, and limits.
+- [What is AI web scraping?](https://www.octoparse.com/docs/en/academy/what-is-ai-web-scraping.md): AI web scraping uses AI to detect page structure, generate matching rules, and extract data from raw HTML — more resilient than rule-based scrapers.
+- [AI vs traditional web scraping](https://www.octoparse.com/docs/en/academy/ai-vs-traditional-scraping.md): When AI-driven scraping beats selector-based scraping, when it doesn't, and how to combine the two. Cost, accuracy, maintenance, and reliability compared.
+- [Web scraping vs web crawling](https://www.octoparse.com/docs/en/academy/web-scraping-vs-crawling.md): Scraping and crawling are often confused but solve different problems. Learn the technical and intent-level differences, and when to use each.
+- [Is web scraping legal?](https://www.octoparse.com/docs/en/academy/is-web-scraping-legal.md): Web scraping legality depends on what you scrape, how, and where. An overview of public data, ToS, copyright, GDPR/CCPA, court cases, and how to scrape compliantly.
+
+### HOW WEB SCRAPERS WORK
+
+- [Anatomy of a web scraper](https://www.octoparse.com/docs/en/academy/anatomy-of-a-web-scraper.md): Every web scraper runs the same pipeline: fetch, render, locate, extract, navigate, and store. A map of the stages and how they fit together.
+
+#### Rendering
+
+- [Scraping JavaScript-rendered pages](https://www.octoparse.com/docs/en/academy/scrape-javascript-pages.md): Modern sites render content client-side with React, Vue, or vanilla JS. Why basic HTTP scrapers fail, and three fixes: rendering in a real browser, API interception, and SSR detection.
+- [The browser runtime landscape](https://www.octoparse.com/docs/en/academy/browser-runtime-landscape.md): A field guide to the browser runtimes used for scraping — Puppeteer, Playwright, Selenium, cloud APIs, and Octoparse as the headed alternative.
+- [Headed vs headless browsers](https://www.octoparse.com/docs/en/academy/headed-vs-headless-browsers.md): Headless browsers dominate the scraping ecosystem, but Octoparse and similar platforms run headed by design. Why the choice matters, and which fits when.
+
+#### Navigating
+
+- [How to handle pagination](https://www.octoparse.com/docs/en/academy/handle-pagination.md): Learn how scrapers move beyond page one: numbered pages, next links, infinite scroll, load-more buttons, API offsets, and cursor-based pagination.
+- [Scraping behind login walls](https://www.octoparse.com/docs/en/academy/scraping-login-walls.md): How scrapers handle authenticated pages with cookies, session reuse, browser-based login, MFA limits, and account-safe operating practices.
+
+#### Extracting
+
+- [XPath & CSS selectors](https://www.octoparse.com/docs/en/academy/xpath-css-selectors.md): CSS selectors and XPath both locate elements on a page, but they break differently. How each works, when to pick which, and how to write selectors that hold up.
+- [Refining data with regex](https://www.octoparse.com/docs/en/academy/refining-data-with-regex.md): Raw scraped values arrive messy — prices with symbols, phones in three formats, dates that vary by page. The regex patterns that clean them, and how Octoparse generates them with AI.
+
+#### Running at scale
+
+- [Cloud web scraping explained](https://www.octoparse.com/docs/en/academy/cloud-web-scraping.md): Why web scrapers move to the cloud: unattended runs, subtask parallelism, scheduling, resource orchestration, and network infrastructure.
+- [Browser fingerprinting](https://www.octoparse.com/docs/en/academy/browser-fingerprinting.md): Anti-bot systems identify scrapers by the combined signature of canvas, WebGL, fonts, UA, and dozens of other signals. What's tracked, why scrapers leak, and how to manage the fingerprint.
+- [Human-like scraping](https://www.octoparse.com/docs/en/academy/human-like-scraping.md): Even a clean fingerprint gets a scraper flagged if the mouse moves in straight lines. The behavioral tells that mark a scraper as a bot, and how to remove them.
+- [Bypassing CAPTCHA & Cloudflare](https://www.octoparse.com/docs/en/academy/captcha-and-cloudflare.md): How CAPTCHA challenges and Cloudflare-style bot defenses work, why they appear during scraping, and which layers help reduce or resolve them.
+- [Rotating proxies for web scraping](https://www.octoparse.com/docs/en/academy/rotating-proxies.md): Why scrapers use proxy rotation, how datacenter, residential, ISP, and mobile proxies differ, and how to choose rotation strategies that match the target site.
+
+### USE CASES
+
+- [Lead generation with web scraping](https://www.octoparse.com/docs/en/academy/lead-generation.md): How sales and marketing teams use web scraping to build targeted lead lists: sources, fields, enrichment, validation, and compliance safeguards.
+- [Price monitoring with web scraping](https://www.octoparse.com/docs/en/academy/price-monitoring.md): How retailers, brands, and marketplaces use web scraping to track competitor prices, normalize SKUs, detect changes, and trigger alerts.
+- [Real estate data extraction](https://www.octoparse.com/docs/en/academy/real-estate-data.md): How real estate teams collect listing, rental, sold, agent, and neighborhood data from public portals while handling freshness, duplicates, and compliance.
+- [E-commerce data collection](https://www.octoparse.com/docs/en/academy/ecommerce-data.md): How teams collect product catalogs, prices, reviews, ratings, seller data, and inventory signals from e-commerce sites and marketplaces.
+- [Social media data mining](https://www.octoparse.com/docs/en/academy/social-media-data.md): How teams collect public social posts, profiles, engagement, and trend signals while respecting platform limits, privacy, and API alternatives.
+- [Data collection for AI and LLMs](https://www.octoparse.com/docs/en/academy/ai-data-collection.md): How to collect data for AI and LLM training, fine-tuning, and RAG with web scraping: choosing sources, the fields to keep, the collection flow, and quality, license, and compliance design.
+- [GEO and AI visibility research](https://www.octoparse.com/docs/en/academy/geo-ai-visibility-research.md): Learn how to run GEO research: build prompt sets, test AI platforms, measure brand mentions and citations, and prioritize visibility gaps.
+- [Data collection for market and competitive research](https://www.octoparse.com/docs/en/academy/market-research.md): How to collect data for market and competitive research with web scraping: the types of data to gather, choosing sources, designing point-in-time monitoring, extending to competitor analysis, and what to watch for.
+- [Data collection for review and sentiment analysis](https://www.octoparse.com/docs/en/academy/review-sentiment-analysis.md): How to collect review data for sentiment analysis with web scraping: the data to gather, choosing sources, designing collection, extending to analysis, and copyright and personal-data considerations.
+
+### GUIDES
+
+- [How to scrape Amazon](https://www.octoparse.com/docs/en/academy/scrape-amazon.md): A practical guide to extracting Amazon product data: search results, product pages, reviews, variants, prices, seller data, and anti-bot considerations.
+- [How to scrape LinkedIn](https://www.octoparse.com/docs/en/academy/scrape-linkedin.md): What is technically and operationally involved in collecting public LinkedIn profiles, company pages, jobs, and posts, with legal and ethical safeguards.
+- [How to scrape Google Maps](https://www.octoparse.com/docs/en/academy/scrape-google-maps.md): How to extract local business listings from Google Maps: search inputs, listing fields, place details, reviews, map splitting, and lead enrichment.
+- [How to scrape Yelp](https://www.octoparse.com/docs/en/academy/scrape-yelp.md): How to extract Yelp business listings, profiles, reviews, ratings, categories, and contact signals for local research and review analysis.
+- [How to scrape Tabelog](https://www.octoparse.com/docs/en/academy/scrape-tabelog.md): Scrape Tabelog, Japan's largest restaurant review site: the data you can collect, how to navigate search and detail pages, and how to handle JavaScript-rendered content and anti-bot controls.
+- [How to scrape Rakuten Ichiba](https://www.octoparse.com/docs/en/academy/scrape-rakuten.md): Scrape Rakuten Ichiba, Japan's largest marketplace: the data fields you can collect, how to navigate search to product and review pages, handling JavaScript-loaded content and pagination, and how to collect it with Octoparse.
+
+## Platform
+
+### GET STARTED
+
+- [What is Octoparse?](https://www.octoparse.com/docs/en/platform/what-is-octoparse.md): Octoparse is a no-code web data extraction platform built for analysts, growth teams, and operations people who need structured data from websites — without writing scrapers from scratch.
+- [Platform capabilities](https://www.octoparse.com/docs/en/platform/tools-and-services.md): Explore the main capabilities of the Octoparse platform, from task building and Cloud Extraction to anti-blocking, monitoring, and export.
+
+### SOLUTIONS
+
+- [GEO and AI visibility monitoring](https://www.octoparse.com/docs/en/solutions/geo-ai-visibility-monitoring.md): Use Octoparse to collect AI responses, brand mentions, competitor positions, and citations for controlled, repeatable GEO analysis.
+- [Competitor price and stock monitoring](https://www.octoparse.com/docs/en/solutions/competitor-price-stock-monitoring.md): Build a competitor price and stock monitoring workflow in Octoparse, from selecting a template to scheduling runs and syncing results to Google Sheets.
+- [Refresh a local business directory](https://www.octoparse.com/docs/en/solutions/local-business-directory-refresh.md): Use Octoparse to refresh a local business directory on a schedule, then deliver deduplicated, filterable records to Google Sheets.
+
+### TASKS
+
+- [Auto-detect](https://www.octoparse.com/docs/en/platform/auto-detect.md): Use Octoparse AI to detect lists, fields, and page structure, generate a starting workflow, and refine extracted fields with natural language.
+- [AI Field Fixer](https://www.octoparse.com/docs/en/platform/field-fixer.md): Use AI Field Fixer to clean and format extracted data, name fields from their content, or update field names and XPath expressions in batches with natural language.
+
+#### Templates
+
+- [Templates](https://www.octoparse.com/docs/en/platform/templates/overview.md): Learn the basics of Octoparse templates and how they help you collect data from supported websites without building a task from scratch.
+- [Find and evaluate a template](https://www.octoparse.com/docs/en/platform/templates/find-and-evaluate.md): Find an Octoparse template by website or business need, then check its inputs, output fields, and sample results before running it.
+- [Ways to use an Octoparse template](https://www.octoparse.com/docs/en/platform/templates/use-across-interfaces.md): Compare how Octoparse templates work on the website, desktop app, CLI, MCP, and API, including the run modes available through each interface.
+- [Template industries and use cases](https://www.octoparse.com/docs/en/platform/templates/industries-and-use-cases.md): Explore Octoparse templates for ecommerce, lead generation, social media, real estate, jobs, travel, and news, with examples of the data they collect.
+- [Template access and pricing](https://www.octoparse.com/docs/en/platform/templates/pricing-and-plan-access.md): How access levels determine which templates you can use, what your subscription covers, and how additional template fees are calculated.
+- [Request a custom template](https://www.octoparse.com/docs/en/platform/templates/custom-services.md): Request an Octoparse template for a new website or different data needs. Learn what to include in your request and how the team reviews it.
+- [Troubleshoot template tasks](https://www.octoparse.com/docs/en/platform/templates/troubleshooting.md): Resolve common Octoparse template issues, including invalid inputs, empty results, missing fields, incomplete data, and differences between run modes.
+
+### TASK RUNNING
+
+- [Local vs Cloud Extraction](https://www.octoparse.com/docs/en/platform/local-vs-cloud.md): Compare Octoparse local and Cloud Extraction by control, data handling, scalability, scheduling, cost, and interruption recovery.
+- [Scraping browsers](https://www.octoparse.com/docs/en/platform/scraping-browsers.md): Choose the Octoparse browser mode that fits a task, then validate page access and extracted data in the applicable run environment.
+- [Schedules](https://www.octoparse.com/docs/en/platform/schedules.md): Schedule Octoparse tasks automatically and manage recurring cloud or local runs, runtime limits, frequency, and reliability.
+
+#### Local Extraction
+
+- [Local Extraction](https://www.octoparse.com/docs/en/platform/local-extraction.md): Run Octoparse tasks on your own computer for direct control over the execution environment, sessions, and collected data.
+- [Smart Decision Engine](https://www.octoparse.com/docs/en/platform/smart-decision-engine.md): Let Octoparse recommend an execution browser for a local task and switch to an alternative when the runner stops unexpectedly.
+- [Checkpoint resume](https://www.octoparse.com/docs/en/platform/checkpoint-resume.md): Resume a supported Octoparse local run from saved progress instead of rerunning completed work from the beginning.
+
+#### Cloud Extraction
+
+- [Cloud Extraction](https://www.octoparse.com/docs/en/platform/cloud-extraction.md): Understand what Octoparse Cloud Extraction does, when to use it, and how it supports unattended, recurring, and scalable data scraping.
+- [How cloud tasks are split into subtasks](https://www.octoparse.com/docs/en/platform/cloud-task-splitting.md): Learn which Octoparse task structures can be split into subtasks, how cloud nodes run them, and how to improve parallel data scraping.
+- [Cloud resources and queues](https://www.octoparse.com/docs/en/platform/cloud-resources-and-queues.md): Understand how Octoparse assigns cloud nodes to tasks and subtasks, why cloud runs queue, and how resource allocation affects speed and throughput.
+- [Cloud run status](https://www.octoparse.com/docs/en/platform/cloud-run-status.md): Understand cloud run statuses and when Octoparse data is ready to read or export.
+- [Schedule cloud runs](https://www.octoparse.com/docs/en/platform/cloud-schedules.md): Schedule Octoparse cloud runs by frequency, time zone, task group, and reusable settings, then monitor the next run, queues, overlaps, and failures.
+- [Incremental data scraping](https://www.octoparse.com/docs/en/platform/incremental-data-scraping.md): Use incremental scraping to revisit only new or changed website URLs instead of scraping the same input repeatedly.
+
+### MONITOR AND RECOVER
+
+- [Monitor cloud runs](https://www.octoparse.com/docs/en/platform/monitor-cloud-runs.md): Use Cloud Run Details to monitor Octoparse cloud runs, inspect data and subtasks, diagnose CAPTCHA and failures, and verify recent results before export.
+- [Logs & event tracking](https://www.octoparse.com/docs/en/platform/logs-and-events.md): Use task events, screenshots, and output checks to diagnose Octoparse access failures and verify a recovery.
+
+### AUTOMATE
+
+- [Automate cloud data exports](https://www.octoparse.com/docs/en/platform/automate-cloud-data-exports.md): Automatically export Cloud Data to files, databases, Google Sheets, cloud storage, or your own systems.
+
+### ANTI-BLOCKING
+
+- [Anti-blocking overview](https://www.octoparse.com/docs/en/platform/anti-blocking-overview.md): Diagnose website-access failures and choose the smallest Octoparse configuration change that can improve a task's reliability.
+- [Proxies and IP rotation](https://www.octoparse.com/docs/en/platform/proxy.md): Choose an Octoparse or custom proxy, select a location, configure IP rotation, and verify whether it improves a task's access and data quality.
+- [Cloud IP pools](https://www.octoparse.com/docs/en/platform/cloud-ip-pools.md): Select an available Cloud IP Pool, test regional behavior, and distinguish cloud-region selection from paid proxy traffic.
+- [User-Agent and browser modes](https://www.octoparse.com/docs/en/platform/user-agent-and-browser-modes.md): Choose a User-Agent or Local-run browser, and use Browse Mode or Local Extraction to handle permitted interactive steps.
+- [CAPTCHA handling](https://www.octoparse.com/docs/en/platform/captcha-handling.md): Use a supported manual or automatic CAPTCHA option, then confirm the expected page and data before expanding the run.
+- [Cloudflare verification](https://www.octoparse.com/docs/en/platform/cloudflare-verification.md): Learn what Cloudflare Turnstile is, when Octoparse can handle it automatically, and how to confirm that the page and data load correctly.
+- [Auto-login, cookies, and sessions](https://www.octoparse.com/docs/en/platform/auto-login-cookies.md): Use Octoparse Auto Login and cookie controls to test and maintain permitted, session-dependent task workflows.
+- [Waits, timeouts, and retries](https://www.octoparse.com/docs/en/platform/waits-timeouts-retries.md): Use Octoparse waits, timeouts, and action recovery to make a task more reliable on slow or asynchronous pages.
+- [Troubleshoot access and blocking](https://www.octoparse.com/docs/en/platform/troubleshoot-access-and-blocking.md): Diagnose common Octoparse access failures with evidence, targeted fixes, and data validation.
+
+## OpenAPI
+
+### API REFERENCE
+
+- [Octoparse OpenAPI](https://www.octoparse.com/docs/en/api-reference/index.md): Octoparse OpenAPI reference for authentication, task management, Cloud Extraction, and data export.
+
+#### AgentTools API
+
+- [Search Templates](https://www.octoparse.com/docs/en/api-reference/agenttools-api/search-templates.md): Search Octoparse scraping templates and inspect their input schema before running executeTask.
+- [Execute Task](https://www.octoparse.com/docs/en/api-reference/agenttools-api/execute-task.md): Create and start a scraping task from an AgentTools template.
+- [Export Data](https://www.octoparse.com/docs/en/api-reference/agenttools-api/export-data.md): Check export status and retrieve export metadata for an AgentTools task.
+- [Search Tasks](https://www.octoparse.com/docs/en/api-reference/agenttools-api/search-tasks.md): Search existing Octoparse tasks before starting, stopping, or exporting them through AgentTools.
+- [Start Or Stop Task](https://www.octoparse.com/docs/en/api-reference/agenttools-api/start-or-stop-task.md): Start or stop an existing Octoparse task through AgentTools.
+
+#### Access Token
+
+- [Obtain a New Token](https://www.octoparse.com/docs/en/api-reference/access-token/obtain-a-new-token.md): **Required plan:** All users.
+- [Refresh Token](https://www.octoparse.com/docs/en/api-reference/access-token/refresh-token.md): **Required plan:** All users.
+
+#### Task Group
+
+- [Get Task Group Information](https://www.octoparse.com/docs/en/api-reference/task-group/get-task-group-information.md): **Required plan:** Standard, Professional, or Enterprise.
+
+#### Task
+
+- [Search Task](https://www.octoparse.com/docs/en/api-reference/task/search-task.md): **Required plan:** Standard, Professional, or Enterprise.
+- [Get Task Performance Analytics](https://www.octoparse.com/docs/en/api-reference/task/get-task-performance-analytics.md): **Required plan:** Standard, Professional, or Enterprise.
+- [Get Action Parameters](https://www.octoparse.com/docs/en/api-reference/task/get-action-parameters.md): **Required plan:** Professional or Enterprise.
+- [Update Task Parameters](https://www.octoparse.com/docs/en/api-reference/task/update-task-parameters.md): **Required plan:** Professional or Enterprise.
+- [Duplicate Task](https://www.octoparse.com/docs/en/api-reference/task/duplicate-task.md): **Required plan:** Standard, Professional, or Enterprise.
+- [Move Task](https://www.octoparse.com/docs/en/api-reference/task/move-task.md): **Required plan:** Standard, Professional, or Enterprise.
+- [Update Action Parameters](https://www.octoparse.com/docs/en/api-reference/task/update-action-parameters.md): **Required plan:** Professional or Enterprise.
+- [Update Loop Item List](https://www.octoparse.com/docs/en/api-reference/task/update-loop-item-list.md): **Required plan:** Professional or Enterprise.
+- [Update Task URLs](https://www.octoparse.com/docs/en/api-reference/task/update-task-urls.md): **Required plan:** Professional or Enterprise.
+
+#### Cloud Extraction
+
+- [Start Task](https://www.octoparse.com/docs/en/api-reference/cloud-extraction/start-task.md): **Required plan:** Professional or Enterprise.
+- [Stop Task](https://www.octoparse.com/docs/en/api-reference/cloud-extraction/stop-task.md): **Required plan:** Professional or Enterprise.
+- [Get Task Status](https://www.octoparse.com/docs/en/api-reference/cloud-extraction/get-task-status.md): **Required plan:** Professional or Enterprise.
+- [Get Task Status V2](https://www.octoparse.com/docs/en/api-reference/cloud-extraction/get-task-status-v2.md): **Required plan:** Professional or Enterprise.
+- [Get Subtask Status](https://www.octoparse.com/docs/en/api-reference/cloud-extraction/get-subtask-status.md): **Required plan:** Professional or Enterprise.
+- [Start Subtasks](https://www.octoparse.com/docs/en/api-reference/cloud-extraction/start-subtasks.md): **Required plan:** Professional or Enterprise.
+- [Stop Subtasks](https://www.octoparse.com/docs/en/api-reference/cloud-extraction/stop-subtasks.md): **Required plan:** Professional or Enterprise.
+
+#### Data
+
+- [Get Non-Exported Data](https://www.octoparse.com/docs/en/api-reference/data/get-non-exported-data.md): **Required plan:** Standard, Professional, or Enterprise.
+- [Mark Data as Exported](https://www.octoparse.com/docs/en/api-reference/data/mark-data-as-exported.md): **Required plan:** Standard, Professional, or Enterprise.
+- [Get Data by Offset](https://www.octoparse.com/docs/en/api-reference/data/get-data-by-offset.md): **Required plan:** Standard, Professional, or Enterprise.
+- [Remove Data](https://www.octoparse.com/docs/en/api-reference/data/remove-data.md): **Required plan:** Standard, Professional, or Enterprise.
+- [Get Data From a Designated Batch by Offset](https://www.octoparse.com/docs/en/api-reference/data/get-data-from-a-designated-batch-by-offset.md): **Required plan:** Standard, Professional, or Enterprise.
+
+## CLI
+
+### OVERVIEW
+
+- [Octoparse CLI](https://www.octoparse.com/docs/en/cli.md): Use Octoparse CLI to create, run, manage, schedule, inspect, automate, and export Octoparse tasks in local or cloud environments.
+
+### GET STARTED
+
+- [Installation](https://www.octoparse.com/docs/en/cli/quick-start/installation.md): Install Octoparse CLI with npm, check Node.js and platform requirements, and verify the local engine, Chrome, and user-browser readiness.
+- [Get an API key and log in](https://www.octoparse.com/docs/en/cli/quick-start/get-api-key-and-log-in.md): Authenticate Octoparse CLI with OAuth or an API key. Use an environment variable or stdin for CI and automated environments.
+- [Run your first Octoparse CLI task](https://www.octoparse.com/docs/en/cli/quick-start/run-your-first-task.md): Find and validate an Octoparse task, run a limited local extraction, inspect collected rows, and export the result with a short CLI workflow.
+
+### CREATE TASKS
+
+- [Create tasks from a URL](https://www.octoparse.com/docs/en/cli/guides/detect.md): Use octoparse detect to inspect a URL, select a data region, and generate a local task file. Supports automatic, manual, and AI agent workflows.
+- [Create tasks from templates](https://www.octoparse.com/docs/en/cli/guides/templates.md): Search the Octoparse template catalog, inspect normalized parameters, and create, preview, or update template-based tasks from the CLI.
+
+### TASKS AND RUNS
+
+- [Manage tasks and task groups](https://www.octoparse.com/docs/en/cli/guides/tasks-and-groups.md): List, inspect, copy, rename, move, delete, and validate Octoparse tasks, then create and manage task groups from the command line.
+- [Choose a browser mode](https://www.octoparse.com/docs/en/cli/guides/browser-modes.md): Choose independent Chrome or a signed-in Chrome or Edge profile, configure selection priority, and verify Octoparse CLI browser readiness.
+- [Run tasks locally](https://www.octoparse.com/docs/en/cli/guides/local-runs.md): Run Octoparse tasks locally, choose a browser, stream JSONL events, detach execution, control active runs, inspect history, and export results.
+- [Run and schedule cloud tasks](https://www.octoparse.com/docs/en/cli/guides/cloud-runs-and-schedules.md): Start, stop, inspect, and schedule Octoparse Cloud Extraction tasks from the CLI, including history, frequency types, and confirmation controls.
+
+### DATA
+
+- [Inspect and export data](https://www.octoparse.com/docs/en/cli/guides/data.md): Inspect local or Cloud Extraction history, count and preview rows, and export Octoparse task data as XLSX, CSV, HTML, JSON, or XML.
+
+### AUTOMATION
+
+- [Automate Octoparse CLI](https://www.octoparse.com/docs/en/cli/guides/automation.md): Use Octoparse CLI in CI, scripts, and AI agents with capabilities discovery, JSON output, environment credentials, and exit codes.
+- [Output and exit codes](https://www.octoparse.com/docs/en/cli/reference/output-and-exit-codes.md): Understand Octoparse CLI JSON output, JSONL event streams, stdout, stderr, exit codes, and JSONL event types for automation.
+
+### REFERENCE
+
+- [Octoparse CLI command reference](https://www.octoparse.com/docs/en/cli/reference/command-cheatsheet.md): Quick syntax index for Octoparse CLI authentication, browser, task, template, detect, local run, cloud schedule, automation, and data commands.
+- [Troubleshooting Octoparse CLI](https://www.octoparse.com/docs/en/cli/reference/troubleshooting.md): Fix Octoparse CLI authentication, Chrome, browser profile, task execution, blocked-page detection, Linux arm64, and data export errors.
+
+## MCP Server
+
+### GET STARTED
+
+- [Octoparse MCP Server](https://www.octoparse.com/docs/en/mcp/index.md): Overview and quick start for the Octoparse MCP Server.
+- [Rate limits](https://www.octoparse.com/docs/en/mcp/rate-limits.md): Understand request limits and how to handle retry logic with response headers.
+- [Example workflow](https://www.octoparse.com/docs/en/mcp/workflow.md): A complete example — from finding a template to exporting results.
+- [Troubleshooting](https://www.octoparse.com/docs/en/mcp/troubleshooting.md): Troubleshoot common Octoparse MCP Server setup, authentication, task execution, and export issues.
+- [FAQ](https://www.octoparse.com/docs/en/mcp/faq.md): Common questions about MCP tools, task execution, and account limits.
+
+### TOOL REFERENCE
+
+- [search_templates](https://www.octoparse.com/docs/en/mcp/search-templates.md): Search for pre-built Octoparse scraping templates.
+- [execute_task](https://www.octoparse.com/docs/en/mcp/execute-task.md): Run a scraping template and retrieve results.
+- [export_data](https://www.octoparse.com/docs/en/mcp/export-data.md): Export completed task data as JSON or CSV.
+- [search_tasks](https://www.octoparse.com/docs/en/mcp/search-tasks.md): List and search existing tasks.
+- [start_or_stop_task](https://www.octoparse.com/docs/en/mcp/start-or-stop-task.md): Start or stop a cloud task by ID.
+- [redeem_coupon_code](https://www.octoparse.com/docs/en/mcp/redeem-coupon-code.md): Redeem a promotional or resource coupon code.
+
+## Data Hub
+
+### DATA HUB API
+
+- [Data Hub API](https://www.octoparse.com/docs/en/datahub/api/index.md): Discover, run, and bill Data Apps programmatically through the REST API, official client libraries, or MCP.
+- [API reference](https://www.octoparse.com/docs/en/datahub/api/reference/introduction.md): Base URL, auth, response shape, pagination, errors, time parameters, and app references for the Data Hub REST API, plus an index of endpoints by resource.
+
+#### Clients
+
+- [Python client library](https://www.octoparse.com/docs/en/datahub/api/clients/python.md): Install, initialize, map methods to endpoints, and handle errors with the official Python SDK octoparse-client.
+- [JavaScript client library](https://www.octoparse.com/docs/en/datahub/api/clients/javascript.md): Install, initialize, map methods to endpoints, and handle errors with the official JavaScript SDK octoparse-client.
+
+#### Discovery
+
+- [Platform metadata](https://www.octoparse.com/docs/en/datahub/api/reference/discovery/get-meta.md): Read deployment-level constants. Currently only the billing currency.
+- [Search Data Apps](https://www.octoparse.com/docs/en/datahub/api/reference/discovery/search-data-apps.md): Search market Data Apps by keyword and return compact cards. When authenticated, switch to your apps or apps shared with you.
+- [App detail](https://www.octoparse.com/docs/en/datahub/api/reference/discovery/get-data-app.md): Read the full machine-readable description of a Data App: input/output contracts, execution profile, pricing, examples, and call samples.
+- [App version history](https://www.octoparse.com/docs/en/datahub/api/reference/discovery/list-data-app-versions.md): List every published version of an app, newest first.
+- [App README](https://www.octoparse.com/docs/en/datahub/api/reference/discovery/get-data-app-readme.md): Read the app Markdown README.
+- [Manifest schema (JSON Schema)](https://www.octoparse.com/docs/en/datahub/api/reference/discovery/get-manifest-schema.md): Read the JSON Schema the platform uses to validate manifests.
+- [Request template variables](https://www.octoparse.com/docs/en/datahub/api/reference/discovery/get-template-variables.md): List placeholders available to api-kind app request templates.
+- [App translation locales](https://www.octoparse.com/docs/en/datahub/api/reference/discovery/list-data-app-translations.md): List which translation overlays an app has.
+- [Read a translation overlay](https://www.octoparse.com/docs/en/datahub/api/reference/discovery/get-data-app-translation.md): Read the full translation overlay for one locale, including README.
+- [Batch card translations](https://www.octoparse.com/docs/en/datahub/api/reference/discovery/lookup-translations.md): Fetch card-level translations for many apps in one locale for catalog rendering.
+
+#### Runs & Results
+
+- [Start a run](https://www.octoparse.com/docs/en/datahub/api/reference/runs/start-run.md): Start a Data App run with inputs that satisfy the input contract. Optionally wait for the result.
+- [Get a run](https://www.octoparse.com/docs/en/datahub/api/reference/runs/get-run.md): Read run state, progress, error, usage, and billing. Supports long polling.
+- [List runs](https://www.octoparse.com/docs/en/datahub/api/reference/runs/list-runs.md): List every run you started. Filter by status, app, credential, channel, kind, and time range.
+- [Cancel a run](https://www.octoparse.com/docs/en/datahub/api/reference/runs/cancel-run.md): Cancel a queued or running run. Produced records are kept.
+- [Get run records](https://www.octoparse.com/docs/en/datahub/api/reference/runs/get-run-records.md): Page through records produced by a run. Supports JSON, JSONL, CSV, and column projection.
+- [List upstream calls (debug runs)](https://www.octoparse.com/docs/en/datahub/api/reference/runs/list-upstream-calls.md): Inspect the timeline of every upstream HTTP interaction in an author debug run for troubleshooting.
+- [Get upstream call detail](https://www.octoparse.com/docs/en/datahub/api/reference/runs/get-upstream-call.md): Read the full request and response payload for one upstream call.
+
+#### Datasets
+
+- [List datasets](https://www.octoparse.com/docs/en/datahub/api/reference/datasets/list-datasets.md): List your datasets and public platform seed datasets.
+- [Dataset detail](https://www.octoparse.com/docs/en/datahub/api/reference/datasets/get-dataset.md): Read metadata for one dataset.
+- [Set retention flag](https://www.octoparse.com/docs/en/datahub/api/reference/datasets/set-dataset-retention.md): Mark a dataset for long-term retention, or clear the flag.
+- [Read dataset records](https://www.octoparse.com/docs/en/datahub/api/reference/datasets/get-dataset-records.md): Page through records in a dataset. Supports JSON, JSONL, CSV, and column projection.
+
+#### Account & Billing
+
+- [Account info](https://www.octoparse.com/docs/en/datahub/api/reference/account/get-account.md): Read the account identity for the current credential and lifetime data spend since signup.
+- [Billing aggregation](https://www.octoparse.com/docs/en/datahub/api/reference/account/get-billing.md): Sum spend over a period and break it down by day, app, or credential.
+
+#### Secrets
+
+- [List secrets](https://www.octoparse.com/docs/en/datahub/api/reference/secrets/list-secrets.md): List upstream credential secrets you stored. Returns names and masks only.
+- [Create or update a secret](https://www.octoparse.com/docs/en/datahub/api/reference/secrets/put-secret.md): Write a secret value. Overwrites an existing value on rotate.
+- [Delete a secret](https://www.octoparse.com/docs/en/datahub/api/reference/secrets/delete-secret.md): Delete a secret. Later runs of apps that reference it fail because a required env entry is missing.
+
+#### Publishing
+
+- [Validate a manifest](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/validate-manifest.md): Fully validate a manifest without writing anything. Returns issues and a preview card.
+- [Save workspace](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/save-workspace.md): Save the app's mutable draft (workspace). Invalid content can still be saved; validation results come back in the response.
+- [Get workspace](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/get-workspace.md): Read back the draft's raw text, files, revision, and validation result for continue-editing refill.
+- [Delete workspace](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/delete-workspace.md): Discard the draft. Cascades identity delete when the app was never published.
+- [Create build](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/create-build.md): Freeze the current draft into an immutable snapshot used for debug runs and publishing.
+- [List builds](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/list-builds.md): List all build snapshots and their status, newest first.
+- [Get build](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/get-build.md): Inspect one snapshot's status and failure reason. Use for polling code-type build progress.
+- [Create release](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/create-release.md): Promote a ready build to a formal version. The version number is fixed at this moment.
+- [List releases](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/list-releases.md): Author view of version history, including build id and yanked flag.
+- [Yank a release](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/yank-release.md): Yank a version: reject new runs, stop resolving as latest. Reversible.
+- [Unyank a release](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/unyank-release.md): Restore a previously yanked version.
+- [Get manifest](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/get-manifest.md): Author read-back of the latest release's full manifest (including the runtime block) for edit-and-republish.
+- [Download contract folder](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/download-contract.md): Download the latest release author contract as a zip of slot files.
+- [Update settings](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/update-settings.md): Switch an app's visibility scope, maintenance switch, and source locale. Fully reversible at any time.
+- [List grants](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/list-grants.md): View the point-to-point share grant list for an app.
+- [Grant access](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/grant-access.md): Share an app point-to-point with a specific user. Idempotent.
+- [Revoke access](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/revoke-access.md): Remove a user from the share list. Takes effect immediately.
+- [Batch grants](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/batch-grants.md): Share multiple apps with multiple users in one call. Matrix semantics, idempotent.
+- [Batch update settings](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/batch-settings.md): Apply the same settings patch to multiple apps — pause or resume a whole cluster.
+- [Save translation overlay](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/save-translation.md): Create or update a locale translation overlay for an app.
+- [Delete a translation](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/delete-translation.md): Delete the translation overlay for one locale. Idempotent.
+- [Deprecate an app](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/deprecate-data-app.md): Mark an app as no longer maintained: leave market search, reject new versions. Reversible.
+- [Undeprecate an app](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/undeprecate-data-app.md): Clear the deprecation mark so status returns to its prior track.
+- [Rename data app](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/rename-data-app.md): Change the app name (routing alias) without releasing a version or affecting in-flight runs.
+- [App stats](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/get-data-app-stats.md): Publisher stats for one app: runs, success rate, recent activity.
+- [Publisher usage](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/get-publisher-usage.md): How your published apps were called over a period: totals plus breakdowns by day, hour, app, channel, state, version, error code, or caller.
+- [Publisher latency](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/get-publisher-latency.md): Run-duration percentiles for your apps (p50 / p90 / p95 / p99 / max), optionally broken down by app or version.
+- [List publisher runs](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/list-publisher-runs.md): Every call against apps you published. Whitelisted fields only—no input, results, or caller identity.
+- [Get a publisher run](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/get-publisher-run.md): One call against an app you published. Whitelisted fields plus structured warnings.
+- [List publisher probes](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/list-publisher-probes.md): List probe/health checks configured for your apps.
+- [Latest probe results](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/get-publisher-probes-latest.md): Latest probe results for apps you publish.
+- [Assemble a contract folder](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/assemble-contract.md): Merge multi-file contract JSON into one fully validated manifest. Anonymous access allowed.
+- [Split a manifest into a contract folder](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/split-contract.md): Inverse of assemble: split one manifest into the canonical contract folder file set.
+- [Download a skill package](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/download-skill.md): Download a skill zip for coding assistants. Currently the contract-writing skill only.
+- [Publish data app (deprecated)](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/publish-data-app.md): One-shot publish sugar for api-type apps: submit and publish. Superseded by the contract import wizard and the three-step chain.
+- [Validate a .dataapp package (deprecated)](https://www.octoparse.com/docs/en/datahub/api/reference/publishing/validate-package.md): Upload a .dataapp zip for validation only. No write. Replaced by the contract path.
+
+## OpenAPI Specs
+
+- [openapi](/docs/en/api/openapi.json)
+- [refresh-token.openapi](/docs/en/api/refresh-token.openapi.json)
+- [openapi](/docs/de/datahub/api/openapi.json)
+- [openapi](/docs/de/datahub/api/openapi.yaml)
+- [openapi](/docs/en/datahub/api/openapi.json)
+- [openapi](/docs/en/datahub/api/openapi.yaml)
+- [openapi](/docs/es/datahub/api/openapi.json)
+- [openapi](/docs/es/datahub/api/openapi.yaml)
+- [openapi](/docs/fr/datahub/api/openapi.json)
+- [openapi](/docs/fr/datahub/api/openapi.yaml)
+- [openapi](/docs/it/datahub/api/openapi.json)
+- [openapi](/docs/it/datahub/api/openapi.yaml)
+- [openapi](/docs/jp/datahub/api/openapi.json)
+- [openapi](/docs/jp/datahub/api/openapi.yaml)
+- [openapi](/docs/ko/datahub/api/openapi.json)
+- [openapi](/docs/ko/datahub/api/openapi.yaml)
+
+> The links below point to documentation indexes. Follow each `/_llms/` index recursively until you reach documentation pages.
+
+## Indexes
+
+- [Spanish (24 pages)](https://www.octoparse.com/docs/_llms/es.txt): Documentation for Spanish.
+- [French (24 pages)](https://www.octoparse.com/docs/_llms/fr.txt): Documentation for French.
+- [German (24 pages)](https://www.octoparse.com/docs/_llms/de.txt): Documentation for German.
+- [Italian (24 pages)](https://www.octoparse.com/docs/_llms/it.txt): Documentation for Italian.
+- [Korean (24 pages)](https://www.octoparse.com/docs/_llms/ko.txt): Documentation for Korean.
+- [Japanese (162 pages)](https://www.octoparse.com/docs/_llms/ja.txt): Documentation for Japanese.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

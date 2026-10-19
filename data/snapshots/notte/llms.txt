@@ -1,0 +1,65 @@
+# Notte
+
+> If you are an AI coding agent, read [SKILL.md](https://notte.cc/skill.md) for executable setup instructions.
+> For the full documentation context, see [llms-full.txt](https://notte.cc/llms-full.txt).
+
+> Notte is a full-stack browser platform for AI agents. It provides cloud-hosted browser sessions, AI-powered web agents, and serverless browser functions. Everything needed to automate complex, multi-step workflows on the web. Backed by Y Combinator (W25), SOC 2 Type II certified.
+
+Key features and benefits:
+- End-to-end **AI automation platform** for the browser. Perfect for workflows without an API.
+- Automates **dynamic, stateful web tasks** such as account creation, authenticated dashboards, form submissions, and data collection.
+- Integrates with **large language models (LLMs)** to create intelligent agents that can reason and adapt in real time.
+- Optimized for **resilience**. Achieves >95% success rates even on complex, changing sites.
+- Built for **scale**. Run thousands of concurrent browser sessions in the cloud or on-premises.
+- Works seamlessly with modern, JavaScript-heavy sites and handles CAPTCHAs, authentication flows, and anti-bot protections.
+- Provides **observability tools** including logging, monitoring, and full replay of every agent run.
+- Secure by design with credential vaulting, isolated execution, and compliance-ready deployment.
+- Offers APIs and SDKs for rapid integration into your applications, pipelines, or AI workflows.
+
+## Features
+- [Browser Sessions](https://docs.notte.cc/concepts/sessions): Cloud-hosted browser instances with anti-detection, residential proxies, and CAPTCHA solving.
+- [Browser Agents](https://docs.notte.cc/concepts/agents): AI-powered agents that autonomously navigate websites using natural language instructions.
+- [Browser Functions](https://docs.notte.cc/concepts/functions): Deploy any browser automation as a serverless API endpoint with cron scheduling.
+- [Persona Identities](https://docs.notte.cc/concepts/personas): Complete digital identities (email, phone, credentials) for web automation.
+- [Secret Vaults](https://docs.notte.cc/concepts/vaults): Enterprise-grade credential management — credentials are never forwarded to LLMs.
+- [Scraping](https://docs.notte.cc/quickstart): Extract structured data from any page into typed Pydantic models.
+- [Anything API](https://anything.notte.cc): Turn any browser workflow into a production API with a single natural language call.
+- [MCP Server](https://docs.notte.cc/integrations/mcp): Use Notte from Claude Desktop, Cursor, Windsurf, and other MCP-compatible tools.
+- [Notte Browser MCP](https://notte.cc/browser-mcp): Cloud browser MCP server for Claude, Cursor, and any MCP client. Install in 60 seconds with `pip install notte-mcp`. Stealth, proxies, CAPTCHA solving, persistent sessions, and parallel browsers built in.
+- [Notte CLI](https://github.com/nottelabs/notte-cli): `brew install notte` - drive sessions, agents, scraping, and scheduled Functions from the terminal. Pairs with shell scripts, CI/CD, and terminal-driven coding agents.
+- [Notte Agent Skill](https://github.com/nottelabs/notte-skills): Official Agent Skill (notte-browser) for Claude Code, Cursor, Goose, OpenHands, Gemini CLI, OpenAI Codex, and 30+ skill-aware coding agents. Install with `npx skills add nottelabs/notte-skills`.
+
+## Resources
+- [Documentation](https://docs.notte.cc/): Full technical docs and API reference.
+- [API Reference](https://docs.notte.cc/api-reference/authentication): REST API endpoints and authentication.
+- [BrowserArena](https://www.browserarena.ai): Open-source benchmark comparing cloud browser providers on speed, reliability, and cost. Built by Notte, reproducible on Railway.
+- [Blog](https://notte.cc/blog): Articles on AI-driven automation, browser bot techniques, and best practices.
+- [GitHub](https://github.com/nottelabs/notte): Open-source components and community.
+- [OpenAPI Spec](https://api.notte.cc/openapi.json): Machine-readable API specification.
+
+## Getting started
+- [Quickstart guide](https://docs.notte.cc/quickstart): Deploy your first AI-powered browser agent in minutes.
+- [Sign up](https://console.notte.cc): Create a free account with starter credits.
+- [Pricing](https://notte.cc/pricing): Live usage rates, plan credits, and rate limits.
+- [Contact sales](https://cal.com/team/notte/demo): Talk to our team for enterprise solutions.
+
+## Compare
+- Notte vs Puppeteer: Puppeteer controls headless browsers with scripts; Notte adds AI reasoning, cloud scaling, anti-detection, and session management out of the box.
+- Notte vs Playwright: Playwright automates browsers with code; Notte enables autonomous AI agents that adapt to page changes without hardcoded selectors.
+- Notte vs RPA tools: Traditional RPA breaks on modern JavaScript-heavy sites; Notte is built for dynamic web apps with LLM-powered navigation.
+- Notte vs Zapier: Zapier connects APIs; Notte automates the actual browser for workflows that have no API.
+- Notte vs Browserbase: Both offer cloud browsers; Notte adds built-in AI agents, persona identities, secret vaults, and the Anything API for end-to-end automation.
+- Notte vs Browser-Use: Browser-Use is an open-source agent framework; Notte is a full-stack platform with managed infrastructure, stealth, proxies, and production-grade reliability.
+
+## Solutions
+- AI automation: Deploy AI agents that autonomously navigate and take action on websites — account creation, form filling, data collection.
+- Data extraction: Scrape structured data from complex, JavaScript-heavy sites with automatic anti-bot handling.
+- Competitive monitoring: Track competitor prices, availability, and updates across any website automatically.
+- Enterprise automation: Scale AI-powered web automation securely with SOC 2 Type II compliance, isolated execution, and SLA guarantees.
+
+## Company
+- [Contact us](https://cal.com/team/notte/demo): Speak with the Notte team.
+- [Slack Community](https://www.notte.cc/slack): Join the developer community.
+- [Privacy Policy](https://console.notte.cc/privacy): Our privacy policy.
+- [Terms of Service](https://console.notte.cc/terms): Our terms of service.
+- [Bug Bounty](https://docs.notte.cc/legal/bug-bounty): Responsible disclosure program.

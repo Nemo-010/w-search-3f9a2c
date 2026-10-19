@@ -1,0 +1,193 @@
+# TikHub — Social Media API & Data Infrastructure Platform
+
+## Overview
+
+TikHub is a social media data infrastructure platform designed for developers, AI agents, researchers, and enterprises. It provides programmatic access to public data from 16 social media platforms through a unified API, along with pre-collected datasets for AI training, 990+ MCP tools for AI agents, and a real-time Live Room WebSocket API.
+
+TikHub focuses on social data infrastructure for the AI era: social reasoning and emotional-intelligence datasets for physical AI, plus real-time social APIs powering AI-agent applications in quantitative trading, government & defense, and marketing. 30,000+ developers and data teams use TikHub; 300M+ requests are ingested daily. TikHub collects public data only and operates in alignment with GDPR and CCPA. TikHub supplies the tools and services that enable data access; it does not own, resell, or redistribute the underlying data itself.
+
+## Platform Coverage
+
+TikHub supports 16 social media platforms with 1,000+ API endpoints:
+
+| Platform | Data Types | Key Endpoints |
+|----------|-----------|---------------|
+| TikTok | Videos, users, comments, search, live, trending, shop, ads, creator analytics | 6 API series: Web, App V3, Creator, Analytics, Shop, Ads |
+| Douyin | Videos, users, comments, search, billboards, Xingtu creator marketplace | 6 API series: Web, App V3, Search, Billboard, Xingtu, Xigua |
+| Xigua | Videos, users, comments, recommendations | App V2 API |
+| Rednote (XHS / Xiaohongshu) | Notes, users, comments, search, trending, products | 4 API series: App, App V2, Web V2, Web V3 |
+| Instagram | Posts, reels, stories, users, comments, search | 3 API series: V1, V2, V3 |
+| Twitter/X | Tweets, users, replies, search, trending, lists | Web API |
+| YouTube | Videos, channels, comments, search, playlists, shorts | 2 API series: Web, Web V2 |
+| Threads | Posts, users, comments, search | Web API |
+| LinkedIn | Profiles, experiences, skills, posts, companies, jobs, search | 2 API series: Web, Web V2 (43+ endpoints) |
+| Reddit | Posts, comments, subreddits, users, search | App API |
+| Bilibili | Videos, users, comments, danmaku, search | 2 API series: Web, App |
+| Weibo | Posts, users, comments, hot topics, search | 3 API series: App, Web, Web V2 |
+| Kuaishou | Videos, users, comments, live rooms, hot boards, rankings | 2 API series: Web, App |
+| WeChat | Channels videos, Official Account (公众号) articles, read counts, comments | 2 API series: Channels, Official Account |
+| Lemon8 | Posts, users, comments, search | Web API |
+| Zhihu | Questions & answers, articles, users, topics | Web API |
+
+## API Architecture
+
+### Authentication
+All API requests require an API key passed via the `Authorization` header:
+```
+Authorization: Bearer YOUR_API_KEY
+```
+
+### Base URL
+```
+https://api.tikhub.io
+```
+
+### Rate Limits
+- Default: 10 requests per second (RPS), free
+- RPS plans: 20 RPS ($5/mo) up to 100 RPS ($55/mo)
+- Enterprise: 100+ RPS, custom rate limits available
+
+### Response Format
+All endpoints return JSON with consistent structure:
+```json
+{
+  "code": 200,
+  "message": "success",
+  "data": { ... }
+}
+```
+
+## MCP Integration
+
+TikHub provides 990+ Model Context Protocol (MCP) tools enabling AI agents to directly access social media data. Each platform has a dedicated MCP server at `https://mcp.tikhub.io/{platform}/mcp` (e.g. `/tiktok/mcp`, `/instagram/mcp`, `/youtube/mcp`). Discovery endpoint: `https://mcp.tikhub.io/platforms`. Health check: `https://mcp.tikhub.io/health`.
+
+### Supported Clients
+- Claude Desktop
+- VS Code (with MCP extension)
+- Cursor
+- Cline, Cherry Studio
+- LangChain / LangGraph
+- Any MCP-compatible client
+
+### Transport Methods
+- Streamable HTTP (recommended)
+- Server-Sent Events (SSE): `https://mcp.tikhub.io/{platform}/sse`
+
+### Quick Setup (Claude Desktop)
+```json
+{
+  "mcpServers": {
+    "tikhub-tiktok": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.tikhub.io/tiktok/mcp",
+        "--header",
+        "Authorization: Bearer YOUR_API_KEY"
+      ]
+    }
+  }
+}
+```
+Add one server entry per platform you need (tiktok, instagram, youtube, douyin, etc.).
+
+## Datasets
+
+Pre-collected social media datasets with 1B+ records:
+
+- **Formats**: CSV, JSON, JSONL, Parquet
+- **Quality**: Cleaned, deduplicated, licensed for commercial use
+- **Update frequency**: Refreshed continuously
+- **Use cases**: AI/ML training, RAG pipelines, fine-tuning, sentiment analysis, market research, academic studies
+- **Pricing**: From $0.40 per 1K records at volume (tiers: 100K–500K records from $150; 20M+ records from $8,000)
+
+## Live Room API
+
+Real-time livestream data via WebSocket connection:
+- Danmaku (live comments/chat)
+- Gift events
+- Likes and member events
+- PK battle data
+- Supported platforms: TikTok Live, Douyin Live
+- Per-message pricing by category (e.g. chat messages, gifts, high-value conversion events)
+
+## Browser Extension
+
+TikHub Social Media Extension (Chrome): a bring-your-own-key side-panel analytics toolkit for TikTok, Douyin, Instagram, X, and Bilibili. Collect comments, analyze public accounts, and generate one-click AI-powered trend reports (interactive HTML + raw JSON/CSV export). Open the Chrome Web Store and search "TikHub". Requires a free TikHub API key.
+
+## Marketplace (launching August 2026)
+
+TikHub Marketplace opens August 2026: developers can list their own AI agents, APIs, and data connectors. 10% commission (vs. the ~20% industry standard) — sellers keep 90% of every sale. Early submissions are reviewed now via https://tikhub.io/contact.
+
+## Pricing
+
+### Pay-as-You-Go (Primary Model)
+| Daily Volume (requests) | Price per Request |
+|-------------------------|-------------------|
+| 0 – 1,000 | $0.001 |
+| 1,000 – 5,000 | $0.0009 (-10%) |
+| 5,000 – 10,000 | $0.0008 (-20%) |
+| 10,000 – 20,000 | $0.0007 (-30%) |
+| 20,000 – 30,000 | $0.0006 (-40%) |
+| 30,000+ | $0.0005 (-50%) |
+
+Volume discounts are calculated daily and applied automatically.
+
+### Free Tier
+- $0.05 free credit (~50 requests) for new accounts, granted once per user
+- Access to test endpoints across all platforms
+- No credit card required
+
+### Enterprise
+- Minimum: $3,000 one-time or $4,500 cumulative spend
+- Custom endpoints, dedicated support, permanent fee waivers, bonus credits
+- 3–10% bonus credits on every purchase
+- B2B bank transfer available for established enterprise customers
+
+### Payment Methods
+- PayPal (guest checkout supported, no PayPal account required)
+- Alipay (daily limit $250; contact us for higher limits)
+- USDT (send the displayed amount plus network gas fee)
+
+## SDKs and Libraries
+
+### Official Python SDK
+```bash
+pip install tikhub
+```
+Repository: https://github.com/TikHub/TikHub-API-Python-SDK
+
+### REST API
+Compatible with any HTTP client in any programming language.
+
+### Workflow Automation
+- Zapier and n8n integrations with 28 ready-made actions
+- Webhooks and scheduled runs supported
+
+## Common Use Cases
+
+1. **AI Training Data**: Social reasoning and emotional-intelligence datasets for model training and fine-tuning
+2. **AI Agents**: Real-time social data tools for agents via MCP — quantitative trading signals, monitoring, research
+3. **Social Media Analytics**: Track engagement metrics, follower growth, content performance
+4. **Influencer Marketing**: Discover influencers, analyze audiences, measure ROI
+5. **Content Intelligence**: Monitor trends, analyze viral content patterns
+6. **Academic Research**: Collect public data for social media studies, sentiment analysis
+7. **E-commerce Monitoring**: Track TikTok Shop products, social commerce trends
+8. **Brand Monitoring**: Track brand mentions, sentiment, competitor activity
+
+## Technical Requirements
+
+- HTTPS required for all API calls
+- JSON request/response format
+- UTF-8 encoding
+- API key required (obtain at https://user.tikhub.io/dashboard/api after registering at https://user.tikhub.io/register)
+
+## Support and Community
+
+- **Documentation**: https://docs.tikhub.io
+- **Getting Started**: https://tikhub.io/getting-started
+- **Discord Community**: https://discord.gg/aMEAS8Xsvz (response time: 10-30 min)
+- **Email**: team@tikhub.io (response time: 1-12 hours)
+- **GitHub**: https://github.com/TikHub
+- **Twitter/X**: https://x.com/TikHubio
+- **LinkedIn**: https://www.linkedin.com/company/tikhub-io

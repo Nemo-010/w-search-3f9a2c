@@ -1,0 +1,6 @@
+# Zenodo API (zenodo) category=academic
+home=https://developers.zenodo.org/ pricing=None docs=https://developers.zenodo.org/ llms=None
+sources_ok: docs:https://developers.zenodo.org/
+--- ranked fact lines ---
+[docs] Free form keywords for this deposition. Example: ["Keyword 1", "Keyword 2"]
+[docs] The OAI-PMH API returns 50 records per page . Resumption tokens are only valid for 2 minutes . In case a token expired, you will receive a 422 Unprocessable Entity HTTP error.

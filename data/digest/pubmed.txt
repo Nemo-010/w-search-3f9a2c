@@ -1,0 +1,6 @@
+# PubMed E-utilities (pubmed) category=academic
+home=https://www.ncbi.nlm.nih.gov/books/NBK25501/ pricing=None docs=https://www.ncbi.nlm.nih.gov/books/NBK25501/ llms=None
+sources_ok: docs:https://www.ncbi.nlm.nih.gov/books/NBK25501/, llms:https://www.ncbi.nlm.nih.gov/books/NBK25501/llms.txt, llms-full:https://www.ncbi.nlm.nih.gov/books/NBK25501/docs/llms-full.txt, llms-https://www.ncbi.nlm.nih.gov/books/NBK25501/docs/llms.txt:https://www.ncbi.nlm.nih.gov/books/NBK25501/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+Checking your browser - reCAPTCHA Checking your browser before accessing www.ncbi.nlm.nih.gov ... Click here if you are not automatically redirected after 5 seconds.

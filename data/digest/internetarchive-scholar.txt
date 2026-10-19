@@ -1,0 +1,4 @@
+# Internet Archive Scholar (internetarchive-scholar) category=archive
+home=https://scholar.archive.org/ pricing=None docs=https://scholar.archive.org/ llms=None
+sources_ok: docs:https://scholar.archive.org/
+--- ranked fact lines ---

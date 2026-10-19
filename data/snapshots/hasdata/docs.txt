@@ -1,0 +1,9 @@
+Introduction - HasData Documentation Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content HasData Documentation home page Search... ⌘ K API Playground Blog Dashboard Dashboard Search... Navigation Get Started Introduction Home Web Scraping API Websites Crawler Google SERP API Google AI Mode API Google Maps API Scraper APIs Scraper Jobs CLI MCP Server OpenClaw Agent Skill Get Started Introduction Quickstart Credits & Concurrency API Status Codes Integrations CLI MCP Server OpenClaw Skill Agent Skills Basics Pricing API vs Scraper Jobs On this page Key Features of HasData Get Started Introduction HasData extracts data quickly and reliably from any source. 
+ HasData is a cloud-based web scraping API that simplifies web-scraping tasks for businesses of all sizes. It eliminates the need to manage expensive infrastructure and handle proxy rotation, headless browsers, and other challenges when scraping complex websites. 
+ ​ Key Features of HasData 
+ Reliable Data Extraction : Consistently gather accurate data, even from difficult-to-scrape sources, with 99.9% uptime. 
+ Fast Response Times : Median API latency under 2 seconds, ensuring real-time data delivery for your applications. 
+ Scalable Infrastructure : Handle millions of requests per hour with optimized infrastructure that grows with your needs. 
+ Legal Compliance : We only scrape public data, ensuring full compliance with GDPR, CCPA, and other legal frameworks. 
+ LLM-Ready Data : Data structured and optimized for integration with Large Language Models (LLMs), ready for AI-powered applications. 
+ Quickstart x github linkedin youtube Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

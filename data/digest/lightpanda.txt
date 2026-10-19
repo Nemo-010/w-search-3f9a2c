@@ -1,0 +1,23 @@
+# Lightpanda (OSS) (lightpanda) category=oss
+home=https://lightpanda.io/ pricing=https://lightpanda.io/ docs=None llms=None
+sources_ok: pricing:https://lightpanda.io/, llms:https://lightpanda.io/llms.txt, llms-full:https://lightpanda.io/llms-full.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+# Lightpanda
+> The first headless browser built from scratch for machines, not humans. Zig-native, 10× faster, 10× less memory than Chrome headless.
+## What is Lightpanda?
+Lightpanda is a headless browser engine written in Zig, purpose-built for web automation, web scraping, and AI agents. It is not a fork or patch of an existing browser — it was created from the ground up for headless operation without rendering overhead.
+## Key Capabilities
+- **10× faster** than Chrome headless for browser automation tasks
+- **10× less memory** than Chrome via zigdom (custom Zig DOM implementation)
+- **Instant startup** — sub-100ms cold start, fully embeddable
+- **CDP compatible** — native Chrome DevTools Protocol support
+- **Playwright & Puppeteer interop** — connect via `chromium.connectOverCDP()` or `puppeteer.connect()`
+- **JavaScript execution** — V8 engine with full Web API support
+- **Request interception** — pause, modify, mock, or block HTTP requests via CDP
+- **Multi-client** — handle multiple concurrent CDP connections in a single process
+- **robots.txt support** — opt-in compliance for responsible crawling
+- **Cloud offering** — managed service at `cloud.lightpanda.io` with both Lightpanda and Chrome backends
+## Quick Start
+```javascript
+// Connect Playwright to Lightpanda

@@ -1,0 +1,17 @@
+# DataForSEO (dataforseo) category=serp-scrape
+home=https://dataforseo.com/ pricing=https://dataforseo.com/pricing docs=https://docs.dataforseo.com/ llms=None
+sources_ok: pricing:https://dataforseo.com/pricing, docs:https://docs.dataforseo.com/, home:https://dataforseo.com/, llms:https://dataforseo.com/llms.txt
+--- ranked fact lines ---
+[pricing] DataForSEO accepts credit and debit cards, PayPal, and Amazon Pay. For payments of $5,000 or more, bank wire transfers and ACH payments are also available. An invoice is provided for every transaction. If you need an alternative payment method or assistance with a bank transfer, contact our 24/7 support team.
+[pricing] $50 minimum top-up
+[pricing] From $0.0006 / SERP
+[pricing] $0.012 / task + $0.00012 / item
+[pricing] From $0.0012 / task
+[pricing] From $0.00015 / page
+[pricing] From $0.012 / task
+[pricing] Yes. The minimum account top-up is $50. This amount is added to your account balance and used to pay for API requests you make. It is not a subscription fee or a monthly payment, and you can use the balance at your own pace since it has no expiration date.
+[pricing] Yes. You can sign up for free and use your $1 trial credit available to new accounts for trying our APIs in the Playground section of your DataForSEO Dashboard, via MCP in your preferred AI tool, or through our ready-made templates and integrations with platforms like n8n, Postman, Google Sheets. You can also test API integration for free using the DataForSEO Sandbox. The Sandbox provides sample r
+[pricing] Your API for data-powered LLM Brand Monitoring >> API Docs Free Tools Top 1000 Websites By Ranking Keywords Top 1000 Keywords Top 1000 Websites By Domain Rank Top 1000 Websites By Traffic Trends SERP Volatility Index DataForSEO Trends AI Visibility Tracker About us Mission and vision Our data Ukrainian Bravery Status Page AI Assistant Contact us Login
+[docs] 4. Free Unlimited Trial Info
+[pricing] Try for free
+[pricing] Can I try DataForSEO APIs for free?

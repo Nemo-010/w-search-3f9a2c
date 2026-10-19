@@ -1,0 +1,5 @@
+# RDAP (rdap) category=misc-api
+home=https://rdap.org/ pricing=None docs=https://about.rdap.org/ llms=None
+sources_ok: docs:https://about.rdap.org/, home:https://rdap.org/
+--- ranked fact lines ---
+[docs] If your organisation depends on RDAP.org, then please consider supporting it , since it's not free to operate and requires ongoing maintenance and management.

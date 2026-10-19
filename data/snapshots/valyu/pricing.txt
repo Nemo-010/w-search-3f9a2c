@@ -1,0 +1,45 @@
+Pricing | Valyu Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Valyu home page Search... ⌘ K Join Onboard your agents Get an API key Get an API key Search... Navigation Account & Pricing Pricing Home Documentation API Reference SDKs Integrations Changelog Join our Discord Cookbook GitHub Blog Getting Started Overview Quickstart Example Apps Guides & Best Practices Search Endpoint Guide Content Extraction Answer API DeepResearch Guide Workflows Beta Data Sources Use Cases Academic Finance Healthcare News Core Concepts Design Philosophy Data Coverage Compare Tavily vs Valyu Exa vs Valyu Parallel vs Valyu Account & Pricing Pricing Other Powered by Valyu Badge Design Assets Crawler On this page Plans What each plan unlocks Enterprise Per-retrieval pricing (CPM) DeepResearch pricing Get Started Account & Pricing Pricing Copy page Copy page Transparent pricing - Pay only for what you use Copy page Copy page Pay only for what you use. Transparent pricing with no hidden fees. Start free, then add a plan whenever you want premium sources at a lower cost per credit. 
+ ​ Plans 
+ Everything runs on credits . $1 = 1 credit, and a single credit balance is shared across every API - Search, Answer, Contents, and DeepResearch. Higher plans simply give you more credits per dollar and unlock specialised and proprietary data sources. 
+ Start free. New accounts get $10 in free credits ($20 with a work email), usable across every source so you can try the full catalog first. New organisations also get 50% off their first month for the first 24 hours after signup. 
+ Pay-as-you-go $10 one-time top-up · 10 credits
+ ~$1.00 per credit
+ Web search + open academic. Top up any time ($10 min). Ridiculously Cheap $29 /mo · 36 credits
+ ~$0.80 per credit
+ Adds live markets: stocks, crypto, forex, prediction markets, more preprints. Comfortably Pro Most popular 
+ $89 /mo · 130 credits
+ ~$0.70 per credit
+ Adds SEC filings, clinical trials, commodities, economic data, and more. Serious Business $449 /mo · 750 credits
+ ~$0.60 per credit
+ Full catalog: drug discovery, genomics, patents, legal, cybersecurity, and higher rate limits. Enterprise Custom · volume pricing
+ ZDR, compliance, custom SLAs, premium sources, custom indexes, dedicated support. 
+ How credits work: one shared balance powers Search, Answer, Contents, and DeepResearch. Top up any time ($10 minimum). Exceed your monthly credits and overage bills pay-as-you-go at $1.00/credit. No lock-in - upgrade, downgrade, or stay pay-as-you-go anytime. 
+ ​ What each plan unlocks 
+ All plans include web search and open academic sources (arXiv, PubMed). Plans then unlock specialised and proprietary families - and lower your cost per credit as you go. Each tier includes everything in the tiers below it. 
+ Plan Adds these source families Pay-as-you-go Web search, arXiv, PubMed Ridiculously Cheap + Stocks (US & global), crypto, forex, prediction markets (Polymarket, Kalshi), medRxiv, bioRxiv Comfortably Pro + SEC filings, insider transactions, commodities, market movers, clinical trials, drug labels, WHO health data, BLS, World Bank, ChemRxiv Serious Business + Drug discovery (ChEMBL, PubChem, Open Targets), genomics (NCBI), patents (USPTO + EPO), advanced company financials, FRED/IMF/USAspending, legal, politics, transportation, physics, cybersecurity, compliance & sanctions, automotive, environment, and Pulse signals Enterprise + Premium licensed sources, custom indexes, and bespoke data partnerships 
+ Need a source above your plan? You can request access to specific datasets without upgrading your whole plan, and during your free trial every source is available so you can test what you need first. 
+ ​ Enterprise 
+ For teams with compliance, scale, or custom-data requirements: 
+ Security & compliance Zero data retention (ZDR), compliance reviews, and custom data-handling agreements. Scale & reliability Custom SLAs and rate limits tuned to your workload. Premium data Access to premium licensed sources and custom private indexes. White-glove support Forward-deployed engineers and dedicated support to get you to production fast. 
+ Talk to sales Tell us about your use case and we’ll design a plan around it. 
+ ​ Per-retrieval pricing (CPM) 
+ Search and Answer price on CPM - cost per thousand retrievals. Set max_price to cap spend per query (sources priced above the cap are excluded, and the response returns a 206 partial-success warning). If you don’t set it, Valyu returns the best results regardless of source cost. 
+ Data source type Per 1k retrievals What you get Open databases $0.50 Full-text arXiv, PubMed, clinical trials, and more Web search $1.50 Fresh, full-text web content Financial & market data $8.00 Real-time equities, crypto, market data Proprietary databases $30-50 Licensed journals, books, premium sources 
+ Contents API charges $0.001 per successfully extracted URL, plus $0.001 if you add summarisation or structured extraction. Failed URLs are free. 
+ Answer API bills search data (CPM rates above, capped by data_max_price ) plus $12 per million tokens for AI processing. 
+ Worked examples Contents - 10 URLs, 2 failed: 8 × $0.001 = $0.008 . Answer - basic web query: ~10 results × $1.50/1k ($0.015) + ~2k tokens × $12/1M ($0.024) = ~$0.039 . Answer - academic with structured output: ~8 results × $8/1k ($0.064) + ~3k tokens × $12/1M ($0.036) = ~$0.10 . 
+ ​ DeepResearch pricing 
+ Fixed price per task - no extra search or content charges. DeepResearch plans, searches, verifies, and writes a cited report. 
+ Mode Cost Typical runtime Fast $0.10 ~5 min Standard $0.50 ~10-20 min Heavy $2.50 up to ~90 min Max $15.00 up to ~180 min 
+ Optional tools (off by default, enabled via tools ) add per-use surcharges: screenshots $0.05/URL (max 15), code execution $0.10/run, deliverables $0.10 each after the first, charts free. Failed tool calls aren’t charged, and PDF output isn’t a deliverable. 
+ Cost tracking Every completed task returns the total and an itemized breakdown. Surcharge fields are omitted when 0. { 
+ "cost" : 5.55 , 
+ "cost_breakdown" : { 
+ "task" : 5.00 , 
+ "screenshots" : 0.25 , 
+ "code_execution" : 0.10 , 
+ "deliverables" : 0.20 
+ } 
+ } 
+ ​ Get Started 
+ Try the API Free Get $10 in free credits ($20 with a work email) Documentation Integrate in under 5 minutes Answer API Guide Build AI-powered applications DeepResearch Guide Comprehensive async research Was this page helpful? Yes No Parallel vs Valyu Powered by Valyu Badge Valyu home page discord x github linkedin Product Platform Data sources Pricing Developers API status OpenAPI spec Cookbook Company valyu.ai Blog Contact discord x github linkedin Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

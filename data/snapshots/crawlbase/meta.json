@@ -1,0 +1,83 @@
+{
+ "slug": "crawlbase",
+ "name": "Crawlbase",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:12+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://crawlbase.com/pricing",
+   "status": 200,
+   "final_url": "https://crawlbase.com/pricing",
+   "content_type": "text/html;charset=utf-8",
+   "bytes": 70685,
+   "truncated": false,
+   "sha256": "9d878aa3db88178792c229f47f25b793a0a8fbf21380cec64f19472444f3927e",
+   "fetched_at": "2026-10-19T05:59:43+00:00",
+   "text_bytes": 9065
+  },
+  "docs": {
+   "url": "https://crawlbase.com/docs/",
+   "status": 200,
+   "final_url": "https://crawlbase.com/docs",
+   "content_type": "text/html;charset=utf-8",
+   "bytes": 87901,
+   "truncated": false,
+   "sha256": "714485105fe3397eb246a922d090dc5b747797eda6d57153497e927b1b81fa87",
+   "fetched_at": "2026-10-19T05:54:13+00:00",
+   "text_bytes": 7231
+  },
+  "home": {
+   "url": "https://crawlbase.com/",
+   "status": 200,
+   "final_url": "https://crawlbase.com/",
+   "content_type": "text/html;charset=utf-8",
+   "bytes": 144621,
+   "truncated": false,
+   "sha256": "8dd4108c420d3049577a68588fbce50fe0548aa0e6cb3ac845d929874b4aebf5",
+   "fetched_at": "2026-10-19T05:54:15+00:00",
+   "text_bytes": 14479
+  },
+  "llms-err-582e16": {
+   "url": "https://crawlbase.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://crawlbase.com/docs/llms.txt",
+   "content_type": "application/json",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "2b5a99fdfea704c0afb88e3dcaa0d984e646e94d81a1cc5ec62f0f1a3d08fe5e",
+   "fetched_at": "2026-10-19T05:54:15+00:00"
+  },
+  "llms": {
+   "url": "https://crawlbase.com/llms.txt",
+   "status": 200,
+   "final_url": "https://crawlbase.com/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 49573,
+   "truncated": false,
+   "sha256": "08db8480a17b474d4330d7d29d7ca594602ff95f61c58241c4316db5e501f1c5",
+   "fetched_at": "2026-10-19T05:54:16+00:00",
+   "text_bytes": 49570
+  },
+  "llms-full": {
+   "url": "https://crawlbase.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://crawlbase.com/llms-full.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 590016,
+   "truncated": false,
+   "sha256": "fc1df9e0f6efaa8e0d01a1159826b16eecf7debd810a86ad6982770cddfa1e16",
+   "fetched_at": "2026-10-19T05:54:16+00:00",
+   "text_bytes": 589258
+  },
+  "llms-err-57476b": {
+   "url": "https://docs.crawlbase.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.crawlbase.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:17+00:00"
+  }
+ }
+}

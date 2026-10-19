@@ -1,0 +1,51 @@
+{
+ "slug": "justoneapi",
+ "name": "Just One API",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:07+00:00",
+ "sources": {
+  "home": {
+   "url": "https://justoneapi.com/",
+   "status": 200,
+   "final_url": "https://justoneapi.com/en",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 203180,
+   "truncated": false,
+   "sha256": "9245f592b5e5b85ff4a80e37b945c37e8ec9fa853a4d388f6696fd51d1907dcd",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 7906
+  },
+  "llms": {
+   "url": "https://justoneapi.com/llms.txt",
+   "status": 200,
+   "final_url": "https://justoneapi.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 2818,
+   "truncated": false,
+   "sha256": "15ccb1efb9ec5a41cd9ecf34e60e739d59e7bdea747e78c70ecaf7dec7548444",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 2808
+  },
+  "llms-err-7ded4b": {
+   "url": "https://justoneapi.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://justoneapi.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 8631,
+   "truncated": false,
+   "sha256": "556244567f6b32aeb7b694a6f42774044dc473894143b81905eb5a0d57162beb",
+   "fetched_at": "2026-10-19T05:54:07+00:00"
+  },
+  "llms-https://docs.justoneapi.com/llms.txt": {
+   "url": "https://docs.justoneapi.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.justoneapi.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 148607,
+   "truncated": false,
+   "sha256": "a229e6e3896a314b3c6026a651f0f96121236e88e121ab72fcf6c156b62e6f58",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 114227
+  }
+ }
+}

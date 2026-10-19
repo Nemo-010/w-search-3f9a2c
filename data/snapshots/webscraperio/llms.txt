@@ -1,0 +1,17 @@
+# Web Scraper
+
+> Used by over 1 million people worldwide, Web Scraper provides scalable browser-based web scraping infrastructure for automated public web data extraction workflows.
+
+Web Scraper combines visual scraper creation with cloud execution, scheduling, browser rendering, proxy management, and API automation, helping teams run large-scale scraping workflows without maintaining their own scraping infrastructure.
+
+## Products
+- [Web Scraper Extension](https://webscraper.io/)
+- [Web Scraper Cloud](https://webscraper.io/)
+- [Web Scraper API](https://webscraper.io/documentation/web-scraper-cloud/api)
+- [Web Scraper Sitemap Marketplace](https://webscraper.io/marketplace)
+
+## Help
+- [Web Scraper Documentation](https://webscraper.io/documentation)
+- [Web Scraper Video Tutorials](https://webscraper.io/tutorials)
+- [Web Scraper Forum](https://forum.webscraper.io/)
+- [Web Scraper Blog](https://webscraper.io/blog)

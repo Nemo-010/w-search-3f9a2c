@@ -1,0 +1,52 @@
+{
+ "slug": "hal",
+ "name": "HAL API",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:45+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://api.archives-ouvertes.fr/docs",
+   "status": 200,
+   "final_url": "https://api.archives-ouvertes.fr/docs",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 10027,
+   "truncated": false,
+   "sha256": "35e5d6977c8f4d90e13ed82ae84924ad9b3ab3b0d7dda7fe6bc0f0ba3a3067e3",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 857
+  },
+  "llms": {
+   "url": "https://api.archives-ouvertes.fr/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://api.archives-ouvertes.fr/docs/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 10027,
+   "truncated": false,
+   "sha256": "35e5d6977c8f4d90e13ed82ae84924ad9b3ab3b0d7dda7fe6bc0f0ba3a3067e3",
+   "fetched_at": "2026-10-19T05:54:46+00:00",
+   "text_bytes": 857
+  },
+  "llms-full": {
+   "url": "https://api.archives-ouvertes.fr/docs/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://api.archives-ouvertes.fr/docs/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 10027,
+   "truncated": false,
+   "sha256": "35e5d6977c8f4d90e13ed82ae84924ad9b3ab3b0d7dda7fe6bc0f0ba3a3067e3",
+   "fetched_at": "2026-10-19T05:54:49+00:00",
+   "text_bytes": 857
+  },
+  "llms-https://api.archives-ouvertes.fr/docs/docs/llms.txt": {
+   "url": "https://api.archives-ouvertes.fr/docs/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://api.archives-ouvertes.fr/docs/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 10027,
+   "truncated": false,
+   "sha256": "35e5d6977c8f4d90e13ed82ae84924ad9b3ab3b0d7dda7fe6bc0f0ba3a3067e3",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 857
+  }
+ }
+}

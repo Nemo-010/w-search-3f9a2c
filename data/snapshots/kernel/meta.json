@@ -1,0 +1,85 @@
+{
+ "slug": "kernel",
+ "name": "Kernel",
+ "category": "browser",
+ "fetched_at": "2026-10-19T05:54:24+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.onkernel.com/pricing",
+   "status": 200,
+   "final_url": "https://www.kernel.sh/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 68277,
+   "truncated": false,
+   "sha256": "de5b31447a40c2111b6117fd6a8be4bb27f385125e189293b9327a64986feab8",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 2742
+  },
+  "docs": {
+   "url": "https://docs.onkernel.com/",
+   "status": 200,
+   "final_url": "https://www.kernel.sh/docs/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 295308,
+   "truncated": false,
+   "sha256": "220733af96040968084c554a323183a93665bdc4477647de5a15ccfe78c07eb5",
+   "fetched_at": "2026-10-19T05:54:25+00:00",
+   "text_bytes": 3289
+  },
+  "home": {
+   "url": "https://www.onkernel.com/",
+   "status": 200,
+   "final_url": "https://www.kernel.sh/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 109789,
+   "truncated": false,
+   "sha256": "953334bc47a5fb663d7c07822f22039b9293ee97f9ac8b78d593198cf947fee9",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 3455
+  },
+  "llms": {
+   "url": "https://docs.onkernel.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.kernel.sh/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 67761,
+   "truncated": false,
+   "sha256": "b0be0e096ceba3e28609e9c5b841259e1d9506aaeada254740633972d2b6f63c",
+   "fetched_at": "2026-10-19T05:54:28+00:00",
+   "text_bytes": 67707
+  },
+  "llms-full": {
+   "url": "https://www.onkernel.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.kernel.sh/docs/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 1642050,
+   "truncated": false,
+   "sha256": "2f0d5cab4e086ce908a977e9c786daa9c50c55c18d19047225c521a8b88a3c2a",
+   "fetched_at": "2026-10-19T05:54:35+00:00",
+   "text_bytes": 1640265
+  },
+  "llms-https://www.onkernel.com/llms.txt": {
+   "url": "https://www.onkernel.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.kernel.sh/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3376,
+   "truncated": false,
+   "sha256": "da56a1f6c09ffa7580bf0886f679bd2f4a20b766a316d82bc42bb3220de89373",
+   "fetched_at": "2026-10-19T05:54:33+00:00",
+   "text_bytes": 3376
+  },
+  "llms-https://www.onkernel.com/docs/llms.txt": {
+   "url": "https://www.onkernel.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.kernel.sh/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 67761,
+   "truncated": false,
+   "sha256": "b0be0e096ceba3e28609e9c5b841259e1d9506aaeada254740633972d2b6f63c",
+   "fetched_at": "2026-10-19T05:54:34+00:00",
+   "text_bytes": 67707
+  }
+ }
+}

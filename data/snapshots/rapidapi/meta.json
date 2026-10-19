@@ -1,0 +1,83 @@
+{
+ "slug": "rapidapi",
+ "name": "RapidAPI",
+ "category": "marketplace",
+ "fetched_at": "2026-10-19T05:55:01+00:00",
+ "sources": {
+  "pricing-err-14f530": {
+   "url": "https://rapidapi.com/products/hub/pricing",
+   "status": 404,
+   "final_url": "https://rapidapi.com/products/hub/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 97331,
+   "truncated": false,
+   "sha256": "5cace015c52e842ba090cffda5279c7a388590569c31c3425b09712c08fb0a3b",
+   "fetched_at": "2026-10-19T05:55:01+00:00"
+  },
+  "docs": {
+   "url": "https://docs.rapidapi.com/",
+   "status": 200,
+   "final_url": "https://docs.rapidapi.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 197254,
+   "truncated": false,
+   "sha256": "bc2c5e6a4928408938b990cd85de0e6704eca770fe3b065832d227d1556c7087",
+   "fetched_at": "2026-10-19T05:55:02+00:00",
+   "text_bytes": 1799
+  },
+  "home": {
+   "url": "https://rapidapi.com/",
+   "status": 200,
+   "final_url": "https://rapidapi.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 213031,
+   "truncated": false,
+   "sha256": "12be28f4bdf98d671deaf716345e3ddca4953935847c55e840a671b12dc6f33f",
+   "fetched_at": "2026-10-19T05:55:02+00:00",
+   "text_bytes": 7
+  },
+  "llms": {
+   "url": "https://docs.rapidapi.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.rapidapi.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 27105,
+   "truncated": false,
+   "sha256": "423832be7707645e113d345eb29e03081904fab0d98a23722c2daf0b16f74e4b",
+   "fetched_at": "2026-10-19T05:55:03+00:00",
+   "text_bytes": 27061
+  },
+  "llms-err-2ff564": {
+   "url": "https://rapidapi.com/llms.txt",
+   "status": 404,
+   "final_url": "https://rapidapi.com/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 190193,
+   "truncated": false,
+   "sha256": "d02de7fe71b1a00d560ff98b4e290cbbf743baf38c4a87775f102a794c5b19e6",
+   "fetched_at": "2026-10-19T05:55:04+00:00"
+  },
+  "llms-https://rapidapi.com/docs/llms.txt": {
+   "url": "https://rapidapi.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://rapidapi.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 219736,
+   "truncated": false,
+   "sha256": "7755524d1fcf5e8d5790456ef4c43a4dd6688fa6303950677c09c9fbea51c5ef",
+   "fetched_at": "2026-10-19T05:55:05+00:00",
+   "text_bytes": 7
+  },
+  "llms-full": {
+   "url": "https://rapidapi.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://rapidapi.com/docs/llms-full.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 219767,
+   "truncated": false,
+   "sha256": "94af2947c4f92474f350e4f0168f9b6ce4eba94a34e94e260fd36df7dba3a42b",
+   "fetched_at": "2026-10-19T05:55:05+00:00",
+   "text_bytes": 7
+  }
+ }
+}

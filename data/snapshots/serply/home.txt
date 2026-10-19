@@ -1,0 +1,156 @@
+Google Search API for AI Agents - Serply.io APIs MCP Server Pricing Blog Docs Sign in Get started for free Search infrastructure for AI applications Google search results, as clean markdown JSON markdown MCP JSON, markdown, or MCP One REST API for Google search, news, maps, scholar, and more. Take results as structured JSON, or take any page as markdown an agent can read. Proxies, retries, and CAPTCHAs are handled on our side. Get your free API key Read the docs 2,500 free credits, no card · ~900 ms average · 14 countries Or try a live search first, no signup Try it See exactly what the API returns Run a live Google search, no key needed, or browse real responses from Search, News, and Maps as API JSON or as the MCP tool output your agent reads. Google Search Google News Google Maps Query best coffee shops in chicago Location auto Device desktop Endpoint /v1/search google.com/search?q=best+coffee+shops+in+chicago best coffee shops in chicago b brian-coffee-spot.com Chicago | Brian's Coffee Spot Coffee Spots · Big Shoulders, Gold Coast · Big Shoulders, The Loop · Buzz Coffee Roaster & Baker · Café Integral, Chicago · Doughnut Vault, Canal Street · Doughnut ... t thisdarlingworld.com A Locals Guide: 20 Best Cafes in Chicago - This Darling World Best Cafes/Coffee in Chicago · 1. Coffee Lab & Roasters – Lakeview ♥ · 2. Truce ♥ · 3. Ludlow Charlingtons Coffee Shop · 4. The Wormhole Coffee ♥ · 5. The ... r reddit.com Where are the top coffee spots in the city? : r/chicagofood - Reddit Allez Cafe, Casa Cactus, Soloway, Four Letter Word, Metric, Metropolis, Hexe, and Colectivo. Jumping Bean, Foxglove, Damn Fine Coffee, Dayglow, ... c chicago.eater.com Chicago's Best Coffee Shops Chicago's Best Coffee Shops · Afro Joes Coffee & Tea · Kusanya Cafe · LVL Up Coffee · Bueno Days · Cafe Jumping Bean · Anticonquista Cafe · Overflow Coffee. t traverse-blog.com Local's Guide to the Best Coffee in Chicago - Traverse Blog Damn Fine Coffee Bar · Hero Coffee Bar · Ipsento 606 · Passion House Coffee Shop · Sawada Coffee – 112 N Green St · The Allis. t theinfatuation.com Coffee & A Light Bite - Chicago - The Infatuation The Best Bakeries In Chicago ; The Best Coffee Shops & Cafes In Chicago ; Ridman's Coffee · Coffee · Ravenswood ; Turn Back Time · Coffee · Irving Park ; The Best ... f facebook.com Must Visit Coffee Shops in Chicago: River Roux, Metric, Layla & Ringo's Save this list for your next coffee run ✨ Cafe Deko CAFE DEKO - COFFEE SHOP IN CHICAGO ✨ Postcard Postcard ✨ Paper Tiger PAPER TIGER ✨ ... f facebook.com What are the must-try coffee places in downtown Chicago? - Facebook Hexe, Thrd, and Dark Matter are top recommendations, with Blue Bottle and Ipsento also suggested for high-quality coffee. ... Omg, don't skip Dark ... m m.yelp.com Coffee Shops Chicago, IL - Last Updated October 2026 - Yelp 1. Sawada Coffee · 2. The Wormhole Coffee · 3. Arwa Yemeni Coffee · 4. Cafe Deko · 5. Truce · 6. Damn Fine Coffee Bar · 7. Oud Coffee & Cafe · 8. Nighthawk Chicago. JSON MCP [ saved October 2026 ] {
+ "results" : [
+ {
+ "position" : 1 ,
+ "title" : "Chicago | Brian's Coffee Spot" ,
+ "link" : "https://www.brian-coffee-spot.com/the-coffee-spot-guide-to/usa-canada/chicago/" ,
+ "description" : "Coffee Spots · Big Shoulders, Gold Coast · Big Shoulders, The Loop · Buzz Coffee Roaster & Baker · Café Integral, Chicago · Doughnut Vault, Canal Street · Doughnut ..." 
+ },
+ {
+ "position" : 2 ,
+ "title" : "A Locals Guide: 20 Best Cafes in Chicago - This Darling World" ,
+ "link" : "https://thisdarlingworld.com/best-cafes-in-chicago-a-locals-guide/" ,
+ "description" : "Best Cafes/Coffee in Chicago · 1. Coffee Lab & Roasters – Lakeview ♥ · 2. Truce ♥ · 3. Ludlow Charlingtons Coffee Shop · 4. The Wormhole Coffee ♥ · 5. The ..." 
+ },
+ {
+ "position" : 3 ,
+ "title" : "Where are the top coffee spots in the city? : r/chicagofood - Reddit" ,
+ "link" : "https://www.reddit.com/r/chicagofood/comments/1d8z7lm/where_are_the_top_coffee_spots_in_the_city/" ,
+ "description" : "Allez Cafe, Casa Cactus, Soloway, Four Letter Word, Metric, Metropolis, Hexe, and Colectivo. Jumping Bean, Foxglove, Damn Fine Coffee, Dayglow, ..." 
+ },
+ {
+ "position" : 4 ,
+ "title" : "Chicago's Best Coffee Shops" ,
+ "link" : "https://chicago.eater.com/maps/best-chicago-coffee-shops-map" ,
+ "description" : "Chicago's Best Coffee Shops · Afro Joes Coffee & Tea · Kusanya Cafe · LVL Up Coffee · Bueno Days · Cafe Jumping Bean · Anticonquista Cafe · Overflow Coffee." 
+ },
+ {
+ "position" : 5 ,
+ "title" : "Local's Guide to the Best Coffee in Chicago - Traverse Blog" ,
+ "link" : "https://www.traverse-blog.com/instagrammable-coffee-shop-guide-chicago/" ,
+ "description" : "Damn Fine Coffee Bar · Hero Coffee Bar · Ipsento 606 · Passion House Coffee Shop · Sawada Coffee – 112 N Green St · The Allis." 
+ },
+ {
+ "position" : 6 ,
+ "title" : "Coffee & A Light Bite - Chicago - The Infatuation" ,
+ "link" : "https://www.theinfatuation.com/chicago/perfect-for/coffee-a-light-bite" ,
+ "description" : "The Best Bakeries In Chicago ; The Best Coffee Shops & Cafes In Chicago ; Ridman's Coffee · Coffee · Ravenswood ; Turn Back Time · Coffee · Irving Park ; The Best ..." 
+ },
+ {
+ "position" : 7 ,
+ "title" : "Must Visit Coffee Shops in Chicago: River Roux, Metric, Layla & Ringo's" ,
+ "link" : "https://www.facebook.com/61565580100717/videos/%EF%B8%8F-must-visit-coffee-shops-in-chicago-save-this-list-for-your-next-coffee-run-caf/1138987212134439/" ,
+ "description" : "Save this list for your next coffee run ✨ Cafe Deko CAFE DEKO - COFFEE SHOP IN CHICAGO ✨ Postcard Postcard ✨ Paper Tiger PAPER TIGER ✨ ..." 
+ },
+ {
+ "position" : 8 ,
+ "title" : "What are the must-try coffee places in downtown Chicago? - Facebook" ,
+ "link" : "https://www.facebook.com/groups/WhatToDoInChicago/posts/4091959874423105/" ,
+ "description" : "Hexe, Thrd, and Dark Matter are top recommendations, with Blue Bottle and Ipsento also suggested for high-quality coffee. ... Omg, don't skip Dark ..." 
+ },
+ {
+ "position" : 9 ,
+ "title" : "Coffee Shops Chicago, IL - Last Updated October 2026 - Yelp" ,
+ "link" : "https://m.yelp.com/search?find_desc=Coffee+Shops&find_loc=Chicago%2C+IL" ,
+ "description" : "1. Sawada Coffee · 2. The Wormhole Coffee · 3. Arwa Yemeni Coffee · 4. Cafe Deko · 5. Truce · 6. Damn Fine Coffee Bar · 7. Oud Coffee & Cafe · 8. Nighthawk Chicago." 
+ }
+ ]
+} Real Serply response, saved October 2026. Get 2,500 free credits - no card Quickstart Your first request, in about a minute A key in a header and a GET. There is no SDK to install and no browser to run. cURL Python JavaScript Ruby curl -X GET "https://api.serply.io/v1/search/?q=google+search+api" \ 
+ -H "X-Api-Key: YOUR_API_KEY" \ 
+ -H "X-Proxy-Location: US" \ 
+ -H "X-User-Agent: desktop" import requests
+response = requests . get ( 
+ "https://api.serply.io/v1/search/?q=google+search+api" , 
+ headers = { 
+ "X-Api-Key" : "YOUR_API_KEY" , 
+ "X-Proxy-Location" : "US" , 
+ "X-User-Agent" : "desktop" , 
+ } , 
+ timeout = 30 , 
+ ) 
+response . raise_for_status ( ) 
+ for result in response . json ( ) [ "results" ] : 
+ print ( result [ "title" ] , result [ "link" ] ) const response = await fetch ( 
+ "https://api.serply.io/v1/search/?q=google+search+api" , 
+ { 
+ headers : { 
+ "X-Api-Key" : "YOUR_API_KEY" , 
+ "X-Proxy-Location" : "US" , 
+ "X-User-Agent" : "desktop" , 
+ } , 
+ } 
+ ) 
+ if ( ! response . ok ) throw new Error ( ` Serply ${ response . status } ` ) 
+ const { results } = await response . json ( ) 
+results . forEach ( ( r ) => console . log ( r . title , r . link ) ) require "net/http" 
+ require "json" 
+uri = URI ( "https://api.serply.io/v1/search/?q=google+search+api" ) 
+request = Net :: HTTP :: Get . new ( uri ) 
+request [ "X-Api-Key" ] = "YOUR_API_KEY" 
+request [ "X-Proxy-Location" ] = "US" 
+request [ "X-User-Agent" ] = "desktop" 
+response = Net :: HTTP . start ( uri . hostname , uri . port , use_ssl : true ) do | http | 
+ http . request ( request ) 
+ end 
+ JSON . parse ( response . body ) [ "results" ] . each do | result | 
+ puts " #{ result [ "title" ] } #{ result [ "link" ] } " 
+ end Model Context Protocol Give your agents live search results We host the MCP server. Point any client at api.serply.io/mcp with your API key and Claude, Cursor, or anything else that speaks MCP gets fourteen tools for searching the live web, reading Reddit discussion, and pulling pages back as markdown. Nothing to deploy, nothing to keep running. Hosted https://api.serply.io/mcp Read the MCP server docs → Claude Code Any MCP client Use it Or roll your own claude mcp add --transport http serply https://api.serply.io/mcp \ 
+ --header "X-Api-Key: YOUR_API_KEY" 
+ # That is the whole install. Nothing to deploy, nothing to keep running. 
+ # Then just ask: 
+ # 
+ # > What shipped in the httpx changelog this month? # Claude Desktop, Cursor, Windsurf - anything that speaks stdio. 
+ # mcp-remote bridges our HTTP server into a stdio client. 
+ { 
+ "mcpServers" : { 
+ "serply" : { 
+ "command" : "npx" ,
+ "args" : [ 
+ "-y" , "mcp-remote" , "https://api.serply.io/mcp" ,
+ "--header" , "X-Api-Key:YOUR_API_KEY" 
+ ] 
+ } 
+ } 
+ } > Which Python HTTP libraries shipped a release this month?
+ google_search ( query: "python http library release August 2026" ) 
+ - > 10 results
+ scrape_url ( url: "https://github.com/encode/httpx/releases" ,
+ response_type: "markdown" ) 
+ - > 4.1 kB of markdown
+ Three releases landed this month: httpx 0.29 .0 on the 3rd,
+ aiohttp 3.13 .2 on the 9th, and requests 2.33 .0 on the 11th. import { McpServer } from "@modelcontextprotocol/server" 
+ import { StdioServerTransport } from "@modelcontextprotocol/server/stdio" 
+ import * as z from "zod/v4" 
+ const KEY = process . env . SERPLY_API_KEY 
+ const headers = { "X-Api-Key" : KEY , "X-Proxy-Location" : "US" } 
+ const server = new McpServer ( { name : "serply" , version : "1.0.0" } ) 
+server . registerTool ( 
+ "search" , 
+ { 
+ description : "Search Google and return live results as JSON" , 
+ inputSchema : z . object ( { query : z . string ( ) } ) , 
+ } , 
+ async ( { query } ) => { 
+ const url = ` https://api.serply.io/v1/search/?q= ${ encodeURIComponent ( query ) } ` 
+ const { results } = await fetch ( url , { headers } ) . then ( ( r ) => r . json ( ) ) 
+ return { content : [ { type : "text" , text : JSON . stringify ( results , null , 2 ) } ] } 
+ } 
+ ) 
+server . registerTool ( 
+ "fetch_markdown" , 
+ { 
+ description : "Fetch any URL and return it as markdown the model can read" , 
+ inputSchema : z . object ( { url : z . string ( ) } ) , 
+ } , 
+ async ( { url } ) => { 
+ const res = await fetch ( "https://api.serply.io/v1/request" , { 
+ method : "POST" , 
+ headers : { ... headers , "Content-Type" : "application/json" } , 
+ body : JSON . stringify ( { url , response_type : "markdown" } ) , 
+ } ) 
+ const { content } = await res . json ( ) 
+ return { content : [ { type : "text" , text : content } ] } 
+ } 
+ ) 
+ await server . connect ( new StdioServerTransport ( ) ) 
+ // Register with: claude mcp add serply -- node /path/to/server.js Fourteen tools, live on the hosted server google_search query, num, start, proxy_location, device Organic Google results. The default reach for anything factual or recent. bing_search query, proxy_location, device A second index, plus ads and shopping ads Google does not return. google_news_search query, ceid, proxy_location, device News coverage with publisher and date. ceid picks the country edition. scrape_url url, response_type Read any public page. Ask for markdown and the nav bars never reach the model. google_scholar_search query, num, proxy_location, device Peer-reviewed papers and citations, for agents doing literature work. google_video_search query, num, proxy_location, device Video results - tutorials, demos, news clips. google_jobs_search query, proxy_location, device Postings from Google's jobs index, which aggregates LinkedIn and Indeed. amazon_product_search query, proxy_location, device Product listings with prices and availability, via Google Shopping. google_maps_search query, num, hl, gl Local businesses with address, coordinates, rating, phone, and hours. Put the location in the query. reddit_subreddit_posts subreddit, limit, sort, t, after A subreddit listing, rendered. Takes r/python or python either way. reddit_subreddit_about subreddit Subscriber count, description, and rules - enough to judge whether a community is worth reading. reddit_user_posts username, limit, sort, t, after One account's history, for checking whether a strong opinion comes from a real participant. reddit_post post_id, with_comments, sort, max_depth A single post with its body. Add with_comments for the thread underneath. reddit_post_comments post_id, sort, max_depth The comment tree with scores, nested to the depth you ask for. Real time Every call hits the live index. An agent asking about this morning gets this morning, not a training cutoff. Markdown Pages come back as prose, headings, and links. No nav bars or script tags eating the context window. Your own key Calls bill against the same credits as the REST API, at the same rate. The free 2,500 work here too. Endpoints Twelve endpoints, one API key Same authentication, same response conventions, same location and device headers across all of them. Google Search GET /v1/search Organic results as title, link, and description, with the answer box when Google shows one. results[] · total · answer Google News GET /v1/news Articles with publisher, publication date, and summary, plus the entities behind the story. feed.entries[] · entities[] Google Maps GET /v1/maps/search Local listings with website, address, coordinates, star rating, and review count. places[] · lat/long · rating Google Images GET /v1/image Images with their source page, dimensions, file size, and a thumbnail URL. image_results[] · original_image · thumbnails Google Jobs GET /v1/job/search Postings with employer, highlights, perks, remote and hybrid flags, and an apply link. jobs[] · employer · is_remote Google Scholar GET /v1/scholar Academic papers with title, link, and abstract, geo-targeted like any other search. results[] · total Product Search GET /v1/product/search Amazon listings with price, ASIN, star rating, review count, and Prime and bestseller flags. price · rating_stars · prime eBay Search GET /v1/ebay/search/{query} eBay listings with price, condition, seller feedback, and delivery details for each result. price · condition · seller Google Video GET /v1/video Video results with title, link, and description, in the same shape as web search. results[] · total · answer Bing Search GET /v1/b/search Bing organic results alongside text ads and shopping ads, each with its own position. results[] · ads[] · shoppingAds[] Reddit GET /v1/reddit/subreddit/{subreddit} Subreddit listings, subreddit metadata, user post history, single posts, and comment threads in Reddit's own JSON shape. kind · data.after · data.children[] Page Fetch GET /v1/request Any URL returned as raw HTML or as markdown, with CAPTCHAs handled on the way. content · url · response_type The hard part, already solved Scraping search is easy to prototype and miserable to operate. That gap is the whole product. ~900ms Average response Fast enough to sit in a request path instead of a background job. Zero CAPTCHAs to solve Proxy rotation and challenge handling happen before you see a response. 14 Countries Search as the US, UK, Germany, Japan, India, Brazil and more, on desktop or mobile. 4 yrs Of service Run continuously since launch, with support that answers in hours. Use cases What people build with it AI applications A model is only as current as what you hand it. These are the jobs that need live search behind them. Retrieval and grounding Fetch current sources at query time so an answer rests on this week's web rather than a training cutoff. Results arrive as fields, so your retrieval step starts at ranking rather than at an HTML parser. Agent tool calls A search tool an agent can call in a loop. One key, a stable schema, and latency low enough that a multi-step plan does not stall waiting on its own research. Deep research pipelines Search for the sources, then send each link through /v1/request with response_type set to markdown. What comes back is already in the format a model reads best - no boilerplate stripping in between. Answer engines with citations Every result carries the URL it came from, so an answer can show its work. That is the difference between a chatbot and something a user is willing to act on. Evaluation and benchmark data Collect real SERPs on a schedule to test retrieval quality, measure drift, or build a fixture set that reflects what your users actually see. Migrating off a retired API Microsoft retired the Bing Search APIs on 11 August 2025 and pointed developers at a full platform rather than an endpoint. /v1/b/search still returns Bing organic results, text ads, and shopping ads as JSON. Search and market data The long-standing work: knowing where you rank, what competitors are doing, and what things cost. Rank tracking Query from any of fourteen countries as desktop or mobile, and read positions back as data. Both matter - mobile and desktop SERPs disagree often enough that tracking one and reporting both is simply wrong. Ad and competitor monitoring Bing search returns ads and shopping ads separately from organic results, each with advertiser, price, and position, so you can watch who is bidding against you and what they charge. Local SEO and reviews Maps returns rating, review count, and a review URL per place, with coordinates. Enough to track a location's standing over time or to audit a multi-branch footprint. Lead and company enrichment Resolve a business to its website, bare domain, full address, and coordinates from a name and a city, using live search rather than a directory that went stale two years ago. Price and product monitoring Track price, rating, review count, and Prime or bestseller status on Amazon listings without maintaining a scraper that breaks every time the page changes. Labour market and academic research Jobs returns employer, perks, and remote or hybrid flags; Scholar returns papers and abstracts. Same key, same headers, same response conventions as everything else. FAQ Common questions What do I get back? JSON. Results arrive parsed into fields such as title, link, and description, so you are reading a response rather than writing selectors against a page that changes. Page Fetch can also return markdown instead of HTML. Do I have to deal with proxies or CAPTCHAs? No. Proxy rotation, retries, and CAPTCHA handling happen behind the endpoint. That is the part that breaks when you build search scraping yourself, and it is the part you are handing over. Can I use this from an MCP client? Yes. We host one at https://api.serply.io/mcp: add it to Claude, Cursor, or any MCP-compatible client with your API key and the model can search and fetch pages as tool calls. Each tool call costs one credit, the same as a REST request. If you would rather run your own, the server on this page is about thirty lines. Why does markdown matter for an AI pipeline? HTML spends most of its tokens on navigation, scripts, and styling that a model has to read and discard. Markdown keeps the headings, links, and prose and drops the rest, so more of the context window goes to the content you actually retrieved. Can I search as a specific country or device? Yes. X-Proxy-Location takes any of fourteen countries including the US, UK, Germany, Japan, India, Brazil, and Australia, and X-User-Agent switches between desktop and mobile. Results differ between the two, so rank tracking needs both to be explicit. What replaced the Bing Search API? Microsoft retired the Bing Search APIs on 11 August 2025 and directed developers to a wider Azure platform rather than a drop-in endpoint. Serply's /v1/b/search returns Bing organic results, text ads, and shopping ads as JSON over the same key and headers as every other endpoint here. Can this replace the Google Custom Search JSON API? Yes. Google has closed the Custom Search JSON API to new customers and ends it on January 1, 2027. Serply returns Google results as JSON with no search engine ID, so most migrations are a new URL, a header for the key, and a few renamed fields. See the migration guide → Is there a free tier? Yes. Every new account gets 2,500 free credits with no card, good for 30 days. One credit is one successful request on any endpoint, MCP included, and cached responses are free. After that, prepaid packs start at $5 and those credits never expire. Which languages are supported? Any language that can make an HTTP request. It is a REST API with a header for the key, so cURL, Python, JavaScript, Go, Ruby, and PHP all work with no SDK required. How is this different from running my own scraper? A scraper is cheap to write and expensive to keep alive. Layouts change, IPs get blocked, and CAPTCHAs appear at the worst time. Here that maintenance is the product. Start with 2,500 free credits Create a key and make your first call before deciding anything. No card, no sales call. Get your free API key See pricing Footer Simple and fast SERP APIs designed for builders. GitHub APIs Google Search API Bing Search API Google News API Google Video API Google Images API Google Jobs API Google Scholar API Google Product API Google Maps API Reddit API eBay Search API Web Scraping API Support MCP Server Pricing Documentation Support Search Operators Custom Search Migration API Status Company Blog Legal Privacy Terms Refunds Copyright © 2026 Serply, Inc. All rights reserved.

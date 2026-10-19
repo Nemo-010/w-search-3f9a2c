@@ -1,0 +1,620 @@
+Scrapfly - Web Scraping API, Cloud Browser, Screenshot API 
+ Products
+ ▼ 
+ Core APIs 
+ Platform & Tools 
+ SDKs & Integrations 
+ New to Scrapfly? 
+ Start with the Web Scraping API 
+ Web Scraping API Web data at scale 
+ Cloud Browser API Remote browser sessions 
+ Crawler API Full-site crawls 
+ Data Extraction API Structured data from public pages 
+ Screenshot API Full-page captures 
+ Pricing 
+ Developer Docs 
+ Status 
+ Web Scraping API 
+ One HTTP call returns public pages rendered, structured, complete. 
+ Production-grade reliability consistent results on demanding public pages. 
+ 190+ countries with residential and datacenter proxies. 
+ AI extraction and JS rendering on every request. 
+ Explore 
+ Cloud Browser API 
+ Remote managed Chromium you drive over CDP. 
+ Playwright and Puppeteer over WebSocket CDP. 
+ Persistent sessions with cookies and auth state across calls. 
+ Production-ready by default no browser configuration to manage. 
+ Explore 
+ Crawler API 
+ Crawl an entire site with one job. 
+ BFS / DFS depth control with include / exclude path filters. 
+ Per-page reliability every URL inherits the WSA pipeline. 
+ Webhook streaming with 8 event types for live results. 
+ Explore 
+ Data Extraction API 
+ Turn raw HTML into structured JSON. 
+ Pre-trained models for products, articles, reviews, jobs. 
+ CSS / XPath templates for fully custom rules. 
+ LLM prompts for freeform extraction in natural language. 
+ Explore 
+ Screenshot API 
+ Pixel-perfect captures of public pages. 
+ Full-page or viewport PNG, JPEG, WebP, with auto-scroll. 
+ Reliable rendering on every shot. 
+ Scheduled captures delivered to your webhook. 
+ Explore 
+ AI Browser Agent NEW Browser automation with AI 
+ MCP Server AI agents connected to the web 
+ Scrapfly CLI Agentic command line 
+ Proxy Saver Smart proxy reuse 
+ Pricing 
+ Developer Docs 
+ Status 
+ AI Browser Agent 
+ Describe a goal in natural language. The agent does it. 
+ Browser Use, Stagehand, Vibium bring your own agent loop. 
+ Managed Chromium production-ready out of the box. 
+ Tool-call interface for any LLM orchestrator. 
+ Explore 
+ MCP Server 
+ Hosted MCP. One URL, every agent stack. 
+ Claude, Cursor, Cline, Windsurf and any other MCP client. 
+ 5 tools covering scrape, screenshot, extract, crawl, account. 
+ Zero local setup add the URL, ship. 
+ Explore 
+ Scrapfly CLI 
+ Agentic scraping from your terminal. 
+ Scrape, screenshot, extract, crawl from any shell or CI pipeline. 
+ Pipe-friendly JSON output ready for jq / shell scripts. 
+ LLM tool-use ready for AI agents that shell out. 
+ Explore 
+ Proxy Saver 
+ Wrap your proxy bill, save bandwidth. 
+ Bright Data, Oxylabs, Webshare or any HTTP proxy provider. 
+ Bandwidth optimization with image and CSS stubbing. 
+ Bandwidth savings on every request. 
+ Explore 
+ SDKs
+ Python SDK 
+ TypeScript SDK 
+ Golang SDK 
+ Rust SDK 
+ Scrapy SDK 
+ Scrapfly CLI 
+ No-Code Platforms
+ Zapier 
+ Make 
+ n8n 
+ LLM & RAG Apps
+ LlamaIndex 
+ LangChain 
+ CrewAI 
+ All integrations 
+ Pricing 
+ Developer Docs 
+ Status 
+ Solutions
+ ▼ 
+ By Challenge 
+ By Target 
+ By Industry 
+ Technical Challenges 
+ Solve the hardest technical challenges in web scraping 
+ View All Protection Systems 
+ Manage Proxies 
+ JS Rendering 
+ Popular Targets 
+ Pre-built solutions for scraping major platforms and websites 
+ Real Estate
+ Idealista 
+ Immoscout24 
+ Realtor 
+ Redfin 
+ Zillow 
+ Zoopla 
+ eCommerce
+ Aliexpress 
+ Amazon 
+ eBay 
+ Etsy 
+ Leboncoin 
+ Walmart 
+ Social Media
+ Instagram 
+ Reddit 
+ TikTok 
+ Twitter 
+ YouTube 
+ Company & Reviews
+ Crunchbase 
+ G2 
+ YellowPages 
+ Yelp 
+ Zoominfo 
+ Jobs
+ Glassdoor 
+ Indeed 
+ LinkedIn 
+ Search & SEO
+ Bing 
+ Google Search 
+ Similarweb 
+ Fashion
+ Nordstrom 
+ StockX 
+ Travel & Hotels
+ Booking 
+ Tripadvisor 
+ Industry Solutions 
+ Tailored web scraping solutions for specific business verticals and use cases 
+ AI Training 
+ Images, videos & user generated content 
+ eCommerce 
+ Products, reviews & brand awareness 
+ Fraud Detection 
+ Detect fraud & counterfeit activity 
+ Lead Generation 
+ Profiles & contact details 
+ News & Media 
+ Articles, headlines & news feeds 
+ SERP & SEO 
+ Search results & keywords 
+ Travel 
+ Hotels, reviews & prices 
+ Compliance 
+ Validate compliance and security 
+ Financial Services 
+ Stock, shipping & financial data 
+ Jobs Data 
+ Job listings, salaries & career data 
+ Logistics 
+ Shipping, tracking & container prices 
+ Real Estate 
+ Property listings & market data 
+ Social Media 
+ Profiles, posts & engagement 
+ Resources
+ ▼ 
+ Developer Resources 
+ API Documentation 
+ Complete API reference 
+ Proxy Documentation 
+ Datacenter & residential proxies 
+ ScrapFly Scrapers 
+ Production-ready scrapers on GitHub 
+ Free Tools 
+ JA3, CSS, XPath tools 
+ Learn
+ Free 
+ Blog 
+ Latest guides and insights 
+ Web Scraping Academy 
+ Learn from scratch 
+ Knowledge Base 
+ FAQ and answers 
+ Why Us? 
+ Pricing 
+ Sign up
+ Login 
+ Scrapfly _ 
+ Scrape any public site, drive any browser, power any agent. One API key.
+ The web changes weekly. Headless browsers crash at scale. We absorb both so your scraper stays up.
+ Get Free API Key
+ Pricing
+ 1,000 free credits. No credit card. 
+ 4.9/5 from 236 reviews 
+ POST api.scrapfly.io/scrape 
+ { 
+    "success" : true , 
+    "result" : { 
+      "status_code" : 200 , 
+      "duration" : 1.24 , 
+      "render_js" : true , 
+      "proxy" : "residential/us" , 
+      "browser" : "chrome/155" , 
+      "content" : "<!doctype html>..." 
+   } 
+ } 
+ STATUS: one call, full stack 
+ FIG. 01 · ONE SCRAPE CALL, FULL STACK RESPONSE 
+ 15B+ 
+ requests / month 
+ 99.99% 
+ success rate 
+ 8PB+ 
+ data / month 
+ 30K+ 
+ enterprises 
+ PRODUCTS 
+ One API key. Web scraping, browser automation, AI agents. 
+ Pick the tool. We handle the rest: proxies, browsers, retries, billing. 
+ Web Scraping API 
+ Cloud Browser 
+ Screenshot API 
+ Extraction API 
+ Crawler API 
+ AI Browser Agent 
+ MCP Server 
+ Web Scraping API
+ Fetch public URLs at production scale with managed proxy rotation and a JS rendering toggle. Clean HTML or markdown, stable JSON. 
+ $> 
+ POST https://api.scrapfly.io/scrape 
+ Web Scraping API
+ Documentation
+ Cloud Browser
+ Drive a real managed Chromium over CDP. Full Playwright / Puppeteer compatibility. Hosted, scaled, production-grade. 
+ $> 
+ wss://browser.scrapfly.io/cdp?key=... 
+ Cloud Browser API
+ Documentation
+ Screenshot API
+ Full-page, viewport, or element screenshots. PNG / JPEG / WebP. Ad-block, cookie-banner dismiss, custom viewport. 
+ $> 
+ POST https://api.scrapfly.io/screenshot 
+ Screenshot API
+ Documentation
+ Extraction API
+ Turn HTML into typed data with a prompt or a JSON schema. LLM-powered, built-in templates for products, articles, reviews, jobs. 
+ $> 
+ POST https://api.scrapfly.io/extraction 
+ Extraction API
+ Documentation
+ Crawler API
+ Traverse entire sites with depth limits, follow rules, rate control. Streams URLs as discovered; every page runs through the Web Scraping API. 
+ $> 
+ POST https://api.scrapfly.io/crawler 
+ Crawler API
+ Documentation
+ AI Browser Agent
+ Managed Chromium tuned for autonomous agent loops. Browser Use, Stagehand, and Vibium compatible. Pay only for the actions that succeed. 
+ $> 
+ POST https://api.scrapfly.io/agent 
+ AI Browser Agent
+ Documentation
+ MCP Server
+ Connect any MCP client (Claude, Cursor, Cline, Windsurf, ChatGPT) to scrape, screenshot, extract, and crawl with one API key. 
+ $> 
+ mcp.scrapfly.io 
+ MCP Server
+ Documentation
+ Get Free API Key 
+ // TARGET GUIDES 
+ Pay on success. Failed requests are free. 
+ One parameter. No per-target configuration. Step-by-step guides for the targets developers ask about most. 
+ Cloudflare guide 
+ Akamai guide 
+ DataDome guide 
+ Imperva guide 
+ AWS WAF guide 
+ PerimeterX guide 
+ F5 guide 
+ Kasada guide 
+ Browse all target guides 
+ // LIVE 
+ Observability included. 
+ Success rate, throughput, latency. 
+ SCRAPE LOG · /scrape 
+ tail -f 
+ SUCCESS RATE · last 60s 
+ up 47d 12h 
+ 99.99 % 
+ TARGETS 
+ 12,483 
+ RPS 
+ 4,210 
+ p50 LATENCY 
+ 1.12s 
+ SUCCESS RATE 
+ 99.99% 
+ FIG. 02 · OBSERVABILITY DASHBOARD, ILLUSTRATIVE ANIMATION 
+ ARCHITECTURE 
+ Every layer, built in-house. 
+ Your API call. Our stack. From clean JSON all the way down to the exit IP. 
+ // LAYER 03 · API 
+ What you call. 
+ One API key. Stable JSON envelope. Seven endpoints for scrapers, browsers, and AI agents. 
+ Web Scraping 
+ Cloud Browser 
+ Screenshot 
+ Extraction 
+ Crawler 
+ AI Browser Agent 
+ MCP Server 
+ // LAYER 02 · ENGINES 
+ How we run real Chrome. 
+ Two proprietary engines, auto-routed per target. Browser-grade HTTP and DOM behavior, engineered in-house. 
+ HTTP/2 native 
+ HTTP/3 QUIC 
+ TLS 1.3 stack 
+ Curlium 
+ Proprietary HTTP engine with real-browser network behavior over HTTP/2 and QUIC. 10-50x faster than a browser. 
+ Scrapium 
+ Managed Chromium sharing Curlium's network stack, so you can alternate engines mid-session seamlessly. CDP, wait-for rules, custom scripts. 
+ // LAYER 01 · FOUNDATION 
+ Where we exit. 
+ Global proxy mesh across 190+ countries. Geo-aligned DNS, Accept-Language, and client-hints coherence on every request. 
+ Residential 
+ Datacenter 
+ TCP / UDP 
+ 190+ countries 
+ // INTEGRATIONS 
+ Works with what you already use. 
+ Plug Scrapfly into your favorite AI agents, workflow automations, and first-class SDKs. 
+ No-code automation 
+ Zapier 
+ Make 
+ n8n 
+ Agent skills 
+ OpenClaw 
+ LLM & RAG frameworks 
+ LlamaIndex 
+ LangChain 
+ CrewAI 
+ First-class SDKs 
+ Python 
+ pip install scrapfly-sdk 
+ TypeScript 
+ Node, Deno, Bun 
+ Go 
+ go get github.com/scrapfly/go-scrapfly 
+ Rust 
+ cargo add scrapfly-sdk 
+ Scrapy 
+ Full-feature extension 
+ See all integrations 
+ // WHY SCRAPFLY 
+ Five reasons teams pick Scrapfly. 
+ What you get with us versus what you get with the rest of the category. 
+ // SCRAPFLY 
+ Hard-target success rate 
+ 98% on the hardest public targets, measured weekly by the Scrapeway benchmark. 
+ Failed requests 
+ Failed requests are free. You only pay for successful scrapes. 
+ Pricing 
+ Credits scale with the actual complexity of each target. 
+ Product breadth 
+ One API key covers scraping , browser automation , screenshots , extraction , crawling , agents , and MCP . 
+ Stack ownership 
+ Owns the entire stack: in-house proxy mesh , proprietary HTTP engine ( Curlium ), and managed browser ( Scrapium ). 
+ // MOST SCRAPING APIS 
+ Hard-target success rate 
+ Often well below 60% on the same targets. 
+ Failed requests 
+ Failed requests still consume credits. 
+ Pricing 
+ Tiered pricing with premium-domain surcharges and rigid plans. 
+ Product breadth 
+ Most cover scraping only. Browser or extraction usually means a second vendor. 
+ Stack ownership 
+ Resells someone else's stack. 
+ See full vendor comparisons 
+ // TESTIMONIALS 
+ Trusted by 30,000+ enterprises. 
+ Teams pick Scrapfly after testing the alternatives. Here is why they stay. 
+ “ 
+ It helped me automate a very difficult task that would have been nearly impossible to complete manually. The performance is consistent, the API responses are fast, and the documentation made integration simple. 
+ FA 
+ Faten A. 
+ AI Specialist 
+ Verified Capterra review
+ “ 
+ I use Scrapfly as part of a larger AI research platform for web content extraction and data gathering. It was easy to integrate into our Node.js backend. 
+ MM 
+ Megan M. 
+ Principal Investigator, AI research platform 
+ Verified Capterra review
+ “ 
+ Ran a 74k URL scraping job without major issues. Good value with the 200k credits on Discovery plan. 
+ GV 
+ Gilbert V. 
+ Growth 
+ Verified Capterra review
+ // PRICING 
+ Try Scrapfly today. 
+ Same API key across every Scrapfly product. Pick a credit budget, every product shares the pool. No per-product lock-in, no surprise line items. 
+ FREE 
+ 1,000 credits on signup. 
+ Every product, no credit card, no time limit. 
+ Get Free Credits 
+ // DISCOVERY 
+ $30 
+ /mo 
+ $0.15 
+ per 1k credits, prepaid 
+ 200,000 
+ API credits / month 
+ 5 concurrent requests
+ 1 week log retention
+ No pay-as-you-go 
+ Solo account 
+ Basic Support
+ Start Free
+ // PRO 
+ $100 
+ /mo 
+ $0.10 
+ per 1k credits, prepaid 
+ 1,000,000 
+ API credits / month 
+ 20 concurrent requests
+ 2 weeks log retention
+ Extra at $3.50 / 10k
+ Solo account 
+ Standard Support
+ Start Free
+ MOST POPULAR 
+ // STARTUP 
+ $250 
+ /mo 
+ $0.10 
+ per 1k credits, prepaid 
+ 2,500,000 
+ API credits / month 
+ 50 concurrent requests
+ 3 weeks log retention
+ Extra at $2.00 / 10k
+ Team management
+ Standard Support
+ Start Free
+ // ENTERPRISE 
+ $500 
+ /mo 
+ $0.09 
+ per 1k credits, prepaid 
+ 5,500,000 
+ API credits / month 
+ 100 concurrent requests
+ 4 weeks log retention
+ Extra at $1.20 / 10k
+ Team management
+ Premium Support
+ Start Free
+ // CUSTOM 
+ Custom 
+ Negotiated 
+ volume contract 
+ Unlimited 
+ credits negotiated 
+ Committed concurrency 
+ Custom log retention 
+ MSA, DPA, BAA, HIPAA 
+ Dedicated residential pools 
+ Premium 24/7 support 
+ Talk to Sales
+ Full plan details on the pricing page . No annual contract required, upgrade or downgrade anytime.
+ // USE CASES 
+ Built for every web-scraping workflow. 
+ From price monitoring to AI training corpora. One API, every vertical. 
+ E-commerce 
+ Finance 
+ Travel 
+ Real estate 
+ Jobs 
+ SEO & SERP 
+ Social media 
+ News & media 
+ Lead gen 
+ AI training 
+ Compliance 
+ Fraud detection 
+ Logistics 
+ See all 
+ // FROM THE BLOG 
+ Web scraping guides, deep-dives, and updates. 
+ New tutorials and deep-dives every week. 
+ NEW 
+ http 
+ How to Use a Proxy With C# HttpClient in 2026 
+ How to configure authenticated and rotating proxies with C# HttpClient and SocketsHttpHandler, including the connection-pool traps behind 407 errors. 
+ 13 min read 
+ NEW 
+ python 
+ How to Test a Web Scraper Before Production 
+ Build parser tests, HTML fixtures, live checks, and deployment gates that catch silent web scraper failures before they reach production. 
+ 24 min read 
+ NEW 
+ python 
+ How to Scrape idealo: Product Offers, Prices, and Price History 
+ Scrape idealo product pages for the full merchant offer list, prices, and price history with Python and the Scrapfly Web Scraping API. 
+ 24 min read 
+ data-parsing 
+ JSONL vs JSON 
+ Learn the differences between JSON and JSONLines, their use cases, and efficiency. Why JSONLines excels in web scraping and real-time processing 
+ 11 min read 
+ python 
+ How to Scrape Twitter (X.com) with Python in 2026 
+ Scrape public Twitter (X.com) profiles and tweets with Python in 2026, and learn why guest tokens and doc_ids break DIY scrapers. 
+ 19 min read 
+ http 
+ How to Ignore cURL SSL Errors 
+ Learn to handle SSL errors in cURL, including using self-signed certificates. Explore common issues, safe practices. 
+ 9 min read 
+ Browse the blog 
+ FAQ 
+ Frequently Asked Questions 
+ WHAT IS SCRAPFLY'S WEB SCRAPING API? 
+ A web scraping API is a service that fetches public URLs with managed proxy rotation and JavaScript rendering on every request, without you maintaining headless browsers or proxy stacks. Scrapfly's Web Scraping API delivers this with one HTTP call returning HTML, markdown, plain text, or structured JSON. You only pay for successful requests. 
+ WHAT'S SCRAPFLY'S SUCCESS RATE ON HARD-TO-SCRAPE SITES? 
+ 98% on the hardest public targets, measured weekly by the independent Scrapeway benchmark and tracked daily against production traffic. See the success-rate benchmarks for current numbers. 
+ HOW DOES SCRAPFLY HANDLE HARD-TO-SCRAPE SITES? 
+ Set unblocker=true (formerly asp=true , still accepted) on any request. Scrapfly analyzes the target and routes through the right engine: Curlium (high-performance real-browser HTTP layer) or Scrapium (managed Chromium for JavaScript-heavy pages). Both share the same network stack, so sessions stay consistent from first request to last. One parameter, no per-target configuration. 
+ WHAT KIND OF PROXIES DOES SCRAPFLY OFFER? 
+ Two managed options. Use Scrapfly's built-in pools: datacenter (1 credit per request) or residential (25 credits per request, 190+ countries) with auto-rotation, IP cooling, and optional session stickiness. Or bring your own provider via Proxy Saver , which plugs Bright Data, Oxylabs, Webshare, SmartProxy, DataImpulse, or any SOCKS5 / HTTP proxy into the same Web Scraping API endpoint. Either way, smart routing, session management, and automatic retry sit on top. 
+ DOES SCRAPFLY WORK WITH AI AGENTS AND MCP CLIENTS? 
+ Yes. The MCP Server connects any MCP-compatible client (Claude, Cursor, Cline, Windsurf, ChatGPT, and others) to scrape, screenshot, extract, and crawl. The AI Browser Agent supports Browser Use, Stagehand, and Vibium agent loops on managed Chromium. Native integrations also exist for LangChain, LlamaIndex, and CrewAI. 
+ WHAT OUTPUT FORMATS DOES SCRAPFLY SUPPORT? 
+ Multiple formats from a single API call: HTML (raw or sanitized), Markdown (with link / image stripping for LLM contexts), plain text, JSON (parsed or as the API envelope), screenshots in PNG / JPEG / WebP via the Screenshot API , structured JSON via the Extraction API using LLM prompts, CSS / XPath rules, or pre-trained models, and WARC archives for crawl jobs . 
+ WHICH PROGRAMMING LANGUAGES DOES SCRAPFLY SUPPORT? 
+ Five official SDKs : Python , TypeScript (Node, Deno, Bun), Go , Rust , and a Scrapy extension. The REST API works with any language via plain HTTP. The CLI handles shell pipelines and CI integration. 
+ HOW IS SCRAPFLY DIFFERENT FROM BRIGHT DATA, ZYTE, AND OXYLABS? 
+ Bright Data and Oxylabs are proxy-first platforms with scrapers built on top: strong on proxy infrastructure and managed datasets, heavier configuration per target. Zyte is built around Scrapy and managed services for high-protection enterprise targets. Scrapfly is single-endpoint: one API call with unblocker=true handles session management, proxy rotation, JavaScript rendering, and structured output with no per-target setup. You pay only for successful requests. See per-vendor comparisons on the comparison hub . 
+ IS SCRAPFLY SOC 2 COMPLIANT? 
+ Yes. Scrapfly holds SOC 2 Type I, SOC 2 Type II, and SOC 3 certifications, plus ISO 27001, HIPAA, and GDPR attestations. A HIPAA Business Associate Agreement (BAA) is available to Custom-plan customers. See Compliance for the full list of attestations. 
+ DOES SCRAPFLY OFFER ENTERPRISE PLANS AND DEDICATED SUPPORT? 
+ Yes. The Enterprise tier is $500 / month (5.5M credits, 100 concurrent requests, premium support, team management). Custom plans above 5.5M credits / month include MSA, DPA, BAA, and HIPAA, dedicated residential proxy pools, committed concurrency, premium support, and custom log retention. Contact sales@scrapfly.io . See pricing for the full grid. 
+ WHAT HAPPENS IF A REQUEST FAILS? 
+ You are not charged. Failed requests do not consume API credits. The API returns a structured error response with retry guidance. Transient failures on demanding targets are automatically retried within the same request before returning an error. 
+ WHAT'S THE PRICING? 
+ Usage-based, priced per API credit. Free tier: 1,000 credits, no card, no time limit. Paid plans start at $30 / month (Discovery, 200k credits, 5 concurrent) and scale to $500 / month (Enterprise, 5.5M credits, 100 concurrent), with custom contracts above 5.5M credits / month. Credit cost per call scales with features used (1 credit for HTTP, +5 for JavaScript rendering or Unblocker, +25 for residential proxies, 60 for screenshot). Failed requests are free. See pricing for the full plan grid and credit matrix, or use the cost estimator to size your project. 
+ // GET STARTED 
+ Ship in a minute. Not a sprint. 
+ Free account, 1,000 credits, no credit card. One key, every product. 
+ Get Free API Key
+ See pricing 
+ [ COMPLIANCE ] 
+ Data collection APIs for developers. Scrape, capture, and extract public web data with battle-tested tools that scale.
+ // COMPANY 
+ Products
+ About Us
+ Careers
+ Why Scrapfly?
+ Pricing
+ Status
+ // RESOURCES 
+ API Docs
+ Academy
+ Blog
+ Glossary
+ Topics
+ Tools
+ Scrapers
+ FAQ
+ Alternatives
+ // LEGAL 
+ Terms of Service
+ Privacy Policy
+ DPA
+ KYC
+ Compliance
+ // INTEGRATIONS 
+ Zapier 
+ Make 
+ N8n 
+ LlamaIndex 
+ LangChain 
+ CrewAI 
+ // LEARN WEB SCRAPING 
+ Python 
+ NodeJS 
+ PHP 
+ Ruby 
+ Scrapy 
+ Puppeteer 
+ // USE CASES 
+ AI Training 
+ eCommerce 
+ Real Estate 
+ Finance 
+ SERP & SEO 
+ Travel 
+ // POPULAR TOOLS 
+ cURL to Python 
+ JA3 Fingerprint 
+ HTTP2 Fingerprint 
+ Selector Tester 
+ // © 2026 Scrapfly. The Web Scraping API For Developers.
+ Is Web Scraping Legal? 
+ • 
+ Open Source Scrapers 
+ ×

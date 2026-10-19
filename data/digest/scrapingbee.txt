@@ -1,0 +1,36 @@
+# ScrapingBee (scrapingbee) category=serp-scrape
+home=https://www.scrapingbee.com/ pricing=https://www.scrapingbee.com/pricing/ docs=https://www.scrapingbee.com/documentation/ llms=None
+sources_ok: pricing:https://www.scrapingbee.com/pricing/, docs:https://www.scrapingbee.com/documentation/, home:https://www.scrapingbee.com/, llms:https://www.scrapingbee.com/llms.txt
+--- ranked fact lines ---
+[pricing] $5,799 /mo 120,000,000 900 Try now All prices are exclusive of VAT. Need more monthly credits or higher concurrency? Talk to Product Expert Not sure which plan you need? Try ScrapingBee with 1,000 free API credits. Sign up
+[home] 1,000 free scraper API credits
+[home] Can I try ScrapingBee before choosing a paid plan? Yes. You get 1,000 free web scraping API credits when you sign up, with no credit card required.
+[pricing] $19 /mo 75,000 25 - - - Try now Freelance
+[pricing] $49 /mo 250,000 50 - - - Try now Recommended
+[pricing] $99 /mo 1,000,000 100 - - - Try now Recommended
+[pricing] $249 /mo 3,000,000 200 Try now Recommended
+[pricing] $599 /mo 8,000,000 400 Try now Recommended
+[pricing] $999 /mo 14,000,000 500 Try now Recommended
+[pricing] $1,599 /mo 24,000,000 600 Try now Recommended
+[pricing] $2,399 /mo 41,000,000 700 Try now Recommended
+[pricing] $3,599 /mo 69,000,000 800 Try now Recommended
+[home] Can I get more concurrency? Yes. The Business+ plan includes 400 concurrent scraper API requests. If you need more, our Custom plans offer additional concurrency. Feel free to reach out to our sales team to discuss your specific requirements.
+[home] What happens if I run out of credits before my subscription renews? You can upgrade your plan for the current month, renew early, or purchase one-time add-ons without waiting for the next billing cycle.
+--- llms/readme head ---
+# ScrapingBee Documentation
+> Official documentation index for ScrapingBee's web scraping, search, ecommerce, AI, developer tools, and automation integrations.
+Use this index to select the specific API or integration reference for a task. Each linked file is directly maintained and contains the applicable contract, constraints, costs, and examples.
+## Routing decision map
+- Fetch, render, interact with, screenshot, download, or extract from an arbitrary URL → [HTML API](https://www.scrapingbee.com/llms/html-api.txt).
+- Let ScrapingBee choose the proxy/rendering tier for a blocked URL → [HTML API](https://www.scrapingbee.com/llms/html-api.txt) with `mode=auto` and optional `max_cost`.
+- Define CSS/XPath or AI extraction rules → [Data extraction](https://www.scrapingbee.com/llms/data-extraction.txt); automate clicks, fields, waits, or scrolling → [JavaScript scenarios](https://www.scrapingbee.com/llms/js-scenario.txt).
+- Configure a third-party HTTP/SOCKS proxy client → [Proxy mode](https://www.scrapingbee.com/llms/proxy-mode.txt).
+- Select country targeting → [Premium country codes](https://www.scrapingbee.com/llms/country-codes-premium.txt) or [Classic country codes](https://www.scrapingbee.com/llms/country-codes-classic.txt).
+- Search Google → [Google Search API](https://www.scrapingbee.com/llms/google-search-api.txt); use [Fast Search API](https://www.scrapingbee.com/llms/fast-search-api.txt) for a lightweight result list.
+- Retrieve Amazon, Walmart, or YouTube data → choose the exact endpoint below by query, ASIN, numeric product ID, video ID, or subtitles.
+- Use an LLM response → [ChatGPT API](https://www.scrapingbee.com/llms/chatgpt-api.txt) or [Gemini API](https://www.scrapingbee.com/llms/gemini-api.txt).
+- Integrate from a shell, MCP client, LangChain, or no-code product → use the matching tool/integration reference below.
+## Core APIs
+- [HTML API](https://www.scrapingbee.com/llms/html-api.txt) — Tags: web scraping, arbitrary URL, JavaScript rendering, auto-mode, automatic proxy escalation, blocked-site fallback, `mode=auto`, `max_cost`, screenshots, downloads.
+- [Usage API](https://www.scrapingbee.com/llms/usage-api.txt) — Tags: account usage, credits, credit balance, concurrency, plan limits.
+## HTML API capabilities and lookups

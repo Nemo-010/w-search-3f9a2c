@@ -1,0 +1,24 @@
+# Fetchin (fetchin) category=ai-search
+home=https://fetchin.io/ pricing=None docs=None llms=None
+sources_ok: home:https://fetchin.io/, llms:https://fetchin.io/docs/llms.txt, llms-full:https://docs.fetchin.io/llms-full.txt, llms-https://docs.fetchin.io/llms.txt:https://docs.fetchin.io/llms.txt
+--- ranked fact lines ---
+[home] } Live 100% fresh data · Instant < 1s response · From $1/1k credits · Since 2023 Profile Company Posts Search Soon See more in the docs PROFILE Get detailed professional profiles Retrieve full profile data including work experience, education, skills, and contact details. 100+ attributes per profile. curl -X GET \
+--- llms/readme head ---
+# Fetchin API
+- [Introduction](https://docs.fetchin.io/index.md): Welcome to Fetchin - B2B Data API
+- [Quick Start](https://docs.fetchin.io/quickstart.md): Get started with Fetchin API in under 5 minutes
+- [Quotas & Plans](https://docs.fetchin.io/concepts/quotas.md): Understanding credit quotas and plan limits
+- [Pay As You Go](https://docs.fetchin.io/concepts/pay-as-you-go.md): Buy credits outright, with or without a subscription: rates, expiry and how they are spent
+- [Rate Limits](https://docs.fetchin.io/concepts/rate-limits.md): Understanding API rate limits and throttling
+- [Error Handling](https://docs.fetchin.io/concepts/error-handling.md): Handle Fetchin API errors with a single response shape and stable machine-readable codes
+- [Apify Compatibility](https://docs.fetchin.io/concepts/apify-compat.md): Drop-in replacement for Apify actors — keep your apify-client code, just change the base URL
+- [Get Subscription](https://docs.fetchin.io/api-reference/endpoint/get-subscription.md): Check your current plan, remaining credits, RPS limit and billing status
+- [Get Posts](https://docs.fetchin.io/api-reference/endpoint/get-posts.md): Fetch posts from a professional profile with engagement metrics
+- [Search Posts](https://docs.fetchin.io/api-reference/endpoint/search-posts.md): Search public professional posts by keyword and filters, with a boolean query grammar and cursor pagination
+- [Get Post Comments](https://docs.fetchin.io/api-reference/endpoint/get-post-comments.md): Fetch comments from a professional post with author information and replies
+- [Get Post Reactions](https://docs.fetchin.io/api-reference/endpoint/get-post-reactions.md): Fetch reactions on a professional post with reactor profile information
+- [Get Post Engagement](https://docs.fetchin.io/api-reference/endpoint/get-post-engagement.md): Fetch a post's comments and reactions in a single call
+- [Get Profile](https://docs.fetchin.io/api-reference/endpoint/get-profile.md): Get detailed information about a professional profile
+- [Get Profile Reactions](https://docs.fetchin.io/api-reference/endpoint/get-profile-reactions.md): Fetch posts that a professional profile has reacted to
+- [Get Profile Comments](https://docs.fetchin.io/api-reference/endpoint/get-profile-comments.md): Fetch the comments a professional profile has written, each with the post it was written on
+- [Get Profile Articles](https://docs.fetchin.io/api-reference/endpoint/get-profile-articles.md): Fetch the long-form articles a professional profile has published

@@ -1,0 +1,61 @@
+{
+ "slug": "serpstack",
+ "name": "SerpStack",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:19+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://serpstack.com/pricing",
+   "status": 200,
+   "final_url": "https://serpstack.com/pricing",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 53522,
+   "truncated": false,
+   "sha256": "b499d693d876e055bacb5048f73de3b091b7b0a58285f483ce0c20b735c250d5",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 7872
+  },
+  "home": {
+   "url": "https://serpstack.com/",
+   "status": 200,
+   "final_url": "https://serpstack.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 59070,
+   "truncated": false,
+   "sha256": "7ff41ddc498c535d267f637146dd0d881389364422cdc26f26eda54065874763",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 20718
+  },
+  "llms": {
+   "url": "https://serpstack.com/llms.txt",
+   "status": 200,
+   "final_url": "https://serpstack.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 3985,
+   "truncated": false,
+   "sha256": "9da2a975e51b32cc1da8d67b172df9907c027ba5e8188970a7e84f834f535c78",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 3979
+  },
+  "llms-err-90e8f4": {
+   "url": "https://serpstack.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://serpstack.com/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 29827,
+   "truncated": false,
+   "sha256": "3a840a0e663774b35298318058dd6e5762a81adc27d2175f8f761227d828a93b",
+   "fetched_at": "2026-10-19T05:54:21+00:00"
+  },
+  "llms-err-df0060": {
+   "url": "https://docs.serpstack.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.serpstack.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:21+00:00"
+  }
+ }
+}

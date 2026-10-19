@@ -1,0 +1,4 @@
+# OSF API (osf) category=academic
+home=https://developer.osf.io/ pricing=None docs=https://developer.osf.io/ llms=None
+sources_ok: docs:https://developer.osf.io/
+--- ranked fact lines ---

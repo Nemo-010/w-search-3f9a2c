@@ -1,0 +1,62 @@
+{
+ "slug": "europepmc",
+ "name": "Europe PMC",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:44+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://europepmc.org/RestfulWebService",
+   "status": 200,
+   "final_url": "https://europepmc.org/RestfulWebService",
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 64221,
+   "truncated": false,
+   "sha256": "74e0e09a32587039885530a7f29ee21a0539efa65fbfe8fe89dee3aa5e714edc",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 7917
+  },
+  "llms": {
+   "url": "https://europepmc.org/RestfulWebService/llms.txt",
+   "status": 200,
+   "final_url": "https://europepmc.org/RestfulWebService/llms.txt",
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 63816,
+   "truncated": false,
+   "sha256": "69705aabb95fe3d9fe3065731da802e4bd592b2327432e69560640e368adf517",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 7917
+  },
+  "llms-full": {
+   "url": "https://europepmc.org/RestfulWebService/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://europepmc.org/RestfulWebService/docs/llms-full.txt",
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 63983,
+   "truncated": false,
+   "sha256": "5f32149b82ef251edd403811487cb5957809dffc3328d5dd1c6a5ee665fe17f8",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 7917
+  },
+  "llms-https://europepmc.org/RestfulWebService/docs/llms.txt": {
+   "url": "https://europepmc.org/RestfulWebService/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://europepmc.org/RestfulWebService/docs/llms.txt",
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 63968,
+   "truncated": false,
+   "sha256": "5fc14d1d9d66985510d7e22ae107cae0ca67f0f591f5f17cd4fb518d621c5995",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 7917
+  },
+  "llms-err-1a7fc1": {
+   "url": "https://docs.europepmc.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.europepmc.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  }
+ }
+}

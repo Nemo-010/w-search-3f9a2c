@@ -1,0 +1,155 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.tinyfish.ai/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Search API
+
+> Search the web and get structured results via API
+
+<Note>
+  Search is free up to 12,000 requests per day. Beyond that, requests need a positive wallet balance.
+</Note>
+
+The TinyFish Search API lets you run web searches and get back structured results — titles, snippets, and URLs — ready for LLM consumption or programmatic use.
+
+```bash theme={null}
+GET https://api.search.tinyfish.ai
+```
+
+`api.search.tinyfish.ai` is the public Search API endpoint.
+
+## Before You Start
+
+<Steps>
+  <Step title="Get your API key">
+    Visit [agent.tinyfish.ai/api-keys](https://agent.tinyfish.ai/api-keys) and create a key. Store it in your environment:
+
+    ```bash theme={null}
+    export TINYFISH_API_KEY="your_api_key_here"
+    ```
+  </Step>
+</Steps>
+
+All requests require the `X-API-Key` header. See [Authentication](/authentication) for the full setup and troubleshooting guide.
+
+## Your First Request
+
+<CodeGroup>
+  ```python Python theme={null}
+  from tinyfish import TinyFish
+
+  client = TinyFish()
+  response = client.search.query(query="web automation tools")
+  for r in response.results:
+      print(r.title, "→", r.url)
+  ```
+
+  ```typescript TypeScript theme={null}
+  import { TinyFish } from "@tiny-fish/sdk";
+
+  const client = new TinyFish();
+  const response = await client.search.query({ query: "web automation tools" });
+  response.results.forEach((r) => console.log(r.title, "→", r.url));
+  ```
+
+  ```bash cURL theme={null}
+  curl "https://api.search.tinyfish.ai?query=web+automation+tools" \
+    -H "X-API-Key: $TINYFISH_API_KEY"
+  ```
+</CodeGroup>
+
+## What Success Looks Like
+
+```json theme={null}
+{
+  "query": "web automation tools",
+  "results": [
+    {
+      "position": 1,
+      "site_name": "tinyfish.ai",
+      "title": "TinyFish — AI Web Automation Platform",
+      "snippet": "Automate any website with natural language instructions...",
+      "url": "https://tinyfish.ai"
+    },
+    {
+      "position": 2,
+      "site_name": "github.com",
+      "title": "Top Web Automation Tools in 2026",
+      "snippet": "A curated list of browser automation frameworks...",
+      "url": "https://github.com/example/web-automation-tools"
+    }
+  ],
+  "total_results": 10,
+  "page": 0
+}
+```
+
+## When to Use Search vs the Other APIs
+
+* Use **Search** when you need ranked search engine results, snippets, and URLs.
+* Use **Fetch** when you already have the URLs and want extracted page content.
+* Use **Agent** when you want TinyFish to browse and execute a workflow on the site.
+* Use **Browser** when you need direct browser control from your own code.
+
+***
+
+## Geo-Targeted Results
+
+Use the `location` and `language` parameters to get results tailored to a specific region.
+
+***
+
+## Freshness and Date Filters
+
+Use `recency_minutes` when you want a freshness window, or `after_date` / `before_date` when you want a calendar date cutoff.
+
+* `recency_minutes` accepts an integer from `1` to `5256000` (10 years).
+* `after_date` and `before_date` must use `YYYY-MM-DD`.
+* Do not combine `recency_minutes` with `after_date` or `before_date`.
+* If you send both `after_date` and `before_date`, `after_date` must be less than or equal to `before_date`.
+
+***
+
+## Domain Types
+
+Use `domain_type` to search a specific content category:
+
+* `web` (default) — standard web results
+* `news` — news articles with publisher and date fields
+* `research_paper` — academic papers with authors, venue, year, and citation count
+
+Date and recency filters (`after_date`, `before_date`, `recency_minutes`) are not supported for `domain_type=research_paper`. Use `pub_year_min` / `pub_year_max` instead to scope results by publication year (inclusive, `0`-`9999`).
+
+***
+
+## Search Intent
+
+The optional `purpose` parameter lets you state *why* you are searching — the underlying goal or task the results will be used for. A query is often a terse set of keywords, and the intent behind it isn't always obvious from the keywords alone. Passing `purpose` gives us additional signal to further inform and deliver better-quality results.
+
+* `purpose` is always optional. Omitting it leaves search behaviour unchanged.
+* Keep it to a short phrase or sentence (maximum 2000 characters), for example `Find an open-source library for parsing PDF invoices in Python`.
+
+***
+
+## Read Next
+
+<CardGroup cols={2}>
+  <Card title="API Reference" icon="code" href="/search-api/reference">
+    Full request and response schema
+  </Card>
+
+  <Card title="Authentication" icon="key" href="/authentication">
+    API key setup
+  </Card>
+
+  <Card title="For coding agents" icon="robot" href="/for-coding-agents">
+    One page that routes an agent to the right TinyFish API
+  </Card>
+
+  <Card title="Search Examples" icon="bolt" href="/search-api/examples">
+    Common Search request patterns
+  </Card>
+</CardGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

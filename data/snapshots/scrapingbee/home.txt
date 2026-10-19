@@ -1,0 +1,111 @@
+ScrapingBee – The Best Web Scraping API 
+ Pricing Documentation Product HTML API Features Core 
+ AI Data Extraction Extract structured data via AI 
+ Markdown Scraper Get any page as clean Markdown 
+ Screenshots Capture full-page screenshots via API 
+ JavaScript Scenario Click, scroll and type before scraping 
+ CSS/XPath Data Extraction Target exact elements with selectors 
+ View all Developer tools and integrations 
+ CLI Scrape straight from your terminal 
+ MCP Server Connect AI assistants to ScrapingBee 
+ n8n Automate scraping in n8n workflows 
+ Make Add scraping to Make scenarios 
+ Claude Code Use ScrapingBee inside Claude Code 
+ Codex Use ScrapingBee inside Codex 
+ Cursor Scrape without leaving Cursor 
+ View all integrations Dedicated Scraper APIs 
+ Google API Fetch search results into JSON 
+ Employee Search API Turn prompts into employee data 
+ Fast Search API Fetch sub-second web search results 
+ ChatGPT API Collect structured ChatGPT responses 
+ Gemini API Query Gemini for RAG-ready citations 
+ Amazon API Scrape product details and reviews 
+ Walmart API Pull store inventory and pricing data 
+ YouTube API Grab video data and transcripts 
+ View all FAQ Blog Resources Tutorials Knowledge Base Login Sign Up The Best Web Scraping API to Avoid Getting Blocked Scrape websites with our powerful web scraping API, without managing proxies, browsers, or anti-bot defenses. Bypass CAPTCHAs, leverage over 200M IPs, and integrate in minutes. Build AI, RAG, and analytics pipelines with zero data retention. 
+ Easy to integrate 
+ 1,000 free scraper API credits 
+ No credit card required Sign up with email 
+Sign up with Google based on 100+ reviews. 
+ Built for teams that scrape at scale Trusted by 4,500+ developers using ScrapingBee as their web scraping API of choice 
+ AI Ready Data Define your AI web scraping rules in JSON, or describe what you need with AI Query. Run these workflows via the ScrapingBee CLI to integrate with AI coding tools like ChatGPT, Claude, Codex, Cursor, Claude Code, and Gemini. Structured JSON or Markdown from extraction rules Natural-language extraction with AI queries CLI integration for AI Agents. Connect with ChatGPT, Claude, Codex, Cursor, Claude Code, and Gemini 
+ Render JavaScript in a real browser Use headless Chrome when a page needs JavaScript rendering. Wait for selectors, run custom interaction scenarios for complex flows, set viewport and headers, and capture screenshots of the rendered output for debugging. JavaScript rendering in headless Chrome Wait for selectors and browser events Custom scenarios for complex interactions Adjust viewport and headers, capture screenshots of the final render 
+ Automate your proxy rotation ScrapingBee rotates proxies automatically, gives you premium proxies for harder websites, and offers stealth proxies for the toughest anti-bot setups. Add country-level geolocation and keep scraping without building your own proxy fleet. Premium residential and stealth proxies Country-level geolocation Lower block rates with less infrastructure overhead Automatic proxy rotation 
+ Built for every use case 
+ AI 
+ E-Commerce 
+ Market Intelligence 
+ GTM 
+ Fintech 
+ Cybersecurity AI Power AI applications with live web data for search, retrieval, monitoring, and evaluation. Use Fast Search for real-time SERP data, AI extraction for JSON or Markdown outputs, and our new CLI for automated workflows with LLM tools. Real-time web data for AI Fast Search for live SERP data Structured outputs for LLMs CLI integrations for LLM workflows HTML API One API call to cover any workflow Fast Search Under 1 second real-time SERP data CLI CLI + Skills 99% Success Rate E-Commerce Track prices, product listings, reviews, and retail trends across e-commerce websites. Bring in ScrapingBee for competitive monitoring at scale, with dedicated APIs for Amazon and Walmart when you need ready-to-use data faster. Price intelligence Product and catalog monitoring Review monitoring Brand and competitor tracking HTML API One API call to cover any workflow Amazon & Walmart Dedicated APIs 99% Amazon success rate 2.5s median Response time Market Intelligence Monitor competitors, brand visibility, and audience signals across search and the open web. Employ ScrapingBee for market research, SEO and SEM monitoring, GEO and AEO analysis, and broader competitive intelligence—while keeping scraping maintenance off your team’s plate. Market research Audience research Brand monitoring Competitive intelligence SEO and SEM monitoring GEO and AEO insights HTML API One API call to cover any workflow Under 1 second Fast Search response time 99% Success Rate GTM Build lead enrichment, account intelligence, and research workflows on top of live web data. ScrapingBee delivers contact details, company signals, and account insights, removing the need to run your own proxy, browser, and anti-bot stack. Contact enrichment Account intelligence Company data Web signals and intent data HTML API One API call to cover any workflow Fintech Collect market signals, monitor regulatory changes, and gather alternative data from the web continuously. ScrapingBee helps power risk models, compliance workflows, and investment research; no need to maintain custom scraping infrastructure. Alternative data collection Market and sentiment monitoring Regulatory monitoring Investment and competitive research HTML API One API call to cover any workflow Cybersecurity Pull web data for leaked credential monitoring, brand abuse detection, attack surface discovery, and broader threat intelligence workflows. ScrapingBee handles the access layer, so your team can focus on detection and analysis. Leaked credential monitoring Attack surface discovery Brand abuse detection Threat intelligence gathering HTML API One API call to cover any workflow Our Scraper APIs Core HTML API Fetch raw page content from public websites in one web scraper API call. Execute it for custom parsers, data pipelines, and any workflow where you want full control over extraction. Markdown Scraper Any page to clean Markdown or plain text, LLM-ready. AI Web Scraping Describe the fields, get back structured JSON. No selectors needed Execute JavaScript Scenarios Trigger clicks, waits, and form fills before extraction. CSS/XPath Data Extraction Target exactly what you need using CSS or XPath rules. Screenshots Browser-rendered screenshots of any URL, on demand. Javascript Scenario Script clicks, scrolls, and form fills before extraction. make Integrations Drop ScrapingBee into any make workflow, no code. n8n Integration Pull live web data into any n8n automation in one node. Zapier Integration Trigger scrapes and pipe results into thousands of apps. MCP Server Give your AI agent direct access to web scraping. 
+ Dedicated Scraping APIs Pre-made web scraper APIs that return fresh data without custom parsing or scraping jobs to manage. Amazon API Collect Amazon product, pricing, and review data directly for monitoring, analytics, and competitive research. See Amazon API 
+ Fast Search API Get real-time search results in under a second for AI, monitoring, analytics, and search-driven workflows. See Fast Search API 
+ Google Search API Get Google search data through a dedicated endpoint, including organic results, ads, news, maps, and more. See Google Search API 
+ YouTube API Access YouTube search results, video metadata, comments, and transcripts in a ready-to-use format without maintaining your own scraper. See YouTube API 
+ ChatGPT API Generate and collect ChatGPT responses in JSON, Markdown, or plain text for analysis, monitoring, and downstream workflows. See ChatGPT API 
+ Gemini API Query Google Gemini and get structured answers in plain text, markdown, and citations. Geotarget by country, request raw HTML for verification, and pull citation arrays for RAG workflows. See Gemini API 
+ Walmart API Pull Walmart product, pricing, and review data in one scraper API call for monitoring, analytics, and competitive research. See Walmart API 
+ Amazon API Collect Amazon product, pricing, and review data directly for monitoring, analytics, and competitive research. See Amazon API 
+ Fast Search API Get real-time search results in under a second for AI, monitoring, analytics, and search-driven workflows. See Fast Search API 
+ Google Search API Get Google search data through a dedicated endpoint, including organic results, ads, news, maps, and more. See Google Search API 
+ YouTube API Access YouTube search results, video metadata, comments, and transcripts in a ready-to-use format without maintaining your own scraper. See YouTube API 
+ ChatGPT API Generate and collect ChatGPT responses in JSON, Markdown, or plain text for analysis, monitoring, and downstream workflows. See ChatGPT API 
+ Gemini API Query Google Gemini and get structured answers in plain text, markdown, and citations. Geotarget by country, request raw HTML for verification, and pull citation arrays for RAG workflows. See Gemini API 
+ Walmart API Pull Walmart product, pricing, and review data in one scraper API call for monitoring, analytics, and competitive research. See Walmart API 
+ Amazon API Collect Amazon product, pricing, and review data directly for monitoring, analytics, and competitive research. See Amazon API 
+ Fast Search API Get real-time search results in under a second for AI, monitoring, analytics, and search-driven workflows. See Fast Search API 
+ Google Search API Get Google search data through a dedicated endpoint, including organic results, ads, news, maps, and more. See Google Search API 
+ YouTube API Access YouTube search results, video metadata, comments, and transcripts in a ready-to-use format without maintaining your own scraper. See YouTube API 
+ ChatGPT API Generate and collect ChatGPT responses in JSON, Markdown, or plain text for analysis, monitoring, and downstream workflows. See ChatGPT API 
+ Gemini API Query Google Gemini and get structured answers in plain text, markdown, and citations. Geotarget by country, request raw HTML for verification, and pull citation arrays for RAG workflows. See Gemini API 
+ Walmart API Pull Walmart product, pricing, and review data in one scraper API call for monitoring, analytics, and competitive research. See Walmart API 
+ 4,500+ Developers trust ScrapingBee 5.0 "A reliable scraping backbone for multilingual market analysis." Tina Julsgaard Founder, Comunica 5.0 "ScrapingBee really grew on us! Very good so far and we'll continue using it for a large project coming up as it just provides the consistency we need." Mark Merrywest Co-Founder & CPO @ Yond+co Average rating on Capterra 100+ Reviews on Capterra 5.0 ScrapingBee has filled the void and allowed me to use an API to scrape instead of learning other libraries. "It has helped speed up our route towards complete competitive intelligence. Xavi Ablaza Founder, Navegante Compliance-Ready Web Scraping at Scale Build on a platform that’s SOC 2 Type 2 compliant. We manage the security and infrastructure, so you can focus on your data. Visit our Trust Center 
+ GDPR 
+ SOC 2 Type II 24/7 Support Infrastructure security Access Control Data Privacy Endpoint Security Vulnerability Management Secure Development Infrastructure security Access Control Data Privacy Endpoint Security Vulnerability Management Secure Development Ready to get started? Your web scraping API is just a click away. Start scraping in minutes with 1,000 free API credits. No infrastructure to set up, no proxies to manage, and no credit card required. Get 1,000 free API Credits No credit card required Make your first API request Simple, transparent pricing. Cancel anytime, no questions asked! Standard 
+ Enterprise API Credits 
+ Concurrent requests 
+ JavaScript rendering 
+ Rotating & Premium Proxies 
+ Geotargeting 
+ Screenshots & Extraction Rules 
+ Dedicated Scraping APIs 
+ Priority Email Support Dedicated Account Manager Team Management 
+ Hobby 
+ $19 /mo 75,000 25 - - - Try now Freelance 
+ $49 /mo 250,000 50 - - - Try now Recommended 
+ Startup 
+ $99 /mo 1,000,000 100 - - - Try now Recommended 
+ Business 
+ $249 /mo 3,000,000 200 Try now Recommended 
+ Business + 
+ $599 /mo 8,000,000 400 Try now Recommended 
+ Enterprise 14 
+ $999 /mo 14,000,000 500 Try now Recommended 
+ Enterprise 24 
+ $1,599 /mo 24,000,000 600 Try now Recommended 
+ Enterprise 41 
+ $2,399 /mo 41,000,000 700 Try now Recommended 
+ Enterprise 69 
+ $3,599 /mo 69,000,000 800 Try now Recommended 
+ Enterprise 120 
+ $5,799 /mo 120,000,000 900 Try now All prices are exclusive of VAT. Need more monthly credits or higher concurrency? Talk to Product Expert Not sure which plan you need? Try ScrapingBee with 1,000 free API credits. Sign up 
+ No credit card required. Web Scraping API FAQs What is a web scraping API? A web scraping API is a tool that collects data from websites through an API request. You send a URL and get the page HTML, rendered content, or structured data back. It lets you scrape websites without managing proxies, browsers, retries, or blocking issues yourself. 
+ How do I set up and use a web scraping API? To use a web scraping API, create an account, get your API key, and send a request to the endpoint you need. Add the target URL and choose options such as JavaScript rendering, proxy type, geotargeting, screenshots, Markdown output, or JSON extraction. With ScrapingBee, you can also build the request visually in the dashboard. Choose your endpoint, set your parameters, send a test request, and view the response. To extract data as JSON, use CSS or XPath rules, or describe what you need with AI extraction. 
+ What type of data can I extract with a web scraper API? With a web scraper API, you can extract data from public web pages, including product listings, prices, reviews, search results, real estate listings, job posts, news articles, company pages, and more. With AI extraction, you can also ask for specific fields in natural language instead of writing custom parsing logic for each website. 
+ Can I automate web scraping jobs? Yes. You can automate scraping jobs by calling the API from your backend, scripts, scheduled tasks, no-code workflows, or data pipelines. ScrapingBee handles page fetching, JavaScript rendering, proxies, and anti-bot logic, so your automation can focus on when to run, which URLs to scrape, and where to send the data. 
+ How long does it take to get the scraping results? It depends on the target website and the features you enable. Fast Search API requests usually return scraping results in under a second. E-commerce API requests have a median response time of around 2.5 seconds. Standard scraping API requests can take longer when JavaScript rendering, premium proxies, or advanced anti-bot handling are enabled. 
+ Who is ScrapingBee built for? ScrapingBee is built for developers, founders, and product teams that need web data in their apps, workflows, or internal tools. It's ideal for teams that want to collect data at scale without managing proxies, browsers, anti-bot systems, or scraper maintenance. Common use cases include e-commerce, AI, cybersecurity, market intelligence, fintech, and go-to-market tools. 
+ How fast is ScrapingBee's API, and can it handle difficult websites? Scraper response times depend on the target website and enabled features. Simple scraping requests are faster, while JavaScript rendering and advanced anti-bot handling take longer. For complex sites, ScrapingBee uses browser rendering with rotating, premium, and stealth proxies so you don't have to build that infrastructure yourself. 
+ Is ScrapingBee's web scraper API SOC 2 compliant? Yes. ScrapingBee's web scraper API is SOC 2 Type II compliant, with controls audited and verified by an independent auditor. 
+ I'm not a developer. Can I still use ScrapingBee? Yes. You don't need to build a scraper from scratch. ScrapingBee integrates with LLM and coding tools via MCP, Skills, and CLI workflows in tools like ChatGPT, Claude, Claude Code, Codex, Cursor, and Gemini. It also supports no-code and low-code tools like n8n and Make, plus AI extraction features like AI Query for natural language data extraction. 
+ Can ScrapingBee render JavaScript and interact with the page before extraction? Yes. ScrapingBee API can render pages in headless Chrome, wait for elements to load, and perform actions like scrolling, clicking, filling forms, waiting for selectors, and running custom JavaScript for dynamic or multi-step flows. 
+ What is the difference between the HTML API and dedicated scraper APIs? The HTML API returns the full page so you can parse it yourself. Dedicated scraper APIs provide structured, ready-to-use data for sources like Amazon, Google Search, YouTube, Walmart, ChatGPT, and Gemini, eliminating the need for custom parsers. 
+ What is a web scraper API credit? Each ScrapingBee plan includes a monthly number of web scraper API credits. A basic request costs 1 credit, while features like JavaScript rendering, premium proxies, or AI extraction increase the cost. Pricing is transparent with no hidden fees. 
+ What happens if I run out of credits before my subscription renews? You can upgrade your plan for the current month, renew early, or purchase one-time add-ons without waiting for the next billing cycle. 
+ Can I try ScrapingBee before choosing a paid plan? Yes. You get 1,000 free web scraping API credits when you sign up, with no credit card required. 
+ What happens if a scraping request fails? ScrapingBee only charges for successful scraping requests, defined as those returning HTTP 200, 404 or 410 status codes. 
+ Can I cancel my plan at any time? Yes. You can cancel anytime from your dashboard in under 30 seconds. 
+ Can I get more concurrency? Yes. The Business+ plan includes 400 concurrent scraper API requests. If you need more, our Custom plans offer additional concurrency. Feel free to reach out to our sales team to discuss your specific requirements. 
+ What features should the best web scraping API include? The best web scraping API should handle the hard parts of scraping for you: JavaScript rendering, proxy management, retries, geotargeting, and screenshots. It should also support flexible outputs and workflows, including JSON, Markdown, raw or rendered HTML, plain text, AI extraction, search APIs, and dedicated endpoints for specific data sources. 
+ Ready to get started? Get access to 1,000 free scraper API credits, no credit card required! Try ScrapingBee for Free ScrapingBee API handles headless browsers and rotates proxies for you. Company Blog Rebranding Affiliate Program Tools Curl converter Legal Terms of Service Privacy Policy GDPR Compliance Data Processing Agreement Cookie Policy Acceptable Use Policy Legal Notices Product Pricing Status How we compare Alternative to Firecrawl Alternative to Apify Alternative to Tavily Alternative to Exa Scrapers Amazon Scraper ChatGPT Scraper Walmart Scraper Google API HomeDepot Scraper Costco Scraper Expedia Scraper Google Jobs Scraper Google News Scraper Google Play Scraper All Scrapers No code web scraping No code web scraping No code competitor monitoring Learning Web Scraping Web scraping questions A guide to Web Scraping without getting blocked Web Scraping Tools Best Free Proxies Best Mobile proxies Web Scraping vs Web Crawling Rotating and residential proxies Web Scraping with Python Web Scraping with PHP Web Scraping with Java Web Scraping with Ruby Web Scraping with NodeJS Web Scraping with R Web Scraping with C# Web Scraping with C++ Web Scraping with Elixir Web Scraping with Perl Web Scraping with Rust Web Scraping with Go Copyright © 2026 Made in France Auto-mode picks the configuration that successfully scrapes your page · 
+ Try it now

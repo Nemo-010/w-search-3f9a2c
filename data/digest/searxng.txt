@@ -1,0 +1,5 @@
+# SearXNG (OSS) (searxng) category=oss
+home=https://searxng.org/ pricing=None docs=https://docs.searxng.org/ llms=None
+sources_ok: docs:https://docs.searxng.org/, home:https://searxng.org/
+--- ranked fact lines ---
+[docs] SearXNG is a free internet metasearch engine which aggregates results from up

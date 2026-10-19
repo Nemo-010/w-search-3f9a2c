@@ -1,0 +1,39 @@
+{
+ "slug": "crossref",
+ "name": "Crossref REST API",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:43+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+   "status": 200,
+   "final_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+   "content_type": "text/html",
+   "bytes": 70799,
+   "truncated": false,
+   "sha256": "7bccbaff86c4f0840f0b8c9620eac091c9cede4d08abf2963d9ee515371b0b82",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 14008
+  },
+  "llms-err-90bae0": {
+   "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/llms.txt",
+   "status": 404,
+   "final_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/llms.txt",
+   "content_type": "application/xml",
+   "bytes": 327,
+   "truncated": false,
+   "sha256": "bb7bc38cce2f2e511e2166d624b13f890d5c43199d3390c7a471a1bf29a8db67",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  },
+  "llms-err-f087e8": {
+   "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/docs/llms.txt",
+   "content_type": "application/xml",
+   "bytes": 332,
+   "truncated": false,
+   "sha256": "2a69271a7a83fc217c5e1057401db489ddf2d49bec1cd4ef35c442e85fdd6b78",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  }
+ }
+}

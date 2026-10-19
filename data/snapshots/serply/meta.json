@@ -1,0 +1,73 @@
+{
+ "slug": "serply",
+ "name": "Serply",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:17+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://serply.io/pricing",
+   "status": 200,
+   "final_url": "https://serply.io/pricing",
+   "content_type": "text/html",
+   "bytes": 54071,
+   "truncated": false,
+   "sha256": "95202e64cc7cc37e3e5b7050d84be3a03ee29beae63b6c55bd94cee05c4658b8",
+   "fetched_at": "2026-10-19T05:59:41+00:00",
+   "text_bytes": 6481
+  },
+  "home": {
+   "url": "https://serply.io/",
+   "status": 200,
+   "final_url": "https://serply.io/",
+   "content_type": "text/html",
+   "bytes": 142078,
+   "truncated": false,
+   "sha256": "2811a925402f3bd713eff24f453d0e0906973b4e009b7a8be5660b990e563737",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 21609
+  },
+  "llms": {
+   "url": "https://serply.io/llms.txt",
+   "status": 200,
+   "final_url": "https://serply.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 6014,
+   "truncated": false,
+   "sha256": "2049657160a751921869b86a1e3ce557056e3cc76871233ba21759137a5bc251",
+   "fetched_at": "2026-10-19T05:54:18+00:00",
+   "text_bytes": 6014
+  },
+  "llms-full": {
+   "url": "https://docs.serply.io/llms-full.txt",
+   "status": 200,
+   "final_url": "https://serply.io/docs",
+   "content_type": "text/html",
+   "bytes": 75789,
+   "truncated": false,
+   "sha256": "2b53802e1d68e881bec0b47e8085b5643175192d17b6fd643eb9a48120be2cee",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 1157
+  },
+  "llms-err-8ad7f0": {
+   "url": "https://serply.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://serply.io/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 28135,
+   "truncated": false,
+   "sha256": "63d26253d06f561e279225d67b39aa56bae4222fe1a3bcf59c6ee1bc7248f91d",
+   "fetched_at": "2026-10-19T05:54:18+00:00"
+  },
+  "llms-https://docs.serply.io/llms.txt": {
+   "url": "https://docs.serply.io/llms.txt",
+   "status": 200,
+   "final_url": "https://serply.io/docs",
+   "content_type": "text/html",
+   "bytes": 75789,
+   "truncated": false,
+   "sha256": "2b53802e1d68e881bec0b47e8085b5643175192d17b6fd643eb9a48120be2cee",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 1157
+  }
+ }
+}

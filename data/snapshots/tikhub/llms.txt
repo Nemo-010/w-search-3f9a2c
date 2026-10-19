@@ -1,0 +1,51 @@
+# TikHub
+
+> TikHub is a social media data infrastructure platform providing 1,000+ real-time API endpoints across 16 social platforms, 1B+ record datasets for AI training, 990+ MCP tools for AI agents, and a real-time Live Room WebSocket API — serving developers, AI agents, researchers, and enterprises.
+
+TikHub focuses on social data infrastructure for the AI era: social reasoning and emotional-intelligence datasets for physical AI, plus real-time social APIs powering AI agents in quantitative trading, government & defense, and marketing. 30,000+ developers and data teams use TikHub; 300M+ requests are ingested daily. Public data only — GDPR & CCPA aligned.
+
+Supported platforms (16): TikTok, Douyin, Xigua, Instagram, YouTube, Twitter/X, Rednote (XHS / Xiaohongshu), Threads, LinkedIn, Reddit, Bilibili, Weibo, Kuaishou, WeChat, Lemon8, Zhihu.
+
+Languages: the whole site is published in English (tikhub.io/), Simplified Chinese (/zh), French (/fr) and Spanish (/es). Every page exists at the same path in all four trees — /pricing, /zh/pricing, /fr/pricing, /es/pricing — and the English URL is the x-default.
+
+Pricing: pay-as-you-go from $0.001/request with automatic daily volume discounts (down to $0.0005 at 30,000+ requests/day); $0.05 free sign-up credit (~50 requests, no credit card, granted once per user); default 10 RPS rate limit, upgradeable to 100+ RPS; Enterprise from $3,000 one-time or $4,500 cumulative spend. Payment methods: PayPal (guest checkout), Alipay, USDT.
+
+## Docs
+
+- [API Documentation](https://docs.tikhub.io): Full endpoint reference for all platforms
+- [Getting Started Guide](https://tikhub.io/getting-started): Sign up, claim free credit, add funds, make your first API call — 4 steps
+- [API Reference](https://tikhub.io/api-reference): Browse 1,000+ endpoints across all platform series
+- [MCP Integration Guide](https://tikhub.io/mcp): 990+ MCP tools for Claude Desktop, Cursor, VS Code, LangChain — connect via `npx mcp-remote https://mcp.tikhub.io/{platform}/mcp`
+- [Code Tutorials](https://tikhub.io/tutorials): Python, JavaScript, Go, Java, PHP, and cURL examples
+
+## Platform APIs
+
+- [TikTok API](https://tikhub.io/tiktok-api): 6 API series — videos, comments, users, search, live, TikTok Shop, ads
+- [Instagram API](https://tikhub.io/instagram-api): Posts, reels, stories, profiles, comments, followers — Graph API alternative
+- [YouTube API](https://tikhub.io/youtube-api): Videos, channels, comments, search, shorts, subtitles — no quota limits
+- [X (Twitter) API](https://tikhub.io/twitter-api): Tweets, profiles, followers, search, trends — affordable official-API alternative
+- [Douyin API](https://tikhub.io/douyin-api): The deepest Douyin (抖音) access in English — videos, billboards, Xingtu, e-commerce
+- [Xiaohongshu API](https://tikhub.io/xiaohongshu-api): Rednote (小红书) notes, users, comments, search, trending, products
+- [Kuaishou API](https://tikhub.io/kuaishou-api): Videos, users, live rooms, hot boards from 快手
+- [Weibo API](https://tikhub.io/weibo-api): Posts, profiles, comments, hot-search topics from 微博
+- [Bilibili API](https://tikhub.io/bilibili-api): Videos, creators, comments, danmaku from B站
+- [WeChat API](https://tikhub.io/wechat-api): Official Account (公众号) articles, read counts, Channels videos
+- [Zhihu API](https://tikhub.io/zhihu-api): Questions, answers, articles, topics from 知乎
+- [Threads API](https://tikhub.io/threads-api): Posts, profiles, replies, search
+- [LinkedIn API](https://tikhub.io/linkedin-api): 43+ endpoints — profiles, companies, jobs, posts
+- [Reddit API](https://tikhub.io/reddit-api): Posts, comment trees, subreddits, search
+- [Lemon8 API](https://tikhub.io/lemon8-api): Posts, creators, comments, trends
+
+## Products
+
+- [Social Media API](https://tikhub.io/api-reference): 1,000+ endpoints for real-time data extraction — videos, comments, profiles, search, live streams, e-commerce
+- [Dataset Catalog](https://tikhub.io/datasets): 1B+ pre-collected records in CSV, JSON, JSONL, or Parquet — cleaned and deduplicated for AI training
+- [Live Room API](https://tikhub.io/live-room): Real-time livestream data via WebSocket — danmaku chat, gifts, likes, member events, PK battles
+- [Integrations](https://tikhub.io/integrations): Zapier, n8n workflow automation, Chrome extension, Python SDK
+- [Pricing](https://tikhub.io/pricing): Pay-as-you-go tiers, RPS plans, dataset pricing, enterprise plans
+
+## Optional
+
+- [GitHub](https://github.com/TikHub): Python SDK and open-source tools
+- [Discord](https://discord.gg/aMEAS8Xsvz): Community support, 10–30 minute response times
+- [Contact](https://tikhub.io/contact): team@tikhub.io

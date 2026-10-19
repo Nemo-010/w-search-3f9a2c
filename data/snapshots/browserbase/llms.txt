@@ -1,0 +1,254 @@
+# Browserbase Documentation
+
+> Browserbase is the Browser Agent Platform: one API key gives your agent everything it needs to browse and interact with the web like a human: Browsers, Fetch, Search, Agent Identity, Functions, and the Model Gateway.
+
+- [Introducing Browserbase](https://docs.browserbase.com/welcome/introduction.md)
+- [Overview](https://docs.browserbase.com/welcome/getting-started.md)
+- [What is Browserbase?](https://docs.browserbase.com/welcome/what-is-browserbase.md): The complete platform to build and deploy agents that browse and interact with the web like humans.
+- [Unblock your agents](https://docs.browserbase.com/welcome/identity-and-access.md): Help your browser agent reach protected websites, sign in, and reuse authentication across sessions.
+- [Skills](https://docs.browserbase.com/welcome/quickstarts/skills.md): Give your AI coding agent a browser in one prompt
+- [Browserbase Agents](https://docs.browserbase.com/welcome/quickstarts/agents.md): Run your first browser agent in 1 minute.
+- [Stagehand](https://docs.browserbase.com/welcome/quickstarts/stagehand.md): Build browser agents with Stagehand + Browserbase
+- [Start your first session with Playwright](https://docs.browserbase.com/welcome/quickstarts/playwright.md): Connect Playwright to Browserbase cloud browsers in minutes. Run headless browser automation at scale with session replay and debugging.
+- [Start your first session with Puppeteer](https://docs.browserbase.com/welcome/quickstarts/puppeteer.md): Connect Puppeteer to Browserbase cloud browsers. Run headless Chrome automation at scale with built-in session management and debugging.
+- [Start your first session with Selenium](https://docs.browserbase.com/welcome/quickstarts/selenium.md): Connect Selenium WebDriver to Browserbase cloud browsers. Run cross-browser automation at scale with session replay and observability.
+- [Browse CLI](https://docs.browserbase.com/integrations/skills/browse-cli.md): Use the Browse CLI to drive browser automation, Browserbase cloud APIs, and Browse.sh skills from AI coding agents.
+- [Create a browser session](https://docs.browserbase.com/platform/browser/getting-started/create-browser-session.md): Learn how to create and configure browser sessions in Browserbase
+- [Using a browser session](https://docs.browserbase.com/platform/browser/getting-started/using-browser-session.md): Learn how to connect to and interact with browser sessions
+- [Manage a browser session](https://docs.browserbase.com/platform/browser/getting-started/manage-browser-session.md): Learn how to manage session termination and inspect completed sessions
+- [What is a headless browser?](https://docs.browserbase.com/platform/browser/getting-started/what-is-headless-browser.md): A headless browser is a web browser controlled by code, without a GUI. Learn how headless browsers work and how to use them for automation, data extraction, and testing.
+- [Managed vs self-hosted](https://docs.browserbase.com/platform/browser/getting-started/remote-browser-versus-local-browser.md): Why managed Browserbase sessions usually win over self-hosted Chromium in a VM.
+- [Core features](https://docs.browserbase.com/platform/browser/core-features/overview.md): The building blocks for powerful browser automation with Browserbase
+- [Contexts](https://docs.browserbase.com/platform/browser/core-features/contexts.md): Reuse cookies, authentication, and application data across browser sessions.
+- [Viewports](https://docs.browserbase.com/platform/browser/core-features/viewports.md): Configure viewport sizes for your sessions
+- [Metadata](https://docs.browserbase.com/platform/browser/core-features/session-metadata.md): Tag and query sessions with custom data
+- [Browser extensions](https://docs.browserbase.com/platform/browser/core-features/browser-extensions.md): Augment your browser sessions with your own Chrome extensions.
+- [Observability](https://docs.browserbase.com/platform/browser/observability/observability.md): Debug and monitor your browser sessions with logs, metrics, and real-time inspection
+- [Session live view](https://docs.browserbase.com/platform/browser/observability/session-live-view.md): An interactive window to display or control a browser session.
+- [Session replay](https://docs.browserbase.com/platform/browser/observability/session-replay.md): Stream session replays as HLS to embed playback in your own application.
+- [Recording downloads](https://docs.browserbase.com/platform/browser/observability/recording-downloads.md): Assemble and download session replays as MP4 files, one per page.
+- [IP allowlisting](https://docs.browserbase.com/platform/browser/security/ip-allowlisting.md): Route Browserbase traffic through your VPN by allowlisting proxies.
+- [Allowed Domains](https://docs.browserbase.com/platform/browser/security/allowed-domains.md): Restrict session navigation to an allowlist of domains
+- [Certificate Validation](https://docs.browserbase.com/platform/browser/security/certificate-validation.md): Handle TLS certificate errors in browser sessions
+- [Files & screenshots](https://docs.browserbase.com/platform/browser/files/overview.md): Download, upload, and capture files from your browser sessions
+- [Downloads](https://docs.browserbase.com/platform/browser/files/downloads.md): Triggering and retrieving downloaded files
+- [Uploads](https://docs.browserbase.com/platform/browser/files/uploads.md)
+- [Screenshots](https://docs.browserbase.com/platform/browser/files/screenshots.md)
+- [PDFs](https://docs.browserbase.com/platform/browser/files/pdfs.md)
+- [Long sessions](https://docs.browserbase.com/platform/browser/long-sessions/overview.md): Keep sessions running longer and survive disconnects with keep alive and custom timeouts
+- [Keep alive](https://docs.browserbase.com/platform/browser/long-sessions/keep-alive.md): Keep sessions alive across disconnects, allowing you to reconnect without ending your session.
+- [Timeout](https://docs.browserbase.com/platform/browser/long-sessions/timeouts.md): Extend session duration beyond the default timeout period.
+- [Dialogs](https://docs.browserbase.com/platform/browser/techniques/dialogues.md): Handling browser dialog windows in automated sessions.
+- [Timezones](https://docs.browserbase.com/platform/browser/techniques/timezones.md): Align the browser timezone with its geolocation.
+- [Agents](https://docs.browserbase.com/platform/agents/overview.md): Run autonomous browser agents on Browserbase with one API call.
+- [How it works](https://docs.browserbase.com/platform/agents/how-it-works.md): How Browserbase Agents work: the execution loop, built-in tools, reusable Agents, run lifecycle, and observability.
+- [Examples](https://docs.browserbase.com/platform/agents/examples.md): Ready-to-use prompts and structured output for deep research, monitoring, and high-scale automation with Agents.
+- [Integrating Agents](https://docs.browserbase.com/platform/agents/integrate-api-sdk.md): Create and manage Agents, trigger runs, pass variables, and track runs to completion.
+- [How to prompt Agents](https://docs.browserbase.com/platform/agents/how-to-prompt-agents.md): Write the system prompt, task, and result schema that shape a Browserbase Agent, plus the patterns and gotchas that keep runs reliable.
+- [Optimizing Agents](https://docs.browserbase.com/platform/agents/optimizing-agents.md): Use the Optimize tool, tune your prompt and schema, and measure Agent quality to make runs faster and more reliable.
+- [Pausing and resuming runs](https://docs.browserbase.com/platform/agents/pausing-runs.md): Let an Agent pause for input it can't get on its own, then resume the run with a reply.
+- [Generate a script](https://docs.browserbase.com/platform/agents/generating-scripts.md): Turn a completed Agent run into a reusable Stagehand script with the Optimize tool.
+- [Managing files](https://docs.browserbase.com/platform/agents/managing-files.md): How Browserbase Agents work with files, and retrieve downloads.
+- [Functions](https://docs.browserbase.com/platform/functions/overview.md): A Browserbase Function runs your TypeScript code next to a Browserbase browser and exposes it through an API.
+- [Quickstart](https://docs.browserbase.com/platform/functions/quickstart.md): Build, test, publish, and invoke a Browserbase Function from a local TypeScript project.
+- [Write a Function](https://docs.browserbase.com/platform/functions/write.md): Define Browserbase Functions, validate parameters, configure browser sessions, and publish multiple handlers.
+- [Deploy a Function](https://docs.browserbase.com/platform/functions/deploy.md): Publish a Browserbase Function from the CLI or the Playground.
+- [Invoke a Function](https://docs.browserbase.com/platform/functions/invoke.md): Invoke Browserbase Functions locally or in production, pass parameters, override browser settings, and retrieve results.
+- [Use Secrets in Functions](https://docs.browserbase.com/platform/functions/secrets.md): Attach Secrets to a Browserbase Function and read them at runtime.
+- [Functions limits](https://docs.browserbase.com/platform/functions/limits.md): Reference for Browserbase Functions regions, timeouts, build size, parameters, storage, and language support.
+- [Secrets](https://docs.browserbase.com/platform/secrets/overview.md): Store encrypted credentials and make them available only to the Browserbase Functions that need them.
+- [Get started with Secrets](https://docs.browserbase.com/platform/secrets/getting-started.md): Create, inspect, update, and delete encrypted Secrets with the Browse CLI.
+- [Fetch](https://docs.browserbase.com/platform/fetch/overview.md): Lightweight page retrieval as a complement to browser sessions.
+- [Search](https://docs.browserbase.com/platform/search/overview.md): Fast, token-efficient web search results as a complement to browser sessions.
+- [Overview](https://docs.browserbase.com/platform/webhooks/overview.md): Receive a signed HTTP request when something happens in Browserbase, instead of polling for it.
+- [Registering endpoints](https://docs.browserbase.com/platform/webhooks/registering-endpoints.md): Create, list, update, rotate, and delete webhook endpoints with the Browserbase SDK.
+- [Verifying deliveries](https://docs.browserbase.com/platform/webhooks/verifying-deliveries.md): Confirm a request came from Browserbase before acting on it.
+- [Example](https://docs.browserbase.com/platform/webhooks/example.md): A complete webhook receiver for Function invocations, from registering the endpoint to handling the event.
+- [Agent Identity](https://docs.browserbase.com/platform/identity/overview.md)
+- [Verified](https://docs.browserbase.com/platform/identity/verified-customization.md): Customize Verified sessions with OS configurations
+- [Web Bot Auth](https://docs.browserbase.com/platform/identity/web-bot-auth.md): Give your browser traffic a verifiable identity with Web Bot Auth. Learn how request signing works and request beta access.
+- [Proxies](https://docs.browserbase.com/platform/identity/proxies.md): Consistent geolocation and network identity for your browser sessions
+- [Website authentication](https://docs.browserbase.com/platform/identity/authentication.md): Managing 2FA and other authentication flows.
+- [CAPTCHA Solving](https://docs.browserbase.com/platform/identity/captcha-solving.md): Browserbase can solve supported CAPTCHA challenges automatically so your sessions can continue.
+- [Model Gateway](https://docs.browserbase.com/platform/model-gateway/overview.md): Access top LLM providers through your Browserbase API key: one key, one bill, no provider accounts needed.
+- [Browser agents](https://docs.browserbase.com/use-cases/agents.md): When to reach for a browser agent, and which Browserbase products solve each use case.
+- [Automating form submissions](https://docs.browserbase.com/use-cases/automating-form-submissions.md): Automate form submissions at scale with Browserbase. Handle logins, registrations, data entry, and checkouts using Stagehand or Playwright in reliable cloud browsers.
+- [Web data retrieval](https://docs.browserbase.com/use-cases/web-data-retrieval.md): Extract structured data from any website at scale with Browserbase. Use Stagehand or Playwright with Verified, proxy rotation, and CAPTCHA solving.
+- [Automated testing](https://docs.browserbase.com/use-cases/building-automated-tests.md): Run reliable end-to-end browser tests at scale with Browserbase. Automate login flows, UI validation, and regression testing using Stagehand or Playwright.
+- [Performance optimization](https://docs.browserbase.com/optimizations/latency/speed-optimization.md): Best practices for speeding up your browsers
+- [Browser regions](https://docs.browserbase.com/optimizations/latency/multi-region.md): Connect to a browser closest to you for improved performance.
+- [Cost optimization](https://docs.browserbase.com/optimizations/cost/cost-optimization.md): Your guide to lowering your browser infrastructure costs
+- [Usage tracking](https://docs.browserbase.com/optimizations/cost/measuring-usage.md): Learn how to measure your usage of Browserbase
+- [Concurrency management](https://docs.browserbase.com/optimizations/concurrency/overview.md): Session limits and rate controls for concurrent browsers
+- [Enterprise security](https://docs.browserbase.com/account/enterprise/security.md): SOC 2 Type II, HIPAA compliance, zero-trust browser isolation, and enterprise-grade security for Browserbase infrastructure.
+- [Zero data retention (ZDR)](https://docs.browserbase.com/account/enterprise/zero-data-retention.md): Run Browserbase sessions for regulated workloads without persisting logs, recordings, or replay data.
+- [Bring your own storage (BYOS)](https://docs.browserbase.com/account/enterprise/byos-setup-guide.md): Configure your own AWS S3 buckets for storing Browserbase artifacts
+- [Plans](https://docs.browserbase.com/account/billing/plans.md): Your guide to Browserbase plans, pricing, and usage limits
+- [Billing](https://docs.browserbase.com/account/billing/plan-management.md): Manage your subscription, invoices, and payment details
+- [Teams](https://docs.browserbase.com/account/team/roles.md): Manage team members, roles, and project access
+- [SSO (single sign-on) with SAML](https://docs.browserbase.com/account/team/sso.md): Learn how to enable SAML 2.0-based Single Sign-On for your Browserbase organization
+- [APIs and SDKs](https://docs.browserbase.com/reference/introduction.md): Choose your favorite way to interact with browser fleets.
+- [Overview](https://docs.browserbase.com/reference/sdk/overview.md): Faster development for Python and Node.js.
+- [Node.js SDK](https://docs.browserbase.com/reference/sdk/nodejs.md): All the features and utilities for fast Node.js development with Browserbase.
+- [Python SDK](https://docs.browserbase.com/reference/sdk/python.md): All the features and utilities for fast Python development with Browserbase.
+- [Overview](https://docs.browserbase.com/reference/api/overview.md): Create, connect, and retrieve information from browser sessions.
+- [Create a Session](https://docs.browserbase.com/reference/api/create-a-session.md)
+- [List Sessions](https://docs.browserbase.com/reference/api/list-sessions.md)
+- [Get a Session](https://docs.browserbase.com/reference/api/get-a-session.md)
+- [Update a Session](https://docs.browserbase.com/reference/api/update-a-session.md): Close a Browserbase session by updating its status to REQUEST_RELEASE, or update other mutable session fields.
+- [Session Live URLs](https://docs.browserbase.com/reference/api/session-live-urls.md)
+- [Session Logs](https://docs.browserbase.com/reference/api/session-logs.md)
+- [Get Session Replay](https://docs.browserbase.com/reference/api/session-replays.md): Returns page metadata for a session replay, including timing information and the URL of each page's HLS playlist.
+- [Get Replay Page](https://docs.browserbase.com/reference/api/session-replay-page.md): Returns an HLS VOD media playlist (.m3u8) for a specific page of a session replay.
+- [Create Session Recording Downloads](https://docs.browserbase.com/reference/api/create-session-recording-downloads.md): Requests one downloadable MP4 per recorded page of a session. Assembly runs asynchronously and every page returns as `PENDING`. Re-posting re-enqueues all pages and retries any that failed. Poll the GET endpoint for per-page status and, on standard (non-BYOS) projects, download URLs.
+- [List Session Recording Downloads](https://docs.browserbase.com/reference/api/list-session-recording-downloads.md): Returns the per-page download status for a session, with a short-lived signed URL for each completed page on standard (non-BYOS) projects.
+- [Create Session Uploads](https://docs.browserbase.com/reference/api/create-session-uploads.md)
+- [Fetch a Page](https://docs.browserbase.com/reference/api/fetch-a-page.md): Fetch a page and return its content, headers, and metadata.
+- [Web Search](https://docs.browserbase.com/reference/api/web-search.md): Perform a web search and return structured results.
+- [Run an Agent](https://docs.browserbase.com/reference/api/run-an-agent.md): Run a browser agent to complete the `task` by using web search and browser tooling. Optionally pass `agentId` to run a [custom agent](/reference/api/create-an-agent) you've created.
+- [Get a Run](https://docs.browserbase.com/reference/api/get-a-run.md): Retrieve the current status and details of a run, including its result and associated session information. To fetch the run's messages, use [List Run Messages](/reference/api/list-run-messages).
+- [List Runs](https://docs.browserbase.com/reference/api/list-runs.md): List runs across your account. Supports filtering by status, by the agent they reference, and by creation time.
+- [List Run Messages](https://docs.browserbase.com/reference/api/list-run-messages.md): Returns a paginated list of messages produced by a run, in chronological order, with the oldest messages first.
+- [Resume a Run](https://docs.browserbase.com/reference/api/resume-a-run.md): Resume a `PAUSED` run with additional input. The reply in `task` is delivered to the agent as the answer to its pause request (the trailing `pause` tool call in the run's messages), and `variables` merge over the run's original variables. Resuming a run that is not paused returns a conflict.
+- [Stop a Run](https://docs.browserbase.com/reference/api/stop-a-run.md): Request that an in-progress run stop. The run winds down and transitions to `STOPPED`. Stopping a run that has already finished returns a conflict.
+- [Create an Agent](https://docs.browserbase.com/reference/api/create-an-agent.md): Create a reusable agent. An agent defines a `systemPrompt` and `resultSchema` that guide its behavior for every run. Only `name` is required; an agent created with no `systemPrompt` behaves like an unconfigured run.
+- [Get an Agent](https://docs.browserbase.com/reference/api/get-an-agent.md): Retrieve an agent by ID.
+- [List Agents](https://docs.browserbase.com/reference/api/list-agents.md): List agents across your account. Supports filtering by creation time.
+- [Update an Agent](https://docs.browserbase.com/reference/api/update-an-agent.md): Update an existing agent. Only the fields provided in the body are modified; omitted fields are left unchanged.
+- [Delete an Agent](https://docs.browserbase.com/reference/api/delete-an-agent.md): Delete an agent. Runs that already referenced this agent are unaffected.
+- [List Functions](https://docs.browserbase.com/reference/api/list-functions.md)
+- [Get a Function](https://docs.browserbase.com/reference/api/get-a-function.md)
+- [Invoke a Function](https://docs.browserbase.com/reference/api/invoke-a-function.md)
+- [List Function Secrets](https://docs.browserbase.com/reference/api/list-function-secrets.md): List secrets attached to a function. Supports filtering by secret creation time. Returns metadata only.
+- [Attach a Secret to a Function](https://docs.browserbase.com/reference/api/attach-a-secret-to-a-function.md): Attach a secret to a Function, taking effect on the Function's next invocation. Note: Attaching a secret that is already attached succeeds to support idempotency.
+- [Detach a Secret from a Function](https://docs.browserbase.com/reference/api/detach-a-secret-from-a-function.md): Detach a secret from a Function, taking effect on the Function's next invocation. Note: Detaching a secret that is not attached succeeds to support idempotency.
+- [List Function Versions](https://docs.browserbase.com/reference/api/list-function-versions.md)
+- [Get a Function Version](https://docs.browserbase.com/reference/api/get-a-function-version.md)
+- [List Function Builds](https://docs.browserbase.com/reference/api/list-function-builds.md)
+- [Get a Function Build](https://docs.browserbase.com/reference/api/get-a-function-build.md)
+- [Get Function Build Logs](https://docs.browserbase.com/reference/api/get-function-build-logs.md)
+- [Get an Invocation](https://docs.browserbase.com/reference/api/get-an-invocation.md)
+- [Get Invocation Logs](https://docs.browserbase.com/reference/api/get-invocation-logs.md)
+- [List Invocations for a Function Version](https://docs.browserbase.com/reference/api/list-version-invocations.md)
+- [Get a Keypair](https://docs.browserbase.com/reference/api/get-a-keypair.md)
+- [Create a Secret](https://docs.browserbase.com/reference/api/create-a-secret.md)
+- [List Secrets](https://docs.browserbase.com/reference/api/list-secrets.md): List project secrets. Supports filtering by creation time.
+- [Get a Secret](https://docs.browserbase.com/reference/api/get-a-secret.md)
+- [Update a Secret](https://docs.browserbase.com/reference/api/update-a-secret.md): Replace a secret's value. The name cannot be changed; to rename, create a new secret and delete the old one.
+- [Delete a Secret](https://docs.browserbase.com/reference/api/delete-a-secret.md)
+- [List Downloads](https://docs.browserbase.com/reference/api/list-downloads.md): List all downloads for a session with optional filtering and pagination.
+- [Get a Download](https://docs.browserbase.com/reference/api/get-a-download.md): Get download metadata (Accept: application/json) or file content (Accept: application/octet-stream).
+- [Delete a Download](https://docs.browserbase.com/reference/api/delete-a-download.md): Delete a download file from storage and mark as deleted.
+- [Create a Context](https://docs.browserbase.com/reference/api/create-a-context.md)
+- [Get a Context](https://docs.browserbase.com/reference/api/get-a-context.md)
+- [Delete a Context](https://docs.browserbase.com/reference/api/delete-a-context.md)
+- [Upload an Extension](https://docs.browserbase.com/reference/api/upload-an-extension.md)
+- [Get an Extension](https://docs.browserbase.com/reference/api/get-an-extension.md)
+- [Delete an Extension](https://docs.browserbase.com/reference/api/delete-an-extension.md)
+- [Upload a Certificate](https://docs.browserbase.com/reference/api/upload-a-certificate.md)
+- [List Certificates](https://docs.browserbase.com/reference/api/list-certificates.md)
+- [Get a Certificate](https://docs.browserbase.com/reference/api/get-a-certificate.md)
+- [Delete a Certificate](https://docs.browserbase.com/reference/api/delete-a-certificate.md)
+- [Create a Webhook](https://docs.browserbase.com/reference/api/create-a-webhook.md): Register an HTTPS endpoint to receive events for this project. The response includes the signing secret, which is shown only here and when the secret is rotated. Store it before discarding the response. An endpoint may only be registered once per project.
+- [List Webhooks](https://docs.browserbase.com/reference/api/list-webhooks.md): List the project's webhooks, newest first. Signing secrets are not included. Page by passing the previous response's `nextCursor` as `cursor`; a null `nextCursor` means there are no further pages.
+- [Get a Webhook](https://docs.browserbase.com/reference/api/get-a-webhook.md): Retrieve a single webhook by ID. The signing secret is not included; it is only ever returned on create and rotate.
+- [Update a Webhook](https://docs.browserbase.com/reference/api/update-a-webhook.md): Update a webhook's endpoint URL, its subscribed event types, or both. Omitted fields are left unchanged. `eventTypes` replaces the existing subscription rather than adding to it. The signing secret is unaffected.
+- [Delete a Webhook](https://docs.browserbase.com/reference/api/delete-a-webhook.md): Delete a webhook. Deliveries stop immediately and the signing secret is retired. Events that occurred before the delete are not replayed if the endpoint is registered again.
+- [Rotate a Webhook signing secret](https://docs.browserbase.com/reference/api/rotate-a-webhook-signing-secret.md): Issue a new signing secret for a webhook. By default the previous secret keeps verifying for 24 hours so a receiver can be updated without dropping deliveries; pass `revokeImmediately` to end that window at once. The new secret is returned only here.
+- [List Projects](https://docs.browserbase.com/reference/api/list-projects.md)
+- [Get a Project](https://docs.browserbase.com/reference/api/get-a-project.md)
+- [Get Project Usage](https://docs.browserbase.com/reference/api/get-project-usage.md)
+- [Get started with integrations](https://docs.browserbase.com/integrations/get-started.md): Use your favorite technologies seamlessly with Browserbase.
+- [Introduction](https://docs.browserbase.com/integrations/1password/introduction.md): Securely log into websites in a Browserbase session using 1Password.
+- [Use 1Password to log in with Browserbase](https://docs.browserbase.com/integrations/1password/quickstart.md): Securely retrieve credentials from your 1Password vault and use them to log into websites.
+- [AgentKit by Tools for Humanity](https://docs.browserbase.com/integrations/agentkit/introduction.md): Use AgentKit to prove your AI agent is backed by a real human with cryptographic proof-of-humanity.
+- [AgentKit quickstart](https://docs.browserbase.com/integrations/agentkit/quickstart.md): Set up AgentKit human verification and create your first verified browser session via x402.
+- [Anthropic Managed Agents](https://docs.browserbase.com/integrations/anthropic/managed-agents/introduction.md): Run Claude agents in Anthropic's managed runtime and give them a Browserbase session to drive the web.
+- [Browsers for Managed Agents](https://docs.browserbase.com/integrations/anthropic/managed-agents/quickstart.md): Hand your Anthropic Managed Agents a full cloud browser
+- [Using Inngest with Browserbase](https://docs.browserbase.com/integrations/inngest/introduction.md): Develop AI agents that can browse the web autonomously using Browserbase and Inngest AgentKit.
+- [Reddit search agent](https://docs.browserbase.com/integrations/inngest/quickstart.md): Enable your AI agents to search Reddit with Browserbase's managed headless browsers.
+- [Add Stagehand to AgentKit tools](https://docs.browserbase.com/integrations/inngest/stagehand.md): Use Stagehand, the SDK for browser agents, with AgentKit.
+- [Agno integration](https://docs.browserbase.com/integrations/agno/introduction.md): Utilize Browserbase with Agno to give your AI agents Browser Tools.
+- [Add web browsing capabilities to Agno](https://docs.browserbase.com/integrations/agno/quickstart.md): Integrate Browserbase with Agno
+- [Braintrust integration](https://docs.browserbase.com/integrations/braintrust/introduction.md): Utilize Browserbase with Braintrust for browser agent capabilities.
+- [Add web browsing capabilities to Braintrust](https://docs.browserbase.com/integrations/braintrust/typescript.md): Integrate Browserbase with Braintrust
+- [Box integration](https://docs.browserbase.com/integrations/box/introduction.md): Send files from the web to Box, extract structured data with Box AI, and route documents for review.
+- [Build a Box compliance intake](https://docs.browserbase.com/integrations/box/quickstart.md): Download documents with Stagehand, analyze them with Box AI, and route compliance exceptions for review.
+- [Browser Use integration](https://docs.browserbase.com/integrations/browseruse/introduction.md): Utilize Browserbase with Browser Use for browser agent capabilities.
+- [Add web browsing capabilities to Browser Use](https://docs.browserbase.com/integrations/browseruse/python.md): Integrate Browserbase with Browser Use
+- [crewAI integration](https://docs.browserbase.com/integrations/crew-ai/introduction.md): Let your crewAI Agent browse the web like a human.
+- [Add web browsing capabilities to your agent](https://docs.browserbase.com/integrations/crew-ai/python.md): Let your crewAI Agent browse the web like a human.
+- [Tutorial: build a flight booking Crew](https://docs.browserbase.com/integrations/crew-ai/build-a-flight-booker.md): Build a Crew that finds the best roundtrip flights on the given dates.
+- [Evervault](https://docs.browserbase.com/integrations/evervault/introduction.md): Use Evervault to keep card data and credentials out of Browserbase browser sessions.
+- [Quickstart](https://docs.browserbase.com/integrations/evervault/browser-tokens.md): Create Evervault Browser Tokens and use them in a Browserbase session.
+- [Google ADK integration](https://docs.browserbase.com/integrations/google-adk/introduction.md): Give Google ADK agents a browser with Browserbase and Stagehand
+- [Google ADK setup](https://docs.browserbase.com/integrations/google-adk/setup.md): Configure Browserbase MCP Server for Google Agent Development Kit
+- [Hermes Agent integration](https://docs.browserbase.com/integrations/hermes-agent/introduction.md): Connect Browserbase to Hermes Agent using Hermes' built-in Browserbase cloud mode or the Browse CLI.
+- [Hermes Agent setup](https://docs.browserbase.com/integrations/hermes-agent/setup.md): Set up Hermes Agent with Browserbase, starting with Hermes' built-in Browserbase cloud mode and then the Browse CLI.
+- [LangChain integration](https://docs.browserbase.com/integrations/langchain/introduction.md): Add Browserbase to your LangChain application (Python).
+- [Configure Browserbase for LangChain](https://docs.browserbase.com/integrations/langchain/python.md)
+- [LangChain Deep Agents with Browserbase](https://docs.browserbase.com/integrations/langchain/deepagents.md): Build a Deep Agent that browses the web with Browserbase Search, Fetch, and Stagehand.
+- [Mastra integration](https://docs.browserbase.com/integrations/mastra/introduction.md): Build browser agents with Mastra and Stagehand
+- [Mastra agent quickstart](https://docs.browserbase.com/integrations/mastra/quickstart.md): Build AI-powered browser agents with Mastra and Stagehand
+- [Browserbase MCP server](https://docs.browserbase.com/integrations/mcp/introduction.md): Give MCP clients a browser through Model Context Protocol integration with Stagehand
+- [Browserbase MCP server setup](https://docs.browserbase.com/integrations/mcp/setup.md): Add the Browserbase MCP Server to your MCP client
+- [Introduction](https://docs.browserbase.com/integrations/mongo-db/introduction.md): Intelligent data extraction with MongoDB storage using Stagehand
+- [Quickstart](https://docs.browserbase.com/integrations/mongo-db/quickstart.md): Build an AI-powered data extraction agent that pulls product data from e-commerce sites and stores it in MongoDB with automatic schema validation and data analysis capabilities.
+- [n8n integration](https://docs.browserbase.com/integrations/n8n/introduction.md): Build browser agents in n8n with the Browserbase node.
+- [n8n quickstart](https://docs.browserbase.com/integrations/n8n/quickstart.md): Install the Browserbase community node, configure credentials, and use Agent, Search, and Fetch resources in n8n.
+- [OpenAI Computer Use Agent](https://docs.browserbase.com/integrations/openai-cua/introduction.md): Integrate OpenAI CUA with Browserbase for scalable browser agents
+- [OpenClaw integration](https://docs.browserbase.com/integrations/openclaw/introduction.md): Run OpenClaw's browser on Browserbase instead of OpenClaw's built-in local Chromium.
+- [OpenClaw setup](https://docs.browserbase.com/integrations/openclaw/setup.md): Run OpenClaw's browser on Browserbase instead of OpenClaw's built-in local Chromium.
+- [Prime Intellect](https://docs.browserbase.com/integrations/prime-intellect/introduction.md): Run Browserbase-backed browser environments for AI agent evaluation and RL training with Prime Intellect.
+- [Evaluate browser agents with Prime Intellect](https://docs.browserbase.com/integrations/prime-intellect/evals.md): Run browser agent evaluations using BrowserEnv and the Prime CLI.
+- [Training browser agents with Prime Intellect](https://docs.browserbase.com/integrations/prime-intellect/rl-training.md): Wire BrowserEnv into Prime Intellect's RL training workflows for browser-capable models.
+- [Skills](https://docs.browserbase.com/integrations/skills/introduction.md): Extend your AI coding agents with browser agents, Browserbase Functions, and Browse CLI workflows using Browserbase Skills
+- [Browse CLI](https://docs.browserbase.com/integrations/skills/browse-cli.md): Use the Browse CLI to drive browser automation, Browserbase cloud APIs, and Browse.sh skills from AI coding agents.
+- [Cookie sync](https://docs.browserbase.com/integrations/skills/cookie-sync.md): Sync local Chrome cookies to a Browserbase persistent context so your browser agent can work with authenticated websites.
+- [Browser trace](https://docs.browserbase.com/integrations/skills/browser-trace.md): Debug browser automation with a Chrome DevTools Protocol trace, screenshots, DOM snapshots, and searchable per-page events.
+- [Browser to API](https://docs.browserbase.com/integrations/skills/browser-to-api.md): Generate an OpenAPI 3.1 document, a JavaScript client, and a coverage report from HTTP traffic captured during a browser workflow.
+- [Fetch](https://docs.browserbase.com/integrations/skills/fetch.md): Use the Browserbase Fetch skill to retrieve page HTML or JSON, inspect HTTP status and headers, and follow redirects from your coding agent.
+- [UI test](https://docs.browserbase.com/integrations/skills/ui-test.md): Test UI changes with a browser agent that checks user flows, edge cases, accessibility, and responsive layouts, then reports reproducible failures.
+- [Auto-fix selectors in CI/CD](https://docs.browserbase.com/integrations/skills/github-action.md): Automatically fix broken CSS selectors using Claude Code and Browserbase in GitHub Actions
+- [Stripe](https://docs.browserbase.com/integrations/stripe/introduction.md): Give your agent browser and payment tools with Browserbase and Stripe Link.
+- [Stagehand + Link SDK](https://docs.browserbase.com/integrations/stripe/stagehand.md): Prepare a flower delivery with Stagehand on Browserbase, then use Link to request approval and pay.
+- [Browse CLI + Link CLI](https://docs.browserbase.com/integrations/stripe/browse-cli.md): Give your coding agent browser and payment tools to order flowers with your approval.
+- [Introduction](https://docs.browserbase.com/integrations/temporal/introduction.md): Resilient browser automation with Temporal workflows and Stagehand
+- [Quickstart](https://docs.browserbase.com/integrations/temporal/quickstart.md): Get production-ready browser agents with automatic retries and failure recovery
+- [Introduction](https://docs.browserbase.com/integrations/trigger/introduction.md): Learn what Trigger.dev is, why you might pair it with Browserbase, and what you can build with this integration.
+- [Quickstart](https://docs.browserbase.com/integrations/trigger/quickstart.md): Spin up your first Trigger.dev job that controls a Browserbase browser in under 5 minutes.
+- [Val Town integration](https://docs.browserbase.com/integrations/val-town/introduction.md): Allow your Val Town script to perform complex tasks on the web.
+- [Tutorial: Slack Scout](https://docs.browserbase.com/integrations/val-town/slack-scout.md): Send a Slack notification every time your keywords are mentioned on Twitter, Hacker News, or Reddit.
+- [Vercel AI integration](https://docs.browserbase.com/integrations/vercel/introduction.md): Build AI-powered research agents with parallel browser sessions, deployable on Vercel.
+- [Build a research agent with Stagehand + Vercel](https://docs.browserbase.com/integrations/vercel/quickstart.md): Build an AI-powered research agent that runs parallel browser sessions on Browserbase, powered by Stagehand and the Vercel AI SDK.
+- [BrowseGPT](https://docs.browserbase.com/integrations/vercel/browsegpt.md): BrowseGPT is a tool that allows you to search the web using a chat interface.
+- [Deploying Puppeteer on Vercel](https://docs.browserbase.com/integrations/vercel/puppeteer.md): Learn how to set up your project, deploy to Vercel, and scale with Browserbase
+- [Agent Browser integration](https://docs.browserbase.com/integrations/vercel/agent-browser/introduction.md): Use Agent Browser with Browserbase for fast, CLI-driven browser control optimized for AI agents.
+- [Add cloud browsers to Agent Browser](https://docs.browserbase.com/integrations/vercel/agent-browser/quickstart.md): Integrate Browserbase with Agent Browser for cloud-hosted browser automation.
+- [Eve agent integration](https://docs.browserbase.com/integrations/vercel/eve/introduction.md): Give Eve agents Browserbase Search, Fetch, and persistent cloud browser tools through Stagehand.
+- [Add Browserbase to an Eve agent](https://docs.browserbase.com/integrations/vercel/eve/quickstart.md): Install the Browserbase Eve extension and run an agent with Search, Fetch, and persistent browser tools.
+- [x402 protocol integration](https://docs.browserbase.com/integrations/x402/introduction.md): Pay-per-use browser sessions with crypto. No API keys, no accounts. Just pay and connect.
+- [x402 quickstart](https://docs.browserbase.com/integrations/x402/quickstart.md): Create pay-per-use browser sessions with crypto payments
+- [Human verification with AgentKit](https://docs.browserbase.com/integrations/x402/agentkit.md): Prove your agent is human-backed to unlock Verified browsers on x402 sessions.
+- [Introduction](https://docs.browserbase.com/integrations/ibm/introduction.md): Track real-time mortgage rates using IBM watsonx.ai
+- [Mortgage rate capture](https://docs.browserbase.com/integrations/ibm/quickstart.md): This guide shows how to use Browserbase with IBM watsonx.ai to create a mortgage rate analysis tool. The integration captures screenshots of mortgage rate data from Freddie Mac's website and uses a vision model to analyze and summarize the rates.
+- [Delete a Download](https://docs.browserbase.com/reference/api/delete-download.md): Delete a download file from storage and mark as deleted.
+- [Get a Download](https://docs.browserbase.com/reference/api/get-download.md): Get download metadata (Accept: application/json) or file content (Accept: application/octet-stream).
+- [List Sessions](https://docs.browserbase.com/reference/api/list-all-sessions.md)
+- [List Invocations for a Function Version](https://docs.browserbase.com/reference/api/list-invocations-for-a-function-version.md)
+- [Buying with an AI agent](https://docs.browserbase.com/use-cases/buy-with-ai-agent.md): Automate purchasing workflows with AI-powered agents and browser automation
+
+## OpenAPI Specs
+
+- [package](/package.json)
+- [openapi.v1](/reference/api/openapi.v1.yaml)
+
+## Optional
+
+- [Templates ↗](https://www.browserbase.com/templates)
+- [Stagehand ↗](https://docs.stagehand.dev/)
+- [Changelog ↗](https://www.browserbase.com/changelog)
+- [Dashboard ↗](https://www.browserbase.com/overview)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

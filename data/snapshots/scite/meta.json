@@ -1,0 +1,92 @@
+{
+ "slug": "scite",
+ "name": "Scite",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:44+00:00",
+ "sources": {
+  "pricing-err-c12b2f": {
+   "url": "https://scite.ai/pricing",
+   "status": 403,
+   "final_url": "https://scite.ai/pricing",
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "b17ba28f02459187743af202c2a1eb45e61feeff5ee06a97546ca81f1a86afb2",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  },
+  "docs": {
+   "url": "https://api.scite.ai/",
+   "status": 200,
+   "final_url": "https://api.scite.ai/",
+   "content_type": "application/json",
+   "bytes": 44,
+   "truncated": false,
+   "sha256": "96e43f2b5311255cedf0ade7c54a2a48ecaf8da13650e875c5c987a52d31d876",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 44
+  },
+  "home-err-b15ede": {
+   "url": "https://scite.ai/",
+   "status": 403,
+   "final_url": "https://scite.ai/",
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "f7e69facce5d82efffb912f9238b8e50a0816f941ee83e6f2d6de8eaea35b3dc",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  },
+  "llms-err-41d8a7": {
+   "url": "https://api.scite.ai/llms.txt",
+   "status": 404,
+   "final_url": "https://api.scite.ai/llms.txt",
+   "content_type": "application/json",
+   "bytes": 22,
+   "truncated": false,
+   "sha256": "37ec4665a8102d115ffd1ac20dae94c98b4dac64b0c1a68228aa2a531caeb35d",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  },
+  "llms": {
+   "url": "https://scite.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://scite.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 5125,
+   "truncated": false,
+   "sha256": "8c62cde8e8584dd5f35dcc5f7bba616efdba6eda4f854255f7286073ce6fb1bc",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 5125
+  },
+  "llms-err-69db5f": {
+   "url": "https://scite.ai/docs/llms.txt",
+   "status": 403,
+   "final_url": "https://scite.ai/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "a237b3a2635e698c4e8821ca91f11d53924f6cd203b57fb6a2d427922199e162",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  },
+  "llms-https://docs.scite.ai/llms.txt": {
+   "url": "https://docs.scite.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.scite.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 20220,
+   "truncated": false,
+   "sha256": "770a68c7498f483cc16b27ba355ec3b7824ba06dd79770f63e4c1364d0b6f4c3",
+   "fetched_at": "2026-10-19T05:54:46+00:00",
+   "text_bytes": 20212
+  },
+  "llms-full": {
+   "url": "https://docs.scite.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.scite.ai/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 171655,
+   "truncated": false,
+   "sha256": "6f358daa0894e9cb27ecb1617a556378ee17ae40b2a1f7d8db7334e2cca46807",
+   "fetched_at": "2026-10-19T05:54:47+00:00",
+   "text_bytes": 171511
+  }
+ }
+}

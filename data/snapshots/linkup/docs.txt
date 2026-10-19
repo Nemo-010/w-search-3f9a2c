@@ -1,0 +1,21 @@
+Introduction - Linkup API Documentation Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Linkup Flash (Alpha) is live — web evidence in under 200 ms. Try it → Linkup API Documentation home page Search... ⌘ K Ask Assistant ⌘ I Support Get Started Get Started Search... Navigation Get Started Introduction Documentation SDKs and CLI API Reference Integrations Changelog Security and Privacy For agents Playground Discord Talk to us Get Started Introduction Quickstart For AI agents Endpoints Search Fetch Research Tasks Extract (closed beta) Platform Pricing Authentication x402 Payment Protocol Errors Rate Limits Guides Migrating from SerpAPI Migrating from Tavily Migrating from Exa Structured Output Guide Source Filtering Tutorials Find LinkedIn Profiles Signup Radar Company Intelligence Engine Peers Finder Company Descriptions Generator Automating Lead Qualification Meeting Prep FAQ Frequently Asked Questions On this page Our endpoints Where to next Get Started Introduction Copy page Copy page The production-grade web search API for AI. Copy page Copy page Learn how to build with Linkup by pasting this prompt to your agent: 
+ Read https://github.com/LinkupPlatform/linkup-for-agents 
+ and follow the Linkup agent instructions to set up Linkup for this project. 
+ Linkup is the production-grade web search API for AI. Teams at Legora, Polymarket,
+Cohere, McKinsey, and SNCF ship production AI on Linkup because four things have
+to be true: 
+ Accuracy. Search ranks #1 among sub-second web search APIs on Verified SimpleQA with a 94% F-score. Research ranks #1 across the board on SealQA-0 with 61% accuracy. The evaluation harness is open source. 
+ Customization. The index adapts to your domain. Define which sources to trust, which domains to prefer, which proprietary data to blend in. 
+ Security. SOC 2 Type II, Zero Data Retention, GDPR, and Single Sign-On on every tier. Bring Your Own Cloud is available for the highest data sovereignty requirements: the full Linkup index runs inside your VPC and queries never leave your environment. 
+ Latency. Search starts under 200 ms with Flash (Alpha). Fast enough for voice AI, sales copilots, and live research tools. 
+ ​ Our endpoints 
+ Linkup exposes five endpoints. Each has a distinct shape and is tuned for a
+different point on the latency/quality curve. 
+ Endpoint Shape Latency Mode Use when Search Query → ranked URLs, sourced answer, or structured JSON Flash (Alpha): <200 ms; other modes: ~1–30s sync Grounding an agent or LLM answer with retrieved web context Fetch URL → clean LLM-ready markdown, optionally typed JSON ~1s sync Extracting the full content of a known page, or typed JSON from that page Research Query → detailed report or precise answer with inline citations 2–20 min async Multi-source synthesis, full reports, precise answers Tasks Batch of up to 100 Search/Fetch/Research calls → results for each 1s–20 min async Bulk, scheduled, or background workloads Extract Seed URL + query → downloadable structured rows Variable async Repeated records on a known page, such as products, jobs, or directories 
+ Extract is in closed beta and access is granted by request. Behavior
+and parameters may change. 
+ ​ Where to next 
+ Quickstart Make your first call in five minutes. For AI agents Tool definitions and integration prompts for coding agents. Playground Test Linkup in the browser. API reference Full parameter spec for every endpoint. 
+ Query precision is the biggest lever on result quality. Read the
+ Search best practices 
+page or use the Prompt Optimizer . Quickstart x linkedin github discord Powered by This documentation is built and hosted on Mintlify, a developer documentation platform Assistant Responses are generated using AI and may contain mistakes.

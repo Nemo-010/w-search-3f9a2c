@@ -1,0 +1,84 @@
+{
+ "slug": "tikhub",
+ "name": "TikHub",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:07+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://tikhub.io/pricing",
+   "status": 200,
+   "final_url": "https://tikhub.io/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 87722,
+   "truncated": false,
+   "sha256": "ce09a2c4d19c7c1e10b86a8f9f0e037168e30d43ec070d6f1a61d692a58a0858",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 7213
+  },
+  "docs": {
+   "url": "https://docs.tikhub.io/",
+   "status": 200,
+   "final_url": "https://docs.tikhub.io/",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 3564,
+   "truncated": false,
+   "sha256": "7d37f88a39466d8ff77a09e6de0aa80c45b63b0c0d2245d3001dd1dc496c01ff",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 3479
+  },
+  "home": {
+   "url": "https://tikhub.io/",
+   "status": 200,
+   "final_url": "https://tikhub.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 123031,
+   "truncated": false,
+   "sha256": "ac38f81ff9f7ea52aa7b1dd699e807140fd2e38ddeb42c5b7101c177ef606cbb",
+   "fetched_at": "2026-10-19T05:54:10+00:00",
+   "text_bytes": 8121
+  },
+  "llms": {
+   "url": "https://docs.tikhub.io/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.tikhub.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 151555,
+   "truncated": false,
+   "sha256": "06886ea15dd0e242c5133aa56cb50ae94cec1a02217b94253639b9829112e3db",
+   "fetched_at": "2026-10-19T05:54:10+00:00",
+   "text_bytes": 129283
+  },
+  "llms-https://tikhub.io/llms.txt": {
+   "url": "https://tikhub.io/llms.txt",
+   "status": 200,
+   "final_url": "https://tikhub.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 4698,
+   "truncated": false,
+   "sha256": "ae03f13f101ebabc24c1ed35b248538ba3642a3cbd2194a49d437c87a6a30fa1",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 4636
+  },
+  "llms-full": {
+   "url": "https://tikhub.io/llms-full.txt",
+   "status": 200,
+   "final_url": "https://tikhub.io/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 8377,
+   "truncated": false,
+   "sha256": "932d6879b0195aa0f218a9813f0762198ad6e810252876bf3339aa7bc254250f",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 8351
+  },
+  "llms-err-28ff4e": {
+   "url": "https://tikhub.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://tikhub.io/docs/llms.txt",
+   "content_type": "application/json; charset=utf-8",
+   "bytes": 80,
+   "truncated": false,
+   "sha256": "d3c0644107ea757e4783a7cdcd683b3a781b6a88f30e0de8c6ed1c69ef4113ee",
+   "fetched_at": "2026-10-19T05:54:18+00:00"
+  }
+ }
+}

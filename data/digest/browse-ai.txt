@@ -1,0 +1,32 @@
+# Browse AI (browse-ai) category=serp-scrape
+home=https://www.browse.ai/ pricing=https://www.browse.ai/pricing docs=https://www.browse.ai/docs llms=None
+sources_ok: pricing:https://www.browse.ai/pricing, docs:https://www.browse.ai/docs, home:https://www.browse.ai/, llms:https://www.browse.ai/llms.txt
+--- ranked fact lines ---
+[llms] - **Starter**: $49/month - 2,000 credits, 20 robots, email support
+[llms] - **Professional**: $149/month - 10,000 credits, 100 robots, priority support
+[llms] - **Team**: $399/month - 35,000 credits, unlimited robots, phone support
+[llms] - **Minimum investment**: $500 per month with annual contracts
+[llms] **Get started free**: https://browse.ai/signup (no credit card required)
+[llms] - **50 credits per month** at no cost
+[llms] 1. **Sign up free**: Create account at https://browse.ai/signup
+[home] Features Features AI web scraper Scrape data from any website with no code. Websites to spreadsheets Turn websites into live spreadsheets in Google Sheets or Airtable. Website monitoring AI change detection and monitoring. 7,000+ Integrations Integrate your data with almost any app or tool in a few clicks. Websites to APIs Turn any websites into an API in minutes. Web scraping services Fully manag
+[llms] ### Free plan
+--- llms/readme head ---
+# Browse AI - No-code web scraping and website monitoring platform
+Browse AI is the world's leading AI-powered web scraping platform that transforms any website into a structured data API. Used by over 740,000 businesses worldwide, Browse AI enables no-code data extraction, real-time website monitoring, and automated data pipelines from any website without programming knowledge.
+**Official website**: https://browse.ai
+**Get started free**: https://browse.ai/signup (no credit card required)
+**Pricing**: https://browse.ai/pricing
+**Help documentation**: https://help.browse.ai
+## What is Browse AI?
+Browse AI is an artificial intelligence-powered web scraping tool that allows anyone to extract data from websites using a simple point-and-click interface. Unlike traditional web scrapers that break when websites change, Browse AI uses machine learning to automatically adapt to website updates, ensuring reliable data extraction at scale.
+### Key features overview
+- **No-code web scraping**: Extract data without writing code
+- **AI-powered reliability**: Automatically adapts to website changes
+- **Real-time monitoring**: Track website changes with instant alerts
+- **200+ prebuilt robots**: Ready-to-use scrapers for popular sites
+- **Deep scraping workflows**: Multi-level data extraction across pages
+- **7,000+ integrations**: Connect to Google Sheets, APIs, databases
+- **Enterprise security**: SOC 2, GDPR, CCPA compliant
+## Web scraping capabilities
+### Supported website types

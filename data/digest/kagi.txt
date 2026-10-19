@@ -1,0 +1,11 @@
+# Kagi Search API (kagi) category=search-engine
+home=https://kagi.com/api pricing=https://kagi.com/api/pricing docs=https://help.kagi.com/kagi/api/search.html llms=None
+sources_ok: pricing:https://kagi.com/api/pricing, docs:https://help.kagi.com/kagi/api/search.html, home:https://kagi.com/api, llms:https://kagi.com/api/docs/llms.txt
+--- ranked fact lines ---
+[pricing] Extract up to 10 URLs per request
+[pricing] We will invoice every 30 days or as soon as your usage reaches $100. For a higher limit please reach out to support .
+[pricing] Sign up for free
+--- llms/readme head ---
+# llms.txt
+## Table of contents
+- [Kagi API](https://redocly-api-docs.kagi.com/api/docs/openapi.md)

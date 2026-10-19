@@ -1,0 +1,60 @@
+{
+ "slug": "mojeek",
+ "name": "Mojeek Search API",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:29+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.mojeek.com/services/search/web-search-api/",
+   "status": 200,
+   "final_url": "https://www.mojeek.com/services/search/web-search-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 27196,
+   "truncated": false,
+   "sha256": "54eb02acb802c33f23bb17cb480c5f234f6ed2089485dc341d488c05099b3f44",
+   "fetched_at": "2026-10-19T05:54:29+00:00",
+   "text_bytes": 6421
+  },
+  "docs": {
+   "url": "https://www.mojeek.com/support/api/",
+   "status": 200,
+   "final_url": "https://www.mojeek.com/support/api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 12653,
+   "truncated": false,
+   "sha256": "7d483d5396be46159233da3dc632369a5fc1bb97edef5566c697ca067a736e5c",
+   "fetched_at": "2026-10-19T05:54:30+00:00",
+   "text_bytes": 1948
+  },
+  "llms-err-24b560": {
+   "url": "https://www.mojeek.com/support/api/llms.txt",
+   "status": 404,
+   "final_url": "https://www.mojeek.com/support/api/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5561,
+   "truncated": false,
+   "sha256": "583b7d8ca355d66418174170a6361b6c7d33cf417b1fe788b59f3f9010c4a143",
+   "fetched_at": "2026-10-19T05:54:31+00:00"
+  },
+  "llms-err-0f6948": {
+   "url": "https://www.mojeek.com/services/search/web-search-api/llms.txt",
+   "status": 404,
+   "final_url": "https://www.mojeek.com/services/search/web-search-api/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5561,
+   "truncated": false,
+   "sha256": "583b7d8ca355d66418174170a6361b6c7d33cf417b1fe788b59f3f9010c4a143",
+   "fetched_at": "2026-10-19T05:54:31+00:00"
+  },
+  "llms-err-7adf52": {
+   "url": "https://www.mojeek.com/services/search/web-search-api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.mojeek.com/services/search/web-search-api/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5561,
+   "truncated": false,
+   "sha256": "583b7d8ca355d66418174170a6361b6c7d33cf417b1fe788b59f3f9010c4a143",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  }
+ }
+}

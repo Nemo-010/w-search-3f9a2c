@@ -1,0 +1,49 @@
+{
+ "slug": "hn-algolia",
+ "name": "Hacker News (Algolia)",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:46+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://hn.algolia.com/api",
+   "status": 200,
+   "final_url": "https://hn.algolia.com/api",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 2383,
+   "truncated": false,
+   "sha256": "d552961d33e0b9ca3d3c11001c1e2dd51a554d9d62801ee96b240e7e0c7ca41a",
+   "fetched_at": "2026-10-19T05:54:46+00:00",
+   "text_bytes": 37
+  },
+  "llms-err-058701": {
+   "url": "https://hn.algolia.com/api/llms.txt",
+   "status": 404,
+   "final_url": "https://hn.algolia.com/api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 207,
+   "truncated": false,
+   "sha256": "e9639e3c4681ce85f852fbac48e2eeee5ba51296dbfec57c200d59b76237ab80",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  },
+  "llms-err-76da6e": {
+   "url": "https://hn.algolia.com/api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://hn.algolia.com/api/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 207,
+   "truncated": false,
+   "sha256": "e9639e3c4681ce85f852fbac48e2eeee5ba51296dbfec57c200d59b76237ab80",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  },
+  "llms-err-dc5f6d": {
+   "url": "https://docs.hn.algolia.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.hn.algolia.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  }
+ }
+}

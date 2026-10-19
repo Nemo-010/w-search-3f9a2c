@@ -1,0 +1,30 @@
+# Scrape.do (scrape.do) category=serp-scrape
+home=https://scrape.do/ pricing=https://scrape.do/pricing/ docs=https://scrape.do/docs/ llms=None
+sources_ok: pricing:https://scrape.do/pricing/, home:https://scrape.do/, llms:https://scrape.do/llms.txt, llms-https://docs.scrape.do/llms.txt:https://docs.scrape.do/llms.txt
+--- ranked fact lines ---
+[pricing] What payment methods do you accept? You can pay your Scrape.do subscription using credit card, with crypto, or through a bank wire transfer for monthly payments over $500.
+[home] Do you have a free trial? Yes! Get 1,000 successful API credits with 5 concurrent requests, completely free. Sign up and explore what’s possible with our data harvesting tools, no strings attached.
+[llms] - [Request Costs](https://scrape.do/documentation/request-costs.md): Scrape.do credit pricing per request type and per domain. Costs vary by proxy type (datacenter vs residential), headless browser rendering, and domain-specific defaults where Scrape.do applies super or render automatically.
+[home] Do I need a credit card to start the free trial? Not at all! Our free trial is truly free - no credit card required.
+[pricing] What happens when I use up my monthly credits? We will contact you when it seems like your credits won't last for this month, and once you hit your monthly limit, requests will stop unless you upgrade your plan or purchase additional credits.
+[home] I need more Successful API Credits limit than 3.5 millions We've got you covered! Contact us at sales@scrape.do for a customer service package tailored to your exact needs.
+[llms] - [Google Hotels API](https://scrape.do/documentation/google-scraper-api/hotels.md): Scrape Google Hotels listings with names, ratings, star classes, amenities, coordinates, images, prices, and per-vendor booking sources. Filters for price, rating, hotel class, eco-certification, and free cancellation. Worldwide currency support.
+--- llms/readme head ---
+# Scrape.do Documentation
+> Scrape.do documentation.
+- [Full Technical Documentation](https://scrape.do/llms-docs.txt): every documentation page, in full, as plain text.
+- [Getting Started](https://scrape.do/documentation.md): Scrape.do documentation.
+- [Request Costs](https://scrape.do/documentation/request-costs.md): Scrape.do credit pricing per request type and per domain. Costs vary by proxy type (datacenter vs residential), headless browser rendering, and domain-specific defaults where Scrape.do applies super or render automatically.
+## Proxy Settings
+- [Proxy Settings](https://scrape.do/documentation/proxies.md): Configure datacenter, residential, and mobile proxies with geo-targeting for Scrape.do web scraping requests.
+- [Super (Residential & Mobile)](https://scrape.do/documentation/proxies/super.md): Access 95M+ residential and mobile proxies with Scrape.do super parameter to bypass anti-bot detection and improve success rates.
+- [Geo Targeting](https://scrape.do/documentation/proxies/geo-code.md): Target specific countries with Scrape.do geo-targeting to access location-restricted content and avoid regional IP blocking.
+- [Regional Geo Targeting](https://scrape.do/documentation/proxies/regional-geo-code.md): Use Scrape.do regional geo-targeting to route requests through continents like Europe, Asia, or North America for improved success.
+- [Postal Code (ZIP Code) Targeting](https://scrape.do/documentation/proxies/postal-code.md): Target specific postal codes and ZIP codes with Scrape.do for hyper-local geo-targeting. Combine with country-level geoCode for precise location-based scraping.
+## API & Response
+- [API & Response](https://scrape.do/documentation/api-response.md): Configure API requests, manage timeouts, retries, sessions, and customize response handling for Scrape.do web scraping.
+- [POST/PUT Request](https://scrape.do/documentation/api-response/post-put-request.md): Send POST, PUT, PATCH, and DELETE HTTP requests through Scrape.do API to scrape data from form submissions and APIs.
+- [Timeout](https://scrape.do/documentation/api-response/timeout.md): Configure request timeout limits between 5 and 120 seconds for Scrape.do API requests to control scraping duration.
+- [Retry Settings](https://scrape.do/documentation/api-response/retry-settings.md): Configure automatic retry mechanism and timeout limits in Scrape.do to maximize success rates for web scraping requests.
+- [Disable Redirection](https://scrape.do/documentation/api-response/disable-redirection.md): Control HTTP redirect behavior in Scrape.do with disableRedirection parameter to capture redirect responses and locations.
+- [Device](https://scrape.do/documentation/api-response/device.md): Emulate desktop, mobile, and tablet devices in Scrape.do to scrape device-specific content and optimize data extraction.

@@ -1,0 +1,3341 @@
+<!-- https://yep.com/en/docs/ -->
+
+# Build with Yep
+
+Send a search request or connect an MCP client in a few minutes.
+
+## Choose an integration
+
+Use the Search API when your application needs ranked web results over HTTP. Use the Agent API when Yep should turn a prompt into a sourced report with your model provider key. Use MCP when an AI client should choose and call Yep tools through OAuth.
+
+## Send your first request
+
+Create an API key in the product and move the creation-response secret directly into the
+`YEP_API_KEY` environment variable. Then choose one runnable example:
+
+```curl
+curl --get 'https://yep.com/api/v1/search' \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --data-urlencode 'query=carbon border tax 2026' \
+  --data-urlencode 'limit=5'
+```
+
+```typescript
+const url = new URL("https://yep.com/api/v1/search");
+url.search = new URLSearchParams({ query: "carbon border tax 2026", limit: "5" }).toString();
+const response = await fetch(url, {
+  headers: { Authorization: `Bearer ${process.env.YEP_API_KEY}` },
+});
+if (!response.ok) throw new Error(`Yep API returned ${response.status}`);
+console.log(await response.json());
+```
+
+```python
+import json
+import os
+import urllib.parse
+import urllib.request
+
+query = urllib.parse.urlencode({"query": "carbon border tax 2026", "limit": 5})
+request = urllib.request.Request(
+    f"https://yep.com/api/v1/search?{query}",
+    headers={"Authorization": f"Bearer {os.environ['YEP_API_KEY']}"},
+)
+with urllib.request.urlopen(request) as response:
+    print(json.load(response))
+```
+
+The response is a JSON object with ranked results under `results`. `GET` and `POST /api/v1/search` return the same envelope; `GET` always projects `url`, `title`, `description`, and `language`, while `POST` accepts `select` for other fields. `request_id` matches the `X-Request-ID` response header for support and diagnostics.
+
+```json
+{
+  "request_id": "0b9f2c3e-6f1d-4c1a-9a43-2d6f1e0c8b7a",
+  "duration_ms": 412,
+  "select": ["url", "title", "description", "language"],
+  "results": [
+    {
+      "rank": 1,
+      "fields": {
+        "url": "https://example.com/carbon-border-tax",
+        "title": "Carbon border adjustment mechanisms",
+        "description": "A guide to carbon border taxes and their implementation.",
+        "language": "en"
+      }
+    }
+  ]
+}
+```
+
+## Continue
+
+Read [Authentication](/en/docs/authentication/) before deploying an HTTP integration, [choose the Search API or Agent API](/en/docs/agent/choose/), or [connect an MCP client](/en/docs/mcp/) without creating an API key.
+
+---
+
+<!-- https://yep.com/en/docs/authentication/ -->
+
+# Authentication
+
+Create, store, rotate, and send Yep API credentials safely.
+
+## API keys
+
+The public REST API uses an API key as a Bearer token. Create a key in the product and copy its secret when it is shown. Yep does not show the full secret again.
+
+```http
+Authorization: Bearer <API_KEY>
+```
+
+Keep keys in a secret manager or environment variable. Do not put a key in browser code, a URL, source control, logs, or documentation examples.
+
+## Key lifecycle
+
+Use a separate key for each application and environment so access can be revoked without interrupting unrelated workloads.
+
+When rotating a key:
+
+1. Create the replacement key.
+2. Deploy the replacement to every instance.
+3. Confirm requests succeed with the replacement.
+4. Revoke the previous key.
+
+## MCP authentication
+
+The remote MCP server accepts OAuth only, not API keys. Start authentication from your MCP client and complete the authorization flow in the browser. Search tools require `search:read`. Model, query-builder, and agent tools require both `search:read` and `agent:run`; `agent:run` is never granted by itself.
+
+Next, [integrate the Search API over HTTP](/en/docs/integrations/http/) or [choose an MCP client](/en/docs/mcp/).
+
+---
+
+<!-- https://yep.com/en/docs/service-accounts/ -->
+
+# Service accounts
+
+Create service accounts for automated workloads and manage their credentials.
+
+## Exchange a service-account credential
+
+Use a service account for an automated workload. Use a human API key for a member-operated integration, or MCP OAuth when an AI client acts with a member's approval.
+
+Create the account in **Settings → Service accounts**, select only the permissions the workload needs, and create a credential. Move the returned `token_endpoint`, `client_id`, and `client_secret` directly into the workload's secret manager. The plaintext secret is present only in the creation response.
+
+Set `YEP_TOKEN_ENDPOINT`, `YEP_CLIENT_ID`, and `YEP_CLIENT_SECRET`, then request an access token:
+
+```curl
+curl --request POST "$YEP_TOKEN_ENDPOINT" \
+  --data-urlencode "client_id=$YEP_CLIENT_ID" \
+  --data-urlencode "client_secret=$YEP_CLIENT_SECRET" \
+  --data-urlencode "grant_type=client_credentials"
+```
+
+Never send the client secret to a Search API endpoint, browser code, URL, source-control repository, log, or another service account.
+
+## Request a token in application code
+
+```typescript
+const body = new URLSearchParams({
+  client_id: process.env.YEP_CLIENT_ID!,
+  client_secret: process.env.YEP_CLIENT_SECRET!,
+  grant_type: "client_credentials",
+});
+const response = await fetch(process.env.YEP_TOKEN_ENDPOINT!, { method: "POST", body });
+if (!response.ok) throw new Error(`Token endpoint returned ${response.status}`);
+const token = await response.json();
+```
+
+```python
+import json
+import os
+import urllib.parse
+import urllib.request
+
+body = urllib.parse.urlencode({
+    "client_id": os.environ["YEP_CLIENT_ID"],
+    "client_secret": os.environ["YEP_CLIENT_SECRET"],
+    "grant_type": "client_credentials",
+}).encode()
+request = urllib.request.Request(os.environ["YEP_TOKEN_ENDPOINT"], data=body, method="POST")
+with urllib.request.urlopen(request) as response:
+    token = json.load(response)
+```
+
+The token response provides its lifetime. Cache the access token in workload memory, request a replacement before expiry, and ensure concurrent requests share one refresh. After an unexpected `401`, fetch one new token and retry once; repeated rejection requires operator action.
+
+## Send the access token
+
+Send the access token as the Bearer credential. Do not send the client secret.
+
+```curl
+curl --get "https://yep.com/api/v1/search" \
+  --header "Authorization: Bearer $YEP_ACCESS_TOKEN" \
+  --data-urlencode "query=carbon border tax 2026"
+```
+
+## Set permissions and boundaries
+
+Each access token is workspace-bound. The service-account permissions selected at creation must authorize the requested operation, and resource ownership boundaries still apply. Revoking the account invalidates credentials issued for that identity.
+
+Use separate service accounts for workloads that need different permissions, ownership, limits, or revocation schedules. Do not share one identity across unrelated applications.
+
+## Rotate without an outage
+
+1. Create a replacement service account with the required permissions.
+2. Recreate account-specific limits and move work owned by the previous identity.
+3. Create and deploy the replacement credential.
+4. Verify token exchange and one intended Yep request.
+5. Revoke the previous service account.
+
+If a credential may have leaked, revoke its service account before creating the replacement. Revocation is the boundary that invalidates all credentials for that service-account identity.
+
+---
+
+<!-- https://yep.com/en/docs/integrations/http/ -->
+
+# HTTP integration
+
+Integrate the Search API with stable request, response, and retry handling.
+
+## Request shape
+
+Send `GET https://yep.com/api/v1/search` with an API key in the `Authorization` header. Put `query`, `limit`, and `lang` in the URL query string using your HTTP library's URL encoder.
+
+Use a connection timeout and an overall request deadline appropriate for your application. Keep the API key outside application logs.
+
+## Response handling
+
+Treat the response as successful only when the HTTP status is in the 2xx range. Decode the JSON body as an object, read ranked results from `results`, and preserve the `X-Request-ID` response header with your request telemetry.
+
+Do not infer missing fields or replace an invalid response with defaults. A malformed successful response is an integration failure.
+
+## Retries
+
+Retry only requests that are safe for your workload. For `429`, wait at least the number of seconds in `Retry-After`. For `503` with `reason: "model_provider_overloaded"`, honor `Retry-After` when present; the typed `retry` recovery also says whether changing the selected model is allowed. For other temporary `502` or `503` responses, use capped exponential backoff with jitter.
+
+Do not automatically retry `400`, `401`, `402`, or `403`; correct the request, credential, permissions, or account limit first.
+
+## Verify the integration
+
+Test a successful query, an invalid query, an invalid key, product rate limiting, provider throttling, and provider overload before production. Log the HTTP status, stable error reason, request ID, and agent session ID when present, but never the credential or raw sensitive diagnostics.
+
+Use the [Search API reference](/en/docs/reference/search/) for the generated contract and [errors and limits](/en/docs/errors-and-limits/) for recovery guidance.
+
+---
+
+<!-- https://yep.com/en/docs/search/domains/ -->
+
+# Search for domains
+
+Find ranked domains when a page-level result set is too narrow.
+
+## Send a domain search
+
+Use domain search when each result should identify a site instead of one page from that site.
+
+```curl
+curl --request POST "https://yep.com/api/v1/search/domains" \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --header "Content-Type: application/json" \
+  --data-binary @- <<'JSON'
+{
+  "query": "independent climate policy research",
+  "limit": 10,
+  "select": [
+    "domain",
+    "domain_traffic"
+  ],
+  "filter": "@domain_traffic >= 1000"
+}
+JSON
+```
+
+The response contains ranked domain results, the normalized projection, request duration, and a request reference. Each result contains exactly the fields selected by the request.
+
+## Choose page or domain results
+
+- Use page search to retrieve URLs, titles, descriptions, page metadata, and passages.
+- Use domain search to discover and compare sites related to a query.
+- Do not group page-search results by hostname and treat that as domain ranking. Domain search is a separate ranked view.
+
+Domain search uses the Search API permission, billing, spend limits, and rate limits. It has its own result limit and a narrower field view than page search.
+
+## Filter and select fields
+
+Write `filter` with the public filter language used by `POST /search`. The active domain view decides which fields and operators are legal. Use the generated [domain-search request schema](/en/docs/reference/search/post-search-domains/#schema-domainsearchpostrequest) instead of maintaining a separate field list.
+
+An empty projection, duplicate field, page-only field, incompatible operator, or incorrectly typed value returns validation issues with paths. Correct every reported issue before retrying.
+
+## Use the same operation through MCP
+
+The MCP `search_domains` tool accepts the same typed request and returns the same structured result. Use the [MCP domain-search reference](/en/docs/mcp/tools/search-domains/) when an AI client should call it through OAuth.
+
+Continue with the [domain-search API reference](/en/docs/reference/search/post-search-domains/) for response statuses and schemas.
+
+---
+
+<!-- https://yep.com/en/docs/errors-and-limits/ -->
+
+# Errors, limits, and billing
+
+Handle API failures, request limits, retries, and completed-request billing.
+
+## Error responses
+
+API failures use a stable JSON error body. Branch on the HTTP status and machine-readable `reason`, not the human-readable message. Include `X-Request-ID` when contacting support.
+
+- `400` — inspect `validation` when present, correct every listed request field, then retry.
+- `401` — provide a valid, active API key.
+- `402` — review billing and spend limits before retrying.
+- `403` — use a key with Search API permission.
+- `429` — wait for `Retry-After`, then retry with backoff. Inspect `reason` to distinguish an account policy (`rate_limit_exceeded`) from provider throttling (`model_provider_rate_limited`).
+- `503` with `model_provider_overloaded` — the selected model provider has no temporary capacity. Honor `Retry-After` when present, or select another allowed model when `recovery.can_change_model` is true.
+- Other `502` or `503` responses — retry temporary service failures with capped backoff and jitter.
+
+## Validation errors
+
+A `400` response may include `validation`, the same bounded report returned by MCP at
+`structuredContent.error.validation`:
+
+```json
+{
+  "code": "invalid_request",
+  "reason": "malformed_request",
+  "message": "invalid request: request body violates the public contract",
+  "recovery": null,
+  "agent_session_id": null,
+  "validation": {
+    "contract": "SearchPostRequest",
+    "issues": [
+      {
+        "code": "required",
+        "path": "/query",
+        "suggestion": "Add the required `query` field."
+      }
+    ],
+    "truncated": false
+  }
+}
+```
+
+`contract` names the published request schema. Each issue has a stable `code`, an RFC 6901
+`path`, and a `suggestion`. When `allowed_values` is present, use one of those exact JSON scalar
+values. A root error uses an empty `path`.
+
+Correct every listed issue before retrying. If `truncated` is `true`, validate the corrected
+request again because the report omitted additional issues. Do not retry an unchanged rejected
+request. Stop if the same output fails again, and use a small fixed repair ceiling for each
+request. Validation errors are not transient, so backoff does not repair them.
+
+## Result and request limits
+
+`limit` accepts 1 through 50 results. The API has no pagination. Changing the limit can change ranking, so do not combine separate calls as pages of one result set.
+
+Rate limits are enforced by the active account and key policy. The API returns `429` and `Retry-After` when a request should wait; this documentation does not publish a fixed numeric rate that could differ from the configured policy.
+
+Provider throttling and overload use the same `reason` and `recovery` fields as product rate limits. `recovery.kind` is `retry`, `retry_after_ms` preserves the provider hint, and `recovery.can_change_model` tells an agent client whether selecting another allowed model is a valid recovery. Direct HTTP failures carry `Retry-After` as the [RFC 9110 retry header](https://www.rfc-editor.org/rfc/rfc9110#section-10.2.3) in whole seconds. Responses with `429` are emitted with `Cache-Control: no-store`, preserving the [RFC 6585 caching requirement](https://www.rfc-editor.org/rfc/rfc6585#section-4).
+
+Every agent execution mints an `agent_session_id` before calling the model provider. A synchronous REST failure returns it in the error body; MCP returns the same structured error; and a background run keeps it in the accepted response and every polled status. A failed background status remains a successful status lookup (`200`) whose `error` contains the same provider `reason` and `recovery`. The session id is useful for status and support correlation, but it is not a credential.
+
+## Billing
+
+Balanced costs $4 per 1,000 completed requests. A failed search execution is not charged. Account spend limits can reject a request with `402` before execution.
+
+The documentation console sends real API requests. Normal billing, spend limits, and rate limits apply.
+
+## Recovery checklist
+
+1. Record the HTTP status, `X-Request-ID`, and `agent_session_id` when present.
+2. Read the stable error `reason`.
+3. Correct non-retryable failures before sending another request.
+4. Honor `Retry-After` and use jitter for retryable failures.
+
+Return to the [HTTP integration guide](/en/docs/integrations/http/) or inspect the [generated API reference](/en/docs/reference/search/).
+
+---
+
+<!-- https://yep.com/en/docs/agent/choose/ -->
+
+# Choose the Search API or Agent API
+
+Choose ranked results or a model-written report for each workload.
+
+## Run one search
+
+Use the Search API when your application needs ranked pages that it will filter, rerank, or pass to its own model.
+
+```curl
+curl --get "https://yep.com/api/v1/search" \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --data-urlencode 'query=carbon border tax 2026'
+```
+
+The Search API is plain search: one query enters, ranked results return, and the request ends. Use `GET` for a small query or `POST` when you need typed filters and an explicit result projection.
+
+## Run one agent
+
+Use the Agent API when the output should be a sourced report rather than a result list.
+
+```curl
+curl --request POST "https://yep.com/api/v1/agent" \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --header "Content-Type: application/json" \
+  --data-binary @- <<'JSON'
+{
+  "mode": "light",
+  "input": "Summarize the latest carbon border tax guidance.",
+  "model": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4.5"
+  },
+  "background": false
+}
+JSON
+```
+
+The agent searches the same index, decides which evidence to inspect, and writes a report with sources. `light` is the shorter evidence pass. `deep` is the longer research pass. Set `background` when the caller should receive polling credentials instead of holding one connection open.
+
+## Choose by output
+
+- Choose the Search API when your code owns ranking, extraction, prompting, and presentation.
+- Choose the Agent API when Yep should search, inspect evidence, and assemble the report.
+- Choose domain search when the items you need are sites rather than pages.
+- Choose the query builder when a model should construct a typed Search API request without executing it.
+
+Search API requests use search permission and Search API billing. Agent runs and query-builder calls use agent permission, a stored model provider key, and Agent API billing. The provider also charges model usage to that provider key. Read [errors, limits, and billing](/en/docs/errors-and-limits/) before deploying either path.
+
+## Use REST or MCP
+
+REST exposes the same operations as stable HTTP contracts. MCP exposes search, domain search, model discovery, query building, and agent execution as typed tools through OAuth. Use REST when your application controls the calls. Use [MCP](/en/docs/mcp/) when an AI client should choose and call the tools.
+
+Continue with [BYOK model setup](/en/docs/agent/byok/) or open the [Agent API reference](/en/docs/reference/agent/).
+
+---
+
+<!-- https://yep.com/en/docs/agent/byok/ -->
+
+# Use your own model provider key
+
+Connect a model provider key and select an allowlisted model for Agent API and MCP calls.
+
+## List available models
+
+List the current provider and model catalog before building a search request or starting an agent.
+
+```curl
+curl --request GET "https://yep.com/api/v1/models" \
+  --header "Authorization: Bearer $YEP_API_KEY"
+```
+
+The response is the source of truth for allowlisted provider and model identifiers, capabilities, current provider pricing, supported key scopes, and the signed-in setup URL. Do not copy a model identifier from an old request into a new integration without checking the catalog.
+
+## Authorize BYOK operations
+
+REST clients use an API key with both `search:read` and `agent:run`. MCP clients use OAuth only and request the same two scopes. Yep rejects `agent:run` without `search:read`, so an agent can always execute the search operations its program builds.
+
+## Connect the provider key
+
+1. Open the returned `setup_url` while signed in. The URL is derived from the configured product origin, so it remains correct outside production.
+2. Choose personal scope for one member or workspace scope for authorized members of the workspace.
+3. Submit an active inference key. Yep checks the key before saving it.
+4. Send only the provider and model identifiers in Agent API or query-builder requests.
+
+The public API and MCP tools never accept provider-key plaintext. Model-list responses expose safe provider metadata, not stored-key metadata. Keep the original provider key out of application requests, browser storage, source control, and logs.
+
+## Understand the two billing relationships
+
+The model provider charges inference usage to the connected provider key. Yep charges the completed Agent API operation under the applicable account and spend limits. BYOK changes whose provider account pays for inference; it does not remove Agent API billing.
+
+Use the live model catalog for provider prices and the product pricing surface for Yep prices. Do not calculate either from values copied into documentation.
+
+## Recover from key failures
+
+If no usable key can run the selected model, the API returns a stable missing-key reason and a setup recovery URL. Open that URL, add or replace the key, then retry the original request. Correct every validation issue before retrying an invalid model reference.
+
+For MCP, call `list_models` first and follow the same `setup_url`. Provider-key plaintext never passes through a tool argument.
+
+Continue with [Search API or Agent API](/en/docs/agent/choose/) or inspect the [model catalog operation](/en/docs/reference/models/list-models/).
+
+---
+
+<!-- https://yep.com/en/docs/mcp/ -->
+
+# Connect an MCP client
+
+Choose a client and connect it to the Yep search tool with OAuth.
+
+## Server endpoint
+
+Yep exposes one remote Streamable HTTP MCP endpoint.
+
+```text
+https://yep.com/api/v1/mcp
+```
+
+## Authentication
+
+The server uses OAuth only. Request search:read for search tools. Model, query-builder, and agent tools require both search:read and agent:run. Your client opens the authorization flow and stores the resulting credentials.
+
+## Set up BYOK agent tools
+
+Call list_models to choose an allowlisted provider and model. Store the provider key in Yep at the returned setup_url; provider-key plaintext is never accepted by an MCP tool. If setup is missing, the tool returns provider_key_missing with the same setup URL in structuredContent.
+
+## Recover from tool errors
+
+Tool execution failures set isError to true. When error.validation is present, correct every RFC 6901 issue before retrying and do not repeat unchanged input.
+
+```json
+{
+  "error": {
+    "code": "invalid_request",
+    "reason": "malformed_request",
+    "message": "invalid request: request body violates the public contract",
+    "recovery": null,
+    "agent_session_id": null,
+    "validation": {
+      "contract": "SearchPostRequest",
+      "issues": [
+        {
+          "code": "required",
+          "path": "/query",
+          "suggestion": "Add the required `query` field."
+        }
+      ],
+      "truncated": false
+    }
+  },
+  "request_id": "00000000-0000-0000-0000-000000000000"
+}
+```
+
+## Choose a client
+
+### Codex
+
+Add the server to your user or trusted-project config, then start the OAuth flow.
+
+#### Configure Codex
+
+```toml
+[mcp_servers.yep]
+url = "https://yep.com/api/v1/mcp"
+auth = "oauth"
+```
+
+#### Authenticate
+
+Start the OAuth flow from the client, then approve access in the browser.
+
+```sh
+codex mcp login yep
+```
+
+#### Verify the connection
+
+Ask the client to search the web. The client should discover the search tool and open OAuth if authorization is still required.
+
+[Codex MCP documentation](https://learn.chatgpt.com/docs/extend/mcp.md)
+
+### Claude Code
+
+Add the remote HTTP server at user scope, then authenticate it from the command line.
+
+#### Configure Claude Code
+
+```sh
+claude mcp add --transport http yep --scope user https://yep.com/api/v1/mcp
+claude mcp login yep
+```
+
+#### Verify the connection
+
+Ask the client to search the web. The client should discover the search tool and open OAuth if authorization is still required.
+
+[Claude Code MCP documentation](https://code.claude.com/docs/en/mcp)
+
+### Claude Desktop
+
+Open Settings, choose Connectors, add a custom connector with the MCP URL, then connect it.
+
+#### Configure Claude Desktop
+
+```text
+https://yep.com/api/v1/mcp
+```
+
+#### Verify the connection
+
+Ask the client to search the web. The client should discover the search tool and open OAuth if authorization is still required.
+
+[Claude Desktop MCP documentation](https://claude.com/docs/connectors/custom/remote-mcp)
+
+### Cursor
+
+Add the remote server to the global or project MCP configuration, then connect it from MCP settings.
+
+#### Configure Cursor
+
+```json
+{
+  "mcpServers": {
+    "yep": {
+      "url": "https://yep.com/api/v1/mcp"
+    }
+  }
+}
+```
+
+#### Verify the connection
+
+Ask the client to search the web. The client should discover the search tool and open OAuth if authorization is still required.
+
+[Cursor MCP documentation](https://docs.cursor.com/context/model-context-protocol)
+
+### VS Code
+
+Add the remote HTTP server to your user or workspace MCP configuration, then start it and complete authentication.
+
+#### Configure VS Code
+
+```json
+{
+  "servers": {
+    "yep": {
+      "type": "http",
+      "url": "https://yep.com/api/v1/mcp"
+    }
+  }
+}
+```
+
+#### Verify the connection
+
+Ask the client to search the web. The client should discover the search tool and open OAuth if authorization is still required.
+
+[VS Code MCP documentation](https://code.visualstudio.com/docs/agents/reference/mcp-configuration)
+
+---
+
+<!-- https://yep.com/en/docs/mcp/tools/search/ -->
+
+# MCP search tool
+
+Input, output, and behavior generated from the advertised MCP tool contract.
+
+## Overview
+
+Search Yep with the complete typed public POST search contract and return projected ranked results.
+
+Use the typed search tools for web retrieval. Use list_models before BYOK query-builder or agent calls, and configure a provider key at the returned setup_url when requested. When a tool error's structured content includes error.validation, correct every listed RFC 6901 issue before retrying and never repeat an unchanged rejected input.
+
+## Input schema
+
+*MCP search tool input*
+
+| Name | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| query | Yes | string | Non-empty search text. | min length: 1; max length: 512 |
+| limit | No | integer \| null | Maximum result count; defaults to 20 at the product boundary. | min: 1; max: 50 |
+| lang | No | string \| null | Optional two-letter lowercase language code. | pattern: ^[a-z]{2}$ |
+| coverage | No | SearchCoverage \| null | Search breadth; omission preserves balanced search. |  |
+| ranking | No | SearchRanking \| null | Ranking focus; omission preserves balanced search. |  |
+| select | No | SearchResultField[] | Response projection; omission selects the stable summary fields. | default: url,title,description,language; min items: 1 |
+| filter | No | string \| null | Optional eligibility filter in the public filter language. | min length: 1; max length: 65536 |
+| max_results_per_domain | No | integer \| null | Optional maximum number of results from one registrable domain. | min: 1; max: 10 |
+
+## Output schema
+
+Returns structured JSON from the shared public API service.
+
+*MCP search tool output fields*
+
+| Name | Required | Type | Description |
+| --- | --- | --- | --- |
+| request_id | Yes | string | Public request correlation identifier. |
+| duration_ms | Yes | integer | End-to-end duration in milliseconds. |
+| select | Yes | SearchResultField[] | Echoed normalized projection. |
+| results | Yes | ProjectedPageResult[] | Ranked projected results. |
+
+## Tool errors
+
+Tool execution failures set isError to true. When error.validation is present, correct every RFC 6901 issue before retrying and do not repeat unchanged input.
+
+```json
+{
+  "error": {
+    "code": "invalid_request",
+    "reason": "malformed_request",
+    "message": "invalid request: request body violates the public contract",
+    "recovery": null,
+    "agent_session_id": null,
+    "validation": {
+      "contract": "SearchPostRequest",
+      "issues": [
+        {
+          "code": "required",
+          "path": "/query",
+          "suggestion": "Add the required `query` field."
+        }
+      ],
+      "truncated": false
+    }
+  },
+  "request_id": "00000000-0000-0000-0000-000000000000"
+}
+```
+
+## Behavior
+
+This tool is read-only, non-destructive, and idempotent.
+
+---
+
+<!-- https://yep.com/en/docs/mcp/tools/search-domains/ -->
+
+# MCP domain search tool
+
+Input, output, and behavior generated from the advertised MCP tool contract.
+
+## Overview
+
+Search Yep domains with the complete typed public domain-search contract.
+
+Use the typed search tools for web retrieval. Use list_models before BYOK query-builder or agent calls, and configure a provider key at the returned setup_url when requested. When a tool error's structured content includes error.validation, correct every listed RFC 6901 issue before retrying and never repeat an unchanged rejected input.
+
+## Input schema
+
+*MCP domain search tool input*
+
+| Name | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| query | Yes | string | Non-empty search text. | min length: 1; max length: 512 |
+| limit | No | integer \| null | Maximum result count; defaults to 20 and is capped at 100. | min: 1; max: 100 |
+| select | Yes | SearchResultField[] | Required non-empty response projection. | min items: 1 |
+| filter | No | string \| null | Optional eligibility filter in the public filter language. | min length: 1; max length: 65536 |
+
+## Output schema
+
+Returns structured JSON from the shared public API service.
+
+*MCP domain search tool output fields*
+
+| Name | Required | Type | Description |
+| --- | --- | --- | --- |
+| request_id | Yes | string | Public request correlation identifier. |
+| duration_ms | Yes | integer | End-to-end duration in milliseconds. |
+| select | Yes | SearchResultField[] | Echoed normalized projection. |
+| results | Yes | ProjectedDomainResult[] | Ranked projected domains. |
+
+## Tool errors
+
+Tool execution failures set isError to true. When error.validation is present, correct every RFC 6901 issue before retrying and do not repeat unchanged input.
+
+```json
+{
+  "error": {
+    "code": "invalid_request",
+    "reason": "malformed_request",
+    "message": "invalid request: request body violates the public contract",
+    "recovery": null,
+    "agent_session_id": null,
+    "validation": {
+      "contract": "SearchPostRequest",
+      "issues": [
+        {
+          "code": "required",
+          "path": "/query",
+          "suggestion": "Add the required `query` field."
+        }
+      ],
+      "truncated": false
+    }
+  },
+  "request_id": "00000000-0000-0000-0000-000000000000"
+}
+```
+
+## Behavior
+
+This tool is read-only, non-destructive, and idempotent.
+
+---
+
+<!-- https://yep.com/en/docs/mcp/tools/build-search-request/ -->
+
+# MCP query builder tool
+
+Build a typed search request with a stored BYOK model.
+
+## Overview
+
+Build a complete typed Yep search request from natural language with a stored BYOK model. This does not execute search and bills one Agent API run after a valid build.
+
+Use the typed search tools for web retrieval. Use list_models before BYOK query-builder or agent calls, and configure a provider key at the returned setup_url when requested. When a tool error's structured content includes error.validation, correct every listed RFC 6901 issue before retrying and never repeat an unchanged rejected input.
+
+## Input schema
+
+*MCP query builder tool input*
+
+| Name | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| instruction | Yes | string | Natural-language search goal. | min length: 1; max length: 4096 |
+| current_request | No | SearchPostRequest \| null | Optional request whose useful constraints should be preserved. |  |
+| model | Yes | AgentModelRef | Exact allowlisted BYOK model. |  |
+
+## Output schema
+
+Returns structured JSON from the shared public API service.
+
+*MCP query builder tool output fields*
+
+| Name | Required | Type | Description |
+| --- | --- | --- | --- |
+| request | Yes | SearchPostRequest | Complete public search request. |
+| canonical_filter | No | string \| null | Canonical text form of `request.filter`, when present. |
+| request_id | Yes | string | Billing and support correlation identifier. |
+
+## Tool errors
+
+Tool execution failures set isError to true. When error.validation is present, correct every RFC 6901 issue before retrying and do not repeat unchanged input.
+
+```json
+{
+  "error": {
+    "code": "invalid_request",
+    "reason": "malformed_request",
+    "message": "invalid request: request body violates the public contract",
+    "recovery": null,
+    "agent_session_id": null,
+    "validation": {
+      "contract": "SearchPostRequest",
+      "issues": [
+        {
+          "code": "required",
+          "path": "/query",
+          "suggestion": "Add the required `query` field."
+        }
+      ],
+      "truncated": false
+    }
+  },
+  "request_id": "00000000-0000-0000-0000-000000000000"
+}
+```
+
+## Behavior
+
+This tool is state-changing or billable, non-destructive, and not idempotent.
+
+---
+
+<!-- https://yep.com/en/docs/mcp/tools/list-models/ -->
+
+# MCP model catalog tool
+
+Discover BYOK providers, models, capabilities, pricing, and setup links.
+
+## Overview
+
+List the public BYOK provider/model catalog, capabilities, verified pricing, supported key scopes, and provider-key setup URL.
+
+Use the typed search tools for web retrieval. Use list_models before BYOK query-builder or agent calls, and configure a provider key at the returned setup_url when requested. When a tool error's structured content includes error.validation, correct every listed RFC 6901 issue before retrying and never repeat an unchanged rejected input.
+
+## Input schema
+
+*MCP model catalog tool input*
+
+| Name | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+
+## Output schema
+
+Returns structured JSON from the shared public API service.
+
+*MCP model catalog tool output fields*
+
+| Name | Required | Type | Description |
+| --- | --- | --- | --- |
+| providers | Yes | AgentProviderOption[] | Git-owned provider choices and their external key-creation links. |
+| models | Yes | PublicAgentModelOption[] | Git-owned provider/model allowlist joined with verified pricing. |
+| pricing_snapshot | Yes | AgentPricingSnapshot | Provenance and freshness of the displayed provider prices. |
+| setup_url | Yes | string | Signed-in Yep route for storing the selected provider credential. |
+
+## Tool errors
+
+Tool execution failures set isError to true. When error.validation is present, correct every RFC 6901 issue before retrying and do not repeat unchanged input.
+
+```json
+{
+  "error": {
+    "code": "invalid_request",
+    "reason": "malformed_request",
+    "message": "invalid request: request body violates the public contract",
+    "recovery": null,
+    "agent_session_id": null,
+    "validation": {
+      "contract": "SearchPostRequest",
+      "issues": [
+        {
+          "code": "required",
+          "path": "/query",
+          "suggestion": "Add the required `query` field."
+        }
+      ],
+      "truncated": false
+    }
+  },
+  "request_id": "00000000-0000-0000-0000-000000000000"
+}
+```
+
+## Behavior
+
+This tool is read-only, non-destructive, and idempotent.
+
+---
+
+<!-- https://yep.com/en/docs/mcp/tools/run-agent/ -->
+
+# MCP run agent tool
+
+Run a light or deep agent with an allowlisted model and stored BYOK key.
+
+## Overview
+
+Run a light or deep agent with an allowlisted model and the account's stored provider key.
+
+Use the typed search tools for web retrieval. Use list_models before BYOK query-builder or agent calls, and configure a provider key at the returned setup_url when requested. When a tool error's structured content includes error.validation, correct every listed RFC 6901 issue before retrying and never repeat an unchanged rejected input.
+
+## Input schema
+
+*MCP run agent tool input*
+
+| Name | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| mode | Yes | AgentEntrypoint | Execution depth for this run. |  |
+| input | Yes | string | Research request passed to the selected agent program. | min length: 1; max length: 20000 |
+| model | Yes | AgentModelRef | Exact allowlisted provider/model pair selected for this run. |  |
+| background | No | boolean | Return immediately with polling credentials instead of awaiting the result. | default: false |
+
+## Output schema
+
+Returns structured JSON from the shared public API service.
+
+## Tool errors
+
+Tool execution failures set isError to true. When error.validation is present, correct every RFC 6901 issue before retrying and do not repeat unchanged input.
+
+```json
+{
+  "error": {
+    "code": "invalid_request",
+    "reason": "malformed_request",
+    "message": "invalid request: request body violates the public contract",
+    "recovery": null,
+    "agent_session_id": null,
+    "validation": {
+      "contract": "SearchPostRequest",
+      "issues": [
+        {
+          "code": "required",
+          "path": "/query",
+          "suggestion": "Add the required `query` field."
+        }
+      ],
+      "truncated": false
+    }
+  },
+  "request_id": "00000000-0000-0000-0000-000000000000"
+}
+```
+
+## Behavior
+
+This tool is state-changing or billable, non-destructive, and not idempotent.
+
+---
+
+<!-- https://yep.com/en/docs/mcp/tools/get-agent-run/ -->
+
+# MCP agent status tool
+
+Poll a background agent run with its response-only session proof.
+
+## Overview
+
+Read a background agent run using the id and one-time session proof returned by run_agent.
+
+Use the typed search tools for web retrieval. Use list_models before BYOK query-builder or agent calls, and configure a provider key at the returned setup_url when requested. When a tool error's structured content includes error.validation, correct every listed RFC 6901 issue before retrying and never repeat an unchanged rejected input.
+
+## Input schema
+
+*MCP agent status tool input*
+
+| Name | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| id | Yes | string | See the public contract for this field. |  |
+| session_secret | Yes | string | See the public contract for this field. |  |
+
+## Output schema
+
+Returns structured JSON from the shared public API service.
+
+*MCP agent status tool output fields*
+
+| Name | Required | Type | Description |
+| --- | --- | --- | --- |
+| agent_session_id | Yes | string | Non-secret execution correlation id from the signed runtime session. |
+| state | Yes | AgentRuntimeState | Closed runtime lifecycle state. |
+| program_digest | Yes | string | Pinned semantic program digest. |
+| output | Yes | RequiredNullableSchema | Present only for a successful terminal run. |
+| error | Yes | RequiredNullableSchema2 | Present only for a failed terminal run. |
+| usage | Yes | UsageReport | Provider usage accumulated so far. |
+
+## Tool errors
+
+Tool execution failures set isError to true. When error.validation is present, correct every RFC 6901 issue before retrying and do not repeat unchanged input.
+
+```json
+{
+  "error": {
+    "code": "invalid_request",
+    "reason": "malformed_request",
+    "message": "invalid request: request body violates the public contract",
+    "recovery": null,
+    "agent_session_id": null,
+    "validation": {
+      "contract": "SearchPostRequest",
+      "issues": [
+        {
+          "code": "required",
+          "path": "/query",
+          "suggestion": "Add the required `query` field."
+        }
+      ],
+      "truncated": false
+    }
+  },
+  "request_id": "00000000-0000-0000-0000-000000000000"
+}
+```
+
+## Behavior
+
+This tool is read-only, non-destructive, and idempotent.
+
+---
+
+<!-- https://yep.com/en/docs/changelog/ -->
+
+# Changelog
+
+Material changes to Yep developer APIs, MCP, and documentation.
+
+## 2026-10-06
+
+**Breaking:** `GET /api/v1/search` now returns the same JSON envelope as `POST /api/v1/search` — `{request_id, duration_ms, select, results: [{rank, fields}]}` — instead of a bare array. The projected fields are unchanged (`url`, `title`, `description`, `language`); read them from `results[].fields`. Queries containing control characters are now rejected with `400`, matching `POST`.
+
+## 2026-08-07
+
+Published the Agent API, model catalog, and query builder as shared REST and MCP capabilities. MCP now accepts OAuth only, and every agent-capable credential requires `search:read` together with `agent:run`. Added the BYOK setup guide and configured recovery links for missing provider keys.
+
+Added end-to-end model-provider capacity errors for BYOK agent workflows. Direct provider throttling returns `429` with `model_provider_rate_limited`; direct temporary provider capacity exhaustion returns `503` with `model_provider_overloaded`. Background status errors carry the same reason and typed retry recovery while the status lookup remains `200`. The existing standards-compatible `Retry-After` path is preserved, and agent errors expose the non-secret `agent_session_id` for correlation.
+
+## 2026-08-03
+
+Launched the developer portal with a runnable Search API quickstart, generated OpenAPI reference, focused MCP client guides, raw Markdown pages, documentation search data, and LLM discovery files.
+
+Added the authenticated API console. Console requests use the public Search API and follow normal billing, spend-limit, and rate-limit behavior.
+
+## Changelog policy
+
+This log starts with the developer portal launch. It records material public contract, integration, and documentation changes from this date forward; it does not reconstruct earlier releases.
+
+The generated [Search API reference](/en/docs/reference/search/) remains the source of truth for the current HTTP contract.
+
+---
+
+<!-- https://yep.com/en/docs/reference/ -->
+
+# API reference
+
+Base URL, authentication, and every public API operation.
+
+## Connection
+
+*API connection*
+
+| Name | Value |
+| --- | --- |
+| Base URL | https://yep.com/api |
+| Authentication | Bearer token |
+| Specification | 3.1.0 |
+
+## Search
+
+Explore the search operations.
+
+- `GET` [`/v1/search`](/en/docs/reference/search/get-search/) — Search the web index.
+- `POST` [`/v1/search`](/en/docs/reference/search/post-search/) — Search with typed filters and result projection.
+- `POST` [`/v1/search/ask`](/en/docs/reference/search/post-search-ask/) — Search from a natural-language question.
+- `POST` [`/v1/search/domains`](/en/docs/reference/search/post-search-domains/) — Find domains with typed filters and result projection.
+
+## Agent
+
+Explore the agent operations.
+
+- `POST` [`/v1/agent`](/en/docs/reference/agent/run-agent/) — Run an agent.
+- `GET` [`/v1/agent/{id}`](/en/docs/reference/agent/get-agent-run/) — Get an agent run.
+
+## Query builder
+
+Explore the query builder operations.
+
+- `POST` [`/v1/query-builder`](/en/docs/reference/query-builder/build-search-request/) — Build a typed search request from natural language.
+
+## Models
+
+Explore the models operations.
+
+- `GET` [`/v1/models`](/en/docs/reference/models/list-models/) — List models available to BYOK operations.
+
+## Management
+
+Explore the management operations.
+
+- `POST` [`/v1/api-keys`](/en/docs/reference/api-keys/create-api-key/) — Create an API key.
+- `DELETE` [`/v1/api-keys/{id}`](/en/docs/reference/api-keys/revoke-api-key/) — Revoke an API key.
+
+---
+
+<!-- https://yep.com/en/docs/reference/search/ -->
+
+# Search
+
+The public Yep search API
+
+## Endpoints
+
+- `GET` [`/v1/search`](/en/docs/reference/search/get-search/) — Search the web index.
+- `POST` [`/v1/search`](/en/docs/reference/search/post-search/) — Search with typed filters and result projection.
+- `POST` [`/v1/search/ask`](/en/docs/reference/search/post-search-ask/) — Search from a natural-language question.
+- `POST` [`/v1/search/domains`](/en/docs/reference/search/post-search-domains/) — Find domains with typed filters and result projection.
+
+---
+
+<!-- https://yep.com/en/docs/reference/agent/ -->
+
+# Agent
+
+Billed light and deep agent runs
+
+## Endpoints
+
+- `POST` [`/v1/agent`](/en/docs/reference/agent/run-agent/) — Run an agent.
+- `GET` [`/v1/agent/{id}`](/en/docs/reference/agent/get-agent-run/) — Get an agent run.
+
+---
+
+<!-- https://yep.com/en/docs/reference/query-builder/ -->
+
+# Query builder
+
+Natural-language search request construction
+
+## Endpoints
+
+- `POST` [`/v1/query-builder`](/en/docs/reference/query-builder/build-search-request/) — Build a typed search request from natural language.
+
+---
+
+<!-- https://yep.com/en/docs/reference/models/ -->
+
+# Models
+
+Public BYOK provider and model discovery
+
+## Endpoints
+
+- `GET` [`/v1/models`](/en/docs/reference/models/list-models/) — List models available to BYOK operations.
+
+---
+
+<!-- https://yep.com/en/docs/reference/management/ -->
+
+# Management
+
+Public credential management
+
+## Endpoints
+
+- `POST` [`/v1/api-keys`](/en/docs/reference/api-keys/create-api-key/) — Create an API key.
+- `DELETE` [`/v1/api-keys/{id}`](/en/docs/reference/api-keys/revoke-api-key/) — Revoke an API key.
+
+---
+
+<!-- https://yep.com/en/docs/reference/agent/run-agent/ -->
+
+# Run an agent
+
+Runs the light or deep agent with the customer's configured provider key. Set background to return polling credentials immediately.
+
+## POST /v1/agent
+
+## Request body
+
+JSON body: AgentRequest
+
+```curl
+curl --request POST "https://yep.com/api/v1/agent" \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --header "Content-Type: application/json" \
+  --data-binary @- <<'JSON'
+{
+  "mode": "light",
+  "input": "Summarize the latest carbon border tax guidance.",
+  "model": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4.5"
+  },
+  "background": false
+}
+JSON
+```
+
+## Responses
+
+*Response statuses*
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Validated agent result. | AgentRuntimeStatus |
+| 202 | Background run accepted; the proof is present only in this response. | AgentRunCreated |
+| 400 | Invalid request. | PublicApiError |
+| 401 | Authentication required. | PublicApiError |
+| 402 | Agent API funds or a spend limit rejected execution. | PublicApiError |
+| 403 | The API key lacks agent permission. | PublicApiError |
+| 409 | No stored provider key can run the selected model; recovery includes the setup URL. | PublicApiError |
+| 429 | The request exceeded a rate boundary. | PublicApiError |
+| 500 | The service could not safely complete the operation. | PublicApiError |
+| 502 | The agent runtime returned an invalid response. | PublicApiError |
+| 503 | The agent is temporarily unavailable. | PublicApiError |
+| 504 | A synchronous run exceeded five minutes. | PublicApiError |
+
+## Schemas
+
+### AgentEntrypoint
+
+Closed product-facing program entrypoints.
+
+```json
+[
+  "light",
+  "deep"
+]
+```
+
+### AgentModelRef
+
+One allowlisted inference provider and model identifier.
+
+*AgentModelRef fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| model | Yes | string | Provider-native model identifier. |  |
+| provider | Yes | ProviderKeyProvider | Closed provider discriminator. |  |
+
+### AgentRequest
+
+One billed Agent API run.
+
+*AgentRequest fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| background | No | boolean | Return immediately with polling credentials instead of awaiting the result. |  |
+| input | Yes | string | Research request passed to the selected agent program. | min length: 1; max length: 20000 |
+| mode | Yes | AgentEntrypoint | Execution depth for this run. |  |
+| model | Yes | AgentModelRef | Exact allowlisted provider/model pair selected for this run. |  |
+
+### AgentRunCreated
+
+Background Agent API run accepted for polling.
+
+*AgentRunCreated fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| id | Yes | string | Non-secret run locator used for status polling. |  |
+| session_secret | Yes | string | Independent proof required together with the API key. |  |
+
+### AgentRuntimeFailure
+
+Product-facing agent failure after runtime metadata has crossed the policy boundary.
+
+*AgentRuntimeFailure fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| class | Yes | AgentRuntimeFailureClass | Stable runtime failure class. |  |
+| message | Yes | string | Sanitized target-owned explanation. |  |
+| reason | Yes | null \| ErrorReason |  |  |
+| recovery | Yes | null \| ErrorRecovery |  |  |
+
+### AgentRuntimeFailureClass
+
+Closed portable runtime failure classes.
+
+```json
+[
+  "rate_limited",
+  "timeout",
+  "transport",
+  "invalid_output",
+  "rejected",
+  "internal"
+]
+```
+
+### AgentRuntimeState
+
+Portable runtime lifecycle values.
+
+```json
+[
+  "queued",
+  "running",
+  "succeeded",
+  "failed"
+]
+```
+
+### AgentRuntimeStatus
+
+Product-facing terminal or in-progress status returned by agent APIs.
+
+*AgentRuntimeStatus fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | Yes | string | Non-secret execution correlation id from the signed runtime session. |  |
+| error | Yes | null \| AgentRuntimeFailure |  |  |
+| output | Yes | null \| Report |  |  |
+| program_digest | Yes | string | Pinned semantic program digest. |  |
+| state | Yes | AgentRuntimeState | Closed runtime lifecycle state. |  |
+| usage | Yes | UsageReport | Provider usage accumulated so far. |  |
+
+### ErrorCode
+
+Machine-readable product API failure.
+
+```json
+[
+  "unauthenticated",
+  "forbidden",
+  "invalid_request",
+  "not_found",
+  "conflict",
+  "payment_required",
+  "too_many_requests",
+  "upstream",
+  "internal"
+]
+```
+
+### ErrorReason
+
+Stable product API failure reason.
+
+```json
+[
+  "malformed_request",
+  "authentication_required",
+  "reauthentication_required",
+  "permission_denied",
+  "api_key_name_invalid",
+  "spend_policy_invalid",
+  "rate_policy_invalid",
+  "provider_key_invalid",
+  "provider_key_missing",
+  "agent_model_not_allowed",
+  "resource_not_found",
+  "state_conflict",
+  "insufficient_funds",
+  "spend_limit_exceeded",
+  "rate_limit_exceeded",
+  "model_provider_rate_limited",
+  "model_provider_overloaded",
+  "dependency_unavailable",
+  "internal_failure"
+]
+```
+
+### ErrorRecovery
+
+Browser-safe recovery action selected by the authoritative product boundary.
+
+*ErrorRecovery alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | object |
+| 2 | object |
+| 3 | object |
+
+### ProviderKeyProvider
+
+Closed provider set exposed to product clients.
+
+```json
+[
+  "openrouter"
+]
+```
+
+### PublicApiError
+
+Stable public error envelope for APIs whose reason vocabulary is extensible.
+
+*PublicApiError fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | No | string \| null | Agent execution correlation id, present after an invocation is admitted. |  |
+| code | Yes | ErrorCode | Closed status category suitable for program control flow. |  |
+| message | Yes | string | Safe diagnostic intended for operators, not program branching. |  |
+| reason | Yes | string | Extensible machine-readable detail; clients must accept unknown values. |  |
+| recovery | No | null \| ErrorRecovery |  |  |
+| validation | No | null \| ValidationReport |  |  |
+
+### Report
+
+### UsageReport
+
+### ValidationIssue
+
+One actionable, privacy-safe contract violation.
+
+*ValidationIssue fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| allowed_values | No | array \| null |  | max items: 16 |
+| code | Yes | string | Stable, extensible machine-readable category. | max length: 64 |
+| path | Yes | string | RFC 6901 pointer to the rejected location; empty means the root value. | max length: 1024 |
+| suggestion | Yes | string | Code-owned instruction for correcting the request. | max length: 512 |
+
+### ValidationReport
+
+Bounded validation feedback shared by model, REST, and MCP boundaries.
+
+*ValidationReport fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| contract | Yes | string | Stable contract name, normally the published schema component name. | max length: 128 |
+| issues | Yes | ValidationIssue[] | At most eight deterministic violations. Correct every issue before retrying. | max items: 8 |
+| truncated | Yes | boolean | Whether more violations were omitted; retry after correcting the listed issues. |  |
+
+---
+
+<!-- https://yep.com/en/docs/reference/agent/get-agent-run/ -->
+
+# Get an agent run
+
+Reads the current or terminal status of one authenticated background run.
+
+## GET /v1/agent/{id}
+
+## Parameters
+
+*Request parameters*
+
+| Name | In | Required | Type | Description |
+| --- | --- | --- | --- | --- |
+| id | path | Yes | string | Agent-session UUID returned at creation. |
+| x-agent-session | header | Yes | string | Session proof present only in the creation response. |
+
+```curl
+curl --request GET "https://yep.com/api/v1/agent/$YEP_AGENT_SESSION_ID" \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --header "x-agent-session: $YEP_AGENT_SESSION_SECRET"
+```
+
+## Responses
+
+*Response statuses*
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Current or terminal agent-session status. | AgentRuntimeStatus |
+| 400 | Invalid request. | PublicApiError |
+| 401 | API-key or session-proof authentication failed. | PublicApiError |
+| 403 | The API key lacks agent permission. | PublicApiError |
+| 404 | The session does not exist in the caller's scope. | PublicApiError |
+| 429 | The request exceeded a rate boundary. | PublicApiError |
+| 500 | The service could not safely complete the operation. | PublicApiError |
+| 502 | The agent runtime returned an invalid response. | PublicApiError |
+| 503 | The agent is temporarily unavailable. | PublicApiError |
+
+## Schemas
+
+### AgentRuntimeFailure
+
+Product-facing agent failure after runtime metadata has crossed the policy boundary.
+
+*AgentRuntimeFailure fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| class | Yes | AgentRuntimeFailureClass | Stable runtime failure class. |  |
+| message | Yes | string | Sanitized target-owned explanation. |  |
+| reason | Yes | null \| ErrorReason |  |  |
+| recovery | Yes | null \| ErrorRecovery |  |  |
+
+### AgentRuntimeFailureClass
+
+Closed portable runtime failure classes.
+
+```json
+[
+  "rate_limited",
+  "timeout",
+  "transport",
+  "invalid_output",
+  "rejected",
+  "internal"
+]
+```
+
+### AgentRuntimeState
+
+Portable runtime lifecycle values.
+
+```json
+[
+  "queued",
+  "running",
+  "succeeded",
+  "failed"
+]
+```
+
+### AgentRuntimeStatus
+
+Product-facing terminal or in-progress status returned by agent APIs.
+
+*AgentRuntimeStatus fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | Yes | string | Non-secret execution correlation id from the signed runtime session. |  |
+| error | Yes | null \| AgentRuntimeFailure |  |  |
+| output | Yes | null \| Report |  |  |
+| program_digest | Yes | string | Pinned semantic program digest. |  |
+| state | Yes | AgentRuntimeState | Closed runtime lifecycle state. |  |
+| usage | Yes | UsageReport | Provider usage accumulated so far. |  |
+
+### ErrorCode
+
+Machine-readable product API failure.
+
+```json
+[
+  "unauthenticated",
+  "forbidden",
+  "invalid_request",
+  "not_found",
+  "conflict",
+  "payment_required",
+  "too_many_requests",
+  "upstream",
+  "internal"
+]
+```
+
+### ErrorReason
+
+Stable product API failure reason.
+
+```json
+[
+  "malformed_request",
+  "authentication_required",
+  "reauthentication_required",
+  "permission_denied",
+  "api_key_name_invalid",
+  "spend_policy_invalid",
+  "rate_policy_invalid",
+  "provider_key_invalid",
+  "provider_key_missing",
+  "agent_model_not_allowed",
+  "resource_not_found",
+  "state_conflict",
+  "insufficient_funds",
+  "spend_limit_exceeded",
+  "rate_limit_exceeded",
+  "model_provider_rate_limited",
+  "model_provider_overloaded",
+  "dependency_unavailable",
+  "internal_failure"
+]
+```
+
+### ErrorRecovery
+
+Browser-safe recovery action selected by the authoritative product boundary.
+
+*ErrorRecovery alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | object |
+| 2 | object |
+| 3 | object |
+
+### PublicApiError
+
+Stable public error envelope for APIs whose reason vocabulary is extensible.
+
+*PublicApiError fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | No | string \| null | Agent execution correlation id, present after an invocation is admitted. |  |
+| code | Yes | ErrorCode | Closed status category suitable for program control flow. |  |
+| message | Yes | string | Safe diagnostic intended for operators, not program branching. |  |
+| reason | Yes | string | Extensible machine-readable detail; clients must accept unknown values. |  |
+| recovery | No | null \| ErrorRecovery |  |  |
+| validation | No | null \| ValidationReport |  |  |
+
+### Report
+
+### UsageReport
+
+### ValidationIssue
+
+One actionable, privacy-safe contract violation.
+
+*ValidationIssue fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| allowed_values | No | array \| null |  | max items: 16 |
+| code | Yes | string | Stable, extensible machine-readable category. | max length: 64 |
+| path | Yes | string | RFC 6901 pointer to the rejected location; empty means the root value. | max length: 1024 |
+| suggestion | Yes | string | Code-owned instruction for correcting the request. | max length: 512 |
+
+### ValidationReport
+
+Bounded validation feedback shared by model, REST, and MCP boundaries.
+
+*ValidationReport fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| contract | Yes | string | Stable contract name, normally the published schema component name. | max length: 128 |
+| issues | Yes | ValidationIssue[] | At most eight deterministic violations. Correct every issue before retrying. | max items: 8 |
+| truncated | Yes | boolean | Whether more violations were omitted; retry after correcting the listed issues. |  |
+
+---
+
+<!-- https://yep.com/en/docs/reference/query-builder/build-search-request/ -->
+
+# Build a typed search request from natural language
+
+Uses the selected allowlisted model and stored BYOK provider key. A successful validated build is billed as one Agent API run and does not execute search.
+
+## POST /v1/query-builder
+
+## Request body
+
+JSON body: QueryBuilderRequest
+
+```curl
+curl --request POST "https://yep.com/api/v1/query-builder" \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --header "Content-Type: application/json" \
+  --data-binary @- <<'JSON'
+{
+  "instruction": "Find independent climate policy research with meaningful traffic.",
+  "model": {
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-4.5"
+  }
+}
+JSON
+```
+
+## Responses
+
+*Response statuses*
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Validated public search request. | QueryBuilderResponse |
+| 400 | Invalid request. | PublicApiError |
+| 401 | Authentication required. | PublicApiError |
+| 402 | Agent API funds or a spend limit rejected execution. | PublicApiError |
+| 403 | The API key lacks agent permission. | PublicApiError |
+| 409 | No stored provider key can run the selected model; recovery includes the setup URL. | PublicApiError |
+| 429 | The request exceeded a rate boundary. | PublicApiError |
+| 500 | The service could not safely complete the operation. | PublicApiError |
+| 502 | The model returned an invalid request. | PublicApiError |
+| 503 | Inference is temporarily unavailable. | PublicApiError |
+
+## Schemas
+
+### AgentModelRef
+
+One allowlisted inference provider and model identifier.
+
+*AgentModelRef fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| model | Yes | string | Provider-native model identifier. |  |
+| provider | Yes | ProviderKeyProvider | Closed provider discriminator. |  |
+
+### ErrorCode
+
+Machine-readable product API failure.
+
+```json
+[
+  "unauthenticated",
+  "forbidden",
+  "invalid_request",
+  "not_found",
+  "conflict",
+  "payment_required",
+  "too_many_requests",
+  "upstream",
+  "internal"
+]
+```
+
+### ErrorRecovery
+
+Browser-safe recovery action selected by the authoritative product boundary.
+
+*ErrorRecovery alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | object |
+| 2 | object |
+| 3 | object |
+
+### ProviderKeyProvider
+
+Closed provider set exposed to product clients.
+
+```json
+[
+  "openrouter"
+]
+```
+
+### PublicApiError
+
+Stable public error envelope for APIs whose reason vocabulary is extensible.
+
+*PublicApiError fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | No | string \| null | Agent execution correlation id, present after an invocation is admitted. |  |
+| code | Yes | ErrorCode | Closed status category suitable for program control flow. |  |
+| message | Yes | string | Safe diagnostic intended for operators, not program branching. |  |
+| reason | Yes | string | Extensible machine-readable detail; clients must accept unknown values. |  |
+| recovery | No | null \| ErrorRecovery |  |  |
+| validation | No | null \| ValidationReport |  |  |
+
+### QueryBuilderRequest
+
+Public natural-language query-builder request.
+
+*QueryBuilderRequest fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| current_request | No | null \| SearchPostRequest |  |  |
+| instruction | Yes | string | Natural-language search goal. | min length: 1; max length: 4096 |
+| model | Yes | AgentModelRef | Exact allowlisted BYOK model. |  |
+
+### QueryBuilderResponse
+
+Public validated query-builder response.
+
+*QueryBuilderResponse fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| canonical_filter | No | string \| null | Canonical text form of `request.filter`, when present. |  |
+| request | Yes | SearchPostRequest | Complete public search request. |  |
+| request_id | Yes | string | Billing and support correlation identifier. |  |
+
+### SearchCoverage
+
+How broad the search should be.
+
+```json
+[
+  "balanced",
+  "high",
+  "maximum"
+]
+```
+
+### SearchPostRequest
+
+Public POST search request.
+
+*SearchPostRequest fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| coverage | No | null \| SearchCoverage |  |  |
+| filter | No | string \| null | Optional eligibility filter in the public filter language. | min length: 1; max length: 65536 |
+| lang | No | string \| null | Optional two-letter lowercase language code. | pattern: ^[a-z]{2}$ |
+| limit | No | integer \| null | Maximum result count; defaults to 20 at the product boundary. | min: 1; max: 50 |
+| max_results_per_domain | No | integer \| null | Optional maximum number of results from one registrable domain. | min: 1; max: 10 |
+| query | Yes | string | Non-empty search text. | min length: 1; max length: 512 |
+| ranking | No | null \| SearchRanking |  |  |
+| select | No | SearchResultField[] | Response projection; omission selects the stable summary fields. | min items: 1 |
+
+### SearchRanking
+
+What the results should prioritize.
+
+```json
+[
+  "precision",
+  "balanced",
+  "authority",
+  "content_gap"
+]
+```
+
+### SearchResultField
+
+Public fields that may be selected in a search response.
+
+```json
+[
+  "url",
+  "title",
+  "description",
+  "anchor",
+  "site_name",
+  "author",
+  "language",
+  "domain",
+  "categories",
+  "location",
+  "page_type",
+  "publish_time",
+  "first_seen",
+  "url_rating",
+  "domain_rating",
+  "traffic",
+  "refdomains",
+  "domain_traffic",
+  "domain_refdomains",
+  "refclass_c",
+  "word_count",
+  "rule_type",
+  "document_intent",
+  "content_angle",
+  "republished",
+  "highlights"
+]
+```
+
+### ValidationIssue
+
+One actionable, privacy-safe contract violation.
+
+*ValidationIssue fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| allowed_values | No | array \| null |  | max items: 16 |
+| code | Yes | string | Stable, extensible machine-readable category. | max length: 64 |
+| path | Yes | string | RFC 6901 pointer to the rejected location; empty means the root value. | max length: 1024 |
+| suggestion | Yes | string | Code-owned instruction for correcting the request. | max length: 512 |
+
+### ValidationReport
+
+Bounded validation feedback shared by model, REST, and MCP boundaries.
+
+*ValidationReport fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| contract | Yes | string | Stable contract name, normally the published schema component name. | max length: 128 |
+| issues | Yes | ValidationIssue[] | At most eight deterministic violations. Correct every issue before retrying. | max items: 8 |
+| truncated | Yes | boolean | Whether more violations were omitted; retry after correcting the listed issues. |  |
+
+---
+
+<!-- https://yep.com/en/docs/reference/models/list-models/ -->
+
+# List models available to BYOK operations
+
+Returns the Git-owned provider/model allowlist, verified provider pricing, capabilities, and setup links. Stored-key metadata is never returned.
+
+## GET /v1/models
+
+```curl
+curl --request GET "https://yep.com/api/v1/models" \
+  --header "Authorization: Bearer $YEP_API_KEY"
+```
+
+## Responses
+
+*Response statuses*
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Allowlisted BYOK model catalog. | PublicAgentModelCatalog |
+| 401 | Authentication required. | PublicApiError |
+| 403 | The API key lacks agent permission. | PublicApiError |
+| 429 | The request exceeded a rate boundary. | PublicApiError |
+| 500 | The service could not safely complete the operation. | PublicApiError |
+| 503 | Verified model pricing is unavailable. | PublicApiError |
+
+## Schemas
+
+### AgentModelPricing
+
+Exact current `OpenRouter` list price displayed beside a model choice.
+
+*AgentModelPricing fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| input_usd_per_million_tokens | No | string \| null | Input price in USD per million tokens; absent for variable-price routing. |  |
+| output_usd_per_million_tokens | No | string \| null | Output price in USD per million tokens; absent for variable-price routing. |  |
+| request_usd | No | string \| null | Optional fixed USD price charged for one request. |  |
+
+### AgentModelRef
+
+One allowlisted inference provider and model identifier.
+
+*AgentModelRef fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| model | Yes | string | Provider-native model identifier. |  |
+| provider | Yes | ProviderKeyProvider | Closed provider discriminator. |  |
+
+### AgentPricingSnapshot
+
+Browser-visible provenance for model prices.
+
+*AgentPricingSnapshot fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| fetched_at | Yes | string | RFC 3339 timestamp of the last successful refresh. |  |
+| provider | Yes | ProviderKeyProvider | Provider supplying the displayed prices. |  |
+| status | Yes | AgentPricingStatus | Whether the snapshot remains within the freshness window. |  |
+
+### AgentPricingStatus
+
+Freshness of the live provider price snapshot returned to the browser.
+
+```json
+[
+  "fresh",
+  "stale"
+]
+```
+
+### AgentProviderOption
+
+Browser-safe provider metadata from the pinned catalog.
+
+*AgentProviderOption fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| credential_setup_url | Yes | string | Provider-owned page where an inference key can be created. |  |
+| default_model | Yes | AgentModelRef | Model selected when the connection flow changes provider. |  |
+| label | Yes | string | Provider brand name. |  |
+| provider | Yes | ProviderKeyProvider | Closed provider discriminator. |  |
+| supported_scopes | Yes | ProviderKeyScope[] | Key ownership scopes implemented for this provider. |  |
+
+### ErrorCode
+
+Machine-readable product API failure.
+
+```json
+[
+  "unauthenticated",
+  "forbidden",
+  "invalid_request",
+  "not_found",
+  "conflict",
+  "payment_required",
+  "too_many_requests",
+  "upstream",
+  "internal"
+]
+```
+
+### ErrorRecovery
+
+Browser-safe recovery action selected by the authoritative product boundary.
+
+*ErrorRecovery alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | object |
+| 2 | object |
+| 3 | object |
+
+### ProviderKeyProvider
+
+Closed provider set exposed to product clients.
+
+```json
+[
+  "openrouter"
+]
+```
+
+### ProviderKeyScope
+
+Ownership scope for a stored provider key.
+
+```json
+[
+  "personal",
+  "workspace"
+]
+```
+
+### PublicAgentModelCatalog
+
+Public BYOK model catalog shared by REST and MCP.
+
+*PublicAgentModelCatalog fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| models | Yes | PublicAgentModelOption[] | Git-owned provider/model allowlist joined with verified pricing. |  |
+| pricing_snapshot | Yes | AgentPricingSnapshot | Provenance and freshness of the displayed provider prices. |  |
+| providers | Yes | AgentProviderOption[] | Git-owned provider choices and their external key-creation links. |  |
+| setup_url | Yes | string | Signed-in Yep route for storing the selected provider credential. |  |
+
+### PublicAgentModelOption
+
+Public model metadata used by HTTP and MCP callers.
+
+*PublicAgentModelOption fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| context_tokens | Yes | integer | Maximum provider context window. | min: 0 |
+| label | Yes | string | Human-readable model name. |  |
+| max_output_tokens | Yes | integer | Maximum provider output window. | min: 0 |
+| model | Yes | string | Provider-native model identifier accepted by agent endpoints. |  |
+| pricing | Yes | AgentModelPricing | Verified provider list pricing. |  |
+| provider | Yes | ProviderKeyProvider | Closed provider discriminator. |  |
+| structured_output | Yes | boolean | Whether the model supports constrained structured output. |  |
+| tool_calling | Yes | boolean | Whether the model supports tool calls. |  |
+
+### PublicApiError
+
+Stable public error envelope for APIs whose reason vocabulary is extensible.
+
+*PublicApiError fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | No | string \| null | Agent execution correlation id, present after an invocation is admitted. |  |
+| code | Yes | ErrorCode | Closed status category suitable for program control flow. |  |
+| message | Yes | string | Safe diagnostic intended for operators, not program branching. |  |
+| reason | Yes | string | Extensible machine-readable detail; clients must accept unknown values. |  |
+| recovery | No | null \| ErrorRecovery |  |  |
+| validation | No | null \| ValidationReport |  |  |
+
+### ValidationIssue
+
+One actionable, privacy-safe contract violation.
+
+*ValidationIssue fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| allowed_values | No | array \| null |  | max items: 16 |
+| code | Yes | string | Stable, extensible machine-readable category. | max length: 64 |
+| path | Yes | string | RFC 6901 pointer to the rejected location; empty means the root value. | max length: 1024 |
+| suggestion | Yes | string | Code-owned instruction for correcting the request. | max length: 512 |
+
+### ValidationReport
+
+Bounded validation feedback shared by model, REST, and MCP boundaries.
+
+*ValidationReport fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| contract | Yes | string | Stable contract name, normally the published schema component name. | max length: 128 |
+| issues | Yes | ValidationIssue[] | At most eight deterministic violations. Correct every issue before retrying. | max items: 8 |
+| truncated | Yes | boolean | Whether more violations were omitted; retry after correcting the listed issues. |  |
+
+---
+
+<!-- https://yep.com/en/docs/reference/api-keys/create-api-key/ -->
+
+# Create an API key
+
+Creates a scoped credential and returns its secret once.
+
+## POST /v1/api-keys
+
+## Request body
+
+JSON body: PublicCreateApiKeyRequest
+
+```curl
+curl --request POST "https://yep.com/api/v1/api-keys" \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --header "Content-Type: application/json" \
+  --data-binary @- <<'JSON'
+{
+  "name": "string",
+  "permissions": [
+    "search-read"
+  ]
+}
+JSON
+```
+
+## Responses
+
+*Response statuses*
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 201 | Key created; the secret is present only in this response. | PublicCreatedApiKey |
+| 400 | Invalid request. | PublicApiError |
+| 401 | Authentication required. | PublicApiError |
+| 403 | Requested permissions exceed current authority. | PublicApiError |
+| 409 | The account is unavailable or its active-key quota is exhausted. | PublicApiError |
+
+## Schemas
+
+### ErrorCode
+
+Machine-readable product API failure.
+
+```json
+[
+  "unauthenticated",
+  "forbidden",
+  "invalid_request",
+  "not_found",
+  "conflict",
+  "payment_required",
+  "too_many_requests",
+  "upstream",
+  "internal"
+]
+```
+
+### ErrorRecovery
+
+Browser-safe recovery action selected by the authoritative product boundary.
+
+*ErrorRecovery alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | object |
+| 2 | object |
+| 3 | object |
+
+### PublicApiError
+
+Stable public error envelope for APIs whose reason vocabulary is extensible.
+
+*PublicApiError fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | No | string \| null | Agent execution correlation id, present after an invocation is admitted. |  |
+| code | Yes | ErrorCode | Closed status category suitable for program control flow. |  |
+| message | Yes | string | Safe diagnostic intended for operators, not program branching. |  |
+| reason | Yes | string | Extensible machine-readable detail; clients must accept unknown values. |  |
+| recovery | No | null \| ErrorRecovery |  |  |
+| validation | No | null \| ValidationReport |  |  |
+
+### PublicApiKeyPermission
+
+Stable permission names accepted by the public API-key endpoint.
+
+```json
+[
+  "search-read",
+  "agent-run",
+  "keys-create-own",
+  "keys-manage-own"
+]
+```
+
+### PublicCreateApiKeyRequest
+
+Stable public input for issuing a user-owned API key.
+
+*PublicCreateApiKeyRequest fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| expires_in_days | No | integer \| null | Requested lifetime in days; omission selects 90 days. | default: 90; min: 1; max: 365 |
+| monthly_spend_limit_microusd | No | integer \| null | Optional positive monthly spend ceiling in millionths of a US dollar. | min: 1 |
+| name | Yes | string | Human-readable key name. | min length: 1; max length: 100 |
+| permissions | Yes | PublicApiKeyPermission[] | Nonempty grants bounded by the caller's current effective permissions. | min items: 1 |
+
+### PublicCreatedApiKey
+
+Public metadata for a newly issued API key.
+
+*PublicCreatedApiKey fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| created_at | Yes | string | Creation timestamp in UTC. |  |
+| display_prefix | Yes | string | Non-secret prefix used to identify the key. |  |
+| expires_at | Yes | string | Mandatory expiry timestamp in UTC. |  |
+| id | Yes | string | Stable credential id used for revocation. |  |
+| name | Yes | string | User-provided display name. |  |
+| secret | Yes | string | Plaintext secret present only in the creation response. |  |
+
+### ValidationIssue
+
+One actionable, privacy-safe contract violation.
+
+*ValidationIssue fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| allowed_values | No | array \| null |  | max items: 16 |
+| code | Yes | string | Stable, extensible machine-readable category. | max length: 64 |
+| path | Yes | string | RFC 6901 pointer to the rejected location; empty means the root value. | max length: 1024 |
+| suggestion | Yes | string | Code-owned instruction for correcting the request. | max length: 512 |
+
+### ValidationReport
+
+Bounded validation feedback shared by model, REST, and MCP boundaries.
+
+*ValidationReport fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| contract | Yes | string | Stable contract name, normally the published schema component name. | max length: 128 |
+| issues | Yes | ValidationIssue[] | At most eight deterministic violations. Correct every issue before retrying. | max items: 8 |
+| truncated | Yes | boolean | Whether more violations were omitted; retry after correcting the listed issues. |  |
+
+---
+
+<!-- https://yep.com/en/docs/reference/api-keys/revoke-api-key/ -->
+
+# Revoke an API key
+
+Permanently revokes one credential owned by the authenticated identity.
+
+## DELETE /v1/api-keys/{id}
+
+## Parameters
+
+*Request parameters*
+
+| Name | In | Required | Type | Description |
+| --- | --- | --- | --- | --- |
+| id | path | Yes | string | Credential UUID returned at creation. |
+
+```curl
+curl --request DELETE "https://yep.com/api/v1/api-keys/$YEP_AGENT_SESSION_ID" \
+  --header "Authorization: Bearer $YEP_API_KEY"
+```
+
+## Responses
+
+*Response statuses*
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 204 | Key revoked. | object |
+| 401 | Authentication required. | PublicApiError |
+| 403 | The API key lacks key-management permission. | PublicApiError |
+| 404 | Key is absent or owned by another identity. | PublicApiError |
+
+## Schemas
+
+### ErrorCode
+
+Machine-readable product API failure.
+
+```json
+[
+  "unauthenticated",
+  "forbidden",
+  "invalid_request",
+  "not_found",
+  "conflict",
+  "payment_required",
+  "too_many_requests",
+  "upstream",
+  "internal"
+]
+```
+
+### ErrorRecovery
+
+Browser-safe recovery action selected by the authoritative product boundary.
+
+*ErrorRecovery alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | object |
+| 2 | object |
+| 3 | object |
+
+### PublicApiError
+
+Stable public error envelope for APIs whose reason vocabulary is extensible.
+
+*PublicApiError fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | No | string \| null | Agent execution correlation id, present after an invocation is admitted. |  |
+| code | Yes | ErrorCode | Closed status category suitable for program control flow. |  |
+| message | Yes | string | Safe diagnostic intended for operators, not program branching. |  |
+| reason | Yes | string | Extensible machine-readable detail; clients must accept unknown values. |  |
+| recovery | No | null \| ErrorRecovery |  |  |
+| validation | No | null \| ValidationReport |  |  |
+
+### ValidationIssue
+
+One actionable, privacy-safe contract violation.
+
+*ValidationIssue fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| allowed_values | No | array \| null |  | max items: 16 |
+| code | Yes | string | Stable, extensible machine-readable category. | max length: 64 |
+| path | Yes | string | RFC 6901 pointer to the rejected location; empty means the root value. | max length: 1024 |
+| suggestion | Yes | string | Code-owned instruction for correcting the request. | max length: 512 |
+
+### ValidationReport
+
+Bounded validation feedback shared by model, REST, and MCP boundaries.
+
+*ValidationReport fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| contract | Yes | string | Stable contract name, normally the published schema component name. | max length: 128 |
+| issues | Yes | ValidationIssue[] | At most eight deterministic violations. Correct every issue before retrying. | max items: 8 |
+| truncated | Yes | boolean | Whether more violations were omitted; retry after correcting the listed issues. |  |
+
+---
+
+<!-- https://yep.com/en/docs/reference/search/get-search/ -->
+
+# Search the web index
+
+Returns ranked web results in the same envelope as `POST /api/v1/search`, projected to url, title, description, and language. The result cap is 50 and the API does not paginate.
+
+## GET /v1/search
+
+## Parameters
+
+*Request parameters*
+
+| Name | In | Required | Type | Description |
+| --- | --- | --- | --- | --- |
+| query | query | Yes | string | Non-empty search text. |
+| limit | query | No | integer | Maximum returned results. |
+| lang | query | No | string | Optional two-letter lowercase language code. |
+| coverage | query | No | SearchCoverage | Search breadth; omission preserves balanced search. |
+| ranking | query | No | SearchRanking | Ranking focus; omission preserves balanced search. |
+
+```curl
+curl --get "https://yep.com/api/v1/search" \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --data-urlencode 'query=carbon border tax 2026'
+```
+
+## Responses
+
+*Response statuses*
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Ranked projected search results | SearchPostResponse |
+| 400 | The query violated the public contract | SearchV1Error |
+| 401 | A valid API key is required | SearchV1Error |
+| 402 | Billing or a spend limit rejected execution | SearchV1Error |
+| 403 | The API key lacks search permission | SearchV1Error |
+| 429 | A rate limit rejected execution | SearchV1Error |
+| 500 | The service could not safely complete the request | SearchV1Error |
+| 502 | The search request could not be completed | SearchV1Error |
+| 503 | Search is temporarily unavailable | SearchV1Error |
+
+## Schemas
+
+### ErrorCode
+
+Machine-readable product API failure.
+
+```json
+[
+  "unauthenticated",
+  "forbidden",
+  "invalid_request",
+  "not_found",
+  "conflict",
+  "payment_required",
+  "too_many_requests",
+  "upstream",
+  "internal"
+]
+```
+
+### ErrorRecovery
+
+Browser-safe recovery action selected by the authoritative product boundary.
+
+*ErrorRecovery alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | object |
+| 2 | object |
+| 3 | object |
+
+### PageResultFields
+
+Optional nullable projected fields. Each property is omitted when not selected, `null` when selected but unavailable, or carries its typed value.
+
+*PageResultFields fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| anchor | No | null \| string | Aggregated inbound anchor text. |  |
+| author | No | null \| string | Page author. |  |
+| categories | No | null \| object[] | Scored taxonomy categories. |  |
+| content_angle | No | null \| string | Classified content angle. |  |
+| description | No | null \| string | Result description. |  |
+| document_intent | No | null \| string | Classified document intent. |  |
+| domain | No | null \| string | Registrable or host domain. |  |
+| domain_rating | No | null \| number | Domain rating. |  |
+| domain_refdomains | No | null \| integer | Domain referring-domain count. |  |
+| domain_traffic | No | null \| integer | Estimated domain traffic. |  |
+| first_seen | No | null \| string | First-seen timestamp. |  |
+| highlights | No | null \| string[] | Up to three query-relevant passages. |  |
+| language | No | null \| string | Document language. |  |
+| location | No | null \| string | Geographic location code. |  |
+| page_type | No | null \| string | Page content type. |  |
+| publish_time | No | null \| string | Published timestamp. |  |
+| refclass_c | No | null \| integer | Refclass-C metric. |  |
+| refdomains | No | null \| integer | Referring-domain count. |  |
+| republished | No | null \| boolean | Whether the document was republished. |  |
+| rule_type | No | null \| string | Applied rule type. |  |
+| site_name | No | null \| string | Site display name. |  |
+| title | No | null \| string | Page title. |  |
+| traffic | No | null \| integer | Estimated URL traffic. |  |
+| url | No | null \| string | Canonical page URL. |  |
+| url_rating | No | null \| number | URL rating. |  |
+| word_count | No | null \| integer | Visible word count. |  |
+
+### ProjectedPageResult
+
+One ranked projected result.
+
+*ProjectedPageResult fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| fields | Yes | PageResultFields | Exactly the requested fields. |  |
+| rank | Yes | integer | One-based result rank. | min: 1 |
+
+### SearchCoverage
+
+How broad the search should be.
+
+```json
+[
+  "balanced",
+  "high",
+  "maximum"
+]
+```
+
+### SearchPostResponse
+
+Public POST search response.
+
+*SearchPostResponse fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| duration_ms | Yes | integer | End-to-end duration in milliseconds. | min: 0 |
+| request_id | Yes | string | Public request correlation identifier. |  |
+| results | Yes | ProjectedPageResult[] | Ranked projected results. |  |
+| select | Yes | SearchResultField[] | Echoed normalized projection. |  |
+
+### SearchRanking
+
+What the results should prioritize.
+
+```json
+[
+  "precision",
+  "balanced",
+  "authority",
+  "content_gap"
+]
+```
+
+### SearchResultField
+
+Public fields that may be selected in a search response.
+
+```json
+[
+  "url",
+  "title",
+  "description",
+  "anchor",
+  "site_name",
+  "author",
+  "language",
+  "domain",
+  "categories",
+  "location",
+  "page_type",
+  "publish_time",
+  "first_seen",
+  "url_rating",
+  "domain_rating",
+  "traffic",
+  "refdomains",
+  "domain_traffic",
+  "domain_refdomains",
+  "refclass_c",
+  "word_count",
+  "rule_type",
+  "document_intent",
+  "content_angle",
+  "republished",
+  "highlights"
+]
+```
+
+### SearchV1Error
+
+Search v1's original closed error envelope.
+
+*SearchV1Error fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | No | string \| null | Always absent for search; retained because runtime errors use one envelope. |  |
+| code | Yes | ErrorCode | Closed status category. |  |
+| message | Yes | string | Safe operator diagnostic. |  |
+| reason | Yes | SearchV1ErrorReason | Closed Search v1 reason. |  |
+| recovery | No | null \| ErrorRecovery |  |  |
+| validation | No | null \| ValidationReport |  |  |
+
+### SearchV1ErrorReason
+
+Closed failure-reason vocabulary retained for the published Search v1 contract.
+
+```json
+[
+  "malformed_request",
+  "authentication_required",
+  "permission_denied",
+  "api_key_name_invalid",
+  "spend_policy_invalid",
+  "rate_policy_invalid",
+  "resource_not_found",
+  "state_conflict",
+  "insufficient_funds",
+  "spend_limit_exceeded",
+  "rate_limit_exceeded",
+  "dependency_unavailable",
+  "internal_failure"
+]
+```
+
+### ValidationIssue
+
+One actionable, privacy-safe contract violation.
+
+*ValidationIssue fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| allowed_values | No | array \| null |  | max items: 16 |
+| code | Yes | string | Stable, extensible machine-readable category. | max length: 64 |
+| path | Yes | string | RFC 6901 pointer to the rejected location; empty means the root value. | max length: 1024 |
+| suggestion | Yes | string | Code-owned instruction for correcting the request. | max length: 512 |
+
+### ValidationReport
+
+Bounded validation feedback shared by model, REST, and MCP boundaries.
+
+*ValidationReport fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| contract | Yes | string | Stable contract name, normally the published schema component name. | max length: 128 |
+| issues | Yes | ValidationIssue[] | At most eight deterministic violations. Correct every issue before retrying. | max items: 8 |
+| truncated | Yes | boolean | Whether more violations were omitted; retry after correcting the listed issues. |  |
+
+---
+
+<!-- https://yep.com/en/docs/reference/search/post-search/ -->
+
+# Search with typed filters and result projection
+
+Returns ranked web results using the shared typed filter and projection contract.
+
+## POST /v1/search
+
+## Request body
+
+JSON body: SearchPostRequest
+
+```search-request
+post-search
+```
+
+## Responses
+
+*Response statuses*
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Ranked projected search results | SearchPostResponse |
+| 400 | The request violated the public contract | SearchV1Error |
+| 401 | A valid API key is required | SearchV1Error |
+| 402 | Billing or a spend limit rejected execution | SearchV1Error |
+| 403 | The API key lacks search permission | SearchV1Error |
+| 429 | A rate limit rejected execution | SearchV1Error |
+| 502 | The search request could not be completed | SearchV1Error |
+| 503 | Search is temporarily unavailable | SearchV1Error |
+
+## Schemas
+
+### ErrorCode
+
+Machine-readable product API failure.
+
+```json
+[
+  "unauthenticated",
+  "forbidden",
+  "invalid_request",
+  "not_found",
+  "conflict",
+  "payment_required",
+  "too_many_requests",
+  "upstream",
+  "internal"
+]
+```
+
+### ErrorRecovery
+
+Browser-safe recovery action selected by the authoritative product boundary.
+
+*ErrorRecovery alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | object |
+| 2 | object |
+| 3 | object |
+
+### PageResultFields
+
+Optional nullable projected fields. Each property is omitted when not selected, `null` when selected but unavailable, or carries its typed value.
+
+*PageResultFields fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| anchor | No | null \| string | Aggregated inbound anchor text. |  |
+| author | No | null \| string | Page author. |  |
+| categories | No | null \| object[] | Scored taxonomy categories. |  |
+| content_angle | No | null \| string | Classified content angle. |  |
+| description | No | null \| string | Result description. |  |
+| document_intent | No | null \| string | Classified document intent. |  |
+| domain | No | null \| string | Registrable or host domain. |  |
+| domain_rating | No | null \| number | Domain rating. |  |
+| domain_refdomains | No | null \| integer | Domain referring-domain count. |  |
+| domain_traffic | No | null \| integer | Estimated domain traffic. |  |
+| first_seen | No | null \| string | First-seen timestamp. |  |
+| highlights | No | null \| string[] | Up to three query-relevant passages. |  |
+| language | No | null \| string | Document language. |  |
+| location | No | null \| string | Geographic location code. |  |
+| page_type | No | null \| string | Page content type. |  |
+| publish_time | No | null \| string | Published timestamp. |  |
+| refclass_c | No | null \| integer | Refclass-C metric. |  |
+| refdomains | No | null \| integer | Referring-domain count. |  |
+| republished | No | null \| boolean | Whether the document was republished. |  |
+| rule_type | No | null \| string | Applied rule type. |  |
+| site_name | No | null \| string | Site display name. |  |
+| title | No | null \| string | Page title. |  |
+| traffic | No | null \| integer | Estimated URL traffic. |  |
+| url | No | null \| string | Canonical page URL. |  |
+| url_rating | No | null \| number | URL rating. |  |
+| word_count | No | null \| integer | Visible word count. |  |
+
+### ProjectedPageResult
+
+One ranked projected result.
+
+*ProjectedPageResult fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| fields | Yes | PageResultFields | Exactly the requested fields. |  |
+| rank | Yes | integer | One-based result rank. | min: 1 |
+
+### SearchCoverage
+
+How broad the search should be.
+
+```json
+[
+  "balanced",
+  "high",
+  "maximum"
+]
+```
+
+### SearchPostRequest
+
+Public POST search request.
+
+*SearchPostRequest fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| coverage | No | null \| SearchCoverage |  |  |
+| filter | No | string \| null | Optional eligibility filter in the public filter language. | min length: 1; max length: 65536 |
+| lang | No | string \| null | Optional two-letter lowercase language code. | pattern: ^[a-z]{2}$ |
+| limit | No | integer \| null | Maximum result count; defaults to 20 at the product boundary. | min: 1; max: 50 |
+| max_results_per_domain | No | integer \| null | Optional maximum number of results from one registrable domain. | min: 1; max: 10 |
+| query | Yes | string | Non-empty search text. | min length: 1; max length: 512 |
+| ranking | No | null \| SearchRanking |  |  |
+| select | No | SearchResultField[] | Response projection; omission selects the stable summary fields. | min items: 1 |
+
+### SearchPostResponse
+
+Public POST search response.
+
+*SearchPostResponse fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| duration_ms | Yes | integer | End-to-end duration in milliseconds. | min: 0 |
+| request_id | Yes | string | Public request correlation identifier. |  |
+| results | Yes | ProjectedPageResult[] | Ranked projected results. |  |
+| select | Yes | SearchResultField[] | Echoed normalized projection. |  |
+
+### SearchRanking
+
+What the results should prioritize.
+
+```json
+[
+  "precision",
+  "balanced",
+  "authority",
+  "content_gap"
+]
+```
+
+### SearchResultField
+
+Public fields that may be selected in a search response.
+
+```json
+[
+  "url",
+  "title",
+  "description",
+  "anchor",
+  "site_name",
+  "author",
+  "language",
+  "domain",
+  "categories",
+  "location",
+  "page_type",
+  "publish_time",
+  "first_seen",
+  "url_rating",
+  "domain_rating",
+  "traffic",
+  "refdomains",
+  "domain_traffic",
+  "domain_refdomains",
+  "refclass_c",
+  "word_count",
+  "rule_type",
+  "document_intent",
+  "content_angle",
+  "republished",
+  "highlights"
+]
+```
+
+### SearchV1Error
+
+Search v1's original closed error envelope.
+
+*SearchV1Error fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | No | string \| null | Always absent for search; retained because runtime errors use one envelope. |  |
+| code | Yes | ErrorCode | Closed status category. |  |
+| message | Yes | string | Safe operator diagnostic. |  |
+| reason | Yes | SearchV1ErrorReason | Closed Search v1 reason. |  |
+| recovery | No | null \| ErrorRecovery |  |  |
+| validation | No | null \| ValidationReport |  |  |
+
+### SearchV1ErrorReason
+
+Closed failure-reason vocabulary retained for the published Search v1 contract.
+
+```json
+[
+  "malformed_request",
+  "authentication_required",
+  "permission_denied",
+  "api_key_name_invalid",
+  "spend_policy_invalid",
+  "rate_policy_invalid",
+  "resource_not_found",
+  "state_conflict",
+  "insufficient_funds",
+  "spend_limit_exceeded",
+  "rate_limit_exceeded",
+  "dependency_unavailable",
+  "internal_failure"
+]
+```
+
+### ValidationIssue
+
+One actionable, privacy-safe contract violation.
+
+*ValidationIssue fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| allowed_values | No | array \| null |  | max items: 16 |
+| code | Yes | string | Stable, extensible machine-readable category. | max length: 64 |
+| path | Yes | string | RFC 6901 pointer to the rejected location; empty means the root value. | max length: 1024 |
+| suggestion | Yes | string | Code-owned instruction for correcting the request. | max length: 512 |
+
+### ValidationReport
+
+Bounded validation feedback shared by model, REST, and MCP boundaries.
+
+*ValidationReport fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| contract | Yes | string | Stable contract name, normally the published schema component name. | max length: 128 |
+| issues | Yes | ValidationIssue[] | At most eight deterministic violations. Correct every issue before retrying. | max items: 8 |
+| truncated | Yes | boolean | Whether more violations were omitted; retry after correcting the listed issues. |  |
+
+---
+
+<!-- https://yep.com/en/docs/reference/search/post-search-ask/ -->
+
+# Search from a natural-language question
+
+Builds a typed search request with an optional allowlisted BYOK model or the catalog default, then executes it through the standard search path. A successful build and search are billed as one Agent API run and one Search API request.
+
+## POST /v1/search/ask
+
+## Request body
+
+JSON body: AskSearchRequest
+
+```curl
+curl --request POST "https://yep.com/api/v1/search/ask" \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --header "Content-Type: application/json" \
+  --data-binary @- <<'JSON'
+{
+  "question": "Which independent studies compare carbon border taxes in 2026?"
+}
+JSON
+```
+
+## Responses
+
+*Response statuses*
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Ranked projected search results | SearchPostResponse |
+| 400 | The question violated the public contract | PublicApiError |
+| 401 | A valid API key is required | PublicApiError |
+| 402 | Billing or a spend limit rejected a stage | PublicApiError |
+| 403 | The API key lacks agent or search permission | PublicApiError |
+| 409 | No stored provider key can run the selected model | PublicApiError |
+| 429 | A rate limit rejected a stage | PublicApiError |
+| 500 | The service could not safely complete the operation | PublicApiError |
+| 502 | The model or search service returned an invalid response | PublicApiError |
+| 503 | Inference or search is temporarily unavailable | PublicApiError |
+
+## Schemas
+
+### AgentModelRef
+
+One allowlisted inference provider and model identifier.
+
+*AgentModelRef fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| model | Yes | string | Provider-native model identifier. |  |
+| provider | Yes | ProviderKeyProvider | Closed provider discriminator. |  |
+
+### AskSearchRequest
+
+Natural-language search request compiled by the query builder before execution.
+
+*AskSearchRequest fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| model | No | null \| AgentModelRef |  |  |
+| question | Yes | string | Question or search goal to turn into a typed search request. | min length: 1; max length: 4096 |
+
+### ErrorCode
+
+Machine-readable product API failure.
+
+```json
+[
+  "unauthenticated",
+  "forbidden",
+  "invalid_request",
+  "not_found",
+  "conflict",
+  "payment_required",
+  "too_many_requests",
+  "upstream",
+  "internal"
+]
+```
+
+### ErrorRecovery
+
+Browser-safe recovery action selected by the authoritative product boundary.
+
+*ErrorRecovery alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | object |
+| 2 | object |
+| 3 | object |
+
+### PageResultFields
+
+Optional nullable projected fields. Each property is omitted when not selected, `null` when selected but unavailable, or carries its typed value.
+
+*PageResultFields fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| anchor | No | null \| string | Aggregated inbound anchor text. |  |
+| author | No | null \| string | Page author. |  |
+| categories | No | null \| object[] | Scored taxonomy categories. |  |
+| content_angle | No | null \| string | Classified content angle. |  |
+| description | No | null \| string | Result description. |  |
+| document_intent | No | null \| string | Classified document intent. |  |
+| domain | No | null \| string | Registrable or host domain. |  |
+| domain_rating | No | null \| number | Domain rating. |  |
+| domain_refdomains | No | null \| integer | Domain referring-domain count. |  |
+| domain_traffic | No | null \| integer | Estimated domain traffic. |  |
+| first_seen | No | null \| string | First-seen timestamp. |  |
+| highlights | No | null \| string[] | Up to three query-relevant passages. |  |
+| language | No | null \| string | Document language. |  |
+| location | No | null \| string | Geographic location code. |  |
+| page_type | No | null \| string | Page content type. |  |
+| publish_time | No | null \| string | Published timestamp. |  |
+| refclass_c | No | null \| integer | Refclass-C metric. |  |
+| refdomains | No | null \| integer | Referring-domain count. |  |
+| republished | No | null \| boolean | Whether the document was republished. |  |
+| rule_type | No | null \| string | Applied rule type. |  |
+| site_name | No | null \| string | Site display name. |  |
+| title | No | null \| string | Page title. |  |
+| traffic | No | null \| integer | Estimated URL traffic. |  |
+| url | No | null \| string | Canonical page URL. |  |
+| url_rating | No | null \| number | URL rating. |  |
+| word_count | No | null \| integer | Visible word count. |  |
+
+### ProjectedPageResult
+
+One ranked projected result.
+
+*ProjectedPageResult fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| fields | Yes | PageResultFields | Exactly the requested fields. |  |
+| rank | Yes | integer | One-based result rank. | min: 1 |
+
+### ProviderKeyProvider
+
+Closed provider set exposed to product clients.
+
+```json
+[
+  "openrouter"
+]
+```
+
+### PublicApiError
+
+Stable public error envelope for APIs whose reason vocabulary is extensible.
+
+*PublicApiError fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | No | string \| null | Agent execution correlation id, present after an invocation is admitted. |  |
+| code | Yes | ErrorCode | Closed status category suitable for program control flow. |  |
+| message | Yes | string | Safe diagnostic intended for operators, not program branching. |  |
+| reason | Yes | string | Extensible machine-readable detail; clients must accept unknown values. |  |
+| recovery | No | null \| ErrorRecovery |  |  |
+| validation | No | null \| ValidationReport |  |  |
+
+### SearchPostResponse
+
+Public POST search response.
+
+*SearchPostResponse fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| duration_ms | Yes | integer | End-to-end duration in milliseconds. | min: 0 |
+| request_id | Yes | string | Public request correlation identifier. |  |
+| results | Yes | ProjectedPageResult[] | Ranked projected results. |  |
+| select | Yes | SearchResultField[] | Echoed normalized projection. |  |
+
+### SearchResultField
+
+Public fields that may be selected in a search response.
+
+```json
+[
+  "url",
+  "title",
+  "description",
+  "anchor",
+  "site_name",
+  "author",
+  "language",
+  "domain",
+  "categories",
+  "location",
+  "page_type",
+  "publish_time",
+  "first_seen",
+  "url_rating",
+  "domain_rating",
+  "traffic",
+  "refdomains",
+  "domain_traffic",
+  "domain_refdomains",
+  "refclass_c",
+  "word_count",
+  "rule_type",
+  "document_intent",
+  "content_angle",
+  "republished",
+  "highlights"
+]
+```
+
+### ValidationIssue
+
+One actionable, privacy-safe contract violation.
+
+*ValidationIssue fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| allowed_values | No | array \| null |  | max items: 16 |
+| code | Yes | string | Stable, extensible machine-readable category. | max length: 64 |
+| path | Yes | string | RFC 6901 pointer to the rejected location; empty means the root value. | max length: 1024 |
+| suggestion | Yes | string | Code-owned instruction for correcting the request. | max length: 512 |
+
+### ValidationReport
+
+Bounded validation feedback shared by model, REST, and MCP boundaries.
+
+*ValidationReport fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| contract | Yes | string | Stable contract name, normally the published schema component name. | max length: 128 |
+| issues | Yes | ValidationIssue[] | At most eight deterministic violations. Correct every issue before retrying. | max items: 8 |
+| truncated | Yes | boolean | Whether more violations were omitted; retry after correcting the listed issues. |  |
+
+---
+
+<!-- https://yep.com/en/docs/reference/search/post-search-domains/ -->
+
+# Find domains with typed filters and result projection
+
+Returns ranked domains using the same filter and projection language as page search.
+
+## POST /v1/search/domains
+
+## Request body
+
+JSON body: DomainSearchPostRequest
+
+```curl
+curl --request POST "https://yep.com/api/v1/search/domains" \
+  --header "Authorization: Bearer $YEP_API_KEY" \
+  --header "Content-Type: application/json" \
+  --data-binary @- <<'JSON'
+{
+  "query": "independent climate policy research",
+  "limit": 10,
+  "select": [
+    "domain",
+    "domain_traffic"
+  ],
+  "filter": "@domain_traffic >= 1000"
+}
+JSON
+```
+
+## Responses
+
+*Response statuses*
+
+| Status | Description | Body |
+| --- | --- | --- |
+| 200 | Ranked projected domain results | DomainSearchPostResponse |
+| 400 | The request violated the public contract | SearchV1Error |
+| 401 | A valid API key is required | SearchV1Error |
+| 402 | Billing or a spend limit rejected execution | SearchV1Error |
+| 403 | The API key lacks search permission | SearchV1Error |
+| 429 | A rate limit rejected execution | SearchV1Error |
+| 502 | The search request could not be completed | SearchV1Error |
+| 503 | Search is temporarily unavailable | SearchV1Error |
+
+## Schemas
+
+### DomainResultFields
+
+Typed fields returned by domain search. Properties are omitted when not selected.
+
+*DomainResultFields fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| domain | No | string | Registrable domain. |  |
+| domain_traffic | No | null \| ProjectedValue_u64 |  |  |
+
+### DomainSearchPostRequest
+
+Public domain-search request. It deliberately reuses the page search
+filter and projection vocabularies; the domain view limits both to
+`domain` and `domain_traffic`.
+
+*DomainSearchPostRequest fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| filter | No | string \| null | Optional eligibility filter in the public filter language. | min length: 1; max length: 65536 |
+| limit | No | integer \| null | Maximum result count; defaults to 20 and is capped at 100. | min: 1; max: 100 |
+| query | Yes | string | Non-empty search text. | min length: 1; max length: 512 |
+| select | Yes | SearchResultField[] | Required non-empty response projection. | min items: 1 |
+
+### DomainSearchPostResponse
+
+Public domain-search response.
+
+*DomainSearchPostResponse fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| duration_ms | Yes | integer | End-to-end duration in milliseconds. | min: 0 |
+| request_id | Yes | string | Public request correlation identifier. |  |
+| results | Yes | ProjectedDomainResult[] | Ranked projected domains. |  |
+| select | Yes | SearchResultField[] | Echoed normalized projection. |  |
+
+### ErrorCode
+
+Machine-readable product API failure.
+
+```json
+[
+  "unauthenticated",
+  "forbidden",
+  "invalid_request",
+  "not_found",
+  "conflict",
+  "payment_required",
+  "too_many_requests",
+  "upstream",
+  "internal"
+]
+```
+
+### ErrorRecovery
+
+Browser-safe recovery action selected by the authoritative product boundary.
+
+*ErrorRecovery alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | object |
+| 2 | object |
+| 3 | object |
+
+### ProjectedDomainResult
+
+One ranked projected domain result.
+
+*ProjectedDomainResult fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| fields | Yes | DomainResultFields | Exactly the requested fields. |  |
+| rank | Yes | integer | One-based result rank. | min: 1 |
+
+### ProjectedValue_u64
+
+*ProjectedValue_u64 alternatives*
+
+| Variant | Type |
+| --- | --- |
+| 1 | null |
+| 2 | integer |
+
+### SearchResultField
+
+Public fields that may be selected in a search response.
+
+```json
+[
+  "url",
+  "title",
+  "description",
+  "anchor",
+  "site_name",
+  "author",
+  "language",
+  "domain",
+  "categories",
+  "location",
+  "page_type",
+  "publish_time",
+  "first_seen",
+  "url_rating",
+  "domain_rating",
+  "traffic",
+  "refdomains",
+  "domain_traffic",
+  "domain_refdomains",
+  "refclass_c",
+  "word_count",
+  "rule_type",
+  "document_intent",
+  "content_angle",
+  "republished",
+  "highlights"
+]
+```
+
+### SearchV1Error
+
+Search v1's original closed error envelope.
+
+*SearchV1Error fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| agent_session_id | No | string \| null | Always absent for search; retained because runtime errors use one envelope. |  |
+| code | Yes | ErrorCode | Closed status category. |  |
+| message | Yes | string | Safe operator diagnostic. |  |
+| reason | Yes | SearchV1ErrorReason | Closed Search v1 reason. |  |
+| recovery | No | null \| ErrorRecovery |  |  |
+| validation | No | null \| ValidationReport |  |  |
+
+### SearchV1ErrorReason
+
+Closed failure-reason vocabulary retained for the published Search v1 contract.
+
+```json
+[
+  "malformed_request",
+  "authentication_required",
+  "permission_denied",
+  "api_key_name_invalid",
+  "spend_policy_invalid",
+  "rate_policy_invalid",
+  "resource_not_found",
+  "state_conflict",
+  "insufficient_funds",
+  "spend_limit_exceeded",
+  "rate_limit_exceeded",
+  "dependency_unavailable",
+  "internal_failure"
+]
+```
+
+### ValidationIssue
+
+One actionable, privacy-safe contract violation.
+
+*ValidationIssue fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| allowed_values | No | array \| null |  | max items: 16 |
+| code | Yes | string | Stable, extensible machine-readable category. | max length: 64 |
+| path | Yes | string | RFC 6901 pointer to the rejected location; empty means the root value. | max length: 1024 |
+| suggestion | Yes | string | Code-owned instruction for correcting the request. | max length: 512 |
+
+### ValidationReport
+
+Bounded validation feedback shared by model, REST, and MCP boundaries.
+
+*ValidationReport fields*
+
+| Field | Required | Type | Description | Constraints |
+| --- | --- | --- | --- | --- |
+| contract | Yes | string | Stable contract name, normally the published schema component name. | max length: 128 |
+| issues | Yes | ValidationIssue[] | At most eight deterministic violations. Correct every issue before retrying. | max items: 8 |
+| truncated | Yes | boolean | Whether more violations were omitted; retry after correcting the listed issues. |  |

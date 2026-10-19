@@ -1,0 +1,207 @@
+Home - Crawl4AI Documentation (v0.9.x) 
+ Crawl4AI Documentation (v0.9.x) 
+ Home 
+ Growth 
+ Ask AI 
+ Quick Start 
+ Code Examples 
+ Brand Book 
+ Search 
+ New good news for everyone who runs Crawl4AI 
+ Crawl4AI Cloud is live. The same crawler, hosted. 
+ No browsers to run, no proxies to buy, no cookies to babysit. One key with free credits every month , and your AI agent can scrape, extract, search, read Google's results page (SERP) and answer questions through the same engine you already use. Free: 10 a minute, 2 at a time, 1,000 credits every month. Plans: 120 a minute, 10 at a time, from $10 a month. 
+ Always open source, forever. The library stays here and stays free. The cloud is for the days you want to build fast and let us run the infrastructure. 
+ Get a key, free credits every month → 
+ See Crawl4AI Cloud 
+ no card free credit to start · soft launch: prices can change, what you buy stays yours EU · Singapore · US MCP built in 
+ Claude Code 
+ Codex 
+ OpenCode 
+ Cursor 
+ curl 
+ Paste it once. Your agent gets the whole web. cloud docs → 
+ × 
+ don't show this again 
+ ★ 
+ Crawl4AI Cloud is live — the same crawler, hosted. Get a key with free credits every month and paste one line into your agent. 
+ Get a key → 
+ show 
+ Home 
+ Growth 
+ Ask AI 
+ Quick Start 
+ Code Examples 
+ Apps 
+ Demo Apps 
+ C4A-Script Editor 
+ LLM Context Builder 
+ Marketplace 
+ Marketplace Admin 
+ Setup & Installation 
+ Installation 
+ Self-Hosting Guide 
+ Blog & Changelog 
+ Blog Home 
+ Changelog 
+ Core 
+ Command Line Interface 
+ Simple Crawling 
+ Deep Crawling 
+ Adaptive Crawling 
+ URL Seeding 
+ Domain Mapping 
+ C4A-Script 
+ Crawler Result 
+ Browser, Crawler & LLM Config 
+ Markdown Generation 
+ Fit Markdown 
+ Page Interaction 
+ Content Selection 
+ Cache Modes 
+ Local Files & Raw HTML 
+ Link & Media 
+ Advanced 
+ Overview 
+ Adaptive Strategies 
+ Virtual Scroll 
+ File Downloading 
+ Lazy Loading 
+ Hooks & Auth 
+ Proxy & Security 
+ Anti-Bot & Fallback 
+ Undetected Browser 
+ Session Management 
+ Multi-URL Crawling 
+ Crawl Dispatcher 
+ Identity Based Crawling 
+ SSL Certificate 
+ Network & Console Capture 
+ PDF Parsing 
+ Extraction 
+ LLM-Free Strategies 
+ LLM Strategies 
+ Clustering Strategies 
+ Chunking 
+ API Reference 
+ AsyncWebCrawler 
+ arun() 
+ arun_many() 
+ Browser, Crawler & LLM Config 
+ CrawlResult 
+ Strategies 
+ C4A-Script Reference 
+ Brand Book 
+ Community 
+ Contributing Guide 
+ Code of Conduct 
+ Contributors 
+ Legal 
+ Privacy Policy 
+ Terms of Service 
+ Support 
+ 🚀🤖 Crawl4AI: the open-source web crawler for LLMs and AI agents 
+ Two ways to use Crawl4AI 🆕 AI Assistant Skill Now Available! 🎯 New: Adaptive Web Crawling Video Tutorial What Does Crawl4AI Do? Documentation Structure How You Can Support Quick Links 
+ 🚀🤖 Crawl4AI: the open-source web crawler for LLMs and AI agents 
+ Crawl4AI turns any website into clean, LLM-ready Markdown for RAG, AI agents and data pipelines. Run the open-source web crawler and scraper yourself, free forever, or use it hosted with one key: /scrape a page to Markdown, /extract it to JSON, /search the web, /serp for Google's results page as data, /answer a question with sources; MCP for your agent. Free: 10 a minute, 2 at a time, 1,000 credits every month. Plans: 120 a minute, 10 at a time, from $10 a month. 
+ Two ways to use Crawl4AI 
+ 🐍 Run it yourself: open source, forever 
+ pip install -U crawl4ai
+ crawl4ai-setup # installs the browser, once 
+ import asyncio 
+ from crawl4ai import AsyncWebCrawler 
+ async def main (): 
+ async with AsyncWebCrawler () as crawler : 
+ result = await crawler . arun ( url = "https://news.ycombinator.com" ) 
+ print ( result . markdown ) 
+ asyncio . run ( main ()) 
+ Docker server, CLI and every option: Installation · Self-hosting 
+ ☁️ Or use the cloud: no browsers, no proxies 
+ Verify your email and 1,000 free credits are yours every month. No card. Soft launch: prices can change, what you buy stays yours. 
+ Get any page as Markdown: 
+ curl -s https://api.crawl4ai.com/scrape \ 
+ -H "Authorization: Bearer $CRAWL4AI_KEY " \ 
+ -H "Content-Type: application/json" \ 
+ -d '{"url": "https://news.ycombinator.com"}' | jq -r .markdown
+ The same key works for /extract , /search , /serp , /answer and many URLs at once ( /scrape/batch , /scrape/jobs ). Pay as you go: live prices .
+3. Give it to your AI agent. Claude Code shown; Codex, Cursor and OpenCode → 
+ claude mcp add --transport http crawl4ai https://api.crawl4ai.com/mcp \ 
+ --header "Authorization: Bearer $CRAWL4AI_KEY " 
+ Which one? 
+ 🐍 Library 
+ 🐳 Your own server 
+ ☁️ Crawl4AI Cloud 
+ Runs the browsers 
+ you, in your Python process 
+ you, in Docker on your machine 
+ we do 
+ JS-heavy pages and bot walls 
+ your settings, your proxies 
+ your settings, your proxies 
+ handled for you, automatically 
+ Web search 
+ – 
+ – 
+ /search , /serp and /answer 
+ Price 
+ free, forever 
+ free (your hosting) 
+ 1,000 free credits every month; plans from $10 a month 
+ 🆕 AI Assistant Skill Now Available! 
+ 🤖 Crawl4AI Skill for Claude & AI Assistants 
+ Supercharge your AI coding assistant with complete Crawl4AI knowledge! Download our comprehensive skill package that includes: 
+ 📚 Complete SDK reference (23K+ words) 
+ 🚀 Ready-to-use extraction scripts 
+ ⚡ Schema generation for efficient scraping 
+ 🔧 Version 0.7.4 compatible 
+ 📦 Download Skill Package
+ Works with Claude, Cursor, Windsurf, and other AI coding assistants. Import the .zip file into your AI assistant's skill/knowledge system.
+ 🎯 New: Adaptive Web Crawling 
+ Crawl4AI now features intelligent adaptive crawling that knows when to stop! Using advanced information foraging algorithms, it determines when sufficient information has been gathered to answer your query. 
+ Learn more about Adaptive Crawling → 
+ Video Tutorial 
+ What Does Crawl4AI Do? 
+ Crawl4AI is a feature-rich crawler and scraper that aims to: 
+ 1.  Generate Clean Markdown : Perfect for RAG pipelines or direct ingestion into LLMs. 
+2.  Structured Extraction : Parse repeated patterns with CSS, XPath, or LLM-based extraction. 
+3.  Advanced Browser Control : Hooks, proxies, stealth modes, session re-use—fine-grained control. 
+4.  High Performance : Parallel crawling, chunk-based extraction, real-time use cases. 
+5.  Open Source : No forced API keys, no paywalls—everyone can access their data. 
+ Core Philosophies :
+- Democratize Data : Free to use, transparent, and highly configurable. 
+- LLM Friendly : Minimally processed, well-structured text, images, and metadata, so AI models can easily consume it. 
+ Documentation Structure 
+ To help you get started, we’ve organized our docs into clear sections: 
+ Setup & Installation 
+ Basic instructions to install Crawl4AI via pip or Docker. 
+ Quick Start 
+ A hands-on introduction showing how to do your first crawl, generate Markdown, and do a simple extraction. 
+ Core 
+ Deeper guides on single-page crawling, advanced browser/crawler parameters, content filtering, and caching. 
+ Advanced 
+ Explore link & media handling, lazy loading, hooking & authentication, proxies, session management, and more. 
+ Extraction 
+ Detailed references for no-LLM (CSS, XPath) vs. LLM-based strategies, chunking, and clustering approaches. 
+ API Reference 
+ Find the technical specifics of each class and method, including AsyncWebCrawler , arun() , and CrawlResult . 
+ Throughout these sections, you’ll find code samples you can copy-paste into your environment. If something is missing or unclear, raise an issue or PR. 
+ How You Can Support 
+ Star & Fork : If you find Crawl4AI helpful, star the repo on GitHub or fork it to add your own features. 
+ File Issues : Encounter a bug or missing feature? Let us know by filing an issue, so we can improve. 
+ Pull Requests : Whether it’s a small fix, a big feature, or better docs—contributions are always welcome. 
+ Join Discord : Come chat about web scraping, crawling tips, or AI workflows with the community. 
+ Spread the Word : Mention Crawl4AI in your blog posts, talks, or on social media. 
+ Our mission : to empower everyone—students, researchers, entrepreneurs, data scientists—to access, parse, and shape the world’s data with speed, cost-efficiency, and creative freedom. 
+ Quick Links 
+ GitHub Repo 
+ Installation Guide 
+ Quick Start 
+ API Reference 
+ Changelog 
+ Thank you for joining me on this journey. Let’s keep building an open, democratic approach to data extraction and AI together. 
+ Happy Crawling! 
+— Unclecode, Founder & Maintainer of Crawl4AI 
+ >
+ Feedback
+ Search 
+ x Close 
+ Type to start searching

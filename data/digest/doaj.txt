@@ -1,0 +1,4 @@
+# DOAJ API (doaj) category=academic
+home=https://doaj.org/api/docs pricing=None docs=https://doaj.org/api/docs llms=None
+sources_ok: docs:https://doaj.org/api/docs
+--- ranked fact lines ---

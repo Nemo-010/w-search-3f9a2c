@@ -1,0 +1,15 @@
+> For clean Markdown of any page, append `.md` to the page URL.
+> Documentation index: https://you.com/docs/llms.txt (section indexes: append `/llms.txt` to any section URL).
+> Search these docs: Docs MCP at https://you.com/docs/_mcp/server (`searchDocs`, no API key).
+> Call live You.com APIs: Product MCP at https://api.you.com/mcp (keyless `?profile=free` exposes `you-search` and `you-discover`. Research and finance use `/mcp/research`, `/mcp/finance`, or `?tools=` on `/mcp`). To pick an API or integration path, call `you-discover` on that server instead of guessing.
+> OpenAPI: https://you.com/docs/openapi.json—auth header `X-API-Key`, env `YDC_API_KEY`.
+
+# Build agentic apps with real-time web intelligence.
+
+#### Connect Your Agent
+
+#### Five APIs, One Platform
+
+#### Use With The Best Tools and Frameworks
+
+#### What Developers Are Building With You.com

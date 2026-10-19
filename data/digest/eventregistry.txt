@@ -1,0 +1,57 @@
+# Event Registry (eventregistry) category=news
+home=https://eventregistry.org/ pricing=https://eventregistry.org/pricing docs=https://eventregistry.org/documentation llms=None
+sources_ok: docs:https://eventregistry.org/documentation, home:https://eventregistry.org/, llms:https://eventregistry.org/llms.txt, llms-full:https://eventregistry.org/llms-full.txt
+--- ranked fact lines ---
+[llms] - Authentication: every request carries an `apiKey` parameter. Registration at https://newsapi.ai/register is free and includes 2,000 tokens (no credit card); the key is shown on https://newsapi.ai/dashboard.
+[llms] - [Plans](https://newsapi.ai/plans): monthly token plans; free tier of 2,000 tokens on registration
+[llms-full] 1. Register for free at https://newsapi.ai/register (2,000 tokens, no credit card) and copy the API key from https://newsapi.ai/dashboard.
+[llms-full] - Pricing: token-based monthly plans at https://newsapi.ai/plans; free tier of 2,000 tokens on registration. Use cases: media monitoring, risk monitoring, market and geopolitical intelligence, news aggregation, data mining.
+[llms-full] - Register for free at https://newsapi.ai/register; after you log in, your API key is shown on https://newsapi.ai/dashboard. A free account gets **2,000 tokens** in total for testing. A paid plan is required to use more.
+[llms-full] - A search call counts as one search action no matter how many results it returns (up to 100 articles or 50 events per call).
+[llms-full] | getArticle | – (up to 100 `articleUri` values per call) | – | – |
+[llms-full] - Returns the article list (up to 100 per call; page with `articlesPage`) or an aggregate.
+[llms-full] - Returns full details for one or more article URIs (up to 100 per call).
+[llms-full] - Returns the event list (up to 50 per call; page with `eventsPage`) or an aggregate.
+[llms-full] - Returns the list (up to 100 per call; page with `mentionsPage`) or an aggregate.
+[home] START A FREE TRIAL
+[home] START MY FREE TRIAL
+[llms] - Costs: searching recent data (last 30 days) costs 1 token per article search and 5 per event search; searching the archive costs 5 / 20 tokens per searched year. A search returns at most 100 articles or 50 events per page.
+[llms] - Limits: at most 5 simultaneous requests per user (HTTP 429 otherwise); make requests sequentially. HTTP 401/403 mean the token limit was reached or the key/IP is disabled.
+[llms] - [Free news API](https://newsapi.ai/free-news-api): what the free tier includes
+[llms-full] # allowUseOfArchive=False keeps queries without dates to the last 30 days (cheapest token tier)
+[llms-full] - Keep searches in the cheap "recent" tier (last 30 days) with `forceMaxDataTimeWindow` (7 or 31) or a `dateStart`/`dateEnd` within the last 30 days; each searched archive year costs more tokens (see §1.7).
+[llms-full] | 401 | User's token limit reached; requests are rejected |
+[llms-full] | 403 | Forbidden: the IP or account is disabled, or all tokens have been used (see the error message) |
+[llms-full] ### 1.7 Token usage
+[llms-full] | Search articles | 1 token | 5 tokens / searched year |
+[llms-full] | Search events | 5 tokens | 20 tokens / searched year |
+[llms-full] | Simple aggregates (top concepts, tag cloud, locations, timeline, sources, sentiment, concept graph, categories) | 5 tokens | 10 tokens / searched year |
+[llms-full] | Complex aggregates (concept trends, date mentions, event clustering, similar events) | 10 tokens | 50 tokens / searched year |
+[llms-full] - `minuteStreamArticles` uses one token per started 100 articles. For example, 250 articles cost 3 tokens.
+[llms-full] - `minuteStreamEvents` uses 5 tokens per 50 events. For example, 200 events cost 4×5 tokens.
+[llms-full] - It limits the search to the last 7 or 31 days without setting `dateStart`/`dateEnd`, which ensures the smallest token use.
+[llms-full] | `simple` | Google-like relevance search: not all terms are required; more matches rank higher | Long free-text topic descriptions. Combine with `articlesSortBy: "rel"` |
+[llms-full] - It is the only call that can return more than 100 articles (up to 2,000). It uses 1 token per started 100 returned articles.
+[llms-full] | `recentActivityArticlesMaxArticleCount` | int | 100 | Max articles to return (≤ 2000). Tokens scale per 100 |
+[llms-full] - It is the only event call that can return more than 50 events (up to 2,000). It costs 5 tokens per 50 events.
+[llms-full] | `recentActivityEventsMaxEventCount` | int | 50 | Max events (≤ 2000). Tokens scale per 50 |
+[llms-full] - **Purpose**: returns the tokens available in your plan and the tokens already used this month.
+--- llms/readme head ---
+# NewsAPI.ai
+> NewsAPI.ai is the news API of Event Registry: real-time and archive (since 2014) access to news, blog and press-release articles from 150,000+ publishers in 50+ languages. Every article is enriched with entities (concepts linked to Wikipedia), categories, sentiment, locations and duplicate information; related articles are clustered into events, and Signal Types classify 136+ kinds of real-world developments (mergers, layoffs, protests, wildfires, ...) at the sentence level. Access is via a REST API (JSON over GET or POST), Python and Node.js SDKs, and an MCP server.
+Key facts for using the API:
+- Authentication: every request carries an `apiKey` parameter. Registration at https://newsapi.ai/register is free and includes 2,000 tokens (no credit card); the key is shown on https://newsapi.ai/dashboard.
+- Base URL: `https://eventregistry.org/api/v1/...` (the same paths also work on `https://newsapi.ai`). Text-analytics endpoints live on `https://analytics.eventregistry.org/api/v1/...`. Send `POST` requests with a JSON body (`Content-Type: application/json`); `GET` with query parameters also works for simple calls.
+- Most-used endpoints: `/api/v1/article/getArticles` (search articles), `/api/v1/event/getEvents` (search events), `/api/v1/suggestConceptsFast` (turn a name into a concept URI). Prefer concept URIs (e.g. `http://en.wikipedia.org/wiki/Tesla,_Inc.`) over keywords: they match an entity in every language.
+- Costs: searching recent data (last 30 days) costs 1 token per article search and 5 per event search; searching the archive costs 5 / 20 tokens per searched year. A search returns at most 100 articles or 50 events per page.
+- Limits: at most 5 simultaneous requests per user (HTTP 429 otherwise); make requests sequentially. HTTP 401/403 mean the token limit was reached or the key/IP is disabled.
+- Complex boolean queries use the `query` parameter with a MongoDB-like JSON (`$query` with `$and` / `$or` / `$not`, plus an optional `$filter`); it cannot be combined with the simple `keyword`, `conceptUri`, ... parameters in the same request.
+## Docs
+- [Full documentation for LLMs](https://newsapi.ai/llms-full.txt): this index plus the complete endpoint reference, query language and data models in one Markdown file
+- [Documentation introduction](https://newsapi.ai/documentation?tab=introduction): API keys, response codes, rate limits, query-condition limits, token costs, SDKs
+- [Terminology](https://newsapi.ai/documentation?tab=terminology): articles, events, concepts, categories (IPTC, DMOZ, News taxonomies), sources, locations
+- [Search query language](https://newsapi.ai/documentation?tab=query_language): simple parameters vs. the advanced JSON query language with `$and` / `$or` / `$not` and `$filter`
+- [Keyword search modes](https://newsapi.ai/documentation?tab=keyword_search_options): `phrase` (default), `exact` (Boolean AND/OR/NOT, NEAR/x, NEXT/x) and `simple` (relevance-based) matching
+- [Data models](https://newsapi.ai/documentation?tab=data_models): fields of the returned article, event, concept, category, source and location objects
+- [Supported languages](https://newsapi.ai/documentation?tab=supported_languages): ISO 639-3 codes for the `lang` parameter (eng, deu, fra, spa, zho, ...)
+- [OpenAPI specification](https://newsapi.ai/static/api.yaml): YAML description of the REST endpoints

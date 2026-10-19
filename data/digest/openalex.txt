@@ -1,0 +1,33 @@
+# OpenAlex (openalex) category=academic
+home=https://openalex.org/ pricing=None docs=https://docs.openalex.org/ llms=None
+sources_ok: docs:https://docs.openalex.org/, home:https://openalex.org/, llms:https://docs.openalex.org/llms.txt
+--- ranked fact lines ---
+[llms] - [Overview](https://help.openalex.org/access/pricing/): How OpenAlex pricing works: $1 of free API usage every day, pay-as-you-go prepaid usage, and annual plans (Member, Member+, Partner) — plus the PDF sync add-on and the free-data, paid-services sustainability model. ([markdown](https://help.openalex.org/access/pricing.md))
+[llms] and the key works ($1 a day) once they click it. Details: [Authentication](https://help.openalex.org/api/authentication/#getting-a-key-for-your-user)
+[llms] - [Member](https://help.openalex.org/access/member/): The Member plan ($5,000/year): a $20/day API budget, the admin dashboard, community representation, and — for academic and government institutions — the affiliation editor and Unsub access. ([markdown](https://help.openalex.org/access/member.md))
+[llms] - [Member+](https://help.openalex.org/access/member-plus/): The Member+ plan ($10,000/year): everything in Member, plus a $100/day API budget, basic support, and daily sync of the full database. ([markdown](https://help.openalex.org/access/member-plus.md))
+[llms] - [Partner](https://help.openalex.org/access/partner/): The Partner plan (from $20,000/year): everything in Member+, plus a $200+/day API budget, full support, and — for academic and government institutions — power-user accounts and annual consulting hours. ([markdown](https://help.openalex.org/access/partner.md))
+[llms] No API key? An AI agent can get a free one for its user in one call (ask the user for their email; never invent one):
+[llms] https://api.openalex.org/works/W2741809807 (single-record lookups are free), and one call can fetch
+[llms] - [AI agent connector](https://help.openalex.org/access/connector/): The free OpenAlex connector for Claude (ChatGPT coming soon): ask about the literature in plain language, get the exact query behind every answer, and fix your own author profile in conversation. ([markdown](https://help.openalex.org/access/connector.md))
+[llms] - [Example costs](https://help.openalex.org/access/example-costs/): What OpenAlex API operations cost, what your free daily budget buys, and the price of some common activities. ([markdown](https://help.openalex.org/access/example-costs.md))
+[llms] - [Snapshot](https://help.openalex.org/access/snapshot/): The complete OpenAlex database as downloadable files — formats, S3 bucket layout, manifests, size, how it differs from the API, and how to access it (free public bucket + paid daily snapshot). ([markdown](https://help.openalex.org/access/snapshot.md))
+--- llms/readme head ---
+# OpenAlex Help
+> Unified help, documentation, API reference, and tutorials for OpenAlex,
+> the open catalog of the global research system.
+Every page on this site has a raw-markdown sibling: append `.md` to its path.
+New here? Start with the [Quickstart](https://help.openalex.org/quickstart/): get real data out of
+OpenAlex in five minutes ([markdown](https://help.openalex.org/quickstart.md)).
+No API key? An AI agent can get a free one for its user in one call (ask the user for their email; never invent one):
+`POST https://api.openalex.org/api-keys` with `{"email": "<your user's email>"}`. We email the user a link,
+and the key works ($1 a day) once they click it. Details: [Authentication](https://help.openalex.org/api/authentication/#getting-a-key-for-your-user)
+and [auth.md](https://help.openalex.org/auth.md).
+Record pages on openalex.org are open to agents and scripts. Every OpenAlex ID is a URL
+(https://openalex.org/W2741809807) that returns the record as server-rendered HTML with schema.org
+JSON-LD, or as Markdown when you send `Accept: text/markdown`. Search and list pages on openalex.org
+are not served to scripts. The API has more data and is faster: the same record is
+https://api.openalex.org/works/W2741809807 (single-record lookups are free), and one call can fetch
+100 records by ID, or filter, search, group and page. Details: [Reading openalex.org pages](https://help.openalex.org/access/agents/#reading-openalexorg-pages).
+Field and vocabulary semantics (what each entity is, where its records come from,
+what every attribute means, controlled-vocabulary definitions) are canonical under

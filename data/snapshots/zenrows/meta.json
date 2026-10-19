@@ -1,0 +1,84 @@
+{
+ "slug": "zenrows",
+ "name": "ZenRows",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:09+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.zenrows.com/pricing",
+   "status": 200,
+   "final_url": "https://www.zenrows.com/pricing",
+   "content_type": "text/html",
+   "bytes": 114326,
+   "truncated": false,
+   "sha256": "3bd71618e0f5c4f86bf8907c3de04da69cb1d619627bd3c8f46e4b10bfe60bd3",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 13028
+  },
+  "docs": {
+   "url": "https://docs.zenrows.com/",
+   "status": 200,
+   "final_url": "https://docs.zenrows.com/first-steps/welcome",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 687634,
+   "truncated": false,
+   "sha256": "981966a8891b633381063d31504a554576371542fe8e21b5ff06d1cce34018f2",
+   "fetched_at": "2026-10-19T05:54:10+00:00",
+   "text_bytes": 5876
+  },
+  "home": {
+   "url": "https://www.zenrows.com/",
+   "status": 200,
+   "final_url": "https://www.zenrows.com/",
+   "content_type": "text/html",
+   "bytes": 146370,
+   "truncated": false,
+   "sha256": "c01af9f24e22ccdc51963de153a0033f5d2ebf8f63b7d5374c6ec9bf4cb195d0",
+   "fetched_at": "2026-10-19T05:54:12+00:00",
+   "text_bytes": 12125
+  },
+  "llms": {
+   "url": "https://docs.zenrows.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.zenrows.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 25503,
+   "truncated": false,
+   "sha256": "fd100148170f4ca87fa80e3333d54d157f67e6b860c742cc1dd2026a6bbda363",
+   "fetched_at": "2026-10-19T05:54:12+00:00",
+   "text_bytes": 25503
+  },
+  "llms-full": {
+   "url": "https://www.zenrows.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.zenrows.com/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 1325364,
+   "truncated": false,
+   "sha256": "1f51b141b33e49d6252398dcb94d582e1760a3dea0ed8a158a3fb16ff7289db1",
+   "fetched_at": "2026-10-19T05:54:15+00:00",
+   "text_bytes": 1323619
+  },
+  "llms-https://www.zenrows.com/llms.txt": {
+   "url": "https://www.zenrows.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.zenrows.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 21390,
+   "truncated": false,
+   "sha256": "ca7e1b7fdbda49bd5b1094ae2c91d9789647d11c8fd55d6096c70e980fff747d",
+   "fetched_at": "2026-10-19T05:54:14+00:00",
+   "text_bytes": 21390
+  },
+  "llms-err-cdcf69": {
+   "url": "https://www.zenrows.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.zenrows.com/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 72173,
+   "truncated": false,
+   "sha256": "19a6c793846220381c384d86359b4b73bbd4db60219f0dfc985dd829a833c45e",
+   "fetched_at": "2026-10-19T05:54:16+00:00"
+  }
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "slug": "dbpedia",
+ "name": "DBpedia",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:47+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://dbpedia.org/sparql",
+   "status": 200,
+   "final_url": "https://dbpedia.org/sparql",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 16818,
+   "truncated": false,
+   "sha256": "d71ed0c672aa6a5515bd7c4873d1857425fd77230a1a7e7f8aebc603b7339b42",
+   "fetched_at": "2026-10-19T05:54:47+00:00",
+   "text_bytes": 1130
+  },
+  "home": {
+   "url": "https://www.dbpedia.org/",
+   "status": 200,
+   "final_url": "https://www.dbpedia.org/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 116528,
+   "truncated": false,
+   "sha256": "3029c45826629cfec801160dce80f4944a07e5a21165653ef3ced68483476d1e",
+   "fetched_at": "2026-10-19T05:55:13+00:00",
+   "text_bytes": 9437
+  },
+  "llms-err-83a053": {
+   "url": "https://dbpedia.org/sparql/llms.txt",
+   "status": 502,
+   "final_url": "https://dbpedia.org/sparql/llms.txt",
+   "content_type": "text/html",
+   "bytes": 1903,
+   "truncated": false,
+   "sha256": "e9bc7f9246b0f3c9400fb24448ed37b0bbe60293e250a17bdd9be53d62395ece",
+   "fetched_at": "2026-10-19T05:55:14+00:00"
+  },
+  "llms": {
+   "url": "https://www.dbpedia.org/llms.txt",
+   "status": 200,
+   "final_url": "https://www.dbpedia.org/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 116504,
+   "truncated": false,
+   "sha256": "ac05f61a4091301c41dfdec49f6abe913d60436deb991d0bde013b477bb1d559",
+   "fetched_at": "2026-10-19T05:55:25+00:00",
+   "text_bytes": 9437
+  },
+  "llms-full": {
+   "url": "https://www.dbpedia.org/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.dbpedia.org/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 116494,
+   "truncated": false,
+   "sha256": "f610aa2db71703b0bd6ac6de6f47291f886d4cbb953687f8daddda985e7be254",
+   "fetched_at": "2026-10-19T05:55:31+00:00",
+   "text_bytes": 9437
+  },
+  "llms-https://www.dbpedia.org/docs/llms.txt": {
+   "url": "https://www.dbpedia.org/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.dbpedia.org/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 116519,
+   "truncated": false,
+   "sha256": "4b26f8c71aeb57cc161b0aabf8882ed01415f9c913f8a8f6a5993df6ba7894cd",
+   "fetched_at": "2026-10-19T05:55:29+00:00",
+   "text_bytes": 9437
+  },
+  "llms-err-d168ab": {
+   "url": "https://docs.dbpedia.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.dbpedia.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:55:33+00:00"
+  }
+ }
+}

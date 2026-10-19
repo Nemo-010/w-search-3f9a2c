@@ -1,0 +1,73 @@
+{
+ "slug": "tinyfish",
+ "name": "TinyFish",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:03+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://docs.tinyfish.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.tinyfish.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 16785,
+   "truncated": false,
+   "sha256": "0c70d0c067fc9b7ba27bab062a9c8b841503e2205c32b4dace43d5294c94bd03",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 16777
+  },
+  "llms-full": {
+   "url": "https://docs.tinyfish.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.tinyfish.ai/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 480623,
+   "truncated": false,
+   "sha256": "bc0c0057373f0c2645c16606ce26f3f78f6f90e4d934c19cf46fedb189e6d857",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 479737
+  },
+  "docs": {
+   "url": "https://docs.tinyfish.ai/",
+   "status": 200,
+   "final_url": "https://docs.tinyfish.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 309558,
+   "truncated": false,
+   "sha256": "1d18c2dc0091ed4badb8b071bfa4ce605ebf05272be78bb5682b18b7e7ea9904",
+   "fetched_at": "2026-10-19T05:54:05+00:00",
+   "text_bytes": 3175
+  },
+  "home": {
+   "url": "https://www.tinyfish.ai/",
+   "status": 200,
+   "final_url": "https://www.tinyfish.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 300067,
+   "truncated": false,
+   "sha256": "18f88e09318786fb56e7ccc328bef74a3f4c168e2502f745723a01dbcfe58767",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 7932
+  },
+  "search-doc": {
+   "url": "https://docs.tinyfish.ai/search-api/index.md",
+   "status": 200,
+   "final_url": "https://docs.tinyfish.ai/search-api/index.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 5094,
+   "truncated": false,
+   "sha256": "140e8f5a1b8d3b8e42393e56d3312ce3d9d06c6161d354ed27d3ab4e1b9a88cf",
+   "fetched_at": "2026-10-19T05:58:15+00:00",
+   "text_bytes": 5076
+  },
+  "pricing": {
+   "url": "https://docs.tinyfish.ai/pricing.md",
+   "status": 404,
+   "final_url": "https://docs.tinyfish.ai/pricing.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 585,
+   "truncated": false,
+   "sha256": "c17e6fcd6968ce5d25170f0f64d1807708cbea4b8df29e3f7fa27c3adb72c979",
+   "fetched_at": "2026-10-19T05:58:15+00:00"
+  }
+ }
+}

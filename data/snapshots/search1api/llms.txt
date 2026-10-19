@@ -1,0 +1,27 @@
+# Search1API
+
+## Docs
+
+- [Introduction](https://docs.search1api.com/introduction.md): Welcome to search1api documentation
+- [Search](https://docs.search1api.com/api-reference/endpoint/search.md): Performs a search
+- [News](https://docs.search1api.com/api-reference/endpoint/news.md): Performs a news search
+- [Crawl](https://docs.search1api.com/api-reference/endpoint/crawl.md): Crawls a webpage
+- [Sitemap](https://docs.search1api.com/api-reference/endpoint/sitemap.md): Get sitemap links from a website
+- [Trending](https://docs.search1api.com/api-reference/endpoint/trending.md): Get trending topics from popular platforms
+- [Reasoning](https://docs.search1api.com/api-reference/endpoint/reasoning.md): Create a chat completion
+- [Models](https://docs.search1api.com/api-reference/endpoint/models.md): List all available models
+- [Usage](https://docs.search1api.com/api-reference/endpoint/usage.md): Get usage
+
+## OpenAPI Specs
+
+- [search](https://docs.search1api.com/api-reference/openapi/search.json)
+- [usage](https://docs.search1api.com/api-reference/openapi/usage.json)
+- [trending](https://docs.search1api.com/api-reference/openapi/trending.json)
+- [sitemap](https://docs.search1api.com/api-reference/openapi/sitemap.json)
+- [reasoning](https://docs.search1api.com/api-reference/openapi/reasoning.json)
+- [news](https://docs.search1api.com/api-reference/openapi/news.json)
+- [models](https://docs.search1api.com/api-reference/openapi/models.json)
+- [crawl](https://docs.search1api.com/api-reference/openapi/crawl.json)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

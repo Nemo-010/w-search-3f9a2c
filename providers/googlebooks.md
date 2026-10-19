@@ -1,0 +1,23 @@
+# Google Books API
+
+- Category: `misc-api` — General free web/reference APIs
+- Home: https://developers.google.com/books
+- Pricing: —
+- Docs: https://developers.google.com/books
+- llms.txt: none found at the probed locations
+
+## Free tier
+
+- Documented recurring free volume: **3,000**
+- Detail: Free: 1,000 requests/day per project (Google Books API quota; not captured)
+- Card required for free tier: no
+- Confidence: **low**
+
+## Evidence
+
+Source: https://developers.google.com/books  
+Snapshot: `data/snapshots/googlebooks/home.txt`  
+
+## Measurement note
+
+`data/facts.json` entry for `googlebooks`; fetched 2026-10-19. Free tiers change — re-run `make fetch fresh` to re-verify.

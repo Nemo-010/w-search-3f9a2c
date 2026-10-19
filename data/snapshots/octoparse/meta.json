@@ -1,0 +1,63 @@
+{
+ "slug": "octoparse",
+ "name": "Octoparse",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:21+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.octoparse.com/pricing",
+   "status": 200,
+   "final_url": "https://www.octoparse.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 189242,
+   "truncated": false,
+   "sha256": "f511a9fae74d9657e033a284c02f567183f015658e46733b1dc45dcc5116c4d4",
+   "fetched_at": "2026-10-19T05:54:21+00:00",
+   "text_bytes": 6551
+  },
+  "home": {
+   "url": "https://www.octoparse.com/",
+   "status": 200,
+   "final_url": "https://www.octoparse.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 296106,
+   "truncated": false,
+   "sha256": "08a3c7769e8c38bc3b1a033e1e7590dd0947b0875dcb4c0e22a5fdd5c5d04b5f",
+   "fetched_at": "2026-10-19T05:54:23+00:00",
+   "text_bytes": 16404
+  },
+  "llms": {
+   "url": "https://www.octoparse.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.octoparse.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 45760,
+   "truncated": false,
+   "sha256": "436b70d220d97efc9ed915ec857a5ba5c185c6a32dfc9bd928625514981cdccd",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 45750
+  },
+  "llms-https://www.octoparse.com/docs/llms.txt": {
+   "url": "https://www.octoparse.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.octoparse.com/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 43447,
+   "truncated": false,
+   "sha256": "6910a59aebc7ac582055f58f818b20c2f1668cc53b3e2c2ba8ba279665988acc",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 43429
+  },
+  "llms-full": {
+   "url": "https://www.octoparse.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.octoparse.com/docs/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 784532,
+   "truncated": false,
+   "sha256": "20d34dd952f4d165638cd652bdbeb4b1805593cf61136fccab0075ffac3c7f07",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 783121
+  }
+ }
+}

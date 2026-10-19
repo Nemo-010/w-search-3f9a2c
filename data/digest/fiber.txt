@@ -1,0 +1,28 @@
+# Fiber AI (fiber) category=ai-search
+home=https://fiber.ai/ pricing=None docs=None llms=None
+sources_ok: home:https://fiber.ai/, llms:https://fiber.ai/llms.txt, llms-https://docs.fiber.ai/llms.txt:https://docs.fiber.ai/llms.txt, llms-full:https://docs.fiber.ai/llms-full.txt
+--- ranked fact lines ---
+[llms] - [Billing & Credits](/billing): How Fiber's credit-based pricing works — per-item costs, free operations, and cost-control levers.
+[llms] - [Hashed Email Lookup](/enrichment/hashed-email-lookup): Turn SHA-256, MD5, or SHA-1 hashed emails (HEMs) back into the real address and the LinkedIn profile behind it — up to 100 per call, billed only on hits.
+[home] Start a free trial from a terminal. Work email + OTP; the script stores a live
+[llms] - [Reference lists](/search/reference-lists): Free lists of every valid value for search filters — industries, NAICS codes, regions, metros, skills, technologies, tags, languages, and more.
+[llms] - [Exclusion lists](/audiences/exclusion-lists): Keep customers, competitors, and past contacts out of every search — free lists of companies or people that filter your results automatically.
+--- llms/readme head ---
+# Documentation
+- [Fiber AI Documentation](/): Find any company or person, get their verified contact information, and know the moment something changes about them.
+- [Using the Fiber Dashboard](/using-the-ui): Build audiences, reveal verified contacts, and export to CSV or ad platforms — the full workflow with no code required.
+- [Operations index](/operations): Every Fiber AI API operation by reader-facing name — find the one call you need, then open its API reference.
+- Billing
+- [Billing & Credits](/billing): How Fiber's credit-based pricing works — per-item costs, free operations, and cost-control levers.
+- [Pricing by operation](/billing/pricing): Default credit prices for every product family, what each one bills per, and how volume pricing works.
+- [Payment Troubleshooting](/billing/troubleshooting): Fixes for common payment and billing problems, and how to reach us when something doesn't look right.
+- Search & discovery
+- [Search](/search): Query 50M+ companies and 500M+ professional profiles with structured filters — count for a credit, then pull only the results you want.
+- [Getting accurate results from search](/search/using-search-apis): Write people and company searches that return exactly the people you mean — the rules that matter, what's available today, and worked examples of common mistakes with their fixes.
+- [Search counts](/search/counts): Count matching companies and people before you pull a single result — what's exact, what's estimated, and the two caveats that matter when a count feeds a report or a benchmark.
+- [Industry filtering](/search/industry-filtering): The two meanings of "industry", which filter expresses each, and how to pick valid values so an industry filter never silently matches nothing.
+- [Migrating from another data provider](/search/migrating-from-other-providers): Translation tables for the filter vocabularies that differ between providers (departments, seniority levels, job-title matching), so a search means the same thing here as it did there.
+- [Sizing and locating companies](/search/sizing-and-locating-companies): Filter companies by headcount with any range you need, and by headquarters location down to city level — both fully supported on company search and combined search.
+- [Natural-language search](/search/agentic-search): Ask in plain English and get a matching list of companies or people — plus a clear list of anything the query could not apply.
+- [Job title matching](/search/job-title-matching): How people search matches job titles — normal, phrase, and prefix modes, opt-in stemming, exact equality, and when to generate titles instead of listing them.
+- [Job Search](/search/job-search): Filter 13M+ open roles by title, pay, and location, then count matches before you pull postings.

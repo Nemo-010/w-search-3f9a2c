@@ -1,0 +1,57 @@
+Nominatim 
+ Nominatim 
+ Blog 
+ Documentation 
+ Cookbook 
+ Downloads 
+ Support Us 
+ Open-source geocoding 
+ with OpenStreetMap data 
+ Nominatim uses OpenStreetMap data to find locations on Earth by name and
+address (geocoding). It can also do the reverse, find an address for any
+location on the planet. 
+ For occasional use 
+ Use the API 
+ Usage policy 
+ API documentation 
+ For power users 
+ Install your own 
+ The latest release is 5.3.3 . 
+ Installation instructions 
+ Features 
+ Find places by name or address (Geocoding) 
+ Nominatim can power the search box on your website, allowing your users
+to type free-form queries (“Cafe Paris, New York”) in any language.
+It also offers a structured query mode
+(“postcode=12345”, “city=London”, “type=cafe”)
+that helps you to automate geocoding of extensive address lists. 
+ Look up addresses for a location (Reverse geocoding) 
+ Given a latitude and longitude anywhere on the planet, Nominatim can find the
+nearest address. It can do the same for any OSM object
+given its ID. 
+ Scalable installation 
+ Nominatim scales with your needs. Run a search service for your city
+on a laptop or set up a larger server with data of the whole planet. 
+ Configurable setup 
+ You can decide which features of OpenStreetMap are important to you.
+Nominatim imports only what you tell it to. 
+ Always up-to-date with OpenStreetMap 
+ OpenStreetMap data is constantly improved by thousands of editors. Keep
+up to date with these changes through minutely updates. 
+ Fast 
+ Nominatim is the geocoding software that powers the
+official OSM site www.openstreetmap.org . It serves 30 million queries per
+day on a single server. 
+ Supporters 
+ We thank the following companies for their support of parts of the
+Nominatim development: 
+ LocationIQ 
+ Are you interested in supporting Nominatim?
+Support us through Github Sponsors 
+or check out the Funding page for other options. 
+ Contributing 
+ We welcome your code contributions and bug reports. 
+ Nominatim repository on Github 
+ Contribution guidelines 
+ osm-search/Nominatim 
+ Imprint/Contact

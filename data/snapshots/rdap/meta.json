@@ -1,0 +1,80 @@
+{
+ "slug": "rdap",
+ "name": "RDAP",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:50+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://about.rdap.org/",
+   "status": 200,
+   "final_url": "https://about.rdap.org/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 11971,
+   "truncated": false,
+   "sha256": "51e8c4a98f8ba3d92d4de58c30f61026e35c32bde10a20468fbc0e0edec24b3c",
+   "fetched_at": "2026-10-19T05:54:50+00:00",
+   "text_bytes": 5274
+  },
+  "home": {
+   "url": "https://rdap.org/",
+   "status": 200,
+   "final_url": "https://about.rdap.org/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 11971,
+   "truncated": false,
+   "sha256": "51e8c4a98f8ba3d92d4de58c30f61026e35c32bde10a20468fbc0e0edec24b3c",
+   "fetched_at": "2026-10-19T05:54:50+00:00",
+   "text_bytes": 5274
+  },
+  "llms-err-7a0a39": {
+   "url": "https://about.rdap.org/llms.txt",
+   "status": 404,
+   "final_url": "https://about.rdap.org/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 3296,
+   "truncated": false,
+   "sha256": "f257006c207016caebc7483f76d578aa282d39ca7036e59122011ecf46d68cda",
+   "fetched_at": "2026-10-19T05:54:50+00:00"
+  },
+  "llms-err-7258eb": {
+   "url": "https://rdap.org/llms.txt",
+   "status": 400,
+   "final_url": "https://rdap.org/llms.txt",
+   "content_type": "text/html",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-19T05:54:50+00:00"
+  },
+  "llms-err-aec21f": {
+   "url": "https://rdap.org/docs/llms.txt",
+   "status": 400,
+   "final_url": "https://rdap.org/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-19T05:54:51+00:00"
+  },
+  "llms-err-92699e": {
+   "url": "https://docs.about.rdap.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.about.rdap.org/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:54:51+00:00"
+  },
+  "llms-err-d62518": {
+   "url": "https://docs.rdap.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.rdap.org/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:54:51+00:00"
+  }
+ }
+}

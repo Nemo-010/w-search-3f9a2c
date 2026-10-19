@@ -1,0 +1,15 @@
+# Anchor Browser (anchor) category=browser
+home=https://anchorbrowser.io/ pricing=https://anchorbrowser.io/pricing docs=https://docs.anchorbrowser.io/ llms=None
+sources_ok: pricing:https://anchorbrowser.io/pricing, docs:https://docs.anchorbrowser.io/, home:https://anchorbrowser.io/, llms:https://docs.anchorbrowser.io/llms.txt, llms-full:https://docs.anchorbrowser.io/llms-full.txt, llms-https://anchorbrowser.io/llms.txt:https://anchorbrowser.io/llms.txt
+--- ranked fact lines ---
+[pricing] Start free. Scale as you grow. Free Perfect for getting started Free 5 credits per month 0.1 credits per completed task Up to 5 concurrent browsers Up to 500 browser sessions Embedded browser agent Start Now Starter Great for small teams $50/mo +$1.00/credit overage 50 Credits per month 0.1 credits per completed task Up to 25 concurrent browsers Authenticated (Logged in) Browsers Automated Captcha
+--- llms/readme head ---
+version: 1.0
+Default rules
+model: * allow: / disallow: /internal/ disallow: /admin/ disallow:
+/private/ disallow: /pricing-hidden/
+Purposes
+purpose: inference purpose: training disallowed
+Metadata
+sitemap: https://anchorbrowser.io/sitemap.xml contact:
+support@anchorbrowser.io

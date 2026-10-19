@@ -1,0 +1,6 @@
+# OpenAIRE (openaire) category=academic
+home=https://www.openaire.eu/ pricing=None docs=https://graph.openaire.eu/docs/ llms=None
+sources_ok: docs:https://graph.openaire.eu/docs/, home:https://www.openaire.eu/
+--- ranked fact lines ---
+[home] Free Knowledge Africa and OpenAIRE Partner to Advance African Research Visibility
+[home] Free Knowledge Africa and OpenAIRE have signed a memorandum of understanding to strengthen the…

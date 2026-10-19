@@ -1,0 +1,83 @@
+{
+ "slug": "urlbox",
+ "name": "Urlbox",
+ "category": "reader",
+ "fetched_at": "2026-10-19T05:54:35+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://urlbox.com/pricing",
+   "status": 200,
+   "final_url": "https://urlbox.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 312687,
+   "truncated": false,
+   "sha256": "c649e74dae99b494541f83d173ba6bb9e903e710cb78fa74bc54bef9ac78115e",
+   "fetched_at": "2026-10-19T05:54:35+00:00",
+   "text_bytes": 8738
+  },
+  "docs-err-bfa41c": {
+   "url": "https://urlbox.com/docs",
+   "status": 500,
+   "final_url": "https://urlbox.com/docs",
+   "content_type": "application/json;charset=UTF-8",
+   "bytes": 53,
+   "truncated": false,
+   "sha256": "38e85ee15263f3fd151705f50b701bfd657fa6efc99294f49fe3c5fe5e8013ad",
+   "fetched_at": "2026-10-19T05:54:36+00:00"
+  },
+  "home": {
+   "url": "https://urlbox.com/",
+   "status": 200,
+   "final_url": "https://urlbox.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 424933,
+   "truncated": false,
+   "sha256": "f7e45def6120616347f3035445d91aae0c09f8ac93be1771d8760f876525d8e8",
+   "fetched_at": "2026-10-19T05:54:37+00:00",
+   "text_bytes": 11486
+  },
+  "llms": {
+   "url": "https://urlbox.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://urlbox.com/docs/llms.txt",
+   "content_type": "text/plain;charset=UTF-8",
+   "bytes": 10616,
+   "truncated": false,
+   "sha256": "817d0915d0f95cdc2940e6ebfd3fab56c455ef9ba05fe15480e461e09e51f48a",
+   "fetched_at": "2026-10-19T05:54:38+00:00",
+   "text_bytes": 10606
+  },
+  "llms-full": {
+   "url": "https://urlbox.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://urlbox.com/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 1718387,
+   "truncated": false,
+   "sha256": "056f1902984086dd813cad307773557df53c97f0d6d3b0082338e5852264a86d",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 1716886
+  },
+  "llms-https://urlbox.com/llms.txt": {
+   "url": "https://urlbox.com/llms.txt",
+   "status": 200,
+   "final_url": "https://urlbox.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 36535,
+   "truncated": false,
+   "sha256": "5213ba12fa59522cee9cb1be1dfb09860febc77e21cbc8af84a1a24488928be1",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 36509
+  },
+  "llms-err-3fef9b": {
+   "url": "https://docs.urlbox.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.urlbox.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:40+00:00"
+  }
+ }
+}

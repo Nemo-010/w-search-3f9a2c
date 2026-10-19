@@ -1,0 +1,494 @@
+# ScrapeOps
+
+> ScrapeOps is a comprehensive web scraping platform that provides tools, APIs, and infrastructure to help developers build, manage, and scale web scrapers efficiently.
+
+## About ScrapeOps
+
+ScrapeOps offers a suite of web scraping tools designed to simplify the entire scraping workflow—from proxy management and anti-bot bypass to monitoring, scheduling, and structured data extraction. The platform aggregates multiple proxy providers, offers purpose-built monitoring for scrapers, and provides APIs that return structured JSON data from popular websites.
+
+**Website:** https://scrapeops.io
+
+## Products
+
+### Proxy API Aggregator
+An easy-to-use proxy API that routes requests through the best-performing proxy providers via a single endpoint. Features include anti-bot bypass (Cloudflare, DataDome, PerimeterX), JavaScript rendering, geo-targeting, residential/mobile proxies, and LLM-powered extraction.
+
+### Residential & Mobile Proxy Aggregator
+Access to premium residential and mobile proxies from multiple providers through a single proxy port. Supports country/city geo-targeting and sticky sessions.
+
+### Scraper Monitoring & Alerts
+Purpose-built monitoring for web scrapers with automatic stats aggregation, health checks, and alerts. Tracks pages scraped, items parsed, response codes, success rates, latencies, errors, and bandwidth.
+
+### Server Manager & Job Scheduler
+Deploy, manage, and schedule scrapers from a centralized dashboard. Supports SSH server integration and ScrapyD cluster management.
+
+### MCP Server
+Model Context Protocol server that exposes ScrapeOps Proxy API to AI IDEs (Cursor, Claude Desktop, VS Code, Windsurf). Enables AI agents to browse the web with proxy support.
+
+### Parser API
+Converts raw HTML from supported websites into structured JSON. Supports Amazon, Walmart, eBay, Target, Redfin, Zillow, Indeed, and search engines (Google, Bing, Yandex).
+
+### Structured Data APIs
+Direct API access to structured data from Amazon, eBay, Walmart, Redfin, and Indeed without needing to build parsers.
+
+### n8n Integration
+Official n8n node for integrating ScrapeOps web scraping capabilities into workflow automation.
+
+### Fake User Agent & Headers API
+Free API for generating random user agents and browser headers for web scraping.
+
+---
+
+## Documentation
+
+### Introduction
+- [Documentation Home](https://scrapeops.io/docs/intro)
+
+### Proxy API Aggregator
+- [Quickstart](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/quickstart)
+- [API Basics](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/getting-started/api-basics)
+- [Response Formats](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/getting-started/response_formats)
+- [Status Codes](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/getting-started/status-codes)
+- [URL Encoding](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/getting-started/url-encoding)
+
+#### Advanced Functionality
+- [Anti-Bot Bypass](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/anti-bot-bypass)
+- [Auto Extract](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/auto-extract)
+- [LLM Extract](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/llm-extract)
+- [Country Geotargeting](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/country-geotargeting)
+- [Headless Browser](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/headless-browser)
+- [JavaScript Scenario](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/javascript-scenario)
+- [Screenshot](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/screenshot)
+- [Premium Proxies](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/premium-proxies)
+- [Residential Proxies](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/residential-proxies)
+- [Mobile Proxies](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/mobile-proxies)
+- [Custom Headers](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/custom-headers)
+- [Custom Cookies](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/custom-cookies)
+- [Sticky Sessions](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/sticky-sessions)
+- [Wait For](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/wait-for)
+- [Wait Time](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/wait-time)
+- [Scroll Page](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/scroll-page)
+- [Follow Redirects](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/follow-redirects)
+- [POST Requests](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/post-requests)
+- [Device Type](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/device-type)
+- [File Type](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/file-type)
+- [Optimize Request](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/optimize-request)
+- [Transparent Status Codes](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/transparent-status-codes)
+- [Functionality List](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/advanced-functionality/functionality-list)
+
+#### Integration Examples
+- [Python](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/python-code-example)
+- [Python Scrapy](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/python-scrapy-example)
+- [Python Selenium](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/python-selenium-example)
+- [Node.js](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/nodejs-code-example)
+- [Node.js Puppeteer](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/nodejs-puppeteer-example)
+- [Node.js Playwright](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/nodejs-playwright-example)
+- [Go](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/golang-code-example)
+- [Go Colly](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/go-colly-code-example)
+- [Java](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/java-code-example)
+- [C#](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/csharp-code-example)
+- [PHP](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/php-code-example)
+- [Ruby](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/ruby-code-example)
+- [R](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/integration-examples/r-code-example)
+
+#### Account
+- [Proxy Stats](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/account/proxy-stats)
+- [Request Costs](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/account/request-costs)
+- [Usage Endpoint](https://scrapeops.io/docs/web-scraping-proxy-api-aggregator/account/usage-endpoint)
+
+### Residential & Mobile Proxy Aggregator
+- [Overview](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/overview)
+- [Quickstart](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/getting-started/quickstart)
+- [Status Codes](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/getting-started/status-codes)
+
+#### Advanced Functionality
+- [Country Geotargeting](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/advanced-functionality/country-geotargeting)
+- [Mobile Proxies](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/advanced-functionality/mobile)
+- [Sticky Sessions](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/advanced-functionality/sticky-sessions)
+- [POST Requests](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/advanced-functionality/post-requests)
+- [Functionality List](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/advanced-functionality/functionality-list)
+
+#### Integration Examples
+- [Python](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/python-code-example)
+- [Python Selenium](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/python-selenium-example)
+- [Node.js](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/nodejs-code-example)
+- [Node.js Puppeteer](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/nodejs-puppeteer-example)
+- [Node.js Playwright](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/nodejs-playwright-example)
+- [Go](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/golang-code-example)
+- [Go Colly](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/go-colly-code-example)
+- [Java](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/java-code-example)
+- [C#](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/csharp-code-example)
+- [PHP](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/php-code-example)
+- [Ruby](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/ruby-code-example)
+- [R](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/integration-examples/r-code-example)
+
+#### Tool Integrations
+- [Playwright](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/tool-integrations/playwright-proxy-integration)
+- [Puppeteer](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/tool-integrations/puppeteer-proxy-integration)
+- [AdsPower](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/tool-integrations/adspower-proxy-integration)
+- [BrowserScan](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/tool-integrations/browserscan-proxy-integration)
+- [CapSolver](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/tool-integrations/capsolver-proxy-integration)
+- [Geelark](https://scrapeops.io/docs/residential-mobile-proxy-aggregator/tool-integrations/geelark-proxy-integration)
+
+### Monitoring
+- [Overview](https://scrapeops.io/docs/monitoring/overview)
+- [Python Scrapy SDK Integration](https://scrapeops.io/docs/monitoring/python-scrapy/sdk-integration)
+- [Python Scrapy Custom Functionality](https://scrapeops.io/docs/monitoring/python-scrapy/custom-functionality)
+- [Python Requests SDK Integration](https://scrapeops.io/docs/monitoring/python-requests/sdk-integration)
+
+### Server Manager & Scheduler
+- [Overview](https://scrapeops.io/docs/servers-scheduling/overview)
+- [AWS Integration](https://scrapeops.io/docs/servers-scheduling/aws-integration)
+- [Digital Ocean Integration](https://scrapeops.io/docs/servers-scheduling/digital-ocean-integration)
+- [ScrapyD Integration](https://scrapeops.io/docs/servers-scheduling/scrapyd-integration)
+- [REST API](https://scrapeops.io/docs/servers-scheduling/rest-api)
+
+### MCP Server
+- [Overview](https://scrapeops.io/docs/mcp/overview)
+
+### n8n Integration
+- [Overview](https://scrapeops.io/docs/n8n/overview)
+- [Setup](https://scrapeops.io/docs/n8n/setup)
+- [Proxy API](https://scrapeops.io/docs/n8n/proxy-api)
+- [Parser API](https://scrapeops.io/docs/n8n/parser-api)
+- [Data API](https://scrapeops.io/docs/n8n/data-api)
+- [Examples](https://scrapeops.io/docs/n8n/examples)
+
+### Parser API
+- [Overview](https://scrapeops.io/docs/parser-api/overview)
+- [Custom Parser](https://scrapeops.io/docs/parser-api/custom-parser)
+
+#### Parsers
+- [Amazon Parser](https://scrapeops.io/docs/parser-api/parsers/amazon-product-parser)
+- [eBay Parser](https://scrapeops.io/docs/parser-api/parsers/ebay-product-parser)
+- [Walmart Parser](https://scrapeops.io/docs/parser-api/parsers/walmart-product-parser)
+- [Target Parser](https://scrapeops.io/docs/parser-api/parsers/target-product-parser)
+- [Redfin Parser](https://scrapeops.io/docs/parser-api/parsers/redfin-product-parser)
+- [Zillow Parser](https://scrapeops.io/docs/parser-api/parsers/zillow-product-parser)
+- [Indeed Parser](https://scrapeops.io/docs/parser-api/parsers/indeed-product-parser)
+- [Google Search Parser](https://scrapeops.io/docs/parser-api/parsers/google-search-product-parser)
+- [Google Maps Parser](https://scrapeops.io/docs/parser-api/parsers/google-map-product-parser)
+- [Google Patents Parser](https://scrapeops.io/docs/parser-api/parsers/google-patent-product-parser)
+- [Google Scholar Parser](https://scrapeops.io/docs/parser-api/parsers/google-scholar-product-parser)
+- [Bing Parser](https://scrapeops.io/docs/parser-api/parsers/bing-product-parser)
+- [Yandex Parser](https://scrapeops.io/docs/parser-api/parsers/yandex-product-parser)
+
+### Structured Data APIs
+- [Overview](https://scrapeops.io/docs/data-api/overview)
+
+#### Amazon APIs
+- [Amazon Product API](https://scrapeops.io/docs/data-api/amazon-product-api)
+- [Amazon Product Search API](https://scrapeops.io/docs/data-api/amazon-product-search-api)
+
+#### eBay APIs
+- [eBay Product API](https://scrapeops.io/docs/data-api/ebay-product-api)
+- [eBay Search API](https://scrapeops.io/docs/data-api/ebay-search-api)
+- [eBay Category API](https://scrapeops.io/docs/data-api/ebay-category-api)
+- [eBay Store API](https://scrapeops.io/docs/data-api/ebay-store-api)
+- [eBay Feedback API](https://scrapeops.io/docs/data-api/ebay-feedback-api)
+
+#### Walmart APIs
+- [Walmart Product API](https://scrapeops.io/docs/data-api/walmart-product-api)
+- [Walmart Product Search API](https://scrapeops.io/docs/data-api/walmart-product-search-api)
+- [Walmart Category API](https://scrapeops.io/docs/data-api/walmart-category-api)
+- [Walmart Review API](https://scrapeops.io/docs/data-api/walmart-review-api)
+- [Walmart Shop API](https://scrapeops.io/docs/data-api/walmart-shop-api)
+- [Walmart Browse API](https://scrapeops.io/docs/data-api/walmart-browse-api)
+
+#### Redfin APIs
+- [Redfin Sale Search API](https://scrapeops.io/docs/data-api/redfin-sale-search-api)
+- [Redfin Rent Search API](https://scrapeops.io/docs/data-api/redfin-rent-search-api)
+- [Redfin Sale Detail API](https://scrapeops.io/docs/data-api/redfin-sale-detail-api)
+- [Redfin Rent Detail API](https://scrapeops.io/docs/data-api/redfin-rent-detail-api)
+- [Redfin Building Detail API](https://scrapeops.io/docs/data-api/redfin-building-detail-api)
+- [Redfin State Search API](https://scrapeops.io/docs/data-api/redfin-state-search-api)
+- [Redfin Agent Search API](https://scrapeops.io/docs/data-api/redfin-agent-search-api)
+- [Redfin Agent Profile API](https://scrapeops.io/docs/data-api/redfin-agent-profile-api)
+
+#### Indeed APIs
+- [Indeed Job Search API](https://scrapeops.io/docs/data-api/indeed-job-search-api)
+- [Indeed Job Detail API](https://scrapeops.io/docs/data-api/indeed-job-detail-api)
+- [Indeed Company Search API](https://scrapeops.io/docs/data-api/indeed-company-search-api)
+- [Indeed Top Companies API](https://scrapeops.io/docs/data-api/indeed-top-companies-api)
+- [Indeed Company Snapshot API](https://scrapeops.io/docs/data-api/indeed-company-snapshot-api)
+- [Indeed Company About API](https://scrapeops.io/docs/data-api/indeed-company-about-api)
+- [Indeed Company Reviews API](https://scrapeops.io/docs/data-api/indeed-company-reviews-api)
+- [Indeed Company Jobs API](https://scrapeops.io/docs/data-api/indeed-company-jobs-api)
+
+### Fake User Agent & Headers API
+- [Overview](https://scrapeops.io/docs/fake-user-agent-headers-api/overview)
+- [Fake User Agents](https://scrapeops.io/docs/fake-user-agent-headers-api/fake-user-agents)
+- [Fake Browser Headers](https://scrapeops.io/docs/fake-user-agent-headers-api/fake-browser-headers)
+- [Python Requests Integration](https://scrapeops.io/docs/fake-user-agent-headers-api/integrations/python-requests)
+- [Python Scrapy Integration](https://scrapeops.io/docs/fake-user-agent-headers-api/integrations/python-scrapy)
+- [Node.js Integration](https://scrapeops.io/docs/fake-user-agent-headers-api/integrations/node-request-promise)
+- [Go Colly Integration](https://scrapeops.io/docs/fake-user-agent-headers-api/integrations/golang-colly)
+
+---
+
+## Web Scraping Playbooks
+
+### General Web Scraping
+- [Web Scraping Playbook Home](https://scrapeops.io/web-scraping-playbook/)
+- [What is Web Scraping?](https://scrapeops.io/web-scraping-playbook/what-is-web-scraping)
+- [Web Scraping vs Web Crawling](https://scrapeops.io/web-scraping-playbook/web-scraping-vs-web-crawling)
+- [Ethics of Web Scraping](https://scrapeops.io/web-scraping-playbook/ethics-of-web-scraping)
+
+#### Beginner's Guide
+- [Part 1: Introduction](https://scrapeops.io/web-scraping-playbook/beginners-web-scraping-guide-part-1)
+- [Part 2: Setting Up](https://scrapeops.io/web-scraping-playbook/beginners-web-scraping-guide-part-2)
+- [Part 3: Extracting Data](https://scrapeops.io/web-scraping-playbook/beginners-web-scraping-guide-part-3)
+- [Part 4: Handling Pagination](https://scrapeops.io/web-scraping-playbook/beginners-web-scraping-guide-part-4)
+- [Part 5: Storing Data](https://scrapeops.io/web-scraping-playbook/beginners-web-scraping-guide-part-5)
+- [Part 6: Scaling Up](https://scrapeops.io/web-scraping-playbook/beginners-web-scraping-guide-part-6)
+
+#### Anti-Bot Bypass
+- [Web Scraping Without Getting Blocked](https://scrapeops.io/web-scraping-playbook/web-scraping-without-getting-blocked)
+- [How to Bypass Anti-Bots](https://scrapeops.io/web-scraping-playbook/how-to-bypass-antibots)
+- [How to Bypass Cloudflare](https://scrapeops.io/web-scraping-playbook/how-to-bypass-cloudflare)
+- [How to Bypass DataDome](https://scrapeops.io/web-scraping-playbook/how-to-bypass-datadome)
+- [How to Bypass PerimeterX](https://scrapeops.io/web-scraping-playbook/how-to-bypass-perimeterx)
+- [Cloudflare Error 1015](https://scrapeops.io/web-scraping-playbook/cloudflare-error-1015)
+- [Cloudflare Error 1020](https://scrapeops.io/web-scraping-playbook/cloudflare-error-1020)
+- [403 Forbidden Error](https://scrapeops.io/web-scraping-playbook/403-forbidden-error-web-scraping)
+
+#### Proxies
+- [What Are Residential Proxies](https://scrapeops.io/web-scraping-playbook/what-are-residential-proxies-explained)
+- [Residential & Mobile Proxies Economics](https://scrapeops.io/web-scraping-playbook/residential-mobile-proxies-economics)
+- [Where Residential Proxies Come From](https://scrapeops.io/web-scraping-playbook/where-residential-mobile-proxies-come-from)
+- [Free Proxies Tested](https://scrapeops.io/web-scraping-playbook/free-proxies-tested)
+
+#### Tools & Resources
+- [Best AI Web Scraping Tools](https://scrapeops.io/web-scraping-playbook/best-ai-web-scraping-tools)
+- [Best Web Scraping Books](https://scrapeops.io/web-scraping-playbook/best-web-scraping-books)
+- [Best Web Scraping Communities](https://scrapeops.io/web-scraping-playbook/best-web-scraping-communities)
+- [Best Web Scraping Discord Servers](https://scrapeops.io/web-scraping-playbook/best-web-scraping-discord-servers)
+- [Best Web Scraping Subreddits](https://scrapeops.io/web-scraping-playbook/best-web-scraping-subreddits)
+- [User Agents Guide](https://scrapeops.io/web-scraping-playbook/web-scraping-guide-header-user-agents)
+
+#### Industry Reports
+- [State of Web Scraping 2025](https://scrapeops.io/web-scraping-playbook/the-state-of-web-scraping-2025)
+- [Web Scraping Market Report 2025](https://scrapeops.io/web-scraping-playbook/web-scraping-market-report-2025)
+
+### Python Scrapy Playbook
+- [Scrapy Playbook Home](https://scrapeops.io/python-scrapy-playbook/)
+- [Scrapy Beginner's Guide](https://scrapeops.io/python-scrapy-playbook/scrapy-beginners-guide)
+- [Web Scraping with Scrapy Introduction](https://scrapeops.io/python-scrapy-playbook/scrapy-web-scraping-intro)
+
+#### Getting Started
+- [Storing Data Guide](https://scrapeops.io/python-scrapy-playbook/scrapy-beginners-guide-storing-data)
+- [Cleaning Data Guide](https://scrapeops.io/python-scrapy-playbook/scrapy-beginners-guide-cleaning-data)
+- [User Agents & Proxies Guide](https://scrapeops.io/python-scrapy-playbook/scrapy-beginners-guide-user-agents-proxies)
+- [Deployment, Scheduling & Monitoring Guide](https://scrapeops.io/python-scrapy-playbook/scrapy-beginners-guide-deployment-scheduling-monitoring)
+
+#### Core Concepts
+- [Scrapy Items](https://scrapeops.io/python-scrapy-playbook/scrapy-items)
+- [Scrapy Items & Loaders](https://scrapeops.io/python-scrapy-playbook/scrapy-items-loaders)
+- [Pagination Guide](https://scrapeops.io/python-scrapy-playbook/scrapy-pagination-guide)
+- [Custom Middleware](https://scrapeops.io/python-scrapy-playbook/custom-scrapy-middleware)
+- [Customising Scrapy](https://scrapeops.io/python-scrapy-playbook/customising-scrapy)
+- [Login Forms](https://scrapeops.io/python-scrapy-playbook/scrapy-login-form)
+- [Delay Between Requests](https://scrapeops.io/python-scrapy-playbook/scrapy-delay-between-requests)
+- [Managing User Agents](https://scrapeops.io/python-scrapy-playbook/scrapy-managing-user-agents)
+- [Rotating Proxies Guide](https://scrapeops.io/python-scrapy-playbook/scrapy-rotating-proxy-guide)
+- [Proxy Waterfall Middleware](https://scrapeops.io/python-scrapy-playbook/scrapy-proxy-waterfall-middleware)
+
+#### Data Storage
+- [Save to CSV Files](https://scrapeops.io/python-scrapy-playbook/scrapy-save-csv-files)
+- [Save to JSON Files](https://scrapeops.io/python-scrapy-playbook/scrapy-save-json-files)
+- [Save to MySQL](https://scrapeops.io/python-scrapy-playbook/scrapy-save-data-mysql)
+- [Save to PostgreSQL](https://scrapeops.io/python-scrapy-playbook/scrapy-save-data-postgres)
+- [Save to SQLite](https://scrapeops.io/python-scrapy-playbook/scrapy-save-data-sqlite)
+- [Save to AWS S3](https://scrapeops.io/python-scrapy-playbook/scrapy-save-aws-s3)
+
+#### JavaScript Rendering
+- [JavaScript Rendering Guide](https://scrapeops.io/python-scrapy-playbook/scrapy-javascript-rendering-guide)
+- [Scrapy Playwright](https://scrapeops.io/python-scrapy-playbook/scrapy-playwright)
+- [Scrapy Selenium](https://scrapeops.io/python-scrapy-playbook/scrapy-selenium)
+- [Scrapy Splash](https://scrapeops.io/python-scrapy-playbook/scrapy-splash)
+
+#### Deployment
+- [How to Monitor Scrapy Spiders](https://scrapeops.io/python-scrapy-playbook/how-to-monitor-scrapy-spiders)
+- [Scrapy Cloud](https://scrapeops.io/python-scrapy-playbook/scrapy-cloud)
+- [Scrapy Cloud Alternatives](https://scrapeops.io/python-scrapy-playbook/scrapy-cloud-alternatives)
+- [Best ScrapyD Dashboards](https://scrapeops.io/python-scrapy-playbook/best-scrapyd-dashboards-ui)
+- [Scrapy Redis](https://scrapeops.io/python-scrapy-playbook/scrapy-redis)
+
+#### Troubleshooting
+- [403 Forbidden Error](https://scrapeops.io/python-scrapy-playbook/scrapy-403-unhandled-forbidden-error)
+- [503 Service Unavailable Error](https://scrapeops.io/python-scrapy-playbook/scrapy-503-service-unavailable-error)
+
+#### Scraper Tutorials
+- [Amazon Product Scraper](https://scrapeops.io/python-scrapy-playbook/python-scrapy-amazon-product-scraper)
+- [Amazon Reviews Scraper](https://scrapeops.io/python-scrapy-playbook/python-scrapy-amazon-reviews-scraper)
+- [Walmart Scraper](https://scrapeops.io/python-scrapy-playbook/python-scrapy-walmart-scraper)
+- [Indeed Scraper](https://scrapeops.io/python-scrapy-playbook/python-scrapy-indeed-scraper)
+- [LinkedIn Jobs Scraper](https://scrapeops.io/python-scrapy-playbook/python-scrapy-linkedin-jobs-scraper)
+- [LinkedIn Company Scraper](https://scrapeops.io/python-scrapy-playbook/python-scrapy-linkedin-company-scraper)
+- [LinkedIn People Scraper](https://scrapeops.io/python-scrapy-playbook/python-scrapy-linkedin-people-scraper)
+- [Wayfair Products Scraper](https://scrapeops.io/python-scrapy-playbook/python-scrapy-wayfair-products-scraper)
+
+### Python Web Scraping Playbook
+- [Python Web Scraping Playbook Home](https://scrapeops.io/python-web-scraping-playbook/)
+
+### Selenium Playbook
+- [Selenium Playbook Home](https://scrapeops.io/selenium-web-scraping-playbook/)
+
+### Puppeteer Playbook
+- [Puppeteer Playbook Home](https://scrapeops.io/puppeteer-web-scraping-playbook/)
+
+### Playwright Playbook
+- [Playwright Playbook Home](https://scrapeops.io/playwright-web-scraping-playbook/)
+
+### Node.js Playbook
+- [Node.js Playbook Home](https://scrapeops.io/nodejs-web-scraping-playbook/)
+
+### Java Playbook
+- [Java Playbook Home](https://scrapeops.io/java-web-scraping-playbook/)
+
+### Go Playbook
+- [Go Playbook Home](https://scrapeops.io/golang-web-scraping-playbook/)
+
+---
+
+## Product Pages
+
+- [Homepage](https://scrapeops.io/)
+- [Proxy API Aggregator](https://scrapeops.io/proxy-api-aggregator/)
+- [Residential & Mobile Proxy Aggregator](https://scrapeops.io/residential-mobile-proxy-aggregator/)
+- [Monitoring & Scheduling](https://scrapeops.io/monitoring-scheduling/)
+- [Parser API](https://scrapeops.io/parser-api/)
+- [AI Scraper Builder](https://scrapeops.io/ai-web-scraping-assistant/scraper-builder)
+
+---
+
+## Tools
+
+- [Proxy Comparison Tool](https://scrapeops.io/proxy-providers/comparison/) — Compare proxy providers by price, features, and performance.
+- [Website Scraping Guides](https://scrapeops.io/websites/) — Step-by-step guides for scraping popular websites.
+
+### Website Scraping Teardowns
+
+Comprehensive scraping teardowns with proxy performance data, anti-bot analysis, legal reviews, and resources for each website.
+
+#### E-Commerce
+- [Amazon Teardown](https://scrapeops.io/websites/amazon/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Amazon.
+- [Walmart Teardown](https://scrapeops.io/websites/walmart/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Walmart.
+- [eBay Teardown](https://scrapeops.io/websites/ebay/) — Proxy benchmarks, anti-bot analysis, and scraping guides for eBay.
+- [Etsy Teardown](https://scrapeops.io/websites/etsy/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Etsy.
+- [Target Teardown](https://scrapeops.io/websites/target/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Target.
+- [Best Buy Teardown](https://scrapeops.io/websites/bestbuy/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Best Buy.
+- [Nordstrom Teardown](https://scrapeops.io/websites/nordstrom/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Nordstrom.
+
+#### Search Engines
+- [Google Teardown](https://scrapeops.io/websites/google/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Google.
+- [Bing Teardown](https://scrapeops.io/websites/bing/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Bing.
+
+#### Jobs & Professional
+- [LinkedIn Teardown](https://scrapeops.io/websites/linkedin/) — Proxy benchmarks, anti-bot analysis, and scraping guides for LinkedIn.
+- [Indeed Teardown](https://scrapeops.io/websites/indeed/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Indeed.
+
+#### Real Estate
+- [Zillow Teardown](https://scrapeops.io/websites/zillow/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Zillow.
+- [Redfin Teardown](https://scrapeops.io/websites/redfin/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Redfin.
+- [Airbnb Teardown](https://scrapeops.io/websites/airbnb/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Airbnb.
+- [Immobilienscout24 Teardown](https://scrapeops.io/websites/immobilienscout24/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Immobilienscout24.
+- [Leboncoin Teardown](https://scrapeops.io/websites/leboncoin/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Leboncoin.
+
+#### Social Media
+- [TikTok Teardown](https://scrapeops.io/websites/tiktok/) — Proxy benchmarks, anti-bot analysis, and scraping guides for TikTok.
+- [Reddit Teardown](https://scrapeops.io/websites/reddit/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Reddit.
+- [Pinterest Teardown](https://scrapeops.io/websites/pinterest/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Pinterest.
+- [Quora Teardown](https://scrapeops.io/websites/quora/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Quora.
+
+#### Reviews & Business Intelligence
+- [Yelp Teardown](https://scrapeops.io/websites/yelp/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Yelp.
+- [Trustpilot Teardown](https://scrapeops.io/websites/trustpilot/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Trustpilot.
+- [G2 Teardown](https://scrapeops.io/websites/g2/) — Proxy benchmarks, anti-bot analysis, and scraping guides for G2.
+- [Capterra Teardown](https://scrapeops.io/websites/capterra/) — Proxy benchmarks, anti-bot analysis, and scraping guides for Capterra.
+- [SimilarWeb Teardown](https://scrapeops.io/websites/similarweb/) — Proxy benchmarks, anti-bot analysis, and scraping guides for SimilarWeb.
+
+### How To Scrape Guides by Website
+
+#### E-Commerce
+- [How to Scrape Amazon](https://scrapeops.io/websites/amazon/how-to-scrape-amazon)
+- [How to Scrape Walmart](https://scrapeops.io/websites/walmart/how-to-scrape-walmart)
+- [How to Scrape eBay](https://scrapeops.io/websites/ebay/how-to-scrape-ebay)
+- [How to Scrape Etsy](https://scrapeops.io/websites/etsy/how-to-scrape-etsy)
+- [How to Scrape Target](https://scrapeops.io/websites/target/how-to-scrape-target)
+- [How to Scrape Best Buy](https://scrapeops.io/websites/bestbuy/how-to-scrape-bestbuy)
+- [How to Scrape Nordstrom](https://scrapeops.io/websites/nordstrom/how-to-scrape-nordstrom)
+
+#### Search Engines
+- [How to Scrape Google Search](https://scrapeops.io/websites/google/how-to-scrape-google-search)
+- [How to Scrape Google Maps](https://scrapeops.io/websites/google/how-to-scrape-google-maps)
+- [How to Scrape Google Reviews](https://scrapeops.io/websites/google/how-to-scrape-google-reviews)
+- [How to Scrape Google Play](https://scrapeops.io/websites/google/how-to-scrape-google-play)
+- [How to Scrape Bing](https://scrapeops.io/websites/bing/how-to-scrape-bing)
+
+#### Jobs & Professional
+- [How to Scrape LinkedIn Jobs](https://scrapeops.io/websites/linkedin/how-to-scrape-linkedin-jobs)
+- [How to Scrape LinkedIn Profiles](https://scrapeops.io/websites/linkedin/how-to-scrape-linkedin-people-profiles)
+- [How to Scrape Indeed](https://scrapeops.io/websites/indeed/how-to-scrape-indeed)
+
+#### Real Estate
+- [How to Scrape Zillow](https://scrapeops.io/websites/zillow/how-to-scrape-zillow)
+- [How to Scrape Redfin](https://scrapeops.io/websites/redfin/how-to-scrape-redfin)
+- [How to Scrape Airbnb](https://scrapeops.io/websites/airbnb/how-to-scrape-airbnb)
+- [How to Scrape Immobilienscout24](https://scrapeops.io/websites/immobilienscout24/how-to-scrape-immobilienscout24)
+- [How to Scrape Leboncoin](https://scrapeops.io/websites/leboncoin/how-to-scrape-leboncoin)
+
+#### Social Media
+- [How to Scrape TikTok](https://scrapeops.io/websites/tiktok/how-to-scrape-tiktok)
+- [How to Scrape Reddit](https://scrapeops.io/websites/reddit/how-to-scrape-reddit)
+- [How to Scrape Pinterest](https://scrapeops.io/websites/pinterest/how-to-scrape-pinterest)
+- [How to Scrape Quora](https://scrapeops.io/websites/quora/how-to-scrape-quora)
+
+#### Reviews & Business Intelligence
+- [How to Scrape Yelp](https://scrapeops.io/websites/yelp/how-to-scrape-yelp)
+- [How to Scrape Trustpilot](https://scrapeops.io/websites/trustpilot/how-to-scrape-trustpilot)
+- [How to Scrape G2](https://scrapeops.io/websites/g2/how-to-scrape-g2)
+- [How to Scrape Capterra](https://scrapeops.io/websites/capterra/how-to-scrape-capterra)
+- [How to Scrape SimilarWeb](https://scrapeops.io/websites/similarweb/how-to-scrape-similarweb)
+
+---
+
+## Product Updates & Changelog
+
+- [Product Updates Overview](https://scrapeops.io/product-updates/)
+- [AI Scraper Builder Updates](https://scrapeops.io/product-updates/ai-scraper-builder/)
+- [Proxy API Aggregator Updates](https://scrapeops.io/product-updates/proxy-api-aggregator/)
+- [Residential Proxy Aggregator Updates](https://scrapeops.io/product-updates/residential-proxy-aggregator/)
+- [Structured Data APIs Updates](https://scrapeops.io/product-updates/structured-data-apis/)
+- [Parser API Updates](https://scrapeops.io/product-updates/parser-api/)
+- [Monitoring Updates](https://scrapeops.io/product-updates/monitoring/)
+- [Server Manager & Scheduler Updates](https://scrapeops.io/product-updates/server-scheduler/)
+- [MCP Server Updates](https://scrapeops.io/product-updates/mcp-server/)
+
+---
+
+## FAQ
+
+- [Monitoring FAQ](https://scrapeops.io/faq/monitoring/)
+- [Proxy API FAQ](https://scrapeops.io/faq/proxy/)
+- [Residential Proxy FAQ](https://scrapeops.io/faq/residential-proxy/)
+- [Parser API FAQ](https://scrapeops.io/faq/parser-api/)
+- [Server Scheduler FAQ](https://scrapeops.io/faq/server-scheduler/)
+- [Structured Data APIs FAQ](https://scrapeops.io/faq/structured-data-apis/)
+
+---
+
+## Legal
+
+- [Privacy Policy](https://scrapeops.io/privacy-policy/)
+- [Terms of Service](https://scrapeops.io/terms-of-service/)
+- [Data Processing Agreement](https://scrapeops.io/data-processing-agreement/)
+- [Data Protection Policy](https://scrapeops.io/data-protection-policy/)
+
+---
+
+## Quick Links
+
+- **Sign Up (Free):** https://scrapeops.io/app/register/proxy
+- **Dashboard Demo:** https://scrapeops.io/app/login/demo
+- **Affiliate Program:** https://scrapeops.io/affiliate-program/

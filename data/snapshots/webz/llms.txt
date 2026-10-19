@@ -1,0 +1,175 @@
+# Webz.io Documentation
+
+> Official product documentation, guides, API references, and tutorials for Webz.io products.
+
+## Documentation
+
+- [Webz.io](https://docs.webz.io/docs/webz): Documentation for Webz.io
+- [Start Here](https://docs.webz.io/docs/webz/start-here) — [Markdown](https://docs.webz.io/markdown/webz/start-here)
+- [Get Started](https://docs.webz.io/docs/webz/archive-get-started) — [Markdown](https://docs.webz.io/markdown/webz/archive-get-started)
+- [News, Blogs, Forums & Reviews APIs](https://docs.webz.io/docs/webz/news-blogs-forums) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums)
+- [News API](https://docs.webz.io/docs/webz/news) — [Markdown](https://docs.webz.io/markdown/webz/news)
+- [Build a Dataset](https://docs.webz.io/docs/webz/archive-build) — [Markdown](https://docs.webz.io/markdown/webz/archive-build)
+- [News Search API](https://docs.webz.io/docs/webz/news-search) — [Markdown](https://docs.webz.io/markdown/webz/news-search)
+- [API Reference](https://docs.webz.io/docs/webz/archive-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/archive-api-reference)
+- [Blogs API](https://docs.webz.io/docs/webz/blogs) — [Markdown](https://docs.webz.io/markdown/webz/blogs)
+- [Forums API](https://docs.webz.io/docs/webz/forums) — [Markdown](https://docs.webz.io/markdown/webz/forums)
+- [Firehose](https://docs.webz.io/docs/webz/firehose) — [Markdown](https://docs.webz.io/markdown/webz/firehose)
+- [API Reference](https://docs.webz.io/docs/webz/cyber-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-reference)
+- [API Reference](https://docs.webz.io/docs/webz/news-blogs-forums-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-api-reference)
+- [API Reference](https://docs.webz.io/docs/webz/reviews-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-reference)
+- [API Reference](https://docs.webz.io/docs/webz/news-search-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-reference)
+- [Cyber API](https://docs.webz.io/docs/webz/cyber-api) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api)
+- [API Reference](https://docs.webz.io/docs/webz/nhi-reference) — [Markdown](https://docs.webz.io/markdown/webz/nhi-reference): Non-Human Identities (NHI) API reference: endpoint, parameters, response, paging, errors.
+- [Data Breaches API](https://docs.webz.io/docs/webz/data-breach-api) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-api)
+- [Reviews API](https://docs.webz.io/docs/webz/reviews-api) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api)
+- [API Reference](https://docs.webz.io/docs/webz/data-breach-reference) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-reference)
+- [Framework SDKs](https://docs.webz.io/docs/webz/news-search-api-framework-sdks) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-framework-sdks)
+- [API Reference](https://docs.webz.io/docs/webz/leaked-cookies-reference) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-reference): Leaked Cookies API reference: endpoint, parameters, response, paging, errors.
+- [Leaked Cookies API](https://docs.webz.io/docs/webz/leaked-cookies-api) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-api): Leaked Cookies API: browser cookies stolen from infected employee devices and matched to your domain.
+- [Non-Human Identities (NHI) API](https://docs.webz.io/docs/webz/nhi-api) — [Markdown](https://docs.webz.io/markdown/webz/nhi-api): Non-Human Identities (NHI) API: API keys, tokens, and other machine credentials leaked from infected employee devices and matched to your domain.
+- [Domain Exposure API](https://docs.webz.io/docs/webz/domain-exposure-api) — [Markdown](https://docs.webz.io/markdown/webz/domain-exposure-api)
+- [News, Blogs, Forums & Reviews Archive](https://docs.webz.io/docs/webz/archive) — [Markdown](https://docs.webz.io/markdown/webz/archive)
+- [Web Content API (Deprecated)](https://docs.webz.io/docs/webz/web-content) — [Markdown](https://docs.webz.io/markdown/webz/web-content)
+- [What Are the News, Blogs & Forums APIs](https://docs.webz.io/docs/webz/news-blogs-forums-overview) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-overview)
+- [Introduction](https://docs.webz.io/docs/webz/nhi-what-is) — [Markdown](https://docs.webz.io/markdown/webz/nhi-what-is)
+- [About Webz.io](https://docs.webz.io/docs/webz/about-webz-io) — [Markdown](https://docs.webz.io/markdown/webz/about-webz-io)
+- [Endpoint & Authentication](https://docs.webz.io/docs/webz/leaked-cookies-endpoints) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-endpoints)
+- [Introduction](https://docs.webz.io/docs/webz/forums-api) — [Markdown](https://docs.webz.io/markdown/webz/forums-api)
+- [Query Syntax](https://docs.webz.io/docs/webz/cyber-api-query-syntax) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-query-syntax)
+- [Endpoint & Authentication](https://docs.webz.io/docs/webz/web-content-endpoint) — [Markdown](https://docs.webz.io/markdown/webz/web-content-endpoint)
+- [Introduction](https://docs.webz.io/docs/webz/leaked-cookies-what-is) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-what-is)
+- [What Is Archive](https://docs.webz.io/docs/webz/archive-what-is) — [Markdown](https://docs.webz.io/markdown/webz/archive-what-is): What Webz.io Archive is, what it covers, and who uses it.
+- [Query Syntax](https://docs.webz.io/docs/webz/news-blogs-forums-query-syntax) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-query-syntax)
+- [Curated Feed | FH API](https://docs.webz.io/docs/webz/fh-api-curated-feed) — [Markdown](https://docs.webz.io/markdown/webz/fh-api-curated-feed)
+- [Time Range](https://docs.webz.io/docs/webz/data-breach-time-range) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-time-range)
+- [Using the Archive Wizard](https://docs.webz.io/docs/webz/archive-wizard) — [Markdown](https://docs.webz.io/markdown/webz/archive-wizard): Build a dataset with the no-code Archive Wizard in three steps.
+- [Query Syntax](https://docs.webz.io/docs/webz/reviews-api-query-syntax) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-query-syntax)
+- [Archive API](https://docs.webz.io/docs/webz/archive-api) — [Markdown](https://docs.webz.io/markdown/webz/archive-api): The three-step Archive API: set the query, confirm, download.
+- [What Is the Web Content API](https://docs.webz.io/docs/webz/web-content-what-is) — [Markdown](https://docs.webz.io/markdown/webz/web-content-what-is)
+- [Endpoints & Authentication](https://docs.webz.io/docs/webz/news-search-api-endpoints) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-endpoints): Authenticate News Search API requests with a Webz API token.
+- [Python client](https://docs.webz.io/docs/webz/news-search-api-python) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-python)
+- [Introduction](https://docs.webz.io/docs/webz/news-api) — [Markdown](https://docs.webz.io/markdown/webz/news-api)
+- [Endpoint & Authentication](https://docs.webz.io/docs/webz/nhi-endpoints) — [Markdown](https://docs.webz.io/markdown/webz/nhi-endpoints)
+- [Introduction](https://docs.webz.io/docs/webz/cyber-api-what-is) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-what-is)
+- [Introduction](https://docs.webz.io/docs/webz/blogs-api) — [Markdown](https://docs.webz.io/markdown/webz/blogs-api)
+- [Introduction](https://docs.webz.io/docs/webz/news-search-api) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api): Search global news with natural-language queries and retrieve relevant article excerpts.
+- [Overview and Examples](https://docs.webz.io/docs/webz/fh-legacy-overview) — [Markdown](https://docs.webz.io/markdown/webz/fh-legacy-overview)
+- [Query Syntax](https://docs.webz.io/docs/webz/web-content-query-syntax) — [Markdown](https://docs.webz.io/markdown/webz/web-content-query-syntax)
+- [Introduction](https://docs.webz.io/docs/webz/reviews-api-what-is) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-what-is)
+- [Introduction](https://docs.webz.io/docs/webz/data-breach-what-is) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-what-is)
+- [Quickstart](https://docs.webz.io/docs/webz/blogs-api-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/blogs-api-quickstart)
+- [Request Parameters](https://docs.webz.io/docs/webz/nhi-parameters) — [Markdown](https://docs.webz.io/markdown/webz/nhi-parameters)
+- [Filters](https://docs.webz.io/docs/webz/web-content-filters) — [Markdown](https://docs.webz.io/markdown/webz/web-content-filters)
+- [Request Parameters](https://docs.webz.io/docs/webz/news-search-api-parameters) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-parameters): Reference all News Search API query, relevance, sort, and filter request parameters.
+- [Use Cases](https://docs.webz.io/docs/webz/archive-use-cases) — [Markdown](https://docs.webz.io/markdown/webz/archive-use-cases): How teams use Webz.io Archive for AI, monitoring, finance, and research.
+- [Quickstart](https://docs.webz.io/docs/webz/leaked-cookies-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-quickstart)
+- [Quickstart](https://docs.webz.io/docs/webz/news-api-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/news-api-quickstart)
+- [Use Cases](https://docs.webz.io/docs/webz/web-content-use-cases) — [Markdown](https://docs.webz.io/markdown/webz/web-content-use-cases)
+- [Endpoints & Authentication](https://docs.webz.io/docs/webz/data-breach-endpoints) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-endpoints)
+- [Quickstart](https://docs.webz.io/docs/webz/reviews-api-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-quickstart)
+- [Quickstart](https://docs.webz.io/docs/webz/data-breach-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-quickstart)
+- [Time Range & History](https://docs.webz.io/docs/webz/news-blogs-forums-time-range) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-time-range)
+- [LangChain integration](https://docs.webz.io/docs/webz/news-search-api-langchain) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-langchain): Use Webz.io Contextual News Search in LangChain and LangGraph agents with langchain-webz.
+- [Quickstart](https://docs.webz.io/docs/webz/forums-api-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/forums-api-quickstart)
+- [Time Range](https://docs.webz.io/docs/webz/cyber-api-time-range) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-time-range)
+- [Time Range](https://docs.webz.io/docs/webz/reviews-api-time-range) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-time-range)
+- [Output Format](https://docs.webz.io/docs/webz/archive-output-format) — [Markdown](https://docs.webz.io/markdown/webz/archive-output-format): Archive datasets are delivered as NDJSON inside a ZIP.
+- [Quickstart](https://docs.webz.io/docs/webz/nhi-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/nhi-quickstart)
+- [Building Queries](https://docs.webz.io/docs/webz/archive-query-filters) — [Markdown](https://docs.webz.io/markdown/webz/archive-query-filters): Archive uses the same Boolean query language and filters as the live API.
+- [Quickstart](https://docs.webz.io/docs/webz/cyber-api-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-quickstart)
+- [Request Parameters](https://docs.webz.io/docs/webz/web-content-parameters) — [Markdown](https://docs.webz.io/markdown/webz/web-content-parameters)
+- [Quickstart](https://docs.webz.io/docs/webz/news-search-api-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-quickstart): Make your first News Search API request with a natural-language news query.
+- [Request Parameters](https://docs.webz.io/docs/webz/leaked-cookies-parameters) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-parameters)
+- [Filters](https://docs.webz.io/docs/webz/reviews-api-filters) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-filters)
+- [Filters](https://docs.webz.io/docs/webz/cyber-api-filters) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-filters)
+- [Filters](https://docs.webz.io/docs/webz/blogs-api-filters) — [Markdown](https://docs.webz.io/markdown/webz/blogs-api-filters)
+- [Pricing & Credits](https://docs.webz.io/docs/webz/archive-pricing-credits) — [Markdown](https://docs.webz.io/markdown/webz/archive-pricing-credits): Archive runs on prepaid credits - one credit per post, with a free sample.
+- [Response Format](https://docs.webz.io/docs/webz/leaked-cookies-response-format) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-response-format)
+- [Quickstart](https://docs.webz.io/docs/webz/web-content-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/web-content-quickstart)
+- [Response Format](https://docs.webz.io/docs/webz/nhi-response-format) — [Markdown](https://docs.webz.io/markdown/webz/nhi-response-format)
+- [Search Scope](https://docs.webz.io/docs/webz/data-breach-scope) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-scope)
+- [Endpoints & Authentication](https://docs.webz.io/docs/webz/cyber-api-endpoints) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-endpoints)
+- [Filters](https://docs.webz.io/docs/webz/leaked-cookies-filters) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-filters)
+- [Filters](https://docs.webz.io/docs/webz/forums-api-filters) — [Markdown](https://docs.webz.io/markdown/webz/forums-api-filters)
+- [Output Format](https://docs.webz.io/docs/webz/web-content-output) — [Markdown](https://docs.webz.io/markdown/webz/web-content-output)
+- [Data Fields](https://docs.webz.io/docs/webz/archive-data-fields) — [Markdown](https://docs.webz.io/markdown/webz/archive-data-fields): The fields included in each Archive post, and which fields are excluded.
+- [Endpoints & Authentication](https://docs.webz.io/docs/webz/news-blogs-forums-endpoints) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-endpoints)
+- [Endpoints & Authentication](https://docs.webz.io/docs/webz/reviews-api-endpoints) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-endpoints)
+- [Content Types](https://docs.webz.io/docs/webz/web-content-content-types) — [Markdown](https://docs.webz.io/markdown/webz/web-content-content-types)
+- [Filters](https://docs.webz.io/docs/webz/news-api-filters) — [Markdown](https://docs.webz.io/markdown/webz/news-api-filters)
+- [LlamaIndex integration](https://docs.webz.io/docs/webz/news-search-api-llamaindex) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-llamaindex): Use Webz.io Contextual News Search in LlamaIndex agents with llama-index-tools-webz.
+- [Errors, Rate Limits & Credits](https://docs.webz.io/docs/webz/news-search-api-errors-limits) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-errors-limits): Handle News Search API validation, authentication, credit, and rate-limit errors.
+- [Quickstart](https://docs.webz.io/docs/webz/archive-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/archive-quickstart): Get your first Archive dataset with the Wizard or the API.
+- [Request Parameters](https://docs.webz.io/docs/webz/data-breach-parameters) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-parameters)
+- [Filters](https://docs.webz.io/docs/webz/news-search-api-filters) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-filters): Narrow News Search API results by language, country, source, date, sentiment, and category.
+- [Filters](https://docs.webz.io/docs/webz/nhi-filters) — [Markdown](https://docs.webz.io/markdown/webz/nhi-filters)
+- [Pagination](https://docs.webz.io/docs/webz/leaked-cookies-pagination) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-pagination)
+- [Pagination](https://docs.webz.io/docs/webz/nhi-pagination) — [Markdown](https://docs.webz.io/markdown/webz/nhi-pagination)
+- [Record Data Fields](https://docs.webz.io/docs/webz/nhi-data-fields) — [Markdown](https://docs.webz.io/markdown/webz/nhi-data-fields)
+- [Delivery](https://docs.webz.io/docs/webz/archive-delivery) — [Markdown](https://docs.webz.io/markdown/webz/archive-delivery): Archive retrieval timing and 7-day download links.
+- [Time Range & News History](https://docs.webz.io/docs/webz/web-content-time-range) — [Markdown](https://docs.webz.io/markdown/webz/web-content-time-range)
+- [Request Parameters](https://docs.webz.io/docs/webz/cyber-api-parameters) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-parameters)
+- [CrewAI integration](https://docs.webz.io/docs/webz/news-search-api-crewai) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-crewai)
+- [Post Data Fields](https://docs.webz.io/docs/webz/forums-api-post-fields) — [Markdown](https://docs.webz.io/markdown/webz/forums-api-post-fields)
+- [Post Data Fields](https://docs.webz.io/docs/webz/blogs-api-post-fields) — [Markdown](https://docs.webz.io/markdown/webz/blogs-api-post-fields)
+- [Response Format](https://docs.webz.io/docs/webz/data-breach-response-format) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-response-format)
+- [Request Parameters](https://docs.webz.io/docs/webz/reviews-api-parameters) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-parameters)
+- [Post Data Fields](https://docs.webz.io/docs/webz/news-api-post-fields) — [Markdown](https://docs.webz.io/markdown/webz/news-api-post-fields)
+- [Data Dumps (since 2008)](https://docs.webz.io/docs/webz/archive-data-dumps) — [Markdown](https://docs.webz.io/markdown/webz/archive-data-dumps): Bulk historical web data back to 2008, delivered as ZIP of JSON from AWS Glacier.
+- [Record Data Fields](https://docs.webz.io/docs/webz/leaked-cookies-data-fields) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-data-fields)
+- [Post Data Fields](https://docs.webz.io/docs/webz/web-content-data-fields) — [Markdown](https://docs.webz.io/markdown/webz/web-content-data-fields)
+- [Review Data Fields](https://docs.webz.io/docs/webz/reviews-api-data-fields) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-data-fields)
+- [Filters](https://docs.webz.io/docs/webz/data-breach-filters) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-filters)
+- [Request Parameters](https://docs.webz.io/docs/webz/news-blogs-forums-parameters) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-parameters)
+- [Post Data Fields](https://docs.webz.io/docs/webz/cyber-api-data-fields) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-data-fields)
+- [Response Format](https://docs.webz.io/docs/webz/news-search-api-response-format) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-response-format): Understand News Search API article, chunk, relevance, and credit response fields.
+- [SOCMint API](https://docs.webz.io/docs/webz/socmint-api) — [Markdown](https://docs.webz.io/markdown/webz/socmint-api)
+- [Pagination](https://docs.webz.io/docs/webz/data-breach-pagination) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-pagination)
+- [Response Format](https://docs.webz.io/docs/webz/cyber-api-response-format) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-response-format)
+- [AG2 integration](https://docs.webz.io/docs/webz/news-search-api-ag2) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-ag2)
+- [Forums MCP](https://docs.webz.io/docs/webz/forums-api-mcp) — [Markdown](https://docs.webz.io/markdown/webz/forums-api-mcp)
+- [Response Format](https://docs.webz.io/docs/webz/news-blogs-forums-response-format) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-response-format)
+- [Topics Reference](https://docs.webz.io/docs/webz/topics-reference) — [Markdown](https://docs.webz.io/markdown/webz/topics-reference)
+- [Blogs MCP](https://docs.webz.io/docs/webz/blogs-api-mcp) — [Markdown](https://docs.webz.io/markdown/webz/blogs-api-mcp)
+- [Errors, Rate Limits & Credits](https://docs.webz.io/docs/webz/nhi-errors-limits) — [Markdown](https://docs.webz.io/markdown/webz/nhi-errors-limits)
+- [Errors, Rate Limits & Credits](https://docs.webz.io/docs/webz/leaked-cookies-errors-limits) — [Markdown](https://docs.webz.io/markdown/webz/leaked-cookies-errors-limits)
+- [Response Format](https://docs.webz.io/docs/webz/reviews-api-response-format) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-response-format)
+- [MCP Server](https://docs.webz.io/docs/webz/news-search-api-mcp) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-mcp): Connect Cursor, Claude, or ChatGPT to Webz.io News Search over MCP.
+- [Limits](https://docs.webz.io/docs/webz/archive-limits) — [Markdown](https://docs.webz.io/markdown/webz/archive-limits): Archive query minimum, field availability by date, and time range.
+- [Pagination](https://docs.webz.io/docs/webz/web-content-pagination) — [Markdown](https://docs.webz.io/markdown/webz/web-content-pagination)
+- [Record Data Fields](https://docs.webz.io/docs/webz/data-breach-data-fields) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-data-fields)
+- [Vercel AI SDK integration](https://docs.webz.io/docs/webz/news-search-api-vercel-ai-sdk) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-vercel-ai-sdk)
+- [Pagination](https://docs.webz.io/docs/webz/cyber-api-pagination) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-pagination)
+- [Pagination](https://docs.webz.io/docs/webz/news-blogs-forums-pagination) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-pagination)
+- [Agent Skill](https://docs.webz.io/docs/webz/news-search-api-skill) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-skill): Teach your AI agent when and how to search news with the Webz.io agent skill.
+- [Breach Catalog](https://docs.webz.io/docs/webz/data-breach-catalog) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-catalog)
+- [Forums Segmentation MCP](https://docs.webz.io/docs/webz/forums-api-segmentation-mcp) — [Markdown](https://docs.webz.io/markdown/webz/forums-api-segmentation-mcp)
+- [Rate Limits & Errors](https://docs.webz.io/docs/webz/web-content-limits) — [Markdown](https://docs.webz.io/markdown/webz/web-content-limits)
+- [Pagination](https://docs.webz.io/docs/webz/reviews-api-pagination) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-pagination)
+- [Blogs Segmentation MCP](https://docs.webz.io/docs/webz/blogs-api-segmentation-mcp) — [Markdown](https://docs.webz.io/markdown/webz/blogs-api-segmentation-mcp)
+- [News MCP](https://docs.webz.io/docs/webz/news-api-mcp) — [Markdown](https://docs.webz.io/markdown/webz/news-api-mcp)
+- [Errors, Rate Limits & Credits](https://docs.webz.io/docs/webz/data-breach-errors-limits) — [Markdown](https://docs.webz.io/markdown/webz/data-breach-errors-limits)
+- [Segmentation API](https://docs.webz.io/docs/webz/cyber-api-segmentation) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-segmentation)
+- [Segmentation API](https://docs.webz.io/docs/webz/reviews-api-segmentation) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-segmentation)
+- [News Segmentation MCP](https://docs.webz.io/docs/webz/news-api-segmentation-mcp) — [Markdown](https://docs.webz.io/markdown/webz/news-api-segmentation-mcp)
+- [Segmentation API](https://docs.webz.io/docs/webz/news-blogs-forums-segmentation) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-segmentation)
+- [Errors, Rate Limits & Credits](https://docs.webz.io/docs/webz/reviews-api-errors-limits) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-errors-limits)
+- [Dark Cache & Images](https://docs.webz.io/docs/webz/cyber-api-cache-images) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-cache-images)
+- [Groq integration](https://docs.webz.io/docs/webz/news-search-api-groq) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-groq)
+- [Errors, Rate Limits & Credits](https://docs.webz.io/docs/webz/news-blogs-forums-errors-limits) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-errors-limits)
+- [Errors, Rate Limits & Credits](https://docs.webz.io/docs/webz/cyber-api-errors-limits) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-errors-limits)
+- [n8n integration](https://docs.webz.io/docs/webz/news-search-api-n8n) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-n8n): Use Webz.io Contextual News Search in n8n workflows and AI agents.
+- [Facts Check API](https://docs.webz.io/docs/webz/facts-check-api) — [Markdown](https://docs.webz.io/markdown/webz/facts-check-api)
+- [FAQ](https://docs.webz.io/docs/webz/cyber-api-faq) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-faq)
+- [Dify integration](https://docs.webz.io/docs/webz/news-search-api-dify) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-dify)
+- [Request Sources API](https://docs.webz.io/docs/webz/request-sources-api) — [Markdown](https://docs.webz.io/markdown/webz/request-sources-api)
+- [Apify integration](https://docs.webz.io/docs/webz/news-search-api-apify) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-apify)
+- [Introduction](https://docs.webz.io/docs/webz/fc-introduction) — [Markdown](https://docs.webz.io/markdown/webz/fc-introduction)
+- [Output Reference](https://docs.webz.io/docs/webz/fc-output-reference) — [Markdown](https://docs.webz.io/markdown/webz/fc-output-reference)
+- [Error Handling](https://docs.webz.io/docs/webz/fc-error-handling) — [Markdown](https://docs.webz.io/markdown/webz/fc-error-handling)
+- [Introduction](https://docs.webz.io/docs/webz/dea-introduction) — [Markdown](https://docs.webz.io/markdown/webz/dea-introduction)
+- [Quickstart](https://docs.webz.io/docs/webz/dea-quickstart) — [Markdown](https://docs.webz.io/markdown/webz/dea-quickstart)
+- [Response Fields](https://docs.webz.io/docs/webz/dea-response-fields) — [Markdown](https://docs.webz.io/markdown/webz/dea-response-fields)
+- [API Reference](https://docs.webz.io/docs/webz/dea-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/dea-api-reference)
+- [Use Cases](https://docs.webz.io/docs/webz/dea-use-cases) — [Markdown](https://docs.webz.io/markdown/webz/dea-use-cases)

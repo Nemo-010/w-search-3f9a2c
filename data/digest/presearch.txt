@@ -1,0 +1,4 @@
+# Presearch (presearch) category=search-engine
+home=https://presearch.com/ pricing=None docs=None llms=None
+sources_ok: 
+--- ranked fact lines ---

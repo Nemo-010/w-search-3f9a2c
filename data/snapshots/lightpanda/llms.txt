@@ -1,0 +1,144 @@
+# Lightpanda
+
+> The first headless browser built from scratch for machines, not humans. Zig-native, 10× faster, 10× less memory than Chrome headless.
+
+## What is Lightpanda?
+
+Lightpanda is a headless browser engine written in Zig, purpose-built for web automation, web scraping, and AI agents. It is not a fork or patch of an existing browser — it was created from the ground up for headless operation without rendering overhead.
+
+## Key Capabilities
+
+- **10× faster** than Chrome headless for browser automation tasks
+- **10× less memory** than Chrome via zigdom (custom Zig DOM implementation)
+- **Instant startup** — sub-100ms cold start, fully embeddable
+- **CDP compatible** — native Chrome DevTools Protocol support
+- **Playwright & Puppeteer interop** — connect via `chromium.connectOverCDP()` or `puppeteer.connect()`
+- **JavaScript execution** — V8 engine with full Web API support
+- **Request interception** — pause, modify, mock, or block HTTP requests via CDP
+- **Multi-client** — handle multiple concurrent CDP connections in a single process
+- **robots.txt support** — opt-in compliance for responsible crawling
+- **Cloud offering** — managed service at `cloud.lightpanda.io` with both Lightpanda and Chrome backends
+
+## Quick Start
+
+```javascript
+// Connect Playwright to Lightpanda
+const browser = await chromium.connectOverCDP('ws://localhost:9222');
+const page = await browser.newPage();
+await page.goto('https://example.com');
+```
+
+```javascript
+// Connect Puppeteer to Lightpanda Cloud
+const browser = await puppeteer.connect({
+  browserWSEndpoint: 'wss://cloud.lightpanda.io/ws?token=YOUR_TOKEN',
+});
+```
+
+## Architecture
+
+- **Language:** Zig (systems programming) + V8 (JavaScript)
+- **DOM:** Custom Zig-based DOM implementation (zigdom), replacing LibDOM
+- **Networking:** libcurl for HTTP/TLS
+- **Protocol:** Chrome DevTools Protocol (CDP) over WebSocket
+- **Deployment:** Single binary, single process, multi-threaded
+
+## Blog Posts (30 articles)
+
+- [Speed up your Selenium scripts: Lightpanda now speaks WebDriver](https://lightpanda.io/blog/posts/speed-up-your-selenium-tests) — 2026-10-06
+- [Lightpanda 1.0: Out of Beta and Ready for Production](https://lightpanda.io/blog/posts/lightpanda-1-0) — 2026-10-02
+- [PandaScript vs Puppeteer and Playwright](https://lightpanda.io/blog/posts/pandascript-vs-playwright-and-puppeteer) — 2026-09-15
+- [Lightpanda for Python: a browser in one pip install](https://lightpanda.io/blog/posts/lightpanda-for-python) — 2026-09-15
+- [Best Practices for Using Lightpanda](https://lightpanda.io/blog/posts/best-practices-for-using-lightpanda) — 2026-08-28
+- [The browser agent stack, explained](https://lightpanda.io/blog/posts/the-browser-agent-stack-explained) — 2026-07-06
+- [Using Lightpanda with agent-browser](https://lightpanda.io/blog/posts/using-lightpanda-with-agent-browser) — 2026-06-26
+- [Benchmarking Lightpanda’s native agent](https://lightpanda.io/blog/posts/benchmarking-native-agent) — 2026-06-19
+- [Introducing Lightpanda Agent and PandaScript: LLM at buildtime not runtime](https://lightpanda.io/blog/posts/introducing-lightpanda-agent-and-pandascript) — 2026-06-17
+- [How should we benchmark Lightpanda for AI agents?](https://lightpanda.io/blog/posts/benchmarking-lightpanda-for-agents) — 2026-06-03
+- [Lightpanda is now a browser backend in Hermes Agent](https://lightpanda.io/blog/posts/lightpanda-is-a-browser-backend-hermes-agent) — 2026-05-08
+- [How DeveloperHub.io cut prerender load by 10x](https://lightpanda.io/blog/posts/how-developerhub-io-cut-prerender-load-by-10x) — 2026-04-24
+- [The Web Automation Stack Explained](https://lightpanda.io/blog/posts/web-automation-stack-explained) — 2026-04-02
+- [Web Bot Auth Support in Lightpanda](https://lightpanda.io/blog/posts/web-bot-auth-support) — 2026-03-20
+- [New LP Domain Commands and Native MCP](https://lightpanda.io/blog/posts/lp-domain-commands-and-native-mcp) — 2026-03-11
+- [Native Markdown Output in Lightpanda](https://lightpanda.io/blog/posts/native-markdown-output) — 2026-03-05
+- [How We Built MultiClient into Lightpanda](https://lightpanda.io/blog/posts/how-we-built-multiclient) — 2026-02-27
+- [Lightpanda Now Supports robots.txt](https://lightpanda.io/blog/posts/robotstxt-support) — 2026-02-20
+- [Why Request Interception Matters](https://lightpanda.io/blog/posts/why-request-interception-matters) — 2026-02-10
+- [From Local to Real World Benchmarks](https://lightpanda.io/blog/posts/from-local-to-real-world-benchmarks) — 2026-01-27
+- [Migrating our DOM to Zig](https://lightpanda.io/blog/posts/migrating-our-dom-to-zig) — 2026-01-08
+- [Why We Built Lightpanda in Zig](https://lightpanda.io/blog/posts/why-we-built-lightpanda-in-zig) — 2025-12-05
+- [CDP Under the Hood: A Deep Dive](https://lightpanda.io/blog/posts/cdp-under-the-hood) — 2025-11-28
+- [The Real Cost of JavaScript: Why Web Automation Isn't What It Used to Be](https://lightpanda.io/blog/posts/the-real-cost-of-javascript) — 2025-11-24
+- [What Is a True Headless Browser?](https://lightpanda.io/blog/posts/what-is-a-true-headless-browser) — 2025-11-14
+- [CDP vs Playwright vs Puppeteer: Is This the Wrong Question?](https://lightpanda.io/blog/posts/cdp-vs-playwright-vs-puppeteer-is-this-the-wrong-question) — 2025-11-07
+- [Browser security in the age of AI agents](https://lightpanda.io/blog/posts/browser-security-in-the-age-of-ai-agents) — 2025-08-29
+- [Lightpanda browser now uses libcurl](https://lightpanda.io/blog/posts/lightpanda-browser-now-uses-libcurl) — 2025-07-16
+- [Lightpanda raises pre-seed  to develop the first browser built for machines and AI](https://lightpanda.io/blog/posts/lightpanda-raises-preseed) — 2025-06-10
+- [Why build a new browser?  From intuition to reality](https://lightpanda.io/blog/posts/why-build-a-new-browser) — 2025-05-28
+
+> Full blog content available at [https://lightpanda.io/blog/llms-full.txt](https://lightpanda.io/blog/llms-full.txt)
+
+## Documentation (46 pages)
+
+- [Introduction](https://lightpanda.io/docs/)
+- [Architecture Overview](https://lightpanda.io/docs/core-concepts/architecture-overview)
+- [Benchmarks](https://lightpanda.io/docs/core-concepts/benchmarks)
+- [When to Use Local vs Cloud](https://lightpanda.io/docs/core-concepts/local-vs-cloud)
+- [What Is Lightpanda?](https://lightpanda.io/docs/core-concepts/what-is-lightpanda)
+- [Use a proxy](https://lightpanda.io/docs/guides/configure-a-proxy)
+- [Interact with a webpage](https://lightpanda.io/docs/guides/interact-with-a-webpage)
+- [Use Lightpanda Agent](https://lightpanda.io/docs/guides/lightpanda-agent-tutorial)
+- [Markdown and AXTree](https://lightpanda.io/docs/guides/markdown-axtree)
+- [Retrieve an HTML webpage](https://lightpanda.io/docs/guides/retrieve-an-html-webpage)
+- [Use Hermes Agent](https://lightpanda.io/docs/guides/use-hermes)
+- [Use the Python SDK](https://lightpanda.io/docs/guides/use-python)
+- [Use Stagehand](https://lightpanda.io/docs/guides/use-stagehand)
+- [Agent](https://lightpanda.io/docs/quickstarts/agent)
+- [MCP](https://lightpanda.io/docs/quickstarts/mcp)
+- [Puppeteer, Playwright & other client libraries](https://lightpanda.io/docs/quickstarts/puppeteer-playwright-clients)
+- [Skill](https://lightpanda.io/docs/quickstarts/skill)
+- [CLI Reference](https://lightpanda.io/docs/reference/cli)
+- [Agent](https://lightpanda.io/docs/reference/cli/agent)
+- [Common Options](https://lightpanda.io/docs/reference/cli/common-options)
+- [Fetch](https://lightpanda.io/docs/reference/cli/fetch)
+- [MCP](https://lightpanda.io/docs/reference/cli/mcp)
+- [Serve](https://lightpanda.io/docs/reference/cli/serve)
+- [HTTP API](https://lightpanda.io/docs/reference/http-api)
+- [MCP tools](https://lightpanda.io/docs/reference/mcp-tools)
+- [PandaScript Reference](https://lightpanda.io/docs/reference/pandascript)
+- [Python SDK](https://lightpanda.io/docs/reference/python)
+- [Commands](https://lightpanda.io/docs/run-locally/commands)
+- [Build from sources](https://lightpanda.io/docs/run-locally/installation/build-from-sources)
+- [Docker](https://lightpanda.io/docs/run-locally/installation/docker)
+- [Nightly builds](https://lightpanda.io/docs/run-locally/installation/nightly-builds)
+- [One-liner](https://lightpanda.io/docs/run-locally/installation/one-liner)
+- [Package managers](https://lightpanda.io/docs/run-locally/installation/package-managers)
+- [Systems requirements](https://lightpanda.io/docs/run-locally/installation/system-requirements)
+- [Getting started](https://lightpanda.io/docs/run-on-lightpanda-cloud/getting-started)
+- [Limits and billing](https://lightpanda.io/docs/run-on-lightpanda-cloud/limits-and-billing)
+- [Playground](https://lightpanda.io/docs/run-on-lightpanda-cloud/playground)
+- [Agent](https://lightpanda.io/docs/usage/agent)
+- [API](https://lightpanda.io/docs/usage/api)
+- [Puppeteer (BiDi)](https://lightpanda.io/docs/usage/bidi/puppeteer)
+- [Selenium (WebDriver)](https://lightpanda.io/docs/usage/bidi/selenium)
+- [Chromedp](https://lightpanda.io/docs/usage/cdp/chromedp)
+- [Playwright](https://lightpanda.io/docs/usage/cdp/playwright)
+- [Puppeteer](https://lightpanda.io/docs/usage/cdp/puppeteer)
+- [MCP](https://lightpanda.io/docs/usage/mcp)
+- [PandaScript](https://lightpanda.io/docs/usage/pandascript)
+
+> Full docs content available at [https://lightpanda.io/docs/llms-full.txt](https://lightpanda.io/docs/llms-full.txt)
+
+## Links
+
+- [Website](https://lightpanda.io)
+- [Documentation](https://lightpanda.io/docs)
+- [Blog](https://lightpanda.io/blog)
+- [GitHub](https://github.com/lightpanda-io/browser)
+- [npm package](https://www.npmjs.com/package/@lightpanda/browser)
+- [Discord](https://discord.gg/K63XeymfB5)
+- [Cloud Console](https://console.lightpanda.io)
+
+## Team
+
+Founded by Francis Bouvier (CEO), Katie Brown (COO) and Pierre Tachoire (CTO). Pre-seed funded, backed by ISAI with angel investors from Mistral, Hugging Face, and Dust.

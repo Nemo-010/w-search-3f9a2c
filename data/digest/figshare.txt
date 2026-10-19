@@ -1,0 +1,11 @@
+# Figshare API (figshare) category=academic
+home=https://docs.figshare.com/ pricing=None docs=https://docs.figshare.com/ llms=None
+sources_ok: docs:https://docs.figshare.com/
+--- ranked fact lines ---
+[docs] Any of these tokens can be used to authenticate and there are 2 options
+[docs] GET /v2/token HTTP/1.1
+[docs] GET /v2/token?access_token=ACCESS_TOKEN HTTP/1.1
+[docs] GET /v3/token HTTP/1.1
+[docs] GET /v3/token?access_token=ACCESS_TOKEN HTTP/1.1
+[docs] resumption tokens. Thus, a token expires after 60 minutes.
+[docs] feel free to open up a pull request.

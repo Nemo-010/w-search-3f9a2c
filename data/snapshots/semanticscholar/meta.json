@@ -1,0 +1,59 @@
+{
+ "slug": "semanticscholar",
+ "name": "Semantic Scholar",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:42+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.semanticscholar.org/product/api",
+   "status": 200,
+   "final_url": "https://www.semanticscholar.org/product/api",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 38434,
+   "truncated": false,
+   "sha256": "e44e94c49f3dee8af281fddfb7ee132609f55ebed7d97ef574d6ba9a3307fb33",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 5464
+  },
+  "docs-err-fc416a": {
+   "url": "https://api.semanticscholar.org/api-docs/",
+   "status": 429,
+   "final_url": "https://api.semanticscholar.org/api-docs/",
+   "content_type": "text/html",
+   "bytes": 144,
+   "truncated": false,
+   "sha256": "c8295f3fa9888603f8c61f8e996b71b175fb6468cef3b88b257e47ea5cd27e1e",
+   "fetched_at": "2026-10-19T05:54:42+00:00"
+  },
+  "llms-err-4bf9ca": {
+   "url": "https://api.semanticscholar.org/api-docs/llms.txt",
+   "status": 429,
+   "final_url": "https://api.semanticscholar.org/api-docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 144,
+   "truncated": false,
+   "sha256": "c8295f3fa9888603f8c61f8e996b71b175fb6468cef3b88b257e47ea5cd27e1e",
+   "fetched_at": "2026-10-19T05:54:43+00:00"
+  },
+  "llms-err-b57ba3": {
+   "url": "https://www.semanticscholar.org/product/api/llms.txt",
+   "status": 404,
+   "final_url": "https://www.semanticscholar.org/product/api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 8798,
+   "truncated": false,
+   "sha256": "c487ea88ccae4758fd6510ed6f5a55aad60a4508401bed26e5b50fa23ac5e73d",
+   "fetched_at": "2026-10-19T05:54:43+00:00"
+  },
+  "llms-err-438504": {
+   "url": "https://www.semanticscholar.org/product/api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.semanticscholar.org/product/api/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 8798,
+   "truncated": false,
+   "sha256": "c487ea88ccae4758fd6510ed6f5a55aad60a4508401bed26e5b50fa23ac5e73d",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  }
+ }
+}

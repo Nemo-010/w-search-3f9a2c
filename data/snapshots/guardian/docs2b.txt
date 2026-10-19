@@ -1,0 +1,32 @@
+The Guardian - Open Platform - Get Started 
+ Get Started 
+ Explore 
+ Documentation 
+ Support 
+ Terms 
+ Get Started
+ Choose the level of access you need 
+ How it works 
+ The Open Platform is a public web service for accessing all the content the Guardian creates, categorised by tags and section. To get started, You need an key to successfully authenticate against the API. 
+ Choose the level of access required for your application: 
+ Developer 
+ This key is for any non-commercial usage of the content, such as student dissertations, hackathons, nonprofit app developers. 
+ Up to 1 call per second 
+ Up to 500 calls per day 
+ Access to article text 
+ Access to over 1,900,000 pieces of content 
+ Free for non-commercial usage 
+ Register developer key 
+ Commercial 
+ This key is for all use cases by commercial enterprises and developers wishing to utilise Guardian journalism in any manner. In addition to app development and publishing content on third party sites, use cases may also include but are not limited to: training models for generative artificial intelligence services, text and data mining solutions, sentiment analysis where content is not reproduced, and any and all products and services derived or sourced from Guardian content. 
+ Custom throttle limit 
+ Custom quota limit 
+ Access to article text, images, audio and videos 
+ Access to entire Guardian content store 
+ Price dependent on usage 
+ Request commercial key 
+ Support 
+ Developer Blog 
+ Join Us 
+ Follow Us 
+ © 2026 Guardian News and Media Limited or its affiliated companies. All rights reserved.

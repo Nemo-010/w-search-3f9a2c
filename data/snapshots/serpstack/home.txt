@@ -1,0 +1,476 @@
+Free Real-Time Google Search API | serpstack 
+ Pricing 
+ Documentation 
+ FAQ 
+ Affiliates 
+ Blog 
+ Status 
+ Log In 
+ Sign Up Free 
+ Real-Time & Accurate 
+ Google Search Results API
+ Lightning-fast JSON REST API for SERP data trusted by some of the largest brands worldwide 
+ Trusted & Rated ★★★★★ 5/5 on 
+ Start using the API — It's free! 
+ Full Search Engine Coverage: 
+ Scalable & Queueless 
+ Our powerful cloud infrastructure is built to withstand high volume API requests without the need of a queue. 
+ Highly Customizable 
+ Tailor your automated search queries based on a series of options, including location, language, device, and more. 
+ Powerful Proxy Network 
+ Forget worrying about global IPs, browser clusters or CAPTCHAs — our SERP scraping API has got you covered. 
+ Easy on Your Budget 
+ Up to 100 monthly requests are free. As soon as you need more, API premium plans start at only $29.99 a month. 
+ APILayer The unified suite 
+ One account, one API key, one dashboard, one bill - across a growing library of APIs. 
+ Browse All APIs
+ No credit card needed. 
+ Aviationstack 
+ Mailboxlayer 
+ Positionstack 
+ Ipstack 
+ Marketstack 
+ Scrapestack 
+ Countrylayer 
+ Mediastack 
+ Serpstack 
+ Leverage the power of world-class SERP API technology 
+ From a few hundred searches per month all the way to millions per day — our rock-solid infrastructure has got your back. 
+{
+ "request": {
+ "success": true,
+ "processed_timestamp": 1566207832,
+ "search_url": "https://www.google.com/search?q=mcdonalds",
+ "total_time_taken": 1.5
+ },
+ "search_parameters": {
+ "engine": "google",
+ "query": "mcdonalds",
+ "domain": "google.com",
+ "device": "desktop"
+ },
+ "search_information": {
+ "total_results": 759000000,
+ "time_taken_displayed": 0.91,
+ "query_displayed": "mcdonalds"
+ },
+ "ads": [
+ {
+ "position": 1,
+ "block_position": "top",
+ "title": "McDonald's® Official Website | McDonald's® BOGO For $1 Deal",
+ "url": "https://www.mcdonalds.com/us/en-us.html",
+ "tracking_url": "https://www.google.com/aclk?sa=l&ai=DChcSEwigxKaC9JPkAhXNH60GHUCAA7IYABAAGgJwdg&sig=AOD64_1jDZ28TbK4pwQUBZNbv5cwdPsm5g&q=&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ0Qx6BAgWEAE&adurl=",
+ "displayed_url": "www.mcdonalds.com/",
+ "description": "Big Mac®, Filet-O-Fish®, & Quarter Pounder® With Cheese Included! At Part. McD. Types: Big Mac®, Filet-O-Fish®, Chicken McNuggets®, Quarter Pounder® Burger.",
+ "sitelinks": [
+ {
+ "title": "See Our Full Menu",
+ "link": "https://www.mcdonalds.com/us/en-us/full-menu.html?cid=PS:GCM_Ret::Google::Sitelink:See_Our_Full_Menu"
+ },
+ {
+ "title": "Beverages",
+ "link": "https://www.mcdonalds.com/us/en-us/full-menu/drinks.html?cid=PS:GCM_Ret::Google::Sitelink:Beverages"
+ },
+ {
+ "title": "Store Locator",
+ "link": "https://www.mcdonalds.com/us/en-us/restaurant-locator.html?cid=PS:GCM_Ret::Google::Sitelink:Store_Locator"
+ },
+ {
+ "title": "World Famous Fries®",
+ "link": "https://www.mcdonalds.com/us/en-us/product/small-french-fries.html?cid=PS:GCM_Ret::Google::Sitelink:World_Famous_Fries%C2%AE"
+ }
+ ]
+ }
+ ],
+ "local_map": {
+ "url": "https://www.google.com/search?q=mcdonalds&npsic=0&rflfq=1&rldoc=1&rlha=0&rllag=41879445,-87632787,247&tbm=lcl&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQtgN6BAgKEAQ",
+ "coordinates": {
+ "latitude": 41.879445,
+ "longitude": -87.632787
+ },
+ "image": "https://www.google.comdata:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+ },
+ "local_results": [
+ {
+ "position": 1,
+ "title": "McDonald's",
+ "detail": "(312) 922-1648",
+ "address": "111 Jackson Blvd",
+ "url": "http://www.mcdonalds.com/"
+ },
+ {
+ "position": 2,
+ "title": "McDonald's",
+ "detail": "(312) 922-1648",
+ "address": "233 W Jackson Blvd",
+ "url": "https://www.mcdonalds.com/us/en-us/location/IL/CHICAGO/233-W-JACKSON/26364.html?cid=RF:YXT:GMB::Clicks"
+ },
+ {
+ "position": 3,
+ "title": "McDonald's",
+ "detail": "(312) 580-0214",
+ "address": "23 S Clark St",
+ "url": "https://www.mcdonalds.com/us/en-us/location/IL/CHICAGO/23-S-CLARK/31049.html?cid=RF:YXT:GMB::Clicks"
+ }
+ ],
+ "knowledge_graph": {
+ "title": "McDonald's",
+ "detail": "Fast food company",
+ "url": "https://www.mcdonalds.com/us/en-us.html",
+ "image_url": "https://cache.serpstack.com/image/53s261f82d23438d0308b638cfc2f2dkldfjh4505.png",
+ "description": "McDonald's Corporation is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, California, United States.",
+ "source": {
+ "name": "Wikipedia",
+ "url": "https://en.wikipedia.org/wiki/McDonald%27s"
+ },
+ "founded": "April 15, 1955, San Bernardino, California, United States",
+ "headquarters": "Chicago, Illinois, United States",
+ "founders": [
+ {
+ "name": "Maurice McDonald"
+ },
+ {
+ "name": "Richard McDonald"
+ }
+ ],
+ "subsidiaries": [
+ {
+ "name": "McCafé"
+ },
+ {
+ "name": "McDonald's France"
+ },
+ {
+ "name": "McDonald's Canada"
+ }
+ ],
+ "did_you_know": "McDonald's is the second-largest fast food restaurant chain by number of locations in the world (37,855+).",
+ "profiles": [
+ {
+ "name": "Instagram",
+ "url": "https://www.instagram.com/mcdonaldsitalia"
+ },
+ {
+ "name": "Twitter",
+ "url": "https://twitter.com/mcdonalds"
+ },
+ {
+ "name": "Pinterest",
+ "url": "http://www.pinterest.com/mcdonalds"
+ },
+ {
+ "name": "Tumblr",
+ "url": "http://mcdonalds.tumblr.com/"
+ },
+ {
+ "name": "SoundCloud",
+ "url": "https://soundcloud.com/mcdonalds-deutschland"
+ }
+ ],
+ "people_also_search_for": [
+ {
+ "name": "Burger King",
+ "url": "https://www.google.com/search?q=Burger+King&stick=H4sIAAAAAAAAAONgFuLUz9U3ME-vLDBXAjMNzQwMC7X4nfNzCxLzKoMzU1LLEyuLF7FyO5UWpacWKXhn5qXvYGUEAMKI3Tg6AAAA&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQxA0wJnoECBMQBQ"
+ },
+ {
+ "name": "Wendy's",
+ "url": "https://www.google.com/search?q=Wendy%27s&stick=H4sIAAAAAAAAAONgFuLUz9U3ME-vLDBX4gAxLcyq8rT4nfNzCxLzKoMzU1LLEyuLF7Gyh6fmpVSqF-9gZQQAASWM9jUAAAA&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQxA0wJnoECBMQBw"
+ }
+ {
+ "name": "Taco Bell",
+ "url": "https://www.google.com/search?q=Taco+Bell&stick=H4sIAAAAAAAAAONgFuLUz9U3ME-vLDBX4gAxLZPTzbT4nfNzCxLzKoMzU1LLEyuLF7FyhiQm5ys4pebk7GBlBADrc6iUNwAAAA&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQxA0wJnoECBMQCQ"
+ },
+ {
+ "name": "Chick‑fil‑A",
+ "url": "https://www.google.com/search?q=Chick-fil-A&stick=H4sIAAAAAAAAAONgFuLUz9U3ME-vLDBXAjONkpNLCrX4nfNzCxLzKoMzU1LLEyuLF7FyO2dkJmfrpmXm6DruYGUEALO9zKs6AAAA&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQxA0wJnoECBMQCw"
+ },
+ {
+ "name": "KFC",
+ "url": "https://www.google.com/search?q=KFC&stick=H4sIAAAAAAAAAONgFuLUz9U3ME-vLDBX4gAxLZPMSrT4nfNzCxLzKoMzU1LLEyuLF7Eye7s572BlBAB6kBo3MQAAAA&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQxA0wJnoECBMQDQ"
+ }
+ ]
+ },
+ "related_searches": [
+ {
+ "query": "mcdonalds burger",
+ "url": "https://www.google.com/search?q=mcdonalds+burger&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ1QIoAHoECBUQAQ"
+ },
+ {
+ "query": "mcdonalds menu prices",
+ "url": "https://www.google.com/search?q=mcdonalds+menu+prices&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ1QIoAXoECBUQAg"
+ },
+ {
+ "query": "mcdonalds breakfast",
+ "url": "https://www.google.com/search?q=mcdonalds+breakfast&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ1QIoAnoECBUQAw"
+ },
+ {
+ "query": "mcdonalds application",
+ "url": "https://www.google.com/search?q=mcdonalds+application&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ1QIoA3oECBUQBA"
+ },
+ {
+ "query": "mcdonalds wifi",
+ "url": "https://www.google.com/search?q=mcdonalds+wifi&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ1QIoBHoECBUQBQ"
+ },
+ {
+ "query": "mcdonalds number",
+ "url": "https://www.google.com/search?q=mcdonalds+number&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ1QIoBXoECBUQBg"
+ },
+ {
+ "query": "mcdonalds near me",
+ "url": "https://www.google.com/search?q=mcdonalds+near+me&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ1QIoBnoECBUQBw"
+ },
+ {
+ "query": "mcdonalds dollar menu",
+ "url": "https://www.google.com/search?q=mcdonalds+dollar+menu&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ1QIoB3oECBUQCA"
+ }
+ ],
+ "related_questions": [
+ {
+ "question": "Is it McDonalds or McDonald's?",
+ "answer": "McDonald's, in full McDonald's Corporation, American fast-food chain that is one of the largest in the world, known for its hamburgers. Its headquarters are in Oak Brook, Illinois. The first McDonald's restaurant was started in 1948 by brothers Maurice (“Mac”) and Richard McDonald in San Bernardino, California.",
+ "title": "McDonald's | History & Facts | Britannica.com",
+ "url": "https://www.britannica.com/topic/McDonalds",
+ "displayed_url": "https://www.britannica.com › topic › McDonalds"
+ },
+ {
+ "question": "Are the McDonald's brothers still alive?",
+ "answer": "Deaths. Maurice J. McDonald died in Riverside, California, on December 11, 1971, at the age of 69. His younger brother, Richard, died in Manchester, New Hampshire, on July 14, 1998, at the age of 89.",
+ "title": "Richard and Maurice McDonald | McDonald's Wiki | FANDOM ...",
+ "url": "https://mcdonalds.fandom.com/wiki/Richard_and_Maurice_McDonald",
+ "displayed_url": "https://mcdonalds.fandom.com › wiki › Richard_and_Maurice_McDonald"
+ },
+ {
+ "question": "What's on the 2 for 4 menu at McDonald's?",
+ "answer": "The 2 for $4 Mix & Match deal includes your choice of any two breakfast sandwiches from a select menu of three items: the Sausage McMuffin with Egg, Bacon, Egg & Cheese McGriddle, and Bacon, Egg & Cheese Biscuit.Mar 20, 2018",
+ "title": "McDonald's Serves Up 2 Breakfast Sandwiches For $4 As Part Of ...",
+ "url": "https://www.chewboom.com/2018/03/20/mcdonalds-serves-up-2-breakfast-sandwiches-for-4-as-part-of-new-2-for-4-mix-match-deal/",
+ "displayed_url": "https://www.chewboom.com › 2018/03/20 › mcdonalds-serves-up-2-breakfa..."
+ },
+ {
+ "question": "Why is McDonald's so popular?",
+ "answer": "Was the Reason for McDonald's Success Because They Created a Better Hamburger or Because They Created a Better System for Their Business? The fast food industry today has grown from over $6 billion in sales in 1970 to over $100 billion today in the United States.Feb 2, 2017",
+ "title": "Was the Reason for McDonald's Success Because They Created a ...",
+ "url": "http://www.gr-us.com/was-the-reason-for-mcdonald%E2%80%99s-success-because-they-created-a-better-hamburger-or-because-they-created-a-better-system-for-their-business/",
+ "displayed_url": "www.gr-us.com › was-the-reason-for-mcdonald’s-success-because-they-creat..."
+ }
+ ],
+ "organic_results": [
+ {
+ "position": 1,
+ "title": "McDonald's: Burgers, Fries & More. Quality Ingredients.",
+ "url": "https://www.mcdonalds.com/us/en-us.html",
+ "displayed_url": "https://www.mcdonalds.com › en-us",
+ "snippet": "McDonalds.com is your hub for everything McDonald's. Find out more about our menu items and promotions today!",
+ "sitelinks": {
+ "inline": [
+ {
+ "title": "Careers",
+ "url": "https://www.mcdonalds.com/us/en-us/careers.html"
+ },
+ {
+ "title": "McDonald's",
+ "url": "https://www.mcdonalds.com/us/en-us/contact-us.html"
+ },
+ {
+ "title": "Arch Card",
+ "url": "https://www.mcdonalds.com/us/en-us/services/arch-card.html"
+ },
+ {
+ "title": "Restaurant Feedback",
+ "url": "https://www.mcdonalds.com/us/en-us/contact-us/restaurant-feedback.html"
+ }
+ ]
+ },
+ "cached_page_url": "https://webcache.googleusercontent.com/search?q=cache:MkoRvNGAywMJ:https://www.mcdonalds.com/us/en-us.html+&cd=1&hl=en&ct=clnk&gl=us"
+ },
+ {
+ "position": 2,
+ "title": "McDonald's Menu: Our Full McDonald's Food Menu | McDonald's",
+ "url": "https://www.mcdonalds.com/us/en-us/full-menu.html",
+ "displayed_url": "https://www.mcdonalds.com › en-us › full-menu",
+ "snippet": "Before your next McDonald's trip, take a tour of our full McDonald's Menu. Check out our breakfast, burgers, and more!",
+ "cached_page_url": "https://webcache.googleusercontent.com/search?q=cache:uCSdBxeNmPEJ:https://www.mcdonalds.com/us/en-us/full-menu.html+&cd=5&hl=en&ct=clnk&gl=us",
+ "related_pages_url": "https://www.google.com/search?q=related:https://www.mcdonalds.com/us/en-us/full-menu.html+mcdonalds&tbo=1&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQHzAEegQIABAG"
+ },
+ {
+ "position": 3,
+ "title": "Visit our chicago,600 n clark, IL Location | McDonald's",
+ "url": "https://www.mcdonalds.com/us/en-us/location/il/chicago/600-n-clark/6676.html?cid=RF:YXT:GMB::Clicks",
+ "displayed_url": "https://www.mcdonalds.com › en-us › location › chicago › 600-n-clark",
+ "snippet": "Find store hours and information about McDonald's in chicago,600 n clark. Come enjoy a tasty meal at a McDonald's near you!",
+ "cached_page_url": "https://webcache.googleusercontent.com/search?q=cache:TIEsMb2GbvkJ:https://www.mcdonalds.com/us/en-us/location/il/chicago/600-n-clark/6676.html%3Fcid%3DRF:YXT:GMB::Clicks+&cd=6&hl=en&ct=clnk&gl=us"
+ },
+ {
+ "position": 4,
+ "title": "McDonald's - Wikipedia",
+ "url": "https://en.wikipedia.org/wiki/McDonald%27s",
+ "displayed_url": "https://en.wikipedia.org › wiki › McDonald's",
+ "snippet": "McDonald's Corporation is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, ...",
+ "rich_snippet": {
+ "bottom": {
+ "detected_extensions": {
+ "number_of_employees": 210000,
+ "total_assets_us_billion": 32811,
+ "number_of_locations_restaurants": 37855,
+ "total_equity_us_billion": 6258
+ },
+ "extensions": [
+ "Number of employees‎: ‎~ 210,000 (2018)",
+ "Total assets‎: ‎US$32.811 billion (2018)",
+ "Number of locations‎: ‎37,855 restaurants (2018)",
+ "Total equity‎: ‎US$-6.258 billion (2018)"
+ ]
+ }
+ },
+ "cached_page_url": "https://webcache.googleusercontent.com/search?q=cache:tg3qNrQIjRwJ:https://en.wikipedia.org/wiki/McDonald%2527s+&cd=10&hl=en&ct=clnk&gl=us",
+ "related_pages_url": "https://www.google.com/search?q=related:https://en.wikipedia.org/wiki/McDonald%2527s+mcdonalds&tbo=1&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQHzAJegQIBBAG"
+ },
+ {
+ "position": 5,
+ "title": "McDonald's (@McDonalds) | Twitter",
+ "url": "https://twitter.com/mcdonalds?lang=en",
+ "displayed_url": "https://twitter.com › mcdonalds",
+ "snippet": "The latest Tweets from McDonald's (@McDonalds). Welcome to McDonald's USA Twitter page! Follow @McDonaldsCorp for company + biz updates.",
+ "cached_page_url": "https://webcache.googleusercontent.com/search?q=cache:hbnCUNvUjxIJ:https://twitter.com/mcdonalds%3Flang%3Den+&cd=11&hl=en&ct=clnk&gl=us",
+ "related_pages_url": "https://www.google.com/search?q=related:https://twitter.com/mcdonalds%3Flang%3Den+mcdonalds&tbo=1&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQHzAKegQIBhAG"
+ },
+ {
+ "position": 6,
+ "title": "McDonald's - Home | Facebook",
+ "url": "https://www.facebook.com/McDonalds/",
+ "displayed_url": "https://www.facebook.com › ... › Restaurant › Burger Restaurant",
+ "snippet": "McDonald's - - Rated 1.6 based on 567 Reviews \"Went to your McD in ceres today to get a fruit parfait for breakfast. The only thing i got was cup f...\"",
+ "rich_snippet": {
+ "top": {
+ "detected_extensions": {
+ "rating": 1.6,
+ "votes": 567
+ },
+ "extensions": [
+ "Rating: 1.6",
+ "567 votes"
+ ]
+ }
+ },
+ "cached_page_url": "https://webcache.googleusercontent.com/search?q=cache:WVsdGFE-qYkJ:https://www.facebook.com/McDonalds/+&cd=20&hl=en&ct=clnk&gl=us",
+ "related_pages_url": "https://www.google.com/search?q=related:https://www.facebook.com/McDonalds/+mcdonalds&tbo=1&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQHzATegQIBRAH"
+ },
+ {
+ "position": 7,
+ "title": "McDonald's - 117 Photos & 91 Reviews - Fast Food - 10 E Chicago ...",
+ "url": "https://www.yelp.com/biz/mcdonalds-chicago-34",
+ "displayed_url": "https://www.yelp.com › Restaurants › Burgers",
+ "snippet": "91 reviews of McDonald's \"Progress- I decided to give it another try-so I came here on Sunday afternoon to try the new International (Canadian) Mozzarella ...",
+ "rich_snippet": {
+ "top": {
+ "detected_extensions": {
+ "rating": 2,
+ "reviews": 91,
+ "price": 10,
+ "price_range_under": 10
+ },
+ "extensions": [
+ "Rating: 2",
+ "91 reviews",
+ "Price range: Under $10"
+ ]
+ }
+ },
+ "related_pages_url": "https://www.google.com/search?q=related:https://www.yelp.com/biz/mcdonalds-chicago-34+mcdonalds&tbo=1&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQHzAUegQICBAG"
+ },
+ {
+ "position": 8,
+ "title": "McDonald's - 2019 All You Need to Know BEFORE You Go (with ...",
+ "url": "https://www.yelp.com/biz/mcdonalds-chicago-178",
+ "displayed_url": "https://www.yelp.com › Food › Coffee & Tea",
+ "snippet": "368 reviews of McDonald's \"Ever walk into a McD and think, this is way to fancy for a McDonald's, that is this location. Street meter parking. Huge location, lots of ...",
+ "rich_snippet": {
+ "top": {
+ "detected_extensions": {
+ "rating": 2.5,
+ "reviews": 368,
+ "price": 10,
+ "price_range_under": 10
+ },
+ "extensions": [
+ "Rating: 2.5",
+ "368 reviews",
+ "Price range: Under $10"
+ ]
+ }
+ },
+ "related_pages_url": "https://www.google.com/search?q=related:https://www.yelp.com/biz/mcdonalds-chicago-178+mcdonalds&tbo=1&sa=X&ved=2ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQHzAVegQICRAG"
+ },
+ {
+ "position": 9,
+ "title": "Inside McDonald's Giant Modern Chicago Flagship, Now Open in ...",
+ "url": "https://chicago.eater.com/2018/8/9/17670960/mcdonalds-flagship-restaurant-photos-chicago-downtown-energy-modern-images-open-river-north",
+ "displayed_url": "https://chicago.eater.com › mcdonalds-flagship-restaurant-photos-chicago-...",
+ "date": "Aug 9, 2018",
+ "snippet": "McDonald's is in the midst of a brand rebirth, and as much as the company talks about improvements in its food, like fresh beef, they can ...",
+ "cached_page_url": "https://webcache.googleusercontent.com/search?q=cache:_B__PgSOL_AJ:https://chicago.eater.com/2018/8/9/17670960/mcdonalds-flagship-restaurant-photos-chicago-downtown-energy-modern-images-open-river-north+&cd=23&hl=en&ct=clnk&gl=us"
+ }
+ ],
+ "pagination": {
+ "current_page": 1,
+ "next_page_url": "https://www.google.com/search?q=mcdonalds&ei=ODFdXcnbCI_0tAWo66XIBA&start=10&sa=N&ved=0ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ8NMDCMYC",
+ "other_page_urls": {
+ "2": "https://www.google.com/search?q=mcdonalds&ei=ODFdXcnbCI_0tAWo66XIBA&start=10&sa=N&ved=0ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ8tMDCLQC",
+ "3": "https://www.google.com/search?q=mcdonalds&ei=ODFdXcnbCI_0tAWo66XIBA&start=20&sa=N&ved=0ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ8tMDCLYC",
+ "4": "https://www.google.com/search?q=mcdonalds&ei=ODFdXcnbCI_0tAWo66XIBA&start=30&sa=N&ved=0ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ8tMDCLgC",
+ "5": "https://www.google.com/search?q=mcdonalds&ei=ODFdXcnbCI_0tAWo66XIBA&start=40&sa=N&ved=0ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ8tMDCLoC",
+ "6": "https://www.google.com/search?q=mcdonalds&ei=ODFdXcnbCI_0tAWo66XIBA&start=50&sa=N&ved=0ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ8tMDCLwC",
+ "7": "https://www.google.com/search?q=mcdonalds&ei=ODFdXcnbCI_0tAWo66XIBA&start=60&sa=N&ved=0ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ8tMDCL4C",
+ "8": "https://www.google.com/search?q=mcdonalds&ei=ODFdXcnbCI_0tAWo66XIBA&start=70&sa=N&ved=0ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ8tMDCMAC",
+ "9": "https://www.google.com/search?q=mcdonalds&ei=ODFdXcnbCI_0tAWo66XIBA&start=80&sa=N&ved=0ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ8tMDCMIC",
+ "10": "https://www.google.com/search?q=mcdonalds&ei=ODFdXcnbCI_0tAWo66XIBA&start=90&sa=N&ved=0ahUKEwjJ15uC9JPkAhUPOq0KHah1CUkQ8tMDCMQC"
+ }
+ }
+}
+ For the full set of options and parameters please have a look at our API documentation. 
+ API Documentation 
+ Simple Integration 
+ It only takes a few minutes to start scraping SERP pages at scale using custom locations, devices, languages, and more. 
+ Bank-Level Security 
+ All data streams sent from and to the serpstack API are protected using bank-grade 256-bit SSL Encryption. 
+ World-Class Support 
+ Technical questions? Our trained team of specialists is here to assist you with any requests you might have. 
+ JSON & CSV 
+ An easy-to-use REST API responding in JSON or CSV, compatible with any programming language. 
+ Unparalleled Speed 
+ Never compromise on speed — API requests sent to serpstack are processed in a matter of milliseconds. 
+ Extensive Documentation 
+ An extensive API documentation is waiting to be explored and to get you started within just a few minutes. 
+ Convinced? Thousands of companies are — it's free Get Free API Key 
+ PRODUCT 
+ Pricing 
+ List Your API 
+ Why choose us? 
+ Marketplace 
+ Affiliates 
+ DOCS & HELP 
+ Documentation 
+ Blog 
+ FAQs 
+ ACCOUNT 
+ Log In 
+ Forgot Password 
+ FREE Signup 
+ GET IN TOUCH 
+ Contact 
+ Get a quote 
+ Imprint / Legal | Privacy | Terms | Cookie Preference | Sitemap 
+ © 2026 Serpstack API, an APILayer product. All rights reserved. 
+ × 
+ Standard Support 
+ Platinum Support 
+ General review of the issue 
+ Access to knowledge base articles 
+ Email support communication 
+ Regular product updates and fixes 
+ Dedicated account team 
+ Priority Email Support with unlimited communication 
+ Priority bug review and updates 
+ Option for quarterly briefing call with Product Management 
+ Feature requests as priority roadmap input into product

@@ -1,0 +1,24 @@
+# Skyvern (skyvern) category=browser
+home=https://www.skyvern.com/ pricing=https://www.skyvern.com/pricing docs=https://docs.skyvern.com/ llms=None
+sources_ok: pricing:https://www.skyvern.com/pricing, docs:https://docs.skyvern.com/, home:https://www.skyvern.com/, llms:https://docs.skyvern.com/llms.txt, llms-full:https://www.skyvern.com/docs/llms-full.txt, llms-https://www.skyvern.com/llms.txt:https://www.skyvern.com/llms.txt, llms-https://www.skyvern.com/docs/llms.txt:https://www.skyvern.com/docs/llms.txt
+--- ranked fact lines ---
+[pricing] Skyvern Pricing — Free to Enterprise Automation Plans
+--- llms/readme head ---
+# Skyvern
+- [Skyvern Documentation](https://www.skyvern.com/docs/index.md): Automate work in any website with Skyvern. Build agents in the app with Copilot, run them from Python, TypeScript or the REST API, connect a coding agent over MCP, or self-host.
+- [Concepts](https://www.skyvern.com/docs/concepts.md): Learn the parts every Skyvern automation is made of (agents, blocks, inputs, runs, engines, browsers, credentials, schedules and webhooks) and how the app and the API name them.
+- [Your first agent with Copilot](https://www.skyvern.com/docs/cloud/quickstart.md): Describe a browser task in plain words on the Skyvern Home page, let Copilot build the agent in Studio, accept its changes, run it and read the results.
+- [Build in Studio](https://www.skyvern.com/docs/cloud/studio.md): Build and edit Skyvern agents in Studio, with Copilot or by hand. Add and configure blocks, define inputs, pick an engine, save versions, and organize agents in folders and templates.
+- [Runs and schedules](https://www.skyvern.com/docs/cloud/runs.md): Run a Skyvern agent from the app, watch it live and take control of the browser, read its timeline and outputs, download recordings and files, find past runs, and schedule recurring runs.
+- [Integrations](https://www.skyvern.com/docs/cloud/integrations.md): Connect Google Sheets, Google Drive, Gmail, Outlook, password vaults and MCP clients to Skyvern, and run your agents from Zapier, Make, n8n or Workato.
+- [Account, team, API keys and billing](https://www.skyvern.com/docs/cloud/account.md): Find, copy and rotate your Skyvern API key, authenticate API requests, invite teammates, choose a plan, track credits, and set organization limits and models.
+- [Quickstart](https://www.skyvern.com/docs/developers/getting-started/quickstart.md): Get a Skyvern API key, install the Python or TypeScript SDK, run a browser task from code or cURL, and watch the run in the Skyvern app.
+- [MCP and coding agents](https://www.skyvern.com/docs/developers/getting-started/mcp.md): Connect Skyvern's hosted MCP server to Claude Code, Cursor, Codex, Grok Build, Claude Desktop, ChatGPT, Windsurf and other clients with browser sign-in or an API key, run it locally over stdio, or give coding agents the Skyvern skill and CLI.
+- [Browser automation](https://www.skyvern.com/docs/developers/browser-automation.md): Launch a Skyvern cloud browser from Python or TypeScript, mix Playwright selectors with AI actions, extract data with JSON schemas, log in, download and upload files, work across tabs and frames, and replay agents as cached code.
+- [Going to production](https://www.skyvern.com/docs/developers/production.md): Get run results by webhook, verify signatures, handle failures by error code, get past bot checks with proxies, and cap the cost of every run.
+- [Event triggers](https://www.skyvern.com/docs/developers/event-triggers.md): Start a Skyvern workflow from an external event using a signed HTTP request, field mapping, and delivery history.
+- [Troubleshooting](https://www.skyvern.com/docs/developers/troubleshooting.md): Find out why a run failed or returned the wrong result, from its status, failure category, recording and logs, and fix it.
+- [Self-host](https://www.skyvern.com/docs/developers/self-hosted/overview.md): Run the Skyvern server on your own machine or cluster with pip, Docker Compose, or Kubernetes, using your own LLM keys or a local model.
+- [Credentials, logins and 2FA](https://www.skyvern.com/docs/credentials.md): Store passwords, credit cards and secrets, use them in agents and from code, connect your own vault, and let Skyvern complete two-factor authentication with authenticator apps, email, SMS and magic links.
+- [Browsers: sessions and profiles](https://www.skyvern.com/docs/browsers.md): Keep a live browser open across runs with browser sessions, save signed-in state as reusable browser profiles, watch or take control of a running browser, and let Skyvern drive your own Chrome.
+- [Block Types and Configuration](https://www.skyvern.com/docs/reference/blocks.md): Reference guide for every agent block type in the Skyvern Cloud UI, including Browser Task, Extraction, Login, Loop, While Loop, Conditional, Code, HTTP Request, and more.

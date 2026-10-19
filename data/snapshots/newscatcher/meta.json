@@ -1,0 +1,85 @@
+{
+ "slug": "newscatcher",
+ "name": "NewsCatcher",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:40+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.newscatcherapi.com/pricing",
+   "status": 200,
+   "final_url": "https://www.newscatcherapi.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 185738,
+   "truncated": false,
+   "sha256": "5d283bf0b01c12250903287c14a702dfec8ec12a33cf6a070af00fc3c14fe177",
+   "fetched_at": "2026-10-19T05:54:40+00:00",
+   "text_bytes": 5520
+  },
+  "docs": {
+   "url": "https://docs.newscatcherapi.com/",
+   "status": 200,
+   "final_url": "https://www.newscatcherapi.com/docs/home",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 280274,
+   "truncated": false,
+   "sha256": "2b37c153cc539edc16da085ade7a454829988015ca0a2c4b3df2940f7a41fe03",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 3323
+  },
+  "home": {
+   "url": "https://www.newscatcherapi.com/",
+   "status": 200,
+   "final_url": "https://www.newscatcherapi.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 276729,
+   "truncated": false,
+   "sha256": "8dfa27f60284a11ae85560afafafbfa83ae65130e2fb9c8693dce43bd2ef0449",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 16222
+  },
+  "llms": {
+   "url": "https://docs.newscatcherapi.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.newscatcherapi.com/docs/home",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 280274,
+   "truncated": false,
+   "sha256": "2b37c153cc539edc16da085ade7a454829988015ca0a2c4b3df2940f7a41fe03",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 3323
+  },
+  "llms-full": {
+   "url": "https://www.newscatcherapi.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.newscatcherapi.com/docs/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 754863,
+   "truncated": false,
+   "sha256": "5df76dcf3b680466ac88bfd8965d93f24c2da1ccd869d0b7e0c38ac8d927f907",
+   "fetched_at": "2026-10-19T05:54:54+00:00",
+   "text_bytes": 753703
+  },
+  "llms-https://www.newscatcherapi.com/llms.txt": {
+   "url": "https://www.newscatcherapi.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.newscatcherapi.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 37872,
+   "truncated": false,
+   "sha256": "2fb25c3951e38185330eef8624c01c972a9b67b485eb529ee1bde2b7e38b427b",
+   "fetched_at": "2026-10-19T05:54:51+00:00",
+   "text_bytes": 37808
+  },
+  "llms-https://www.newscatcherapi.com/docs/llms.txt": {
+   "url": "https://www.newscatcherapi.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.newscatcherapi.com/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 37386,
+   "truncated": false,
+   "sha256": "14f2337a13c482f695097ad82636b1116555953f287195c9905c96840196aabc",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 37330
+  }
+ }
+}

@@ -1,0 +1,23 @@
+# Hyperbrowser (hyperbrowser) category=browser
+home=https://www.hyperbrowser.ai/ pricing=https://www.hyperbrowser.ai/pricing docs=https://docs.hyperbrowser.ai/ llms=None
+sources_ok: pricing:https://www.hyperbrowser.ai/pricing, docs:https://docs.hyperbrowser.ai/, home:https://www.hyperbrowser.ai/, llms:https://docs.hyperbrowser.ai/llms.txt, llms-full:https://www.hyperbrowser.ai/docs/llms-full.txt, llms-https://www.hyperbrowser.ai/llms.txt:https://www.hyperbrowser.ai/llms.txt, llms-https://www.hyperbrowser.ai/docs/llms.txt:https://www.hyperbrowser.ai/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+# Hyperbrowser
+- [Home](https://hyperbrowser.ai/docs/home.md): Fast Cloud Browsers for AI Agents and Automation
+- [Introduction](https://hyperbrowser.ai/docs/introduction.md): Fast Cloud Browsers for your AI Agents
+- [Quickstart](https://hyperbrowser.ai/docs/quickstart.md): Start automating with Hyperbrowser Sessions
+- [Configuring Sessions](https://hyperbrowser.ai/docs/sessions/create.md): Learn how to create and configure Hyperbrowser sessions
+- [Session Lifecycle](https://hyperbrowser.ai/docs/sessions/lifecycle.md): Manage the lifecycle of your Hyperbrowser sessions
+- [Connect with Playwright](https://hyperbrowser.ai/docs/sessions/playwright.md): Control Hyperbrowser sessions using Playwright
+- [Connect with Puppeteer](https://hyperbrowser.ai/docs/sessions/puppeteer.md): Control Hyperbrowser sessions using Puppeteer
+- [Connect with Selenium](https://hyperbrowser.ai/docs/sessions/selenium.md): Control Hyperbrowser sessions using Selenium
+- [Computer Actions](https://hyperbrowser.ai/docs/sessions/computer-actions.md): Control sessions with low-level mouse and keyboard input
+- [WebMCP page tools](https://hyperbrowser.ai/docs/sessions/webmcp.md): Discover and invoke tools exposed by browser pages, including long-running tools and forms awaiting human submission.
+- [Credential fill](https://hyperbrowser.ai/docs/sessions/credentials.md): Type stored logins and one-time codes into a session's login form, without your code or an LLM seeing the values.
+- [Session Parameters](https://hyperbrowser.ai/docs/sessions/parameters.md): Learn about the parameters that can be used to configure Hyperbrowser sessions
+- [Stealth Mode](https://hyperbrowser.ai/docs/sessions/stealth.md): Configure anti-detection features for your browser sessions
+- [Proxy Configuration](https://hyperbrowser.ai/docs/sessions/proxy.md): Route your sessions through proxy servers for geo-targeting and IP rotation
+- [Multi-Region Support](https://hyperbrowser.ai/docs/sessions/regions.md): Deploy browser sessions across multiple geographic regions for optimal performance and compliance
+- [CAPTCHA Solving](https://hyperbrowser.ai/docs/sessions/captcha-solving.md): Learn how to solve CAPTCHAs in your browser sessions
+- [Ad Blocking](https://hyperbrowser.ai/docs/sessions/ad-blocking.md): Learn how to block ads and trackers in your browser sessions

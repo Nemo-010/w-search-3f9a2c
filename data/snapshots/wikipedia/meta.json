@@ -1,0 +1,52 @@
+{
+ "slug": "wikipedia",
+ "name": "Wikimedia REST",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:47+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://api.wikimedia.org/",
+   "status": 200,
+   "final_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 85558,
+   "truncated": false,
+   "sha256": "5a568dc550a3ba85577048c969d5329b63e72ab687cae73bc1f8d585c7b07aa0",
+   "fetched_at": "2026-10-19T05:54:47+00:00",
+   "text_bytes": 7129
+  },
+  "llms": {
+   "url": "https://api.wikimedia.org/llms.txt",
+   "status": 200,
+   "final_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 85558,
+   "truncated": false,
+   "sha256": "5a568dc550a3ba85577048c969d5329b63e72ab687cae73bc1f8d585c7b07aa0",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 7129
+  },
+  "llms-full": {
+   "url": "https://api.wikimedia.org/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 85558,
+   "truncated": false,
+   "sha256": "5a568dc550a3ba85577048c969d5329b63e72ab687cae73bc1f8d585c7b07aa0",
+   "fetched_at": "2026-10-19T05:54:50+00:00",
+   "text_bytes": 7129
+  },
+  "llms-https://api.wikimedia.org/docs/llms.txt": {
+   "url": "https://api.wikimedia.org/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 85558,
+   "truncated": false,
+   "sha256": "5a568dc550a3ba85577048c969d5329b63e72ab687cae73bc1f8d585c7b07aa0",
+   "fetched_at": "2026-10-19T05:54:49+00:00",
+   "text_bytes": 7129
+  }
+ }
+}

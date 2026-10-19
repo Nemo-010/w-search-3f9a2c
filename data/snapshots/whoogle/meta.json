@@ -1,0 +1,68 @@
+{
+ "slug": "whoogle",
+ "name": "Whoogle (OSS)",
+ "category": "oss",
+ "fetched_at": "2026-10-19T05:54:33+00:00",
+ "sources": {
+  "readme": {
+   "url": "https://raw.githubusercontent.com/benbusby/whoogle-search/HEAD/README.md",
+   "status": 200,
+   "final_url": "https://raw.githubusercontent.com/benbusby/whoogle-search/HEAD/README.md",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 52654,
+   "truncated": false,
+   "sha256": "c78d8f3600bd82057e42c40254851c649c7c5f027818c42dfbdb8f0cb6547d95",
+   "fetched_at": "2026-10-19T05:54:34+00:00",
+   "text_bytes": 52584
+  },
+  "llms-err-cfc7f4": {
+   "url": "https://github.com/benbusby/whoogle-search/llms.txt",
+   "status": 404,
+   "final_url": "https://github.com/benbusby/whoogle-search/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9,
+   "truncated": false,
+   "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+   "fetched_at": "2026-10-19T05:54:34+00:00"
+  },
+  "llms-err-2f3cc7": {
+   "url": "https://github.com/benbusby/whoogle-search/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://github.com/benbusby/whoogle-search/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9,
+   "truncated": false,
+   "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+   "fetched_at": "2026-10-19T05:54:34+00:00"
+  },
+  "llms": {
+   "url": "https://docs.github.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.github.com/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 28642,
+   "truncated": false,
+   "sha256": "c10af0cdb5576f81fd29373cf56ac65608d24c3e4c935c7993d2bba27d56af4e",
+   "fetched_at": "2026-10-19T05:54:35+00:00",
+   "text_bytes": 28634
+  }
+ },
+ "github": {
+  "full_name": "benbusby/whoogle-search",
+  "stargazers_count": 11564,
+  "forks_count": 1051,
+  "created_at": "2020-01-21T20:22:33Z",
+  "pushed_at": "2026-08-14T14:12:30Z",
+  "license": {
+   "key": "mit",
+   "name": "MIT License",
+   "spdx_id": "MIT",
+   "url": "https://api.github.com/licenses/mit",
+   "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "archived": true,
+  "open_issues_count": 1,
+  "subscribers_count": 102,
+  "description": "A self-hosted, ad-free, privacy-respecting metasearch engine"
+ }
+}

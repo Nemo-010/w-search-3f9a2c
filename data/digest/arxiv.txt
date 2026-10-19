@@ -1,0 +1,5 @@
+# arXiv API (arxiv) category=academic
+home=https://info.arxiv.org/help/api/index.html pricing=None docs=https://info.arxiv.org/help/api/index.html llms=None
+sources_ok: docs:https://info.arxiv.org/help/api/index.html
+--- ranked fact lines ---
+[docs] are free, open access, and/or intended for research or educational purposes

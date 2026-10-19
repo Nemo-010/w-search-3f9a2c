@@ -1,0 +1,85 @@
+{
+ "slug": "branddev",
+ "name": "Brand.dev",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://brand.dev/pricing",
+   "status": 200,
+   "final_url": "https://www.context.dev/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 465063,
+   "truncated": false,
+   "sha256": "e661c6a610ef9495da502f9fd7da230c0d82cc780704499ce4f14573cbf6deb5",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 14148
+  },
+  "docs": {
+   "url": "https://docs.brand.dev/",
+   "status": 200,
+   "final_url": "https://docs.context.dev/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 531417,
+   "truncated": false,
+   "sha256": "423b422e906e256084608585b64d70db535876978f7bdc19f2b460a246b91b32",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 7495
+  },
+  "home": {
+   "url": "https://brand.dev/",
+   "status": 200,
+   "final_url": "https://www.context.dev/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1230418,
+   "truncated": false,
+   "sha256": "f8699ff650d572d750a1f87ec51deb3875a78c32d88682169313c42683a47517",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 21547
+  },
+  "llms": {
+   "url": "https://docs.brand.dev/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.context.dev/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 30666,
+   "truncated": false,
+   "sha256": "01e2fcb8ec321548e2fccee88c40482dfae7f9c55884ca04d89a79e02c202345",
+   "fetched_at": "2026-10-19T05:54:05+00:00",
+   "text_bytes": 30628
+  },
+  "llms-full": {
+   "url": "https://brand.dev/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.context.dev/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 756295,
+   "truncated": false,
+   "sha256": "2bcd64124eaf1eaa11ad51e423c3ca21df49d55451a0115212691c0fc0b8a430",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 755973
+  },
+  "llms-https://brand.dev/llms.txt": {
+   "url": "https://brand.dev/llms.txt",
+   "status": 200,
+   "final_url": "https://www.context.dev/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 18884,
+   "truncated": false,
+   "sha256": "19a690100e358ec44d983f7720e86df6fe9a7655cdcee25019725e1fb2c17977",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 18884
+  },
+  "llms-https://brand.dev/docs/llms.txt": {
+   "url": "https://brand.dev/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.context.dev/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 30666,
+   "truncated": false,
+   "sha256": "01e2fcb8ec321548e2fccee88c40482dfae7f9c55884ca04d89a79e02c202345",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 30628
+  }
+ }
+}

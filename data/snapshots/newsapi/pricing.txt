@@ -1,0 +1,91 @@
+Pricing - News API 
+ News API 
+ Get started 
+ Documentation 
+ Pricing 
+ Login 
+ Get API key 
+ menu 
+ close 
+ Get started 
+ Documentation 
+ Pricing 
+ Login 
+ Get API key 
+ Pricing 
+ Free for development, options if you're commercial 
+ Billing yearly (20% discount) 
+ Developer 
+ $ 0 
+ totally free, start now 
+ For development and testing of all project types.   
+ Search articles and get live top headlines help 
+ Articles have a 24 hour delay 
+ Search articles up to a month old 
+ CORS enabled for localhost help 
+ 100 requests per day help 
+ No extra requests available help 
+ No uptime SLA 
+ Basic support help 
+ Start with Developer 
+ Business 
+ $ 449 
+ per month, billed monthly 
+ Advanced 
+ $ 1749 
+ per month, billed monthly 
+ For production and published commercial projects.   
+ For larger projects that require exceptional resources.   
+ Search all articles and get live top headlines help 
+ New articles available in real-time help 
+ Search articles up to 5 years old help 
+ CORS enabled for all origins help 
+ 250,000 requests per month included 
+ 2,000,000 requests per month included 
+ $0.0018 per extra request help 
+ $0.0009 per extra request help 
+ No uptime SLA 
+ 99.95% uptime SLA help 
+ Email support help 
+ Priority email support help 
+ Start with Business 
+ Start with Advanced 
+ Enterprise 
+ Contact us 
+ For enterprise projects that require premium data or bespoke solutions. 
+ Access to extra articles and an extended source library help 
+ Articles are enriched with 20 additional data-points help 
+ Article & story clustering 
+ Custom classifications, tagging, & information extraction 
+ Unlimited requests 
+ Add sources on demand 
+ Custom SLA & dedicated chat help 
+ On-premise deployment help 
+ Get a quote 
+ Trusted by the best 
+ FAQs 
+ What is a request? 
+ Any single HTTP request to any of our endpoints counts as a single request. The parameters or modifiers you provide, or the number of results you get back, do not affect your request count. 
+ What usage does the Developer plan permit? 
+ The Developer plan may be used for development and testing in a development environment only, and cannot be used in a staging or production environment (including internally). When the API is used outside of a development environment an upgrade to one of our subscriptions will be required to continue using the API. 
+ Is the full article content available with any plan? 
+ No, unfortunately we cannot provide the full content with our search results. However, you are able to use the URL included with each result to scrape this yourself if required. 
+ What happens if I exceed my monthly quota? 
+ You will be alerted ahead of time if you are going to exceed your quota. Then you can decide whether to be automatically billed for excess usage, or to pause usage until the next billing cycle. 
+ Can I pay via invoice and ACH/bank transfer? 
+ Yes! For annual subscriptions we can accept these payment methods. 
+ Can I cancel at any time? 
+ Of course! When you cancel, your plan will run until the end of the current paid period and you won't be charged again. 
+ News API 
+ Get started 
+ Documentation 
+ News sources 
+ Pricing 
+ Google News API 
+ Company 
+ Privacy policy 
+ Terms of service 
+ Support 
+ Contact 
+ Twitter 
+ Github

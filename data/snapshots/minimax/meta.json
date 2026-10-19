@@ -1,0 +1,72 @@
+{
+ "slug": "minimax",
+ "name": "MiniMax",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:53+00:00",
+ "sources": {
+  "pricing-err-23bbde": {
+   "url": "https://www.minimax.io/platform/document",
+   "status": 404,
+   "final_url": "https://www.minimax.io/platform/document",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 44373,
+   "truncated": false,
+   "sha256": "b281abc381886ac292ef0564059265dd8a16a5ae1bb3d7bc0eff61a6f6f941d2",
+   "fetched_at": "2026-10-19T05:54:53+00:00"
+  },
+  "home": {
+   "url": "https://www.minimax.io/",
+   "status": 200,
+   "final_url": "https://www.minimax.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 377467,
+   "truncated": false,
+   "sha256": "97cb776f75f238ae2fbb68fbd7099ba780783987a3eee2445a884ea32ce54f2b",
+   "fetched_at": "2026-10-19T05:54:55+00:00",
+   "text_bytes": 3558
+  },
+  "llms-err-e33f93": {
+   "url": "https://www.minimax.io/platform/document/llms.txt",
+   "status": 404,
+   "final_url": "https://www.minimax.io/platform/document/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 44373,
+   "truncated": false,
+   "sha256": "b281abc381886ac292ef0564059265dd8a16a5ae1bb3d7bc0eff61a6f6f941d2",
+   "fetched_at": "2026-10-19T05:54:56+00:00"
+  },
+  "llms": {
+   "url": "https://www.minimax.io/llms.txt",
+   "status": 200,
+   "final_url": "https://www.minimax.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 377467,
+   "truncated": false,
+   "sha256": "6f77f35e4705dd28e8d26672f3592e1000001d77e042f8de41c87015b26972a4",
+   "fetched_at": "2026-10-19T05:54:57+00:00",
+   "text_bytes": 3558
+  },
+  "llms-full": {
+   "url": "https://www.minimax.io/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.minimax.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 377467,
+   "truncated": false,
+   "sha256": "48a22da7799ea3e0f7337c77e34a2a30c73b4568ed858c799550f65b2b2b568d",
+   "fetched_at": "2026-10-19T05:55:06+00:00",
+   "text_bytes": 3558
+  },
+  "llms-https://www.minimax.io/docs/llms.txt": {
+   "url": "https://www.minimax.io/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.minimax.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 377467,
+   "truncated": false,
+   "sha256": "5ba2340796268eee8dd12ae6726412065ea1b6d47140c7922a5e3171ce8a5e5b",
+   "fetched_at": "2026-10-19T05:55:05+00:00",
+   "text_bytes": 3558
+  }
+ }
+}

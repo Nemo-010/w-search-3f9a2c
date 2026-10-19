@@ -1,0 +1,23 @@
+# ScreenshotAPI.net (screenshotapi) category=reader
+home=https://screenshotapi.net/ pricing=https://screenshotapi.net/pricing docs=None llms=None
+sources_ok: pricing:https://screenshotapi.net/pricing, home:https://screenshotapi.net/, llms:https://screenshotapi.net/llms.txt, llms-https://docs.screenshotapi.net/llms.txt:https://docs.screenshotapi.net/llms.txt, llms-full:https://docs.screenshotapi.net/llms-full.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+Get Started | ScreenshotAPI.net Docs Products Tools Docs Pricing Resources Playground Get Started for Free Search Ctrl + K Docs Get Started Render a screenshot Cached & Fresh Viewport & Full Page File Type & Quality Lazy Loading & Delay Element Screenshot CSS & JavaScript Injection Emulation Web Scraping Block Resources PDF Rendering Scrolling screenshots Bulk screenshots Schedule screenshots Errors Query Builder Proxy Support Integrations Storage Integration Getting Started ScreenshotAPI is an advanced and dynamic solution that allows users to take screenshots of a website programmatically without breaking a sweat. Users can select from several available formats: JPEG, PNG, WebP, or PDF, and this gives them the advantage of suiting their images to their needs. The API is simple and extremely configurable with features such as a full-page image of the screen or a certain file type, adding a custom CSS, or even a geolocation. To begin, go ahead and register or sign in to the DASHBOARD to obtain your unique API KEY . Use this key by replacing TOKEN with this in the API URL's requests. You can set which url to be captured using the url parameter. The API allows integration through GET and POST methods, which makes it easy to incorporate the API into your existing workflows. If you request a screenshot that has been returned before, and you want to return a current screenshot, please include the fresh=true parameter to shed off the cache. Other advanced capabilities are the ability to inject JS or CSS into the page, hide some parts of the page, or take scrolling screenshots in WebM, MP4, or GIF videos. The API additionally offers capabilities for taking screenshots in multiple scrolling dimensions and on how to extract HTML or text from webpages. When dealing with PDF outputs, it is possible to set the output to certain pages only. Handling errors is very simple as it has status codes that are fully informative for handling problems. There is also a Query Builder which lets users play around with the parameters of the API, making it easy to build requests. Code examples can also be found for use by developers in language libraries like Node.js and Python for fast development. In addition, please feel free to reach out to our dedicated team for any support or assistance you may need through email or the Help Desk . Any user, be it developers, marketers, and businesses ScreenshotAPI is designed with a soothing design yet great functionality. Code Examples Below is sample code for the following languages: Node.JS, PHP, Go, Java, Python, and Ruby. If you need assistance integrating into our API with a given language please contact us . Copy
+var fs = require("fs");
+var request = require("request");
+// @param {String} token - String containing your API Key
+// @param {String} url - Encoded URI string container the URI you're targeting
+// @param {String} output - String specifying the output format, 'image' or 'json'
+// @param {String} file_type - String specifying the output type
+var token = "Your API Key";
+var url = encodeURIComponent("https://google.com");
+var output = "image";
+var file_type = "png";
+// Construct the query params and URL
+var query = "https://shot.screenshotapi.net/screenshot";
+query += `?token=${token}&url=${url}&output=${output}&file_type=${file_type}`;
+// Call the API and save the screenshot
+request.get({ url: query, encoding: "binary" }, (err, response, body) => {
+fs.writeFile("screenshot.png", body, "binary", (err) => {
+if (err) {

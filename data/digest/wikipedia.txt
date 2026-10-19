@@ -1,0 +1,29 @@
+# Wikimedia REST (wikipedia) category=misc-api
+home=https://api.wikimedia.org/ pricing=None docs=https://api.wikimedia.org/ llms=None
+sources_ok: docs:https://api.wikimedia.org/, llms:https://api.wikimedia.org/llms.txt, llms-full:https://api.wikimedia.org/docs/llms-full.txt, llms-https://api.wikimedia.org/docs/llms.txt:https://api.wikimedia.org/docs/llms.txt
+--- ranked fact lines ---
+[docs] Wikipedia and other Wikimedia projects are free, collaborative repositories of knowledge, written and maintained by volunteers around the world. Wikimedia APIs give you open access to use this free knowledge in your projects and apps.
+[docs] Service for high-volume commercial reuse of Wikimedia content, including free community access
+[docs] Wikimedia content is organized by project and language. Each project hosts a different type of free content—encyclopedia articles on Wikipedia, dictionary entries on Wiktionary—and can be published under a different free license.
+[docs] Set learning free with thousands of learning resources on Wikiversity .
+[docs] Explore thousands of free library texts with Wikisource .
+[docs] Explore the world with free travel resources from Wikivoyage .
+--- llms/readme head ---
+Wikimedia APIs - MediaWiki
+Jump to content
+Main menu
+Main menu
+move to sidebar
+hide
+Navigation
+Main page Get MediaWiki Get extensions Tech blog Contribute
+Support
+User help FAQ Technical manual Support desk Communication
+Development
+Developer portal Code statistics
+mediawiki.org
+Community portal Recent changes Translate content Special pages Random page Village pump Sandbox
+In other languages
+Add links
+Search
+Search

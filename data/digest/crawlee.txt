@@ -1,0 +1,23 @@
+# Crawlee (OSS) (crawlee) category=oss
+home=https://crawlee.dev/ pricing=None docs=https://crawlee.dev/docs/ llms=None
+sources_ok: home:https://crawlee.dev/, llms:https://crawlee.dev/llms.txt, llms-full:https://crawlee.dev/llms-full.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+# Crawlee for Python · Fast, reliable Python web crawlers.
+## python
+- [Search the documentation](https://crawlee.dev/python/search.md)
+- [crawlee](https://crawlee.dev/python/api.md)
+- [_AsyncSession](https://crawlee.dev/python/api/class/_AsyncSession.md)
+- [_AutoscaledPoolRun](https://crawlee.dev/python/api/class/_AutoscaledPoolRun.md)
+- [_BasicCrawlerOptions](https://crawlee.dev/python/api/class/_BasicCrawlerOptions.md)
+- [_BasicCrawlerOptionsGeneric](https://crawlee.dev/python/api/class/_BasicCrawlerOptionsGeneric.md)
+- [_CurlImpersonateResponse](https://crawlee.dev/python/api/class/_CurlImpersonateResponse.md)
+- [_DatasetMetadataUpdateParams](https://crawlee.dev/python/api/class/_DatasetMetadataUpdateParams.md)
+- [_DatasetMetadataUpdateParams](https://crawlee.dev/python/api/class/_DatasetMetadataUpdateParams.md)
+- [_DomainState](https://crawlee.dev/python/api/class/_DomainState.md)
+- [_EmptyCookies](https://crawlee.dev/python/api/class/_EmptyCookies.md)
+- [_Field](https://crawlee.dev/python/api/class/_Field.md)
+- [_HttpxResponse](https://crawlee.dev/python/api/class/_HttpxResponse.md)
+- [_HttpxTransport](https://crawlee.dev/python/api/class/_HttpxTransport.md)
+- [_ImpitResponse](https://crawlee.dev/python/api/class/_ImpitResponse.md)
+- [_Middleware](https://crawlee.dev/python/api/class/_Middleware.md)

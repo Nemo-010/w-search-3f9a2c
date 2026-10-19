@@ -1,0 +1,70 @@
+{
+ "slug": "openaire",
+ "name": "OpenAIRE",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:44+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://graph.openaire.eu/docs/",
+   "status": 200,
+   "final_url": "https://graph.openaire.eu/docs/",
+   "content_type": "text/html",
+   "bytes": 14825,
+   "truncated": false,
+   "sha256": "82e6b593ed53cbf4264fd7712d6a2a37481b6c735d940bed57db74b95958d229",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 2062
+  },
+  "home": {
+   "url": "https://www.openaire.eu/",
+   "status": 200,
+   "final_url": "https://www.openaire.eu/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 139495,
+   "truncated": false,
+   "sha256": "c1ebe885fe8ffc95e6d124101c4a3ea93d00956608a58f2badd15bc86a42cb01",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 10409
+  },
+  "llms-err-683a7f": {
+   "url": "https://graph.openaire.eu/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://graph.openaire.eu/docs/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 279,
+   "truncated": false,
+   "sha256": "c213a4d16953ee3d9296c352ab3dbc344074678c7b3c3ac5f46194b4a47dba7a",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  },
+  "llms-err-96132b": {
+   "url": "https://www.openaire.eu/llms.txt",
+   "status": 404,
+   "final_url": "https://www.openaire.eu/llms.txt",
+   "content_type": "text/html",
+   "bytes": 162,
+   "truncated": false,
+   "sha256": "340c8464c2007ce3f80682e15dfafa4180b641d53c14201b929906b7b0284d87",
+   "fetched_at": "2026-10-19T05:54:48+00:00"
+  },
+  "llms-err-1e876d": {
+   "url": "https://www.openaire.eu/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.openaire.eu/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 162,
+   "truncated": false,
+   "sha256": "340c8464c2007ce3f80682e15dfafa4180b641d53c14201b929906b7b0284d87",
+   "fetched_at": "2026-10-19T05:54:48+00:00"
+  },
+  "llms-err-f0f679": {
+   "url": "https://docs.graph.openaire.eu/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.graph.openaire.eu/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  }
+ }
+}

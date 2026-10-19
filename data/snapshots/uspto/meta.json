@@ -1,0 +1,62 @@
+{
+ "slug": "uspto",
+ "name": "USPTO",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:49+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://developer.uspto.gov/",
+   "status": 200,
+   "final_url": "https://data.uspto.gov:443/home",
+   "content_type": "text/html",
+   "bytes": 20666,
+   "truncated": false,
+   "sha256": "4ccc927a003f3944c18c0c3394af2d6f2504b194a72ab480ef77fff21b997b85",
+   "fetched_at": "2026-10-19T05:54:49+00:00",
+   "text_bytes": 0
+  },
+  "llms": {
+   "url": "https://developer.uspto.gov/llms.txt",
+   "status": 200,
+   "final_url": "https://data.uspto.gov:443/home",
+   "content_type": "text/html",
+   "bytes": 20666,
+   "truncated": false,
+   "sha256": "4ccc927a003f3944c18c0c3394af2d6f2504b194a72ab480ef77fff21b997b85",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 0
+  },
+  "llms-full": {
+   "url": "https://developer.uspto.gov/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://data.uspto.gov:443/home",
+   "content_type": "text/html",
+   "bytes": 20666,
+   "truncated": false,
+   "sha256": "4ccc927a003f3944c18c0c3394af2d6f2504b194a72ab480ef77fff21b997b85",
+   "fetched_at": "2026-10-19T05:54:55+00:00",
+   "text_bytes": 0
+  },
+  "llms-https://developer.uspto.gov/docs/llms.txt": {
+   "url": "https://developer.uspto.gov/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://data.uspto.gov:443/home",
+   "content_type": "text/html",
+   "bytes": 20666,
+   "truncated": false,
+   "sha256": "4ccc927a003f3944c18c0c3394af2d6f2504b194a72ab480ef77fff21b997b85",
+   "fetched_at": "2026-10-19T05:54:55+00:00",
+   "text_bytes": 0
+  },
+  "llms-err-b28692": {
+   "url": "https://docs.developer.uspto.gov/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.developer.uspto.gov/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:54:58+00:00"
+  }
+ }
+}

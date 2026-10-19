@@ -1,0 +1,34 @@
+# Spider (spider) category=ai-search
+home=https://spider.cloud/ pricing=https://spider.cloud/pricing docs=https://spider.cloud/docs/ llms=None
+sources_ok: pricing:https://spider.cloud/pricing, home:https://spider.cloud/, llms:https://spider.cloud/llms.txt, llms-full:https://spider.cloud/llms-full.txt
+--- ranked fact lines ---
+[llms] - Pricing: https://spider.cloud/pricing ($1 per 10,000 credits; bandwidth at $1 per GB plus compute at $0.0001 per minute)
+[llms-full] browser. Up to 10 MB per request. From 0.1 credits for HTML, up to 10 credits
+[llms-full] Pricing is $1 per 10,000 credits. `/unlimited/*` meters no credits.
+[home] AI Web Crawler API for Agents and RAG | Spider Skip to main content Spider Spider Products Resources Proxies Docs Playground Pricing Discord Github 2.8k Toggle theme Infrastructure for reading the public web. One API to scrape, crawl, and search, backed by our own browser engine and network. Low cost, low latency, built to scale. Get started free Copy setup prompt Prompt copied Run requests before
+[llms] - Proxy: https://spider.cloud/proxy-locations/ (http://proxy.spider.cloud, residential and ISP exits, rotated per request)
+[llms-full] | `request_max_retries` | integer | Retries per request. |
+[llms] | 402 | Out of credits, a keyless request to a non-`/scrape` route, or `/ai/*` without an active AI plan. |
+[llms] | 500, 503 | Server side. These do not consume credits. |
+[llms] statuses included. Do not assume a failed page is free.
+[llms-full] | 402 | Out of credits, or a keyless request to any route other than `/scrape`, including unknown paths. Also `/ai/*` without an active AI plan (`ai_subscription_required`). |
+[llms-full] error statuses included. Do not assume a failed page is free.
+--- llms/readme head ---
+# Spider
+> Web crawling, scraping, and search API for AI agents and RAG pipelines.
+> Any site to clean markdown or structured JSON. Rust engine, a headless
+> Browser when a page needs it, proxy rotation, streaming.
+- Website: https://spider.cloud
+- API base: https://api.spider.cloud
+- Browser: https://spider.cloud/browser/ (wss://browser.spider.cloud, up to 100 concurrent sessions)
+- Proxy: https://spider.cloud/proxy-locations/ (http://proxy.spider.cloud, residential and ISP exits, rotated per request)
+- Agent setup skill: https://spider.cloud/agent-skill/SKILL.md
+- Full API reference: https://spider.cloud/llms-full.txt
+- Docs: https://spider.cloud/docs/overview
+- OpenAPI: https://spider.cloud/openapi.yaml
+- MCP server: https://mcp.spider.cloud/mcp (setup: https://spider.cloud/mcp/connect)
+- Pricing: https://spider.cloud/pricing ($1 per 10,000 credits; bandwidth at $1 per GB plus compute at $0.0001 per minute)
+- Open source: https://github.com/spider-rs/spider (MIT)
+- Support: support@spider.cloud, https://discord.spider.cloud
+If you are an agent setting Spider up for a user, read
+https://spider.cloud/agent-skill/SKILL.md. For the complete parameter

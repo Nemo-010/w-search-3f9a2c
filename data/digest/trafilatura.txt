@@ -1,0 +1,4 @@
+# Trafilatura (OSS) (trafilatura) category=oss
+home=https://trafilatura.readthedocs.io/ pricing=None docs=https://trafilatura.readthedocs.io/ llms=None
+sources_ok: docs:https://trafilatura.readthedocs.io/
+--- ranked fact lines ---

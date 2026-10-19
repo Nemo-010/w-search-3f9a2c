@@ -1,0 +1,84 @@
+{
+ "slug": "zyte",
+ "name": "Zyte",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:13+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.zyte.com/pricing/",
+   "status": 200,
+   "final_url": "https://www.zyte.com/pricing/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 336549,
+   "truncated": false,
+   "sha256": "426fa79a6beb50096826fa119cc0600ee6b5b1b869c887c383d8aecc546ee9da",
+   "fetched_at": "2026-10-19T05:54:13+00:00",
+   "text_bytes": 12206
+  },
+  "docs": {
+   "url": "https://docs.zyte.com/",
+   "status": 200,
+   "final_url": "https://docs.zyte.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 57978,
+   "truncated": false,
+   "sha256": "89561494685ba8ffb10553dff46e94e7806b8ebce4cdf825b738bb50e1cbd978",
+   "fetched_at": "2026-10-19T05:54:14+00:00",
+   "text_bytes": 4413
+  },
+  "home": {
+   "url": "https://www.zyte.com/",
+   "status": 200,
+   "final_url": "https://www.zyte.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 467365,
+   "truncated": false,
+   "sha256": "12a3bca8ee965f95193b526b70e814c85da05275efa8cc02d0b7933d0407e307",
+   "fetched_at": "2026-10-19T05:54:15+00:00",
+   "text_bytes": 9067
+  },
+  "llms": {
+   "url": "https://docs.zyte.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.zyte.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 6416,
+   "truncated": false,
+   "sha256": "c9950586b896a82b07939834cb40f069ed0b5a87305c280083ca333c77557ec3",
+   "fetched_at": "2026-10-19T05:54:15+00:00",
+   "text_bytes": 6415
+  },
+  "llms-https://www.zyte.com/llms.txt": {
+   "url": "https://www.zyte.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.zyte.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 6514,
+   "truncated": false,
+   "sha256": "a97e65697a2aa0883cc5ae9a78ca71ef49e222ae29a3face748869cda7a82b1f",
+   "fetched_at": "2026-10-19T05:54:16+00:00",
+   "text_bytes": 6496
+  },
+  "llms-err-9e61b0": {
+   "url": "https://www.zyte.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.zyte.com/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9,
+   "truncated": false,
+   "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+   "fetched_at": "2026-10-19T05:54:17+00:00"
+  },
+  "trial": {
+   "url": "https://www.zyte.com/pricing/",
+   "status": 200,
+   "final_url": "https://www.zyte.com/pricing/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 336549,
+   "truncated": false,
+   "sha256": "426fa79a6beb50096826fa119cc0600ee6b5b1b869c887c383d8aecc546ee9da",
+   "fetched_at": "2026-10-19T05:59:43+00:00",
+   "text_bytes": 12206
+  }
+ }
+}

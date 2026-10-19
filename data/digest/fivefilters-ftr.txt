@@ -1,0 +1,4 @@
+# FiveFilters Full-Text RSS (fivefilters-ftr) category=reader
+home=https://fivefilters.org/content-only/ pricing=https://fivefilters.org/content-only/#download docs=https://fivefilters.org/content-only/ llms=None
+sources_ok: pricing:https://fivefilters.org/content-only/#download, docs:https://fivefilters.org/content-only/
+--- ranked fact lines ---

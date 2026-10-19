@@ -1,0 +1,81 @@
+{
+ "slug": "microlink",
+ "name": "Microlink",
+ "category": "reader",
+ "fetched_at": "2026-10-19T05:54:34+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://microlink.io/pricing",
+   "status": 200,
+   "final_url": "https://microlink.io/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 522312,
+   "truncated": false,
+   "sha256": "19dc00c8ca0eb39df781ef749270884fc5f2a231df662aa1f32e9202e73c7759",
+   "fetched_at": "2026-10-19T06:01:29+00:00",
+   "text_bytes": 13908
+  },
+  "docs-err-c24031": {
+   "url": "https://microlink.io/docs/api/getting-started",
+   "status": 404,
+   "final_url": "https://microlink.io/docs/api/getting-started",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 299550,
+   "truncated": false,
+   "sha256": "f806defb78e16f703270c7e82185975f421357272ce57d1f596db663b87221c4",
+   "fetched_at": "2026-10-19T05:54:35+00:00"
+  },
+  "home": {
+   "url": "https://microlink.io/",
+   "status": 200,
+   "final_url": "https://microlink.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 334330,
+   "truncated": false,
+   "sha256": "020fe7b24001f249dba31796267458b792cd67be8fd5f1a1bbfbf6ef4097ddb6",
+   "fetched_at": "2026-10-19T05:54:35+00:00",
+   "text_bytes": 3829
+  },
+  "llms-err-2a91ad": {
+   "url": "https://microlink.io/docs/api/getting-started/llms.txt",
+   "status": 404,
+   "final_url": "https://microlink.io/docs/api/getting-started/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 299550,
+   "truncated": false,
+   "sha256": "c3923fed18e4d859d5b7372ed9a10fa27f4e23033e17d7d4b6bf20ce181e08ad",
+   "fetched_at": "2026-10-19T05:54:36+00:00"
+  },
+  "llms": {
+   "url": "https://microlink.io/llms.txt",
+   "status": 200,
+   "final_url": "https://microlink.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 108411,
+   "truncated": false,
+   "sha256": "5fc1766b0c7182789c2410b1f5da1f621b644e5ef0d81697bb8515c247f5c0b0",
+   "fetched_at": "2026-10-19T05:54:36+00:00",
+   "text_bytes": 108106
+  },
+  "llms-err-e3890a": {
+   "url": "https://microlink.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://microlink.io/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 299550,
+   "truncated": false,
+   "sha256": "41d4f23db3ede49d977fdbb2e2afd96780819243068c42df737b56e834971982",
+   "fetched_at": "2026-10-19T05:54:37+00:00"
+  },
+  "llms-err-0df978": {
+   "url": "https://docs.microlink.io/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.microlink.io/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:54:38+00:00"
+  }
+ }
+}

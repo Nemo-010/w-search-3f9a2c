@@ -1,0 +1,6 @@
+# NewsData.io (newsdata) category=news
+home=https://newsdata.io/ pricing=https://newsdata.io/pricing docs=https://newsdata.io/documentation llms=None
+sources_ok: pricing:https://newsdata.io/pricing, docs:https://newsdata.io/documentation, home:https://newsdata.io/, llms:https://newsdata.io/documentation/llms.txt, llms-full:https://newsdata.io/docs/llms-full.txt, llms-https://newsdata.io/llms.txt:https://newsdata.io/llms.txt, llms-https://newsdata.io/docs/llms.txt:https://newsdata.io/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+Best News API for Real-Time & Historical News | NewsData.io

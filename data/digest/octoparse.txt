@@ -1,0 +1,21 @@
+# Octoparse (octoparse) category=serp-scrape
+home=https://www.octoparse.com/ pricing=https://www.octoparse.com/pricing docs=None llms=None
+sources_ok: pricing:https://www.octoparse.com/pricing, home:https://www.octoparse.com/, llms:https://www.octoparse.com/llms.txt, llms-https://www.octoparse.com/docs/llms.txt:https://www.octoparse.com/docs/llms.txt, llms-full:https://www.octoparse.com/docs/llms-full.txt
+--- ranked fact lines ---
+[pricing] Octoparse Pricing: Free Plan & Paid Plans from $69/Month Platform Solutions Resources Data Service Download Pricing Log in EN Octoparse Pricing Plans 5 day money back guarantee on all Octoparse plans Websites Frequency Suggest Help us understand the scale of your project and we’ll suggest the plan that’s right for you. Billed monthly Billed yearly 16% US $ Octoparse for Startups Stay focused on fi
+[pricing] Learn more in our help center or contact support . How much does Octoparse cost? Octoparse starts at $0 with a free forever plan that includes 10 tasks and 50,000 rows of monthly data export. Paid plans begin at $69/month for the Standard plan and $249/month for the Professional plan, both billed annually with 16% savings versus monthly billing. Enterprise pricing is custom. All paid Octoparse pla
+--- llms/readme head ---
+# Octoparse Docs
+> Developer documentation for Octoparse MCP Server and OpenAPI integrations.
+## Home
+### GET STARTED
+- [Octoparse documentation](https://www.octoparse.com/docs/en/overview.md): No-code scraping, Cloud Extraction, AI integrations, OpenAPI automation, and practical web scraping guides.
+### CHANGELOG
+- [Octoparse 10.2 release notes](https://www.octoparse.com/docs/en/changelog/august-2026.md): Octoparse 10.2 introduces AI Field Fixer, Checkpoint resume, the Smart Decision Engine, and improved Cookie consent handling.
+- [July 2026 release notes](https://www.octoparse.com/docs/en/changelog/july-2026.md): July 2026 Octoparse CLI updates improve blocked-page detection, candidate selection, row-limit completion, and reliable process exit.
+- [April 2026 release notes](https://www.octoparse.com/docs/en/changelog/april-2026.md): April 2026 updates and improvements to Octoparse integrations.
+## Academy
+### GET STARTED
+- [Octoparse academy](https://www.octoparse.com/docs/en/academy/index.md): Web scraping explained — concepts, mechanics, use cases, and site-specific guides for the no-code era.
+### WEB SCRAPING BASICS
+- [What is web scraping?](https://www.octoparse.com/docs/en/academy/what-is-web-scraping.md): Web scraping is the automated extraction of structured data from websites. Learn how it works, where it's used, and how it differs from APIs and manual collection.

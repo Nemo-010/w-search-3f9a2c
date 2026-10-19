@@ -1,0 +1,73 @@
+{
+ "slug": "unpaywall",
+ "name": "Unpaywall",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:43+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://unpaywall.org/products/api",
+   "status": 200,
+   "final_url": "https://unpaywall.org/products/api",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 9
+  },
+  "llms": {
+   "url": "https://unpaywall.org/products/api/llms.txt",
+   "status": 200,
+   "final_url": "https://unpaywall.org/products/api/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 9
+  },
+  "llms-full": {
+   "url": "https://unpaywall.org/products/api/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://unpaywall.org/products/api/docs/llms-full.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 9
+  },
+  "llms-https://unpaywall.org/products/api/docs/llms.txt": {
+   "url": "https://unpaywall.org/products/api/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://unpaywall.org/products/api/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 9
+  },
+  "llms-err-85b9c8": {
+   "url": "https://docs.unpaywall.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.unpaywall.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  },
+  "docs2": {
+   "url": "https://unpaywall.org/products/api",
+   "status": 200,
+   "final_url": "https://unpaywall.org/products/api",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-19T06:05:17+00:00",
+   "text_bytes": 9
+  }
+ }
+}

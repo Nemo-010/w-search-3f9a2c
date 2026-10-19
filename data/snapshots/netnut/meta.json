@@ -1,0 +1,117 @@
+{
+ "slug": "netnut",
+ "name": "NetNut",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:12+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://netnut.io/pricing/",
+   "status": 200,
+   "final_url": "https://netnut.io/pricing/",
+   "content_type": "text/html",
+   "bytes": 297679,
+   "truncated": false,
+   "sha256": "d618ba850abe4c17d549f0c4b3dfd3f422a092ee435f879d64236f67f4bd3e79",
+   "fetched_at": "2026-10-19T05:54:12+00:00",
+   "text_bytes": 45
+  },
+  "docs": {
+   "url": "https://help.netnut.io/",
+   "status": 200,
+   "final_url": "https://app.gitbook.com/o/8Lqp8I9G44GEgYr4Cs6R/sites/site_rPhCj/",
+   "content_type": "text/html",
+   "bytes": 12244,
+   "truncated": false,
+   "sha256": "bc26942437e200df6c789489f4333ae630053f19bedb6a09d95c7cd2b178ce06",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 7
+  },
+  "home": {
+   "url": "https://netnut.io/",
+   "status": 200,
+   "final_url": "https://netnut.io/",
+   "content_type": "text/html",
+   "bytes": 297679,
+   "truncated": false,
+   "sha256": "d618ba850abe4c17d549f0c4b3dfd3f422a092ee435f879d64236f67f4bd3e79",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 45
+  },
+  "llms": {
+   "url": "https://help.netnut.io/llms.txt",
+   "status": 200,
+   "final_url": "https://app.gitbook.com/o/8Lqp8I9G44GEgYr4Cs6R/sites/site_rPhCj/",
+   "content_type": "text/html",
+   "bytes": 12244,
+   "truncated": false,
+   "sha256": "bc26942437e200df6c789489f4333ae630053f19bedb6a09d95c7cd2b178ce06",
+   "fetched_at": "2026-10-19T05:54:18+00:00",
+   "text_bytes": 7
+  },
+  "llms-full": {
+   "url": "https://docs.netnut.io/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.netnut.io/llms-full.txt",
+   "content_type": "text/html",
+   "bytes": 297679,
+   "truncated": false,
+   "sha256": "d618ba850abe4c17d549f0c4b3dfd3f422a092ee435f879d64236f67f4bd3e79",
+   "fetched_at": "2026-10-19T05:54:21+00:00",
+   "text_bytes": 45
+  },
+  "llms-https://netnut.io/llms.txt": {
+   "url": "https://netnut.io/llms.txt",
+   "status": 200,
+   "final_url": "https://netnut.io/llms.txt",
+   "content_type": "text/html",
+   "bytes": 297679,
+   "truncated": false,
+   "sha256": "d618ba850abe4c17d549f0c4b3dfd3f422a092ee435f879d64236f67f4bd3e79",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 45
+  },
+  "llms-https://netnut.io/docs/llms.txt": {
+   "url": "https://netnut.io/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://netnut.io/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 297679,
+   "truncated": false,
+   "sha256": "d618ba850abe4c17d549f0c4b3dfd3f422a092ee435f879d64236f67f4bd3e79",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 45
+  },
+  "llms-err-b62b59": {
+   "url": "https://docs.help.netnut.io/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.help.netnut.io/llms.txt",
+   "content_type": "",
+   "bytes": 98,
+   "truncated": false,
+   "sha256": "3bc85200c61d9ef9e6ef6aa67eaf019641bc3966ba241c0f14088573f1ef926b",
+   "fetched_at": "2026-10-19T05:54:20+00:00"
+  },
+  "llms-https://docs.netnut.io/llms.txt": {
+   "url": "https://docs.netnut.io/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.netnut.io/llms.txt",
+   "content_type": "text/html",
+   "bytes": 297679,
+   "truncated": false,
+   "sha256": "d618ba850abe4c17d549f0c4b3dfd3f422a092ee435f879d64236f67f4bd3e79",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 45
+  },
+  "trial": {
+   "url": "https://netnut.io/free-trial/",
+   "status": 200,
+   "final_url": "https://netnut.io/free-trial/",
+   "content_type": "text/html",
+   "bytes": 297679,
+   "truncated": false,
+   "sha256": "d618ba850abe4c17d549f0c4b3dfd3f422a092ee435f879d64236f67f4bd3e79",
+   "fetched_at": "2026-10-19T05:59:42+00:00",
+   "text_bytes": 45
+  }
+ }
+}

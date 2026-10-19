@@ -1,0 +1,62 @@
+{
+ "slug": "zhipu",
+ "name": "Z.ai / Zhipu",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:52+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://z.ai/subscribe",
+   "status": 200,
+   "final_url": "https://z.ai/subscribe",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 192098,
+   "truncated": false,
+   "sha256": "adcaa7085aaaff2d0bbd41c040536055073a489dd3b5690b3ac96e9441c6347a",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 384
+  },
+  "docs": {
+   "url": "https://docs.z.ai/",
+   "status": 200,
+   "final_url": "https://docs.z.ai/guides/overview/quick-start",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 441933,
+   "truncated": false,
+   "sha256": "93f2eafc4b54e5d5f75359947070427eab83b6fdbba5b3b395d5938503500027",
+   "fetched_at": "2026-10-19T05:54:55+00:00",
+   "text_bytes": 7644
+  },
+  "llms": {
+   "url": "https://docs.z.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.z.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 8981,
+   "truncated": false,
+   "sha256": "9e19db422d2dd97c4448ced0eaf5684421411f27fc2cd5150153dd04cbb31e3c",
+   "fetched_at": "2026-10-19T05:54:57+00:00",
+   "text_bytes": 8967
+  },
+  "llms-full": {
+   "url": "https://docs.z.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.z.ai/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 609568,
+   "truncated": false,
+   "sha256": "3c19b358ed95ebcec44b3f1e86345aa286b19d0a6224e000e9f0bb627753f8cb",
+   "fetched_at": "2026-10-19T05:54:58+00:00",
+   "text_bytes": 607756
+  },
+  "llms-err-89ea42": {
+   "url": "https://docs.z.ai/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.z.ai/docs/llms.txt",
+   "content_type": "text/plain;charset=UTF-8",
+   "bytes": 15,
+   "truncated": false,
+   "sha256": "3965d1967e577f2a38e5a83a50ae71e0d510c080e228056160e75d55fd987872",
+   "fetched_at": "2026-10-19T05:54:59+00:00"
+  }
+ }
+}

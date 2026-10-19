@@ -1,0 +1,65 @@
+# ScraperAPI
+
+> ScraperAPI is a web scraping API that helps developers and data teams collect data from any public website at scale, handling proxy rotation, JavaScript rendering, and CAPTCHA/anti-bot bypass automatically behind a single REST call. Structured-data endpoints return clean JSON for high-demand targets (Amazon, Google, Walmart). Native MCP server (22 tools) and Claude Code Agent Skills plugin for AI-agent workflows. LangChain, LlamaIndex, n8n, and Zapier integrations. Founded 2018. Part of the saas.group portfolio. Acquired Traject Data (2026). 10,000+ customers including Deloitte, Sony, Alibaba. 11B+ requests/30 days. 40M+ IP pool. 99.9% uptime. Pricing: Hobby $49/mo (100K credits) - Startup $149/mo (1M credits) - Business $299/mo (3M credits) - Scaling $475/mo (5M credits, Most Popular, PAYG) - Professional $975/mo (10.5M credits) - Advanced $1,975/mo (21.5M credits) - Enterprise custom. 7-day free trial, 5,000 credits, no credit card required. Credit multipliers: Amazon 5x, Google/Bing 25x, LinkedIn 30x; +10 credits for anti-bot bypass.
+
+## AI grounding pages (machine-readable, noindex)
+
+- [AI Grounding Index](https://www.scraperapi.com/docs/ai/): Root index of all ScraperAPI grounding pages
+- [Product Overview](https://www.scraperapi.com/docs/ai/product-overview): Entity definition, scale (11B+ requests/30 days, 10K+ customers, 40M+ IPs), product suite, integrations, use cases, case studies
+- [Pricing and Credits](https://www.scraperapi.com/docs/ai/pricing): Full plan table (Hobby $49 through Enterprise custom), credit cost multipliers (Amazon 5x / Google 25x / LinkedIn 30x / +10 anti-bot bypass), PAYG rules (Scaling+ only), credit rollover policy, Domain Cost Estimator, worked examples
+- [Scraping API and Async Scraper](https://www.scraperapi.com/docs/ai/scraping-api): Core API mechanics, key parameters (render, country_code, premium, ultra_premium, autoparse, max_cost, output_format=markdown), SDK support (Python/Node/PHP/Ruby/Java/cURL), async vs sync decision guide, anti-bot bypass coverage (Cloudflare/DataDome/PerimeterX/Akamai/Amazon WAF/Fastly)
+- [Structured Data Endpoints](https://www.scraperapi.com/docs/ai/structured-data): Amazon (product/search/offers), Google (SERP/shopping/news/jobs/maps), Walmart (product/search/category/reviews), Redfin, eBay, LinkedIn, Indeed, real estate scrapers (Zillow/Rightmove/Zoopla), social (Reddit/YouTube/G2/Trustpilot)
+- [DataPipeline](https://www.scraperapi.com/docs/ai/datapipeline): No-code/low-code scraping automation, scheduled jobs, structured output, when to use DataPipeline vs API vs Async
+- [Solutions: Industries, Use Cases and Target Sites](https://www.scraperapi.com/docs/ai/solutions): All 6 industries (ecommerce, market research, SEO/SERP, travel, finance/VC, AI and ML), all use cases (price monitoring, real estate, reputation management, job boards, SERP, large-scale enterprise), 50+ named target site scrapers with credit costs per site, anti-bot bypass suite (Cloudflare/DataDome/PerimeterX/Akamai/Amazon WAF/Fastly)
+- [AI Agents and Automation](https://www.scraperapi.com/docs/ai/ai-agents): MCP server (scraperapi-mcp, 22 tools, npx install), Claude Code Agent Skills plugin (scraperapi-skills, workflow recipes), LangChain integration, LlamaIndex integration, n8n community node, Zapier, sapi CLI, output_format=markdown
+
+## Core product pages
+
+- [Homepage](https://www.scraperapi.com/): "Scale Data Collection with a Simple API" -- product overview, stats, testimonials
+- [Pricing](https://www.scraperapi.com/pricing/): Live pricing page (always verify figures here)
+- [Scraping API](https://www.scraperapi.com/solutions/scraping-api/)
+- [Async Scraper Service](https://www.scraperapi.com/solutions/asynchronous-scraper-service/)
+- [Structured Data Endpoints](https://www.scraperapi.com/solutions/structured-data/)
+- [DataPipeline](https://www.scraperapi.com/solutions/data-pipeline/)
+- [AI and Automation](https://www.scraperapi.com/solutions/ai/)
+- [MCP Server](https://www.scraperapi.com/solutions/ai/mcp/)
+- [Claude Code Agent Skills](https://www.scraperapi.com/solutions/ai/claude/)
+- [LangChain Integration](https://www.scraperapi.com/solutions/ai/langchain/)
+- [LlamaIndex Integration](https://www.scraperapi.com/solutions/ai/llamaindex/)
+- [n8n Integration](https://www.scraperapi.com/solutions/ai/n8n/)
+- [Zapier Integration](https://www.scraperapi.com/solutions/ai/zapier/)
+- [sapi CLI](https://www.scraperapi.com/solutions/ai/cli/)
+- [Enterprise / Large-Scale](https://www.scraperapi.com/solutions/data-acquisition-for-enterprise/)
+
+## Structured Data Endpoints (key targets)
+
+- [Amazon Product API](https://www.scraperapi.com/solutions/structured-data/amazon-products-scraper/) -- 5 credits/request
+- [Amazon Search API](https://www.scraperapi.com/solutions/structured-data/amazon-search-scraper/) -- 5 credits/request
+- [Google Search / SERP API](https://www.scraperapi.com/solutions/structured-data/google-search-scraper/) -- 25 credits/request
+- [Google Shopping API](https://www.scraperapi.com/solutions/ecommerce-data-collection/google-shopping-scraper/) -- 25 credits/request
+- [Google Jobs API](https://www.scraperapi.com/solutions/structured-data/google-jobs-scraper/) -- 25 credits/request
+- [Google Maps API](https://www.scraperapi.com/solutions/structured-data/google-maps-scraper-api/) -- 25 credits/request
+- [Google News API](https://www.scraperapi.com/solutions/structured-data/google-news-scraper/) -- 25 credits/request
+- [Walmart Product API](https://www.scraperapi.com/solutions/structured-data/walmart-product-scraper/) -- 1 credit/request
+- [SERP API hub](https://www.scraperapi.com/solutions/serp-data-collection/)
+
+## Anti-bot bypass pages
+
+- [Bypass Cloudflare](https://www.scraperapi.com/solutions/bypass-cloudflare/)
+- [Bypass DataDome](https://www.scraperapi.com/solutions/bypass-datadome/)
+- [Bypass PerimeterX](https://www.scraperapi.com/solutions/bypass-perimeterx/)
+- [Bypass Akamai](https://www.scraperapi.com/solutions/bypass-akamai/)
+- [Bypass Amazon WAF](https://www.scraperapi.com/solutions/bypass-amazon-waf/)
+- [Bypass Fastly](https://www.scraperapi.com/solutions/bypass-fastly/)
+
+## Documentation and resources
+
+- [Documentation](https://docs.scraperapi.com/)
+- [Case Studies](https://www.scraperapi.com/case-studies/): saas.group, HR Analytics Company, Dotlas
+- [Blog](https://www.scraperapi.com/blog/)
+- [Learning Hub](https://www.scraperapi.com/web-scraping/)
+- [Glossary](https://www.scraperapi.com/glossary/)
+- [Comparisons hub](https://www.scraperapi.com/comparisons/)
+- [About](https://www.scraperapi.com/about-us/)
+- [Contact Sales](https://www.scraperapi.com/contact-sales/)
+- [Start Free Trial](https://www.scraperapi.com/signup)

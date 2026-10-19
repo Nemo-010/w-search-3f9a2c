@@ -1,0 +1,28 @@
+# Nimble (nimble) category=ai-search
+home=https://nimbleway.com/ pricing=https://nimbleway.com/pricing docs=https://docs.nimbleway.com/ llms=None
+sources_ok: pricing:https://nimbleway.com/pricing, docs:https://docs.nimbleway.com/, home:https://nimbleway.com/, llms:https://docs.nimbleway.com/llms.txt, llms-full:https://docs.nimbleway.com/llms-full.txt, llms-https://nimbleway.com/llms.txt:https://nimbleway.com/llms.txt
+--- ranked fact lines ---
+[pricing] Nimble is now on ChatGPT and Codex as an official plugin Learn More Products Featured Products Agent API Automate web research tasks Search API Search the web & retrieve fresh data Extract API Fetch structured data from urls Using Nimble Integrations Plug web search into your stack MCP Server Connect to Nimble from anywhere AI Plugins Web search for personal agents API reference Paramaters and con
+[home] Nimble is now on ChatGPT and Codex as an official plugin Learn More Products Featured Products Agent API Automate web research tasks Search API Search the web & retrieve fresh data Extract API Fetch structured data from urls Using Nimble Integrations Plug web search into your stack MCP Server Connect to Nimble from anywhere AI Plugins Web search for personal agents API reference Paramaters and con
+[docs] market, with Pro pricing from $15 per host [1].
+[docs] Grafana Cloud undercuts it with a free tier [2]..." ,
+[llms] - [Announcing $47M Series B](https://nimbleway.com/blog/announcing-47m-series-b-web-search-agent-platform/): Series B funding and the Nimble Web Search Agent Platform.
+--- llms/readme head ---
+﻿# Nimble
+> Nimble is a real-time web search platform powered by Web Search Agents — turning the live web into structured, reliable data for AI and enterprise. Nimble web APIs enable two core use cases are 1) live web search that enables AI Agents to query the web like a live database, and 2) stream large-scale structured data feeds to applications and data lakes. Developer documentation lives at docs.nimbleway.com and is indexed separately at https://docs.nimbleway.com/llms.txt.
+## About Nimble
+- [Nimble Home](https://www.nimbleway.com/): Real-time web intelligence powered by Web Search Agents — turn the live internet into structured, reliable data for AI and enterprise.
+- [About Us](https://www.nimbleway.com/about-us/): Multi-national team of engineers and builders turning web chaos into structured data.
+- [The Platform](https://www.nimbleway.com/platform/): Overview of the Nimble Web Search Agent Platform — Search, Extract, Crawl, Agents, Map, Proxy.
+- [Careers](https://www.nimbleway.com/careers/): Open roles building the Web Search Agent Platform powering real-time intelligence for AI.
+- [Contact](https://www.nimbleway.com/contact/): Reach the Nimble team about the platform, SDK, API, pricing, or partnerships.
+- [Trust Center](https://www.nimbleway.com/trust/): Security, compliance (SOC2, GDPR, CCPA), and reliability information.
+- [Partners](https://www.nimbleway.com/partners/): Partner ecosystem powering real-time web data products, platforms, and AI.
+## Products & Platform
+- [AI Web Search](https://www.nimbleway.com/platform/ai-web-search/): Real-time AI-native web search delivering structured, agent-ready results.
+- [Structured Data Feeds](https://www.nimbleway.com/platform/structured-data-feeds/): Turn the live web into structured, reliable feeds for analytics and AI.
+## Solutions & Use Case Examples
+- [Competitive Pricing](https://www.nimbleway.com/use-cases/competitive-pricing/): Web Search Agents for live pricing intelligence.
+- [Digital Shelf Analytics](https://www.nimbleway.com/use-cases/digital-shelf-analytics/): Track product presentation and discoverability across channels.
+- [Brand Pulse Intelligence](https://www.nimbleway.com/use-cases/brand-pulse-intelligence/): Monitor brand sentiment and presence with Web Search Agents.
+- [Alternative Data](https://www.nimbleway.com/use-cases/alternative-data/): Structured signals for hedge funds, finance, and consulting.

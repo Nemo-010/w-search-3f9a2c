@@ -1,0 +1,63 @@
+{
+ "slug": "keenable",
+ "name": "Keenable",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:02+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://docs.keenable.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.keenable.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 8529,
+   "truncated": false,
+   "sha256": "35739332abd22ea90610cfb1faf0a6583bd6904bb1d9086cdcd1c0c1bc2b0eef",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 8509
+  },
+  "llms-full": {
+   "url": "https://docs.keenable.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.keenable.ai/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 161199,
+   "truncated": false,
+   "sha256": "b9e81e9afe384160168bf2dc763919c1e5b48b4bd771d3de1cde1df60be5f4e5",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 160669
+  },
+  "docs": {
+   "url": "https://docs.keenable.ai/",
+   "status": 200,
+   "final_url": "https://docs.keenable.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 333328,
+   "truncated": false,
+   "sha256": "13eb7f4532287add33ecc75c098cab71fc3c993f4dfb1336a1362a13b51fbc04",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 2752
+  },
+  "home": {
+   "url": "https://keenable.ai/",
+   "status": 200,
+   "final_url": "https://keenable.ai/",
+   "content_type": "text/html",
+   "bytes": 749097,
+   "truncated": false,
+   "sha256": "0772053cb19ed3f774a84c905c59c67f3cbfa7da8ff5712cdcd3aa6cb3e91464",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 9255
+  },
+  "credits": {
+   "url": "https://docs.keenable.ai/credits.md",
+   "status": 200,
+   "final_url": "https://docs.keenable.ai/credits.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 3636,
+   "truncated": false,
+   "sha256": "1f04508253403e85be74854dc125167f3934d0015d0451720d0726f563f83113",
+   "fetched_at": "2026-10-19T05:58:13+00:00",
+   "text_bytes": 3630
+  }
+ }
+}

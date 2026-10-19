@@ -1,0 +1,104 @@
+{
+ "slug": "decodo",
+ "name": "Decodo",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:11+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://decodo.com/pricing",
+   "status": 200,
+   "final_url": "https://decodo.com/proxies/residential-proxies/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 853996,
+   "truncated": false,
+   "sha256": "3da285b1293bb2d4103c108883f894e1d48b11d7740e0dc503cdf9acc85a4d4a",
+   "fetched_at": "2026-10-19T05:54:11+00:00",
+   "text_bytes": 16043
+  },
+  "docs": {
+   "url": "https://help.decodo.com/",
+   "status": 200,
+   "final_url": "https://help.decodo.com/docs/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 413213,
+   "truncated": false,
+   "sha256": "38db93aeaf317612e40d288f185b7cf9e508ee9c45ffaf8eb136cc84d2924878",
+   "fetched_at": "2026-10-19T05:54:13+00:00",
+   "text_bytes": 3621
+  },
+  "home": {
+   "url": "https://decodo.com/",
+   "status": 200,
+   "final_url": "https://decodo.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1014218,
+   "truncated": false,
+   "sha256": "9d3fd2ef4b0397628764f7559bdbd85216d20f9f111dcbf3e2ff75d80534fcfc",
+   "fetched_at": "2026-10-19T05:54:15+00:00",
+   "text_bytes": 17821
+  },
+  "llms": {
+   "url": "https://help.decodo.com/llms.txt",
+   "status": 200,
+   "final_url": "https://help.decodo.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3961,
+   "truncated": false,
+   "sha256": "d5e89866ca7598982a825b0563e12b93e5692aaefb8c086e6a26c1bd007abf80",
+   "fetched_at": "2026-10-19T05:54:16+00:00",
+   "text_bytes": 3953
+  },
+  "llms-full": {
+   "url": "https://help.decodo.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://help.decodo.com/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3000000,
+   "truncated": true,
+   "sha256": "526604d7bf72d32b5db0cb9a0170ca36fb06aec2151979b10468b680a8e86357",
+   "fetched_at": "2026-10-19T05:54:18+00:00",
+   "text_bytes": 2998226
+  },
+  "llms-https://decodo.com/llms.txt": {
+   "url": "https://decodo.com/llms.txt",
+   "status": 200,
+   "final_url": "https://decodo.com/llms.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 17730,
+   "truncated": false,
+   "sha256": "c8f702cce33eb043934c0db2f2594eaf29bf40925acfbe6badc951a4db530a23",
+   "fetched_at": "2026-10-19T05:54:21+00:00",
+   "text_bytes": 17730
+  },
+  "llms-err-c5ba34": {
+   "url": "https://decodo.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://decodo.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 35826,
+   "truncated": false,
+   "sha256": "370312adb6f28623f3d6e6a842937e82df3d4efd2a63fd25caa56a82fc1c937c",
+   "fetched_at": "2026-10-19T05:54:22+00:00"
+  },
+  "llms-err-1e47ea": {
+   "url": "https://docs.help.decodo.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.help.decodo.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:23+00:00"
+  },
+  "llms-err-afd297": {
+   "url": "https://docs.decodo.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.decodo.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:23+00:00"
+  }
+ }
+}

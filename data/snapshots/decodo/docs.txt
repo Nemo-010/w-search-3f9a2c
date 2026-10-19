@@ -1,0 +1,19 @@
+Introduction - Introduction Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Introduction home page English Search... ⌘ K Search... Navigation ABOUT Introduction Guides API Reference ABOUT Introduction RESIDENTIAL PROXIES Residential Mobile STATIC RESIDENTIAL (ISP) PROXIES ISP Pay/GB ISP Pay/IP Dedicated ISP DATACENTER PROXIES Datacenter Pay/GB Datacenter Pay/IP Dedicated Datacenter FREE PROXIES Quick Start Authentication Methods Advanced Parameters Usage Statistics Limitations Restricted Targets SITE UNBLOCKER Quick Start Configuration WEB DATA API Introduction /scrape /search /crawl /map Billing Migration guide Response Types Available Templates Troubleshooting LEGACY VIDEO DOWNLOADER Introduction Quick start Parameters Storage setup Status & results DECODO TOOLS Decodo Chrome Extension Decodo Firefox Extension Proxy Checker AI Overview MCP Server Help Docs MCP Server n8n Langchain CLI TypeScript SDK Python SDK Go SDK Agent Skills INTEGRATIONS Browsers Operating Systems Proxy Managers Scrapers Smartphone Apps Social Media Tools Code Examples ACCOUNT & DASHBOARD Account Deletion Account Email Change ID Verification Referral Program Teams Webhooks PAYMENTS Payment Methods Alipay Payments Auto Top-Up Crypto Payments Invoices Pay As You Go Payment Issues Refund Policy Trials Change Payment Method Billing Details Subscription Statuses Subscription Cancellation Wallet Guide TROUBLESHOOTING Error 407 Error 522 HTTP Response Codes IP:Port Format Mismatched IP Location Traffic Usage Proxy Connection Failed Proxy Speed Issues Smartphone cURL Test SSL Errors Website Fails to Load TIPS & TRICKS Best Scraping Practices CAPTCHA Avoidance Craigslist Ad Posting DNS Reddit and Proxies USEFUL LINKS Discord GitHub Knowledge Hub Trust Center FAQ Dashboard Website On this page Guides to quickly get started with proxies Get started with the Web Scraping API Useful Resources Join our community ABOUT Introduction Copy page Copy page Decodo help docs hub. Quick start guides for residential, mobile, datacenter, ISP, and dedicated proxies, the Web Scraping API, and browser extensions. Copy page Copy page ​ Guides to quickly get started with proxies 
+ Residential Quick Start Datacenter Pay/IP Quick Start 
+ Mobile Quick Start ISP Pay/IP Quick Start 
+ Datacenter Pay/GB Quick Start Dedicated ISP Quick Start 
+ ISP Pay/GB Quick Start Dedicated DC Quick Start 
+ Site Unblocker Quick Start 
+ ​ Get started with the Web Scraping API 
+ Web Scraping API Quick Start 
+ ​ Useful Resources 
+ Proxy Integration Guides Set up proxies on popular third-party tools, like Adspower or GoLogin. 
+ Decodo Chrome Extension Effortlessly integrate all essential proxy features into your browser with the Decodo Chrome Extension. 
+ Advanced Parameters for Residential Proxies Manually specify residential proxy parameters to target cities and socks5 proxies, etc. 
+ Web Scraping API parameters A full list of Web Scraping API Parameters. 
+ Free Trials Free trial options for Decodo products. 
+ ​ Join our community 
+ GitHub Learn more Discord Learn more YouTube Learn more 
+ Support Need help or just want to say hello? Our support is available 24/7. 
+ You can also reach us anytime via email at support@decodo.com . Let's chat! Feedback Can’t find what you’re looking for? Request an article! 
+ Have feedback? Share your thoughts on how we can improve. Share feedback Was this page helpful? Yes No Quick Start Next Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

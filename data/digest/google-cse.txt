@@ -1,0 +1,8 @@
+# Google Programmable Search (google-cse) category=search-engine
+home=https://developers.google.com/custom-search/v1/overview pricing=https://developers.google.com/custom-search/v1/overview#pricing docs=https://developers.google.com/custom-search/v1/overview llms=None
+sources_ok: pricing:https://developers.google.com/custom-search/v1/overview#pricing, docs:https://developers.google.com/custom-search/v1/overview
+--- ranked fact lines ---
+[pricing] The API offers 100 free queries per day, with additional queries available for a fee.
+[pricing] Custom Search JSON API provides 100 search queries per day for free. If you need more,
+[pricing] API Console. Additional requests cost $5 per 1000 queries, up to
+[pricing] Configuration Files Context File Annotations File Custom Ranking Refining Searches Rewriting Queries Promotions Making Money Admin Accounts Programmable Search Element API Programmable Search Element Ads-Free Paid API More Callback Examples

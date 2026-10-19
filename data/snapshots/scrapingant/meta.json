@@ -1,0 +1,70 @@
+{
+ "slug": "scrapingant",
+ "name": "ScrapingAnt",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:16+00:00",
+ "sources": {
+  "pricing-err-4d0e99": {
+   "url": "https://scrapingant.com/pricing",
+   "status": 404,
+   "final_url": "https://scrapingant.com/pricing",
+   "content_type": "text/html",
+   "bytes": 43937,
+   "truncated": false,
+   "sha256": "2ca1354a7cebf649cf16ba1bcf8ea7e12ebda46f06ff5792e42646204f276ebb",
+   "fetched_at": "2026-10-19T05:54:16+00:00"
+  },
+  "docs": {
+   "url": "https://docs.scrapingant.com/",
+   "status": 200,
+   "final_url": "https://docs.scrapingant.com/",
+   "content_type": "text/html",
+   "bytes": 45131,
+   "truncated": false,
+   "sha256": "4dd4f29ea52995732b7f71bf0c6c9ec89dc0889c177836f51cb91a498b6adae9",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 4899
+  },
+  "home": {
+   "url": "https://scrapingant.com/",
+   "status": 200,
+   "final_url": "https://scrapingant.com/",
+   "content_type": "text/html",
+   "bytes": 141192,
+   "truncated": false,
+   "sha256": "19d442fda79a4152cdc7a94932425307eda016c8e644dd9634e60dac433788b3",
+   "fetched_at": "2026-10-19T05:54:18+00:00",
+   "text_bytes": 11916
+  },
+  "llms-err-cbc69d": {
+   "url": "https://docs.scrapingant.com/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.scrapingant.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 153,
+   "truncated": false,
+   "sha256": "3248b01d461ed11b7d34871bee9879ba2536c0ae5c47f16638e9aaae0ec5a481",
+   "fetched_at": "2026-10-19T05:54:18+00:00"
+  },
+  "llms-err-5fe61c": {
+   "url": "https://scrapingant.com/llms.txt",
+   "status": 404,
+   "final_url": "https://scrapingant.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 43937,
+   "truncated": false,
+   "sha256": "2ca1354a7cebf649cf16ba1bcf8ea7e12ebda46f06ff5792e42646204f276ebb",
+   "fetched_at": "2026-10-19T05:54:19+00:00"
+  },
+  "llms-err-6f77c8": {
+   "url": "https://scrapingant.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://scrapingant.com/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 43937,
+   "truncated": false,
+   "sha256": "2ca1354a7cebf649cf16ba1bcf8ea7e12ebda46f06ff5792e42646204f276ebb",
+   "fetched_at": "2026-10-19T05:54:20+00:00"
+  }
+ }
+}

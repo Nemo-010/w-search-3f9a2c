@@ -1,0 +1,1292 @@
+# NewsAPI.ai
+
+> NewsAPI.ai is the news API of Event Registry: real-time and archive (since 2014) access to news, blog and press-release articles from 150,000+ publishers in 50+ languages. Every article is enriched with entities (concepts linked to Wikipedia), categories, sentiment, locations and duplicate information; related articles are clustered into events, and Signal Types classify 136+ kinds of real-world developments (mergers, layoffs, protests, wildfires, ...) at the sentence level. Access is via a REST API (JSON over GET or POST), Python and Node.js SDKs, and an MCP server.
+
+This is the complete, single-file reference for LLMs and AI coding assistants. A shorter index is at https://newsapi.ai/llms.txt and the human-readable documentation at https://newsapi.ai/documentation.
+
+## Quick start
+
+1. Register for free at https://newsapi.ai/register (2,000 tokens, no credit card) and copy the API key from https://newsapi.ai/dashboard.
+2. Find the URI of what you are looking for (person, company, place, topic) with an autosuggest endpoint. Concept URIs match the entity in every language, which keywords do not.
+3. Search articles or events, filtering by concept, keyword, source, category, language, date, sentiment and more.
+
+Find the concept URI for "Tesla":
+
+```bash
+curl -X POST https://eventregistry.org/api/v1/suggestConceptsFast \
+  -H "Content-Type: application/json" \
+  -d '{"prefix": "Tesla", "lang": "eng", "apiKey": "YOUR_API_KEY"}'
+# -> [{"uri": "http://en.wikipedia.org/wiki/Tesla,_Inc.", "type": "org", "label": {"eng": "Tesla, Inc."}, ...}, ...]
+```
+
+The 20 newest English articles about Tesla from the last 7 days, without duplicates:
+
+```bash
+curl -X POST https://eventregistry.org/api/v1/article/getArticles \
+  -H "Content-Type: application/json" \
+  -d '{
+    "conceptUri": "http://en.wikipedia.org/wiki/Tesla,_Inc.",
+    "lang": "eng",
+    "forceMaxDataTimeWindow": 7,
+    "isDuplicateFilter": "skipDuplicates",
+    "articlesSortBy": "date",
+    "articlesCount": 20,
+    "apiKey": "YOUR_API_KEY"
+  }'
+# -> {"articles": {"totalResults": ..., "page": 1, "pages": ..., "results": [{"uri", "url", "title", "body", "dateTime", "source": {...}, "sentiment", "eventUri", ...}]}}
+```
+
+The same with the Python SDK (`pip install eventregistry`):
+
+```python
+from eventregistry import *
+# allowUseOfArchive=False keeps queries without dates to the last 30 days (cheapest token tier)
+er = EventRegistry(apiKey = "YOUR_API_KEY", allowUseOfArchive = False)
+
+q = QueryArticlesIter(
+    conceptUri = er.getConceptUri("Tesla"),
+    lang = "eng",
+    dataType = ["news", "pr"])
+
+for art in q.execQuery(er, sortBy = "date", maxItems = 20):
+    print(art["dateTime"], art["source"]["title"], art["title"])
+```
+
+Tips for writing correct requests:
+
+- Prefer `conceptUri` (from `suggestConceptsFast`) over `keyword` for entities; use `keyword` for phrases that are not entities.
+- Keep searches in the cheap "recent" tier (last 30 days) with `forceMaxDataTimeWindow` (7 or 31) or a `dateStart`/`dateEnd` within the last 30 days; each searched archive year costs more tokens (see §1.7).
+- One call returns at most 100 articles (`articlesCount`) or 50 events (`eventsCount`); page with `articlesPage` / `eventsPage`. For real-time ingestion use the minute streams instead of polling searches.
+- Send at most 5 requests at the same time (HTTP 429 otherwise); sequential requests are recommended.
+- For AND/OR/NOT combinations use the `query` parameter (§1.15) and do not mix it with simple filter parameters.
+- `includeArticleConcepts`, `includeArticleCategories`, `includeArticleLocation` and other `include*` flags (§1.18) add fields that are off by default.
+
+## Product overview
+
+- Coverage: 150,000+ publishers, 50+ languages, news since 2014, real-time updates; data types `news`, `blog` and `pr` (press releases).
+- Enrichment: concepts (people, organizations, locations, things; Wikipedia URIs), categories (IPTC Media Topics, DMOZ, News taxonomies), sentiment, dateline location, extracted dates, authors, images, duplicate detection, source ranking.
+- Events: articles about the same real-world happening, in any language, are grouped into events with a title, summary, date, location, concepts and categories.
+- Signal Types: 136+ event types (Business 87, Society 27, Environment 22) detected at the sentence level, with facticity (fact / opinion / forecast), entities, sentiment and ESG / SDG / SASB framework mappings. Overview: https://newsapi.ai/signal-types
+- Text analytics on your own text: semantic annotation, named entities, categorization, sentiment, semantic similarity, language detection and article extraction from a URL.
+- Pricing: token-based monthly plans at https://newsapi.ai/plans; free tier of 2,000 tokens on registration. Use cases: media monitoring, risk monitoring, market and geopolitical intelligence, news aggregation, data mining.
+
+---
+
+## 1. Conventions
+
+### 1.1 Hosts
+
+| API group | Base URL |
+|---|---|
+| Articles, Events, Event Types (mentions), Autosuggest, Usage | `https://eventregistry.org` (paths start with `/api/v1/...`; the same paths also work on `https://newsapi.ai`) |
+| Text Analytics | `https://analytics.eventregistry.org/api/v1` |
+
+### 1.2 Authentication
+
+- Pass your key as the `apiKey` parameter on every call. Use a URL query parameter for GET or a JSON body field for POST. There is no header-based auth.
+- Register for free at https://newsapi.ai/register; after you log in, your API key is shown on https://newsapi.ai/dashboard. A free account gets **2,000 tokens** in total for testing. A paid plan is required to use more.
+
+### 1.3 HTTP method and body
+
+- Every endpoint accepts **GET or POST**.
+  - With **GET**, send parameters in the URL query string.
+  - With **POST**, send them as a JSON object in the request body with header `Content-Type: application/json`.
+- Some requests require POST, for example when the request is too long for a URL. Use POST whenever you send the `query` object or long lists.
+- With GET, a multi-valued parameter is sent by repeating it. With POST, use a JSON array, for example `"lang": ["eng","deu"]`.
+- Many documentation examples include an `"action"` field (e.g. `"action": "getArticles"`). The path already identifies the action, so this field is optional.
+
+### 1.4 Response codes
+
+| Code | Meaning |
+|---|---|
+| 200 | Success |
+| 204 | Request succeeded, but the requested information is not available |
+| 400 | Bad request: invalid or missing parameter |
+| 401 | User's token limit reached; requests are rejected |
+| 403 | Forbidden: the IP or account is disabled, or all tokens have been used (see the error message) |
+| 429 | Too many simultaneous requests |
+| 500 | Internal error |
+| 503 | Service unavailable |
+
+### 1.5 Rate limiting
+
+- A user can have at most **5 simultaneous requests**. Any extra request gets a `429` and is not executed.
+- The recommended approach is to send requests sequentially rather than in parallel.
+
+### 1.6 Limits on query conditions (items per condition type per query)
+
+| Condition | Trial | Paid |
+|---|---|---|
+| Sources | 1,000 | 50,000 |
+| Keywords | 15 | 60 |
+| Concepts | 15 | 60 |
+| Categories | 10 | 20 |
+| Languages | 5 | 10 |
+| Locations | 10 | 15 |
+
+Individual parameter descriptions also give per-parameter limits, which are the paid limits. Examples: at most 60 keywords, 50 concepts, 20 categories or 5 languages per search.
+
+### 1.7 Token usage
+
+Two things determine the cost of a request:
+
+- **What you request**: article search, event search, an aggregate, or text analytics.
+- **The time period covered**: recent data (last 30 days) has a fixed low cost. Archive data (since 2014) is charged per searched year.
+
+| Request type | Recent data (last 30 days) | Archive (since 2014) |
+|---|---|---|
+| Search articles | 1 token | 5 tokens / searched year |
+| Search events | 5 tokens | 20 tokens / searched year |
+| Simple aggregates (top concepts, tag cloud, locations, timeline, sources, sentiment, concept graph, categories) | 5 tokens | 10 tokens / searched year |
+| Complex aggregates (concept trends, date mentions, event clustering, similar events) | 10 tokens | 50 tokens / searched year |
+
+Text analytics is charged per analyzed document:
+
+| Endpoint | Tokens per document |
+|---|---|
+| Language detection | 0.01 |
+| Named entity detection | 0.02 |
+| Sentiment detection | 0.02 |
+| Semantic annotation | 0.04 |
+| Text categorization | 0.04 |
+| Semantic text similarity | 0.05 |
+| Extract article info | 0.05 |
+
+Further cost notes:
+
+- A search call counts as one search action no matter how many results it returns (up to 100 articles or 50 events per call).
+- `getArticle` (article details) costs the same as an article search.
+- Stream endpoints charge per returned batch:
+  - `minuteStreamArticles` uses one token per started 100 articles. For example, 250 articles cost 3 tokens.
+  - `minuteStreamEvents` uses 5 tokens per 50 events. For example, 200 events cost 4×5 tokens.
+- To keep searches in the cheap "recent" tier, set `dateStart`/`dateEnd` or `forceMaxDataTimeWindow`.
+- `GET /api/v1/usage` returns `availableTokens` and `usedTokens`.
+
+### 1.8 `forceMaxDataTimeWindow`
+
+- Integer, valid values **7** or **31** only.
+- It limits the search to the last 7 or 31 days without setting `dateStart`/`dateEnd`, which ensures the smallest token use.
+- Omit it to search older data.
+- Available on `getArticles` and `getEvents`.
+
+### 1.9 `dataType`
+
+- Values: `news` (default), `pr` (press releases), `blog`. Pass a string or an array, for example `["news","pr"]`.
+- Available on article searches and article streams.
+- In the advanced query language, set it inside `$filter.dataType`.
+
+### 1.10 `resultType` and parameter prefixes
+
+- Search endpoints return either a list of items or one of several **aggregates**, selected with `resultType`:
+  - `getArticles` defaults to `articles`.
+  - `getEvents` defaults to `events`.
+  - `getMentions` defaults to `mentions`.
+  - `getEvent` and `getArticle` default to `info`.
+- The paging, sorting and body-length parameters of a result type carry that result type as a prefix. Examples:
+  - `articlesPage`, `articlesCount`, `articlesSortBy`
+  - `eventsPage`, `eventsCount`, `eventsSortBy`
+  - `mentionsPage`, `mentionsCount`, `mentionsSortBy`
+  - `breakingEventsCount`, `breakingEventsPage`
+  - `recentActivityArticlesMaxArticleCount`
+  - `infoArticleBodyLen`
+  - `articleTrendLang`, `articleTrendPage`, `articleTrendCount`
+- In the documentation's `getEvent` description: "Each result type corresponds to the prefix that'll be used for other parameters."
+- Aggregate responses have the shape `{ "<resultType>": { "warning"?, "usedResults", "totalResults", "results": [...] } }`.
+- List responses have the shape `{ "<resultType>": { "totalResults", "page", "count", "pages", "results": [...] } }`.
+
+### 1.11 Paging limits
+
+| Endpoint | Page parameter | Count parameter | Default / max count |
+|---|---|---|---|
+| getArticles, getArticlesForTopicPage | `articlesPage` (from 1) | `articlesCount` | 100 / 100 |
+| getEvents, getEventsForTopicPage | `eventsPage` | `eventsCount` | 50 / 50 |
+| getMentions | `mentionsPage` | `mentionsCount` | 100 / 100 |
+| getBreakingEvents | `breakingEventsPage` | `breakingEventsCount` | 100 / 100 |
+| getArticle | – (up to 100 `articleUri` values per call) | – | – |
+| minuteStreamArticles | – | `recentActivityArticlesMaxArticleCount` | 100 / 2000 |
+| minuteStreamEvents | – | `recentActivityEventsMaxEventCount` | 50 / 2000 |
+
+To retrieve more results, repeat the call and increase the page parameter (2, 3, ...).
+
+### 1.12 Sorting
+
+- **Articles** (`articlesSortBy`, `mentionsSortBy`):
+  - `date` (default): publishing date
+  - `rel`: relevance to the query
+  - `sourceImportance`: manually curated source importance
+  - `sourceAlexaGlobalRank`
+  - `sourceAlexaCountryRank`
+  - The text also mentions `sourceImportanceRank` (the reverse of `sourceImportance`), but it is not in the enum.
+  - `articlesSortByAsc` / `mentionsSortByAsc`: `false` (default) sorts descending.
+- **Events** (`eventsSortBy`):
+  - `date` (default for `getEvents`)
+  - `rel` (default for `getEventsForTopicPage`)
+  - `size`: number of articles in the event
+  - `eventsSortByAsc` defaults to `false`.
+
+### 1.13 Simple query parameters
+
+On search endpoints you can set filter parameters directly. These rules apply:
+
+- **Different condition types** combine with AND.
+- **Repeated values of one parameter**:
+  - `keyword`: AND by default. Change with `keywordOper` (`and`|`or`).
+  - `conceptUri`: AND by default. Change with `conceptOper`.
+  - `categoryUri`: **OR** by default. Change with `categoryOper`.
+  - `sourceUri`, `sourceLocationUri`, `sourceGroupUri`, `authorUri`, `locationUri`, `lang`: OR (any value matches).
+- **Negative conditions** use `ignore*` parameters (`ignoreKeyword`, `ignoreConceptUri`, `ignoreCategoryUri`, `ignoreSourceUri`, `ignoreSourceLocationUri`, `ignoreSourceGroupUri`, `ignoreAuthorUri`, `ignoreLocationUri`, `ignoreLang`, `ignoreKeywordLoc`). A result matching **any** ignore value is excluded.
+- **Value formats**:
+  - Dates use `YYYY-MM-DD`.
+  - Times (`onlyAfterTm`, `*UpdatesAfterTm`) use `YYYY-MM-DDTHH:MM:SS` in UTC.
+  - Languages use ISO 639-3 codes (see §1.20).
+- **Where the URIs come from**:
+  - `conceptUri`: Wikipedia URLs such as `http://en.wikipedia.org/wiki/Barack_Obama`. Look them up via [Suggest concepts](#suggest-concepts).
+  - `categoryUri`: e.g. `dmoz/Business`, `news/Business`.
+  - `sourceUri`: the source's domain, e.g. `bbc.co.uk`.
+  - `locationUri`: the Wikipedia URL of the place.
+  - `authorUri`: e.g. `mark_mazzetti@nytimes.com`.
+  - `sourceGroupUri`: e.g. `general/ERtop10`, `business/top100`, `paywall/paywalled_sources`.
+
+Example of a simple query: every condition must match. The doc example repeats the `conceptUri` key. With GET this means repeating the parameter; with POST use an array.
+
+```json
+{
+  "conceptUri": ["http://en.wikipedia.org/wiki/OpenAI", "http://en.wikipedia.org/wiki/Amazon_(company)"],
+  "keyword": "AWS",
+  "categoryUri": "news/Business",
+  "sourceGroupUri": "business/top100",
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+### 1.14 Keyword search modes (`keywordSearchMode`)
+
+| Mode | Behavior | Use when |
+|---|---|---|
+| `phrase` (default) | Exact phrase: all words adjacent and in order | Looking for a specific term, product or company |
+| `exact` | Boolean language inside one `keyword` string: `AND`, `OR`, `NOT`, `NEXT/X` (in order, at most X words apart), `NEAR/X` (within X words, any order), and parentheses. Consecutive non-operator words form a phrase. Precedence: `NEAR/x`, `NEXT/x` > `NOT` > `AND` > `OR` | Combining or excluding terms, or requiring proximity |
+| `simple` | Google-like relevance search: not all terms are required; more matches rank higher | Long free-text topic descriptions. Combine with `articlesSortBy: "rel"` |
+
+- `keywordLoc` sets where keywords are searched: `body` (default), `title`, or `body,title`.
+- Several phrases with `keywordOper`: `"keyword": ["electric vehicle","charging station"], "keywordOper": "and"`.
+
+Examples of the `exact` mode:
+
+```json
+{ "keyword": "(Apple OR Samsung) AND smartphone NOT lawsuit", "keywordSearchMode": "exact", "apiKey": "YOUR_API_KEY" }
+{ "keyword": "Siemens NEAR/15 (sustainability OR ecology OR renewable energy)", "keywordSearchMode": "exact", "apiKey": "YOUR_API_KEY" }
+{ "keyword": "tesla self driving car number of fatal accidents", "keywordSearchMode": "simple", "articlesSortBy": "rel", "apiKey": "YOUR_API_KEY" }
+```
+
+### 1.15 Advanced query language (`query` parameter)
+
+- For nested AND/OR/NOT logic, pass a JSON object in the `query` parameter. The syntax resembles MongoDB.
+- When you use `query`, **do not** also pass simple filter parameters such as `keyword`, `conceptUri` or `sourceUri`:
+  - The query-language docs say combining them returns an error.
+  - The `getEvents` docs say the simple parameters are ignored.
+- The same language is used by `getArticles`, `getEvents` and `getMentions`. `getMentions` adds event-type fields; see §5.
+
+Grammar (articles):
+
+```
+ComplexArticleQuery ::= {
+  "$query": CombinedQuery | BaseQuery,
+  "$filter": null | {
+    "dataType": null | "news" | "blog" | "pr" | ["news", ...],
+    "isDuplicate": null | "keepAll" | "skipDuplicates" | "keepOnlyDuplicates",
+    "hasEvent": null | "keepAll" | "skipArticlesWithoutEvent" | "keepOnlyArticlesWithoutEvent",
+    "startSourceRankPercentile": null | 0 | 10 | ... | 90,
+    "endSourceRankPercentile": null | 10 | 20 | ... | 100,
+    "minSentiment": null | float([-1,1]),
+    "maxSentiment": null | float([-1,1])
+  }
+}
+CombinedQuery ::= { "$or":  [ CombinedQuery | BaseQuery, ... ], "$not": null | CombinedQuery | BaseQuery }
+CombinedQuery ::= { "$and": [ CombinedQuery | BaseQuery, ... ], "$not": null | CombinedQuery | BaseQuery }
+BaseQuery ::= {
+  "conceptUri":  null | string | {"$or":[string,...]} | {"$and":[string,...]},
+  "keyword":     null | string | {"$or":[string,...]} | {"$and":[string,...]},
+  "categoryUri": null | string | {"$or":[string,...]} | {"$and":[string,...]},
+  "lang":        null | string | {"$or":[string,...]} | {"$and":[string,...]},
+  "sourceUri":         null | string | {"$or":[string,...]},
+  "sourceLocationUri": null | string | {"$or":[string,...]},
+  "sourceGroupUri":    null | string | {"$or":[string,...]},
+  "authorUri":   null | string | {"$or":[string,...]} | {"$and":[string,...]},
+  "locationUri": null | string | {"$or":[string,...]},
+  "dateStart": null | string, "dateEnd": null | string, "dateMention": null | [string, ...],
+  "keywordLoc": null | "body" | "title" | "title,body",
+  "keywordSearchMode": null | "simple" | "exact" | "phrase",
+  "minArticlesInEvent": null | int, "maxArticlesInEvent": null | int,
+  "$not": null | CombinedQuery | BaseQuery
+}
+```
+
+Semantics:
+
+- **Query structure**
+  - `$query` is required.
+  - `$and` means all sub-queries must match; `$or` means any must match.
+  - `$not` excludes matches.
+  - A `BaseQuery` with several fields requires all of them to match.
+  - A `BaseQuery` that contains only `$not` is invalid.
+- **`$filter`**
+  - Holds the data type, duplicate handling and event-membership handling.
+  - It also holds the source-rank percentile window. Example: start 0 and end 20 keeps roughly the top 20% of sources by global Alexa rank.
+
+Example 1: articles about AI, or that mention "deep learning" or "machine learning". Exclude articles with "data mining" in the title. Keep only positive sentiment and drop duplicates.
+
+```json
+{
+  "query": {
+    "$query": {
+      "$or": [
+        { "conceptUri": "http://en.wikipedia.org/wiki/Artificial_Intelligence" },
+        { "keyword": { "$or": ["deep learning", "machine learning"] } }
+      ],
+      "$not": { "keyword": "data mining", "keywordLoc": "title" }
+    },
+    "$filter": { "minSentiment": 0.2, "isDuplicate": "skipDuplicates" }
+  },
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+Example 2: politics articles about both Trump and Clinton, or business articles about Elon Musk.
+
+```json
+{
+  "query": { "$query": { "$or": [
+    { "conceptUri": { "$and": ["http://en.wikipedia.org/wiki/Donald_Trump", "http://en.wikipedia.org/wiki/Hillary_Rodham_Clinton"] },
+      "categoryUri": "dmoz/Society/Politics" },
+    { "conceptUri": "http://en.wikipedia.org/wiki/Elon_Musk", "categoryUri": "dmoz/Business" }
+  ] } },
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+### 1.16 Shared article filter parameters
+
+These are used by `getArticles`, `minuteStreamArticles` (subset), `getEvent` (subset, filtering the event's articles) and, with adaptations, `getMentions`. Types are `string | string[]` unless stated otherwise.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `query` | object | – | Advanced query (§1.15). Do not combine with the simple filters. |
+| `keyword` | str/str[] | – | Keyword or phrase (max 60). Multiple values combine with AND unless `keywordOper=or`. |
+| `conceptUri` | str/str[] | – | Concept URI (max 50). Multiple values combine with AND unless `conceptOper=or`. |
+| `categoryUri` | str/str[] | – | Category URI (max 20). Multiple values combine with OR unless `categoryOper=and`. Child categories are included. |
+| `sourceUri` | str/str[] | – | Source URI (domain). Multiple values combine with OR. |
+| `sourceLocationUri` | str/str[] | – | Location (city or country) of the publishing source. |
+| `sourceGroupUri` | str/str[] | – | Predefined source group, e.g. `general/ERtop10`. |
+| `authorUri` | str/str[] | – | Author URI, e.g. `mark_mazzetti@nytimes.com`. |
+| `locationUri` | str/str[] | – | Location named in the article **dateline**. Articles without a dateline location are not returned. Use `conceptUri` for any mention of a place. |
+| `lang` | str/str[] | all | ISO3 language codes (max 5). |
+| `dateStart` / `dateEnd` | string | – | Publish-date range (inclusive), `YYYY-MM-DD`. |
+| `dateMentionStart` / `dateMentionEnd` | string | – | The article explicitly mentions a date at or after the start / at or before the end. |
+| `keywordLoc` | string | `body` | `body`, `title`, `body,title`. |
+| `keywordOper` | string | `and` | `and` or `or`. |
+| `keywordSearchMode` | string | `phrase` | `phrase`, `exact`, `simple` (§1.14). |
+| `conceptOper` | string | `and` | `and` or `or`. |
+| `categoryOper` | string | `or` | `and` or `or`. |
+| `ignoreKeyword`, `ignoreConceptUri`, `ignoreCategoryUri`, `ignoreSourceUri`, `ignoreSourceLocationUri`, `ignoreSourceGroupUri`, `ignoreLocationUri`, `ignoreAuthorUri`, `ignoreLang` | str/str[] | – | Exclude articles matching **any** given value. Limits match the positive parameters. |
+| `ignoreKeywordLoc` | string | `body` | Where to search the `ignoreKeyword` values. |
+| `startSourceRankPercentile` | int | 0 | Source-rank percentile start, 0–90, a multiple of 10. |
+| `endSourceRankPercentile` | int | 100 | Source-rank percentile end, 10–100, a multiple of 10. |
+| `minSentiment` / `maxSentiment` | float | – | Sentiment bounds in [-1, 1]. Setting either limits results to English. |
+| `isDuplicateFilter` | string | `keepAll` | `skipDuplicates`, `keepOnlyDuplicates`, `keepAll`. |
+| `eventFilter` | string | `keepAll` | `skipArticlesWithoutEvent`, `keepOnlyArticlesWithoutEvent`, `keepAll`. |
+
+### 1.17 Shared event filter parameters
+
+These are used by `getEvents` and, as a subset, `minuteStreamEvents`. They match the article filters except as follows:
+
+- **Concepts**: `conceptUri` matches events where the concept is *important*.
+- **Source filters**: `sourceUri`, `sourceLocationUri`, `sourceGroupUri` and `authorUri` match events that contain at least one matching article.
+- **Location**: `locationUri` is where the event occurred.
+- **Language**: `lang` matches events with articles in that language.
+- **Event date**:
+  - `dateStart` / `dateEnd` filter on the **event date**. The event date is extracted from the articles and can differ from their publishing dates.
+  - `reportingDateStart` / `reportingDateEnd` filter on the average publishing date of the event's articles.
+- **Sentiment**: `minSentimentEvent` / `maxSentimentEvent` (float, -1..1; English-covered events only).
+- **Size**: `minArticlesInEvent` / `maxArticlesInEvent` (int, counted across all languages).
+- **Mentioned dates**: `dateMentionStart` / `dateMentionEnd`.
+- **Operators and negation**: `keywordLoc`, `keywordOper`, `keywordSearchMode`, `conceptOper`, `categoryOper` and the `ignore*` parameters work as for articles.
+- **Not available for events**: source-rank percentiles, `isDuplicateFilter`, `eventFilter`.
+
+### 1.18 Returned details (`include*` flags)
+
+Set these flags to choose which fields appear in returned objects. Each endpoint section says which groups it accepts. Booleans default as shown.
+
+| Group | Parameter (default) |
+|---|---|
+| Article | `includeArticleTitle` (true), `includeArticleBasicInfo` (true), `includeArticleBody` (true), `includeArticleEventUri` (true), `includeArticleSocialScore` (false), `includeArticleSentiment` (true; non-null only for English), `includeArticleConcepts` (false), `includeArticleCategories` (false), `includeArticleLocation` (false), `includeArticleImage` (true), `includeArticleAuthors` (true), `includeArticleVideos` (false), `includeArticleLinks` (false), `includeArticleExtractedDates` (false), `includeArticleDuplicateList` (false), `includeArticleOriginalArticle` (false) |
+| Article body length | `articleBodyLen` (int, -1 = full body; default -1). For `getArticle` the name is `infoArticleBodyLen`. The prefixed forms `articlesArticleBodyLen` / `eventsArticleBodyLen` are also accepted. |
+| Source | `includeSourceTitle` (true), `includeSourceDescription` (false), `includeSourceLocation` (false), `includeSourceRanking` (false) |
+| Concept | `includeConceptLabel` (true), `includeConceptImage` (false), `includeConceptSynonyms` (false), `conceptLang` (string, default `eng`; language of concept labels) |
+| Category | `includeCategoryParentUri` (false) |
+| Location | `includeLocationGeoLocation` (false; lat/long), `includeLocationPopulation` (false), `includeLocationGeoNamesId` (false), `includeLocationCountryArea` (false; km²), `includeLocationCountryContinent` (false) |
+| Event | `includeEventTitle` (true), `includeEventSummary` (false), `includeEventSocialScore` (false), `includeEventSentiment` (true), `includeEventLocation` (true), `includeEventDate` (true), `includeEventArticleCounts` (true), `includeEventConcepts` (true), `includeEventCategories` (true), `includeEventCommonDates` (false), `includeEventStories` (false), `eventImageCount` (int, 0) |
+| Story (an event's per-language clusters) | `includeStoryBasicStats`, `includeStoryTitle`, `includeStoryLocation`, `includeStoryDate`, `includeStoryConcepts`, `includeStoryCategories`, `includeStoryMedoidArticle`, `includeStoryCommonDates` (all false), `storyImageCount` (int, 0) |
+| Mention | `includeMentionBasicInfo` (true; language, date, time), `includeMentionSlots` (false; entities in the sentence), `includeMentionCategories` (false; categories of the source article), `includeMentionFrameworks` (false; SDG/ESG/SASB of the event type) |
+
+### 1.19 Categories, concepts, sources and locations
+
+- **Concepts**
+  - Entities (person, org, loc) or non-entity topics (`wiki`). Wikipedia URLs serve as their URIs.
+  - Searching by concept finds mentions in all languages. For example, "White House" and "Casa Blanca" map to the same concept.
+  - A concept's score on an **article** ranges from 1 (low relevance) to 5 (high). On a **story or event** it ranges from 0 to 100.
+- **Categories**: three taxonomies. Specifying a category also matches its child categories.
+  - `dmoz/...`: about 4,300 categories (top 3 DMOZ levels), assigned to English articles only.
+  - `news/...`: 8 broad categories such as `news/Business`, `news/Politics` and `news/Technology`, assigned in all languages.
+  - IPTC Media Topics: about 1,400 categories in all languages, applied only to articles published from 2026-06-01.
+- **Sources**: the source URI is the clean domain name, e.g. `bbc.com`, `theguardian.com`, `nytimes.com`.
+- **Locations**: GeoNames-backed places and countries, identified by Wikipedia URL.
+
+### 1.20 Supported languages (ISO 639-3 codes for `lang`)
+
+Albanian `sqi`, Arabic `ara`, Armenian `hye`, Azerbaijani `aze`, Basque `eus`, Belarusian `bel`, Bengali `ben`, Bulgarian `bul`, Catalan `cat`, Chinese `zho`, Croatian `hrv`, Czech `ces`, Danish `dan`, Dutch `nld`, English `eng`, Estonian `est`, Finnish `fin`, French `fra`, Georgian `kat`, German `deu`, Greek `ell`, Gujarati `guj`, Hebrew `heb`, Hindi `hin`, Hungarian `hun`, Icelandic `isl`, Indonesian `ind`, Irish `gle`, Italian `ita`, Japanese `jpn`, Kannada `kan`, Kazakh `kaz`, Korean `kor`, Kurdish `kur`, Latvian `lav`, Lithuanian `lit`, Malayalam `mal`, Marathi `mar`, Norwegian `nob`, Panjabi `pan`, Persian `fas`, Polish `pol`, Portuguese `por`, Romanian `ron`, Russian `rus`, Serbian `srp`, Slovak `slk`, Slovene `slv`, Spanish `spa`, Swedish `swe`, Swiss German `gsw`, Tamil `tam`, Thai `tha`, Turkish `tur`, Ukrainian `ukr`, Urdu `urd`, Vietnamese `vie`.
+
+### 1.21 SDKs and tools
+
+- **Python SDK** (`pip install eventregistry`; https://github.com/EventRegistry/event-registry-python, guides in its wiki):
+  - `QueryArticlesIter` / `QueryArticles` for articles
+  - `QueryEventsIter` / `QueryEvents` for events
+  - `QueryArticle` / `QueryEvent` for item details
+  - `QueryMentionsIter` / `QueryMentions` for mentions
+  - `Analytics` for text analytics
+  - Aggregates are selected with `setRequestedResult()`.
+- **Node.js SDK** (`npm install eventregistry`; https://github.com/EventRegistry/event-registry-node-js), with the same classes.
+- **MCP server** (https://github.com/EventRegistry/newsapi-mcp): hosted at `https://mcp.newsapi.ai/mcp` (OAuth sign-in; e.g. `claude mcp add --transport http newsapi https://mcp.newsapi.ai/mcp`), or run locally with `npx -y newsapi-mcp` and env `NEWSAPI_KEY` (e.g. `claude mcp add newsapi -e NEWSAPI_KEY=YOUR_API_KEY -- npx -y newsapi-mcp`). Tools: `suggest`, `search` (kind `articles`, `events` or `mentions`), `get_breaking_events`, `get_topic_page_articles`, `get_topic_page_events`, `get_api_usage`.
+- **OpenAPI 3 spec**: https://newsapi.ai/static/api.yaml (older than this reference: it lacks NER, mentions, event-type suggestions and usage).
+
+---
+
+## 2. Text Analytics
+
+- **Base URL**: `https://analytics.eventregistry.org/api/v1`.
+- **Methods**: GET or POST, with `Content-Type: application/json` for POST.
+- **Auth**: all endpoints require `apiKey`.
+- **Cost**: charged per document (§1.7).
+
+### Annotate
+- Tab: `annotate` (https://newsapi.ai/documentation?tab=annotate)
+- `GET|POST https://analytics.eventregistry.org/api/v1/annotate`
+- **Purpose**
+  - Semantically annotates a document: finds the people, locations, organizations and things it mentions.
+  - Each annotation carries a unique URI: the Wikipedia URL of the concept.
+  - Works in 100+ languages. `url` points to that language's Wikipedia; `secUrl` points to English Wikipedia when available.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `text` | string | required | Text to annotate |
+| `minLinkFrequency` | int | 3 | Minimum times a phrase must appear as a link to be a candidate |
+| `minLinkRelFrequency` | double | 0.01 | Keep a candidate only if the text points to it with probability above this value (0–1) |
+| `nWordsToIgnoreFromList` | int | 200 | Ignore phrases made only of the N most frequent Wikipedia words (0 disables) |
+| `minPMentionGivenPhrase` | double | 0.03 | Minimum probability that the phrase, when found on Wikipedia, is annotated with the concept |
+| `pageRankSqThreshold` | double | 0.95 | PageRank-based threshold for keeping an annotation |
+| `applyPageRankSqThreshold` | boolean | – | Apply `pageRankSqThreshold` |
+
+```json
+{ "text": "Microsoft released a new version of Windows OS.", "apiKey": "YOUR_API_KEY" }
+```
+
+Response (top-level fields):
+
+- `annotations[]`: each item has
+  - `url`, `title`, `lang`, `secUrl`, `secTitle`, `secLang`
+  - `dbPediaIri`, `dbPediaTypes[]`
+  - `type` (e.g. `org`), `wgt`, `pageRank`
+  - `wikiDataItemId`, `wikiDataClassIds[]`
+  - `support[]` with `{chFrom, chTo, wFrom, wTo, text, pMentionGivenSurface, wikiLang}`
+- Token data: `words[]`, `normWords[]`, `spaces[]`, `ranges[]`
+- Part-of-speech lists: `verbs[]`, `nouns[]`, `adjectives[]`, `adverbs[]`, each with `{iFrom, iTo, normForm, synsetIds[]}`
+- Language detection: `language`, `languageAutodetectInfo`, `languageAutodetectDetails`
+- Diagnostics: `settings{...}` and timing fields (`timeTotalMs`, ...)
+
+### Named entity recognition
+- `GET|POST https://analytics.eventregistry.org/api/v1/ner`
+- **Purpose**
+  - Detects named entities in a text (people, organizations, locations, dates, currencies, ...) and returns the text span, character offsets and type of each.
+  - Unlike `annotate`, it does not link entities to Wikipedia. It does find entities without a Wikipedia page, such as dates, amounts and lesser-known names.
+  - Supports English, German, Spanish and Chinese.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `text` | string | required | Text to analyze |
+
+```json
+{ "text": "Microsoft chief executive Satya Nadella visited Berlin on May 5th, 2024.", "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `{ "entities": [ { "text": "Microsoft", "startCh": 0, "endCh": 9, "type": "ORGANIZATION" }, { "text": "chief executive", "type": "TITLE", ... }, ... ] }`
+
+### Categorize
+- Tab: `categorize` (https://newsapi.ai/documentation?tab=categorize)
+- `GET|POST https://analytics.eventregistry.org/api/v1/categorize`
+- **Purpose**: assigns predefined categories to a text. Results are reliable only for documents of decent size, such as news articles. Taxonomies:
+  - `dmoz`: 5000+ categories, 3 levels, English only.
+  - `news`: 8 top-level categories, any language.
+  - `iptc`: IPTC subject codes, 1000+ categories in 3 levels.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `text` | string | required | Text to categorize |
+| `taxonomy` | string | required | `dmoz`, `news` or `iptc` |
+
+```json
+{ "text": "Microsoft released a new version of Windows OS.", "taxonomy": "dmoz", "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `{ "categories": [ { "label": "dmoz/Business/Investing/Stocks_and_Bonds", "score": 0.123 } ], "keywords": [ { "keyword": "Investing", "wgt": 0.24 } ] }`
+
+### Semantic similarity
+- Tab: `semanticSimilarity` (https://newsapi.ai/documentation?tab=semanticSimilarity)
+- `GET|POST https://analytics.eventregistry.org/api/v1/semanticSimilarity`
+- **Purpose**: computes the semantic similarity of two documents, which may be in different languages. The score is based on the people, locations, organizations and things they share.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `text1` | string | required | First text |
+| `text2` | string | required | Second text |
+
+```json
+{ "text1": "The editor, Carrie Gracie, ... quit her position as China editor ...", "text2": "Paukenschlag bei der britischen BBC: Die China-Expertin Carrie Gracie ...", "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `{ "similarity": 0.4046, "annotations1": 15, "annotations2": 13, "totalAnnotations": 22 }`
+
+### Sentiment
+- Tab: `sentiment` (https://newsapi.ai/documentation?tab=sentiment)
+- `GET|POST https://analytics.eventregistry.org/api/v1/sentiment`
+- **Purpose**: sentiment of a text from -1 (very negative) to 1 (very positive). Returns the average and per-sentence values. Uses a vocabulary-based or neural-network (`rnn`) method. English only.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `text` | string | required | Text to analyze |
+| `method` | string | `vocabulary` | `vocabulary` or `rnn` |
+| `sentences` | int | 10 | Number of sentences to compute sentiment on |
+
+```json
+{ "text": "Residents and tourists enjoy holiday weekend even as waves start to pound; ...", "method": "rnn", "sentences": 10, "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `{ "avgSent": 0.005, "sentimentPerSent": [0.11, ...], "sentences": ["...", ...] }`
+
+### Extract article information
+- Tab: `extractArticleInfo` (https://newsapi.ai/documentation?tab=extractArticleInfo)
+- `GET|POST https://analytics.eventregistry.org/api/v1/extractArticleInfo`
+- **Purpose**: crawls an article URL and returns structured data: title, body, authors, publish date, image, links, videos and other metadata.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `url` | string | required | Article URL |
+
+```json
+{ "url": "https://www.theguardian.com/world/2018/jan/31/this-is-over-puigdemonts-catalan-independence-doubts-caught-on-camera", "apiKey": "YOUR_API_KEY" }
+```
+
+Response fields:
+
+- Content: `title`, `body`, `description`, `keywords[]`, `authors[]`, `image`, `url`
+- Dates: `date`, `time`, `datetime`
+- Links and media: `links[]{url, anchorText}`, `videos[]{url, anchorText}`
+- Social metadata: `twitterSite`, `twitterSiteId`, `fbSourceUrl`, `fbAuthorUrl`, `fbPages[]`
+- Source: `source{url, title}`
+
+### Detect language
+- Tab: `detectLanguage` (https://newsapi.ai/documentation?tab=detectLanguage)
+- `GET|POST https://analytics.eventregistry.org/api/v1/detectLanguage`
+- **Purpose**: detects the language of a text. Returns a reliability flag and the most likely languages, with ISO1/ISO3 codes and percentages.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `text` | string | required | Text to analyze |
+
+```json
+{ "text": "Microsoft released a new version of Windows OS.", "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `{ "reliable": true, "textBytes": 8533, "languages": [ { "name": "LITHUANIAN", "code": "lt", "percent": 99, "score": 1177, "iso1": "lt", "iso3": "lit" } ], "chunks": [ { "name", "code", "offset", "bytes" } ] }`
+
+---
+
+## 3. Articles
+
+### Get articles
+- Tab: `searchArticles` (https://newsapi.ai/documentation?tab=searchArticles)
+- `GET|POST https://eventregistry.org/api/v1/article/getArticles`
+- **Purpose**
+  - Finds news articles (and/or PR and blogs) that match search conditions given as simple parameters (§1.16) or a `query` object (§1.15).
+  - Returns the article list (up to 100 per call; page with `articlesPage`) or an aggregate.
+- **Cost**: each call counts as one search action.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `resultType` | string | `articles` | `articles`, `uriWgtList`, `langAggr`, `timeAggr`, `sourceAggr`, `sourceExAggr`, `authorAggr`, `keywordAggr`, `locAggr`, `conceptAggr`, `conceptGraph`, `categoryAggr`, `dateMentionAggr`, `sentimentAggr`, `recentActivityArticles` |
+| `articlesPage` | int | 1 | Page (from 1). Used when `resultType=articles` |
+| `articlesCount` | int | 100 | Articles per page (max 100) |
+| `articlesSortBy` | string | `date` | `date`, `rel`, `sourceImportance`, `sourceAlexaGlobalRank`, `sourceAlexaCountryRank` |
+| `articlesSortByAsc` | bool | false | Ascending order |
+| `articleBodyLen` | int | -1 | Body length to return (-1 = full) |
+| `dataType` | str/str[] | `news` | `news`, `pr`, `blog` |
+| `forceMaxDataTimeWindow` | int | – | `7` or `31`: search only the last N days |
+| Filters | – | – | All shared article filters in §1.16 (`query`, `keyword`, `conceptUri`, ..., `isDuplicateFilter`, `eventFilter`) |
+| Returned details | bool/int | see §1.18 | Article, Source, Concept (+`conceptLang`), Category (`includeCategoryParentUri`) and Location (all 5) groups |
+
+Example: the latest 100 articles mentioning the phrase "Tesla Inc" from US, Canadian and UK sources, excluding paywalled sources, from the last month.
+
+```json
+{
+  "action": "getArticles",
+  "keyword": "Tesla Inc",
+  "sourceLocationUri": ["http://en.wikipedia.org/wiki/United_States", "http://en.wikipedia.org/wiki/Canada", "http://en.wikipedia.org/wiki/United_Kingdom"],
+  "ignoreSourceGroupUri": "paywall/paywalled_sources",
+  "articlesPage": 1, "articlesCount": 100,
+  "articlesSortBy": "date", "articlesSortByAsc": false,
+  "dataType": ["news", "pr"],
+  "forceMaxDataTimeWindow": 31,
+  "resultType": "articles",
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+Example with the query language: business articles from 2017-04-22 that mention Barack Obama **or** the keyword "Trump", sorted by relevance.
+
+```json
+{
+  "query": { "$query": { "$and": [
+    { "dateStart": "2017-04-22", "dateEnd": "2017-04-22", "categoryUri": "dmoz/Business" },
+    { "$or": [ { "conceptUri": "http://en.wikipedia.org/wiki/Barack_Obama" }, { "keyword": "Trump" } ] }
+  ] } },
+  "articlesPage": 1, "articlesCount": 100, "articlesSortBy": "rel",
+  "resultType": "articles", "apiKey": "YOUR_API_KEY"
+}
+```
+
+Response (one key per `resultType`):
+
+```
+{ "articles": { "totalResults", "page", "count", "pages", "results": [Article, ...] } }
+uriWgtList:     { totalResults, page, count, pages, results: [string] }
+conceptAggr:    { warning?, usedResults, totalResults, results: [Concept] }
+keywordAggr:    { ..., results: [{ keyword, weight }] }
+timeAggr:       { ..., results: [{ date, count }] }
+sourceAggr:     { ..., results: [Source] }
+conceptGraph:   { ..., concepts: [Concept], links: [{ uri1, uri2, score }] }
+categoryAggr:   { ..., results: [{ label, score }] }
+recentActivityArticles: { currTime, activity: [...] }
+```
+
+### Get articles for topic page
+- Tab: `searchArticlesForTopic` (https://newsapi.ai/documentation?tab=searchArticlesForTopic)
+- `GET|POST https://eventregistry.org/api/v1/article/getArticlesForTopicPage`
+- **Purpose**
+  - Returns articles that match a topic page created in the web UI (Media Monitoring page, https://eventregistry.org/monitoring).
+  - A topic page is defined by concepts, keywords, sources, categories and other conditions. Not all of them need to match; articles that match more of them rank higher.
+  - Its URI appears in the browser URL, e.g. `240f6a12-b9d8-40a6-b1c6-a220e31d08de`.
+  - Can also return aggregates.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `uri` | string | required | Topic page URI |
+| `resultType` | string | `articles` | Same list as getArticles, without `recentActivityArticles` |
+| `maxDaysBack` | int | topic setting | Return no articles older than N days |
+| `onlyAfterTm` | string | – | Only articles found after this UTC datetime `YYYY-MM-DDTHH:MM:SS`. Use it for repeated polling without duplicates |
+| `articlesPage` | int | 1 | Page |
+| `articlesCount` | int | 100 | Max 100 |
+| `articlesSortBy` | string | topic relevance | `date`, `rel`, `sourceImportance`, `sourceAlexaGlobalRank`, `sourceAlexaCountryRank` |
+| `articlesSortByAsc` | bool | false | Ascending |
+| `dataType` | str/str[] | `news` | `news`, `pr`, `blog` |
+| Returned details | – | §1.18 | `articleBodyLen`, plus the Article, Source, Concept, Category and Location groups (Location without `includeLocationGeoLocation`) |
+
+```json
+{ "uri": "240f6a12-b9d8-40a6-b1c6-a220e31d08de", "resultType": "articles", "articlesCount": 100, "articleBodyLen": -1, "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `{ "articles": { "totalResults", "page", "count", "pages", "results": [Article] } }`. Aggregates have the same shape as in getArticles.
+
+### Get article details
+- Tab: `articleDetails` (https://newsapi.ai/documentation?tab=articleDetails)
+- `GET|POST https://eventregistry.org/api/v1/article/getArticle`
+- **Purpose**
+  - Returns full details for one or more article URIs (up to 100 per call).
+  - The cost equals an article search.
+  - URIs come from searches, for example getArticles with `resultType=uriWgtList`.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `articleUri` | str/str[] | required | One article URI or up to 100 |
+| `resultType` | string | `info` | `info`, `duplicatedArticles`, `originalArticle` |
+| `infoArticleBodyLen` | int | -1 | Body length (-1 = full) |
+| Returned details | – | §1.18 | Article, Concept (+`conceptLang`), Source and Location groups (Location without geoLocation; no category parent flag) |
+
+```json
+{
+  "action": "getArticle",
+  "articleUri": ["936059390", "936055095", "936053756", "936053919", "935220287"],
+  "infoArticleBodyLen": -1,
+  "includeArticleConcepts": true, "includeArticleCategories": true, "includeArticleLocation": true,
+  "resultType": "info",
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+Response is keyed by article URI:
+
+```
+{ "<articleUri>": {
+    "info": Article,
+    "duplicatedArticles": { totalResults, page, count, pages, results: [Article] },
+    "originalArticle": Article } }
+```
+
+### Stream of new articles
+- Tab: `feedOfArticles` (https://newsapi.ai/documentation?tab=feedOfArticles)
+- `GET|POST https://eventregistry.org/api/v1/minuteStreamArticles`
+- **Purpose**
+  - Returns articles added to Event Registry in the last few minutes, optionally filtered by language, source, keyword, concept and so on.
+  - Call it repeatedly, every minute or every few minutes.
+  - It is the only call that can return more than 100 articles (up to 2,000). It uses 1 token per started 100 returned articles.
+  - The docs strongly recommend the `recentActivityArticles*UpdatesAfterUri` parameters, which guarantee no gaps and no duplicates.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `recentActivityArticlesMaxArticleCount` | int | 100 | Max articles to return (≤ 2000). Tokens scale per 100 |
+| `recentActivityArticlesNewsUpdatesAfterUri` / `...BlogUpdatesAfterUri` / `...PrUpdatesAfterUri` | string | – | Return only articles added after the article with this URI. Take the value from the previous response's `recentActivityArticles.newestUri.{news,blog,pr}` |
+| `recentActivityArticlesUpdatesAfterMinsAgo` | int | – | Look back N minutes (≤ 240). Less reliable than `*UpdatesAfterUri` |
+| `recentActivityArticlesUpdatesAfterTm` | string | – | Articles collected after this UTC datetime `YYYY-MM-DDTHH:MM:SS` (≤ 4 hours ago). Less reliable than `*UpdatesAfterUri` |
+| `articleBodyLen` | int | -1 | Body length |
+| `dataType` | str/str[] | `news` | `news`, `pr`, `blog` |
+| Filters | – | – | `keyword`, `conceptUri`, `categoryUri`, `sourceUri`, `sourceLocationUri`, `sourceGroupUri`, `authorUri`, `locationUri`, `lang`, `keywordLoc`, `keywordOper`, `keywordSearchMode`, `conceptOper`, `categoryOper`, `start/endSourceRankPercentile`, `min/maxSentiment`, `isDuplicateFilter`, `eventFilter` (§1.16) |
+| Returned details | – | §1.18 | Same groups as getArticles |
+
+Example: continue from the last seen URIs.
+
+```json
+{
+  "recentActivityArticlesNewsUpdatesAfterUri": "1307141581",
+  "recentActivityArticlesBlogUpdatesAfterUri": "1235393368",
+  "recentActivityArticlesMaxArticleCount": 2000,
+  "lang": ["eng", "deu", "spa"],
+  "keyword": ["Tesla", "Elon Musk"], "keywordOper": "or", "keywordLoc": "title",
+  "dataType": ["news", "blog"],
+  "articleBodyLen": -1, "includeArticleConcepts": true, "includeArticleCategories": true,
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+Response:
+
+```
+{ "recentActivityArticles": {
+    "newestUpdate", "oldestUpdate",
+    "newestUri": { "news": "<uri>", "blog": "<uri>", "pr": "<uri>" },
+    "currTime",
+    "activity": [Article, ...] } }
+```
+
+---
+
+## 4. Events
+
+An event is a cluster of articles, possibly in several languages, about the same happening. Event URIs look like `eng-2940883`.
+
+### Get events
+- Tab: `searchEvents` (https://newsapi.ai/documentation?tab=searchEvents)
+- `GET|POST https://eventregistry.org/api/v1/event/getEvents`
+- **Purpose**
+  - Finds events that match simple parameters (§1.17) or a `query` object (§1.15).
+  - Returns the event list (up to 50 per call; page with `eventsPage`) or an aggregate.
+- **Cost**: each call counts as one event search action.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `resultType` | str/str[] | `events` | `events`, `uriWgtList`, `timeAggr`, `locAggr`, `locTimeAggr`, `sourceAggr`, `authorAggr`, `keywordAggr`, `conceptAggr`, `conceptGraph`, `categoryAggr`, `breakingEvents`, `sentimentAggr`, `dateMentionAggr`, `recentActivityEvents` |
+| `eventsPage` | int | 1 | Page (from 1) |
+| `eventsCount` | int | 50 | Events per page (max 50) |
+| `eventsSortBy` | string | `date` | `date`, `rel`, `size` |
+| `eventsSortByAsc` | bool | false | Ascending |
+| `forceMaxDataTimeWindow` | int | – | `7` or `31` |
+| Filters | – | – | Event filters (§1.17): `query`, `keyword`, `conceptUri`, `categoryUri`, `sourceUri`, `sourceLocationUri`, `sourceGroupUri`, `authorUri`, `locationUri`, `lang`, `dateStart`, `dateEnd`, `minSentimentEvent`, `maxSentimentEvent`, `minArticlesInEvent`, `maxArticlesInEvent`, `reportingDateStart`, `reportingDateEnd`, `dateMentionStart`, `dateMentionEnd`, `keywordLoc`, `keywordOper`, `keywordSearchMode`, `conceptOper`, `categoryOper`, `ignore*` |
+| Returned details | – | §1.18 | Event, Concept (+`conceptLang`), Story, Category (`includeCategoryParentUri`) and Location (4 flags, no geoLocation) groups |
+
+```json
+{
+  "resultType": "events",
+  "sourceUri": "bbc.co.uk",
+  "minArticlesInEvent": 30,
+  "eventsPage": 1, "eventsCount": 50,
+  "eventsSortBy": "date", "eventsSortByAsc": false,
+  "forceMaxDataTimeWindow": 31,
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+Response:
+
+```
+{ "events": { totalResults, page, count, pages, results: [Event] } }
+uriWgtList:   { totalResults, page, count, pages, results: [string] }
+conceptAggr:  { warning?, usedResults, totalResults, results: [Concept] }
+keywordAggr:  { ..., results: [{ keyword, weight }] }
+locAggr:      { ..., results: [{ count, concept: { uri, type, label, location } }] }
+timeAggr:     { ..., results: [{ date, count }] }
+sourceAggr:   { ..., results: [Source] }
+conceptGraph: { ..., concepts: [Concept], links: [{ uri1, uri2, score }] }
+categoryAggr: { ..., results: [{ label, score }] }
+recentActivityEvents: { currTime, activity: [...] }
+```
+
+### Get events for a topic page
+- Tab: `searchEventsForTopic` (https://newsapi.ai/documentation?tab=searchEventsForTopic)
+- `GET|POST https://eventregistry.org/api/v1/event/getEventsForTopicPage`
+- **Purpose**: returns events that match a topic page created on the monitoring page. Events that match more of the topic's concepts and keywords rank higher. Sorted by topic relevance by default. Can also return aggregates.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `uri` | string | required | Topic page URI |
+| `resultType` | str/str[] | `events` | Same list as getEvents, without `recentActivityEvents` |
+| `eventsPage` | int | 1 | Page |
+| `eventsCount` | int | 50 | Max 50 |
+| `eventsSortBy` | string | `rel` | `date`, `rel`, `size` |
+| `eventsSortByAsc` | bool | false | Ascending |
+| Returned details | – | §1.18 | Same groups as getEvents |
+
+```json
+{ "uri": "240f6a12-b9d8-40a6-b1c6-a220e31d08de", "resultType": "events", "eventsSortBy": "rel", "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `{ "events": { totalResults, page, count, pages, results: [Event] } }`
+
+### Get event details
+- Tab: `eventDetails` (https://newsapi.ai/documentation?tab=eventDetails)
+- `GET|POST https://eventregistry.org/api/v1/event/getEvent`
+- **Purpose**
+  - Returns details for one event (`eventUri`).
+  - The most common use is retrieving the event's articles (`resultType=articles`).
+  - Other result types give summaries: top keywords, sources, mentioned dates, article trend and similar events.
+  - Article filters (§1.16) restrict the event's articles to a subset.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `eventUri` | string | required | Event URI |
+| `resultType` | str/str[] | `info` | `info`, `articles`, `articleUris`, `keywordAggr`, `sourceExAggr`, `dateMentionAggr`, `articleTrend`, `similarEvents`. The result type is also the prefix for its paging and sorting parameters |
+| `articlesLang` | str/str[] | – | With `resultType=articles`: only articles in these languages |
+| `articlesIncludeDuplicates` | bool | false | With `resultType=articles`: also return duplicates (copies) of articles |
+| `articlesPage`, `articlesCount`, `articlesSortBy`, `articlesSortByAsc`; `articleTrendLang`, `articleTrendPage`, `articleTrendCount` | – | – | Paging and sorting of the `articles` / `articleTrend` results; `articlesSortBy` also accepts `cosSim` (similarity to the event centroid) |
+| Filters | – | – | `keyword`, `conceptUri`, `categoryUri`, `sourceUri`, `sourceLocationUri`, `sourceGroupUri`, `authorUri`, `locationUri`, `dateStart`, `dateEnd`, `dateMentionStart`, `dateMentionEnd`, `keywordLoc`, `keywordOper`, `keywordSearchMode`, `conceptOper`, `categoryOper`, `start/endSourceRankPercentile`, `min/maxSentiment` (§1.16) |
+| Returned details | – | §1.18 | Event, Concept (+`conceptLang`), Story, Article (+`articleBodyLen`), Source and Location (4 flags) groups |
+
+```json
+{
+  "eventUri": "eng-2940883",
+  "resultType": "articles",
+  "articlesPage": 1, "articlesCount": 100,
+  "articlesLang": ["eng", "deu", "zho", "slv", "spa"],
+  "articlesSortBy": "cosSim", "articlesSortByAsc": false,
+  "articlesArticleBodyLen": -1,
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+Other doc examples:
+
+- `{ "eventUri": "deu-931031", "resultType": "keywordAggr" }`
+- `{ "eventUri": "deu-931031", "resultType": "articleTrend", "articleTrendLang": [...], "articleTrendPage": 1, "articleTrendCount": 100 }`
+
+Response is keyed by event URI:
+
+```
+{ "<eventUri>": {
+    "info": Event,
+    "articles":        { totalResults, page, count, pages, results: [Article] },
+    "articleUris":     { totalResults, page, count, pages, results: [string] },
+    "keywordAggr":     { warning?, usedResults, totalResults, results: [{ keyword, weight }] },
+    "sourceExAggr":    { ..., results: [{ source: Source, counts: {...} }] },
+    "dateMentionAggr": { ..., results: [{ date, count }] },
+    "articleTrend":    { totalResults, page, count, pages, results: [Article] },
+    "similarEvents":   { totalResults, page, count, pages, results: [Event] } } }
+```
+
+### Stream of events
+- Tab: `feedOfEvents` (https://newsapi.ai/documentation?tab=feedOfEvents)
+- `GET|POST https://eventregistry.org/api/v1/minuteStreamEvents`
+- **Purpose**
+  - Returns events added or updated in the last few minutes, optionally filtered.
+  - It is the only event call that can return more than 50 events (up to 2,000). It costs 5 tokens per 50 events.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `recentActivityEventsMaxEventCount` | int | 50 | Max events (≤ 2000). Tokens scale per 50 |
+| `recentActivityEventsUpdatesAfterMinsAgo` | int | – | Look back N minutes (≤ 240) |
+| `recentActivityEventsUpdatesAfterTm` | string | – | Events updated after this UTC datetime `YYYY-MM-DDTHH:MM:SS` (≤ 4 hours ago) |
+| Filters | – | – | `keyword`, `conceptUri`, `categoryUri`, `sourceUri`, `sourceLocationUri`, `sourceGroupUri`, `authorUri`, `locationUri`, `keywordLoc`, `keywordOper`, `keywordSearchMode`, `conceptOper`, `categoryOper`, `lang`, `minArticlesInEvent`, `maxArticlesInEvent` (§1.17) |
+| Returned details | – | §1.18 | Event, Concept, Story, Article (+`articleBodyLen`), Source and Location groups |
+
+```json
+{
+  "conceptUri": "http://en.wikipedia.org/wiki/Tesla,_Inc.",
+  "categoryUri": "news/Business",
+  "recentActivityEventsUpdatesAfterMinsAgo": 10,
+  "recentActivityEventsMaxEventCount": 2000,
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+Response: `{ "recentActivityEvents": { "newestUpdate", "oldestUpdate", "activity": ["eng-8624106", "deu-1635754", ...], "eventInfo": { "<eventUri>": Event, ... } } }`
+
+### Get list of breaking events
+- Tab: `breakingEvents` (https://newsapi.ai/documentation?tab=breakingEvents)
+- `GET|POST https://eventregistry.org/api/v1/event/getBreakingEvents`
+- **Purpose**: returns breaking events with their breaking score. A breaking event:
+  - happened very recently,
+  - gathered many articles in a short time, and
+  - is reported with increasing intensity.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `breakingEventsCount` | int | 100 | Number of events (max 100) |
+| `breakingEventsPage` | int | 1 | Page |
+| `breakingEventsMinBreakingScore` | double | 0.2 | Minimum breaking score (≥ 0) |
+| Returned details | – | §1.18 | Event, Concept, Story, Category and Location groups (as getEvents) |
+
+```json
+{ "eventImageCount": 3, "includeEventLocation": true, "includeEventSocialScore": true, "includeLocationGeoLocation": true, "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `{ "events": { totalResults, page, count, pages, results: [Event] } }`
+
+---
+
+## 5. Signal Types / Event Types (mentions)
+
+- Signal Types (called event types in the API) are available to accounts with Event Types API access; see https://newsapi.ai/signal-types.
+- A **mention** is a sentence from an article that describes a relation of interest, called an **event type**. Examples: an acquisition, layoffs, a product release, a natural disaster. The taxonomy has 136+ event types across Business, Society and Environment.
+
+### Get mentions
+- Tab: `searchMentions` (https://newsapi.ai/documentation?tab=searchMentions)
+- `GET|POST https://eventregistry.org/api/v1/eventType/mention/getMentions`
+- **Purpose**
+  - Finds sentences (mentions) that match event types, concepts, industries, ESG/SDG/SASB frameworks and other conditions.
+  - Each mention carries the sentence, sentiment, source, entities (slots), categories and a link to the article.
+  - Returns the list (up to 100 per call; page with `mentionsPage`) or an aggregate.
+- **Cost**: each call is one search action.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `resultType` | string | `mentions` | `mentions`, `uriWgtList`, `langAggr`, `timeAggr`, `sourceAggr`, `sourceExAggr`, `keywordAggr`, `locAggr`, `locTimeAggr`, `conceptAggr`, `eventTypeAggr`, `categoryAggr`, `sentimentAggr`, `recentActivityMentions` |
+| `mentionsPage` | int | 1 | Page |
+| `mentionsCount` | int | 100 | Max 100 |
+| `mentionsSortBy` | string | `date` | `date`, `rel`, `sourceImportance`, `sourceAlexaGlobalRank`, `sourceAlexaCountryRank` |
+| `mentionsSortByAsc` | bool | false | Ascending |
+| `query` | object | – | Advanced query (§1.15) with extra fields such as `eventTypeUri` and `industryUri`. `$filter` supports `showDuplicates` |
+| `eventTypeUri` | str/str[] | – | Event type(s), OR-combined, e.g. `et/business/acquisitions-mergers/acquisition/approved`. Find URIs with Suggest event types |
+| `industryUri` | str/str[] | – | Sentence mentions a company in this industry (OR-combined), e.g. `sectors/Communications` |
+| `sdgUri` / `sasbUri` / `esgUri` | str/str[] | – | Event type belongs to an SDG, SASB or ESG framework item, e.g. `sdg/sdg5_gender_equality`, `sasb/environment/air_quality`, `esg/environment` |
+| `keyword`, `conceptUri`, `categoryUri`, `sourceUri`, `sourceLocationUri`, `sourceGroupUri`, `locationUri`, `dateStart`, `dateEnd` | – | – | As in §1.16, applied to sentences and their articles |
+| `factLevel` | str/str[] | – | `fact`, `opinion`, `forecast` |
+| `keywordOper`, `keywordSearchMode`, `conceptOper`, `categoryOper` | string | `and`, `phrase`, `and`, `or` | Operators (§1.16) |
+| `ignoreEventTypeUri`, `ignoreIndustryUri`, `ignoreSdgUri`, `ignoreSasbUri`, `ignoreEsgUri`, `ignoreKeyword`, `ignoreConceptUri`, `ignoreCategoryUri`, `ignoreSourceUri`, `ignoreSourceLocationUri`, `ignoreSourceGroupUri`, `ignoreLocationUri` | str/str[] | – | Negative conditions |
+| `startSourceRankPercentile` / `endSourceRankPercentile` | int | 0 / 100 | Source-rank window |
+| `minSentiment` / `maxSentiment` | float | – | Article sentiment bounds (English only) |
+| `minSentenceIndex` / `maxSentenceIndex` | int | – | Sentence position in the article: the title is 0, the first body sentence is 1. Use `max=1` for title or lead only |
+| `showDuplicates` | bool | false | Return near-duplicate sentences |
+| Returned details | – | §1.18 | `includeMentionBasicInfo`, `includeMentionSlots`, `includeMentionCategories`, `includeMentionFrameworks`, `includeSourceTitle`, `includeSourceLocation`, `includeConceptSynonyms`, `conceptLang`, `includeLocationGeoLocation` |
+
+Example: stock-price mentions for transportation companies in April 2023.
+
+```json
+{
+  "query": {
+    "$query": {
+      "eventTypeUri": "et/business/stock-prices/stock-price",
+      "industryUri": "sectors/Transportation",
+      "dateStart": "2023-04-01", "dateEnd": "2023-04-30"
+    },
+    "$filter": { "showDuplicates": false }
+  },
+  "includeArticleSentiment": true, "includeMentionCategories": true,
+  "mentionsCount": 100, "mentionsPage": 1,
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+Second doc example: `$and` of `{ "eventTypeUri": "et/business/products-services" }` and `{ "conceptUri": { "$or": [Microsoft, OpenAI, Google Wikipedia URLs] } }`.
+
+Response:
+
+```
+{ "mentions": { totalResults, page, count, pages, results: [Mention] } }
+uriWgtList, conceptAggr, keywordAggr, timeAggr, sourceAggr, categoryAggr: same shapes as getArticles
+eventTypeAggr: { warning?, usedResults, totalResults, results: [{ uri, label, count }] }
+```
+
+---
+
+## 6. Autosuggest
+
+- **Base**: `https://eventregistry.org`.
+- **Purpose**: map labels (names) to the URIs used by search filters.
+- **Matching**: case-insensitive. The term can appear anywhere in the label.
+- **Parameters**: `apiKey` and `prefix` on all endpoints; the extra parameters listed per endpoint are optional.
+
+### Suggest concepts
+- Tab: `suggConcepts` (https://newsapi.ai/documentation?tab=suggConcepts)
+- `GET|POST https://eventregistry.org/api/v1/suggestConceptsFast`
+- **Purpose**: maps a full or partial concept label to concept URIs for `conceptUri`. Results are sorted by frequency in the data; the first candidate is usually the right one.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `prefix` | string | – | Partial or full concept name |
+| `lang` | string | – | Language of `prefix` (example: `eng`). With `lang: "ticker"` or `lang: "isin"`, pass the full ticker or ISIN in `name` |
+| `name` | string | – | Full ticker (e.g. `OLED`) or ISIN (e.g. `US0378331005`) when `lang` is `ticker`/`isin` |
+| `source` | string[] | – | e.g. `["concepts"]` |
+| `conceptLang` | str/str[] | – | Label languages to return, e.g. `["eng","deu"]` |
+| `page`, `count` | int | – | Paging (e.g. `page: 1`, `count: 20`) |
+
+```json
+{ "prefix": "Obama", "source": ["concepts"], "lang": "eng", "conceptLang": ["eng", "deu"], "apiKey": "YOUR_API_KEY" }
+{ "name": "OLED", "lang": "ticker", "apiKey": "YOUR_API_KEY" }
+```
+
+Response: an array of concepts, for example `[ { "uri": "http://en.wikipedia.org/wiki/United_States", "type": "loc", "score": 81564322, "label": { "eng": "United States (U.S.A.)" }, "location": { "type": "country", "label": {...} } }, ... ]`
+
+### Suggest categories
+- Tab: `suggCategories` (https://newsapi.ai/documentation?tab=suggCategories)
+- `GET|POST https://eventregistry.org/api/v1/suggestCategoriesFast`
+- **Purpose**: maps a full or partial category label to category URIs, sorted by frequency.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `prefix` | string | – | Partial or full category name |
+| `page`, `count` | int | – | Paging |
+
+```json
+{ "prefix": "Business", "page": 1, "count": 20, "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `[ { "uri": "dmoz/Arts", "label": "dmoz/Arts", "parentUri": "dmoz" }, { "uri": "news/Arts_and_Entertainment", "label": "news/Arts and Entertainment", "parentUri": "news" }, ... ]`
+
+### Suggest sources
+- Tab: `suggSources` (https://newsapi.ai/documentation?tab=suggSources)
+- `GET|POST https://eventregistry.org/api/v1/suggestSourcesFast`
+- **Purpose**: maps a source name or partial domain to source URIs (clean domain names), sorted by article volume.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `prefix` | string | – | Partial or full source name or domain |
+
+```json
+{ "prefix": "BBC", "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `[ { "uri": "aa.com.tr", "dataType": "news", "title": "Anadolu Ajansı", "score": 1102763 }, ... ]`
+
+### Suggest authors
+- Tab: `suggAuthors` (https://newsapi.ai/documentation?tab=suggAuthors)
+- `GET|POST https://eventregistry.org/api/v1/suggestAuthorsFast`
+- **Purpose**
+  - Maps an author name to author URIs, sorted by article count.
+  - To disambiguate, add the source domain to the query, e.g. `amy more nytimes.com`.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `prefix` | string | – | Partial or full author name (optionally followed by a domain) |
+
+```json
+{ "prefix": "Koenig", "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `[ { "uri": "associated_press@marketwatch.com", "name": "Associated Press", "type": "author", "isAgency": true }, ... ]`
+
+### Suggest locations
+- Tab: `suggLocations` (https://newsapi.ai/documentation?tab=suggLocations)
+- `GET|POST https://eventregistry.org/api/v1/suggestLocationsFast`
+- **Purpose**: maps a full or partial city or country name to location URIs for `locationUri` and `sourceLocationUri`.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `prefix` | string | – | Partial or full location name |
+| `source` | string[] | – | `["place","country"]` |
+| `lang` | string | – | Language of `prefix`, e.g. `eng` |
+| `countryUri` | string | – | Restrict to a country |
+| `count` | int | – | Max suggestions |
+
+```json
+{ "prefix": "Lond", "count": 20, "source": ["place", "country"], "lang": "eng", "countryUri": "", "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `[ { "type": "country", "wikiUri": "http://en.wikipedia.org/wiki/Slovakia", "label": { "eng": "Slovakia" }, "lat": 48.67, "long": 19.5 }, { "type": "place", "wikiUri": "...Martin,_Slovakia", "label": {...}, "lat", "long", "country": {...}, "score": 60817 }, ... ]`. The `wikiUri` is the location URI.
+
+### Suggest event types
+- Tab: `suggEventTypes` (https://newsapi.ai/documentation?tab=suggEventTypes)
+- `GET|POST https://eventregistry.org/api/v1/eventType/suggestEventTypes`
+- **Purpose**: maps a full or partial event type label to event type URIs for `eventTypeUri` in mention queries.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+| `prefix` | string | – | Partial or full event type name |
+
+```json
+{ "prefix": "acquisition", "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `[ { "uri": "et/business/industrial-accidents", "label": "et/business/industrial-accidents" }, ... ]`
+
+---
+
+## 7. Other endpoints
+
+### API usage
+- Tab: `usage` (https://newsapi.ai/documentation?tab=usage)
+- `GET|POST https://eventregistry.org/api/v1/usage`
+- **Purpose**: returns the tokens available in your plan and the tokens already used this month.
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | string | required | API key |
+
+```json
+{ "apiKey": "YOUR_API_KEY" }
+```
+
+Response: `{ "availableTokens": <int>, "usedTokens": <int> }`
+
+---
+
+## 8. Data models
+
+Many fields appear only when the matching `include*` flag is set (§1.18).
+
+### Article
+
+| Field | Description |
+|---|---|
+| `uri` | Unique article id (a string, not necessarily numeric), e.g. `"143701955"` |
+| `url` | Web URL |
+| `title`, `body` | Title and body (body length is controlled by `articleBodyLen`) |
+| `date`, `time`, `dateTime` | When the article was found and serialized (UTC). `dateTime`, e.g. `2013-12-18T11:40:00Z`, increases monotonically as articles are added |
+| `dateTimePub` | Publish time from the RSS feed or metadata (not monotonic) |
+| `lang` | ISO3 language |
+| `isDuplicate` | Whether this is a duplicate of another article |
+| `dataType` | `news`, `blog` or `pr` |
+| `sentiment` | -1..1 or null (English only) |
+| `eventUri` | Event the article belongs to (if any), e.g. `eng-2320588` |
+| `storyUri` | Story (cluster) URI (if any) |
+| `relevance` | How well the article matches the query; used when sorting by `rel` |
+| `image` | Main image URL |
+| `source` | Source object |
+| `categories[]` | Category objects (`uri`, `label`, `wgt`) |
+| `concepts[]` | Concept objects with `score` 1–5 |
+| `authors[]` | `{ uri, name, type: "author", isAgency }` |
+| `links[]` | URLs extracted from the body |
+| `videos[]` | `{ uri, label }` |
+| `shares` | `{ facebook, googlePlus, pinterest, linkedIn }` (some networks are discontinued) |
+| `duplicateList[]` | URIs of duplicates |
+| `originalArticle` | Original article object if this is a duplicate |
+| `extractedDates[]` | `{ amb (ambiguous), imp (year imputed), date, dateEnd, detectedDate, posInText, textSnippet }` |
+| `location` | Location from the dateline, or null |
+| `sim` | Cosine similarity to the story centroid |
+| `wgt` | Internal sort value (do not use) |
+
+### Event
+
+| Field | Description |
+|---|---|
+| `uri` | Event URI, e.g. `eng-33403979` |
+| `totalArticleCount` | Total articles about the event |
+| `articleCounts` | Articles per language, e.g. `{ "deu": 82, "eng": 18 }` |
+| `relevance` | Match score for `rel` sorting |
+| `eventDate` | When the event happened (`YYYY-MM-DD`) |
+| `sentiment` | -1..1 or null |
+| `socialScore` | Social media impact of the event's articles |
+| `images[]` | Image URLs (count set by `eventImageCount`) |
+| `title`, `summary` | Objects keyed by language, e.g. `{ "eng": "...", "deu": "..." }` |
+| `concepts[]` | Concept objects with `score` 0–100 |
+| `categories[]` | Category objects |
+| `commonDates[]` | `{ date, freq }`: dates frequently mentioned in the articles |
+| `location` | Location object (place with a nested `country`) |
+| `stories[]` | Per-language clusters. Fields: `uri`, `lang`, `articleCount`, `title`, `concepts`, `categories`, `location`, `medoidArticle`, `storyDate`, `averageDate`, `extractedDate`, `commonDates`, `images`, `socialScore`, `avgCos`, `variance` |
+| `wgt` | Internal (do not use) |
+
+### Mention
+
+| Field | Description |
+|---|---|
+| `uri` | Mention id, e.g. `7536951383-0` (article URI plus sentence index) |
+| `sentence`, `sentenceIndex` | The sentence and its index (title = 0) |
+| `eventType` | `{ uri, label }`, e.g. `et/business/acquisitions-mergers/acquisition/approved` |
+| `lang`, `date`, `time`, `dateTime` | Article language and publish time |
+| `articleUri`, `articleUrl`, `articleTitle`, `articleImageUrl` | The containing article |
+| `articleSentiment`, `sentenceSentiment`, `eventTypeSentiment` | Sentiment scores |
+| `isDuplicate`, `isDuplicateOf` | Duplicate sentence flag and original |
+| `factLevel`, `factLevelProb` | `fact`, `opinion` or `forecast`, with its probability |
+| `frameworks` | `{ sdg, sasb, esg }` |
+| `categories[]` | Categories of the article: `{ uri, label, wgt }` |
+| `source` | `{ uri, title, ... }` |
+| `slots[]` | Entities in the sentence, e.g. `{ uri?, label?, text, type: "org" or "money" or ..., synonyms?: { isin: [...] } }` |
+| `location`, `validSlots`, `relevance`, `wgt` | Other fields |
+
+### Concept
+
+| Field | Description |
+|---|---|
+| `uri` | Wikipedia URL, e.g. `http://en.wikipedia.org/wiki/United_States` |
+| `type` | `person`, `loc`, `org` or `wiki` |
+| `label` | Labels keyed by language (`conceptLang`) |
+| `score` | Relevance for the item (articles 1–5; events and stories 0–100) |
+| `image` | Image URL |
+| `synonyms` | Synonyms keyed by language, e.g. `{ "eng": ["USA","U.S.A."] }` |
+| `location` | For location concepts, a Location object |
+| `trendingScore` | `{ news: { score, testPopFq, nullPopFq } }` when requested |
+
+### Category
+
+`{ "uri": "dmoz/Society/Issues/Warfare_and_Conflict", "parentUri": "dmoz/Society/Issues", "label": "Society/Issues/Warfare_and_Conflict" }`. On articles and events each category also has `wgt`.
+
+### Source
+
+| Field | Description |
+|---|---|
+| `uri` | Domain, e.g. `bbc.co.uk` |
+| `dataType` | `news`, `pr` or `blog` |
+| `title`, `description` | Name and description |
+| `location` | Location object of the publisher; `locationValidated` flag |
+| `ranking` | `importanceRank` (0–1,000,000; lower is more important), `alexaGlobalRank`, `alexaCountryRank` |
+| `socialMedia` | e.g. `{ "twitter": "BBCNews" }` |
+| `image`, `thumbImage` | Logos |
+
+### Location
+
+- **Place**:
+  - Identity: `type: "place"`, `wikiUri`, `geoNamesId`, `featureCode` (e.g. `P.PPLA`)
+  - Details: `label{lang}`, `lat`, `long`, `population`
+  - `country`: a nested country object
+- **Country**:
+  - Identity: `type: "country"`, `wikiUri`, `geoNamesId`, `label{lang}`
+  - Codes: `code2`, `code3`, `webExt`
+  - Geography: `area` (km²), `continent`, `lat`, `long`, `population`
+  - Currency: `currencyCode`, `currencyName`
+- Optional fields are controlled by the `includeLocation*` flags.

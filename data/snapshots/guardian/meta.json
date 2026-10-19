@@ -1,0 +1,103 @@
+{
+ "slug": "guardian",
+ "name": "The Guardian Open Platform",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:41+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://open-platform.theguardian.com/access/",
+   "status": 200,
+   "final_url": "https://open-platform.theguardian.com/access/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7034,
+   "truncated": false,
+   "sha256": "bb5aa160bd8b777494bb4fed42c116187b133a3a60865d56f8cba9729f056f05",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 1578
+  },
+  "docs": {
+   "url": "https://open-platform.theguardian.com/documentation/",
+   "status": 200,
+   "final_url": "https://open-platform.theguardian.com/documentation/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 5610,
+   "truncated": false,
+   "sha256": "6c615e6f3ac5575879538fef2ef38bab98050070680b8e44dd9539f9d8dfee3f",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 366
+  },
+  "home": {
+   "url": "https://open-platform.theguardian.com/",
+   "status": 200,
+   "final_url": "https://open-platform.theguardian.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7179,
+   "truncated": false,
+   "sha256": "9a652076833e3104749dd562ebeb67e34f549b6949279d05c35ae040e609da21",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 1131
+  },
+  "llms-err-fdee8e": {
+   "url": "https://open-platform.theguardian.com/documentation/llms.txt",
+   "status": 404,
+   "final_url": "https://open-platform.theguardian.com/documentation/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 9379,
+   "truncated": false,
+   "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+   "fetched_at": "2026-10-19T05:54:42+00:00"
+  },
+  "llms-err-900bc0": {
+   "url": "https://open-platform.theguardian.com/llms.txt",
+   "status": 404,
+   "final_url": "https://open-platform.theguardian.com/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 9379,
+   "truncated": false,
+   "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+   "fetched_at": "2026-10-19T05:54:42+00:00"
+  },
+  "llms-err-5a1fa8": {
+   "url": "https://open-platform.theguardian.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://open-platform.theguardian.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 9379,
+   "truncated": false,
+   "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+   "fetched_at": "2026-10-19T05:54:43+00:00"
+  },
+  "llms-err-284bee": {
+   "url": "https://docs.open-platform.theguardian.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.open-platform.theguardian.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:43+00:00"
+  },
+  "docs2": {
+   "url": "https://open-platform.theguardian.com/documentation/",
+   "status": 200,
+   "final_url": "https://open-platform.theguardian.com/documentation/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 5610,
+   "truncated": false,
+   "sha256": "6c615e6f3ac5575879538fef2ef38bab98050070680b8e44dd9539f9d8dfee3f",
+   "fetched_at": "2026-10-19T06:05:17+00:00",
+   "text_bytes": 366
+  },
+  "docs2b": {
+   "url": "https://open-platform.theguardian.com/access/",
+   "status": 200,
+   "final_url": "https://open-platform.theguardian.com/access/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7034,
+   "truncated": false,
+   "sha256": "bb5aa160bd8b777494bb4fed42c116187b133a3a60865d56f8cba9729f056f05",
+   "fetched_at": "2026-10-19T06:05:26+00:00",
+   "text_bytes": 1578
+  }
+ }
+}

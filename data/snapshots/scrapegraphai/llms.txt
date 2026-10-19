@@ -1,0 +1,404 @@
+# llms.txt
+
+## Overview of ScrapeGraphAI
+
+ScrapeGraphAI is the only scraping API designed for autonomous AI agents. It's an advanced AI-powered web scraping platform that transforms any website into structured data using natural language instructions. No proxies needed. No maintenance required. Just reliable data extraction with clean JSON output that integrates seamlessly into data pipelines, RAG systems, analytics, and machine learning applications.
+
+## Statistics
+
+- **27.3k+ GitHub Stars**: Top-rated open source web scraping project
+- **250M+ Extracted Webpages**: Proven at scale across millions of operations
+- **1M+ Unique Users**: Trusted by developers and businesses worldwide
+
+## Pricing Model
+
+ScrapeGraphAI utilizes a **credit-based pricing system** that covers both AI inference processing and web data fetching in a single unified cost structure.
+
+### Subscription Plans (Yearly vs Monthly)
+
+**Yearly Plans**: Save 15% - billed upfront
+
+| Plan | Monthly Cost | Yearly Cost | Credits | Rate Limits | Features |
+|------|-------------|-------------|---------|-------------|----------|
+| **Free** | $0 | — | 500 credits (one-time) | 10 requests/min | 1 monitor, 1 concurrent crawl, Community support |
+| **Starter** | $20/month | $204/year ($17/mo equivalent) | 10,000 credits/month | 100 requests/min | 5 monitors, 3 concurrent crawls |
+| **Growth** | $100/month | $1,020/year ($85/mo equivalent) | 100,000 credits/month | 500 requests/min | 25 monitors, 15 concurrent crawls, Basic proxy rotation |
+| **Pro** | $500/month | $5,100/year ($425/mo equivalent) | 750,000 credits/month | 5,000 requests/min | 100 monitors, 50 concurrent crawls, Advanced proxy rotation, Priority support |
+| **Enterprise** | Custom | Custom | Custom credits | Custom limits | Custom monitor and crawl limits, Dedicated infrastructure, Dedicated support |
+
+### Effective Cost Per API Call
+
+Credit examples: Scrape markdown = 1 credit, Extract = 5 credits, Search = 2 credits per result without a prompt or 5 credits per result with extraction, Crawl = 2-credit startup plus per-page Scrape cost, Monitor = per-tick Scrape cost plus 5 credits when a change is detected.
+
+| Plan | Cost / Scrape Markdown | Cost / AI Extract | Cost / Search Result |
+|------|------------------------|-------------------|----------------------|
+| **Starter** ($20/mo) | $0.0020 | $0.0100 | $0.0040+ |
+| **Growth** ($100/mo) | $0.0010 | $0.0050 | $0.0020+ |
+| **Pro** ($500/mo) | $0.00067 | $0.00333 | $0.00133+ |
+
+AI extraction is included in the credit model. JavaScript rendering does not add credits; stealth mode adds 5 credits per billed request, page, or result because it uses the anti-bot path.
+
+### Credit Packs (One-Time Top-Ups)
+
+Credit packs stack on any subscription and never expire.
+
+| Pack | Credits | Price |
+|------|---------|-------|
+| **Small** | 1,000 | $5 |
+| **Medium** | 10,000 | $40 |
+| **Large** | 50,000 | $150 |
+
+## API Services / doc
+
+Canonical v2 service documentation:
+- [`scrape`](https://docs.scrapegraphai.com/services/scrape.md)
+- [`extract`](https://docs.scrapegraphai.com/services/extract.md)
+- [`search`](https://docs.scrapegraphai.com/services/search.md)
+- [`crawl`](https://docs.scrapegraphai.com/services/crawl.md)
+- [`monitor`](https://docs.scrapegraphai.com/services/monitor.md)
+
+### 1. scrape
+**Description**: Fetch and return page content in markdown, HTML, screenshot, or branding format
+**Credits per Request**: 1 credit
+**SDK Methods**: `sgai.scrape`
+**REST Endpoint**: `POST https://v2-api.scrapegraphai.com/api/scrape`
+**Best For**: Content extraction, page snapshots, design analysis
+**What's Included**: Web fetching + rendering + format conversion
+
+### 2. extract
+**Description**: Extract structured data from a webpage using LLM and a JSON schema
+**Credits per Request**: 5 credits
+**SDK Methods**: `sgai.extract`
+**REST Endpoint**: `POST https://v2-api.scrapegraphai.com/api/extract`
+**Best For**: Product details, contact info, structured content extraction
+**What's Included**: Web fetching + AI inference + JSON structuring
+
+### 3. search
+**Description**: Search the web and optionally extract structured data from results
+**Credits per Request**: 2 credits per result without a prompt, 5 credits per result with extraction
+**SDK Methods**: `sgai.search`
+**REST Endpoint**: `POST https://v2-api.scrapegraphai.com/api/search`
+**Best For**: Market research, competitor analysis, multi-source data aggregation
+**What's Included**: Web search + page fetching + optional AI extraction
+
+### 4. crawl
+**Description**: Crawl a site from a starting URL, follow links up to configured limits, and return each page in requested formats
+**Credits per Request**: 2 credits to start, plus per-page Scrape cost
+**SDK Methods**: `sgai.crawl.start`, `sgai.crawl.get`, `sgai.crawl.stop`, `sgai.crawl.resume`, `sgai.crawl.delete`
+**REST Endpoint**: `POST https://v2-api.scrapegraphai.com/api/crawl`
+**Best For**: Multi-page site extraction, documentation scraping, catalog crawling
+**What's Included**: Link discovery + page fetching + rendering + format conversion
+
+### 5. monitor
+**Description**: Schedule recurring page checks and capture page changes over time
+**Credits per Request**: Per-tick Scrape cost, plus 5 credits when a change is detected
+**SDK Methods**: `sgai.monitor.create`, `sgai.monitor.list`, `sgai.monitor.get`, `sgai.monitor.update`, `sgai.monitor.pause`, `sgai.monitor.resume`, `sgai.monitor.delete`, `sgai.monitor.activity`
+**REST Endpoint**: `POST https://v2-api.scrapegraphai.com/api/monitor`
+**Best For**: Price monitoring, inventory checks, page-change alerts
+**What's Included**: Scheduled fetching + change detection + optional webhook delivery
+
+Output schemas are part of structured extraction through `extract` and prompted `search`; they are not the primary v2 API surface.
+
+## Cost Breakdown: What's Included
+
+The credit system is **all-inclusive**, covering:
+
+### Fetching Operations
+   - HTTP requests and response handling
+   - JavaScript rendering for dynamic content
+- Proxy rotation and IP management, with stealth mode billed as a 5-credit modifier
+   - Rate limiting and retry logic
+- Browser automation when needed
+
+### AI Inference Processing
+   - Natural language prompt processing
+   - Content analysis and extraction
+   - Data structuring and validation
+   - Output formatting (JSON, CSV, Markdown)
+- Schema validation and enforcement
+
+## Key Use Cases
+
+### Price Monitoring Bot
+Track competitor prices on Amazon, eBay, and other e-commerce sites. Get alerts when prices drop or inventory changes.
+- **Popular Targets**: Amazon products, eBay listings, Shopify stores
+
+### Lead Generation Tool
+Extract LinkedIn profiles, Twitter accounts, and contact information at scale without getting blocked.
+- **Popular Targets**: LinkedIn profiles, Twitter users, Company contacts
+
+### Market Research Dashboard
+Aggregate reviews, ratings, and sentiment from multiple sites. Build comprehensive competitor analysis.
+- **Popular Targets**: Product reviews, App ratings, Customer sentiment
+
+### Real Estate Tracker
+Monitor property listings on Zillow, Redfin, and local sites. Track price changes and new listings.
+- **Popular Targets**: Zillow listings, Redfin data, Rental properties
+
+### News Aggregator
+Collect articles from 100+ news sources. Extract headlines, content, and metadata automatically.
+- **Popular Targets**: News articles, Blog posts, Press releases
+
+### AI Agent Tool
+Provide agents with extremely fast web access. Perfect for RAG pipelines, autonomous research, and real-time data enrichment.
+- **Popular Targets**: RAG pipelines, Autonomous agents, Real-time data
+
+## Core Features
+
+1. **AI-Powered Extraction**: Extract structured data from any website using advanced AI models
+2. **No Proxies Needed**: Built-in proxy rotation and browser automation handles everything
+3. **Simple API**: Just provide a URL and describe what data you want to extract
+4. **Multi-Language SDKs**: Available for Python, JavaScript, and other major programming languages
+5. **Smart Scraping**: Handles dynamic content, JavaScript rendering, and complex page structures
+6. **Fast & Reliable**: Optimized for speed with 99.9% uptime and automatic retries
+7. **Universal Extraction**: Support for static sites, dynamic websites, and Single Page Applications (React, Angular, Vue)
+8. **Intelligent Processing**: Automatic detection of tables, lists, images, metadata, and semantic relationships
+9. **SOC2 Compliant**: Certified security and compliance standards for enterprise-grade data protection
+
+## MCP Server Integration
+
+### Lightning-Fast Web Access for AI Agents
+ScrapeGraphAI now offers an **MCP Server** (Model Context Protocol v1.0) for giving AI agents instant web access.
+
+**Perfect For**:
+- **RAG Pipelines**: Enhance retrieval-augmented generation with real-time web data
+- **Autonomous Agents**: Empower agents with instant web access for independent research
+- **Real-time Data**: Access live information for dynamic data enrichment and updates
+
+**Compatible With**: Claude, OpenAI, and other major AI platforms
+
+## Integrations
+
+ScrapeGraphAI integrates seamlessly with popular automation platforms, AI frameworks, and development tools:
+
+- **MCP Server**: Model Context Protocol for AI agents
+- **Automation**: n8n, Zapier, Make
+- **No-Code**: Bubble, Dify
+- **AI Frameworks**: LangChain, LlamaIndex, CrewAI
+- **Agent Tools**: Toolhouse, Composio
+- **SDKs**: Python SDK, JavaScript SDK
+
+## Data Output Formats
+
+- **Structured JSON Output**: Consistent formats that simplify downstream system integration
+- **CSV and Markdown Support**: Quick conversion for documentation and manual analysis
+- **Schema Enforcement**: Define custom output schemas for consistent data structure
+- **Metadata Included**: Execution time, tokens used, request IDs for tracking
+
+## Authentication
+
+- **API Key**: Include in the `Authorization: Bearer <API_KEY>` header
+- **Rate Limits**: Use the `/status` endpoint to monitor usage in real time
+- **Security**: Enterprise-grade security with SOC2 compliance and dedicated infrastructure options
+
+## Usage Examples
+
+### Scrape (cURL)
+```bash
+curl -X POST https://v2-api.scrapegraphai.com/api/scrape \
+  -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "url": "https://example.com",
+    "format": "markdown"
+  }'
+```
+
+### Extract (cURL)
+```bash
+curl -X POST https://v2-api.scrapegraphai.com/api/extract \
+  -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "url": "https://example-shop.com/product",
+    "prompt": "Extract the product name, price, description, availability, and customer ratings",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "product_name": {"type": "string"},
+        "price": {"type": "number"},
+        "in_stock": {"type": "boolean"},
+        "rating": {"type": "number"}
+      }
+    }
+  }'
+```
+
+### Search (cURL)
+```bash
+curl -X POST https://v2-api.scrapegraphai.com/api/search \
+  -H "Authorization: Bearer your-api-key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "latest trends in sustainable packaging",
+    "num_results": 5
+  }'
+```
+
+## Getting Started
+
+1. **Sign up for free**: Get your API key at https://scrapegraphai.com
+2. **Install SDK**: `pip install scrapegraph-py` or `npm install scrapegraph-js`
+3. **Start scraping**: Use `sgai.scrape`, `sgai.extract`, `sgai.search`, `sgai.crawl.start`, or `sgai.monitor.create`
+4. **Scale as needed**: Upgrade to higher tiers as your scraping needs grow
+
+## Support & Resources
+
+- **Documentation**: Full API documentation at https://docs.scrapegraphai.com
+- **GitHub**: 27.3k+ stars - https://github.com/ScrapeGraphAI/Scrapegraph-ai
+- **Community Support**: Free plan includes community support
+- **Email Support**: Available on Starter plan and above
+- **Priority Support**: Growth plan includes priority support
+- **Dedicated Support**: Pro and Enterprise plans include dedicated support
+- **Contact**: contact@scrapegraphai.com
+
+## Topics We Cover
+
+Our content covers a comprehensive range of web scraping and data extraction topics:
+
+### Tutorials & Guides
+- **Getting Started**: Web scraping 101, ScrapeGraph tutorials, Python/JavaScript guides
+- **Advanced Techniques**: Production pipelines, large-scale scraping, handling JavaScript-heavy sites
+- **Platform-Specific Scrapers**: Amazon, eBay, LinkedIn, Instagram, YouTube, Reddit, TikTok, Google Maps, Walmart, Yahoo
+- **Use Case Guides**: E-commerce price monitoring, real estate scraping, job postings, social media trends, healthcare data extraction, stock analysis, news aggregation
+
+### Technical Deep Dives
+- **AI-Powered Scraping**: LLM-based extraction, AI agents, intelligent data parsing
+- **Integration Guides**: LangChain, LlamaIndex, CrewAI, n8n, Zapier, Make
+- **Production Best Practices**: Zero-to-production pipelines, error handling, rate limiting, concurrent scraping
+- **Technical Implementation**: JavaScript rendering, avoiding detection, proxy management, schema validation
+
+### Comparisons & Alternatives
+- **Platform Comparisons**: Firecrawl, Apify, Browserbase, Exa, Diffbot, Tavily, Linkup, Reworkd AI
+- **Tool Alternatives**: Scrapy, BeautifulSoup, Selenium, Playwright alternatives
+- **Competitive Analysis**: Feature comparisons, pricing analysis, use case fit
+
+### Legal & Compliance
+- **Legal Framework**: Web scraping legality, compliance best practices, ethical scraping
+- **Enterprise Compliance**: SOC2 compliant, GDPR, data protection, terms of service compliance
+- **Risk Management**: Avoiding legal issues, best practices for compliant scraping
+
+### Industry Applications
+- **E-commerce**: Price monitoring, product data extraction, competitor analysis
+- **Real Estate**: Property listings, price tracking, market analysis
+- **Healthcare**: Medical data extraction, research data collection
+- **Finance**: Stock data, financial news, market intelligence
+- **Social Media**: Profile extraction, trend analysis, brand monitoring
+- **Travel & Hospitality**: Hotel data, flight information, booking platforms
+
+### AI Agents & Automation
+- **Agent Development**: Building AI agents, multi-agent systems, autonomous research
+- **RAG Pipelines**: Retrieval-augmented generation, real-time data enrichment
+- **Automation Workflows**: Cron jobs, scheduled scraping, automated data pipelines
+
+## Key Blog Posts & Resources
+
+### Getting Started
+- **[Web Scraping 101](/blog/101-scraping)**: Complete beginner's guide to web scraping
+- **[ScrapeGraph Tutorial](/blog/scrapegraph-tutorial)**: Step-by-step walkthrough of ScrapeGraphAI
+- **[Python Web Scraping Guide](/blog/scrape-with-python)**: Python-specific scraping tutorial
+- **[JavaScript Web Scraping](/blog/scrape-with-javascript)**: Node.js implementation guide
+
+### Production & Scaling
+- **[Zero to Production Scraping Pipeline](/blog/zero-to-production-scraping-pipeline)**: Building a 2.5M company dataset in 22 hours
+- **[AI Scraping for Large-Scale Data](/blog/ai-web-scraping)**: Enterprise-scale scraping strategies
+- **[Master Production Best Practices](/blog/master-production-web-scraping-best-practices)**: Production-grade scraping patterns
+
+### Platform-Specific Guides
+- **[Best Amazon Scraper](/blog/best-amazon-scraper)**: E-commerce scraping guide
+- **[Real Estate Scraping](/blog/real-estate-scraping)**: Property data extraction
+- **[Instagram Data Extractor](/blog/instagram-data-extractor)**: Social media scraping
+- **[LinkedIn Lead Generation](/blog/linkedin-lead-generation)**: Professional network data extraction
+- **[Job Posting Scraping](/blog/7-best-tools-for-scraping-job-postings-in-2026)**: Employment data collection
+
+### AI & Integrations
+- **[Integrating ScrapeGraph into Intelligent Agents](/blog/integrating-scrapegraph-into-intelligent-agents)**: Agent-based scraping
+- **[ScrapeGraphAI LlamaIndex Integration](/blog/scrapegraphai-llamaindex-integration)**: RAG pipeline integration
+- **[CrewAI Integration](/blog/scrapegraphai-crewai-integration)**: Multi-agent systems
+- **[LangChain Integration](/blog/scrapegraphai-langchain)**: LLM workflow integration
+- **[ScrapeGraphAI MCP Server](/blog/scrapegraphai-mcp-server)**: Model Context Protocol for AI agents
+
+### Legal & Compliance
+- **[Is Web Scraping Legal?](/blog/is-web-scraping-legal)**: Legal considerations and framework
+- **[Compliance Web Scraping](/blog/compliance-web-scraping)**: Stay compliant with regulations
+- **[Compliance-First Web Scraping](/blog/death-x-path)**: Enterprise legal framework
+
+### Advanced Topics
+- **[Handling Heavy JavaScript](/blog/handling-heavy-javascript)**: JavaScript rendering strategies
+- **[Scraping Without Proxies](/blog/scraping-without-proxies)**: No-proxy scraping solutions
+
+### Use Cases & Case Studies
+- **[Healthcare Data Extraction](/blog/healthcare-data-extraction)**: Medical data collection guide
+- **[Stock Analysis](/blog/stock-analysis)**: Financial data scraping
+- **[Social Media Trends](/blog/social-media-trends)**: Social platform data analysis
+- **[News Aggregation](/blog/news-aggregation)**: Multi-source news collection
+
+### Comparisons
+- **[ScrapeGraph vs Firecrawl](/blog/scrapegraph-vs-firecrawl)**: AI scraping platform comparison
+- **[ScrapeGraph vs Apify](/blog/scrapegraph-vs-apify)**: Platform feature analysis
+- **[ScrapeGraph vs Browserbase](/blog/scrapegraph-vs-browserbase)**: Browser automation comparison
+- **[Best AI Web Scraping Tools](/blog/7-best-ai-web-scraping-tools)**: Comprehensive tool comparison
+
+## Website
+
+**Main Website**: https://scrapegraphai.com
+
+### Key Pages
+- **Home**: https://scrapegraphai.com - Product overview and getting started
+- **Pricing**: https://scrapegraphai.com/pricing - Subscription plans and credit packages
+- **Documentation**: https://docs.scrapegraphai.com - Complete API documentation
+- **Blog**: https://scrapegraphai.com/blog - All articles, tutorials, and guides
+- **Compare**: https://scrapegraphai.com/compare - Tool comparisons and alternatives
+- **For Startups**: https://scrapegraphai.com/for-startups - Startup program information
+
+### Developer Resources
+- **GitHub**: https://github.com/ScrapeGraphAI/Scrapegraph-ai - Open source repository (27.3k+ stars)
+- **Python SDK**: `pip install scrapegraph-py`
+- **JavaScript SDK**: `npm install scrapegraph-js`
+- **API Base URL**: https://v2-api.scrapegraphai.com/api
+
+### Community & Support
+- **Discord**: https://discord.gg/scrapegraphai - Community support and discussions
+- **Twitter/X**: https://twitter.com/scrapegraphai - Updates and announcements
+- **LinkedIn**: https://www.linkedin.com/company/101881123/ - Company updates
+- **Medium**: https://medium.com/@scrapegraphai - Technical articles and insights
+- **Email**: contact@scrapegraphai.com - Support and sales inquiries
+
+### Additional Resources
+- **Status Page**: https://scrapegraphai.com/api-status - API status and uptime monitoring
+- **Privacy Policy**: https://scrapegraphai.com/privacy
+- **Terms of Service**: https://scrapegraphai.com/terms
+
+## Glossary
+
+Question-and-answer glossary covering web scraping, crawling, extraction, and AI scraping concepts. Each entry opens with a direct answer:
+- [Web Scraping glossary](https://scrapegraphai.com/glossary/web-scraping) - errors, proxies, anti-bot, tooling
+- [Data Extraction glossary](https://scrapegraphai.com/glossary/data-extraction) - parsing, structured output, LLM-ready formats
+- [Web Crawling glossary](https://scrapegraphai.com/glossary/web-crawling) - crawler mechanics, robots.txt, crawl management
+- [AI-Powered Scraping glossary](https://scrapegraphai.com/glossary/ai-scraping) - agentic scraping, RAG, AI workflows
+- [Full index](https://scrapegraphai.com/glossary)
+
+## Why ScrapeGraphAI?
+
+- **Built for AI Agents**: Native support for RAG pipelines, autonomous agents, and real-time data enrichment
+- **No Infrastructure Management**: No need to manage proxies, browsers, or servers
+- **AI-Powered Intelligence**: Automatically adapts to any website structure
+- **Proven at Scale**: 40M+ webpages extracted, trusted by 1M+ users
+- **Simple Pricing**: All-inclusive credits cover both fetching and AI processing
+- **Fast Integration**: Get started in minutes with Python, JavaScript, or cURL
+- **Enterprise Ready**: SOC2 compliant with dedicated infrastructure, high-speed scraping, and custom monitor/crawl capacity
+
+## Enterprise Features
+
+For organizations with demanding scraping needs:
+- **SOC2 Compliance**: Certified security standards for enterprise data protection
+- **Custom Credits**: Personalized credit allocations based on your needs
+- **Custom Rate Limits**: Tailored throughput for your specific use case
+- **Custom Monitor/Crawl Capacity**: Schedule automated scraping tasks with limits sized to the contract
+- **Dedicated Infrastructure**: Isolated resources for maximum performance
+- **High Speed Scraping**: Priority processing and optimized execution
+- **Dedicated Support**: Direct access to engineering team
+- **SLA Guarantees**: Uptime and performance guarantees
+- **Bulk Discounts**: Volume pricing for large-scale operations
+
+Contact sales for custom enterprise solutions.

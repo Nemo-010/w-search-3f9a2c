@@ -1,0 +1,70 @@
+{
+ "slug": "wikidata",
+ "name": "Wikidata SPARQL",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:47+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+   "status": 200,
+   "final_url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 88969,
+   "truncated": false,
+   "sha256": "b35e62939e5d71f2f858da9cd5d2a21fad0aff0c1d12f207b7983176618e9ce5",
+   "fetched_at": "2026-10-19T05:54:47+00:00",
+   "text_bytes": 8515
+  },
+  "home": {
+   "url": "https://query.wikidata.org/",
+   "status": 200,
+   "final_url": "https://query.wikidata.org/",
+   "content_type": "text/html",
+   "bytes": 17940,
+   "truncated": false,
+   "sha256": "a2685dafac7ed08b53edba5699e23c142ead168f64a7aa7a0b1a5a6886f6a074",
+   "fetched_at": "2026-10-19T05:54:47+00:00",
+   "text_bytes": 131
+  },
+  "llms-err-98adfa": {
+   "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/llms.txt",
+   "status": 404,
+   "final_url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 41600,
+   "truncated": false,
+   "sha256": "b0fb3bccf9850e8fb3d2f1d755274a348bd83497413053649685b43d924ce28d",
+   "fetched_at": "2026-10-19T05:54:48+00:00"
+  },
+  "llms-err-17e6d9": {
+   "url": "https://query.wikidata.org/llms.txt",
+   "status": 404,
+   "final_url": "https://query.wikidata.org/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+   "fetched_at": "2026-10-19T05:54:48+00:00"
+  },
+  "llms-err-e26c4e": {
+   "url": "https://query.wikidata.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://query.wikidata.org/docs/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+   "fetched_at": "2026-10-19T05:54:48+00:00"
+  },
+  "llms-err-a131e5": {
+   "url": "https://docs.query.wikidata.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.query.wikidata.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  }
+ }
+}

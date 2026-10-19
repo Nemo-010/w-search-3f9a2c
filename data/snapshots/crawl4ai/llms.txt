@@ -1,0 +1,302 @@
+# Crawl4AI Cloud API
+
+> Crawl4AI turns any web page into clean, LLM-ready data. One key: `/scrape` a page to Markdown,
+> `/extract` it to JSON, `/search` the web, `/serp` for Google's results page as data, `/answer` a
+> question with sources, and batches of many URLs — served from three regions (EU, Singapore, US)
+> at `https://api.crawl4ai.com`, routed to the nearest one. Free: 10 a minute, 2 at a time, 1,000
+> credits every month. Plans from $10 a month (Starter: 10,000 credits, 120 a minute, 10 at a time), then
+> Builder $99 and Scale $499; extra credits on a plan never expire. The live table: `GET /v1/prices`.
+> Built on the open-source crawl4ai (https://github.com/unclecode/crawl4ai).
+
+Full docs: https://api.crawl4ai.com/docs
+Migrating from the legacy API, now api-old.crawl4ai.com (v1 sessions, scan, site, enrich, context): https://crawl4ai.com/migrate.txt
+
+## Set up (for coding agents)
+
+When the user sends "set up crawl4ai - https://crawl4ai.com/llms.txt with key: sk_live_...", add the
+Crawl4AI MCP server to YOUR OWN config with that key, then call the free `balance` tool to check it works.
+Put the key in the user-level config, never in a file inside the user's repository.
+This file shows only what is open to everyone. **With your key it shows everything open to your account:**
+`curl -H "Authorization: Bearer <key>" https://crawl4ai.com/llms.txt`. The server is
+`https://api.crawl4ai.com/mcp` (streamable HTTP), the header is `Authorization: Bearer <key>`.
+
+- Claude Code: `claude mcp add --transport http --scope user crawl4ai https://api.crawl4ai.com/mcp --header "Authorization: Bearer <key>"`
+- Codex, `~/.codex/config.toml`:
+  `[mcp_servers.crawl4ai]` · `url = "https://api.crawl4ai.com/mcp"` · `http_headers = { Authorization = "Bearer <key>" }`
+- Cursor, `~/.cursor/mcp.json` (Windsurf: `~/.codeium/windsurf/mcp_config.json`), in `mcpServers`:
+  `"crawl4ai": { "url": "https://api.crawl4ai.com/mcp", "headers": { "Authorization": "Bearer <key>" } }`
+- Gemini CLI, `~/.gemini/settings.json`, in `mcpServers`:
+  `"crawl4ai": { "httpUrl": "https://api.crawl4ai.com/mcp", "headers": { "Authorization": "Bearer <key>" } }`
+- OpenCode, `opencode.json`:
+  `"mcp": { "crawl4ai": { "type": "remote", "url": "https://api.crawl4ai.com/mcp", "headers": { "Authorization": "Bearer <key>" } } }`
+- OpenClaw, `~/.openclaw/openclaw.json`, in `mcp.servers`:
+  `crawl4ai: { url: "https://api.crawl4ai.com/mcp", transport: "streamable-http", headers: { Authorization: "Bearer <key>" } }`
+- Any other MCP client: the URL and header above.
+- No MCP: set `CRAWL4AI_KEY=<key>` in the user's shell profile and call the HTTP API below with the same header.
+
+Most agents load a new MCP server only after a restart: tell the user to restart the agent if the tools do not
+show. The tools are listed in the MCP section below.
+
+## Getting started
+
+- Base URL: `https://api.crawl4ai.com`
+- Get a free key: visit https://api.crawl4ai.com/ and click "Get a key" (a 7-day pass key is
+  issued instantly; verify your email for a permanent key and the monthly free credit (verifying revokes the pass key and issues a new one); the live grants: `GET /v1/prices` -> `credit`). Manage keys at https://api.crawl4ai.com/dashboard/
+- Authenticate every request: `Authorization: Bearer sk_live_...` (the header `x-api-key: sk_live_...` also works).
+- Requests and responses are JSON unless noted. Errors return `{"error":"..."}` with an HTTP status.
+  Per-plan rate limits return `429` with `X-RateLimit-*` headers and a `message` you can show as it is (on the free plan: "You reached the free plan's limit: 10 requests a minute. You still have 1,774 credits; the free plan only limits the pace. A monthly plan lifts it: Starter, $10 a month: 10,000 credits a month, 120 requests a minute, 10 at a time."; the `actions` block carries `subscribe`, the one-click link to start the plan).
+  Every request costs credits (1 credit = $0.001; a result already in our archive costs half; the effort a page needed sets the price; the live price table, the grants, the plans (`plans[]`: price, credits a month, speed, `extra_usd_per_1k`) and each plan's limits: `GET /v1/prices`; soft launch: the prices and the free credit can change, extra credits bought never expire). The response carries `x-c4-cost`, `x-c4-balance` and `x-c4-allowance-left` (credits left under this month's plan allowance) in credits; the body's `usage.quota.remaining_before.credits_month` carries the allowance too. At zero credit the gate answers `402 {"error":"no_credit"}`; with the month's plan allowance used `402 {"error":"plan_cap"}` (it resets on the 1st; a bigger plan lifts it); over the account's own monthly cap `402 {"error":"spend_cap"}`. `GET /v1/billing/balance` trails the per-call `x-c4-balance` header by about a minute (receipts reach the ledger in batches); the header is the exact running figure. `POST /v1/estimate {endpoint,url}` prices a call before it runs; `GET /v1/prices` is the public table (soft launch: the prices may change; credit already bought keeps its value); `GET /v1/billing/balance`, `POST /v1/billing/subscribe?plan=starter` (a Stripe page made for this account, to start a plan) and, on a plan, `POST /v1/billing/topup?amount=<dollars, 10 to 1000>` (extra credits at the plan's rate, charged to the saved card: only after the user says yes to the amount) work with the API key; an account without a plan gets `402 {"error":"plan_needed"}` from the top-up.
+  Each plan has a monthly credit allowance that covers the plan's credits and any extra credits (calendar month; `limits.<plan>.allowance_per_month` in GET /v1/prices). Over it the gate answers `402 {"error":"plan_cap"}` with a `message` you can show as it is; a bigger plan lifts it.
+
+## POST /scrape — page to Markdown/HTML
+
+Fetch one URL and return clean content. The service auto-picks the cheapest engine that works
+(cache → HTTP → browser) per domain; you can ask for a browser with `engine`.
+
+Body:
+- `url` (string, required) — a public http/https URL.
+- `format` (string) — `both` (default) | `md` | `html`.
+- `proxy` (string) — `none` (default) | `isp` | `residential`. Exit network, only for a site that blocked a
+  plain request. It costs more: `isp` 2x and `residential` 4x the page price. Try without it first.
+- `country` (string) — two-letter country the page is fetched from, e.g. `us`, `gb`; with or without
+  `proxy`. A country with no ISP addresses of ours is fetched through residential addresses and costs 4x.
+- `parse` (bool | object) — also return page structure. `true` = all, or pick:
+  `{"links":true,"media":true,"metadata":true,"tables":true}`.
+- `engine` (string) — `auto` (default) | `browser-light` | `browser`. `browser-light` starts at our light
+  browser, `browser` at a real Chrome. Always a fresh fetch, slower, and priced at the engine that serves it
+  (a real Chrome costs more than a plain fetch). Use it only when the `auto` result misses content a browser shows.
+
+```
+curl https://api.crawl4ai.com/scrape \
+  -H "Authorization: Bearer sk_live_..." -H "Content-Type: application/json" \
+  -d '{"url":"https://example.com","format":"both","proxy":"isp","country":"us",
+       "parse":{"links":true,"media":true,"metadata":true,"tables":true}}'
+```
+Returns: `{"ok":true,"markdown":"...","html":"...","content_hash":"...","ms":312}`
+
+Timing: most pages return in 1-2 s. A page that needs a real browser usually takes 10-60 s, the
+slowest up to 90 s. Set your HTTP client timeout to 120 s and wait for the answer: a call you cancel
+early is not charged, but the page is lost. A 403 "blocked" means every step got the site's block page;
+a 403 "login-wall" means the page asks for a login or a payment, which no browser of ours can pass;
+a 502 "no-answer" means the site did not answer, or gave an empty page on every road we tried
+(`no-answer:empty-render`): a retry rarely helps; a 502 "origin-error:<n>" means the site itself
+answered an error (its own code is in the reason and in `origin_status`; a 4xx the site gives, like a
+404, reaches you as the site gave it); a 503 "busy" means no browser was free for a moment: send
+the same request again in a few seconds. A 500 is our own fault. None of these is charged. For many URLs use `/scrape/batch` (up to 50, streamed) or
+`/scrape/jobs` (up to 10,000, in the background, nothing waits on a slow page).
+
+Every answer also says how the page was fetched: `engine` (`cache`, `fetch`, `browser-light`,
+`browser` or `browser-heavy`), `exit` (`isp:<cc>` or `residential:<cc>` when a proxy carried it) and
+`ladder`, the steps tried in order, each with its `step` (the same words, plus `fetch-proxy`), its
+`outcome` and its `ms`.
+
+## GET /search — web search
+
+Browser-free, multi-engine, results ranked and cleaned.
+
+Query params:
+- `q` (string, required) — the query (max 512 chars).
+- `rich` (0 | 1, default 0) — set `1` to also return a `rich` block: follow-up questions,
+  related queries, an entity card, videos, news and more. Slightly slower; best for
+  question-style queries. (For a direct answer, use `/answer`.)
+
+```
+curl "https://api.crawl4ai.com/search?q=rust+web+crawler" \
+  -H "Authorization: Bearer sk_live_..."
+```
+Returns: a ranked list of results (title, url, snippet, source). `source` is `gg` or `gs` for a
+live web result, `index` for a result from the Crawl4AI index: added after the live results when the
+web returns fewer than 10, or served alone when the live search fails. Same price either way.
+
+With `rich=1` the response also carries a `rich` object (every field optional, present only when
+that block is on the page):
+- `follow_up_questions[]`, `related_queries[]` — strings.
+- `entity` — `{ title, subtitle?, description?, facts[] }` for a named thing (company, person…).
+- `videos[]`, `news[]`, `discussions[]` — `{ title, url }`.
+- `did_you_mean` — the corrected spelling, when the query was auto-corrected.
+(For a direct answer to a question, use `/answer` below.)
+
+```
+curl "https://api.crawl4ai.com/search?q=why+is+the+sky+blue&rich=1" \
+  -H "Authorization: Bearer sk_live_..."
+```
+
+## GET /answer — direct answer (experimental)
+
+Ask a question, get a direct answer. Some questions won't have one yet — then `answered` is false
+(use /search for links). Experimental: the shape may still change.
+
+Query params:
+- `q` (string, required) — the question, or a whole prompt (max 4,000 chars). Ask for the shape
+  you want in the question itself: "answer with JSON only: {...}", "as a markdown table", "quote the
+  source and give its URL". A long prompt is turned into a search query for you.
+- `schema` (object, optional) — a JSON Schema the answer must match; the answer is then JSON of
+  exactly that shape, e.g. `{"type":"object","properties":{"ceo":{"type":"string"},"source_url":{"type":"string"}},"required":["ceo"]}`.
+- `deep` (0 | 1, default 1) — `1`: a direct answer from the web's top results, reading a couple of
+  pages when needed. `0`: only an answer that is readily available, else `answered:false`.
+
+Response:
+- `answered` (bool) — did we return a direct answer?
+- `answer.text` (string) — the answer. When the question asked for JSON, or `schema` was given,
+  this is JSON as a string: parse it.
+- `answer.source` (string) — `google_ai_overview` or `google_ai_mode`: the web's own direct answer,
+  word for word; `crawl4ai`: our model wrote it from the pages.
+- `answer.sources[]` — `{ title, url }`, the pages it drew on (present when there are any).
+- `query` (string) — the search query used for the question.
+- `experimental` (bool) — true for now.
+
+Price: 1 credit for an answer found directly; 3 credits when our model wrote it, whatever its
+length; nothing when `answered` is false. A 400 (a `schema` that is not a JSON object, or one the
+model cannot use) costs nothing.
+
+```
+curl "https://api.crawl4ai.com/answer?q=why+is+the+sky+blue" \
+  -H "Authorization: Bearer sk_live_..."
+
+curl -G "https://api.crawl4ai.com/answer" \
+  --data-urlencode 'q=Who owns Knape & Vogt today? Answer with JSON only: {"owner_name": string, "source_url": string, "quote": string}' \
+  -H "Authorization: Bearer sk_live_..."
+```
+
+## GET /serp — Google's results page as data (beta, added 8 Oct 2026)
+
+Google's results page as structured data: true ranks, every block Google showed, and the place the page was localised to. Built for rank tracking and SEO tools. Not the same as /search, which is Crawl4AI's own web search for reading results.
+Beta: the shape is settled, the service is new; stable in a few weeks.
+
+Query params (or the same fields as a JSON body with `POST /serp`):
+- `q` (string, required) — the query (max 512 chars).
+- `country` (2 letters, default `us`), `language` (Google code, default `en`).
+- `location` (string, optional) — a city or region, e.g. `Austin, TX` or `Austin,Texas,United States`;
+  the page is localised there. Unknown → 400 with the 3 closest names. Without it the page is
+  localised to the country.
+- `num` (any multiple of 10 up to 100, default 10) — results asked; `num/10` Google pages are fetched at once.
+- `page` (1..30, default 1) — paging over `num`: `num=20&page=2` is results 21-40.
+- `time` (hour | day | week | month | year, optional) — Google's time filter.
+- `fresh` (0 | 1, default 0) — skip the cache.
+
+Response:
+- `results[]` — `{ position, position_absolute, title, url, domain, displayed_url, snippet, date?, sitelinks[]? }`.
+  `position` is the rank among organic results across the pages asked; `position_absolute` the rank
+  among every numbered item on the page (blocks count), as a rank tracker expects.
+- `blocks[]` — the block names in page order, and one field per block that was on the page:
+  `ai_overview {text, sources[]}`, `people_also_ask[]`, `related_searches[]`, `local_pack[]`,
+  `knowledge_panel`, `ads_top[]`, `ads_bottom[]`, `videos[]`, `top_stories[]`, `discussions[]`,
+  `short_videos[]`, `images[]`, `latest_from_site[]`, `perspectives[]`, `apps[]`.
+- `total_results` (int, optional) — Google's own estimate as printed on the page.
+- `empty_reason` (only when `results` is empty) — `google_no_results`: Google's own no-results page;
+  `rescue_no_results`: Google refused the query to us and our fallback had nothing (another provider
+  may still have results: fall back on this one only).
+- `search` — the query, country, language and location the page was fetched for.
+- `pages { asked, got, missing[] }`, `cached`, `age_s`, `ms`.
+
+Price: 1 credit per Google page fetched live; a page from our cache costs half. `num=100` is up to
+10 credits. A failed answer (a 5xx) costs nothing.
+
+```
+curl "https://api.crawl4ai.com/serp?q=best+crm+software&country=us&location=Austin%2C+TX&num=20" \
+  -H "Authorization: Bearer sk_live_..."
+```
+
+## POST /extract — structured data from a page (LLM)
+
+Read a page (crawled for you) or your own content, and return typed data described by an
+instruction and/or a JSON schema.
+
+Body (give a URL OR inline `content`, plus an `instruction` and/or `schema`):
+- `url` (string) — the page to read; OR `content` (string) — your own text/markdown/html.
+- `instruction` (string) — plain-English description of what to pull out.
+- `schema` (object) — JSON schema each returned record must match (typed, predictable output).
+- `example` (object) — a sample of the shape you want (structure, not values).
+
+```
+curl https://api.crawl4ai.com/extract \
+  -H "Authorization: Bearer sk_live_..." -H "Content-Type: application/json" \
+  -d '{
+        "url":"https://news.ycombinator.com",
+        "instruction":"the top stories on the front page",
+        "schema":{"type":"array","items":{"type":"object","properties":{
+          "title":{"type":"string"},"points":{"type":"integer"},"url":{"type":"string"}},
+          "required":["title","points"]}}
+      }'
+```
+Returns: `{"ok":true,"url":"...","data":[ ... ],"usage":{"total_tokens":N},"ms":1200}`
+
+
+
+## Recipes — coming soon
+
+90+ ready-made scrapers (recipes) for shops, social sites, reviews, jobs, finance and dev tools, each giving clean rows
+in fixed columns. Not open yet: `/recipes` answers `404 not_available`.
+
+
+## POST /scrape/batch — many URLs, streamed
+
+Scrape up to 50 URLs in one call. Results stream back as NDJSON — one JSON line per URL as it
+finishes. Bills one unit per URL. Takes `urls` plus any /scrape field (applied to every URL).
+
+```
+# -N streams each line as it lands
+curl -N https://api.crawl4ai.com/scrape/batch \
+  -H "Authorization: Bearer sk_live_..." -H "Content-Type: application/json" \
+  -d '{"urls":["https://a.com","https://b.com"],"format":"md"}'
+```
+Returns (NDJSON): `{"url":"...","ok":true,"result":{...},"cost":"0.500","effort":1}` per line: the
+`cost` (credits) and `effort` sit at the TOP LEVEL of each line, next to `result`, not inside it (the
+batch has no `x-c4-cost` header). The stream ends with one summary line
+`{"summary":{"cost":"1.250","priced":2,"urls":2}}`: the whole batch's cost.
+
+## POST /scrape/jobs — large async jobs
+
+For big lists (up to 10,000 URLs), or when your code cannot hold a connection open for slow pages.
+Submit once, get a job id, then poll while it drains in the background. Takes `urls` plus any /scrape
+field.
+
+- `POST /scrape/jobs` with `{"urls":[ ... ]}` → `{"job_id":"j_...","status":"pending"}`
+- `GET /scrape/jobs/{id}` → status + counts (add `?full=1` for per-URL detail); `usage` says what the job
+  cost: `{"units":N,"credited":R,"net":N-R,"unit_cost":"0.500","cost":"…"}`. Every URL is charged the job's
+  flat `unit_cost`; URLs that never got an answer are refunded at the end (`credited`).
+- `GET /scrape/jobs/{id}/results` → NDJSON results, paged with `?after=N` (500 per page)
+- `POST /scrape/jobs/{id}/retry` → re-run only the failed URLs
+
+```
+JOB=$(curl -s https://api.crawl4ai.com/scrape/jobs \
+  -H "Authorization: Bearer sk_live_..." -H "Content-Type: application/json" \
+  -d '{"urls":["https://a.com","https://b.com"]}' | jq -r .job_id)
+until [ "$(curl -s https://api.crawl4ai.com/scrape/jobs/$JOB \
+       -H "Authorization: Bearer sk_live_..." | jq -r .status)" = "done" ]; do sleep 2; done
+curl -s https://api.crawl4ai.com/scrape/jobs/$JOB/results -H "Authorization: Bearer sk_live_..."
+```
+
+## MCP — use Crawl4AI as native tools
+
+Add Crawl4AI to Claude Code, Cursor, or any MCP client — no install, just a URL and your key.
+
+```
+claude mcp add --transport http crawl4ai https://api.crawl4ai.com/mcp \
+  --header "Authorization: Bearer sk_live_..."
+```
+Tools: `scrape` (url, format, proxy, country, parse) · `search` (q, rich) · `answer` (q,
+experimental) · `extract` (url, instruction, schema, example) · `batch` (urls, format, proxy, country) ·
+
+`balance` · `plans` (the monthly plans and where to start one) · `estimate` (endpoint, url?, urls?) · `topup` (amount: dollars, 10 to 1000, extra credits on a plan; ask the user first) · `spend_cap` (credits) ·
+`recharge` (on, pack_usd, month_limit_usd: dollars a month, 0 = no limit, both the user's own numbers; fires when the plan's credits are used and the extra credits fall under 1,000) · `report_issue` (title, what_happened).
+
+A `scrape`, `extract` or `batch` call on a page that needs a real browser can take up to 90 s: let the
+tool call run (allow 120 s in your MCP client) instead of cancelling and retrying. For 50 to 500 URLs,
+the MCP has `jobs_submit` (urls, proxy, country, bypass_cache, idempotency_key: send the same key on a
+retry and the job is billed once), then `jobs_status` (poll every 10 to 30 s)
+and `jobs_results` (50 per call, paged with `offset`). For more than 500 URLs, call the HTTP jobs API
+(`POST /scrape/jobs`, above) with the same key.
+
+## Notes
+
+- Provenance: every response tells you which engine served it and whether it came from cache.
+- Regions: requests route to the nearest region automatically (EU, Singapore, or US).
+- Caching: repeated URLs are served from a shared archive.
+- Fair use: each plan has request/concurrency limits (see the dashboard); over-limit calls get `429` with a `message` (a monthly plan lifts the free plan's limits); out of credit gets `402 no_credit` (start a plan, or buy extra credits on a plan, on the dashboard's Billing tab).
+
+## More
+
+- Full API docs: https://api.crawl4ai.com/docs
+- Dashboard & keys: https://api.crawl4ai.com/dashboard/
+- Open-source library: https://github.com/unclecode/crawl4ai

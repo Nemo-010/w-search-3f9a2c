@@ -1,0 +1,5 @@
+# USPTO (uspto) category=misc-api
+home=https://developer.uspto.gov/ pricing=None docs=https://developer.uspto.gov/ llms=None
+sources_ok: docs:https://developer.uspto.gov/, llms:https://developer.uspto.gov/llms.txt, llms-full:https://developer.uspto.gov/docs/llms-full.txt, llms-https://developer.uspto.gov/docs/llms.txt:https://developer.uspto.gov/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---

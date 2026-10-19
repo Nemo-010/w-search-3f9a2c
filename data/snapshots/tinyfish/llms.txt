@@ -1,0 +1,107 @@
+# TinyFish Web Agent
+
+- [TinyFish Developer Documentation](https://docs.tinyfish.ai/index.md): Choose the right TinyFish API, authenticate quickly, and start integrating faster
+- [Quick Start](https://docs.tinyfish.ai/quick-start.md): Get your first web automation running in under 5 minutes
+- [Authentication](https://docs.tinyfish.ai/authentication.md): How to authenticate with the TinyFish API
+- [For Coding Agents](https://docs.tinyfish.ai/for-coding-agents.md): Single-page TinyFish context for Claude, Codex, Cursor, and other coding agents
+- [Agent API](https://docs.tinyfish.ai/agent-api/index.md): Use natural-language goals to automate workflows on real websites
+- [Agent API Reference](https://docs.tinyfish.ai/agent-api/reference.md): Technical reference for goal-based TinyFish automation
+- [Browser Context Profiles API](https://docs.tinyfish.ai/agent-api/browser-context-profiles.md): Create, set up, and use Browser Context Profiles from the Agent API
+- [Agent Endpoints](https://docs.tinyfish.ai/key-concepts/endpoints.md): Choose the right TinyFish Agent endpoint based on sync, async, or streaming needs
+- [Runs](https://docs.tinyfish.ai/key-concepts/runs.md): The lifecycle of a TinyFish Web Agent automation
+- [The Goal Parameter](https://docs.tinyfish.ai/key-concepts/goals.md): Natural language instructions that tell TinyFish Web Agent what to do
+- [Structured Output](https://docs.tinyfish.ai/key-concepts/structured-output.md): Structured-output schema support for the output_schema request field
+- [Goal Prompting Guide](https://docs.tinyfish.ai/prompting-guide.md): Write goals that make TinyFish Web Agent work like magic
+- [Search API](https://docs.tinyfish.ai/search-api/index.md): Search the web and get structured results via API
+- [Search API Reference](https://docs.tinyfish.ai/search-api/reference.md): Complete reference for the Search API endpoint
+- [Search Examples](https://docs.tinyfish.ai/search-api/examples.md): Real-world examples for the Search API
+- [Monitor](https://docs.tinyfish.ai/monitor/index.md): Track a webpage or topic on a schedule and receive updates when it changes
+- [Monitor API Reference](https://docs.tinyfish.ai/monitor/api-reference.md): Create and manage Page and Topic Monitors through the REST API
+- [Fetch API](https://docs.tinyfish.ai/fetch-api/index.md): Fetch URLs and extract clean text — no external APIs required
+- [Fetch API Reference](https://docs.tinyfish.ai/fetch-api/reference.md): Complete reference for the Fetch API endpoint
+- [Fetch Examples](https://docs.tinyfish.ai/fetch-api/examples.md): Real-world examples for the Fetch API
+- [Browser API](https://docs.tinyfish.ai/browser-api/index.md): Create a remote browser session and control it programmatically
+- [Browser API Reference](https://docs.tinyfish.ai/browser-api/reference.md): Complete reference for the Browser API endpoints
+- [Browser Examples](https://docs.tinyfish.ai/browser-api/examples.md): Real-world examples for the Browser API
+- [Research API](https://docs.tinyfish.ai/research-api/index.md): Create source-backed research reports and stream their progress
+- [Research API Reference](https://docs.tinyfish.ai/research-api/reference.md): Complete reference for research requests, streams, and saved runs
+- [Research Examples](https://docs.tinyfish.ai/research-api/examples.md): Examples for filtering, continuations, and saved runs
+- [Connect Your Vault](https://docs.tinyfish.ai/vault-setup.md): Connect your password manager so TinyFish can securely log into websites during automations
+- [Vault Credentials](https://docs.tinyfish.ai/key-concepts/credentials.md): How TinyFish uses your password manager credentials to log into websites during runs
+- [Browser Context Profiles](https://docs.tinyfish.ai/key-concepts/browser-context-profiles.md): Persist logged-in browser state across TinyFish runs
+- [Browser Profiles](https://docs.tinyfish.ai/key-concepts/browser-profiles.md): Configure browser behavior for different sites
+- [Proxies](https://docs.tinyfish.ai/key-concepts/proxies.md): Route requests through specific geographic locations
+- [Live Browser Preview](https://docs.tinyfish.ai/live-preview.md): Embed a real-time browser view in your app using the streaming URL
+- [Build with AI](https://docs.tinyfish.ai/using-with-ai.md): Give your AI coding assistant context on TinyFish Web Agent
+- [Plugins](https://docs.tinyfish.ai/plugins/index.md): Install the TinyFish plugin in ChatGPT, Claude, or Grok — curated skills, safety rules, and OAuth with no API keys
+- [CLI](https://docs.tinyfish.ai/cli/index.md): Run TinyFish automations directly from your terminal
+- [CLI Commands](https://docs.tinyfish.ai/cli/commands.md): Full reference for TinyFish CLI commands
+- [MCP Integration](https://docs.tinyfish.ai/mcp-integration/index.md): Integrate TinyFish Web Agent with your AI assistant
+- [n8n](https://docs.tinyfish.ai/integrations/n8n.md): Use TinyFish Web Agent as a node in n8n automation workflows
+- [Dify](https://docs.tinyfish.ai/integrations/dify.md): Use TinyFish Web Agent as a tool in Dify AI workflows and agents
+- [Common Patterns](https://docs.tinyfish.ai/common-patterns.md): Ready-to-use code patterns for common TinyFish Web Agent use cases
+- [Anti-Bot Guide](https://docs.tinyfish.ai/anti-bot-guide.md): Diagnose and bypass bot detection when automating protected websites
+- [Webhooks](https://docs.tinyfish.ai/webhooks.md): Get notified when runs complete, fail, or are cancelled
+- [Agent Payments](https://docs.tinyfish.ai/agent-payments.md): Let your agent top up its own TinyFish wallet with the Machine Payments Protocol (MPP)
+- [Web Scraping](https://docs.tinyfish.ai/examples/scraping.md): Extract data from any website using natural language
+- [Form Filling](https://docs.tinyfish.ai/examples/form-filling.md): Automate form filling and submission
+- [Concurrent Requests](https://docs.tinyfish.ai/examples/bulk-requests-sync.md): Process multiple runs in parallel for better performance
+- [Async Bulk Requests](https://docs.tinyfish.ai/examples/bulk-requests-async.md): Submit multiple runs and poll for results
+- [Error Codes](https://docs.tinyfish.ai/error-codes.md): API error codes and how to resolve them
+- [Frequently Asked Questions](https://docs.tinyfish.ai/faq.md): Common questions about TinyFish Web Agent
+- [Run browser automation with SSE streaming](https://docs.tinyfish.ai/api-reference/automation/run-browser-automation-with-sse-streaming.md): Execute a browser automation task with Server-Sent Events (SSE) streaming. Returns a real-time event stream with automation progress, browser streaming URL, and final results.
+- [Run browser automation synchronously](https://docs.tinyfish.ai/api-reference/automation/run-browser-automation-synchronously.md): Execute a browser automation task synchronously and wait for completion. Returns the final result once the automation finishes (success or failure). Use this endpoint when you need the complete result in a single response. Note: Runs created via this endpoint cannot be cancelled. If you need cancell…
+- [Start automation asynchronously](https://docs.tinyfish.ai/api-reference/automation/start-automation-asynchronously.md): Creates and enqueues an automation run, returning the run_id immediately without waiting for completion. Use this for long-running automations where you want to poll for results separately.
+- [Start multiple automations asynchronously](https://docs.tinyfish.ai/api-reference/automation/start-multiple-automations-asynchronously.md): Creates and enqueues multiple automation runs in a single request, returning run_ids immediately without waiting for completion. Maximum 100 runs per request.
+- [List and search runs](https://docs.tinyfish.ai/api-reference/runs/list-and-search-runs.md): List automation runs with optional filtering by status, goal text, and date range. Returns paginated results with total count. Default sort order is newest first.
+- [Get multiple runs by IDs](https://docs.tinyfish.ai/api-reference/runs/get-multiple-runs-by-ids.md): Retrieve multiple runs by their IDs in a single request. Returns found runs and lists any IDs that were not found or not owned. Maximum 100 IDs per request.
+- [Cancel multiple runs by IDs](https://docs.tinyfish.ai/api-reference/runs/cancel-multiple-runs-by-ids.md): Cancel multiple runs by their IDs in a single request. Returns per-run results including cancelled runs, already-terminal runs, and not-found IDs. Maximum 100 IDs per request. Idempotent: calling twice returns consistent results.
+- [Get run by ID](https://docs.tinyfish.ai/api-reference/runs/get-run-by-id.md): Get detailed information about a specific automation run by its ID.
+- [Cancel run by ID](https://docs.tinyfish.ai/api-reference/runs/cancel-run-by-id.md): Cancel a run by ID. Only runs created via `/v1/automation/run-async` or `/v1/automation/run-sse` can be cancelled. Runs created via the synchronous `/v1/automation/run` endpoint cannot be cancelled.
+- [Get step screenshot](https://docs.tinyfish.ai/api-reference/runs/get-step-screenshot.md): Serve the JPEG screenshot captured at a specific step via API key. Returns binary image data. Note: screenshots=url on GET /v1/runs/{id} returns browser-accessible URLs at /runs/{id}/steps/{stepId}/screenshot (session auth).
+- [Get step HTML snapshot](https://docs.tinyfish.ai/api-reference/runs/get-step-html-snapshot.md): Serve the full-page HTML snapshot captured at a specific step via API key. Returns raw HTML. Only available when the run was started with capture_config.html: true.
+- [List Browser Context Profiles](https://docs.tinyfish.ai/api-reference/browser-context-profiles/list-browser-context-profiles.md): List Browser Context Profiles
+- [Create a Browser Context Profile](https://docs.tinyfish.ai/api-reference/browser-context-profiles/create-a-browser-context-profile.md): Create a Browser Context Profile
+- [Get a Browser Context Profile](https://docs.tinyfish.ai/api-reference/browser-context-profiles/get-a-browser-context-profile.md): Get a Browser Context Profile
+- [Delete a Browser Context Profile](https://docs.tinyfish.ai/api-reference/browser-context-profiles/delete-a-browser-context-profile.md): Delete a Browser Context Profile
+- [Update a Browser Context Profile](https://docs.tinyfish.ai/api-reference/browser-context-profiles/update-a-browser-context-profile.md): Update a Browser Context Profile
+- [Create a profile setup session](https://docs.tinyfish.ai/api-reference/browser-context-profiles/create-a-profile-setup-session.md): Starts a temporary setup browser for a Browser Context Profile. The response returns session_id, cdp_url, base_url, timeout_seconds, and expires_at. Connect your Playwright, Puppeteer, or CDP client to cdp_url, log in, then save the setup session with session_id. Unsaved setup state is discarded if…
+- [Cancel a profile setup session](https://docs.tinyfish.ai/api-reference/browser-context-profiles/cancel-a-profile-setup-session.md): Cancels a running Browser Context Profile setup session and discards unsaved setup state. Requires the session_id returned by setup-session.
+- [Save a profile setup session](https://docs.tinyfish.ai/api-reference/browser-context-profiles/save-a-profile-setup-session.md): Captures cookies, local storage, and session storage from a running setup session into the Browser Context Profile. Requires the session_id returned by setup-session.
+- [Upload Browser Context Profile state](https://docs.tinyfish.ai/api-reference/browser-context-profiles/upload-browser-context-profile-state.md): Upload Browser Context Profile state
+- [Delete a saved profile domain](https://docs.tinyfish.ai/api-reference/browser-context-profiles/delete-a-saved-profile-domain.md): Delete a saved profile domain
+- [List vault connections](https://docs.tinyfish.ai/api-reference/vault/list-vault-connections.md): List all connected vault providers for the authenticated user.
+- [Connect a vault provider](https://docs.tinyfish.ai/api-reference/vault/connect-a-vault-provider.md): Connect a supported password manager and immediately sync display-safe credential metadata.
+- [Disconnect a vault provider](https://docs.tinyfish.ai/api-reference/vault/disconnect-a-vault-provider.md): Disconnect a vault provider and remove its stored enabled items.
+- [List vault items](https://docs.tinyfish.ai/api-reference/vault/list-vault-items.md): List all vault items currently available from connected providers.
+- [Sync vault items](https://docs.tinyfish.ai/api-reference/vault/sync-vault-items.md): Sync items from connected providers and return merged item state plus sync counters.
+- [Get wallet](https://docs.tinyfish.ai/api-reference/wallet/get-wallet.md): Get the caller's wallet: current balance, auto-reload configuration, per-product contract rates, and any in-flight top-up.
+- [Top up wallet (agent-paid)](https://docs.tinyfish.ai/api-reference/wallet/top-up-wallet-agent-paid.md): Add money to the wallet, paid by the calling agent over the Machine Payments Protocol (MPP). The first call answers 402 with a payment challenge in WWW-Authenticate; retry with a Payment-Authorization credential to settle the charge and credit the wallet.
+- [Run research with SSE streaming](https://docs.tinyfish.ai/api-reference/run-research-with-sse-streaming.md): Search, evaluate sources, and synthesize a cited report from a natural-language query. Accepted requests always return a Server-Sent Events stream, including when stream is false.
+- [Start research asynchronously](https://docs.tinyfish.ai/api-reference/start-research-asynchronously.md): Enqueue research and return its ID after durable dispatch. Poll GET /v1/research-run/{id} or attach to its events endpoint.
+- [Attach to research progress](https://docs.tinyfish.ai/api-reference/attach-to-research-progress.md): Reconnect with Last-Event-ID. Disconnecting does not cancel research. Retained events expire; poll the run for durable results.
+- [List research runs](https://docs.tinyfish.ai/api-reference/list-research-runs.md): List saved research runs with optional filtering by status, query text, and date range. Cursors are only valid with the sort direction used to generate them.
+- [Get research run by ID](https://docs.tinyfish.ai/api-reference/get-research-run-by-id.md): Retrieve one saved research run, including the plan, evidence, and per-iteration working state.
+- [Cancel research run by ID](https://docs.tinyfish.ai/api-reference/cancel-research-run-by-id.md): Cancel a running research run. Idempotent: an already-terminal run returns 200 with cancelled false and its current status.
+- [Fetch and extract content from URLs](https://docs.tinyfish.ai/api-reference/fetch-and-extract-content-from-urls.md): Fetches web pages, renders JavaScript-heavy pages when needed, and returns clean extracted content in your preferred format. Submit up to 10 URLs, get back structured content. Per-URL failures appear in `errors[]` and do not fail the entire request.
+- [List fetch usage](https://docs.tinyfish.ai/api-reference/list-fetch-usage.md): List fetch usage records for the authenticated user. Returns paginated results with URL, format, status, and metadata for each fetch operation.
+- [Search the web](https://docs.tinyfish.ai/api-reference/search-the-web.md): Search the web and get structured results. Returns ranked results with titles, snippets, and URLs.
+- [List search usage](https://docs.tinyfish.ai/api-reference/list-search-usage.md): List search usage records for the authenticated user. Returns paginated results with query details, status, and result counts.
+- [Create a remote browser session](https://docs.tinyfish.ai/api-reference/create-a-remote-browser-session.md): Creates a remote tf-browser session and returns CDP connection details. Connect to the browser via CDP WebSocket at `cdp_url`.
+- [List browser session usage](https://docs.tinyfish.ai/api-reference/list-browser-session-usage.md): List Tetra browser session usage for the authenticated user. Returns session telemetry including duration, data transfer, mode, and status.
+- [Terminate a browser session](https://docs.tinyfish.ai/api-reference/terminate-a-browser-session.md): Terminates a remote browser session immediately. If the session is already ended this call is idempotent and still returns 204.
+
+## OpenAPI Specs
+
+- [browser](https://agent.tinyfish.ai/v1/openapi/browser)
+- [fetch](https://agent.tinyfish.ai/v1/openapi/fetch)
+- [main](https://agent.tinyfish.ai/v1/openapi/main)
+- [research](https://agent.tinyfish.ai/v1/openapi/research)
+- [search](https://agent.tinyfish.ai/v1/openapi/search)
+
+## Optional
+
+- [Cookbook](https://github.com/tinyfish-io/tinyfish-cookbook)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

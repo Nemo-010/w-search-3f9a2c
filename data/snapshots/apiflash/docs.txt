@@ -1,0 +1,357 @@
+Screenshot API Documentation | ApiFlash 
+ API FLASH 
+ Documentation 
+ Guides 
+ Pricing
+ Log in
+ Sign up
+ Sign up
+ Introduction 
+ Access 
+ Parameters 
+ Examples 
+ Rate limits 
+ Quota 
+ Errors 
+ Changelog 
+ Introduction 
+ ApiFlash is a simple yet powerful screenshot API that any modern company can easily use to
+ make pixel perfect website screenshots at scale. An up to date version of Chrome is used to
+ ensure that all modern web features are fully supported and that rendering is exactly as you
+ would expect. It's also built over AWS Lambda to make sure that it truly scales and keeps
+ being stable under heavy workloads.
+ We're one of the most cost efficient screenshot API out there and we are dedicated to
+ provide an awesome service to all companies, big or small.
+ Access 
+ The API can be accessed through a unique HTTPS endpoint that supports both GET and POST methods.
+ GET https://api.apiflash.com/v1/urltoimage
+ └ 
+ Parameters are passed through query string .
+ POST https://api.apiflash.com/v1/urltoimage
+ └ 
+ Parameters are passed as form data .
+ All API calls needs to be authenticated using a valid access key that can be found in the
+ dashboard .
+ For a GET request, the access key is passed in the query string as all other parameters.
+ GET https://api.apiflash.com/v1/urltoimage? access_key = YOUR_ACCESS_KEY 
+ For a POST request, the access key is passed as form data as every other parameter.
+ By default the API returns directly the screenshot image data. It also passes along the
+ appropriate Content-Type and Content-Length headers.
+ If the response_type parameter is set to json , then the response
+ contains a JSON document with links to the resulting screenshot.
+ Parameters 
+ The table below contains all the available parameters of our screenshot API. 
+ To use them, simply include them in the query string or form data of your API calls.
+ GET https://api.apiflash.com/v1/urltoimage? param1 = value1 & param2 = value2 ...
+ Please also note that some parameter values need to be URL encoded to be processed
+ correctly.
+ 0"
+ @click="search = ''">
+ Sort 
+ 0">
+ Parameter 
+ Default 
+ Description 
+ required 
+ in pixels 
+ in seconds 
+ in meters 
+ defaults to 
+ No results found for search: " " 
+ Please try again with a different search query. 
+ Examples 
+ The following examples make a HTTP request to the API and save the screenshot to a screenshot.jpeg 
+ file.
+ C# 
+ CURL 
+ GO 
+ JAVA 
+ NODE 
+ PHP 
+ PYTHON 
+ RUBY 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 7 
+ 8 
+ 9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 using System.Net ; 
+ public class ApiFlashExample 
+ { 
+ private const string ApiFlashEndpoint = "https://api.apiflash.com/v1/urltoimage" ; 
+ public static void Main () 
+ { 
+ using ( var webClient = new WebClient ()) 
+ { 
+ // The System.Web assembly reference is required. 
+ var parameters = System . Web . HttpUtility . ParseQueryString ( string . Empty ); 
+ parameters [ "access_key" ] = "YOUR_ACCESS_KEY" ; 
+ parameters [ "url" ] = "https://example.com" ; 
+ webClient . DownloadFile ( ApiFlashEndpoint + "?" + parameters , "screenshot.jpeg" ); 
+ } 
+ } 
+ } 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 endpoint = "https://api.apiflash.com/v1/urltoimage" 
+ access_key = "YOUR_ACCESS_KEY" 
+ url = "https://example.com" 
+curl --request GET --url " ${ endpoint } ?access_key= ${ access_key } &url= ${ url } " > screenshot.jpeg
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 7 
+ 8 
+ 9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 package main 
+ import ( 
+ "io" 
+ "net/http" 
+ "os" 
+ ) 
+ func main () { 
+ apiFlashEndpoint := "https://api.apiflash.com/v1/urltoimage" 
+ request , _ := http . NewRequest ( "GET" , apiFlashEndpoint , nil ) 
+ query := request . URL . Query () 
+ query . Add ( "access_key" , "YOUR_ACCESS_KEY" ) 
+ query . Add ( "url" , "https://example.com" ) 
+ request . URL . RawQuery = query . Encode () 
+ client := & http . Client {} 
+ response , _ := client . Do ( request ) 
+ defer response . Body . Close () 
+ image , _ := os . Create ( "screenshot.jpeg" ) 
+ io . Copy ( image , response . Body ) 
+ image . Close () 
+ } 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 7 
+ 8 
+ 9 
+ 10 
+ 11 
+ 12 
+ 13 
+ 14 
+ 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 28 
+ 29 import java.io.FileOutputStream ; 
+ import java.io.IOException ; 
+ import java.io.InputStream ; 
+ import java.io.OutputStream ; 
+ import java.net.URL ; 
+ public class Main { 
+ private static String ACCESS_KEY = "YOUR_ACCESS_KEY" ; 
+ private static String APIFLASH_ENDPOINT = "https://api.apiflash.com/v1/urltoimage" ; 
+ public static void main ( String [] args ) throws Exception { 
+ String params = String . format ( "?access_key=%s&url=https://example.com" , ACCESS_KEY ); 
+ URL apiCallUrl = new URL ( APIFLASH_ENDPOINT + params ); 
+ InputStream inputStream = apiCallUrl . openStream (); 
+ OutputStream outputStream = new FileOutputStream ( "screenshot.jpeg" ); 
+ byte [] b = new byte [ 2048 ] ; 
+ int length ; 
+ while (( length = inputStream . read ( b )) != - 1 ) { 
+ outputStream . write ( b , 0 , length ); 
+ } 
+ inputStream . close (); 
+ outputStream . close (); 
+ } 
+ } 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 7 
+ 8 
+ 9 const https = require ( 'https' ); 
+ const fs = require ( 'fs' ); 
+ https . get ( "https://api.apiflash.com/v1/urltoimage?" + new URLSearchParams ({ 
+ access_key : "YOUR_ACCESS_KEY" , 
+ url : "https://example.com" 
+ }). toString (), ( response ) => { 
+ response . pipe ( fs . createWriteStream ( 'screenshot.jpeg' )); 
+ }); 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 7 
+ 8 
+ 9 
+ 10 
+ 11 <?php 
+ $params = http_build_query ( array ( 
+ "access_key" => "YOUR_ACCESS_KEY" , 
+ "url" => "https://example.com" , 
+ )); 
+ $image_data = file_get_contents ( "https://api.apiflash.com/v1/urltoimage?" . $params ); 
+ file_put_contents ( "screenshot.jpeg" , $image_data ); 
+ ?> ; 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 from urllib.parse import urlencode 
+ from urllib.request import urlretrieve 
+ params = urlencode ( dict ( access_key = "YOUR_ACCESS_KEY" , 
+ url = "https://example.com" )) 
+ urlretrieve ( "https://api.apiflash.com/v1/urltoimage?" + params , "screenshot.jpeg" ) 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 7 require "open-uri" 
+ File . open ( 'screenshot.jpeg' , 'wb' ) do | fo | 
+ params = URI . encode_www_form ( "access_key" => "YOUR_ACCESS_KEY" , 
+ "url" => "https://example.com" ) 
+ fo . write open ( "https://api.apiflash.com/v1/urltoimage?" + params ) . read 
+ end 
+ Rate limits 
+ The API is rate limited using the leaky bucket algorithm with a request rate of
+ 20 requests per second and a burst size of 400 requests.
+ In practice, if the requests rate exceeds 20 requests per second, their processing is
+ delayed such that requests are processed at the defined rate. Excessive requests are delayed
+ until their number exceeds the burst size of 400 requests in which case the additional
+ requests are terminated with a status code 429 .
+ API calls that have the exact same parameters
+ (same url, same width, etc.) and that fail to capture a
+ screenshot (unreachable website, domains not registered, etc.) 
+ are rate limited to 5 requests per hour .
+ Quota 
+ To monitor the use of your quota, you can use the HTTP headers included in the response of any
+ API call that successfully captured a screenshot. On responses served from the cache, these
+ headers may reflect your quota at the time the screenshot was captured. Use the quota endpoint
+ below for an up-to-date value.
+ Header Name 
+ Description 
+ X-Quota-Limit 
+ The maximum number of API calls you can make per billing period. 
+ X-Quota-Remaining 
+ The number of API calls remaining for the current billing period. 
+ X-Quota-Reset 
+ The time, in UTC epoch seconds, at which the current billing period ends 
+ and the remaining number of API calls resets.
+ You can also call the dedicated quota endpoint.
+ GET https://api.apiflash.com/v1/urltoimage/quota? access_key = YOUR_ACCESS_KEY 
+ Here is an example of the json returned in the response body.
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 { 
+ "limit" : 10000 , 
+ "remaining" : 5400 , 
+ "reset" : 1584549777 
+ } 
+ Errors 
+ If our screenshot API fails to capture a web page, the API response will contain an appropriate
+ status code. 
+ The list of possible status codes with their corresponding description can be found in the table
+ below.
+ Status Code 
+ Description 
+ 400 
+ Bad Request 
+ Either the API call contains invalid parameters or the target URL cannot be captured.
+ 401 
+ Unauthorized 
+ The access key used to make this API call has been revoked or is invalid. 
+ 402 
+ Payment Required 
+ The monthly screenshot quota has been exceeded for the user's current plan. 
+ 403 
+ Forbidden 
+ The current plan does not support some of the features requested through API
+ parameters.
+ 429 
+ Too Many Requests 
+ Too many API calls have been made. The specific reason is included in the response body.
+ 500 
+ Internal Server Error 
+ The screenshot capture failed because our API failed to handle the encountered
+ situation.
+ When our API responds with a status code 400 , it also provides a meaningful
+ error message to help you understand the root cause of the error.
+ If the response_type parameter is set to json , an error type as well as
+ additional information might also be returned depending on the type of error.
+ API FLASH 
+ Documentation
+ • 
+ Guides
+ • 
+ Changelog
+ • 
+ Contact
+ • 
+ FAQ
+ • 
+ About
+ ApiFlash offers a clean and polished screenshot API that all modern businesses can use to
+ enhance their products.
+ Our underlying platform is built over Chrome and AWS Lambda to ensure scalability, stability and
+ cost effectiveness.
+ More than 10000 businesses use ApiFlash to make millions of screenshots per day.
+ © ApiFlash 2017 - 2026, All rights reserved 
+ • 
+ Terms of service
+ • 
+ Privacy policy
+ • 
+ Legal notice

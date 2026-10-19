@@ -1,0 +1,61 @@
+{
+ "slug": "searchcans",
+ "name": "SearchCans",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:17+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://searchcans.com/pricing",
+   "status": 200,
+   "final_url": "https://www.searchcans.com/pricing",
+   "content_type": "text/html",
+   "bytes": 93418,
+   "truncated": false,
+   "sha256": "e5151795d7402b520e7d08c6af39649c0f11c8a5f920d0e46e62d25ecfc32090",
+   "fetched_at": "2026-10-19T05:59:39+00:00",
+   "text_bytes": 9168
+  },
+  "home": {
+   "url": "https://searchcans.com/",
+   "status": 200,
+   "final_url": "https://www.searchcans.com/",
+   "content_type": "text/html",
+   "bytes": 103219,
+   "truncated": false,
+   "sha256": "371b50cdb70f99b03a0969a56d7180deee9bd52a8a93e206fa4351afe1a21072",
+   "fetched_at": "2026-10-19T05:54:18+00:00",
+   "text_bytes": 9642
+  },
+  "llms": {
+   "url": "https://searchcans.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.searchcans.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 21407,
+   "truncated": false,
+   "sha256": "a2e399d068b66beb89462c40dc75d6692b17bf534b915dcc5bcf7955b67e393c",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 21396
+  },
+  "llms-err-fa4788": {
+   "url": "https://searchcans.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://searchcans.com/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 54900,
+   "truncated": false,
+   "sha256": "33da38fe968afbc53cbc487552f980bf0f19c73f9b0943e2b290fcc022d81862",
+   "fetched_at": "2026-10-19T05:54:22+00:00"
+  },
+  "llms-err-bb9232": {
+   "url": "https://docs.searchcans.com/llms.txt",
+   "status": 403,
+   "final_url": "https://docs.searchcans.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "889403e5cfbb7981f7a26aced0d7492524e5397d6996f7fccd67562d2a4a71a3",
+   "fetched_at": "2026-10-19T05:54:23+00:00"
+  }
+ }
+}

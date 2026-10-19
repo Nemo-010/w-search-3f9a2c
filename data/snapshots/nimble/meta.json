@@ -1,0 +1,84 @@
+{
+ "slug": "nimble",
+ "name": "Nimble",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://nimbleway.com/pricing",
+   "status": 200,
+   "final_url": "https://www.nimbleway.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 105953,
+   "truncated": false,
+   "sha256": "1cbb4ac0d24dfc5a2f1b06b7504e13fb635d199e1370ea46c085818e27292bff",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 5945
+  },
+  "docs": {
+   "url": "https://docs.nimbleway.com/",
+   "status": 200,
+   "final_url": "https://docs.nimbleway.com/home",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 835441,
+   "truncated": false,
+   "sha256": "65801fd68d85e5f904b286aa0b9cee36d20a4f4c3ae5503e74a96e593619d4ce",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 11715
+  },
+  "home": {
+   "url": "https://nimbleway.com/",
+   "status": 200,
+   "final_url": "https://www.nimbleway.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 203622,
+   "truncated": false,
+   "sha256": "a20bff71cf34d71902cbbdd69a3a1357c8ee7800e117dec2f85d0eda3fba19f6",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 9564
+  },
+  "llms": {
+   "url": "https://docs.nimbleway.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.nimbleway.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 28650,
+   "truncated": false,
+   "sha256": "b044d737aade5773b18788d93103cd4c26169ac21729627db8d3672847375fc6",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 28619
+  },
+  "llms-full": {
+   "url": "https://docs.nimbleway.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.nimbleway.com/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 1798676,
+   "truncated": false,
+   "sha256": "afe3e563c8ae2af6ba10befb2c221e511aa1a50589e116f14fcba7a942b9464b",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 1796510
+  },
+  "llms-https://nimbleway.com/llms.txt": {
+   "url": "https://nimbleway.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.nimbleway.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 7599,
+   "truncated": false,
+   "sha256": "f3841b9bd8a05119e413a71f771c0b79e09ff46b941b161756a3d835d1402aab",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 7577
+  },
+  "llms-err-8af21a": {
+   "url": "https://nimbleway.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://nimbleway.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 22212,
+   "truncated": false,
+   "sha256": "128ad7692a201bead4be8ed6455c2d786b130c2f33a91ab6cf5be615de679993",
+   "fetched_at": "2026-10-19T05:54:06+00:00"
+  }
+ }
+}

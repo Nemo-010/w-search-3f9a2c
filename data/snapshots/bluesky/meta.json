@@ -1,0 +1,72 @@
+{
+ "slug": "bluesky",
+ "name": "Bluesky AT Protocol",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:50+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://docs.bsky.app/docs/api/app-bsky-feed-search-posts",
+   "status": 200,
+   "final_url": "https://endpoints.bsky.app/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 12593,
+   "truncated": false,
+   "sha256": "411a1e0348ae61474ae83ce184ad2bee8c8e641622a11d0ead1a82dba4cc3470",
+   "fetched_at": "2026-10-19T05:54:50+00:00",
+   "text_bytes": 26
+  },
+  "home": {
+   "url": "https://docs.bsky.app/",
+   "status": 200,
+   "final_url": "https://bsky.network/",
+   "content_type": "text/html",
+   "bytes": 43899,
+   "truncated": false,
+   "sha256": "8e0d797a435f0ab6f879db4ec6dab1d44fb29c49a0b0441214bd70df4b5ee1fd",
+   "fetched_at": "2026-10-19T05:54:51+00:00",
+   "text_bytes": 2802
+  },
+  "llms": {
+   "url": "https://docs.bsky.app/docs/api/app-bsky-feed-search-posts/llms.txt",
+   "status": 200,
+   "final_url": "https://endpoints.bsky.app/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 12593,
+   "truncated": false,
+   "sha256": "411a1e0348ae61474ae83ce184ad2bee8c8e641622a11d0ead1a82dba4cc3470",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 26
+  },
+  "llms-full": {
+   "url": "https://docs.bsky.app/docs/api/app-bsky-feed-search-posts/llms-full.txt",
+   "status": 200,
+   "final_url": "https://endpoints.bsky.app/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 12593,
+   "truncated": false,
+   "sha256": "411a1e0348ae61474ae83ce184ad2bee8c8e641622a11d0ead1a82dba4cc3470",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 26
+  },
+  "llms-err-4357bb": {
+   "url": "https://docs.bsky.app/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.bsky.app/llms.txt",
+   "content_type": "text/html",
+   "bytes": 23243,
+   "truncated": false,
+   "sha256": "6a0721c2b842fb376f66022e0a29bfb687f4aca9c260a95298349c55a5ad9f0a",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  },
+  "llms-err-f74e61": {
+   "url": "https://docs.bsky.app/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.bsky.app/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 23243,
+   "truncated": false,
+   "sha256": "6a0721c2b842fb376f66022e0a29bfb687f4aca9c260a95298349c55a5ad9f0a",
+   "fetched_at": "2026-10-19T05:54:53+00:00"
+  }
+ }
+}

@@ -1,0 +1,36 @@
+# Olostep (olostep) category=ai-search
+home=https://www.olostep.com/ pricing=https://www.olostep.com/pricing docs=https://docs.olostep.com/ llms=None
+sources_ok: pricing:https://www.olostep.com/pricing, docs:https://docs.olostep.com/, home:https://www.olostep.com/, llms:https://docs.olostep.com/llms.txt, llms-full:https://www.olostep.com/docs/llms-full.txt, llms-https://www.olostep.com/llms.txt:https://www.olostep.com/llms.txt, llms-https://www.olostep.com/docs/llms.txt:https://www.olostep.com/docs/llms.txt
+--- ranked fact lines ---
+[pricing] Yes, Olostep includes a free plan with 500 requests to help you test the API before upgrading. Paid plans start from $9/month and include 5,000 credits per month. This gives teams a low-risk way to evaluate Olostep's reliability, scalability and cost-effectiveness before moving to higher-volume usage.
+[pricing] COST/1K $1.800
+[pricing] COST/1K $0.495
+[pricing] COST/1K $ 0.399
+[home] 9 "query" : "Alert me when Tesla stock price is above $500" ,
+[home] 12 query : 'Alert me when Tesla stock price is above $500' ,
+[home] $20 -> $22 (+$2)
+[home] One request equals one webpage or one PDF processed. We do not charge separately for bandwidth, proxies, or data usage. All infrastructure costs are included in the price per request.
+[pricing] Olostep Pricing | Start Free and Scale
+[pricing] Everything in Free, Plus:
+[pricing] Have spiky usage or don't like subscriptions? You can buy credit packs. They are valid for 6 months.
+[pricing] Start for free
+[pricing] Does Olostep offer a free trial?
+--- llms/readme head ---
+# Olostep Docs
+> Olostep: infrastructure for the Web's second user. Search, scraping and crawling API for AI.
+## Documentation
+### Get Started
+- [Welcome to Olostep](https://docs.olostep.com/get-started/welcome.md): Olostep: Infrastructure for the Web's second user. The best search, scraping and crawling API for AI.
+- [Authentication](https://docs.olostep.com/get-started/authentication.md): Authenticate to the Olostep search, scraping, and crawling API with API keys.
+- [Olostep CLI](https://docs.olostep.com/sdks/cli.md): Command-line interface for scrape, search, map, crawl, answers, and batches — JSON output for scripts, CI, and AI agents
+- [Pay-per-use (x402)](https://docs.olostep.com/x402.md): Pay-per-use API endpoints with stablecoins
+### Features
+- [Scrape](https://docs.olostep.com/features/scrapes.md): Turn any URL into LLM-ready Markdown, HTML, screenshots, PDFs, or structured JSON.
+- [Crawl](https://docs.olostep.com/features/crawls.md): Crawl a URL and get the content from all subpages
+- [Maps](https://docs.olostep.com/features/maps.md): Get all the URLs on a website.
+- [Batch Endpoint](https://docs.olostep.com/features/batches.md): Best for large-scale, async data aggregation
+- [Answers API](https://docs.olostep.com/features/answers.md): AI answers backed by live web search, scraping, and crawling — not a stale index.
+- [Search API](https://docs.olostep.com/features/search.md): Search the web with natural language and get structured links — Olostep's AI search API.
+- [Monitors](https://docs.olostep.com/features/monitors.md): Monitor pages on a schedule and send change alerts
+- [Files](https://docs.olostep.com/features/files.md): Upload and manage JSON files for use as context in API requests
+- [Schedules](https://docs.olostep.com/features/schedules.md): Schedule API calls to run automatically at specified times

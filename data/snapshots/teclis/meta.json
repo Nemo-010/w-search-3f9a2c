@@ -1,0 +1,49 @@
+{
+ "slug": "teclis",
+ "name": "Teclis",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:32+00:00",
+ "sources": {
+  "home": {
+   "url": "https://teclis.com/",
+   "status": 200,
+   "final_url": "https://teclis.com/",
+   "content_type": "text/html",
+   "bytes": 15788,
+   "truncated": false,
+   "sha256": "eea3a7d145f1bd44a03d97eb0c22e5809cc1e3acfa7b9afcafa24ffb24b848fb",
+   "fetched_at": "2026-10-19T05:54:32+00:00",
+   "text_bytes": 1876
+  },
+  "llms-err-7f57a9": {
+   "url": "https://teclis.com/llms.txt",
+   "status": 404,
+   "final_url": "https://teclis.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 162,
+   "truncated": false,
+   "sha256": "340c8464c2007ce3f80682e15dfafa4180b641d53c14201b929906b7b0284d87",
+   "fetched_at": "2026-10-19T05:54:33+00:00"
+  },
+  "llms-err-c49e22": {
+   "url": "https://teclis.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://teclis.com/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 162,
+   "truncated": false,
+   "sha256": "340c8464c2007ce3f80682e15dfafa4180b641d53c14201b929906b7b0284d87",
+   "fetched_at": "2026-10-19T05:54:34+00:00"
+  },
+  "llms-err-9eeece": {
+   "url": "https://docs.teclis.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.teclis.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:34+00:00"
+  }
+ }
+}

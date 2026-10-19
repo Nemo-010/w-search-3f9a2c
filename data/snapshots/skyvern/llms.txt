@@ -1,0 +1,107 @@
+# Skyvern
+
+- [Skyvern Documentation](https://www.skyvern.com/docs/index.md): Automate work in any website with Skyvern. Build agents in the app with Copilot, run them from Python, TypeScript or the REST API, connect a coding agent over MCP, or self-host.
+- [Concepts](https://www.skyvern.com/docs/concepts.md): Learn the parts every Skyvern automation is made of (agents, blocks, inputs, runs, engines, browsers, credentials, schedules and webhooks) and how the app and the API name them.
+- [Your first agent with Copilot](https://www.skyvern.com/docs/cloud/quickstart.md): Describe a browser task in plain words on the Skyvern Home page, let Copilot build the agent in Studio, accept its changes, run it and read the results.
+- [Build in Studio](https://www.skyvern.com/docs/cloud/studio.md): Build and edit Skyvern agents in Studio, with Copilot or by hand. Add and configure blocks, define inputs, pick an engine, save versions, and organize agents in folders and templates.
+- [Runs and schedules](https://www.skyvern.com/docs/cloud/runs.md): Run a Skyvern agent from the app, watch it live and take control of the browser, read its timeline and outputs, download recordings and files, find past runs, and schedule recurring runs.
+- [Integrations](https://www.skyvern.com/docs/cloud/integrations.md): Connect Google Sheets, Google Drive, Gmail, Outlook, password vaults and MCP clients to Skyvern, and run your agents from Zapier, Make, n8n or Workato.
+- [Account, team, API keys and billing](https://www.skyvern.com/docs/cloud/account.md): Find, copy and rotate your Skyvern API key, authenticate API requests, invite teammates, choose a plan, track credits, and set organization limits and models.
+- [Quickstart](https://www.skyvern.com/docs/developers/getting-started/quickstart.md): Get a Skyvern API key, install the Python or TypeScript SDK, run a browser task from code or cURL, and watch the run in the Skyvern app.
+- [MCP and coding agents](https://www.skyvern.com/docs/developers/getting-started/mcp.md): Connect Skyvern's hosted MCP server to Claude Code, Cursor, Codex, Grok Build, Claude Desktop, ChatGPT, Windsurf and other clients with browser sign-in or an API key, run it locally over stdio, or give coding agents the Skyvern skill and CLI.
+- [Browser automation](https://www.skyvern.com/docs/developers/browser-automation.md): Launch a Skyvern cloud browser from Python or TypeScript, mix Playwright selectors with AI actions, extract data with JSON schemas, log in, download and upload files, work across tabs and frames, and replay agents as cached code.
+- [Going to production](https://www.skyvern.com/docs/developers/production.md): Get run results by webhook, verify signatures, handle failures by error code, get past bot checks with proxies, and cap the cost of every run.
+- [Event triggers](https://www.skyvern.com/docs/developers/event-triggers.md): Start a Skyvern workflow from an external event using a signed HTTP request, field mapping, and delivery history.
+- [Troubleshooting](https://www.skyvern.com/docs/developers/troubleshooting.md): Find out why a run failed or returned the wrong result, from its status, failure category, recording and logs, and fix it.
+- [Self-host](https://www.skyvern.com/docs/developers/self-hosted/overview.md): Run the Skyvern server on your own machine or cluster with pip, Docker Compose, or Kubernetes, using your own LLM keys or a local model.
+- [Credentials, logins and 2FA](https://www.skyvern.com/docs/credentials.md): Store passwords, credit cards and secrets, use them in agents and from code, connect your own vault, and let Skyvern complete two-factor authentication with authenticator apps, email, SMS and magic links.
+- [Browsers: sessions and profiles](https://www.skyvern.com/docs/browsers.md): Keep a live browser open across runs with browser sessions, save signed-in state as reusable browser profiles, watch or take control of a running browser, and let Skyvern drive your own Chrome.
+- [Block Types and Configuration](https://www.skyvern.com/docs/reference/blocks.md): Reference guide for every agent block type in the Skyvern Cloud UI, including Browser Task, Extraction, Login, Loop, While Loop, Conditional, Code, HTTP Request, and more.
+- [Actions Reference](https://www.skyvern.com/docs/reference/actions.md): Reference for all page actions (act, extract, validate, prompt, click, fill, select_option) and agent methods (login, run_task, download_files, run_workflow) with parameters and return types.
+- [CLI & Skills](https://www.skyvern.com/docs/reference/cli.md): Use the skyvern CLI to run browser automations, manage agents, store credentials, and configure MCP servers from the terminal. Supports shell scripts, CI/CD pipelines, and one-off tasks.
+- [Configuration](https://www.skyvern.com/docs/reference/configuration.md): Reference for self-hosted Skyvern settings - LLM providers and model keys, browser modes and timeouts, connecting your own Chrome over CDP, artifact storage on S3, Azure Blob or GCS, and Kubernetes deployment.
+- [Get all agents](https://www.skyvern.com/docs/api-reference/agents/get-all-agents.md): Get all workflows with the latest version for the organization.
+- [Create a new agent](https://www.skyvern.com/docs/api-reference/agents/create-a-new-agent.md): Create a new agent
+- [Update an agent](https://www.skyvern.com/docs/api-reference/agents/update-an-agent.md): Update an agent
+- [Delete an agent](https://www.skyvern.com/docs/api-reference/agents/delete-an-agent.md): Delete an agent
+- [Get an agent by id](https://www.skyvern.com/docs/api-reference/agents/get-an-agent-by-id.md): Fetch a single agent definition by its permanent id, optionally pinned to a specific version. Returns the agent's blocks, parameters, and metadata.
+- [Get agent versions](https://www.skyvern.com/docs/api-reference/agents/get-agent-versions.md): Get all versions of a workflow by its permanent ID.
+- [Run an agent](https://www.skyvern.com/docs/api-reference/runs/run-an-agent.md): Run an agent
+- [Get run info by id](https://www.skyvern.com/docs/api-reference/runs/get-run-info-by-id.md): Get run information (task run, workflow run)
+- [Cancel a run by id](https://www.skyvern.com/docs/api-reference/runs/cancel-a-run-by-id.md): Cancel a run (task or workflow)
+- [Bulk cancel runs](https://www.skyvern.com/docs/api-reference/runs/bulk-cancel-runs.md): Cancel multiple runs (tasks or workflows) in a single request
+- [Replay a run webhook](https://www.skyvern.com/docs/api-reference/runs/replay-a-run-webhook.md): Retry sending the webhook for a run
+- [Get run timeline](https://www.skyvern.com/docs/api-reference/runs/get-run-timeline.md): Get timeline for a run (workflow run or task_v2 run)
+- [Retry a run](https://www.skyvern.com/docs/api-reference/runs/retry-a-run.md): Retry a workflow run using the original run parameters.
+- [Get all runs](https://www.skyvern.com/docs/api-reference/runs/get-all-runs.md): List workflow runs across all workflows for the current organization.
+- [Get all runs by agent](https://www.skyvern.com/docs/api-reference/runs/get-all-runs-by-agent.md): List runs for a specific workflow.
+- [Get folders](https://www.skyvern.com/docs/api-reference/folders/get-folders.md): Get all folders for the organization
+- [Create folder](https://www.skyvern.com/docs/api-reference/folders/create-folder.md): Create a new folder to organize workflows
+- [Get folder](https://www.skyvern.com/docs/api-reference/folders/get-folder.md): Get a specific folder by ID
+- [Update folder](https://www.skyvern.com/docs/api-reference/folders/update-folder.md): Update a folder's title or description
+- [Delete folder](https://www.skyvern.com/docs/api-reference/folders/delete-folder.md): Delete a folder. Optionally delete all workflows in the folder.
+- [Update agent folder](https://www.skyvern.com/docs/api-reference/folders/update-agent-folder.md): Update a workflow's folder assignment for the latest version
+- [List selectable browser types](https://www.skyvern.com/docs/api-reference/server/list-selectable-browser-types.md): List the selectable browser engines for the workflow/run browser_type setting. The list is runtime-capability aware: a runtime that can honor an explicit engine (the cloud dynamic-browser capability) returns all supported engines, while a runtime without it (OSS/self-host) returns an empty list rath…
+- [Get server version](https://www.skyvern.com/docs/api-reference/server/get-server-version.md): Returns the current Skyvern server version (git SHA for official builds).
+- [Export organization audit events](https://www.skyvern.com/docs/api-reference/server/export-organization-audit-events.md): Export audit events for the authenticated organization as JSON or CSV. Only organization admins and full API keys may export. The default window is the last 90 days, with timezone-aware since/until bounds, newest-first keyset pagination, and a maximum page size of 500. CSV output uses fixed columns…
+- [Get artifact content](https://www.skyvern.com/docs/api-reference/artifacts/get-artifact-content.md): Download the raw content of an artifact (supports bundled artifacts).
+- [Get artifacts for a run](https://www.skyvern.com/docs/api-reference/artifacts/get-artifacts-for-a-run.md): Get artifacts for a run
+- [Upload a file](https://www.skyvern.com/docs/api-reference/files/upload-a-file.md): Upload a file to Skyvern storage so runs can reference it as an input. Returns the file id, its storage URI, a presigned download URL, and the expiry implied by the requested retention period.
+- [Delete File](https://www.skyvern.com/docs/api-reference/files/delete-file.md): Delete a previously uploaded file.
+- [List browser profiles](https://www.skyvern.com/docs/api-reference/browser-profiles/list-browser-profiles.md): Get all browser profiles for the organization
+- [Create a browser profile](https://www.skyvern.com/docs/api-reference/browser-profiles/create-a-browser-profile.md): Create a blank browser profile, or create one from a persistent browser session or workflow run.
+- [Get browser profile](https://www.skyvern.com/docs/api-reference/browser-profiles/get-browser-profile.md): Get a specific browser profile by ID
+- [Delete browser profile](https://www.skyvern.com/docs/api-reference/browser-profiles/delete-browser-profile.md): Delete a browser profile (soft delete)
+- [Update browser profile](https://www.skyvern.com/docs/api-reference/browser-profiles/update-browser-profile.md): Update a browser profile's name and/or description
+- [Get browser profile usage](https://www.skyvern.com/docs/api-reference/browser-profiles/get-browser-profile-usage.md): List the workflows, credentials, and recent runs that depend on a browser profile.
+- [Get active browser sessions](https://www.skyvern.com/docs/api-reference/browser-sessions/get-active-browser-sessions.md): Get all active browser sessions for the organization
+- [Create a session](https://www.skyvern.com/docs/api-reference/browser-sessions/create-a-session.md): Create a browser session that persists across multiple runs
+- [Close a session](https://www.skyvern.com/docs/api-reference/browser-sessions/close-a-session.md): Close a session. Once closed, the session cannot be used again.
+- [Extend a session](https://www.skyvern.com/docs/api-reference/browser-sessions/extend-a-session.md): Extend a live browser session by a number of minutes. Sessions are created with a timeout of at most 240 minutes and can be extended, one or more times, up to a total lifetime of 360 minutes (6 hours). The minutes are added to the session's current deadline. A request for more than the remaining hea…
+- [Get a session](https://www.skyvern.com/docs/api-reference/browser-sessions/get-a-session.md): Get details about a specific browser session, including the browser address for cdp connection.
+- [Update a session](https://www.skyvern.com/docs/api-reference/browser-sessions/update-a-session.md): Update a live browser session. Currently supports toggling generate_browser_profile, which is read when the session ends to decide whether to save its browser profile.
+- [Send TOTP code](https://www.skyvern.com/docs/api-reference/credentials/send-totp-code.md): Forward a TOTP (2FA, MFA) email or sms message containing the code to Skyvern. This endpoint stores the code in database so that Skyvern can use it while running tasks/workflows.
+- [Get all credentials](https://www.skyvern.com/docs/api-reference/credentials/get-all-credentials.md): Retrieves a paginated list of credentials for the current organization
+- [Create credential](https://www.skyvern.com/docs/api-reference/credentials/create-credential.md): Creates a new credential for the current organization
+- [Update credential](https://www.skyvern.com/docs/api-reference/credentials/update-credential.md): Overwrites the stored credential data (e.g. username/password) while keeping the same credential_id.
+- [Delete credential](https://www.skyvern.com/docs/api-reference/credentials/delete-credential.md): Deletes a specific credential by its ID
+- [Get credential by ID](https://www.skyvern.com/docs/api-reference/credentials/get-credential-by-id.md): Retrieves a specific credential by its ID
+- [List all schedules for the organization](https://www.skyvern.com/docs/api-reference/schedules/list-all-schedules-for-the-organization.md): List every schedule in the organization, across all agents, filterable by active/paused status and a search term matched against agent title or schedule name. Returns a paginated list plus the total count.
+- [List schedules for an agent](https://www.skyvern.com/docs/api-reference/schedules/list-schedules-for-an-agent.md): List all schedules attached to a single agent. Returns the schedules in creation order.
+- [Create a schedule for an agent](https://www.skyvern.com/docs/api-reference/schedules/create-a-schedule-for-an-agent.md): Create a cron, fixed-interval or one-time schedule that runs the given agent automatically with a fixed set of parameters. An interval schedule first runs at first_fire_at, or one interval after creation. A one-time schedule runs once at run_at. Returns the stored schedule and its next upcoming run…
+- [Get an agent schedule by id](https://www.skyvern.com/docs/api-reference/schedules/get-an-agent-schedule-by-id.md): Fetch one schedule belonging to an agent. Returns the schedule's cron expression or interval, timezone, parameters, enabled state, and next upcoming run times.
+- [Update an agent schedule](https://www.skyvern.com/docs/api-reference/schedules/update-an-agent-schedule.md): Replace a schedule's cron expression, interval or one-time run_at, timezone, run parameters, and enabled state. A one-time schedule stays one-time and can change only until it fires; afterwards this returns 409. Returns the updated schedule and its next upcoming run times.
+- [Delete an agent schedule](https://www.skyvern.com/docs/api-reference/schedules/delete-an-agent-schedule.md): Permanently delete a schedule so it never triggers again. Returns an acknowledgement flag.
+- [Cancel a one-time agent schedule](https://www.skyvern.com/docs/api-reference/schedules/cancel-a-one-time-agent-schedule.md): Cancel a one-time schedule that has not fired yet. The schedule stays readable with dispatch_status canceled. Returns 409 once it has fired or was already canceled, and 422 for a recurring schedule.
+- [Enable an agent schedule](https://www.skyvern.com/docs/api-reference/schedules/enable-an-agent-schedule.md): Resume a paused schedule so it starts triggering runs again. Returns the updated schedule.
+- [Disable an agent schedule](https://www.skyvern.com/docs/api-reference/schedules/disable-an-agent-schedule.md): Pause a schedule so it stops triggering runs, without deleting it. Returns the updated schedule.
+- [Extract a job application posting](https://www.skyvern.com/docs/api-reference/recipes/extract-a-job-application-posting.md): Start a workflow run that extracts structured details from a job posting.
+- [Apply to a job](https://www.skyvern.com/docs/api-reference/recipes/apply-to-a-job.md): Start a workflow run that applies to a job with a résumé and optional credentials.
+- [List job recipe runs](https://www.skyvern.com/docs/api-reference/recipes/list-job-recipe-runs.md): List workflow runs started by job recipe requests.
+- [Overview](https://www.skyvern.com/docs/sdk-reference/overview.md)
+- [Error Handling](https://www.skyvern.com/docs/sdk-reference/error-handling.md): Handle API errors, timeouts, and configure retries in the Skyvern Python SDK. Covers error types, exception handling, HTTP and completion timeouts, retry configuration, and run failure vs API error patterns.
+- [Complete Reference (For LLMs)](https://www.skyvern.com/docs/sdk-reference/complete-reference.md): Every public method of the Skyvern Python SDK on one page, with its signature and what it does. Covers tasks and runs, agents, schedules, folders, browser sessions, browser profiles, credentials, files, artifacts, helpers, browser control and error handling, with the TypeScript equivalents.
+- [Browsers](https://www.skyvern.com/docs/sdk-reference/browser-automation/browsers.md): Launch or connect to a browser and get pages to automate.
+- [Page actions](https://www.skyvern.com/docs/sdk-reference/browser-automation/page.md): AI and selector-based actions on a page: act, extract, validate, click, fill and more.
+- [Forms](https://www.skyvern.com/docs/sdk-reference/browser-automation/forms.md): Fill whole forms with AI, or extract fields and fill them from a mapping.
+- [Frames](https://www.skyvern.com/docs/sdk-reference/browser-automation/frames.md): Work inside iframes.
+- [Page agent](https://www.skyvern.com/docs/sdk-reference/browser-automation/agent.md): Run a full AI task, login, download or agent in the current page.
+- [Complete Example](https://www.skyvern.com/docs/sdk-reference/browser-automation/complete-example.md)
+- [Tasks and runs](https://www.skyvern.com/docs/sdk-reference/runs.md): Run a browser task and inspect, cancel or retry any run.
+- [Agents](https://www.skyvern.com/docs/sdk-reference/agents.md): Create, run and manage agents (workflows) and their runs.
+- [Schedules](https://www.skyvern.com/docs/sdk-reference/schedules.md): Run agents on a cron schedule.
+- [Folders](https://www.skyvern.com/docs/sdk-reference/folders.md): Organize agents into folders.
+- [Browser sessions](https://www.skyvern.com/docs/sdk-reference/browser-sessions.md): Create and manage persistent cloud browser sessions.
+- [Browser profiles](https://www.skyvern.com/docs/sdk-reference/browser-profiles.md): Save and reuse browser state (cookies, storage) across runs.
+- [Credentials](https://www.skyvern.com/docs/sdk-reference/credentials.md): Store passwords, cards and secrets, and send 2FA codes.
+- [Files](https://www.skyvern.com/docs/sdk-reference/files.md): Upload files for tasks and agents to use.
+- [Artifacts](https://www.skyvern.com/docs/sdk-reference/artifacts.md): List the screenshots, recordings and logs a run produced.
+- [Helpers](https://www.skyvern.com/docs/sdk-reference/helpers.md): Shortcuts for common jobs: sign in to a site, download files, check the server version.
+- [Changelog](https://www.skyvern.com/docs/changelog.md): New features, improvements, and fixes in Skyvern
+
+## OpenAPI Specs
+
+- [openapi](/docs/api-reference/openapi.json)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

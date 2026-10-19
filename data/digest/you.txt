@@ -1,0 +1,41 @@
+# You.com (you) category=ai-search
+home=https://you.com/ pricing=https://api.you.com/ docs=https://you.com/docs llms=https://you.com/docs/llms.txt
+sources_ok: llms:https://you.com/docs/llms.txt, llms-full:https://you.com/docs/llms-full.txt, pricing:https://api.you.com/, docs:https://you.com/docs, home:https://you.com/
+--- ranked fact lines ---
+[llms] > Web Search, Answer, Contents, Research, and Finance Research APIs that give your AI app real-time web intelligence. Start with free credits.
+[llms] - [Build agentic apps with real-time web intelligence.](https://you.com/docs/welcome.md): Web Search, Answer, Contents, Research, and Finance Research APIs that give your AI app real-time web intelligence. Start with free credits—no credit card required.
+[llms] - [Factory Droid](https://you.com/docs/agents/agent-harnesses/factory-droid.md): Give Factory Droid real-time web search, content extraction, and citation-backed research through the You.com MCP Server. OAuth 2.1, API key, or free tier.
+[llms] - [Machine Payments](https://you.com/docs/administration/machine-payments.md): You.com accepts x402 and MPP machine payments for the Web Search and Finance Research APIs. Agents pay per request in USDC inside the same HTTP exchange.
+[llms] - [x402](https://you.com/docs/administration/machine-payments/x402.md): Call the You.com Web Search and Finance Research APIs with no API key and pay per request in USDC on Base or Solana using the x402 protocol.
+[llms] - [MPP](https://you.com/docs/administration/machine-payments/mpp.md): Call the You.com Web Search and Finance Research APIs with no API key and pay per request using the Machine Payments Protocol, settling in USDC on Tempo.
+[llms] - Call live You.com APIs: Product MCP at https://api.you.com/mcp (keyless `?profile=free` exposes `you-search` and `you-discover`. Research and finance use `/mcp/research`, `/mcp/finance`, or `?tools=` on `/mcp`). To pick an API or integration path, call `you-discover` on that server instead of guessing
+[llms] - [Codex CLI](https://you.com/docs/agents/agent-harnesses/codex-cli.md): Install the You.com plugin for Codex CLI: four skills plus the You.com MCP servers for web search, research, and finance research. Or add the MCP server alone, with a free tier.
+[llms] - [OpenCode](https://you.com/docs/agents/agent-harnesses/opencode.md): Install the You.com plugin for OpenCode: four skills plus You.com MCP servers for web search, research, finance, and docs search. Or add the MCP server alone, with a free tier.
+[llms] - [Gemini CLI](https://you.com/docs/agents/agent-harnesses/gemini-cli.md): Give Gemini CLI real-time web search, content extraction, and citation-backed research through the You.com MCP Server. Free tier with no signup.
+[llms] - [Zed](https://you.com/docs/agents/agent-harnesses/zed.md): Give Zed's AI assistant real-time web search, content extraction, and citation-backed research through the You.com MCP Server. Free tier with no signup.
+[llms] - [Cecli](https://you.com/docs/agents/agent-harnesses/cecli.md): Give Cecli real-time web search, content extraction, and citation-backed research through the You.com MCP Server. Free tier with no signup.
+[llms] - [GitHub Copilot CLI](https://you.com/docs/agents/agent-harnesses/copilot-cli.md): Install the You.com plugin for GitHub Copilot CLI: four skills plus the You.com MCP servers for web search, page content, cited research, and finance research. Or add the MCP server alone, with a free tier.
+[llms] - [Grok Build](https://you.com/docs/agents/agent-harnesses/grok-build.md): Install the You.com plugin for Grok Build: four skills plus the You.com MCP servers for web search, page content, cited research, and finance research. Or add the MCP server alone, with a free tier.
+[llms] - [Kimi Code](https://you.com/docs/agents/agent-harnesses/kimi-code.md): Install the You.com plugin for Kimi Code: four skills plus the You.com MCP servers for web search, page content, cited research, and finance research. Or add the MCP server alone, with a free tier.
+[llms] - [Hermes Agent](https://you.com/docs/agents/agent-harnesses/hermes.md): Install the You.com plugin for Hermes Agent: four skills plus the You.com MCP servers for web search, page content, cited research, and finance research. Or add the MCP server alone, with a free tier.
+[llms] - [you-web](https://github.com/youdotcom-oss/agent-skills/tree/main/skills/you-web): Use You.com MCP tools for current web search, URL content extraction, cited web synthesis, and x402-aware web access. Falls back to keyless `you-search` on the free MCP profile when no credentials are set.
+[pricing] > Call live You.com APIs: Product MCP at https://api.you.com/mcp (keyless `?profile=free` exposes `you-search` and `you-discover`. Research and finance use `/mcp/research`, `/mcp/finance`, or `?tools=` on `/mcp`). To pick an API or integration path, call `you-discover` on that server instead of guessing.
+--- llms/readme head ---
+# You.com | Documentation
+> Web Search, Answer, Contents, Research, and Finance Research APIs that give your AI app real-time web intelligence. Start with free credits.
+## Instructions for AI Agents
+- For clean Markdown of any page, append `.md` to the page URL
+- Documentation index: https://you.com/docs/llms.txt (section indexes: append `/llms.txt` to any section URL)
+- Search these docs: Docs MCP at https://you.com/docs/_mcp/server (`searchDocs`, no API key)
+- Call live You.com APIs: Product MCP at https://api.you.com/mcp (keyless `?profile=free` exposes `you-search` and `you-discover`. Research and finance use `/mcp/research`, `/mcp/finance`, or `?tools=` on `/mcp`). To pick an API or integration path, call `you-discover` on that server instead of guessing
+- OpenAPI: https://you.com/docs/openapi.json—auth header `X-API-Key`, env `YDC_API_KEY`
+## Docs
+- [Build agentic apps with real-time web intelligence.](https://you.com/docs/welcome.md): Web Search, Answer, Contents, Research, and Finance Research APIs that give your AI app real-time web intelligence. Start with free credits—no credit card required.
+- [Choose the Right API](https://you.com/docs/choose-the-right-api.md): Match your job to the Web Search API, Contents API, Answer API, Research API, or Finance Research API. Compare latency, price, and output format in one table.
+- [Quickstart](https://you.com/docs/quickstart.md): Get from zero to working API requests in minutes. Covers the Web Search API, Answer API, Contents API, Research API, Finance Research API, full page extraction, evaluation, and pricing—everything you need to evaluate You.com.
+- [Build With Agents](https://you.com/docs/agents.md): Give any agent real-time web access: install a You.com MCP server, add the Agent Skills, or call the REST APIs directly.
+- [MCP Server](https://you.com/docs/agents/mcp-server.md): Hosted MCP server for You.com web search, contents, research, and finance tools. One server, three POST endpoints. Enabled tools are the intersection of profile, allowlist, and path.
+- [Docs MCP Server](https://you.com/docs/agents/docs-mcp-server.md): Give any MCP-enabled agent a searchDocs tool that searches all of You.com's developer documentation—API references, guides, and code examples—in real time. No API key.
+- [Agent Skills](https://you.com/docs/agents/skills.md): Install You.com agent skills for current web search, URL content extraction, cited research, finance research, and integration discovery.
+- [Plugins](https://you.com/docs/agents/plugins.md): Install the You.com skills through your platform's native plugin system—Claude Code, Cursor, Codex, Copilot CLI, Kimi Code, Grok Build, OpenCode, OpenClaw, Pi, Hermes, and DeepSeek Harness.
+- [Agent Harnesses](https://you.com/docs/agents/agent-harnesses.md): Connect a coding agent to You.com. Web search, page fetch, and research cover docs, errors, and questions the model's training data does not.

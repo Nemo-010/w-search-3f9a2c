@@ -1,0 +1,71 @@
+{
+ "slug": "scrapeninja",
+ "name": "ScrapeNinja",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:20+00:00",
+ "sources": {
+  "pricing-err-4eba7b": {
+   "url": "https://scrapeninja.net/pricing",
+   "status": 404,
+   "final_url": "https://scrapeninja.net/pricing",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 563,
+   "truncated": false,
+   "sha256": "4a505bc981fcdb86c3181773dc1372cef02843a643d5194dc7f482e87d1aba3c",
+   "fetched_at": "2026-10-19T05:54:20+00:00"
+  },
+  "home": {
+   "url": "https://scrapeninja.net/",
+   "status": 200,
+   "final_url": "https://scrapeninja.net/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 69000,
+   "truncated": false,
+   "sha256": "c394d875ee0622b6eee09db4a3420baa73ff9fc3a92e222200e84e5535717db7",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 6452
+  },
+  "llms-err-377574": {
+   "url": "https://scrapeninja.net/llms.txt",
+   "status": 404,
+   "final_url": "https://scrapeninja.net/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 563,
+   "truncated": false,
+   "sha256": "4a505bc981fcdb86c3181773dc1372cef02843a643d5194dc7f482e87d1aba3c",
+   "fetched_at": "2026-10-19T05:54:22+00:00"
+  },
+  "llms": {
+   "url": "https://scrapeninja.net/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://scrapeninja.net/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 22248,
+   "truncated": false,
+   "sha256": "c650ff5bea87a6b55a973ca0495b55d3a2162086a1b263456db9837c49392f05",
+   "fetched_at": "2026-10-19T05:54:22+00:00",
+   "text_bytes": 4545
+  },
+  "llms-full": {
+   "url": "https://scrapeninja.net/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://scrapeninja.net/docs/llms-full.txt",
+   "content_type": "text/html",
+   "bytes": 22248,
+   "truncated": false,
+   "sha256": "c650ff5bea87a6b55a973ca0495b55d3a2162086a1b263456db9837c49392f05",
+   "fetched_at": "2026-10-19T05:54:23+00:00",
+   "text_bytes": 4545
+  },
+  "llms-err-561f2d": {
+   "url": "https://docs.scrapeninja.net/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.scrapeninja.net/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:23+00:00"
+  }
+ }
+}

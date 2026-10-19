@@ -1,0 +1,81 @@
+{
+ "slug": "mwmbl",
+ "name": "Mwmbl",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:32+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://github.com/mwmbl/mwmbl",
+   "status": 200,
+   "final_url": "https://github.com/mwmbl/mwmbl",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 384771,
+   "truncated": false,
+   "sha256": "db619a3dd1156725c2885f37fea1d41bb039699978c564e154516c0aea21c894",
+   "fetched_at": "2026-10-19T05:54:32+00:00",
+   "text_bytes": 10972
+  },
+  "home": {
+   "url": "https://mwmbl.org/",
+   "status": 200,
+   "final_url": "https://mwmbl.org/",
+   "content_type": "text/html",
+   "bytes": 19666,
+   "truncated": false,
+   "sha256": "18389f72efeb6d35cbb296b94723bdb2dd503828ab3cc44446c741b4ba716f20",
+   "fetched_at": "2026-10-19T05:54:34+00:00",
+   "text_bytes": 600
+  },
+  "llms-err-45e47b": {
+   "url": "https://github.com/mwmbl/mwmbl/llms.txt",
+   "status": 404,
+   "final_url": "https://github.com/mwmbl/mwmbl/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9,
+   "truncated": false,
+   "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+   "fetched_at": "2026-10-19T05:54:34+00:00"
+  },
+  "llms-err-c0e7e5": {
+   "url": "https://mwmbl.org/llms.txt",
+   "status": 404,
+   "final_url": "https://mwmbl.org/llms.txt",
+   "content_type": "text/html",
+   "bytes": 3768,
+   "truncated": false,
+   "sha256": "2778bb461d71844162888b4ee0bf960a33fdf278832abecb45444ab2848ad64d",
+   "fetched_at": "2026-10-19T05:54:35+00:00"
+  },
+  "llms-err-37ae41": {
+   "url": "https://mwmbl.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://mwmbl.org/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 3773,
+   "truncated": false,
+   "sha256": "8ce7a39785220486b816c5321233f1812a2563498590421809bf7e68ce07dda6",
+   "fetched_at": "2026-10-19T05:54:36+00:00"
+  },
+  "llms": {
+   "url": "https://docs.github.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.github.com/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 28642,
+   "truncated": false,
+   "sha256": "c10af0cdb5576f81fd29373cf56ac65608d24c3e4c935c7993d2bba27d56af4e",
+   "fetched_at": "2026-10-19T05:54:36+00:00",
+   "text_bytes": 28634
+  },
+  "llms-err-8a5b24": {
+   "url": "https://docs.mwmbl.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.mwmbl.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:37+00:00"
+  }
+ }
+}

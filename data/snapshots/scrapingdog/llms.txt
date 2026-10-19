@@ -1,0 +1,152 @@
+# Scrapingdog
+
+> Scrapingdog is a web scraping API platform that handles proxies, CAPTCHAs, headless browsers, and JavaScript rendering so developers can extract structured data from any website at scale without getting blocked.
+
+Scrapingdog provides 60+ scraping and data-extraction APIs covering Google Search, Amazon, social media, e-commerce, AI/LLM pipelines, and more. All APIs return clean, structured JSON. Plans start with a free trial and scale to millions of requests per month.
+
+## Core Product
+
+- [Home](https://www.scrapingdog.com/): Platform overview, key features, and pricing tiers.
+- [All APIs](https://www.scrapingdog.com/apis/): Full catalogue of every scraping API offered.
+- [Pricing](https://www.scrapingdog.com/pricing/): Plan comparison — Lite, Standard, Pro, and Premium with monthly and annual billing.
+- [Documentation](https://www.scrapingdog.com/documentation/): Developer docs, quickstart guides, and full API reference.
+- [Integration](https://www.scrapingdog.com/integration/): Guides for integrating Scrapingdog with popular languages and frameworks.
+
+## Google APIs
+
+- [Google SERP API](https://www.scrapingdog.com/google-serp-api/): Scrape Google search results — organic listings, ads, People Also Ask, knowledge graph, and more.
+- [Google AI Mode API](https://www.scrapingdog.com/google-ai-mode-api/): Extract AI-generated summaries from Google's AI Mode search results.
+- [Google AI Overview API](https://www.scrapingdog.com/documentation/google-ai-overview-api/): Scrape Google AI Overview snippets that appear at the top of search results.
+- [Google Immersive Product API](https://www.scrapingdog.com/google-immersive-product-api/): Extract product data from Google's immersive product panels.
+- [Google Maps Search API](https://www.scrapingdog.com/documentation/google-maps-search-api/): Scrape Google Maps business listings, ratings, hours, and contact details.
+- [Google Maps Posts API](https://www.scrapingdog.com/documentation/google-maps-posts-api/): Extract Google Business Profile posts for any Maps listing.
+- [Google Maps Reviews API](https://www.scrapingdog.com/documentation/google-maps-reviews-api/): Scrape customer reviews and ratings from Google Maps listings.
+- [Google Maps Photos API](https://www.scrapingdog.com/documentation/google-maps-photos-api/): Retrieve photos associated with Google Maps business listings.
+- [Google Maps Places API](https://www.scrapingdog.com/documentation/google-maps-places-api/): Search and scrape Google Maps places by keyword or location.
+- [Google Local API](https://www.scrapingdog.com/documentation/google-local-api/): Scrape Google local pack results including business name, address, and ratings.
+- [Google News API](https://www.scrapingdog.com/google-news-scraper-api/): Scrape Google News headlines, sources, and publication dates.
+- [Google Hotels API](https://www.scrapingdog.com/google-hotels-api/): Extract hotel listings, availability, and pricing from Google Hotels.
+- [Google Trends API](https://www.scrapingdog.com/google-trends-api/): Retrieve trend data and interest-over-time scores from Google Trends.
+- [Google Trends Trending Now API](https://www.scrapingdog.com/documentation/google-trends-trending-now-api/): Get currently trending search topics from Google Trends.
+- [Google Trends Autocomplete API](https://www.scrapingdog.com/documentation/google-trends-autocomplete-api/): Retrieve autocomplete and related query suggestions from Google Trends.
+- [Google Jobs API](https://www.scrapingdog.com/google-jobs-api/): Scrape Google Jobs listings with title, company, location, and description.
+- [Google Patents API](https://www.scrapingdog.com/google-patents-api/): Scrape patent listings, abstracts, and inventor data from Google Patents.
+- [Google Patent Details API](https://www.scrapingdog.com/documentation/google-patent-details-api/): Extract full details for a specific patent by patent number.
+- [Google Finance API](https://www.scrapingdog.com/google-finance-api/): Extract stock prices, financial summaries, and market data from Google Finance.
+- [Google Videos API](https://www.scrapingdog.com/documentation/google-videos-api/): Scrape Google Video search results including thumbnails, duration, and source.
+- [Google Shorts API](https://www.scrapingdog.com/google-shorts-api/): Extract Google Shorts video results from search.
+- [Google Images API](https://www.scrapingdog.com/google-images-api/): Scrape Google Image search results including thumbnails and source URLs.
+- [Google Light Search API](https://www.scrapingdog.com/google-light-search-api/): Lightweight Google SERP scraper optimised for speed and low credit cost.
+- [Google Autocomplete API](https://www.scrapingdog.com/documentation/google-autocomplete-api/): Retrieve Google search autocomplete suggestions for any query.
+- [Google Shopping API](https://www.scrapingdog.com/google-shopping-api/): Extract Google Shopping product listings, prices, and merchant data.
+- [Google Lens API](https://www.scrapingdog.com/google-lens-api/): Scrape reverse image search results from Google Lens.
+- [Google Scholar API](https://www.scrapingdog.com/google-scholar-api/): Scrape academic papers, citations, and author profiles from Google Scholar.
+- [Google Scholar Profiles API](https://www.scrapingdog.com/documentation/google-scholar-profiles-api/): Search and scrape Google Scholar researcher profiles.
+- [Google Scholar Author API](https://www.scrapingdog.com/documentation/google-scholar-author-api/): Retrieve detailed author metadata from Google Scholar.
+- [Google Scholar Author Citation API](https://www.scrapingdog.com/documentation/google-scholar-author-citation-api/): Get citation details for a specific Google Scholar author.
+- [Google Scholar Cite API](https://www.scrapingdog.com/documentation/google-scholar-cite-api/): Extract citation data for individual papers from Google Scholar.
+
+## Social Media APIs
+
+- [Profile Scraper API](https://www.scrapingdog.com/profile-scraper-api/): Extract public profile data from social platforms.
+- [Jobs Search API](https://www.scrapingdog.com/jobs-search-api/): Aggregate job listings across multiple job boards.
+- [LinkedIn Person Profile Scraper](https://www.scrapingdog.com/documentation/person-profile-scraper/): Scrape LinkedIn individual profiles including experience, education, and skills.
+- [LinkedIn Company Profile Scraper](https://www.scrapingdog.com/documentation/company-profile-scraper/): Extract LinkedIn company profile data — about, headcount, and recent posts.
+- [LinkedIn Post Scraper](https://www.scrapingdog.com/documentation/post-scraper/): Scrape posts published by a LinkedIn person profile.
+- [LinkedIn Jobs Scraper](https://www.scrapingdog.com/documentation/scrape-jobs-search-results/): Search and scrape LinkedIn job listings by keyword, location, and filters.
+- [LinkedIn Job Overview Scraper](https://www.scrapingdog.com/documentation/scrape-job-overview/): Extract full details for a specific LinkedIn job posting.
+- [X (Twitter) Scraper API](https://www.scrapingdog.com/twitter-scraper-api/): Scrape tweets, profiles, and engagement data from X / Twitter.
+- [X Profile Scraper API](https://www.scrapingdog.com/documentation/x-profile-scraper-api/): Extract public profile data for any X / Twitter user.
+- [X Post Scraper API](https://www.scrapingdog.com/documentation/x-post-scraper-api/): Scrape individual post content, likes, retweets, and replies from X.
+- [TikTok Scraper API](https://www.scrapingdog.com/documentation/tiktok-post-scraper-api/): Scrape TikTok posts, profiles, and engagement data.
+- [TikTok Profile API](https://www.scrapingdog.com/documentation/tiktok-profile-api/): Extract public profile data for any TikTok creator.
+- [TikTok Post Scraper API](https://www.scrapingdog.com/documentation/tiktok-post-scraper-api/): Scrape individual TikTok post content, views, likes, and comments.
+- [TikTok Ads Scraper API](https://www.scrapingdog.com/documentation/tiktok-ads-scraper-api/): Extract TikTok ad creatives and campaign data from TikTok's ad library.
+- [Facebook Profile Scraper API](https://www.scrapingdog.com/documentation/facebook-profile-scraper-api/): Scrape public Facebook profile data.
+- [Facebook Posts Scraper API](https://www.scrapingdog.com/documentation/facebook-posts-scraper-api/): Extract posts and engagement data from public Facebook pages.
+- [Facebook Ads Scraper API](https://www.scrapingdog.com/documentation/facebook-ads-scraper-api/): Scrape Facebook ad creatives and spend data from the Meta Ad Library.
+- [Instagram Profile Scraper API](https://www.scrapingdog.com/documentation/instagram-profile-scraper-api/): Extract public Instagram profile data — bio, followers, and post count.
+- [Instagram Posts Scraper API](https://www.scrapingdog.com/documentation/instagram-posts-scraper-api/): Scrape public Instagram posts including captions, likes, and media URLs.
+- [YouTube Search API](https://www.scrapingdog.com/youtube-scraper-api/): Scrape YouTube search results, video metadata, and channel data.
+- [YouTube Channel API](https://www.scrapingdog.com/documentation/youtube-channel-api/): Extract YouTube channel details — subscribers, videos, and about section.
+- [YouTube Comment API](https://www.scrapingdog.com/documentation/youtube-comment-api/): Scrape comments and replies from any public YouTube video.
+- [YouTube Video API](https://www.scrapingdog.com/documentation/youtube-video-api/): Extract full metadata for a YouTube video — title, description, views, and tags.
+- [YouTube Transcripts API](https://www.scrapingdog.com/youtube-transcripts-api/): Retrieve full transcripts (captions) from any public YouTube video.
+
+## E-Commerce APIs
+
+- [Amazon Scraper API](https://www.scrapingdog.com/amazon-scraper-api/): Scrape Amazon product pages — titles, prices, ratings, images, and descriptions.
+- [Amazon Search Scraper](https://www.scrapingdog.com/documentation/amazon-search-scraper/): Search Amazon and extract product listings for any keyword.
+- [Amazon Autocomplete Scraper](https://www.scrapingdog.com/documentation/amazon-autocomplete-scraper/): Retrieve Amazon search autocomplete suggestions.
+- [Amazon Offers API](https://www.scrapingdog.com/amazon-offers-api/): Retrieve all active seller offers for any ASIN — price, condition, seller, and delivery.
+- [Amazon Reviews API](https://www.scrapingdog.com/amazon-reviews-api/): Extract customer reviews, star ratings, and reviewer profiles from Amazon.
+- [eBay Search API](https://www.scrapingdog.com/documentation/ebay-search-api/): Scrape eBay search results and product listings.
+- [eBay Product API](https://www.scrapingdog.com/documentation/ebay-product-api/): Extract detailed product data from any eBay listing.
+- [Walmart Scraper API](https://www.scrapingdog.com/walmart-scraper-api/): Extract Walmart product data, prices, and availability.
+- [Walmart Product Scraper](https://www.scrapingdog.com/documentation/walmart-product-scraper/): Scrape detailed product data for any Walmart item URL.
+- [Walmart Search Scraper](https://www.scrapingdog.com/documentation/walmart-search-scraper/): Search Walmart and extract product listings for any keyword.
+- [Walmart Reviews Scraper](https://www.scrapingdog.com/documentation/walmart-reviews-scraper/): Extract customer reviews and ratings from Walmart product pages.
+- [Flipkart Search API](https://www.scrapingdog.com/documentation/flipkart-search-api/): Search Flipkart and extract product listings for any keyword.
+- [Flipkart Product API](https://www.scrapingdog.com/documentation/flipkart-product-api/): Scrape detailed product data from Flipkart product pages.
+- [Myntra Search API](https://www.scrapingdog.com/documentation/myntra-search-api/): Search Myntra and extract fashion product listings for any keyword.
+- [Myntra Product API](https://www.scrapingdog.com/documentation/myntra-product-api/): Scrape detailed product data from Myntra product pages.
+- [Baidu Search API](https://www.scrapingdog.com/baidu-search-api/): Extract search results from Baidu, China's largest search engine.
+
+## Other Web APIs
+
+- [Yelp Scraper API](https://www.scrapingdog.com/documentation/yelp-scraper-api/): Scrape Yelp business listings, ratings, and reviews.
+- [Indeed Scraper API](https://www.scrapingdog.com/documentation/indeed-scraper-api/): Extract job listings from Indeed by keyword and location.
+- [Zillow Scraper API](https://www.scrapingdog.com/documentation/zillow-scraper-api/): Scrape property listings, prices, and details from Zillow.
+
+## AI & LLM APIs
+
+- [ChatGPT Scraper API](https://www.scrapingdog.com/chatgpt-scraper-api/): Combine scraping with LLM-based extraction for AI-ready data pipelines.
+- [LLM-Ready Data](https://www.scrapingdog.com/llm-ready-data/): Convert any webpage into clean Markdown or plain text for use in LLM prompts and RAG pipelines.
+
+## Search Engine APIs
+
+- [Bing Search API](https://www.scrapingdog.com/bing-search-api/): Scrape Bing organic search results and related queries.
+- [Universal Search API](https://www.scrapingdog.com/universal-search-api/): General-purpose scraper for any URL — returns clean HTML or Markdown.
+
+## Web Tools APIs
+
+- [Data Extraction API](https://www.scrapingdog.com/data-extraction-api/): Extract structured data fields (title, price, text, tables) from any page.
+- [Datacenter Proxies](https://www.scrapingdog.com/datacenter-proxies/): High-speed datacenter proxy network for custom scraping setups.
+- [Screenshot API](https://www.scrapingdog.com/screenshot-api/): Capture full-page or viewport screenshots of any URL.
+- [Webhook Integration](https://www.scrapingdog.com/documentation/webhook-integration/): Receive scraped data via webhook instead of polling the API.
+
+## Free Tools
+
+- [LLMs.txt Generator](https://www.scrapingdog.com/llms-txt-generator/): Generate an llms.txt file for any website automatically.
+- [URL to Markdown Converter](https://www.scrapingdog.com/url-to-markdown-converter/): Convert any URL to clean Markdown for LLM ingestion.
+- [YouTube Transcript Extractor](https://www.scrapingdog.com/youtube-transcript-extractor/): Free tool to extract transcripts from YouTube videos.
+- [User Agent Generator](https://www.scrapingdog.com/user-agent-generator/): Generate valid browser User-Agent strings for scraping.
+- [Free Local Leads Extraction Tool](https://www.scrapingdog.com/free-local-leads-extraction-tool/): Extract local business leads from Google Maps for free.
+
+## Use Cases
+
+- [Use Cases Overview](https://www.scrapingdog.com/scraping-use-case/): How businesses use Scrapingdog — SEO monitoring, price intelligence, lead generation, and more.
+- [SEO Use Case](https://www.scrapingdog.com/scraping-use-case/seo/): Track keyword rankings, SERP features, and competitor visibility at scale.
+- [Local SEO Tools](https://www.scrapingdog.com/scraping-use-case/local-seo-tools/): Build local SEO tooling on top of Google Maps and local pack data.
+- [Google APIs Overview](https://www.scrapingdog.com/google-apis/): All Google-specific scraping APIs in one place.
+- [E-commerce APIs Overview](https://www.scrapingdog.com/ecommerce-apis/): Amazon, eBay, Walmart, and Flipkart scraping APIs for price intelligence.
+- [Social Media APIs Overview](https://www.scrapingdog.com/social-media-apis/): APIs for scraping LinkedIn, X, YouTube, TikTok, Facebook, and Instagram.
+- [Web Scraping Service](https://www.scrapingdog.com/web-scraping-service/): Fully managed scraping service for teams that need custom data pipelines.
+
+## Alternatives & Comparisons
+
+- [Scrapingdog vs SerpApi](https://www.scrapingdog.com/serpapi-alternative/): Side-by-side comparison of Scrapingdog and SerpApi on price and features.
+- [Scrapingdog vs ScrapingBee](https://www.scrapingdog.com/scrapingbee-alternative/): How Scrapingdog compares to ScrapingBee on pricing and API coverage.
+- [Scrapingdog vs ScraperAPI](https://www.scrapingdog.com/scraperapi-alternative/): Comparison with ScraperAPI across API coverage and cost.
+- [Why Choose Scrapingdog](https://www.scrapingdog.com/scrapingdog-alternative/): Overview of Scrapingdog's unique advantages over other scraping platforms.
+
+## Company & Legal
+
+- [About](https://www.scrapingdog.com/about/): Company background, mission, and team.
+- [Blog](https://www.scrapingdog.com/blog/): Tutorials, guides, and web scraping tips.
+- [Affiliates](https://www.scrapingdog.com/affiliates/): Affiliate programme details and commission structure.
+- [Privacy Policy](https://www.scrapingdog.com/privacy/): How Scrapingdog collects and handles user data.
+- [Terms of Service](https://www.scrapingdog.com/terms/): Usage terms and conditions.
+- [GDPR](https://www.scrapingdog.com/gdpr/): GDPR compliance statement.
+- [Data Processing Agreement](https://www.scrapingdog.com/data-processing-agreement/): DPA for enterprise customers requiring data processing agreements.
+- [SLA](https://www.scrapingdog.com/sla/): Service Level Agreement — uptime guarantees and support commitments.

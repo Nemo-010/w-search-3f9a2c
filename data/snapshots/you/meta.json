@@ -1,0 +1,85 @@
+{
+ "slug": "you",
+ "name": "You.com",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://you.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://you.com/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 22649,
+   "truncated": false,
+   "sha256": "34fb01fad88acbb3a681226d2498e904f466527f681ea84ebfcaf9c4b2d2853a",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 22627
+  },
+  "llms-full": {
+   "url": "https://you.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://you.com/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 22649,
+   "truncated": false,
+   "sha256": "34fb01fad88acbb3a681226d2498e904f466527f681ea84ebfcaf9c4b2d2853a",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 22627
+  },
+  "pricing": {
+   "url": "https://api.you.com/",
+   "status": 200,
+   "final_url": "https://you.com/docs/welcome.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 868,
+   "truncated": false,
+   "sha256": "c421d381e2325e41df5ed7d3daf26096c9516211da4ca729ed8898b8191e4cf7",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 866
+  },
+  "docs": {
+   "url": "https://you.com/docs",
+   "status": 200,
+   "final_url": "https://you.com/docs/welcome.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 868,
+   "truncated": false,
+   "sha256": "c421d381e2325e41df5ed7d3daf26096c9516211da4ca729ed8898b8191e4cf7",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 866
+  },
+  "home": {
+   "url": "https://you.com/",
+   "status": 200,
+   "final_url": "https://you.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 375329,
+   "truncated": false,
+   "sha256": "f0c32ad43c02a6ba934f28199499272bc01a528dd63b01cae1ea670a5885a25d",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 6727
+  },
+  "api-pricing": {
+   "url": "https://you.com/docs/api-reference",
+   "status": 200,
+   "final_url": "https://you.com/docs/api-reference/search/v1-search.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 45433,
+   "truncated": false,
+   "sha256": "9f8e6965e62375516eb6a5dcacd3e1d1f4401f144073291ece25d3a004c95f60",
+   "fetched_at": "2026-10-19T05:58:16+00:00",
+   "text_bytes": 45299
+  },
+  "welcome": {
+   "url": "https://you.com/docs/welcome.md",
+   "status": 200,
+   "final_url": "https://you.com/docs/welcome.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 868,
+   "truncated": false,
+   "sha256": "c421d381e2325e41df5ed7d3daf26096c9516211da4ca729ed8898b8191e4cf7",
+   "fetched_at": "2026-10-19T05:59:37+00:00",
+   "text_bytes": 866
+  }
+ }
+}

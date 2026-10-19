@@ -1,0 +1,62 @@
+{
+ "slug": "nodemaven",
+ "name": "Nodemaven",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:18+00:00",
+ "sources": {
+  "home": {
+   "url": "https://nodemaven.com/",
+   "status": 200,
+   "final_url": "https://nodemaven.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 432108,
+   "truncated": false,
+   "sha256": "796b3fc19ed1585c23b3dcf8411b1f436eb90089713bc70a4cb876e43545c9a0",
+   "fetched_at": "2026-10-19T05:54:18+00:00",
+   "text_bytes": 19241
+  },
+  "llms": {
+   "url": "https://nodemaven.com/llms.txt",
+   "status": 200,
+   "final_url": "https://nodemaven.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 12819,
+   "truncated": false,
+   "sha256": "42aa49833d610ed1f72adb633763f1cf9f42ae9652a90e3018de9b2e83371264",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 12819
+  },
+  "llms-err-6a1206": {
+   "url": "https://nodemaven.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://nodemaven.com/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 181473,
+   "truncated": false,
+   "sha256": "bd73c7fda38fa1106ac39c72e3e96cb0aeec4102fd2de7d6a242381493537ea9",
+   "fetched_at": "2026-10-19T05:54:26+00:00"
+  },
+  "llms-https://docs.nodemaven.com/llms.txt": {
+   "url": "https://docs.nodemaven.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.nodemaven.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 23335,
+   "truncated": false,
+   "sha256": "d5401ab1ac0e88e0f2e19b400086ba779b3754008661e6058889de86540a68c7",
+   "fetched_at": "2026-10-19T05:54:28+00:00",
+   "text_bytes": 23185
+  },
+  "pricing": {
+   "url": "https://nodemaven.com/pricing/",
+   "status": 200,
+   "final_url": "https://nodemaven.com/pricing/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 265827,
+   "truncated": false,
+   "sha256": "fcf65bc9448cd7515d32f06eb33696dcb329449ba1fa0f733b69da6611083d45",
+   "fetched_at": "2026-10-19T05:59:41+00:00",
+   "text_bytes": 10175
+  }
+ }
+}

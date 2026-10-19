@@ -1,0 +1,159 @@
+APIs · arquivo/pwa-technologies Wiki · GitHub 
+ Skip to content 
+ Navigation Menu Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Copilot app Direct agents from issue to merge MCP Registry Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes Code Quality Enforce quality at merge APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners View all resources Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community GitHub Stars Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search / Sign in Sign up Appearance settings 
+ You signed in with another tab or window. Reload to refresh your session. 
+ You signed out in another tab or window. Reload to refresh your session. 
+ You switched accounts on another tab or window. Reload to refresh your session. 
+ Dismiss alert 
+ {{ message }} 
+ arquivo pwa-technologies Repository navigation Code Issues 149  ( 149 ) Pull requests Actions Projects Wiki Security and quality Insights More items 
+ APIs 
+ Jump to bottom 
+ Edit 
+ New page 
+ Ivo Branco edited this page Jun 15, 2026 
+ ·
+ 90 revisions 
+ APIs specific to Arquivo.pt that enable the full exploration of its functions 
+ Arquivo.pt API (Full-text & URL search) 
+ Image Search API v1.1 
+ APIs based on international standards to enable interoperability among web archives and code reuse 
+ CDX-server API (URL search) 
+ Memento API (URL search) 
+ API usage limits 
+ Each API has the following maximum usage limits.
+If a client exceeds the following maximum usage limits, it will receive an error "HTTP 429 Too many requests" and must decrease its access rate: 
+ Arquivo.pt API (Full-text & URL search) : 250 requests/60s from the same IP address 
+ Image Search API v1.1 : 400 requests/60s from the same IP address 
+ CDX-server API (URL search) : 250 requests/60s from the same IP address 
+ Memento API (URL search) : 400 requests/60s from the same IP address 
+ IP addresses that exceed these limits will be permanently blocked from using Arquivo.pt. 
+ Learn more about APIs 
+ Training module on Automatic processing of information preserved from the Web (module C) 
+ Tutorial in Python about how to explore the Arquivo.pt API 
+ Bulk download of web-archived resources 
+ If you need to download a large amount of web-archived resources, such as all the URLs archived from a large website along time, we suggest the following methodology: 
+ Analyse the Arquivo.pt collections so that you may choose those which may contain the most interesting web-archived data for your use case. If you have any doubt, contact us . 
+ Download the CDXJ index files , ( what is CDXJ? ) of the Arquivo.pt collections you selected to process. For this purpose, analyse the "column A: Collection ID" and the corresponding CDXJ index files on "column H: Collection CDXJ File"); 
+ Create a list of selected URLs to be downloaded, extracted from the CDXJ index files. E.g. using the Linux grep command to get HTML pages successfully archived (status:200, mime:text/html): 
+ > cat EAWP5.cdxj | grep '\"status\": \"200\"'| grep '\"mime\": \"text/html'| wc 
+ Download the web-archived resources for the list of selected URLs from Arquivo.pt by using the above APIs or, by building links to directly access the web-archived resources. These links are available on the Technical details of the Options top-right menu when accessing a web-archived page . For instance, for the URL http://publico.pt/ with timestamp 20120201160355 extracted from the CDXJ index file, build the following links to download the: 
+ original file of the web-archived page (loses replay quality because the original internal links are not rewritten to reference web-archived images or stylesheets), notice that there is a suffix id_ appended after the timestamp: https://arquivo.pt/noFrame/replay/20120201160355id_/http://publico.pt/ 
+ web-archived page without the Arquivo.pt UI frame (internal links are rewritten to reference web-archived resources): https://arquivo.pt/noFrame/replay/20120201160355/http://publico.pt/ 
+ Endpoints usage limits 
+ If a client exceeds these following maximum usage limits , it will receive an error "HTTP 429 Too many requests" and must decrease its access rate : 
+ https://arquivo.pt/wayback : 4000 requests/60s from the same IP address 
+ https://arquivo.pt/noFrame/replay : 4000 requests/60s from the same IP address 
+ https://arquivo.pt/noFrame/patching/record : 4000 requests/60s from the same IP address 
+ https://arquivo.pt/save/now/record : 4000 requests/60s from the same IP address 
+ IP addresses that exceed these limits will be permanently blocked from using Arquivo.pt. 
+ Learn more about bulk download 
+ CDXJ index files are available to support bulk access 
+ Contact us 
+ If you have any trouble using our APIs, please contact us so that we can try to help you. 
+ Short link to this page: arquivo.pt/api 
+ Add a custom footer
+ Wiki pages 
+ Pages 20 
+ Loading 
+ Home
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ APIs
+ APIs specific to Arquivo.pt that enable the full exploration of its functions 
+ APIs based on international standards to enable interoperability among web archives and code reuse 
+ API usage limits 
+ Learn more about APIs 
+ Bulk download of web-archived resources 
+ Endpoints usage limits 
+ Learn more about bulk download 
+ Contact us 
+ Loading 
+ Arquivo.pt API
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Arquivo.pt image search repositories
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Arquivo.pt in a nutshell: overview of services and activities
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Arquivo.pt page search repositories
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Arquivo404: broken link fixer
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Guia de anotação de resultados de pesquisa (pt)
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ ImageSearch API v1 (beta)
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ ImageSearch API v1.1
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ L2R4WAIR
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Link graph dataset definition
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ MainFeatures of the Arquivo.pt full text search engine
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Memento API
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Memento API URL Search in Arquivo.pt
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ RelatedProjects
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Releases
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ TestCollection
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ URL search: CDX server API
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Wayback PyWb
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Show 5 more pages…
+ Add a custom sidebar
+ Clone this wiki locally 
+ Footer 
+ © 2026 GitHub, Inc.
+ Footer navigation 
+ Terms 
+ Privacy 
+ Security 
+ Status 
+ Community 
+ Docs 
+ Contact 
+ Manage cookies
+ Do not share my personal information
+ You can’t perform that action at this time.

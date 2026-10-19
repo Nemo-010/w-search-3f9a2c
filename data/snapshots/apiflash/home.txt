@@ -1,0 +1,123 @@
+Screenshot API for Developers | ApiFlash 
+ API FLASH 
+ Documentation 
+ Guides 
+ Pricing
+ Log in
+ Sign up
+ Sign up
+ Simple and powerful 
+ Screenshot API
+ based on Google Chrome and AWS Lambda .
+ Get started now
+ https://api.apiflash.com/v1/urltoimage
+ Features 
+ Chrome Rendering 
+ Up to date Chrome instances to make pixel perfect screenshots and ensure support for all modern web features. 
+ Scalability & Stability 
+ Truly scalable infrastructure built on top of AWS Lambda guaranteeing stability under heavy workloads. 
+ Secure Communications 
+ Full HTTPS endpoints for all plans. We take the security and privacy of your data very seriously. 
+ Full Page & Responsive 
+ Parameters to capture full page screenshots, mobile screenshots and precisely control the viewport size. 
+ Fast & Simple 
+ Fast and easy to use API endpoints that are well documented. 
+ Automatic Capture Timing 
+ Automatic detection of fully loaded pages before screenshot capture. 
+ Some of our customers … 
+ Pricing 
+ Free Plan 
+ $ 
+ 0
+ / month 
+ 100
+ Screenshots
+ PNG / JPEG / WebP 
+ Full page screenshots 
+ Mobile screenshots 
+ Block ads 
+ Hide cookie banners 
+ Export to S3 
+ support
+ Get for free
+ Lite Plan 
+ $ 
+ 7
+ / month 
+ 1,000
+ Screenshots
+ PNG / JPEG / WebP 
+ Full page screenshots 
+ Mobile screenshots 
+ Block ads 
+ Hide cookie banners 
+ Export to S3 
+ Basic
+ support
+ Get started
+ Medium Plan 
+ $ 
+ 35
+ / month 
+ 10,000
+ Screenshots
+ PNG / JPEG / WebP 
+ Full page screenshots 
+ Mobile screenshots 
+ Block ads 
+ Hide cookie banners 
+ Export to S3 
+ Priority
+ support
+ Get started
+ Large Plan 
+ $ 
+ 180
+ / month 
+ 100,000
+ Screenshots
+ PNG / JPEG / WebP 
+ Full page screenshots 
+ Mobile screenshots 
+ Block ads 
+ Hide cookie banners 
+ Export to S3 
+ Premium
+ support
+ Get started
+ Custom Enterprise Plan 
+ Our API can handle millions of screenshots per month 
+ and our plans can be tailored to your specific needs.
+ Custom number of screenshots 
+ All features from the Large Plan 
+ Top priority support 
+ Managed proxies 
+ IP geolocation 
+ Chat with us
+ Easy to integrate with … 
+ Get 100 screenshots per month for free, no credit card required. 
+ Sign up for free 
+ API FLASH 
+ Documentation
+ • 
+ Guides
+ • 
+ Changelog
+ • 
+ Contact
+ • 
+ FAQ
+ • 
+ About
+ ApiFlash offers a clean and polished screenshot API that all modern businesses can use to
+ enhance their products.
+ Our underlying platform is built over Chrome and AWS Lambda to ensure scalability, stability and
+ cost effectiveness.
+ More than 10000 businesses use ApiFlash to make millions of screenshots per day.
+ © ApiFlash 2017 - 2026, All rights reserved 
+ • 
+ Terms of service
+ • 
+ Privacy policy
+ • 
+ Legal notice

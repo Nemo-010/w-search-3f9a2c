@@ -1,0 +1,85 @@
+# README - English
+
+> 此页也有中文版本可用： [自述文档 - 中文](https://docs.tikhub.io/doc-4579297)
+
+### [Useful Links]
+
+- 🏡 **Home**: [https://www.tikhub.io](https://www.tikhub.io)
+- 👤 **User Dashboard** : https://user.tikhub.io/
+- 🐙 **GitHub Organization**: [https://github.com/TikHub](https://github.com/TikHub)
+- 🛠 **Python SDK**: [https://github.com/TikHub/TikHub-API-Python-SDK](https://github.com/TikHub/TikHub-API-Python-SDK)
+- 📥 **Multi-Functional Downloader**: [https://github.com/TikHub/TikHub-Multi-Functional-Downloader](https://github.com/TikHub/TikHub-Multi-Functional-Downloader)
+- 🖥️ **API Demo**: [https://github.com/TikHub/TikHub-API-Demo](https://github.com/TikHub/TikHub-API-Demo)
+- 📚 **Documentation**: [https://docs.tikhub.io](https://docs.tikhub.io)
+- 💬 **Discord Server(Community & Discussion)**: [https://discord.gg/Pu2uKkFu6u](https://discord.gg/Pu2uKkFu6u)
+- 🎫 **Contact & Support**: https://user.tikhub.io/dashboard/support/open-tickets — sign in to the user dashboard to submit a ticket
+- ✨ **X.com**: [https://x.com/TikHubio](https://x.com/TikHubio)
+
+---
+
+## 📢 TikHub Domain & Connection Notice
+
+Dear TikHub Users,
+
+Please note the following regarding API access:
+
+* **✅ Primary domain:** Use `https://api.tikhub.io` for all requests.
+  🚫 Please avoid using `api.tikhub.dev`, as it may result in slower response times and degraded performance.
+
+* **⏱️ Experiencing long request times (> 30 seconds)?**
+  Please configure a proxy on your end to improve connection stability.
+
+* **⚙️ Note:** All request paths and parameters remain the same regardless of domain — no code changes needed beyond the base URL if you do switch.
+
+----
+
+#### HTTP Status Codes
+
+* **400 Bad Request**
+  * The request format is incorrect or parameters are invalid. Sometimes occurs due to server internal errors.
+* **401 Unauthorized**
+  * Invalid API token.
+  * API token is missing.
+  * Unable to validate API token.
+  * API token status is invalid or not activated.
+  * API token has expired.
+  * User not found.
+* **403 Forbidden**
+  * Lacking required permissions for this route.
+  * Account is disabled.
+  * Email is not verified.
+  * API token lacks required permissions.
+* **404 Not Found**
+  * Endpoint data not found in the database.
+* **402 Payment Required**
+  * Insufficient balance, this endpoint requires payment and accepts free credits.
+  * Insufficient balance, this endpoint requires payment and does not accept free credits.
+* **429 Too Many Requests**
+  * Request too fast, exceeding the rate limit.
+* **500 Internal Server Error**
+  * Server internal error, unable to complete the request.
+
+
+---
+
+#### API Token Introduction:
+
+##### Method 1: Use API Token in the Request Header (Recommended)
+
+- **Header**: `Authorization`
+- **Format**: `Bearer your_token`
+- **Example**: `"Authorization": "Bearer your_token"`
+- **Swagger UI**: Click on the `Authorize` button in the upper right corner of the page to enter the API token directly without the `Bearer` keyword.
+
+##### Method 2: Use API Token in the Cookie (Not Recommended, Use Only When Method 1 is Unavailable)
+
+- **Cookie**: `Authorization`
+- **Format**: `Bearer your_token`
+- **Example**: `Authorization=Bearer your_token`
+
+#### Get API Token:
+
+1. Register and log in to your account on the TikHub website.
+2. Go to the user center, click on the API token menu, and create an API token.
+3. Copy and use the API token in the request header.
+4. Keep your API token confidential and use it only in the request header.

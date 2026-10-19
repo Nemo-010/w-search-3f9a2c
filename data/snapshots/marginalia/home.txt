@@ -1,0 +1,43 @@
+Marginalia Search 
+ Skip To Content 
+ Search
+ Sites
+ Explore
+ About
+ Marginalia Search 
+ Search
+ The old version of Marginalia Search remains available
+ here .
+ Explore the Web 
+ Prioritizes non-commercial content 
+ Tools for both search and discovery 
+ Find lost old websites 
+ Open Source 
+ Custom index and crawler software 
+ Simple technology, no AI 
+ AGPL license 
+ Git Repository 
+ Project Discord 
+ Privacy by default 
+ Filter out tracking 
+ No data shared with 3rd parties 
+ No long-term retention of IPs 
+ Privacy Statement 
+ Policy Information 
+ Policies 
+ This website complies with the GDPR by not collecting any personal information,
+ and with the EU Cookie Directive by not using cookies for any purpose other than
+ to provide service functionality.
+ Access logs containing IP-addresses are retained for up to 24 hours;
+ anonymized logs with source addresses removed are sometimes kept longer
+ to help diagnose bugs.
+ Contact 
+ You can reach the webmaster of the search engine at contact@marginalia-search.com .
+ Sources 
+ The search engine is open source with an AGPL license. The sources can be perused at
+ https://git.marginalia.nu/ .
+ Data 
+ IP geolocation is sourced from the IP2Location LITE data available from
+ https://lite.ip2location.com/ 
+ under
+ CC-BY-SA 4.0 .

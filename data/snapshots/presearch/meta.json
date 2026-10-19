@@ -1,0 +1,48 @@
+{
+ "slug": "presearch",
+ "name": "Presearch",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:30+00:00",
+ "sources": {
+  "home-err-9c664c": {
+   "url": "https://presearch.com/",
+   "status": 530,
+   "final_url": "https://presearch.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 8260,
+   "truncated": false,
+   "sha256": "82bb5160500df69e1e9784d01fa8fee6c4e231800ced294f1a842aa2f564742d",
+   "fetched_at": "2026-10-19T05:54:30+00:00"
+  },
+  "llms-err-3e2e64": {
+   "url": "https://presearch.com/llms.txt",
+   "status": 530,
+   "final_url": "https://presearch.com/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 8260,
+   "truncated": false,
+   "sha256": "91cee27006c4ee7e535e495f65e024d6239e6596f14e2d3748e4aa6ef8ba3f44",
+   "fetched_at": "2026-10-19T05:54:31+00:00"
+  },
+  "llms-err-fd4e8d": {
+   "url": "https://presearch.com/docs/llms.txt",
+   "status": 530,
+   "final_url": "https://presearch.com/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 8260,
+   "truncated": false,
+   "sha256": "9b44fe67ce45ec86941caedc4fdc66c8405b69a474154b478caba64d92091055",
+   "fetched_at": "2026-10-19T05:54:31+00:00"
+  },
+  "llms-err-6e7ae9": {
+   "url": "https://docs.presearch.com/llms.txt",
+   "status": 530,
+   "final_url": "https://docs.presearch.com/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 8251,
+   "truncated": false,
+   "sha256": "d510210c28e92971abb55ac5ad3df44d65f28ec4b36d0f3ad9fd3f482f33a641",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  }
+ }
+}

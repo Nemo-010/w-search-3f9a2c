@@ -1,0 +1,84 @@
+{
+ "slug": "anchor",
+ "name": "Anchor Browser",
+ "category": "browser",
+ "fetched_at": "2026-10-19T05:54:24+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://anchorbrowser.io/pricing",
+   "status": 200,
+   "final_url": "https://anchorbrowser.io/#pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 235179,
+   "truncated": false,
+   "sha256": "7f89fd8a3eb280f182aef617748d8125856dc50c6efe02b0ff0bac02f1d9fe59",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 8675
+  },
+  "docs": {
+   "url": "https://docs.anchorbrowser.io/",
+   "status": 200,
+   "final_url": "https://docs.anchorbrowser.io/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 437238,
+   "truncated": false,
+   "sha256": "027767ea035d4f5439e892b355c919ff14c733847c5f282820626b3d58f15c4b",
+   "fetched_at": "2026-10-19T05:54:25+00:00",
+   "text_bytes": 4002
+  },
+  "home": {
+   "url": "https://anchorbrowser.io/",
+   "status": 200,
+   "final_url": "https://anchorbrowser.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 235179,
+   "truncated": false,
+   "sha256": "7f89fd8a3eb280f182aef617748d8125856dc50c6efe02b0ff0bac02f1d9fe59",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 8675
+  },
+  "llms": {
+   "url": "https://docs.anchorbrowser.io/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.anchorbrowser.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 57587,
+   "truncated": false,
+   "sha256": "1ba9d88eee45d1447e9f4d4ab85fea9309b05ace7a3742fc05b1846cbb4663cd",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 57551
+  },
+  "llms-full": {
+   "url": "https://docs.anchorbrowser.io/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.anchorbrowser.io/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 945605,
+   "truncated": false,
+   "sha256": "c52905645ef0d3f1c8f991a1fd8a6fac6b176b1d19a3c8f7afec0996def06836",
+   "fetched_at": "2026-10-19T05:54:28+00:00",
+   "text_bytes": 944218
+  },
+  "llms-https://anchorbrowser.io/llms.txt": {
+   "url": "https://anchorbrowser.io/llms.txt",
+   "status": 200,
+   "final_url": "https://anchorbrowser.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 283,
+   "truncated": false,
+   "sha256": "ccf82e19ab0069a05e9e35fb56316e60b9acf538a735febd5746aa3de0d0b8fd",
+   "fetched_at": "2026-10-19T05:54:29+00:00",
+   "text_bytes": 283
+  },
+  "llms-err-28fb28": {
+   "url": "https://anchorbrowser.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://anchorbrowser.io/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 73704,
+   "truncated": false,
+   "sha256": "029e3c9c0a5e5efb1109957f9c7da9521f988172cb601ec692e3554414945b7e",
+   "fetched_at": "2026-10-19T05:54:31+00:00"
+  }
+ }
+}

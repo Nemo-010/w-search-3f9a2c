@@ -1,0 +1,872 @@
+DataForSEO API v.3 
+ Search
+ ⌘ K
+ Ask AI 
+ Pricing Sign In Sign Up 
+ Menu
+ Example
+ Introduction 
+ Authentication 
+ SERP API 
+ Overview 
+ Screenshot 
+ AI Summary 
+ Google 
+ Overview 
+ Locations 
+ Languages 
+ Organic 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ Regular 
+ HTML 
+ Live 
+ Advanced 
+ Regular 
+ HTML 
+ AI Mode 
+ Overview 
+ Languages 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ Maps 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Local Finder 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ News 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ Images 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ Search By Image 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Jobs 
+ Overview 
+ Locations 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Autocomplete 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Dataset Search 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Dataset Info 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Ads Advertisers 
+ Overview 
+ Locations 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Ads Search 
+ Overview 
+ Locations 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Finance Explore 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ Finance Markets 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ Finance Quote 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ Finance Ticker Search 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Bing 
+ Overview 
+ Locations 
+ Languages 
+ Organic 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ Regular 
+ HTML 
+ Live 
+ Advanced 
+ Regular 
+ HTML 
+ YouTube 
+ Overview 
+ Locations 
+ Languages 
+ Organic 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Video Info 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Video Subtitles 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Video Comments 
+ Overview 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Yahoo 
+ Overview 
+ Locations 
+ Languages 
+ Organic 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ Regular 
+ HTML 
+ Live 
+ Advanced 
+ Regular 
+ HTML 
+ Baidu 
+ Overview 
+ Locations 
+ Languages 
+ Organic 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ Regular 
+ HTML 
+ Naver 
+ Overview 
+ Organic 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ Regular 
+ HTML 
+ Seznam 
+ Overview 
+ Locations 
+ Languages 
+ Organic 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ Regular 
+ HTML 
+ AI Optimization API 
+ Overview 
+ LLM Mentions 
+ Overview 
+ Filters 
+ Locations and Languages 
+ Search Mentions 
+ Target Metrics 
+ Multi-Target Metrics 
+ Top Mentioned Pages 
+ Top Mentioned Domains 
+ Top Mentioned Brands 
+ Top Mentioned Brand Categories 
+ Historical 
+ Timeseries Delta 
+ Timeseries New & Lost 
+ LLM Mentions Lite 
+ Target Metrics Lite 
+ Top Mentioned Domains Lite 
+ Top Mentioned Pages Lite 
+ Top Mentioned Brands Lite 
+ Top Mentioned Brand Categories Lite 
+ AI Keyword Data 
+ Overview 
+ Locations and Languages 
+ Keywords Search Volume 
+ Chat GPT 
+ LLM Responses 
+ Overview 
+ Models 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ LLM Scraper 
+ Overview 
+ Locations 
+ Languages 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ Claude 
+ LLM Responses 
+ Overview 
+ Models 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Gemini 
+ LLM Responses 
+ Overview 
+ Models 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ LLM Scraper 
+ Overview 
+ Locations 
+ Languages 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ Perplexity 
+ LLM Responses 
+ Overview 
+ Models 
+ Live 
+ Keywords Data API 
+ Overview 
+ Google Ads 
+ Overview 
+ Migration Guide 
+ Google Ads Status 
+ Locations 
+ Languages 
+ Search Volume 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Keywords For Site 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Keywords For Keywords 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Ad Traffic By Keywords 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Bing Ads 
+ Overview 
+ Locations 
+ Languages 
+ Bing Ads Status 
+ Search Volume 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Search Volume History 
+ Locations and Languages 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Keywords For Site 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Keywords For Keywords 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Keyword Performance 
+ Locations and Languages 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Keyword Suggestions For URL 
+ Languages 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Audience Estimation 
+ Job Functions 
+ Industries 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Google Trends 
+ Overview 
+ Locations 
+ Languages 
+ Categories 
+ Explore 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ DataForSEO Trends 
+ Overview 
+ Locations 
+ Explore 
+ Subregion Interests 
+ Demography 
+ Merged Data 
+ Clickstream Data 
+ Overview 
+ Locations and Languages 
+ DataForSEO Search Volume 
+ Global Search Volume 
+ Bulk Search Volume 
+ Domain Analytics API 
+ Overview 
+ Technologies 
+ Overview 
+ Filters 
+ Locations 
+ Languages 
+ Technologies 
+ Aggregation Technologies 
+ Technologies Summary 
+ Technology Stats 
+ Domains by Technology 
+ Domains by HTML Terms 
+ Domain Technologies 
+ Whois 
+ Overview 
+ Filters 
+ Whois Overview 
+ DataForSEO Labs API 
+ Overview 
+ Status 
+ Filters 
+ Locations and Languages 
+ Google 
+ Overview 
+ Categories 
+ Available History 
+ Keyword Research 
+ Keywords For Site 
+ Related Keywords 
+ Keyword Suggestions 
+ Keyword Ideas 
+ Bulk Keyword Difficulty 
+ Search Intent 
+ Keyword Overview 
+ Historical Keyword Data 
+ Market analysis 
+ Languages for Categories for Keywords 
+ Categories For Domain 
+ Categories for Keywords 
+ Keywords For Categories 
+ Domain Metrics By Categories 
+ Top Searches 
+ Competitor Research 
+ SERP Competitors 
+ Ranked Keywords 
+ Competitors Domain 
+ Domain Intersection 
+ Subdomains 
+ Relevant Pages 
+ Domain Rank Overview 
+ Historical SERPs 
+ Historical Rank Overview 
+ Page Intersection 
+ Bulk Traffic Estimation 
+ Historical Bulk Traffic Estimation 
+ Amazon 
+ Overview 
+ Bulk Search Volume 
+ Related Keywords 
+ Ranked Keywords 
+ Product Rank Overview 
+ Product Competitors 
+ Product Keyword Intersections 
+ Google Play 
+ Overview 
+ Bulk App Metrics 
+ Keywords For App 
+ App Competitors 
+ App Intersection 
+ App Store 
+ Overview 
+ Bulk App Metrics 
+ Keywords For App 
+ App Competitors 
+ App Intersection 
+ Backlinks API 
+ Overview 
+ Filters 
+ Index 
+ Summary 
+ History 
+ Backlinks 
+ Anchors 
+ Domain Pages 
+ Domain Pages Summary 
+ Referring Domains 
+ Referring Networks 
+ Competitors 
+ Domain Intersection 
+ Page Intersection 
+ Timeseries Summary ‌ 
+ New & Lost Timeseries 
+ Bulk Ranks 
+ Bulk Backlinks 
+ Bulk Spam Score 
+ Bulk Referring Domains 
+ Bulk New & Lost Backlinks 
+ Bulk New & Lost Referring Domains 
+ Bulk Pages Summary 
+ OnPage API 
+ Overview 
+ Filters and Thresholds 
+ Task POST 
+ Force Stop 
+ Tasks Ready 
+ Summary 
+ Pages 
+ Pages By Resource 
+ Resources 
+ Duplicate Tags 
+ Duplicate Content 
+ Links 
+ Redirect Chains 
+ Non-Indexable 
+ Waterfall 
+ Keyword Density 
+ Microdata 
+ Raw HTML 
+ Page Screenshot 
+ Content Parsing 
+ Content Parsing (Live) 
+ Instant Pages (Live) 
+ Lighthouse 
+ Overview 
+ Languages 
+ Audits 
+ Versions 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Content Analysis API 
+ Overview 
+ Filters 
+ Locations 
+ Languages 
+ Categories 
+ Search 
+ Summary 
+ Sentiment Analysis 
+ Rating Distribution 
+ Phrase Trends 
+ Category Trends 
+ Merchant API 
+ Overview 
+ Google Shopping 
+ Overview 
+ Languages 
+ Locations 
+ Products 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Sellers 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Sellers Ad URL 
+ Product Info 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Reviews 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Amazon 
+ Overview 
+ Locations 
+ Languages 
+ Products 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ ASIN 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ Sellers 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ App Data API 
+ Overview 
+ Google 
+ Overview 
+ Categories 
+ Locations 
+ Languages 
+ App Searches 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ App List 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ App Info 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ App Reviews 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ App Listings 
+ Categories 
+ Search 
+ Apple 
+ Overview 
+ Categories 
+ Locations 
+ Languages 
+ App Searches 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ App List 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ App Info 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ App Reviews 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ App Listings 
+ Categories 
+ Search 
+ Business Data API 
+ Overview 
+ Business Listings 
+ Overview 
+ Locations 
+ Categories 
+ Filters 
+ Search 
+ Categories Aggregation 
+ Google 
+ Overview 
+ Locations 
+ Languages 
+ Google My Business 
+ My Business Info 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ My Business Updates 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Google Hotels 
+ Hotel Searches 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Hotel Info 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Advanced 
+ HTML 
+ Live 
+ Advanced 
+ HTML 
+ Google Reviews 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Extended Reviews 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Questions And Answers 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Live 
+ Trustpilot 
+ Overview 
+ Trustpilot Search 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Trustpilot Reviews 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Tripadvisor 
+ Overview 
+ Locations 
+ Languages 
+ Tripadvisor Search 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Tripadvisor Reviews 
+ Task POST 
+ Tasks Ready 
+ Task GET 
+ Databases 
+ Overview 
+ Backlink Domains 
+ Backlink Summary Database 
+ Google 
+ SERPs Databases 
+ SERPs Advanced 
+ SERPs Regular 
+ Keywords Databases 
+ Unified Search Databases 
+ Google Historical 
+ SERPs Databases 
+ Keywords Databases 
+ Bing 
+ Keywords Databases 
+ Amazon 
+ Products Databases 
+ Google Play 
+ SERPs Database 
+ Listings Database 
+ App Store 
+ SERPs Database 
+ Listings Database 
+ Whois Domains Database 
+ Business Listings Database 
+ Appendix 
+ AI-Optimized Response 
+ User Data 
+ Errors 
+ Sandbox 
+ ID List 
+ API Errors 
+ Webhook Resend 
+ Tasks Fixed 
+ Status 
+ Introduction 
+ Welcome to DataForSEO API! 
+ This is the starting point on your journey towards building powerful SEO software, data analysis pipelines, and robust no-code automations. With DataForSEO you can get all the data you need while saving your time and budget. 
+ Getting started 
+ Follow our recommended learning path to master DataForSEO APIs. 
+ 1. Kickstart Guide to our APIs 
+ 2. Dashboard Guide 
+ 3. Test with API Playground 
+ 4. Free Unlimited Trial Info 
+ 5. Sandbox Best Practices 
+ REST technology 
+ DataForSEO API is using the REST  technology for interchanging data between your application and our service. The data exchange is made through the widely used HTTP protocol, which allows applying our API to almost all programming languages. 
+ Client libraries 
+ You can create your REST class or use the following ready-made classes: 
+ PHP DataForSEO Client 
+ Recommended: officially supported PHP Client. Author – Vitaliy Lyabakh – jovixv 
+ C# DataForSEO Client 
+ Recommended: officially supported C# Client. Author – DataForSEO team 
+ Java DataForSEO Client 
+ Recommended: officially supported Java Client. Author – DataForSEO team 
+ Python DataForSEO Client 
+ Recommended: officially supported Python Client. Author – DataForSEO team 
+ TypeScript DataForSEO Client 
+ Recommended: officially supported TypeScript Client. Author – DataForSEO team 
+ PHP Simple Rest Client 
+ PHP REST Client build with cURL. Author – Fabio Agostinho Boris. 
+ Python Simple Rest Client 
+ Python REST Client. Author – DataForSEO. 
+ PHP, Python, C# and Postman examples 
+ Choose your preferred programming language or API testing tool. 
+ PHP Examples 
+ PHP code examples 
+ Python Examples 
+ Python code examples 
+ C# Examples 
+ C# code examples 
+ POSTMAN Examples 
+ POSTMAN examples 
+ POSTMAN Documenter 
+ Online POSTMAN Documenter 
+ Data encoding 
+ All data you send to DataForSEO API should be UTF-8 encoded. 
+ If you use one of the Clients listed in the first table, gzip will be the default format of data exchange. You will see Content-Encoding: gzip in the header. 
+ All the responses are returned in the JSON  format by default, but we also support responses in the XML  format – just append .xml to the end of your request. In addition to that, you can request HTML results from endpoints that return HTML-encoded results by appending .html to the end of the request’s URL path. 
+ For example, the following requests will return response encoded in XML or HTML accordingly: 
+ https://api.dataforseo.com/v3/appendix/user_data.xml 
+ https://api.dataforseo.com/v3/serp/google/organic/task_get/html/09061543-1535-0066-0000-6240830f56ba.html 
+ Rate limits 
+ Each of DataForSEO APIs has a certain rate limit, which you can find in the HTTP header of every endpoint. 
+ Rate limit HTTP headers we use: 
+ X-RateLimit-Limit – the rate limit ceiling per minute for the given endpoint; 
+ X-RateLimit-Remaining – the number of requests remaining in the current rate limit window. 
+ If your system requires rate limits to be increased, please contact our support team. 
+ Results storage 
+ The term for storing API results in our system depends on the API and method of data retrieval. 
+ Standard method: results are stored for 30 days * 
+ Live method: results are not stored * 
+ HTML results: results are stored for 7 days 
+ * for SERP API in both Standard and Live methods, the results in JSON format are stored for 30 days. 
+ To learn more about the terms of results storage, check this Help Center article . 
+ DataForSEO Help Center 
+ Need guidance? Visit our Help Center for integration tips, troubleshooting info, and product FAQs. 
+ • Live vs Standard method 
+ • What’s task ID? 
+ • Task completion & lists of completed tasks 
+ • Using filters in DataForSEO APIs 
+ • Set multiple tasks in one request 
+ • Webhooks & callbacks 
+ • SERP API best practices 
+ • Keyword Data API best practices 
+ • On-Page API best practices 
+ • Live endpoints best practices 
+ Additional resources 
+ LLMs.txt standard 
+ LLM-friendly docs version 
+ OpenAPI specification 
+ YAML-formatted specification for all APIs 
+ LangChain integration 
+ DataForSEO API Wrapper 
+ To get detailed information about current system status, past and pending incidents, associated endpoints, incident gravity, and time to resolution, visit a dedicated DataForSEO Status Page. 
+ cURL
+ php
+ Node.js
+ Python
+ cSharp

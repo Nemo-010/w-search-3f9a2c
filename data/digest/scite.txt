@@ -1,0 +1,54 @@
+# Scite (scite) category=academic
+home=https://scite.ai/ pricing=https://scite.ai/pricing docs=https://api.scite.ai/ llms=None
+sources_ok: docs:https://api.scite.ai/, llms:https://scite.ai/llms.txt, llms-https://docs.scite.ai/llms.txt:https://docs.scite.ai/llms.txt, llms-full:https://docs.scite.ai/llms-full.txt
+--- ranked fact lines ---
+[llms-full] | **Free**  |                                            \$0 | Trying Scite and using public data                         | Public Papers and Tallies endpoints don't require an API key.                       |
+[llms-full] | **Basic** |                   $20 monthly or $144 annually | Individual researchers using Scite and its AI integrations | Includes 250 MCP credits per month. It doesn't include a self-service REST API key. |
+[llms-full] | **Pro**   |                   $50 monthly or $480 annually | Advanced research and API evaluation                       | Includes 2,500 MCP credits per month and self-service API key access.               |
+[llms-full] | **Team**  | $50 per user monthly or $480 per user annually | Teams that want Pro access under one subscription          | Includes Pro access and 2,500 MCP credits per user per month.                       |
+[llms-full] Annual prices are billed once per year. The annual equivalents are $12 per month for Basic and $40 per month for Pro or Team.
+[llms-full] Up to 500 DOIs per request. A GET variant also exists for compatibility; prefer POST for larger lists.
+[llms-full] Use `limit` (up to 10,000 per request) and `offset` together to page through results.
+[llms-full] Up to 500 DOIs per request. A GET variant of this endpoint also exists for compatibility, but POST is recommended for larger DOI lists.
+[llms-full] | `limit`   | integer   | Results per call. Default `10`, maximum `1000`                           |
+[llms-full] Call repeatedly with the same `dois` and different `term` values — methods, results, limitations — collecting 5 excerpts per call.
+[llms] - [Search device 510(k) clearances](https://docs.scite.ai/api-reference/evidence/search-device-510k-clearances.md): Search FDA 510(k) device clearances with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms] - [Search 510(k) summary PDFs](https://docs.scite.ai/api-reference/evidence/search-510k-summary-pdfs.md): Search FDA 510(k) summary PDFs with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] Search FDA 510(k) summary PDFs with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] Search FDA 510(k) device clearances with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] Exceeding the allowance returns `-32001`. The counter resets at the start of each calendar month.
+[llms] - [Scite Zotero plugin](https://docs.scite.ai/guides/zotero-plugin.md): Install Scite's free Zotero plugin to see Smart Citation tallies and open Scite Reports from your Zotero library.
+[llms] - [Search patents](https://docs.scite.ai/api-reference/evidence/search-patents.md): Search patents with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms] - [Search grants](https://docs.scite.ai/api-reference/evidence/search-grants.md): Search research grants with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms] - [Search clinical trials](https://docs.scite.ai/api-reference/evidence/search-clinical-trials.md): Search clinical trials with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms] - [Search MHRA alerts](https://docs.scite.ai/api-reference/evidence/search-mhra-alerts.md): Search MHRA safety alerts with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] Search clinical trials with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] Search FDA FAERS drug adverse-event reports with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] Search FDA drug labels, Orange Book, and Drugs@FDA records with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] Search research grants with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] Search FDA MAUDE device adverse-event reports with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] Search MHRA safety alerts with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] Search patents with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+[llms-full] * **`q`**: free-text query. Supports `AND`, `OR`, `NOT`, and phrase matching with double quotes: `q=CRISPR`, `q="gene therapy" AND cancer`.
+[llms-full] * **Technology landscaping**: free-text query for a technique, facet by year or assignee via the `facets` endpoint to see who is filing and when.
+[llms-full] Install Scite's free Zotero plugin to see Smart Citation tallies and open Scite Reports from your Zotero library.
+[llms-full] | `q`       | string  | Free-text query. Supports `AND`, `OR`, `NOT`, and `"exact phrase"` |
+--- llms/readme head ---
+# Scite API
+- [Documentation](https://docs.scite.ai/introduction.md): Build tools to find, understand, and use scientific research with Scite.
+- [Quickstart](https://docs.scite.ai/quickstart.md): Retrieve a paper, check its citation tally, and run your first authenticated search.
+- [Get API key](https://docs.scite.ai/authentication.md): Authenticate with an API key or Enterprise credentials.
+- [For agents](https://docs.scite.ai/agents.md): Give ChatGPT, Claude, Microsoft 365 Copilot, and other AI agents access to Scite documentation and citation data.
+- [Glossary](https://docs.scite.ai/concepts/glossary.md): Quick reference for Scite-specific terminology used across the API.
+- [Citations & Tallies](https://docs.scite.ai/concepts/citation-model.md): How Scite models citations: targets, sources, Smart Citations, and tallies.
+- [Search](https://docs.scite.ai/guides/search.md): Query Scite's publication metadata and citation data with Boolean terms and 25+ filters.
+- [Smart Citations](https://docs.scite.ai/guides/smart-citations.md): Get tallies, browse the citation graph, and look up journal-level Smart Citation data.
+- [Scite Zotero plugin](https://docs.scite.ai/guides/zotero-plugin.md): Install Scite's free Zotero plugin to see Smart Citation tallies and open Scite Reports from your Zotero library.
+- [Papers & Authors](https://docs.scite.ai/guides/papers-and-authors.md): Look up publication metadata by DOI or PMID, and author-level metadata and citation statistics.
+- [Overview](https://docs.scite.ai/guides/evidence/overview.md): Search patents, grants, clinical trials, and regulatory records alongside citation data.
+- [Patents](https://docs.scite.ai/guides/evidence/patents.md): Search patent filings with family, forward-citation, assignee, and legal-event data.
+- [Clinical Trials](https://docs.scite.ai/guides/evidence/clinical-trials.md): Search registered clinical trials with phase, status, sponsor, and intervention filters.
+- [Grants](https://docs.scite.ai/guides/evidence/grants.md): Search research grant awards from NIH RePORTER, NSF, and other funding sources.
+- [Drugs](https://docs.scite.ai/guides/evidence/drugs.md): Search FDA drug labels, Orange Book listings, and Drugs@FDA application records.
+- [Device Clearances](https://docs.scite.ai/guides/evidence/devices.md): Search FDA 510(k) device clearance decisions and their summary PDFs.
+- [Adverse Events](https://docs.scite.ai/guides/evidence/adverse-events.md): Search FDA MAUDE device and FAERS drug adverse-event reports.

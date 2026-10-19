@@ -1,0 +1,92 @@
+{
+ "slug": "eventregistry",
+ "name": "Event Registry",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:40+00:00",
+ "sources": {
+  "pricing-err-6e43a9": {
+   "url": "https://eventregistry.org/pricing",
+   "status": 404,
+   "final_url": "https://eventregistry.org/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 5644,
+   "truncated": false,
+   "sha256": "62c0ea4cfed8de131c6bf372cbd24c3b14e453e6323fdb6df36002b2440f6d56",
+   "fetched_at": "2026-10-19T05:54:40+00:00"
+  },
+  "docs": {
+   "url": "https://eventregistry.org/documentation",
+   "status": 200,
+   "final_url": "https://eventregistry.org/documentation",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 5644,
+   "truncated": false,
+   "sha256": "62c0ea4cfed8de131c6bf372cbd24c3b14e453e6323fdb6df36002b2440f6d56",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 38
+  },
+  "home": {
+   "url": "https://eventregistry.org/",
+   "status": 200,
+   "final_url": "https://eventregistry.org/",
+   "content_type": "text/html",
+   "bytes": 160984,
+   "truncated": false,
+   "sha256": "0518d132df38b95b6b13f11b8697271512f7020c8e00124784e4bdb43c585719",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 12654
+  },
+  "llms-err-ce95fe": {
+   "url": "https://eventregistry.org/documentation/llms.txt",
+   "status": 404,
+   "final_url": "https://eventregistry.org/documentation/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 5644,
+   "truncated": false,
+   "sha256": "62c0ea4cfed8de131c6bf372cbd24c3b14e453e6323fdb6df36002b2440f6d56",
+   "fetched_at": "2026-10-19T05:54:43+00:00"
+  },
+  "llms": {
+   "url": "https://eventregistry.org/llms.txt",
+   "status": 200,
+   "final_url": "https://eventregistry.org/llms.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 9130,
+   "truncated": false,
+   "sha256": "f05dbffbfa4a9c6869a1f004767287c19c6eba8ba4323a444eec3b8ff5e0015f",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 9130
+  },
+  "llms-full": {
+   "url": "https://eventregistry.org/llms-full.txt",
+   "status": 200,
+   "final_url": "https://eventregistry.org/llms-full.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 72121,
+   "truncated": false,
+   "sha256": "cf16de03aa7faab3cd200cd74f6d827260757d9e9a21dd1de1e3b4ac10302777",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 71905
+  },
+  "llms-err-622c50": {
+   "url": "https://eventregistry.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://eventregistry.org/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 5644,
+   "truncated": false,
+   "sha256": "62c0ea4cfed8de131c6bf372cbd24c3b14e453e6323fdb6df36002b2440f6d56",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  },
+  "llms-err-6d8761": {
+   "url": "https://docs.eventregistry.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.eventregistry.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  }
+ }
+}

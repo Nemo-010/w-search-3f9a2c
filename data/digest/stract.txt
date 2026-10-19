@@ -1,0 +1,4 @@
+# Stract (stract) category=search-engine
+home=https://stract.com/ pricing=None docs=None llms=None
+sources_ok: home:https://stract.com/
+--- ranked fact lines ---

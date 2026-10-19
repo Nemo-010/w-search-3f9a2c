@@ -1,0 +1,48 @@
+{
+ "slug": "xai-live-search",
+ "name": "xAI Live Search",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:51+00:00",
+ "sources": {
+  "pricing-err-9526a0": {
+   "url": "https://docs.x.ai/docs/models",
+   "status": 403,
+   "final_url": "https://docs.x.ai/docs/models",
+   "content_type": "text/html",
+   "bytes": 1397,
+   "truncated": false,
+   "sha256": "0ad5dcdbda6715fd3075b9f510c02f9976734effce44b4103e32fe07d2768434",
+   "fetched_at": "2026-10-19T05:54:51+00:00"
+  },
+  "docs-err-0b526d": {
+   "url": "https://docs.x.ai/docs/guides/live-search",
+   "status": 403,
+   "final_url": "https://docs.x.ai/docs/guides/live-search",
+   "content_type": "text/html",
+   "bytes": 1397,
+   "truncated": false,
+   "sha256": "4199f882a4e86f7b75bb9341c8ab3d78116e53a63d7f1da45116583989860b8e",
+   "fetched_at": "2026-10-19T05:54:51+00:00"
+  },
+  "llms-err-7f415f": {
+   "url": "https://docs.x.ai/docs/guides/live-search/llms.txt",
+   "status": 403,
+   "final_url": "https://docs.x.ai/docs/guides/live-search/llms.txt",
+   "content_type": "text/html",
+   "bytes": 459,
+   "truncated": false,
+   "sha256": "2d88528ab50831e7ba246ebf2434f678bdce70decbcfb1d9d8fa78a0f0f05ebb",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  },
+  "llms-err-a18a4b": {
+   "url": "https://docs.x.ai/docs/guides/live-search/docs/llms.txt",
+   "status": 403,
+   "final_url": "https://docs.x.ai/docs/guides/live-search/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 459,
+   "truncated": false,
+   "sha256": "2d88528ab50831e7ba246ebf2434f678bdce70decbcfb1d9d8fa78a0f0f05ebb",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  }
+ }
+}

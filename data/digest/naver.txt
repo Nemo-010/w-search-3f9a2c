@@ -1,0 +1,5 @@
+# Naver Search API (naver) category=search-engine
+home=https://developers.naver.com/docs/serviceapi/search/blog/blog.md pricing=https://developers.naver.com/docs/serviceapi/search/blog/blog.md docs=https://developers.naver.com/docs/serviceapi/search/blog/blog.md llms=None
+sources_ok: pricing:https://developers.naver.com/docs/serviceapi/search/blog/blog.md, llms:https://developers.naver.com/docs/serviceapi/search/blog/blog.md/llms.txt, llms-full:https://developers.naver.com/docs/serviceapi/search/blog/blog.md/docs/llms-full.txt, llms-https://developers.naver.com/docs/serviceapi/search/blog/blog.md/docs/llms.txt:https://developers.naver.com/docs/serviceapi/search/blog/blog.md/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---

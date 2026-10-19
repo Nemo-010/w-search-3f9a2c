@@ -1,0 +1,45 @@
+# TikHub (tikhub) category=ai-search
+home=https://tikhub.io/ pricing=https://tikhub.io/pricing docs=https://docs.tikhub.io/ llms=None
+sources_ok: pricing:https://tikhub.io/pricing, docs:https://docs.tikhub.io/, home:https://tikhub.io/, llms:https://docs.tikhub.io/llms.txt, llms-https://tikhub.io/llms.txt:https://tikhub.io/llms.txt, llms-full:https://tikhub.io/llms-full.txt
+--- ranked fact lines ---
+[llms-full] - $0.05 free credit (~50 requests) for new accounts, granted once per user
+[llms] Pricing: pay-as-you-go from $0.001/request with automatic daily volume discounts (down to $0.0005 at 30,000+ requests/day); $0.05 free sign-up credit (~50 requests, no credit card, granted once per user); default 10 RPS rate limit, upgradeable to 100+ RPS; Enterprise from $3,000 one-time or $4,500 cumulative spend. Payment methods: PayPal (guest checkout), Alipay, USDT.
+[llms] - [Getting Started Guide](https://tikhub.io/getting-started): Sign up, claim free credit, add funds, make your first API call — 4 steps
+[docs] * Insufficient balance, this endpoint requires payment and accepts free credits.
+[docs] * Insufficient balance, this endpoint requires payment and does not accept free credits.
+[llms-full] - RPS plans: 20 RPS ($5/mo) up to 100 RPS ($55/mo)
+[llms-full] - **Pricing**: From $0.40 per 1K records at volume (tiers: 100K–500K records from $150; 20M+ records from $8,000)
+[llms-full] | 0 – 1,000 | $0.001 |
+[llms-full] | 1,000 – 5,000 | $0.0009 (-10%) |
+[llms-full] | 5,000 – 10,000 | $0.0008 (-20%) |
+[llms-full] | 10,000 – 20,000 | $0.0007 (-30%) |
+[llms-full] | 20,000 – 30,000 | $0.0006 (-40%) |
+[llms-full] | 30,000+ | $0.0005 (-50%) |
+[llms-full] - Minimum: $3,000 one-time or $4,500 cumulative spend
+[llms-full] - Alipay (daily limit $250; contact us for higher limits)
+[llms-full] - Default: 10 requests per second (RPS), free
+[llms-full] | Daily Volume (requests) | Price per Request |
+[docs] ##### Method 1: Use API Token in the Request Header (Recommended)
+[docs] 2. Go to the user center, click on the API token menu, and create an API token.
+[docs] 3. Copy and use the API token in the request header.
+[docs] 4. Keep your API token confidential and use it only in the request header.
+[llms-full] TikHub Social Media Extension (Chrome): a bring-your-own-key side-panel analytics toolkit for TikTok, Douyin, Instagram, X, and Bilibili. Collect comments, analyze public accounts, and generate one-click AI-powered trend reports (interactive HTML + raw JSON/CSV export). Open the Chrome Web Store and search "TikHub". Requires a free TikHub API key.
+[llms-full] ### Free Tier
+[llms-full] - 3–10% bonus credits on every purchase
+--- llms/readme head ---
+# TikHub
+> TikHub is a social media data infrastructure platform providing 1,000+ real-time API endpoints across 16 social platforms, 1B+ record datasets for AI training, 990+ MCP tools for AI agents, and a real-time Live Room WebSocket API — serving developers, AI agents, researchers, and enterprises.
+TikHub focuses on social data infrastructure for the AI era: social reasoning and emotional-intelligence datasets for physical AI, plus real-time social APIs powering AI agents in quantitative trading, government & defense, and marketing. 30,000+ developers and data teams use TikHub; 300M+ requests are ingested daily. Public data only — GDPR & CCPA aligned.
+Supported platforms (16): TikTok, Douyin, Xigua, Instagram, YouTube, Twitter/X, Rednote (XHS / Xiaohongshu), Threads, LinkedIn, Reddit, Bilibili, Weibo, Kuaishou, WeChat, Lemon8, Zhihu.
+Languages: the whole site is published in English (tikhub.io/), Simplified Chinese (/zh), French (/fr) and Spanish (/es). Every page exists at the same path in all four trees — /pricing, /zh/pricing, /fr/pricing, /es/pricing — and the English URL is the x-default.
+Pricing: pay-as-you-go from $0.001/request with automatic daily volume discounts (down to $0.0005 at 30,000+ requests/day); $0.05 free sign-up credit (~50 requests, no credit card, granted once per user); default 10 RPS rate limit, upgradeable to 100+ RPS; Enterprise from $3,000 one-time or $4,500 cumulative spend. Payment methods: PayPal (guest checkout), Alipay, USDT.
+## Docs
+- [API Documentation](https://docs.tikhub.io): Full endpoint reference for all platforms
+- [Getting Started Guide](https://tikhub.io/getting-started): Sign up, claim free credit, add funds, make your first API call — 4 steps
+- [API Reference](https://tikhub.io/api-reference): Browse 1,000+ endpoints across all platform series
+- [MCP Integration Guide](https://tikhub.io/mcp): 990+ MCP tools for Claude Desktop, Cursor, VS Code, LangChain — connect via `npx mcp-remote https://mcp.tikhub.io/{platform}/mcp`
+- [Code Tutorials](https://tikhub.io/tutorials): Python, JavaScript, Go, Java, PHP, and cURL examples
+## Platform APIs
+- [TikTok API](https://tikhub.io/tiktok-api): 6 API series — videos, comments, users, search, live, TikTok Shop, ads
+- [Instagram API](https://tikhub.io/instagram-api): Posts, reels, stories, profiles, comments, followers — Graph API alternative
+- [YouTube API](https://tikhub.io/youtube-api): Videos, channels, comments, search, shorts, subtitles — no quota limits

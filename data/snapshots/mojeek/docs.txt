@@ -1,0 +1,16 @@
+API Documentation 
+ Skip to main content 
+ Company About Vision, values & history Press & Media Contact, media & assets Careers Join the team Contact Us Get in touch Products Mojeek Ads Reach new audiences Focus Search the web you want Web Search API Embedded web search Site Search API Embedded site search Simple Search Boxes Extensible search widgets Help & Support Support Support guides & information Browsers Browser guides Mobile Mobile guides API Docs Developer documentation Engage Blog Latest updates from us Community Join the discussion Newsletter Get updates by email ✕ Search Web Images News Substack Company About Press & Media Careers Contact Us Products Mojeek Ads Focus Web Search API Site Search API Simple Search Boxes Help & Support Support Browsers Mobile API Docs Engage Blog Community Newsletter 
+ API Documentation 
+ Mojeek's API (Application Programming Interface) offers varying levels of access to advanced users and organisations wanting to retrieve results from Mojeek’s web search index. 
+ Search API Documentation 
+ Full access to Mojeek's general web search results, intended for individuals and organisations of all sizes that want to provide embedded site or web search into their websites and applications. 
+ For details on the customisable packages and pricing, see the Search API page. 
+ More: Search API Documentation 
+ Organisation Search API Documentation 
+ Provides everything the Search API does, plus the ability to add and refresh pages on demand, search over multiple websites, and perform faceted search (by way of tags/categories) . 
+ More: Organisation Search API Documentation 
+ Related Pages 
+ Search API 
+ OrgSe 
+ Search Web Images News Substack Company About Press & Media Careers Contact Us Products Mojeek Ads Focus Web Search API Site Search API Simple Search Boxes Help & Support Support Browsers Mobile API Docs Subscribe to our newsletter About Products Support Blog Privacy Terms Settings

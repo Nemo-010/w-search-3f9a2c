@@ -1,0 +1,22 @@
+Documentation - Anchor Browser Docs Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Anchor Browser Docs home page Search... ⌘ K Ask Assistant ⌘ I Support Live Playground Live Playground Search... Navigation Introduction Documentation Documentation API Reference SDK Reference Interactive Playground Introduction Introduction Quickstart Example Use-Cases Platform Browsers Tasks Network and Stealth Managed Authentication Advanced Third-Party Embedding Integrations Model Context Protocol (MCP) Sandboxes Browser-use Stagehand Groq GPT-OSS n8n Make Zapier CrewAI LangChain Custom Integration Open Source Account Trust & Security Pricing Introduction Documentation Cloud browsers for AI agents and automation: sessions over CDP or REST, natural-language web tasks, managed authentication, volumes, recordings, batch sessions, and stealth browsing. Get a key at https://docs.anchorbrowser.io/quickstart/agent-access . Secure cloud browsers for agents Enterprise ready browser infrastructure Anchor gives agents a real browser in the cloud - navigate, authenticate, fill forms, and extract data on sites that were never built for automation. Get your API key → Copy prompt Node.js Python import { client , agentTask } from 'anchorbrowser' ; 
+ client . setConfig ({ auth : () => process . env . ANCHOR_API_KEY }); 
+ const result = await agentTask ( 
+ 'Go to example.com and return the page title' 
+ ); 
+ console . log ( result . data . result ); 
+ import os 
+ from anchorbrowser import Anchorbrowser 
+ client = Anchorbrowser( api_key = os.getenv( 'ANCHOR_API_KEY' )) 
+ result = client.agent.task( 
+ 'Go to example.com and return the page title' 
+ ) 
+ print (result.data.result) 
+ ​ Get started 
+ Open the playground No install, no API key. Build and run browser flows in your browser right now. 
+ Start your first task Demonstrate a flow or send a natural-language prompt - the agent navigates, clicks, and extracts data for you. Start your first browser Create a cloud session and connect with Playwright or Puppeteer over CDP. Install the SDK Official Node.js and Python client for tasks, sessions, and auth in your app. Call the API Integrate directly with REST or through Make, LangChain, and CrewAI. 
+ ​ Building a product? 
+ Add a browser to your agent platform Give your AI agents cloud browsers they can open on demand — via SDK, MCP, or REST — when they need to navigate, click, or extract data. Collect data from a SaaS that doesn't have an API Sign in to dashboards and portals, navigate the UI, and pull reports or records from web apps with no public API. Enterprise automation Deploy versioned, repeatable workflows with managed identities, scheduling, and session control built for production teams. Overcome bot detection challenges Use residential proxies, extra-stealth fingerprints, and captcha solving to automate sites that block standard browsers. 
+ ​ Platform overview 
+ Managed authentication Applications, identities, and OmniConnect for persistent logins across sessions. Proxy and IP management Residential proxies, dedicated sticky IPs, and VPN routing for geo-specific access. Extra stealth mode Anti-detection fingerprinting and bot bypass for sensitive sites. Agentic browser control Natural-language tasks, computer-use agents, and human-in-the-loop workflows. Automation tasks Versioned TypeScript workflows you deploy once and run on demand. 
+ ​ Next steps 
+ Example use-cases Form filling, research, configuration collection, and more. Build tools Wrap browser flows as tools your AI agent can call. MCP integration Connect Anchor to Claude Desktop and other MCP clients. API reference Full endpoint catalog with request and response schemas. Was this page helpful? Yes No Agent Access x Powered by This documentation is built and hosted on Mintlify, a developer documentation platform Assistant Responses are generated using AI and may contain mistakes.

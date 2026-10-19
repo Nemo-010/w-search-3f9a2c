@@ -1,0 +1,27 @@
+# TinyFish (tinyfish) category=ai-search
+home=https://www.tinyfish.ai/ pricing=None docs=https://docs.tinyfish.ai/ llms=https://docs.tinyfish.ai/llms.txt
+sources_ok: llms:https://docs.tinyfish.ai/llms.txt, llms-full:https://docs.tinyfish.ai/llms-full.txt, docs:https://docs.tinyfish.ai/, home:https://www.tinyfish.ai/
+--- ranked fact lines ---
+[llms] - [Start multiple automations asynchronously](https://docs.tinyfish.ai/api-reference/automation/start-multiple-automations-asynchronously.md): Creates and enqueues multiple automation runs in a single request, returning run_ids immediately without waiting for completion. Maximum 100 runs per request.
+[llms] - [Get multiple runs by IDs](https://docs.tinyfish.ai/api-reference/runs/get-multiple-runs-by-ids.md): Retrieve multiple runs by their IDs in a single request. Returns found runs and lists any IDs that were not found or not owned. Maximum 100 IDs per request.
+[llms] - [Cancel multiple runs by IDs](https://docs.tinyfish.ai/api-reference/runs/cancel-multiple-runs-by-ids.md): Cancel multiple runs by their IDs in a single request. Returns per-run results including cancelled runs, already-terminal runs, and not-found IDs. Maximum 100 IDs per request. Idempotent: calling twice returns consistent results.
+[docs] Search and Fetch are free within a daily allowance. Agent, Research, and Browser draw from your wallet as they run.
+--- llms/readme head ---
+# TinyFish Web Agent
+- [TinyFish Developer Documentation](https://docs.tinyfish.ai/index.md): Choose the right TinyFish API, authenticate quickly, and start integrating faster
+- [Quick Start](https://docs.tinyfish.ai/quick-start.md): Get your first web automation running in under 5 minutes
+- [Authentication](https://docs.tinyfish.ai/authentication.md): How to authenticate with the TinyFish API
+- [For Coding Agents](https://docs.tinyfish.ai/for-coding-agents.md): Single-page TinyFish context for Claude, Codex, Cursor, and other coding agents
+- [Agent API](https://docs.tinyfish.ai/agent-api/index.md): Use natural-language goals to automate workflows on real websites
+- [Agent API Reference](https://docs.tinyfish.ai/agent-api/reference.md): Technical reference for goal-based TinyFish automation
+- [Browser Context Profiles API](https://docs.tinyfish.ai/agent-api/browser-context-profiles.md): Create, set up, and use Browser Context Profiles from the Agent API
+- [Agent Endpoints](https://docs.tinyfish.ai/key-concepts/endpoints.md): Choose the right TinyFish Agent endpoint based on sync, async, or streaming needs
+- [Runs](https://docs.tinyfish.ai/key-concepts/runs.md): The lifecycle of a TinyFish Web Agent automation
+- [The Goal Parameter](https://docs.tinyfish.ai/key-concepts/goals.md): Natural language instructions that tell TinyFish Web Agent what to do
+- [Structured Output](https://docs.tinyfish.ai/key-concepts/structured-output.md): Structured-output schema support for the output_schema request field
+- [Goal Prompting Guide](https://docs.tinyfish.ai/prompting-guide.md): Write goals that make TinyFish Web Agent work like magic
+- [Search API](https://docs.tinyfish.ai/search-api/index.md): Search the web and get structured results via API
+- [Search API Reference](https://docs.tinyfish.ai/search-api/reference.md): Complete reference for the Search API endpoint
+- [Search Examples](https://docs.tinyfish.ai/search-api/examples.md): Real-world examples for the Search API
+- [Monitor](https://docs.tinyfish.ai/monitor/index.md): Track a webpage or topic on a schedule and receive updates when it changes
+- [Monitor API Reference](https://docs.tinyfish.ai/monitor/api-reference.md): Create and manage Page and Topic Monitors through the REST API

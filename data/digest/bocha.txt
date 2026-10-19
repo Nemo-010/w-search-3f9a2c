@@ -1,0 +1,4 @@
+# Bocha AI (bocha) category=search-engine
+home=https://open.bochaai.com/ pricing=None docs=None llms=None
+sources_ok: home:https://open.bochaai.com/
+--- ranked fact lines ---

@@ -1,0 +1,49 @@
+{
+ "slug": "arxiv",
+ "name": "arXiv API",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:43+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://info.arxiv.org/help/api/index.html",
+   "status": 200,
+   "final_url": "https://info.arxiv.org/help/api/index.html",
+   "content_type": "text/html",
+   "bytes": 81483,
+   "truncated": false,
+   "sha256": "d39ef59296d8d1636f81eabea2f98476d2bb62c43c66dde3b408f9a3a2f3dbc8",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 4663
+  },
+  "llms-err-a40502": {
+   "url": "https://info.arxiv.org/help/api/index.html/llms.txt",
+   "status": 404,
+   "final_url": "https://info.arxiv.org/help/api/index.html/llms.txt",
+   "content_type": "text/html",
+   "bytes": 76450,
+   "truncated": false,
+   "sha256": "f4ca244abdd379d6a47e5e443c033312b850db388d6efcce589c6a212ed98aaf",
+   "fetched_at": "2026-10-19T05:54:43+00:00"
+  },
+  "llms-err-8cffe7": {
+   "url": "https://info.arxiv.org/help/api/index.html/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://info.arxiv.org/help/api/index.html/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 76450,
+   "truncated": false,
+   "sha256": "f4ca244abdd379d6a47e5e443c033312b850db388d6efcce589c6a212ed98aaf",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  },
+  "llms-err-abb391": {
+   "url": "https://docs.info.arxiv.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.info.arxiv.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  }
+ }
+}

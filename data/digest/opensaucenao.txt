@@ -1,0 +1,4 @@
+# SauceNAO (opensaucenao) category=search-engine
+home=https://saucenao.com/ pricing=https://saucenao.com/user.php?page=search-api docs=https://saucenao.com/user.php?page=search-api llms=None
+sources_ok: home:https://saucenao.com/
+--- ranked fact lines ---

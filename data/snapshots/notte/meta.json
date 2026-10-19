@@ -1,0 +1,84 @@
+{
+ "slug": "notte",
+ "name": "Notte",
+ "category": "browser",
+ "fetched_at": "2026-10-19T05:54:24+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.notte.cc/pricing",
+   "status": 200,
+   "final_url": "https://www.notte.cc/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 74132,
+   "truncated": false,
+   "sha256": "26d5e66f6920d0532bdf452b946a2c193145e5c6e6a93ba7d67b4740425ac0ef",
+   "fetched_at": "2026-10-19T05:59:40+00:00",
+   "text_bytes": 3234
+  },
+  "docs": {
+   "url": "https://docs.notte.cc/",
+   "status": 200,
+   "final_url": "https://docs.notte.cc/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 352812,
+   "truncated": false,
+   "sha256": "9e9fd9302731c1527951e23c0d31ed8caa83e1a2d20ef2d417fe469ea669f1ab",
+   "fetched_at": "2026-10-19T05:54:25+00:00",
+   "text_bytes": 3004
+  },
+  "home": {
+   "url": "https://www.notte.cc/",
+   "status": 200,
+   "final_url": "https://www.notte.cc/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 345943,
+   "truncated": false,
+   "sha256": "fc0d134cd3f2430528d8454fb9cac5647df9963e672876c89f5ebfaa3b79b21b",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 13839
+  },
+  "llms": {
+   "url": "https://docs.notte.cc/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.notte.cc/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 46179,
+   "truncated": false,
+   "sha256": "9826d9ef5f1d4291116445c56553ed9d7af8a2530857b95f9b38d4440812faff",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 46179
+  },
+  "llms-full": {
+   "url": "https://www.notte.cc/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.notte.cc/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 12068,
+   "truncated": false,
+   "sha256": "c8a01b2c2783770e396c2774e651c28ce673d874f71e5bcaa18d0f2866952d17",
+   "fetched_at": "2026-10-19T05:54:31+00:00",
+   "text_bytes": 12068
+  },
+  "llms-https://www.notte.cc/llms.txt": {
+   "url": "https://www.notte.cc/llms.txt",
+   "status": 200,
+   "final_url": "https://www.notte.cc/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 6280,
+   "truncated": false,
+   "sha256": "553a66c69c592cffaea9cfce64a10775e65e175e04e8667540dd9aeb3edc3a36",
+   "fetched_at": "2026-10-19T05:54:30+00:00",
+   "text_bytes": 6276
+  },
+  "llms-err-7a4075": {
+   "url": "https://www.notte.cc/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.notte.cc/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 22813,
+   "truncated": false,
+   "sha256": "9f697b6087b043ea05495844285dfa6086e8a13e9e5b25d337e902ad6470629d",
+   "fetched_at": "2026-10-19T05:54:31+00:00"
+  }
+ }
+}

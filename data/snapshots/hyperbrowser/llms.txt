@@ -1,0 +1,211 @@
+# Hyperbrowser
+
+- [Home](https://hyperbrowser.ai/docs/home.md): Fast Cloud Browsers for AI Agents and Automation
+- [Introduction](https://hyperbrowser.ai/docs/introduction.md): Fast Cloud Browsers for your AI Agents
+- [Quickstart](https://hyperbrowser.ai/docs/quickstart.md): Start automating with Hyperbrowser Sessions
+- [Configuring Sessions](https://hyperbrowser.ai/docs/sessions/create.md): Learn how to create and configure Hyperbrowser sessions
+- [Session Lifecycle](https://hyperbrowser.ai/docs/sessions/lifecycle.md): Manage the lifecycle of your Hyperbrowser sessions
+- [Connect with Playwright](https://hyperbrowser.ai/docs/sessions/playwright.md): Control Hyperbrowser sessions using Playwright
+- [Connect with Puppeteer](https://hyperbrowser.ai/docs/sessions/puppeteer.md): Control Hyperbrowser sessions using Puppeteer
+- [Connect with Selenium](https://hyperbrowser.ai/docs/sessions/selenium.md): Control Hyperbrowser sessions using Selenium
+- [Computer Actions](https://hyperbrowser.ai/docs/sessions/computer-actions.md): Control sessions with low-level mouse and keyboard input
+- [WebMCP page tools](https://hyperbrowser.ai/docs/sessions/webmcp.md): Discover and invoke tools exposed by browser pages, including long-running tools and forms awaiting human submission.
+- [Credential fill](https://hyperbrowser.ai/docs/sessions/credentials.md): Type stored logins and one-time codes into a session's login form, without your code or an LLM seeing the values.
+- [Session Parameters](https://hyperbrowser.ai/docs/sessions/parameters.md): Learn about the parameters that can be used to configure Hyperbrowser sessions
+- [Stealth Mode](https://hyperbrowser.ai/docs/sessions/stealth.md): Configure anti-detection features for your browser sessions
+- [Proxy Configuration](https://hyperbrowser.ai/docs/sessions/proxy.md): Route your sessions through proxy servers for geo-targeting and IP rotation
+- [Multi-Region Support](https://hyperbrowser.ai/docs/sessions/regions.md): Deploy browser sessions across multiple geographic regions for optimal performance and compliance
+- [CAPTCHA Solving](https://hyperbrowser.ai/docs/sessions/captcha-solving.md): Learn how to solve CAPTCHAs in your browser sessions
+- [Ad Blocking](https://hyperbrowser.ai/docs/sessions/ad-blocking.md): Learn how to block ads and trackers in your browser sessions
+- [Profiles](https://hyperbrowser.ai/docs/sessions/profiles.md): Persist browser state across sessions
+- [Static IPs](https://hyperbrowser.ai/docs/sessions/static-ips.md): Use dedicated IP addresses for your sessions
+- [Recordings](https://hyperbrowser.ai/docs/sessions/recordings.md): Record and replay your browser sessions with web recordings and video replays
+- [Live View](https://hyperbrowser.ai/docs/sessions/live-view.md): Watch and interact with your browser sessions in real-time
+- [Browser Extensions](https://hyperbrowser.ai/docs/sessions/extensions.md): Load custom Chrome extensions into your browser sessions
+- [File Downloads](https://hyperbrowser.ai/docs/sessions/downloads.md): Save and retrieve files downloaded during browser sessions
+- [File Uploads](https://hyperbrowser.ai/docs/sessions/uploads.md): Learn how to upload files to your browser sessions
+- [Overview](https://hyperbrowser.ai/docs/web/overview.md): Fetch pages, crawl sites, and search the web
+- [Fetch](https://hyperbrowser.ai/docs/web/fetch.md): Fetch any page and get data in the formats you choose
+- [Crawl](https://hyperbrowser.ai/docs/web/crawl.md): Crawl a website and get structured data from multiple pages
+- [Search](https://hyperbrowser.ai/docs/web/search.md): Query the web and get clean, structured results
+- [Overview](https://hyperbrowser.ai/docs/agents/overview.md): Use AI agents to easily automate browser tasks and create agentic workflows
+- [Browser-Use](https://hyperbrowser.ai/docs/agents/browser-use.md): Fast and efficient browser automation with the open-source browser-use framework
+- [Claude Computer Use](https://hyperbrowser.ai/docs/agents/claude-computer-use.md): Automate browser tasks using Anthropic's Claude with sophisticated computer use capabilities
+- [OpenAI CUA](https://hyperbrowser.ai/docs/agents/openai-cua.md): Execute AI agent tasks using OpenAI's Computer-Using Agent
+- [Gemini Computer Use](https://hyperbrowser.ai/docs/agents/gemini-computer-use.md): Automate browser tasks with Google's Gemini computer use capabilities
+- [Meta Computer Use](https://hyperbrowser.ai/docs/agents/meta-computer-use.md): Automate browser tasks with Meta's Muse Spark and Muse Wonder computer use capabilities
+- [Grok Computer Use](https://hyperbrowser.ai/docs/agents/grok-computer-use.md): Automate browser tasks with xAI's Grok 4.7 computer use capabilities
+- [Jev Computer Use](https://hyperbrowser.ai/docs/agents/jev-computer-use.md): Automate browser tasks with Jev's TypeSafe decision models
+- [HyperAgent](https://hyperbrowser.ai/docs/agents/hyperagent.md): Execute AI agent tasks using HyperAgent, our open-source Playwright-powered framework
+- [Overview](https://hyperbrowser.ai/docs/hyperagent/overview.md): Use HyperAgent to automate browser tasks with AI
+- [Quickstart](https://hyperbrowser.ai/docs/hyperagent/quickstart.md): Build your first HyperAgent automation in under a minute
+- [page.ai()](https://hyperbrowser.ai/docs/hyperagent/page-ai.md): Execute complex multi-step browser tasks with AI-powered automation
+- [page.perform()](https://hyperbrowser.ai/docs/hyperagent/page-perform.md): Execute fast, single-action browser interactions using natural language
+- [page.extract()](https://hyperbrowser.ai/docs/hyperagent/extract.md): Extract structured data from web pages using natural language and Zod schemas
+- [LLM Providers](https://hyperbrowser.ai/docs/hyperagent/llm-providers.md): Configure OpenAI, Anthropic, Google Gemini as your LLM provider
+- [HyperBrowser Provider](https://hyperbrowser.ai/docs/hyperagent/browser-providers.md): Run HyperAgent locally or scale to the cloud with Hyperbrowser
+- [Action Caching](https://hyperbrowser.ai/docs/hyperagent/action-cache.md): Record and replay browser automation tasks without LLM calls for fast, deterministic execution
+- [Multi-Page Management](https://hyperbrowser.ai/docs/hyperagent/multi-page.md): Manage multiple browser pages and tabs simultaneously
+- [Custom Actions](https://hyperbrowser.ai/docs/hyperagent/custom-actions.md): Extend HyperAgent with custom actions for specialized workflows
+- [MCP Integration](https://hyperbrowser.ai/docs/hyperagent/mcp.md): Connect HyperAgent to MCP servers for extended capabilities
+- [Scrape](https://hyperbrowser.ai/docs/web-scraping/scrape.md): Scrape any page and get formatted data
+- [Crawl](https://hyperbrowser.ai/docs/web-scraping/crawl.md): Crawl websites and get formatted data from multiple pages
+- [Extract](https://hyperbrowser.ai/docs/web-scraping/extract.md): Extract structured data from web pages using AI
+- [Advanced Guide](https://hyperbrowser.ai/docs/web-scraping/advanced-guide.md): End-to-end guide to scrape, crawl, and extract structured data
+- [Model Context Protocol](https://hyperbrowser.ai/docs/integrations/model-context-protocol.md): Use Hyperbrowser with the Model Context Protocol (MCP) to enable web automation tools for AI models
+- [X402](https://hyperbrowser.ai/docs/integrations/x402/overview.md): Enable autonomous agent payments with X402 protocol
+- [Sessions with X402](https://hyperbrowser.ai/docs/integrations/x402/sessions.md): Purchase a browser session with a wallet, without a Hyperbrowser API key
+- [Fetch with X402](https://hyperbrowser.ai/docs/integrations/x402/fetch.md): Pay for individual page fetches with a wallet
+- [Search with X402](https://hyperbrowser.ai/docs/integrations/x402/search.md): Pay for individual web searches with a wallet
+- [LangChain](https://hyperbrowser.ai/docs/integrations/langchain.md): Integrate Hyperbrowser with LangChain for web scraping and document loading
+- [LlamaIndex](https://hyperbrowser.ai/docs/integrations/llamaindex.md): Integrate Hyperbrowser with LlamaIndex for web scraping and document loading
+- [AI Function Calling](https://hyperbrowser.ai/docs/integrations/ai-function-calling.md): Integrate Hyperbrowser scrape, crawl, and extract tools with OpenAI and Anthropic function calling
+- [Stagehand](https://hyperbrowser.ai/docs/integrations/stagehand.md): Run Stagehand automations on Hyperbrowser's managed browser sessions.
+- [Introduction](https://hyperbrowser.ai/docs/sandboxes/introduction.md): Run your agents in the cloud fully harnessed
+- [Install](https://hyperbrowser.ai/docs/sandboxes/install.md): Install the Hyperbrowser SDKs and the hx CLI
+- [Creating Sandboxes](https://hyperbrowser.ai/docs/sandboxes/create.md): Create and configure Hyperbrowser sandboxes
+- [macOS (Beta)](https://hyperbrowser.ai/docs/sandboxes/macos.md): Create macOS sandboxes with a live desktop and persistent disks using the API or CLI.
+- [Sandbox Lifecycle](https://hyperbrowser.ai/docs/sandboxes/lifecycle.md)
+- [Sandbox Runtime URLs](https://hyperbrowser.ai/docs/sandboxes/runtime.md): Understand runtime URLs, exposed ports, and authenticated browser access
+- [Sandbox Networking](https://hyperbrowser.ai/docs/sandboxes/networking.md): Control outbound network access from a sandbox
+- [Sandbox Processes](https://hyperbrowser.ai/docs/sandboxes/processes.md)
+- [Secrets](https://hyperbrowser.ai/docs/sandboxes/secrets.md): Store API keys and other values encrypted, and pass them to sandbox processes as environment variables without putting them in your code or images.
+- [Vaults](https://hyperbrowser.ai/docs/sandboxes/vaults.md): Group secrets under one name and pass them to sandboxes and browser sessions together.
+- [1Password](https://hyperbrowser.ai/docs/sandboxes/1password.md): Read fields from your 1Password account into sandbox processes and browser login forms, without storing the values in Hyperbrowser.
+- [Sandbox Terminal](https://hyperbrowser.ai/docs/sandboxes/terminal.md): Open interactive terminal sessions inside a sandbox
+- [Sandbox Snapshots](https://hyperbrowser.ai/docs/sandboxes/snapshots.md): Create memory snapshots and start sandboxes from snapshots
+- [Sandbox CLI](https://hyperbrowser.ai/docs/sandboxes/cli.md): Use the Hyperbrowser CLI to create and manage sandboxes
+- [Base Images](https://hyperbrowser.ai/docs/sandboxes/base-images.md)
+- [OpenClaw + WhatsApp](https://hyperbrowser.ai/docs/sandboxes/openclaw-whatsapp.md): Connect OpenClaw to WhatsApp in a Hyperbrowser sandbox
+- [Build And Upload A Custom Image](https://hyperbrowser.ai/docs/sandboxes/custom-images.md): Package a local Docker image into a Hyperbrowser sandbox image with the CLI
+- [Overview](https://hyperbrowser.ai/docs/sandboxes/volumes.md): Persistent storage that can be mounted into sandboxes
+- [Managing Volumes](https://hyperbrowser.ai/docs/sandboxes/volumes/managing.md)
+- [Mounting Volumes](https://hyperbrowser.ai/docs/sandboxes/volumes/mounting.md): Attach volumes to sandboxes at launch
+- [Read and Write Mounted Volume Data](https://hyperbrowser.ai/docs/sandboxes/volumes/data-access.md): Work with volume files through mounted paths
+- [Overview](https://hyperbrowser.ai/docs/sandboxes/filesystem/overview.md): Understand the sandbox local filesystem surface and the operations available on it
+- [Read And Write Operations](https://hyperbrowser.ai/docs/sandboxes/filesystem/read-write.md): Read, write, inspect, and manage files and directories inside a sandbox
+- [Watch](https://hyperbrowser.ai/docs/sandboxes/filesystem/watch.md): Stream file system events from a sandbox directory or path
+- [Upload, Download, And Presigned URLs](https://hyperbrowser.ai/docs/sandboxes/filesystem/transfers.md): Transfer file contents into and out of a sandbox with direct and presigned operations
+- [Create new session](https://hyperbrowser.ai/docs/api-reference/create-new-session.md)
+- [Get session by ID](https://hyperbrowser.ai/docs/api-reference/get-session-by-id.md)
+- [Stop a session](https://hyperbrowser.ai/docs/api-reference/stop-a-session.md)
+- [Update a running session](https://hyperbrowser.ai/docs/api-reference/update-a-running-session.md): Update supported settings on an active browser session. Supported update types are profile, proxy, screen, and solveCaptchas.
+- [Run manual CAPTCHA evaluation](https://hyperbrowser.ai/docs/api-reference/manually-evaluate-captcha.md): Trigger a bounded CAPTCHA evaluation on an active browser session. Supported CAPTCHA targets are turnstile, cloudflare-challenge, aliexpress, recaptcha, and amazon.
+- [Get list of sessions](https://hyperbrowser.ai/docs/api-reference/get-list-of-sessions.md)
+- [Get session recording URL](https://hyperbrowser.ai/docs/api-reference/get-session-recording-url.md)
+- [Get session video recording URL](https://hyperbrowser.ai/docs/api-reference/get-session-video-recording-url.md)
+- [Get session downloads URL](https://hyperbrowser.ai/docs/api-reference/get-session-downloads-url.md)
+- [Fill a credential](https://hyperbrowser.ai/docs/api-reference/fill-a-credential.md): Type a secret's or a vault's values into a page in the session, without returning them.
+- [List WebMCP tools](https://hyperbrowser.ai/docs/api-reference/list-webmcp-tools.md): Discover tools across open tabs and frames.
+- [Invoke a WebMCP tool](https://hyperbrowser.ai/docs/api-reference/invoke-webmcp-tool.md): Invoke once and wait for the result.
+- [Start a WebMCP invocation](https://hyperbrowser.ai/docs/api-reference/start-webmcp-invocation.md): Start once and return a handle without waiting for completion.
+- [Get a WebMCP invocation result](https://hyperbrowser.ai/docs/api-reference/get-webmcp-invocation-result.md): Read or long-poll a handle without re-invoking the tool.
+- [Cancel a WebMCP invocation](https://hyperbrowser.ai/docs/api-reference/cancel-webmcp-invocation.md): Request best-effort cancellation and return the current handle.
+- [Creates a new profile](https://hyperbrowser.ai/docs/api-reference/creates-a-new-profile.md)
+- [Get profile by ID](https://hyperbrowser.ai/docs/api-reference/get-profile-by-id.md)
+- [Delete profile by ID](https://hyperbrowser.ai/docs/api-reference/delete-profile-by-id.md)
+- [Get list of profiles](https://hyperbrowser.ai/docs/api-reference/get-list-of-profiles.md)
+- [Get the secrets public key](https://hyperbrowser.ai/docs/api-reference/get-secrets-public-key.md): Get the RSA public key you encrypt secret values to.
+- [Get list of secrets](https://hyperbrowser.ai/docs/api-reference/get-list-of-secrets.md): List your team's secrets.
+- [Create a secret](https://hyperbrowser.ai/docs/api-reference/create-a-secret.md): Create a secret, then upload its value as a version.
+- [Get secret by ID](https://hyperbrowser.ai/docs/api-reference/get-secret-by-id.md): Get a secret and its versions.
+- [Update a secret](https://hyperbrowser.ai/docs/api-reference/update-a-secret.md): Update a secret's description or allowed origins.
+- [Delete a secret](https://hyperbrowser.ai/docs/api-reference/delete-a-secret.md): Permanently delete a secret and all its versions.
+- [Add a secret version](https://hyperbrowser.ai/docs/api-reference/add-a-secret-version.md): Upload a new encrypted value for a secret.
+- [Delete a secret version](https://hyperbrowser.ai/docs/api-reference/delete-a-secret-version.md): Permanently delete an older version of a secret.
+- [Get list of vaults](https://hyperbrowser.ai/docs/api-reference/get-list-of-vaults.md): List your team's vaults.
+- [Create a vault](https://hyperbrowser.ai/docs/api-reference/create-a-vault.md): Create a vault: a named set of environment variables that point at stored secrets.
+- [Get vault by ID](https://hyperbrowser.ai/docs/api-reference/get-vault-by-id.md): Get a vault and its entries.
+- [Update a vault](https://hyperbrowser.ai/docs/api-reference/update-a-vault.md): Change a vault's description or entries.
+- [Delete a vault](https://hyperbrowser.ai/docs/api-reference/delete-a-vault.md): Delete a vault. The secrets it points at are kept.
+- [Create new sandbox](https://hyperbrowser.ai/docs/api-reference/create-new-sandbox.md): Create a Linux sandbox or a macOS sandbox with beta access enabled for your team.
+- [Get sandbox by ID](https://hyperbrowser.ai/docs/api-reference/get-sandbox-by-id.md)
+- [Get list of sandboxes](https://hyperbrowser.ai/docs/api-reference/get-list-of-sandboxes.md)
+- [Stop a sandbox](https://hyperbrowser.ai/docs/api-reference/stop-a-sandbox.md)
+- [Expose a sandbox port](https://hyperbrowser.ai/docs/api-reference/expose-a-sandbox-port.md)
+- [Remove an exposed sandbox port](https://hyperbrowser.ai/docs/api-reference/remove-an-exposed-sandbox-port.md)
+- [Create a sandbox memory snapshot](https://hyperbrowser.ai/docs/api-reference/create-a-sandbox-memory-snapshot.md)
+- [Update sandbox network policy](https://hyperbrowser.ai/docs/api-reference/update-sandbox-network-policy.md)
+- [Start a sandbox process with secrets](https://hyperbrowser.ai/docs/api-reference/start-a-sandbox-process-with-secrets.md): Run a command in a sandbox with secrets, a vault or 1Password fields as environment variables for that process only.
+- [Create a volume](https://hyperbrowser.ai/docs/api-reference/create-a-volume.md)
+- [Get list of volumes](https://hyperbrowser.ai/docs/api-reference/get-list-of-volumes.md)
+- [Get volume by ID](https://hyperbrowser.ai/docs/api-reference/get-volume-by-id.md)
+- [Delete a volume](https://hyperbrowser.ai/docs/api-reference/delete-a-volume.md)
+- [Get list of sandbox images](https://hyperbrowser.ai/docs/api-reference/get-list-of-sandbox-images.md)
+- [Delete sandbox image](https://hyperbrowser.ai/docs/api-reference/delete-sandbox-image.md)
+- [Create an image build](https://hyperbrowser.ai/docs/api-reference/create-an-image-build.md)
+- [Get list of image builds](https://hyperbrowser.ai/docs/api-reference/get-list-of-image-builds.md)
+- [Get image build by ID](https://hyperbrowser.ai/docs/api-reference/get-image-build-by-id.md)
+- [Complete an image build upload](https://hyperbrowser.ai/docs/api-reference/complete-an-image-build-upload.md)
+- [Cancel an image build](https://hyperbrowser.ai/docs/api-reference/cancel-an-image-build.md)
+- [Get list of sandbox snapshots](https://hyperbrowser.ai/docs/api-reference/get-list-of-sandbox-snapshots.md)
+- [Get sandbox snapshot](https://hyperbrowser.ai/docs/api-reference/get-sandbox-snapshot.md)
+- [Delete sandbox snapshot](https://hyperbrowser.ai/docs/api-reference/delete-sandbox-snapshot.md)
+- [Fetch a web page](https://hyperbrowser.ai/docs/api-reference/fetch-a-web-page.md): Fetches a web page and returns the content in various formats (HTML, Markdown, JSON, screenshot, etc.)
+- [Start a web crawl job](https://hyperbrowser.ai/docs/api-reference/start-a-web-crawl-job.md): Starts an asynchronous crawl job that follows links from a starting URL and returns content from each page in the specified formats.
+- [Get web crawl job results](https://hyperbrowser.ai/docs/api-reference/get-web-crawl-job-results.md): Retrieves the status and results of a web crawl job. Results are paginated.
+- [Get web crawl job status](https://hyperbrowser.ai/docs/api-reference/get-web-crawl-job-status.md): Retrieves just the status of a web crawl job without the full results.
+- [Search the web](https://hyperbrowser.ai/docs/api-reference/search-the-web.md): Performs a web search and returns search results with titles, URLs, and descriptions
+- [Create new scrape job](https://hyperbrowser.ai/docs/api-reference/create-new-scrape-job.md)
+- [Get scrape job status and result](https://hyperbrowser.ai/docs/api-reference/get-scrape-job-status-and-result.md)
+- [Get scrape job status](https://hyperbrowser.ai/docs/api-reference/get-scrape-job-status.md)
+- [Start a batch scrape job](https://hyperbrowser.ai/docs/api-reference/start-a-batch-scrape-job.md)
+- [Get batch scrape job status and results](https://hyperbrowser.ai/docs/api-reference/get-batch-scrape-job-status-and-results.md)
+- [Get batch scrape job status](https://hyperbrowser.ai/docs/api-reference/get-batch-scrape-job-status.md)
+- [Start a crawl job](https://hyperbrowser.ai/docs/api-reference/start-a-crawl-job.md)
+- [Get crawl job status and results](https://hyperbrowser.ai/docs/api-reference/get-crawl-job-status-and-results.md)
+- [Get crawl job status](https://hyperbrowser.ai/docs/api-reference/get-crawl-job-status.md)
+- [Start an extract job](https://hyperbrowser.ai/docs/api-reference/start-an-extract-job.md)
+- [Get extract job status and results](https://hyperbrowser.ai/docs/api-reference/get-extract-job-status-and-results.md)
+- [Get extract job status](https://hyperbrowser.ai/docs/api-reference/get-extract-job-status.md)
+- [Add a new extension](https://hyperbrowser.ai/docs/api-reference/add-a-new-extension.md)
+- [List all extensions](https://hyperbrowser.ai/docs/api-reference/list-all-extensions.md)
+- [Start a HyperAgent task](https://hyperbrowser.ai/docs/api-reference/start-a-hyperagent-task.md)
+- [Get HyperAgent task status and results](https://hyperbrowser.ai/docs/api-reference/get-hyperagent-task-status-and-results.md)
+- [Stop a HyperAgent task](https://hyperbrowser.ai/docs/api-reference/stop-a-hyperagent-task.md)
+- [Get HyperAgent task status](https://hyperbrowser.ai/docs/api-reference/get-hyperagent-task-status.md)
+- [Start a browser use task](https://hyperbrowser.ai/docs/api-reference/start-a-browser-use-task.md)
+- [Get browser use task status and results](https://hyperbrowser.ai/docs/api-reference/get-browser-use-task-status-and-results.md)
+- [Stop a browser use task](https://hyperbrowser.ai/docs/api-reference/stop-a-browser-use-task.md)
+- [Get browser use task status](https://hyperbrowser.ai/docs/api-reference/get-browser-use-task-status.md)
+- [Start a claude computer use task](https://hyperbrowser.ai/docs/api-reference/start-a-claude-computer-use-task.md)
+- [Get claude computer use task status and results](https://hyperbrowser.ai/docs/api-reference/get-claude-computer-use-task-status-and-results.md)
+- [Stop a claude computer use task](https://hyperbrowser.ai/docs/api-reference/stop-a-claude-computer-use-task.md)
+- [Get claude computer use task status](https://hyperbrowser.ai/docs/api-reference/get-claude-computer-use-task-status.md)
+- [Start a gemini computer use task](https://hyperbrowser.ai/docs/api-reference/start-a-gemini-computer-use-task.md)
+- [Get gemini computer use task status and results](https://hyperbrowser.ai/docs/api-reference/get-gemini-computer-use-task-status-and-results.md)
+- [Stop a gemini computer use task](https://hyperbrowser.ai/docs/api-reference/stop-a-gemini-computer-use-task.md)
+- [Get gemini computer use task status](https://hyperbrowser.ai/docs/api-reference/get-gemini-computer-use-task-status.md)
+- [Start a meta computer use task](https://hyperbrowser.ai/docs/api-reference/start-a-meta-computer-use-task.md)
+- [Get meta computer use task status and results](https://hyperbrowser.ai/docs/api-reference/get-meta-computer-use-task-status-and-results.md)
+- [Stop a meta computer use task](https://hyperbrowser.ai/docs/api-reference/stop-a-meta-computer-use-task.md)
+- [Get meta computer use task status](https://hyperbrowser.ai/docs/api-reference/get-meta-computer-use-task-status.md)
+- [Start a grok computer use task](https://hyperbrowser.ai/docs/api-reference/start-a-grok-computer-use-task.md)
+- [Get grok computer use task status and results](https://hyperbrowser.ai/docs/api-reference/get-grok-computer-use-task-status-and-results.md)
+- [Stop a grok computer use task](https://hyperbrowser.ai/docs/api-reference/stop-a-grok-computer-use-task.md)
+- [Get grok computer use task status](https://hyperbrowser.ai/docs/api-reference/get-grok-computer-use-task-status.md)
+- [Start a jev computer use task](https://hyperbrowser.ai/docs/api-reference/start-a-jev-computer-use-task.md)
+- [Get jev computer use task status and results](https://hyperbrowser.ai/docs/api-reference/get-jev-computer-use-task-status-and-results.md)
+- [Stop a jev computer use task](https://hyperbrowser.ai/docs/api-reference/stop-a-jev-computer-use-task.md)
+- [Get jev computer use task status](https://hyperbrowser.ai/docs/api-reference/get-jev-computer-use-task-status.md)
+- [Start a CUA task](https://hyperbrowser.ai/docs/api-reference/start-a-cua-task.md)
+- [Get CUA task status and results](https://hyperbrowser.ai/docs/api-reference/get-cua-task-status-and-results.md)
+- [Stop a CUA task](https://hyperbrowser.ai/docs/api-reference/stop-a-cua-task.md)
+- [Get CUA task status](https://hyperbrowser.ai/docs/api-reference/get-cua-task-status.md)
+- [Create a session with X402 payment](https://hyperbrowser.ai/docs/api-reference/create-a-session-with-x402-payment.md): Purchase one browser session at 0.10 USDC per hour, paid upfront for timeoutMinutes (5–60, default 30). No Hyperbrowser account or API key is required. A valid unpaid request returns 402 with payment requirements. Retry with a signed PAYMENT-SIGNATURE authorization. Payment is settled before connect…
+- [Get an X402 session](https://hyperbrowser.ai/docs/api-reference/get-an-x402-session.md): Get the purchased session's status and original expiry without another payment. Authenticate with managementToken, not the browser token. Connection credentials are not reissued.
+- [Stop an X402 session](https://hyperbrowser.ai/docs/api-reference/stop-an-x402-session.md): Stop the purchased browser without another payment. Authenticate with managementToken, not the browser token. An already closed or errored session also succeeds.
+- [Fetch a web page with X402 payment](https://hyperbrowser.ai/docs/api-reference/fetch-a-web-page-with-x402-payment.md): X402 payment endpoint. First request returns 402 with payment requirements. Retry with PAYMENT-SIGNATURE header containing cryptographic proof to get the actual data. See https://x402.gitbook.io/x402 for protocol details.
+- [Search the web with X402 payment](https://hyperbrowser.ai/docs/api-reference/search-the-web-with-x402-payment.md): X402 payment endpoint. First request returns 402 with payment requirements. Retry with PAYMENT-SIGNATURE header containing cryptographic proof to get search results. See https://x402.gitbook.io/x402 for protocol details.
+- [Introduction](https://hyperbrowser.ai/docs/sdks/introduction.md): Official SDKs for integrating Hyperbrowser into your applications
+- [Node SDK](https://hyperbrowser.ai/docs/sdks/node.md): Complete guide to the Hyperbrowser Node.js SDK
+- [Python SDK](https://hyperbrowser.ai/docs/sdks/python.md): Complete guide to the Hyperbrowser Python SDK
+- [Migrating to Python SDK 1.0](https://hyperbrowser.ai/docs/sdks/python-1-0-migration.md): Adopt typed request dictionaries while keeping existing Pydantic request code working
+- [Pricing](https://hyperbrowser.ai/docs/pricing.md): Understand how Hyperbrowser credits work and pricing for all services
+
+## OpenAPI Specs
+
+- [openapi](/docs/openapi.json)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

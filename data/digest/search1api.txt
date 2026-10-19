@@ -1,0 +1,26 @@
+# Search1API (search1api) category=ai-search
+home=https://search1api.com/ pricing=https://search1api.com/pricing docs=None llms=None
+sources_ok: pricing:https://search1api.com/pricing, home:https://search1api.com/, llms:https://search1api.com/llms.txt, llms-full:https://docs.search1api.com/llms-full.txt, llms-https://search1api.com/docs/llms.txt:https://search1api.com/docs/llms.txt, llms-https://docs.search1api.com/llms.txt:https://docs.search1api.com/llms.txt
+--- ranked fact lines ---
+[llms-full] | Model                       | Credits per Call | Description                            |
+[llms-full] Regular search: 1 credit
+[llms-full] Deep Search with 3 results: 1 credit (search) + up to 3 credits (successful crawls)
+--- llms/readme head ---
+# Search1API
+## Docs
+- [Introduction](https://docs.search1api.com/introduction.md): Welcome to search1api documentation
+- [Search](https://docs.search1api.com/api-reference/endpoint/search.md): Performs a search
+- [News](https://docs.search1api.com/api-reference/endpoint/news.md): Performs a news search
+- [Crawl](https://docs.search1api.com/api-reference/endpoint/crawl.md): Crawls a webpage
+- [Sitemap](https://docs.search1api.com/api-reference/endpoint/sitemap.md): Get sitemap links from a website
+- [Trending](https://docs.search1api.com/api-reference/endpoint/trending.md): Get trending topics from popular platforms
+- [Reasoning](https://docs.search1api.com/api-reference/endpoint/reasoning.md): Create a chat completion
+- [Models](https://docs.search1api.com/api-reference/endpoint/models.md): List all available models
+- [Usage](https://docs.search1api.com/api-reference/endpoint/usage.md): Get usage
+## OpenAPI Specs
+- [search](https://docs.search1api.com/api-reference/openapi/search.json)
+- [usage](https://docs.search1api.com/api-reference/openapi/usage.json)
+- [trending](https://docs.search1api.com/api-reference/openapi/trending.json)
+- [sitemap](https://docs.search1api.com/api-reference/openapi/sitemap.json)
+- [reasoning](https://docs.search1api.com/api-reference/openapi/reasoning.json)
+- [news](https://docs.search1api.com/api-reference/openapi/news.json)

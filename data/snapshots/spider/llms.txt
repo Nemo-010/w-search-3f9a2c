@@ -1,0 +1,321 @@
+# Spider
+
+> Web crawling, scraping, and search API for AI agents and RAG pipelines.
+> Any site to clean markdown or structured JSON. Rust engine, a headless
+> Browser when a page needs it, proxy rotation, streaming.
+
+- Website: https://spider.cloud
+- API base: https://api.spider.cloud
+- Browser: https://spider.cloud/browser/ (wss://browser.spider.cloud, up to 100 concurrent sessions)
+- Proxy: https://spider.cloud/proxy-locations/ (http://proxy.spider.cloud, residential and ISP exits, rotated per request)
+- Agent setup skill: https://spider.cloud/agent-skill/SKILL.md
+- Full API reference: https://spider.cloud/llms-full.txt
+- Docs: https://spider.cloud/docs/overview
+- OpenAPI: https://spider.cloud/openapi.yaml
+- MCP server: https://mcp.spider.cloud/mcp (setup: https://spider.cloud/mcp/connect)
+- Pricing: https://spider.cloud/pricing ($1 per 10,000 credits; bandwidth at $1 per GB plus compute at $0.0001 per minute)
+- Open source: https://github.com/spider-rs/spider (MIT)
+- Support: support@spider.cloud, https://discord.spider.cloud
+
+If you are an agent setting Spider up for a user, read
+https://spider.cloud/agent-skill/SKILL.md. For the complete parameter
+reference, read https://spider.cloud/llms-full.txt.
+
+## Try it with no key
+
+`POST /scrape` works with no API key and no signup. Nothing else does.
+
+```bash
+curl -X POST https://api.spider.cloud/scrape \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://example.com", "return_format": "markdown"}'
+```
+
+It is rate limited and covers `/scrape` only. Every other route returns `402`
+without a key. On a `429`, honor `Retry-After`. Get a key for anything beyond
+trying it out.
+
+## Authentication
+
+```
+Authorization: Bearer YOUR_API_KEY
+```
+
+Get a key at https://spider.cloud/api-keys. Paid keys lift the rate limit
+substantially; contact support if you need a higher ceiling.
+
+## Endpoints
+
+All POST with a JSON body, except credits, and except `/fetch`, where the body
+is optional. Every POST path also accepts a `/v1/` prefix (`/v1/crawl`).
+
+| Endpoint | Purpose |
+|---|---|
+| `/scrape` | One page. Works keyless. |
+| `/crawl` | Many pages from one site. Takes `limit`. |
+| `/links` | URLs only, no content. |
+| `/search` | Web search, optionally crawl the results. |
+| `/screenshot` | Page image. |
+| `/transform` | HTML you already have, to markdown or text. No fetch. |
+| `/fetch/{domain}/{path}` | One page, addressed by path instead of a `url` field, with a stored config for that domain applied. |
+| `GET /data/credits` | Remaining credit balance. |
+
+Subscription-gated route families, same parameters as their base route:
+
+- `/ai/{scrape,crawl,search,links,browser}` takes a natural-language
+  `prompt` and returns structured results. Needs an AI plan
+  (https://spider.cloud/ai/pricing). Prompt-based extraction is available
+  *only* on these routes.
+- `/unlimited/{scrape,crawl,links}` bills a flat monthly rate by concurrency
+  seats instead of credits. Needs an Unlimited plan
+  (https://spider.cloud/pricing?plan=unlimited). It runs alongside
+  pay-as-you-go on the same key, it does not replace it.
+
+### `/fetch/{domain}/{path}`
+
+POST, like every other content route. It is the one route that does not take a
+`url` in the body: the target is the path itself, so
+`POST /fetch/news.ycombinator.com/newest` reads
+`https://news.ycombinator.com/newest`. A `/v1/` prefix works the same way.
+
+The body is optional. Send one and it overrides the stored settings for that
+domain, using the same parameters as `/scrape`. Send nothing and the stored
+settings stand on their own.
+
+What separates it from `/scrape` is that it resolves a saved configuration for
+that domain and path before it fetches, so a site you have already set up reads
+correctly without repeating its settings on every call. Use `/scrape` for a page
+you are passing in once, and `/fetch` for a site you have configured.
+
+A GET returns `400`. `url` in the body is dropped, since the target is the path.
+`limit` above 1 turns the call into a crawl. The first call for a path with no
+stored config runs discovery, which is slow and can return a retryable `503`.
+
+## Picking an endpoint
+
+- One known page, `/scrape`. A whole site, `/crawl` with `limit`.
+- Just the URLs, `/links`. Find pages on the web, `/search`.
+- Page renders with JavaScript, leave `request` on the `smart` default, or
+  force `"browser"`.
+- Page refuses plain requests or shows a challenge page, `/scrape` with
+  `"stealth": true`.
+- Known fields, `css_extraction_map`. Described-in-English fields, `/ai/scrape`.
+- Steady bulk volume, `/unlimited/*`. Bursty or AI work, pay-as-you-go.
+
+## Core parameters
+
+Sent alongside `url` (or `search` on `/search`).
+
+- `request`: `"http"` (fastest, no JS), `"browser"` (a real browser, runs JS), or
+  `"smart"` (default: HTTP first, escalates to a browser only when the page
+  needs it). `"chrome"` and `"headless"` are accepted legacy aliases for
+  `"browser"`; `"smart_mode"` and `"smartmode"` are aliases for `"smart"`.
+  Spellings are matched against a fixed list, so casing matters. Any other
+  casing, and any unrecognized value, silently falls back to `"http"`.
+- `return_format`: `"raw"` (default), `"markdown"`, `"commonmark"`,
+  `"text"`, `"html2text"`, `"xml"`, `"bytes"`, `"screenshot"`, `"empty"`.
+  Accepts an array to get several at once. Use `"markdown"` for LLM input.
+  There is no `"html"` value; an unrecognized one silently becomes `"raw"`.
+- `limit`: max pages on `/crawl`. Unset by default, and then capped to your
+  remaining credit balance.
+- `depth`: max crawl depth, default 25.
+- `metadata`: `true` adds title, description, keywords, og:image.
+- `readability`: strip boilerplate before converting.
+- `filter_output_main_only`: drop nav, aside, footer.
+- `proxy` / `country_code`: every request goes through a proxy; these pick the
+  pool and the exit country.
+- `remote_proxy`: your own proxy, `"http://user:pass@host:port"`.
+- `css_extraction_map`: object keyed by URL-path pattern (`"/"` matches
+  everything), each value an array of `{"name": "<field>", "selectors":
+  ["<css>", ...]}`. Extra selectors are fallbacks. Results come back under
+  `css_extracted`.
+- `wait_for`: when a browser page counts as ready. Sub-keys `selector`,
+  `idle_network`, `dom`, `delay`, `page_navigations`. Each `timeout` is
+  `{"secs": n, "nanos": n}`. Only applies to `browser` and `smart`.
+- `webhooks`: push-delivered crawl results.
+
+Full table, including every filter, proxy, session, and automation
+parameter: https://spider.cloud/llms-full.txt
+
+## Response
+
+Every content route except `/transform` returns a JSON **array**, one object
+per page, even `/scrape`. `/transform` returns a single `{"content": ...}`
+object.
+
+```json
+[{
+  "url": "https://example.com",
+  "content": "# Example Domain\n\n...",
+  "status": 200,
+  "error": null,
+  "duration_elasped_ms": 122,
+  "costs": { "total_cost": 0.00004, "ai_cost": 0, "compute_cost": 0.00001,
+             "file_cost": 0.00002, "bytes_transferred_cost": 0.00002,
+             "transform_cost": 0 }
+}]
+```
+
+Conditional fields: `metadata`, `css_extracted`, `links`, `headers`,
+`cookies`, `json_data`, appearing when you request them.
+
+`status` is the *page's* HTTP status and is separate from the API call's own
+status. A `200` API response can contain a page with `"status": 404`.
+
+Set a `content-type` request header of `application/xml`, `text/csv`, or
+`application/jsonl` to change the response encoding.
+
+## Errors
+
+| Code | Meaning |
+|---|---|
+| 400 | Bad parameters. On `/unlimited/*`, also means AI params were sent. |
+| 401 | Missing, invalid, or expired key. |
+| 402 | Out of credits, a keyless request to a non-`/scrape` route, or `/ai/*` without an active AI plan. |
+| 403 | `/unlimited/*` without an active plan, or a funded key refused for another reason. |
+| 404 | Unknown path (with a valid key). Keyless, an unknown path 402s instead. |
+| 413 | Payload too large. |
+| 429 | Rate limited. On `/unlimited/*`, all of your concurrency is in use. Honor `Retry-After`. |
+| 500, 503 | Server side. These do not consume credits. |
+
+Every content route is POST only. A GET or PUT to one returns `400`.
+
+Attempts are billed for the bytes and compute they actually consumed, error
+statuses included. Do not assume a failed page is free.
+
+Rate-limit headers, on responses that cleared the rate-limit guard: `RateLimit-Limit`,
+`RateLimit-Remaining`, `RateLimit-Reset` (seconds), plus `Retry-After` on 429.
+`/unlimited/*` adds `X-Concurrency-Limit` and `X-Concurrency-Active`, and
+returns `429 {"error":"concurrency_limit_reached","seats":N,"active":n}`
+without queueing.
+
+## Rate limits
+
+Core API (`/scrape`, `/crawl`, `/links`, `/search`, and the rest), counted per
+account in a fixed one-minute window:
+
+| Plan | Limit |
+|---|---|
+| Pay as you go | 10,000 requests per minute |
+| Unlimited | Your concurrency count |
+| Enterprise | 50,000 requests per minute, higher on request |
+
+Unlimited is limited by concurrency, not by requests per minute. Your
+concurrency count is how many requests can be in flight at once on
+`/unlimited/*`. When all of them are busy the API returns `429` at once, without
+queueing. The same 10,000 requests per minute cap as every plan sits underneath
+and is rarely reached, so size an Unlimited plan by concurrency.
+
+AI endpoints (`/ai/*`) use a per-second cap set by the AI Studio tier:
+
+| Tier | Requests per second |
+|---|---|
+| Starter | 1 |
+| Lite | 5 |
+| Standard | 10 |
+| Scale | 25 |
+| Enterprise | custom, beyond 25 |
+
+Past the cap the API returns `429` with `Retry-After` rounded up to the next
+second. Details: https://spider.cloud/docs/core/rate-limits
+
+## Quick example
+
+```bash
+curl -X POST https://api.spider.cloud/crawl \
+  -H "Authorization: Bearer $SPIDER_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"url":"https://example.com","limit":10,"return_format":"markdown"}'
+```
+
+```python
+import os, requests
+r = requests.post("https://api.spider.cloud/crawl",
+    headers={"Authorization": f"Bearer {os.environ['SPIDER_API_KEY']}"},
+    json={"url": "https://example.com", "limit": 10, "return_format": "markdown"})
+for page in r.json():
+    print(page["url"], page["status"], len(page["content"] or ""))
+```
+
+```javascript
+const r = await fetch("https://api.spider.cloud/crawl", {
+  method: "POST",
+  headers: { Authorization: `Bearer ${process.env.SPIDER_API_KEY}`,
+             "Content-Type": "application/json" },
+  body: JSON.stringify({ url: "https://example.com", limit: 10, return_format: "markdown" }),
+});
+const pages = await r.json();
+```
+
+## SDKs, MCP, integrations
+
+- SDKs for Python, JavaScript, Rust, Go: https://spider.cloud/docs/libraries
+- Rust agent client, `spider-cloud-agent`: https://crates.io/crates/spider-cloud-agent
+  Chooses http or browser locally before a call goes out, escalates on the page
+  status, and returns only the fields you name.
+- Command line tool, `spider-agent`: `curl -fsSL https://spider.cloud/install/spider-agent.sh | sh`,
+  or `cargo install spider-agent-cli`
+  Built for another program to call: NDJSON on stdout, addresses on stdin,
+  documented exit codes, and `spider-agent schema` prints the contract as JSON.
+  Docs: https://spider.cloud/docs/integrations/agent-cli
+  Source: https://github.com/spider-rs/spider-cloud-agent
+- MCP server (hosted, OAuth on first connect): https://mcp.spider.cloud/mcp
+  Claude Code: `claude mcp add spider --transport http https://mcp.spider.cloud/mcp -H "Authorization: Bearer your-key"`
+  Per-client setup: https://spider.cloud/mcp/connect
+- Integrations overview: https://spider.cloud/docs/integrations/overview
+  LangChain: https://spider.cloud/docs/integrations/langchain
+  LlamaIndex: https://spider.cloud/docs/integrations/llamaindex
+  CrewAI: https://spider.cloud/docs/integrations/crewai
+  Agno: https://spider.cloud/docs/integrations/agno
+  Agent CLI: https://spider.cloud/docs/integrations/agent-cli
+  Agent examples: https://spider.cloud/docs/integrations/agent-examples
+  FlowiseAI: https://spider.cloud/docs/integrations/flowiseai
+  Zapier: https://spider.cloud/docs/integrations/zapier
+  x402 crypto payments: https://spider.cloud/docs/integrations/x402
+
+## Guides
+
+- Quickstart: https://spider.cloud/docs/quickstart
+- Concepts: https://spider.cloud/docs/concepts
+- API reference: https://spider.cloud/docs/api
+- Playground: https://spider.cloud/playground
+- Scraping and crawling: https://spider.cloud/docs/core/scraping-crawling
+- Real-time search: https://spider.cloud/docs/core/realtime-search
+- Efficient scraping: https://spider.cloud/docs/core/efficient-scraping
+- Concurrent streaming: https://spider.cloud/docs/core/concurrent-streaming
+- JSON scraping: https://spider.cloud/docs/advanced/json-scraping
+- Webhooks: https://spider.cloud/docs/core/webhooks
+- Data connectors: https://spider.cloud/docs/core/data-connectors
+- Error codes: https://spider.cloud/docs/core/error-codes
+- Rate limits: https://spider.cloud/docs/core/rate-limits
+- Use-case guides: https://spider.cloud/docs/guides/use-cases
+- Recipes: https://spider.cloud/docs/guides/recipes
+
+## Use cases
+
+- RAG pipelines: https://spider.cloud/use-cases/rag
+- AI agents: https://spider.cloud/use-cases/ai-agents
+- Coding agents: https://spider.cloud/use-cases/coding-agents
+- AI platforms: https://spider.cloud/use-cases/ai-platforms
+- AI training data: https://spider.cloud/use-cases/ai-training
+- Price monitoring: https://spider.cloud/use-cases/price-monitoring
+- SEO tracking: https://spider.cloud/use-cases/seo-tracking
+- Content aggregation: https://spider.cloud/use-cases/content-aggregation
+- Lead generation: https://spider.cloud/use-cases/lead-generation
+- Market research: https://spider.cloud/use-cases/market-research
+- Compliance monitoring: https://spider.cloud/use-cases/compliance-monitoring
+- Website archiving: https://spider.cloud/use-cases/website-archiving
+
+## Research
+
+Open benchmarks, every number linked to a reproducible method
+(https://github.com/spider-rs/benchmark).
+
+- Hub: https://spider.cloud/research/
+- Browser Fidelity Bench V1, 80 of 80 protected-site tasks on Browser Use's open suite: https://spider.cloud/blog/spider-browser-stealth-benchmark
+- Reliability vs Kernel and Browserbase, 999 URLs: https://spider.cloud/blog/spider-browser-vs-kernel-browserbase-benchmark
+- Firecrawl vs Crawl4AI vs Spider, 1,000 real URLs: https://spider.cloud/blog/firecrawl-vs-crawl4ai-vs-spider-honest-benchmark
+- Crawling 1M pages, engineering log: https://spider.cloud/blog/scraping-one-million-pages-what-actually-happens
+- True cost at 10K to 10M pages/month: https://spider.cloud/blog/true-cost-of-web-scraping-at-scale
+- Silk, Spider's custom extraction model: https://spider.cloud/blog/spider-custom-ai-extraction-model
+- Why the engine is Rust, with benchmarks: https://spider.cloud/blog/rust-vs-python-web-scraping-why-we-rewrote-everything

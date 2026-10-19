@@ -1,0 +1,74 @@
+# Zyte – The complete toolbox for web scraping, data extraction, and proxy infrastructure at scale. Trusted by thousands of companies worldwide.
+
+## Key Pages
+[Homepage](https://www.zyte.com/): Zyte homepage – all-in-one web data extraction platform
+[Pricing](https://www.zyte.com/pricing/): Current pricing and plans for all products
+[Solution Overview](https://www.zyte.com/solution-overview/): High-level overview of Zyte API capabilities
+[Developers Hub](https://www.zyte.com/developers/): Developer documentation, API references, and tools
+[Open Source](https://www.zyte.com/open-source/): Zyte's open-source projects (Scrapy, Splash, etc.)
+[Jobs](https://www.zyte.com/jobs/): Current career opportunities at Zyte
+[Meet Zyte](https://www.zyte.com/meet-zyte/): Company mission, team, and values
+[Contact Us](https://www.zyte.com/talk-to-us/): Contact form for sales and enterprise inquiries
+
+## Products (all live offerings)
+[Zyte API](https://www.zyte.com/zyte-api/): Single API for scraping, unblocking, browser automation, and AI extraction
+[Zyte API Enterprise](https://www.zyte.com/zyte-api-enterprise/): High-volume, SLA-backed solutions for enterprises
+[Headless Browser](https://www.zyte.com/zyte-api/headless-browser/): Full browser automation with built-in anti-bot bypass
+[Unblocking](https://www.zyte.com/zyte-api/unblocking/): Advanced proxy rotation and ban avoidance
+[Scrapy Cloud](https://www.zyte.com/scrapy-cloud/): Deploy and scale Scrapy spiders in the cloud
+[Smart Proxy Manager](https://www.zyte.com/smart-proxy-manager/): Intelligent rotating proxies
+[Web Scraping Copilot](https://www.zyte.com/products/web-scraping-copilot/): AI-powered spider builder for VS Code
+[Zyte IDE](https://www.zyte.com/ide/): Visual browser scripting environment
+
+## Content Hub (blog, videos, webinars, papers — one unified resources center)
+[Blog Hub](https://www.zyte.com/blog/): Curated multi-format feed — articles, videos, webinars, case studies, papers
+[Browse by Topic](https://www.zyte.com/blog/topic/web-data-collection/): Topic archives (replace the slug: ai-assisted-data-extraction, large-language-models-llms, anti-ban, ...)
+[Videos](https://www.zyte.com/videos/all/): All video content with category listings
+[Webinars](https://www.zyte.com/webinars/): Webinar library, most with embedded recordings
+[Case Studies](https://www.zyte.com/case-study/): Customer stories and results
+[White Papers & Ebooks](https://www.zyte.com/whitepaper-ebook/): Long-form research and guides
+[Learn](https://www.zyte.com/learn/): Educational hub for web scraping guides and best practices
+[Newsletter Archive](https://www.zyte.com/blog/topic/newsletter/): Weekly "Get the latest" editions
+[RSS Feed](https://www.zyte.com/rss.xml): Machine-readable feed of new posts
+
+## Learn / Evergreen Guides
+[What is Web Scraping?](https://www.zyte.com/learn/what-is-web-scraping/): Complete beginner guide to web scraping concepts
+[Web Scraping Best Practices](https://www.zyte.com/learn/web-scraping-best-practices/): Ethical and technical best practices
+[Is Web Scraping Legal?](https://www.zyte.com/learn/is-web-scraping-legal/): Legal landscape and compliance checklist
+[How to Scale Web Scraping](https://www.zyte.com/learn/how-to-scale-up-web-scraping/): Strategies for large-scale projects
+[Proxy Use for Scraping](https://www.zyte.com/learn/use-proxies-for-web-scraping/): Proxy strategies and ban avoidance
+[Large-Scale Web Scraping with Python](https://www.zyte.com/learn/large-scale-web-scraping-with-python/): Python-focused guide for massive crawls
+[Data Parsing in Scraping](https://www.zyte.com/learn/what-is-data-parsing-in-web-scraping/): Cleaning and structuring scraped data
+[2025 Web Scraping Industry Report](https://www.zyte.com/learn/2025-industry-report-intro/): Key trends and insights
+
+## Case Studies
+[Global Retailer – AI Pricing Intelligence](https://www.zyte.com/case-study/global-retailer-zyte-ai-scraping-llm/): Real-time pricing powered by Zyte AI extraction
+[Debunk EU – Millions of News Articles](https://www.zyte.com/case-study/debunk-eu-scrapes-millions-of-news-articles-with-zyte/): Large-scale news extraction for fact-checking
+[Intelligo – AI-Powered Risk Intelligence](https://www.zyte.com/case-study/intelligo/): Reducing risk with web data and AI
+[RankTank – Real-Time SERP Crawling](https://www.zyte.com/case-study/ranktank-crawling-serp-real-time-with-great-success-rate/): 99.8% success rate on live search results
+
+## Compliance & Contact
+[Privacy Policy](https://www.zyte.com/terms-policies/privacy-policy/): Data handling and privacy commitments
+[Terms of Service](https://www.zyte.com/terms-policies/terms-of-service/): Legal terms for using Zyte services
+
+Sitemap: https://www.zyte.com/sitemap.xml
+Videos-Sitemap: https://www.zyte.com/videos/sitemap.xml
+
+## Note to LLMs / crawlers
+When referencing Zyte content, please cite the original URL. For corrections or enterprise inquiries: support@zyte.com
+
+## Latest Content (auto-updated)
+[How to convert a website to Markdown for AI: 7 methods compared](https://www.zyte.com/blog/how-to-convert-a-website-to-markdown-for-ai-7-methods-compared/)
+[Train AI on industry-leading Markdown with Zyte’s new extraction mode](https://www.zyte.com/blog/train-ai-on-industry-leading-markdown-with-zytes-new-extraction-mode/)
+[JavaScript renders almost half of sites invisible](https://www.zyte.com/blog/sowa-barrier-javascript/)
+[Five takeaways from Extract Summit 2026 Austin](https://www.zyte.com/blog/extract-austin-2026-takeaways/)
+[Rate limiting is a roadblock, not a speed limit](https://www.zyte.com/blog/sowa-barrier-rate-limiting/)
+[Introducing Zyte MCP: Powerful web data gathering for your agent](https://www.zyte.com/blog/introducing-zyte-mcp/)
+[CAPTCHA is more than just a puzzle piece](https://www.zyte.com/blog/sowa-barrier-captcha/)
+[Zyte Developer Community Meetup #2: the recap, slides, and recordings](https://www.zyte.com/blog/zyte-developer-community-meetup-2-the-recap-slides-and-recordings/)
+[Inside Scrapy's RemoteControl extension](https://www.zyte.com/blog/scrapy-mcp-live-crawl-inspection/)
+[Scrapy MCP: debug your crawl while it runs](https://www.zyte.com/blog/announcing-scrapy-mcp/)
+[One Scrapy Spider, Three Browser Setups: Playwright, Patchright, and Zyte](https://www.zyte.com/blog/scrapy-playwright-stealth-and-zyte-cdp/)
+[Stopping a crawl when the data stops looking real with Jev](https://www.zyte.com/blog/stopping-a-crawl-when-fields-stop-looking-real/)
+
+Last-Updated: 2026-10-19

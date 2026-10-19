@@ -1,0 +1,232 @@
+Free live and top story JSON news API | The News API 
+ Home
+ Documentation
+ Pricing
+ Contact Us
+ Login
+ Sign Up
+ Free worldwide news API 
+ Get free access to search worldwide news and top stories from over 40,000 sources in 50+ countries. 
+ GET FREE API KEY 
+ 50+ countries 
+ Get news from over 50 countries worldwide. 
+ VIEW DOCUMENTATION 
+ 1M+ new articles weekly 
+ We index over 1 million new articles per week. 
+ VIEW DOCUMENTATION 
+ 30+ languages 
+ Over thirty languages currently supported. 
+ VIEW DOCUMENTATION 
+ News data for any requirement 
+ THE EASIEST WAY 
+ Easily utilize news data in any of your projects. 
+ Perfect for topic research, analysis, searching or simply displaying stories! 
+ GET FREE API KEY 
+ Easily and dynamically filter from millions of news stories and blog articles. 
+ Searching and filtering is extremely easy and fast with our API, check out the documentation for more details. 
+ Full-text searches 
+ Advanced searching of titles and article content to find exactly what you are looking for. 
+ Filtering 
+ Easily filter by country, language, category, source, publication date and more. 
+ Fast 
+ Our state of the art caching technology allows us to provide exceptional response times when searching millions of articles. 
+ {
+ "meta": {
+ "found": 1723466,
+ "returned": 10,
+ "limit": 10,
+ "page": 1
+ },
+ "data": [
+ {
+ "uuid": "60230ecd-51bd-4f6c-825f-698d7bae2d72",
+ "title": "Thanks to familiar miscues, the Dallas Cowboys are off to their worst start in years",
+ "description": "The Dallas Cowboys can’t run the ball or stop opposing offenses. Its resulted in their worst record through six games since 2020.",
+ "keywords": "",
+ "snippet": "The Dallas Cowboys don’t run the ball well. Their much-hoped-for defensive turnaround hasn’t materialized.\n\nUnable to count on either, the Cowboys have hing...",
+ "url": "https://www.nbcnews.com/sports/nfl/dallas-cowboys-nfl-green-bay-packers-dak-prescott-results-rcna604280",
+ "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-10/261018-cowboys-813-GWR-76b9e3.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T05:22:43.000000Z",
+ "source": "nbcnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "16569590-9b49-42e1-a8f6-51bfff141c2b",
+ "title": "Hard to convince Italians to back Ukraine – defense minister — RT World News",
+ "description": "Guido Crosetto says Rome must continue supporting Kiev despite widespread public opposition and protests over government spending",
+ "keywords": "",
+ "snippet": "Guido Crosetto has said Rome must continue to support Kiev despite public opposition and growing protests over government spending\n\nMost Italians oppose aid to ...",
+ "url": "https://rt-english.com/news/647374-hard-convince-italians-back-ukraine/",
+ "image_url": "https://mf.b37mrtl.ru/files/2026.10/article/6ad59cf82030271a8b428f14.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T04:32:11.000000Z",
+ "source": "rt.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "76aae647-ddcb-44f3-acdc-19349ec8b6b0",
+ "title": "Witnesses haunted by what they saw when pickup plowed through a Kansas youth soccer game",
+ "description": "The crash at Stryker Sports Complex in Wichita killed a 6-year-old boy and a 35-year-old man and injured several children and adults.",
+ "keywords": "",
+ "snippet": "Witnesses of Saturday’s deadly collision in which a pickup truck barreled through a youth soccer game in Kansas, killing two people and injuring nearly a doze...",
+ "url": "https://www.nbcnews.com/news/us-news/witnesses-haunted-pickup-wichita-kansas-soccer-game-crash-rcna604282",
+ "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-10/261018-wichita-kansas-soccer-game-crash-rc-1125p-7d95ab.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T04:19:55.000000Z",
+ "source": "nbcnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "cdd639b1-5cea-428a-b589-d52b201c3804",
+ "title": "Florida Attorney General James Uthmeier secures state arrest warrant for Raúl Castro",
+ "description": "Florida has obtained a state arrest warrant for former Cuban leader Raúl Castro on a conspiracy to commit first-degree murder charge tied to the 1996 Brothers ...",
+ "keywords": "cuba, homicide, us, florida, crime world",
+ "snippet": "NEW You can now listen to Fox News articles!\n\nFlorida has obtained a state arrest warrant for former Cuban leader Raúl Castro on a no-bond charge of conspiracy...",
+ "url": "https://www.foxnews.com/us/florida-attorney-general-james-uthmeier-secures-state-arrest-warrant-raul-castro",
+ "image_url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/06/raul-castro-havana-appearance.jpeg",
+ "language": "en",
+ "published_at": "2026-10-19T04:15:33.000000Z",
+ "source": "foxnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "e670e715-d0c8-4bec-9742-5f9989a8963a",
+ "title": "NFC East nearing second straight winless week as Packers beat struggling Cowboys on 'Sunday Night Football'",
+ "description": "Green Bay Packers routed the Dallas Cowboys on \"Sunday Night Football\" as the NFC North continues to dominate, while the NFC East struggles to find a single win...",
+ "keywords": "outkick sports, green bay packers, dallas cowboys, nfl, sports",
+ "snippet": "The Green Bay Packers’ win over the Dallas Cowboys, 23-13, on \"Sunday Night Football\" maintained a tale of two divisions in the NFC.\n\nThe NFC North is once ag...",
+ "url": "https://www.foxnews.com/outkick-sports/nfc-east-nearing-second-straight-winless-week-packers-beat-struggling-cowboys-sunday-night-football",
+ "image_url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/10/matthew-golden-touchdown-celebration-lambeau.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T04:02:12.000000Z",
+ "source": "foxnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "4f1fbc8e-f8f2-4d98-adc4-b37267e200d5",
+ "title": "'Other Desert Cities' Broadway Review: Julia Louis-Dreyfus Gets Serious",
+ "description": "Deadline reviews Julia Louis-Dreyfus' Broadway debut in 'Other Desert Cities.",
+ "keywords": "",
+ "snippet": "It’s hard to imagine any secrets or hints of repressed trauma surviving long in the glare of Palm Springs sunshine that keeps things bright in the airy, open-...",
+ "url": "https://deadline.com/2026/10/other-desert-cities-broadway-review-julia-louis-dreyfus-1237165682/",
+ "image_url": "https://deadline.com/wp-content/uploads/2026/10/Other-Desert-Cities_Allison-Janney-as-Silda-Grauman-Julia-Louis-Dreyfus-as-Polly-Wyeth_by-Emilio-Madrid_6098.jpg?w=1024",
+ "language": "en",
+ "published_at": "2026-10-19T04:00:00.000000Z",
+ "source": "deadline.com",
+ "categories": [
+ "entertainment"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "6791b35e-b13f-4531-8603-027aa19bcea9",
+ "title": "Cindy Crawford and family break silence on Presley Gerber's death: \"We love you forever\"",
+ "description": "Cindy Crawford, Rande Gerber and their daughter, Kaia, have broken their silence for the first time since Presley Gerber's death​ last month.",
+ "keywords": "",
+ "snippet": "Cindy Crawford, Rande Gerber and their daughter, Kaia, have broken their silence for the first time since Presley Gerber's death last month.\n\n\"We are beyond hea...",
+ "url": "https://www.cbsnews.com/news/presley-gerber-death-cindy-crawford-rande-kaia-break-silence/",
+ "image_url": "https://assets3.cbsnewsstatic.com/hub/i/r/2026/10/19/8bfc9a8c-884c-4c81-85ae-818e23a30cfd/thumbnail/1200x630/6520963f7e9d527ec1d4e0ad66d8aa8a/gettyimages-1081122974.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T03:41:14.000000Z",
+ "source": "cbsnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "6f8fe085-9968-42d7-afea-5305ac6de93b",
+ "title": "‘No conclusive evidence’ of Amelia Earhart’s missing plane found in South Pacific expedition",
+ "description": "The expedition said the anomaly captured on satellite imagery, hypothesized to be wreckage of Earhart’s plane, was most likely “a collection of debris.”",
+ "keywords": "",
+ "snippet": "An expedition to find evidence of Amelia Earhart’s missing plane near a remote island in the South Pacific has come up empty, researchers said Sunday.\n\nResear...",
+ "url": "https://www.nbcnews.com/news/us-news/no-conclusive-evidence-amelia-earharts-missing-plane-found-south-pacif-rcna604274",
+ "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-10/261018-amelia-earhart-search-taraia-ww-1928-65c962.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T03:40:43.000000Z",
+ "source": "nbcnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "41ba9ab3-4957-4072-8c1e-8c226f4f3929",
+ "title": "Jason Sudeikis Gives Update On Potential ‘Ted Lasso’ Seasons 5 & 6",
+ "description": "Sudeikis held forth recently on the podcast Talk Easy with Sam Fragoso about the prospects for Ted Lasso Seasons 5 and 6.",
+ "keywords": "",
+ "snippet": "Never count Ted Lasso out.\n\nAfter all, show co-creator Jason Sudeikis thought the series would end with Season 3. Then came Season 4.\n\nSudeikis held forth recen...",
+ "url": "https://deadline.com/2026/10/ted-lasso-seasons-5-6-jason-sudeikis-comments-1237167324/",
+ "image_url": "https://deadline.com/wp-content/uploads/2026/08/Ted_Lasso_Photo_040203.jpg?w=1024",
+ "language": "en",
+ "published_at": "2026-10-19T03:30:23.000000Z",
+ "source": "deadline.com",
+ "categories": [
+ "entertainment"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "d79738d5-dc4b-429c-8f32-adb64432f7ec",
+ "title": "Hidden safe, bones found buried at Philly house of horrors tied to 7 missing women: report",
+ "description": "Investigators searching the Philadelphia home of Raymond Horsch, tied to seven missing women, uncovered bones and a hidden safe.",
+ "keywords": "US News, FBI investigations, human remains, missing persons, pennsylvania, philadelphia",
+ "snippet": "A hidden safe and bones were discovered buried under floorboards and in the backyard of a Philadelphia house of horrors tied to seven missing women as investiga...",
+ "url": "https://nypost.com/2026/10/18/us-news/hidden-safe-bones-found-in-r-c-horschs-philly-house-of-horrors-tied-to-7-missing-women-report/",
+ "image_url": "https://nypost.com/wp-content/uploads/sites/2/2026/10/Untitled-0.jpg?quality=75&strip=all&w=1200",
+ "language": "en",
+ "published_at": "2026-10-19T03:02:50.000000Z",
+ "source": "nypost.com",
+ "categories": [
+ "general"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ }
+ ]
+}
+ Live response of top stories for US
+ FAQs 
+ What do you provide?
+ We provide RESTful API endpoints which return news data in for top stories, real time news feeds and historical news data. These can be used to gain access to news data for your own applications or projects. 
+ Why choose us?
+ We provide free access for you to use and test our API. Our API provides the easiest and most comprehensive access to any news data, while also being the most cost effective on the market. 
+ Do I have to pay?
+ Our service is 100% free to use on our free plan - no payment details are required. 
+ See all FAQs 
+ The News API © Copyright 2026 
+ FAQs 
+ Terms and Conditions 
+ Privacy

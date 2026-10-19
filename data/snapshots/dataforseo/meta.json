@@ -1,0 +1,82 @@
+{
+ "slug": "dataforseo",
+ "name": "DataForSEO",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:07+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://dataforseo.com/pricing",
+   "status": 200,
+   "final_url": "https://dataforseo.com/pricing",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 537801,
+   "truncated": false,
+   "sha256": "df899fdebc9c5959f80b856bfb0228bff2070f43a43442278dfa2be00c2023db",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 11049
+  },
+  "docs": {
+   "url": "https://docs.dataforseo.com/",
+   "status": 200,
+   "final_url": "https://docs.dataforseo.com/v3/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 285600,
+   "truncated": false,
+   "sha256": "75d806f2c365803b1fae1178fa969dd9323d1a3b37a1d3533610b20139f85291",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 14890
+  },
+  "home": {
+   "url": "https://dataforseo.com/",
+   "status": 200,
+   "final_url": "https://dataforseo.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 582836,
+   "truncated": false,
+   "sha256": "2fa2254e8368abaca4f47e20e8268744ed775e2e5cd299d92fddbda8c49a8556",
+   "fetched_at": "2026-10-19T05:54:10+00:00",
+   "text_bytes": 12414
+  },
+  "llms-err-af51de": {
+   "url": "https://docs.dataforseo.com/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.dataforseo.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-19T05:54:11+00:00"
+  },
+  "llms": {
+   "url": "https://dataforseo.com/llms.txt",
+   "status": 200,
+   "final_url": "https://dataforseo.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 221828,
+   "truncated": false,
+   "sha256": "d7d76e578d7fd528ab0d9a4143d5450b1d32f653f5a5bbeb7fe81d352ab0d2c3",
+   "fetched_at": "2026-10-19T05:54:12+00:00",
+   "text_bytes": 219293
+  },
+  "llms-err-c1e20e": {
+   "url": "https://dataforseo.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://dataforseo.com/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 479075,
+   "truncated": false,
+   "sha256": "f39ddf7ea7709a1dc4759c7aeb9ff9b812aa28dc087cea8f3ce8e7845165b6df",
+   "fetched_at": "2026-10-19T05:54:14+00:00"
+  },
+  "trial": {
+   "url": "https://docs.dataforseo.com/v3/appendix/free-trial/",
+   "status": 404,
+   "final_url": "https://docs.dataforseo.com/v3/appendix/free-trial/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 265951,
+   "truncated": false,
+   "sha256": "cb57219bd193d00902c8bec335f889daa505087a15b236947eb8e68d260f50ec",
+   "fetched_at": "2026-10-19T05:59:37+00:00"
+  }
+ }
+}

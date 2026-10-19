@@ -1,0 +1,63 @@
+{
+ "slug": "perplexity",
+ "name": "Perplexity",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://docs.perplexity.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.perplexity.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 37512,
+   "truncated": false,
+   "sha256": "f4eba3fc7129d6fd1c1d2e0740c9a2db0ef090d5b3f37a6768820f4dcc05cbdc",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 37468
+  },
+  "llms-full": {
+   "url": "https://docs.perplexity.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.perplexity.ai/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3000000,
+   "truncated": true,
+   "sha256": "bfdb6fd44c7ef6156b0cbd110b79c221239fe4df6f419c78adbe7d88623d23b1",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 2994955
+  },
+  "pricing": {
+   "url": "https://docs.perplexity.ai/getting-started/pricing",
+   "status": 200,
+   "final_url": "https://docs.perplexity.ai/docs/getting-started/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 642770,
+   "truncated": false,
+   "sha256": "1b4deb1ea0e72584d2fe4399619d31b8f1e9a724a5e2c015a7149abbf1ad72f0",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 8857
+  },
+  "docs": {
+   "url": "https://docs.perplexity.ai/",
+   "status": 200,
+   "final_url": "https://docs.perplexity.ai/docs/getting-started/overview",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 497012,
+   "truncated": false,
+   "sha256": "77704911a1c7618de4b4b5877dd7fea41d796f9b943cfc616ead13583c411664",
+   "fetched_at": "2026-10-19T05:54:05+00:00",
+   "text_bytes": 2176
+  },
+  "home": {
+   "url": "https://www.perplexity.ai/",
+   "status": 200,
+   "final_url": "https://www.perplexity.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 17707,
+   "truncated": false,
+   "sha256": "402e20041e7e529e4d4d1a1944c3b6a46661698a5569ef412d74c4cce0b0119a",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 10
+  }
+ }
+}

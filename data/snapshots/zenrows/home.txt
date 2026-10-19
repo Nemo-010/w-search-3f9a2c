@@ -1,0 +1,428 @@
+Zenrows · Reliable web data for AI 
+ Crawl is live: the most reliable web crawler API Try Crawl → 
+ Get brand assets 
+ Logo, symbol, colors, and press kit 
+ Platform 
+ Primitives 
+ Fetch Any page, returned clean 
+ Extract Auto-extract, no selectors 
+ Crawl Follow links and collect 
+ Browser Drive a real browser 
+ Batch Thousands of URLs at once 
+ Interfaces 
+ API The core HTTP endpoint 
+ SDK Python, Node and Go clients 
+ MCP Server Web access for agents 
+ CLI Access the complete web from the terminal 
+ Platform overview → 
+ Agents 
+ Agent Toolkit Give agents reliable web access 
+ Skills Prebuilt skills for common agent tasks 
+ Plugins Drop-in integrations 
+ MCP Server Connect any MCP client 
+ Workflows Ready-made patterns built on the primitives 
+ Use cases 
+ By use case 
+ AI agents and RAG Live web content for LLMs 
+ Price monitoring Track competitor prices at scale 
+ Lead enrichment Fill the gaps in a record 
+ Ecommerce Catalogs, prices and reviews 
+ Real estate Listings and price history 
+ All use cases → 
+ For teams → 
+ Customer stories 
+ Clay 
+ Reaches the protected web 
+ 3–6 hours → seconds per list 
+ All customer stories The full index 
+ Developers 
+ Reference 
+ Documentation Guides and API reference 
+ Ask docs Search docs in plain English 
+ SDKs Python, Node and Go clients 
+ MCP Server Web access for agents 
+ Learn & more 
+ Integrations n8n, Make, Zapier and more 
+ Community GitHub, X, and more 
+ Blog Web data technique and scraping guides 
+ Resources Docs, blog, and comparisons 
+ Open source MIT 
+ Every client we ship is open source. 
+ $  ls github.com/zenrows 
+ cli / TS 
+ zenrows-mcp / TS 
+ zenrows-python-sdk / PY 
+ zenrows-node-sdk / TS 
+ zenrows-go-sdk / GO 
+ $   
+ Give us a star One click, on any repo above 
+ Partners 
+ The five doors 
+ Affiliate A real surface and a link 
+ Creator Ship an artefact, paid on delivery 
+ Ambassador Credits and access, not cash 
+ Boutique and agency Pass on the work you would rather not maintain 
+ Customer Refer a peer, both sides get credits 
+ All five doors → 
+ The economics 
+ One commission, published up front. 
+ Self-serve 35%, 12 months 
+ Sales-assisted 15% of year one 
+ Featured 40% on self-serve 
+ Featured is earned: €2,000 in active referred revenue, held three months. 
+ Docs 
+ Pricing 
+ @zenrows/cli 
+ Talk to sales 
+ Start free 
+ Platform 
+ Fetch 
+ Extract 
+ Crawl 
+ Browser 
+ Batch 
+ Platform overview 
+ Agents 
+ Agent Toolkit 
+ Skills 
+ Plugins 
+ MCP Server 
+ Workflows 
+ Use cases 
+ AI agents and RAG 
+ Price monitoring 
+ Lead enrichment 
+ Ecommerce 
+ Real estate 
+ All use cases 
+ For teams 
+ Customer stories 
+ Developers 
+ Documentation 
+ Ask docs 
+ MCP Server 
+ SDKs 
+ Integrations 
+ Blog 
+ Resources 
+ Partners 
+ The five doors 
+ Apply to partner 
+ Partner terms 
+ Docs 
+ Pricing 
+ Talk to sales 
+ Start free 
+ Reliable web data when the web fights back. 
+ Web data infrastructure for AI agents, data, and automation teams. Fetch, extract, crawl, batch, or drive a browser, all through one platform. 
+ Start free 
+ Add to your agent 
+ Copied 
+ 5,000 free credits/month, always. No card. 
+ Paste it into your agent to finish setup → 
+ 10B+ 
+ requests a month 
+ All 
+ anti-bot systems, handled 
+ 100% 
+ Fetch uptime, 90 days 
+ Fetch 
+ Extract 
+ Crawl 
+ Batch 
+ Browser 
+ auroraaudio.shop/p/aurora-headphones 
+ Aurora Wireless Headphones 
+ ★★★★☆ 4.6 
+ $149.00 In stock 
+ page.md 
+ md 
+ html 
+ txt 
+ png 
+ Any page, protected or not, back as clean Markdown. Explore Fetch 
+ Trusted by teams at +10,000 companies 
+ Microsoft 
+ Dell 
+ IBM 
+ Slack 
+ Clay 
+ EY 
+ eBay 
+ Nokia 
+ Microsoft 
+ Dell 
+ IBM 
+ Slack 
+ Clay 
+ EY 
+ eBay 
+ Nokia 
+ Compose them into one job. 
+ The same primitives chain into the pipeline your case needs, from a list of pages to rows where you work. 
+ Start in minutes. 
+ Integrate via MCP, CLI, SDK, or direct API. Choose what fits your stack. 
+ CLI 
+ MCP 
+ SDK 
+ API 
+ Terminal 
+ Copy 
+ # Install 
+npx -y @zenrows/cli init
+ # Fetch any URL as clean Markdown 
+zenrows fetch https://example.com --output markdown
+ # Extract structured fields 
+zenrows extract https://www.scrapingcourse.com/ecommerce/product/abominable-hoodie/
+ # Run a batch job 
+zenrows batch create jobs.jsonl --wait 
+ Works in your existing terminal. Handles dynamic and protected pages automatically. Read the CLI docs → 
+ Terminal 
+ Copy 
+ # Add to Claude Code (one command) 
+claude mcp add zenrows \
+ -e ZENROWS_API_KEY=YOUR_ZENROWS_API_KEY \
+ -- npx -y @zenrows/mcp
+ # Similar JSON config for Cursor, VS Code, Windsurf, Zed, JetBrains 
+{
+ "mcpServers": {
+ "zenrows": {
+ "command": "npx",
+ "args": ["-y", "@zenrows/mcp"],
+ "env": { "ZENROWS_API_KEY": "YOUR_ZENROWS_API_KEY" }
+ }
+ }
+}
+ # Then just ask naturally: 
+ "Fetch the pricing page from competitor.com as Markdown" 
+ Drops into Claude Code, Cursor, VS Code, Windsurf, Zed, and JetBrains in one command. MCP setup guide → 
+ SDK 
+ Python 
+ Node.js 
+ Go 
+ Install 
+ pip install zenrows 
+ Tell your AI editor 
+ pip install zenrows and read the docs at https://docs.zenrows.com/fetch/sdk/overview to learn the zenrows Python SDK. 
+ Install 
+ npm install zenrows 
+ Tell your AI editor 
+ npm install zenrows and read the docs at https://docs.zenrows.com/fetch/sdk/overview to learn the zenrows Node.js SDK. 
+ Install 
+ go get github.com/zenrows/zenrows-go-sdk/service/api 
+ Tell your AI editor 
+ go get github.com/zenrows/zenrows-go-sdk/service/api and read the docs at https://docs.zenrows.com/fetch/sdk/go/introduction to learn the zenrows Go SDK. 
+ Read the SDK docs → 
+ cURL 
+ Fetch any page 
+ # Fetch any page as Markdown 
+curl "https://api.zenrows.com/v1/?url=https://example.com&apikey=YOUR_ZENROWS_API_KEY&response_type=markdown" 
+ Tell your AI editor 
+ Use the Zenrows REST API to fetch any web page. Read the docs at https://docs.zenrows.com/first-steps/welcome to get started. 
+ Read the API docs → 
+ See it for yourself. 
+ Connect your agent to the live web. 
+ Your agent asks in plain language. Zenrows fetches the page, protected or dynamic, and hands back clean data. No scraping stack to babysit. 
+ Explore the Agent Toolkit → 
+ Claude Code ↔ zenrows.mcp 
+ idle 
+ When the web fights back, Zenrows keeps going. 
+ ▸ 
+ Run Zenrows 
+ all handled 
+ Cloudflare blocked your request. 
+ 403 Forbidden 
+ → 
+ 200 OK 
+ The page renders only after JavaScript. 
+ <div/> empty 
+ → 
+ DOM rendered 
+ Your scraper broke when the site changed. 
+ selector: null 
+ → 
+ auto-adapted 
+ 50,000 URLs, and they are due tomorrow. 
+ queued: 50,000 
+ → 
+ done in 12 min 
+ Built for every workflow that touches the web. 
+ From agent research loops to large-scale pipelines. 
+ Live web access for agents 
+ MCP, API, or SDK 
+ Protected pages included 
+ Structured output formats 
+ Explore AI Agents 
+ Track prices across any site 
+ Scheduled monitoring 
+ Protected e-commerce sites 
+ Batch URL processing 
+ Explore pricing intelligence 
+ Watch the market in real time 
+ Competitor page monitoring 
+ Change detection 
+ Clean structured output 
+ Explore competitive intelligence 
+ Fill every gap in a record 
+ Company pages + LinkedIn 
+ Hiring signals 
+ Tech stack detection 
+ Explore lead enrichment 
+ Product data at any scale 
+ Schema-driven extraction 
+ Async batch processing 
+ JSON + Markdown output 
+ Explore marketplace catalog 
+ Industry signals, reliably sourced 
+ High-volume batch jobs 
+ Protected source access 
+ Production-ready pipelines 
+ Explore all use cases 
+ Your stack, already connected. 
+ See all integrations → 
+ Claude Code AI agents & IDEs 
+ Cursor AI agents & IDEs 
+ Windsurf AI agents & IDEs 
+ VS Code AI agents & IDEs 
+ JetBrains AI agents & IDEs 
+ Zed AI agents & IDEs 
+ OpenAI AI agents & IDEs 
+ Google ADK AI agents & IDEs 
+ LangChain AI frameworks 
+ LlamaIndex AI frameworks 
+ Hermes AI frameworks 
+ Flowise AI frameworks 
+ n8n Automation 
+ Zapier Automation 
+ Make Automation 
+ Clay Automation 
+ Playwright Dev tools 
+ Puppeteer Dev tools 
+ Scrapy Dev tools 
+ Selenium Dev tools 
+ Where teams put it to work. 
+ ← 
+ → 
+ “ 
+ AI Agents · Fetch 
+ We needed reliable live web data for our agent's research loop, on protected sources every other tool failed on. Zenrows Fetch made it production-ready in two days. 
+ Senior AI Engineer AI-native research startup 
+ “ 
+ Batch + Extract · Market intelligence 
+ Our data pipeline was maintained by three engineers. We moved to Zenrows Batch and Extract, and two of them shifted back to product work. That's the real ROI. 
+ Head of Data Engineering Market intelligence company 
+ “ 
+ Fetch · E-commerce 
+ We evaluated Firecrawl, an internal Playwright build, and Zenrows. Zenrows was the only one that held up at our volume with protected sources. No contest. 
+ CTO Series B e-commerce intelligence platform 
+ “ 
+ Agent Toolkit · AI & ML 
+ Our agents needed fresh web context for every query. Zenrows handles the access and structure. We handle the reasoning. That's exactly how it should be. 
+ Founding Engineer AI application team 
+ “ 
+ Fetch + Batch · Data pipelines 
+ Before Zenrows, we had a rotating team of contractors maintaining scrapers. We killed that entire function. Now we just use Fetch and Batch. 
+ VP of Engineering Enterprise data company 
+ Read the customer stories → 
+ Questions, before you ask them. 
+ Still unsure about something? 
+ Talk to us → 
+ Is it legal to use Zenrows? 
+ Zenrows gives you reliable access to publicly available web data. You're responsible for complying with each site's terms of service and the laws that apply to you. We provide the infrastructure, not legal advice. 
+ Do you offer a free plan? 
+ Yes. It's recurring, not a time-limited trial: 5,000 credits every month, no credit card required. Upgrade at any time when you need more. 
+ How long does it take to integrate? 
+ Add the MCP server to your agent in one line, or call the API directly. There are SDKs for the major languages, so most teams are running in minutes. 
+ Will my scrapers break when sites change? 
+ You don't maintain scrapers. Zenrows manages the access handling and browser rendering, and keeps access working as sites change. 
+ Does it handle protected and dynamic sites? 
+ Yes. Fetch retrieves protected, JavaScript-heavy pages and returns them clean and structured. That's the core of what Zenrows does. 
+ Which agents and tools does it work with? 
+ The MCP server drops into Claude Code, Cursor, VS Code, and other MCP clients. You can also use the API, CLI, and SDKs directly. 
+ Zenrows sells to AI agents - live prices and self-serve payment 
+ The agent storefront at
+ https://agents.zenrows.com/llms.txt?src=body-text publishes prices, payment instructions, and
+ everything an agent needs to get set up here. Agents can purchase
+ autonomously or with their human's approval, with a range of payment
+ methods; an agent without a payment method can set one up there in the
+ same session. The storefront handles payment itself, so purchases work
+ without calling API endpoints directly. 
+ × 
+ Watch again 
+ Get reliable web data in minutes. 
+ Free plan, 5,000 credits every month, no credit card required. 
+ Start building free 
+ Or talk to us about enterprise → 
+ Or copy this prompt into your agent 
+ Read https://zenrows.com/SKILL.md to set up Zenrows. 
+ Web data infrastructure for AI, data and automation teams. 
+ Product 
+ Fetch 
+ Extract 
+ Crawl 
+ Browser 
+ Batch 
+ Agents 
+ Agent Toolkit 
+ Skills 
+ Plugins 
+ Workflows 
+ Use cases 
+ AI agents and RAG 
+ Price monitoring 
+ Competitive intel 
+ Lead enrichment 
+ Ecommerce 
+ Finance 
+ All use cases 
+ Scrape 
+ Amazon 
+ Zillow 
+ Idealista 
+ eBay 
+ LinkedIn 
+ Google 
+ All targets 
+ Anti-bot 
+ Cloudflare 
+ DataDome 
+ Akamai 
+ PerimeterX 
+ reCAPTCHA 
+ All anti-bot 
+ Compare 
+ vs Firecrawl 
+ vs Bright Data 
+ vs Apify 
+ vs Browserbase 
+ All comparisons 
+ Alternatives 
+ Developers 
+ Documentation 
+ MCP Server 
+ SDK 
+ CLI 
+ Integrations 
+ Resources 
+ Glossary 
+ Changelog 
+ Company 
+ About 
+ Customer Stories 
+ Case Studies 
+ Blog 
+ Community 
+ Careers 
+ Trust Center 
+ Reliability 
+ Status 
+ Enterprise 
+ For teams 
+ Partners 
+ Media kit 
+ Legal 
+ Contact 
+ · 
+ · 
+ · 
+ © 2026 Zenrows. All rights reserved. · Privacy · Terms · Cookies · Legal · Sign in

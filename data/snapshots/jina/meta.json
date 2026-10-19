@@ -1,0 +1,72 @@
+{
+ "slug": "jina",
+ "name": "Jina AI",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://docs.jina.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.jina.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 27145,
+   "truncated": false,
+   "sha256": "7921712c16affb56c09d1a29135283402a96753242af99c5cad09b12c0e36505",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 27136
+  },
+  "llms-full": {
+   "url": "https://docs.jina.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.jina.ai/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 27145,
+   "truncated": false,
+   "sha256": "7921712c16affb56c09d1a29135283402a96753242af99c5cad09b12c0e36505",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 27136
+  },
+  "pricing-err-a621c5": {
+   "url": "https://jina.ai/pricing",
+   "status": 404,
+   "final_url": "https://jina.ai/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 27047,
+   "truncated": false,
+   "sha256": "97a9a4c5f1cd0ce4d03cac1dbbf9d886ce8735efac84b740c6fc4ee83d85905c",
+   "fetched_at": "2026-10-19T05:54:01+00:00"
+  },
+  "docs": {
+   "url": "https://docs.jina.ai/",
+   "status": 200,
+   "final_url": "https://docs.jina.ai/",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 27145,
+   "truncated": false,
+   "sha256": "7921712c16affb56c09d1a29135283402a96753242af99c5cad09b12c0e36505",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 27136
+  },
+  "home": {
+   "url": "https://jina.ai/",
+   "status": 200,
+   "final_url": "https://jina.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 279838,
+   "truncated": false,
+   "sha256": "497911d6dcea79a9f2a8342c85f22736bfab350f6b48a2705981f52b8bff2ac3",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 11256
+  },
+  "pricing": {
+   "url": "https://jina.ai/pricing/",
+   "status": 404,
+   "final_url": "https://jina.ai/pricing/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 27047,
+   "truncated": false,
+   "sha256": "97a9a4c5f1cd0ce4d03cac1dbbf9d886ce8735efac84b740c6fc4ee83d85905c",
+   "fetched_at": "2026-10-19T05:58:02+00:00"
+  }
+ }
+}

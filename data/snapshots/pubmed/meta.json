@@ -1,0 +1,52 @@
+{
+ "slug": "pubmed",
+ "name": "PubMed E-utilities",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:43+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+   "status": 200,
+   "final_url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 21258,
+   "truncated": false,
+   "sha256": "24aa0ae333e2cf8c2602edd38bf3ea7567de5417694058ef9a30f98520fb9292",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 165
+  },
+  "llms": {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/llms.txt",
+   "status": 200,
+   "final_url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 21280,
+   "truncated": false,
+   "sha256": "8f098cf1750b4dc6c26ff4be210c2614e216d00c22b47fe26e4313fec80df9b7",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 165
+  },
+  "llms-full": {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/docs/llms-full.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 21304,
+   "truncated": false,
+   "sha256": "9f9f7bdcde89b43968ad9d20c9533ca3220b3b1aa117da16b398532755342372",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 165
+  },
+  "llms-https://www.ncbi.nlm.nih.gov/books/NBK25501/docs/llms.txt": {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 21292,
+   "truncated": false,
+   "sha256": "1c3aa1950911c086e2e5e3e92d1484b70ebfddbe5882a4bc2aa1e9bb4760057a",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 165
+  }
+ }
+}

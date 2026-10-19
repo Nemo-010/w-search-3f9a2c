@@ -1,0 +1,657 @@
+Event Registry 
+ Platform 
+ Solutions 
+ API 
+ Use cases 
+ Platform 
+ ER Monitor 
+ Elevate your corporate security with real-time news surveillance. 
+ ER Intelligence 
+ Create business intelligence reports in minutes. 
+ ER Compare 
+ Visually compare brands, trends and topics. 
+ Solutions 
+ Risk Management 
+ Get alerts before the story reaches mainstream news. 
+ Geopolitical Intelligence 
+ Examine the company’s mentions linked to social inequality. 
+ Supply Chain Intelligence 
+ Monitors your supply network to reveal risk in real time. 
+ ESG Intelligence 
+ Monitors ESG indicators for your portfolio in real time. 
+ Sign in 
+ Use the power of AI to turn news content into actionable insights 
+ Event Registry is the world’s leading news intelligence platform, empowering organizations to keep track of world events and analyze their impact. 
+ START A FREE TRIAL 
+ GET A DEMO 
+ THE COMPLETE TOOLKIT FOR GLOBAL MEDIA MONITORING 
+ We analyze and structure global news so that your organization can make smart, fast and accurate decisions. Use our platform to find, summarize and visualize news content and events of your interest. Event Registry provides comprehensive news intelligence, media monitoring, and event detection capabilities that help businesses, governments, and research institutions stay ahead of global trends and make data-driven decisions based on real-time news analysis. 
+ Find out how you can use Event Registry 
+ Platform 
+ Global news coverage 
+ Access news and blog content published globally by over 150,000 diverse sources. 
+ Extensive search options 
+ Find the information you need with advanced filtering by keywords, tags, categories, sentiment, location and more. 
+ Group content into events 
+ Get the latest news about your industry and track competitors, campaigns, and clients. 
+ ER Monitoring 
+ MONITOR YOUR TOPIC OF INTEREST 
+ Your browser does not support the video tag.
+ Real-time media monitoring 
+ Gain access to news content as soon as it is published. 
+ Find mentions 
+ Find mentions of people and organisations in local and global news content. 
+ Track topics 
+ Define your topic of interest and get relevant content as soon as it is published. 
+ Automated alerts 
+ Receive email alerts when major news break so you can respond immediately. 
+ ER Intelligence 
+ SEARCH AND VISUALIZE NEWS CONTENT 
+ Your browser does not support the video tag.
+ Trend discovery 
+ Discover unexpected trends and gain additional insights by visualizing millions of search results. 
+ Get brand insights 
+ Get fast answers with informative visualizations. Compare brands, products, and influencers. 
+ Story impact analysis 
+ Analyze the impact of world events as well as news reach on social media. 
+ Sentiment analysis 
+ Analyze sentiment in relation to your company, product or a public figure. 
+ ER Compare 
+ AMPLIFY INSIGHTS WITH NEWS DATA 
+ Your browser does not support the video tag.
+ Competitive intelligence 
+ Track your competitors’ activity to better understand strengths, weaknesses, and market direction. 
+ Products insights 
+ Analyze company product launches and patent applications to keep on top of the next big disruptive technologies in any industry. 
+ Demographics analysis 
+ Understand the various demographics discussing your brand online. Uncover what excites your target markets. 
+ Market trends 
+ Analyze emerging trends and make data-driven predictions. 
+ News feeds and data analytics in one fully integrated platform. 
+ GLOBAL CONTENT 
+ Get access to over 150,000 news sources globally producing content in 60+ languages. Content is available with minimum delay as soon as it is published online. 
+ More about us 
+ ENRICHED DATA 
+ Using AI we enrich collected content by discovering mentioned entities, assigning categories, sentiment and other properties. We even organize the news content into events in order to reduce your content overload. 
+ Learn about our APIs 
+ “Event Registry allows us to monitor sustainable development in developing countries and track media buzz about our operations.” 
+ Mike Evans 
+ Analyst at the United Nations 
+ “To see the world's perception around an emerging 5G technology you need a large pool of events from different locations. The topics monitoring was really easy to integrate into our workflows.” 
+ Sandra Owens 
+ McKinsey & Company 
+ Ready to get started? 
+ START MY FREE TRIAL 
+ Get in touch 
+ PRODUCTS 
+ ER Intelligence 
+ ER Monitor 
+ ER Compare 
+ ESG Tool 
+ News API 
+ SOLUTIONS 
+ Risk Management 
+ Geopolitical Intelligence 
+ Investment Intelligence 
+ Supply Chain Intelligence 
+ RESOURCES 
+ Contact 
+ Clients Support 
+ Developers Docs 
+ API Pricing 
+ COMPANY 
+ About 
+ Terms 
+ Privacy policy 
+ Blog 
+ Contact us for pricing 
+ Please fill the form to get a pricing information. 
+ Full name 
+ Valid name is required. 
+ Work email 
+ Valid email is required. 
+ Work phone 
+ Company 
+ Country 
+ Choose a country 
+ Afghanistan 
+ Albania 
+ Algeria 
+ American Samoa 
+ Andorre 
+ Angola 
+ Anguilla 
+ Antarctica 
+ Antigua and Barbuda 
+ Argentina 
+ Armenia 
+ Aruba 
+ Australia 
+ Austria 
+ Azerbaijan 
+ Bahamas 
+ Bahrain 
+ Bangladesh 
+ Barbade 
+ Belarus 
+ Belgium 
+ Belize 
+ Benin 
+ Bermuda 
+ Bhutan 
+ Bolivia 
+ Bonaire, Sint Eustatius and Saba 
+ Bosnia and Herzegovina 
+ Botswana 
+ Bouvet Island 
+ Brazil 
+ British Indian Ocean Territory 
+ British Virgin Islands 
+ Brunei 
+ Bulgaria 
+ Burkina Faso 
+ Burundi 
+ Cambodia 
+ Cameroon 
+ Canada 
+ Cape Verde 
+ Cayman Islands 
+ Central African Republic 
+ Chad 
+ Chile 
+ China 
+ Christmas Island 
+ Cocos (Keeling) Islands 
+ Colombia 
+ Comoros 
+ Congo 
+ Congo (Dem. Rep.) 
+ Cook Islands 
+ Costa Rica 
+ Crna Gora 
+ Croatia 
+ Cuba 
+ Curaçao 
+ Cyprus 
+ Czech Republic 
+ Côte D'Ivoire 
+ Denmark 
+ Djibouti 
+ Dominica 
+ Dominican Republic 
+ East Timor 
+ Ecuador 
+ Egypt 
+ El Salvador 
+ Equatorial Guinea 
+ Eritrea 
+ Estonia 
+ Ethiopia 
+ Falkland Islands 
+ Faroe Islands 
+ Fiji 
+ Finland 
+ France 
+ French Guiana 
+ French Polynesia 
+ French Southern Territories 
+ Gabon 
+ Gambia 
+ Georgia 
+ Germany 
+ Ghana 
+ Gibraltar 
+ Greece 
+ Greenland 
+ Grenada 
+ Guadeloupe 
+ Guam 
+ Guatemala 
+ Guernsey and Alderney 
+ Guinea 
+ Guinea-Bissau 
+ Guyana 
+ Haiti 
+ Heard and McDonald Islands 
+ Honduras 
+ Hong Kong 
+ Hungary 
+ Iceland 
+ India 
+ Indonesia 
+ Iran 
+ Iraq 
+ Ireland 
+ Isle of Man 
+ Israel 
+ Italy 
+ Jamaica 
+ Japan 
+ Jersey 
+ Jordan 
+ Kazakhstan 
+ Kenya 
+ Kiribati 
+ Korea (North) 
+ Korea (South) 
+ Kuwait 
+ Kyrgyzstan 
+ Laos 
+ Latvia 
+ Lebanon 
+ Lesotho 
+ Liberia 
+ Libya 
+ Liechtenstein 
+ Lithuania 
+ Luxembourg 
+ Macao 
+ Macedonia 
+ Madagascar 
+ Malawi 
+ Malaysia 
+ Maldives 
+ Mali 
+ Malta 
+ Marshall Islands 
+ Martinique 
+ Mauritania 
+ Mauritius 
+ Mayotte 
+ Mexico 
+ Micronesia 
+ Moldova 
+ Monaco 
+ Mongolia 
+ Montserrat 
+ Morocco 
+ Mozambique 
+ Myanmar 
+ Namibia 
+ Nauru 
+ Nepal 
+ Netherlands 
+ Netherlands Antilles 
+ New Caledonia 
+ New Zealand 
+ Nicaragua 
+ Niger 
+ Nigeria 
+ Niue 
+ Norfolk Island 
+ Northern Mariana Islands 
+ Norway 
+ Oman 
+ Pakistan 
+ Palau 
+ Palestine 
+ Panama 
+ Papua New Guinea 
+ Paraguay 
+ Peru 
+ Philippines 
+ Pitcairn 
+ Poland 
+ Portugal 
+ Puerto Rico 
+ Qatar 
+ Romania 
+ Russia 
+ Rwanda 
+ Réunion 
+ Saint Barthélemy 
+ Saint Helena 
+ Saint Kitts and Nevis 
+ Saint Lucia 
+ Saint Martin 
+ Saint Pierre and Miquelon 
+ Saint Vincent and the Grenadines 
+ Samoa 
+ San Marino 
+ Saudi Arabia 
+ Senegal 
+ Serbia 
+ Seychelles 
+ Sierra Leone 
+ Singapore 
+ Sint Maarten 
+ Slovakia 
+ Slovenia 
+ Solomon Islands 
+ Somalia 
+ South Africa 
+ South Georgia 
+ South Sudan 
+ Spain 
+ Sri Lanka 
+ Sudan 
+ Suriname 
+ Svalbard and Jan Mayen 
+ Swaziland 
+ Sweden 
+ Switzerland 
+ Syria 
+ São Tomé and Príncipe 
+ Taiwan 
+ Tajikistan 
+ Tanzania 
+ Thailand 
+ Togo 
+ Tokelau 
+ Tonga 
+ Trinidad and Tobago 
+ Tunisia 
+ Turkey 
+ Turkmenistan 
+ Turks and Caicos Islands 
+ Tuvalu 
+ Uganda 
+ Ukraine 
+ United Arab Emirates 
+ United Kingdom 
+ United States of America 
+ United States Outlying Islands 
+ Uruguay 
+ Uzbekistan 
+ Vanuatu 
+ Vatican City 
+ Venezuela 
+ Vietnam 
+ Virgin Islands 
+ Wallis and Futuna 
+ Western Sahara 
+ Yemen 
+ Zambia 
+ Zimbabwe 
+ Åland Islands 
+ Product 
+ Select a product of your interest 
+ News API 
+ ER Monitor 
+ ER Intelligence 
+ ER Compare 
+ Anything else? 
+ Contact Sales 
+ Contact our team 
+ Please fill the form to get a response from our team. 
+ Full name 
+ Valid name is required. 
+ Work email 
+ Valid email is required. 
+ Work phone 
+ Company 
+ Country 
+ Choose a country 
+ Afghanistan 
+ Albania 
+ Algeria 
+ American Samoa 
+ Andorre 
+ Angola 
+ Anguilla 
+ Antarctica 
+ Antigua and Barbuda 
+ Argentina 
+ Armenia 
+ Aruba 
+ Australia 
+ Austria 
+ Azerbaijan 
+ Bahamas 
+ Bahrain 
+ Bangladesh 
+ Barbade 
+ Belarus 
+ Belgium 
+ Belize 
+ Benin 
+ Bermuda 
+ Bhutan 
+ Bolivia 
+ Bonaire, Sint Eustatius and Saba 
+ Bosnia and Herzegovina 
+ Botswana 
+ Bouvet Island 
+ Brazil 
+ British Indian Ocean Territory 
+ British Virgin Islands 
+ Brunei 
+ Bulgaria 
+ Burkina Faso 
+ Burundi 
+ Cambodia 
+ Cameroon 
+ Canada 
+ Cape Verde 
+ Cayman Islands 
+ Central African Republic 
+ Chad 
+ Chile 
+ China 
+ Christmas Island 
+ Cocos (Keeling) Islands 
+ Colombia 
+ Comoros 
+ Congo 
+ Congo (Dem. Rep.) 
+ Cook Islands 
+ Costa Rica 
+ Crna Gora 
+ Croatia 
+ Cuba 
+ Curaçao 
+ Cyprus 
+ Czech Republic 
+ Côte D'Ivoire 
+ Denmark 
+ Djibouti 
+ Dominica 
+ Dominican Republic 
+ East Timor 
+ Ecuador 
+ Egypt 
+ El Salvador 
+ Equatorial Guinea 
+ Eritrea 
+ Estonia 
+ Ethiopia 
+ Falkland Islands 
+ Faroe Islands 
+ Fiji 
+ Finland 
+ France 
+ French Guiana 
+ French Polynesia 
+ French Southern Territories 
+ Gabon 
+ Gambia 
+ Georgia 
+ Germany 
+ Ghana 
+ Gibraltar 
+ Greece 
+ Greenland 
+ Grenada 
+ Guadeloupe 
+ Guam 
+ Guatemala 
+ Guernsey and Alderney 
+ Guinea 
+ Guinea-Bissau 
+ Guyana 
+ Haiti 
+ Heard and McDonald Islands 
+ Honduras 
+ Hong Kong 
+ Hungary 
+ Iceland 
+ India 
+ Indonesia 
+ Iran 
+ Iraq 
+ Ireland 
+ Isle of Man 
+ Israel 
+ Italy 
+ Jamaica 
+ Japan 
+ Jersey 
+ Jordan 
+ Kazakhstan 
+ Kenya 
+ Kiribati 
+ Korea (North) 
+ Korea (South) 
+ Kuwait 
+ Kyrgyzstan 
+ Laos 
+ Latvia 
+ Lebanon 
+ Lesotho 
+ Liberia 
+ Libya 
+ Liechtenstein 
+ Lithuania 
+ Luxembourg 
+ Macao 
+ Macedonia 
+ Madagascar 
+ Malawi 
+ Malaysia 
+ Maldives 
+ Mali 
+ Malta 
+ Marshall Islands 
+ Martinique 
+ Mauritania 
+ Mauritius 
+ Mayotte 
+ Mexico 
+ Micronesia 
+ Moldova 
+ Monaco 
+ Mongolia 
+ Montserrat 
+ Morocco 
+ Mozambique 
+ Myanmar 
+ Namibia 
+ Nauru 
+ Nepal 
+ Netherlands 
+ Netherlands Antilles 
+ New Caledonia 
+ New Zealand 
+ Nicaragua 
+ Niger 
+ Nigeria 
+ Niue 
+ Norfolk Island 
+ Northern Mariana Islands 
+ Norway 
+ Oman 
+ Pakistan 
+ Palau 
+ Palestine 
+ Panama 
+ Papua New Guinea 
+ Paraguay 
+ Peru 
+ Philippines 
+ Pitcairn 
+ Poland 
+ Portugal 
+ Puerto Rico 
+ Qatar 
+ Romania 
+ Russia 
+ Rwanda 
+ Réunion 
+ Saint Barthélemy 
+ Saint Helena 
+ Saint Kitts and Nevis 
+ Saint Lucia 
+ Saint Martin 
+ Saint Pierre and Miquelon 
+ Saint Vincent and the Grenadines 
+ Samoa 
+ San Marino 
+ Saudi Arabia 
+ Senegal 
+ Serbia 
+ Seychelles 
+ Sierra Leone 
+ Singapore 
+ Sint Maarten 
+ Slovakia 
+ Slovenia 
+ Solomon Islands 
+ Somalia 
+ South Africa 
+ South Georgia 
+ South Sudan 
+ Spain 
+ Sri Lanka 
+ Sudan 
+ Suriname 
+ Svalbard and Jan Mayen 
+ Swaziland 
+ Sweden 
+ Switzerland 
+ Syria 
+ São Tomé and Príncipe 
+ Taiwan 
+ Tajikistan 
+ Tanzania 
+ Thailand 
+ Togo 
+ Tokelau 
+ Tonga 
+ Trinidad and Tobago 
+ Tunisia 
+ Turkey 
+ Turkmenistan 
+ Turks and Caicos Islands 
+ Tuvalu 
+ Uganda 
+ Ukraine 
+ United Arab Emirates 
+ United Kingdom 
+ United States of America 
+ United States Outlying Islands 
+ Uruguay 
+ Uzbekistan 
+ Vanuatu 
+ Vatican City 
+ Venezuela 
+ Vietnam 
+ Virgin Islands 
+ Wallis and Futuna 
+ Western Sahara 
+ Yemen 
+ Zambia 
+ Zimbabwe 
+ Åland Islands 
+ Product 
+ Select a product of your interest 
+ News API 
+ ER Monitor 
+ ER Intelligence 
+ ER Compare 
+ Message 
+ Contact us 
+ We value your privacy 
+ We use cookies and similar technologies to operate our website, measure performance, and deliver personalised advertising. These technologies may process data such as browsing behavior and identifiers to improve our services and show ads tailored to your interests. You can choose which categories of cookies and data processing you allow. Your preferences can be changed at any time. For more information, see our Privacy Policy . 
+ Analytics 
+ Helps us understand how our website is used so we can improve it. 
+ Ad storage 
+ Allows us and our partners to store and access information (like cookies) for advertising. 
+ Personalised ads 
+ Uses your activity to show more relevant ads from Google and other partners. 
+ Ad measurement & user data 
+ Lets us share limited data with Google to measure ad performance and prevent fraud. 
+ Save preferences 
+ More options 
+ Less options 
+ Reject all 
+ Accept all

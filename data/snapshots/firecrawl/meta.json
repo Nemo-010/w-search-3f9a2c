@@ -1,0 +1,85 @@
+{
+ "slug": "firecrawl",
+ "name": "Firecrawl",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://docs.firecrawl.dev/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.firecrawl.dev/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9313,
+   "truncated": false,
+   "sha256": "4765637fb7b7bf5d324034331edcd18fa22b9794a3cbea1c35136b248d14cd3a",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 9307
+  },
+  "llms-full": {
+   "url": "https://docs.firecrawl.dev/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.firecrawl.dev/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 1912995,
+   "truncated": false,
+   "sha256": "3799347a6eb66d9fc40aab2f97316f42f96448d83066a23bb8288caaf33d3f02",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 1910844
+  },
+  "pricing": {
+   "url": "https://www.firecrawl.dev/pricing",
+   "status": 200,
+   "final_url": "https://www.firecrawl.dev/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 800009,
+   "truncated": false,
+   "sha256": "0f7b8e3994bc3357b39396282def6adf9152356b4ae609515c2fac85e12d1ce0",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 15646
+  },
+  "docs": {
+   "url": "https://docs.firecrawl.dev/",
+   "status": 200,
+   "final_url": "https://docs.firecrawl.dev/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 751708,
+   "truncated": false,
+   "sha256": "eba5944974920a72acd72e404a1449a2a6a9406f6299a35d19526c32ed1a64d2",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 13139
+  },
+  "home": {
+   "url": "https://www.firecrawl.dev/",
+   "status": 200,
+   "final_url": "https://www.firecrawl.dev/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1198155,
+   "truncated": false,
+   "sha256": "d5e74585c8cdfb085c40962ab74530e356a382ec0220ec7e3217a307d175e419",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 21924
+  },
+  "billing-md": {
+   "url": "https://docs.firecrawl.dev/billing.md",
+   "status": 200,
+   "final_url": "https://docs.firecrawl.dev/billing.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 24447,
+   "truncated": false,
+   "sha256": "74b8d88ad2776ae61ddd99220f6830b4c596c5fb32bfd7f81a6de97cf3224e4b",
+   "fetched_at": "2026-10-19T05:58:00+00:00",
+   "text_bytes": 24437
+  },
+  "rate-limits-md": {
+   "url": "https://docs.firecrawl.dev/rate-limits.md",
+   "status": 200,
+   "final_url": "https://docs.firecrawl.dev/rate-limits.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 9745,
+   "truncated": false,
+   "sha256": "cfd9035121bd0c06f2d1f11ad6643c6b4548f6dd912cdc8622b9c186cf1a178d",
+   "fetched_at": "2026-10-19T05:58:01+00:00",
+   "text_bytes": 9743
+  }
+ }
+}

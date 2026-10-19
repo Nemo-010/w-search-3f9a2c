@@ -1,0 +1,72 @@
+{
+ "slug": "scrape.do",
+ "name": "Scrape.do",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:08+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://scrape.do/pricing/",
+   "status": 200,
+   "final_url": "https://scrape.do/pricing/",
+   "content_type": "text/html",
+   "bytes": 363630,
+   "truncated": false,
+   "sha256": "a73dae472736b05a906e43b49a0609920b5efbf2adf62c587c3abc181187b592",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 12392
+  },
+  "docs-err-d0f871": {
+   "url": "https://scrape.do/docs/",
+   "status": 404,
+   "final_url": "https://scrape.do/docs/",
+   "content_type": "text/html",
+   "bytes": 206420,
+   "truncated": false,
+   "sha256": "3ccef963c8af2aa623575c7376dc1b6a9f00d9aa3bf17c94ebb4efb78e277777",
+   "fetched_at": "2026-10-19T05:54:09+00:00"
+  },
+  "home": {
+   "url": "https://scrape.do/",
+   "status": 200,
+   "final_url": "https://scrape.do/",
+   "content_type": "text/html",
+   "bytes": 1021923,
+   "truncated": false,
+   "sha256": "5c7f9533da23ef083439ee159ca4c03e16997e11b8bd2836d895f9786fd71e85",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 12961
+  },
+  "llms-err-fc49fd": {
+   "url": "https://scrape.do/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://scrape.do/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 205121,
+   "truncated": false,
+   "sha256": "e5dcbb45d2fc42209ffc24cc5fd6df81898ab2fe6d5215fbfcd1e98c46b0016b",
+   "fetched_at": "2026-10-19T05:54:10+00:00"
+  },
+  "llms": {
+   "url": "https://scrape.do/llms.txt",
+   "status": 200,
+   "final_url": "https://scrape.do/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 73173,
+   "truncated": false,
+   "sha256": "b05f56e0839af5be006e5f76bc232aee89ba0dd90c8f3d634d374006401c5fd0",
+   "fetched_at": "2026-10-19T05:54:11+00:00",
+   "text_bytes": 73148
+  },
+  "llms-https://docs.scrape.do/llms.txt": {
+   "url": "https://docs.scrape.do/llms.txt",
+   "status": 200,
+   "final_url": "https://scrape.do/documentation/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 18034,
+   "truncated": false,
+   "sha256": "ba2627f00d7899fe799e7fb28c97848cba293d52128ceebcfe8e9630f8fb667d",
+   "fetched_at": "2026-10-19T05:54:12+00:00",
+   "text_bytes": 18026
+  }
+ }
+}

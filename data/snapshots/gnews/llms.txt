@@ -1,0 +1,29 @@
+# GNews API Documentation
+
+> Documentation of the GNews API, a REST API to search news articles and get top headlines from 80,000+ sources. The Search endpoint covers 26 languages and 37 countries; the Top Headlines endpoint covers 41 languages and 71 countries.
+
+Base URL: `https://gnews.io/api/v4`. Authenticate with the `apikey` query parameter or the `X-Api-Key` header. Get a free API key at https://gnews.io/register.
+
+## Docs
+
+- [Get Started](https://docs.gnews.io/): create an account, make a first request, choose an endpoint, compare what each plan includes
+- [Libraries & SDKs](https://docs.gnews.io/libraries): official Python (`gnews-io-python`), JavaScript/TypeScript (`@gnews-io/gnews-io-js`) and PHP (`gnews-io/gnews-io-php`) SDKs
+- [MCP Server](https://docs.gnews.io/mcp-server): hosted MCP server at https://mcp.gnews.io/ for Claude Code, Cursor, VS Code and Gemini CLI
+- [LangChain](https://docs.gnews.io/langchain): `langchain-gnews` package with two tools for LangChain and LangGraph agents, top headlines by country and category, and news search over an archive since 2020
+- [Authentication](https://docs.gnews.io/authentication): API key in the query string or in a header, 400 versus 401 errors
+- [Search Endpoint](https://docs.gnews.io/endpoints/search-endpoint): search articles by keywords, parameters, supported languages and countries
+- [Top Headlines Endpoint](https://docs.gnews.io/endpoints/top-headlines-endpoint): trending articles by category, parameters, supported languages and countries
+- [Query Syntax](https://docs.gnews.io/query-syntax): exact phrases, AND, OR, NOT and parentheses
+- [Article Availability](https://docs.gnews.io/article-availability): historical archive and data freshness for each plan
+- [JSON Response](https://docs.gnews.io/json-response): fields of the response and of each article
+- [Error Handling](https://docs.gnews.io/error-handling): HTTP status codes, error messages and how to handle them
+
+## API Specification
+
+- [OpenAPI 3.1 specification](https://docs.gnews.io/openapi.yaml): machine-readable description of both endpoints, their parameters, responses and errors
+
+## Optional
+
+- [Pricing](https://gnews.io/pricing): plans, quotas and articles per request
+- [FAQ](https://gnews.io/faq): common questions about the API
+- [gnews.io llms.txt](https://gnews.io/llms.txt): overview of the product for AI assistants

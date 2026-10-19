@@ -1,0 +1,24 @@
+# OpenRouter (openrouter) category=llm-search
+home=https://openrouter.ai/ pricing=https://openrouter.ai/pricing docs=https://openrouter.ai/docs llms=None
+sources_ok: pricing:https://openrouter.ai/pricing, docs:https://openrouter.ai/docs, home:https://openrouter.ai/, llms:https://openrouter.ai/docs/llms.txt, llms-full:https://docs.openrouter.ai/llms-full.txt, llms-https://openrouter.ai/llms.txt:https://openrouter.ai/llms.txt, llms-https://docs.openrouter.ai/llms.txt:https://docs.openrouter.ai/llms.txt
+--- ranked fact lines ---
+[docs] Looking for information about free models and rate limits? Please see the FAQ
+--- llms/readme head ---
+OpenRouter Quickstart Guide Documentation Index Fetch the complete documentation index at: /docs/llms.txt Use this file to discover all available pages before exploring further. Skip to main content OpenRouter | Documentation home page Search... ⌘ K Ask Assistant ⌘ I Models Benchmarks Chat Rankings Apps Ori Pricing Sign In Sign In Search... Navigation Overview Quickstart Docs API Reference Client SDKs Agent SDK Cookbook Overview Quickstart Principles Models Multimodal FAQ Report Feedback Models & Routing Model Fallbacks Provider Selection Auto Exacto Private Endpoints Model Variants Routers Tool Calling Client Tools Server Tools Plugins Features Workspaces Notifications Files Beta Containers Beta Presets Custom Classifiers Response Caching Structured Outputs Message Transforms Zero Completion Insurance App Attribution Batch Guardrails Service Tiers Router Metadata Observability Logs Activity Input & Output Logging Broadcast Authentication OAuth Workload Identity Management API Keys Security settings BYOK Single Sign-On (SSO) SCIM Group Mappings Ori Ori Ori Eval Ori Harness File Writing Ori Configuration Chatting with Interns Vault Secrets for Interns Changelog Developer Tools MCP Terraform Provider Stripe Projects Privacy Data Collection Provider Logging ZDR In-Region Routing Sovereign AI Best Practices Latency and Performance Prompt Caching Spend Controls Capping Shared Agent Keys Uptime Optimization Reasoning Tokens Providers Integration Traffic Routing Community Frameworks and Integrations Overview Awesome OpenRouter Effect AI SDK Arize AX LangChain LiveKit Langfuse Mastra OpenAI SDK Anthropic Agent SDK PydanticAI Render Replit TanStack AI Jev (TypeSafe) Jev Tutorial Multimodal Decisions TypeSafe SDK (Jev) Vercel AI SDK Xcode Zapier Infisical On this page Using the OpenRouter API Using the Client SDKs Using the Agent SDK Using the OpenAI SDK Using third-party SDKs Building with an AI assistant Overview Quickstart Copy page Copy page Get started with OpenRouter Copy page Copy page OpenRouter gives you access to hundreds of AI models through a single API endpoint. It handles fallbacks automatically and picks the most cost-effective option for each request.
+There are three ways to integrate with OpenRouter, depending on how much control you want:
+Approach Best for API Full control, any language, no dependencies Client SDKs Type-safe model calls with minimal overhead Agent SDK Building agents with tool use, loops, and state
+Read github.com/OpenRouterTeam/skills/tree/main/skills/create-agent-tui and follow the instructions to build an agent using OpenRouter.
+Looking for information about free models and rate limits? Please see the FAQ
+In the examples below, the OpenRouter-specific headers are optional. Setting them allows your app to appear on the OpenRouter leaderboards. For detailed information about app attribution, see our App Attribution guide .
+​ Using the OpenRouter API
+The most direct way to use OpenRouter. Send standard HTTP requests to the /api/v1/chat/completions endpoint. It works with any language or framework.
+You can use the interactive Request Builder to generate OpenRouter API requests in the language of your choice.
+The examples below use ~openai/gpt-sol-latest , a latest alias that always resolves to the newest model in the OpenAI GPT Sol family, so your code keeps using the freshest version without redeploying. You can substitute any model slug here. Browse the full catalog at openrouter.ai/models , or list every available slug programmatically via the GET /api/v1/models endpoint.
+Python TypeScript (fetch) Shell import requests
+import json
+response = requests.post(
+url = "https://openrouter.ai/api/v1/chat/completions" ,
+headers = {
+"Authorization" : "Bearer <OPENROUTER_API_KEY>" ,
+"HTTP-Referer" : "<YOUR_SITE_URL>" , # Optional. Site URL for rankings on openrouter.ai.
+"X-OpenRouter-Title" : "<YOUR_SITE_NAME>" , # Optional. Site title for rankings on openrouter.ai.

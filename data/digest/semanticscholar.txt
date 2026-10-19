@@ -1,0 +1,4 @@
+# Semantic Scholar (semanticscholar) category=academic
+home=https://www.semanticscholar.org/product/api pricing=https://www.semanticscholar.org/product/api docs=https://api.semanticscholar.org/api-docs/ llms=None
+sources_ok: pricing:https://www.semanticscholar.org/product/api
+--- ranked fact lines ---

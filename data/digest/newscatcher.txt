@@ -1,0 +1,25 @@
+# NewsCatcher (newscatcher) category=news
+home=https://www.newscatcherapi.com/ pricing=https://www.newscatcherapi.com/pricing docs=https://docs.newscatcherapi.com/ llms=None
+sources_ok: pricing:https://www.newscatcherapi.com/pricing, docs:https://docs.newscatcherapi.com/, home:https://www.newscatcherapi.com/, llms:https://docs.newscatcherapi.com/llms.txt, llms-full:https://www.newscatcherapi.com/docs/llms-full.txt, llms-https://www.newscatcherapi.com/llms.txt:https://www.newscatcherapi.com/llms.txt, llms-https://www.newscatcherapi.com/docs/llms.txt:https://www.newscatcherapi.com/docs/llms.txt
+--- ranked fact lines ---
+[pricing] Case Studies Dive into case studies showcasing how our API powers innovation across industries About Us Who we are, what drives us, and how we measure success Blog We cover the tech stories that matter Company About Us Who we are, what drives us, and how we measure success Careers Explore roles with responsibility, growth, and real impact Roadmap Transparent view of planned releases, improvements,
+[docs] The Web Search API is our newest product with a self-service platform. Sign up and start searching immediately with free credits.
+[docs] Create an account and get free credits
+--- llms/readme head ---
+# NewsCatcher API Documentation
+> Enterprise APIs for web search, news, and local news data. Three products: CatchAll (Web Search API) for recall-first structured event extraction from 50,000+ web pages per job; News API for 140,000+ source news search with NLP enrichment, clustering, and deduplication; Local News API for hyper-local news with intelligent geographic detection and filtering.
+- [NewsCatcher documentation](https://www.newscatcherapi.com/docs/home/index): Enterprise APIs for web search, news and local news data
+## Web Search API
+### Get started
+- [Meet CatchAll: Our recall-first web search API](https://www.newscatcherapi.com/docs/web-search-api/get-started/introduction): Find all results, not just top candidates
+- [CatchAll API quickstart guide](https://www.newscatcherapi.com/docs/web-search-api/get-started/quickstart): Get started with CatchAll API.
+- [CatchAll API changelog](https://www.newscatcherapi.com/docs/web-search-api/get-started/changelog): Track updates, improvements, and fixes to the CatchAll API.
+### Concepts
+- [Jobs](https://www.newscatcherapi.com/docs/web-search-api/concepts/jobs): How CatchAll jobs work and how to move from query to results.
+- [Event Monitors](https://www.newscatcherapi.com/docs/web-search-api/concepts/event-monitors): Schedule recurring CatchAll jobs with webhook notifications.
+- [Company Monitors](https://www.newscatcherapi.com/docs/web-search-api/concepts/company-monitors): Track specific companies across CatchAll jobs with per-company relevance scores.
+- [Projects](https://www.newscatcherapi.com/docs/web-search-api/concepts/projects): Organize jobs, event monitors, datasets, and webhooks into named groups for easier management and sharing.
+- [Source groups](https://www.newscatcherapi.com/docs/web-search-api/concepts/source-groups): Scope a job to a curated set of trusted domains using named, reusable source groups.
+- [Understanding web index and search depth](https://www.newscatcherapi.com/docs/web-search-api/concepts/index-and-search-depth): How CatchAll's web index works and what start_date and end_date actually control.
+- [Working with dynamic schemas](https://www.newscatcherapi.com/docs/web-search-api/concepts/dynamic-schemas): Build integrations that handle variable field names and structures.
+### How to

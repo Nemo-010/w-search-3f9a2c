@@ -1,0 +1,4688 @@
+# Answer
+Source: https://docs.octen.ai/api-reference/answer
+
+/api-reference/openapi.json post /answer
+Automatically decomposes user messages into multiple sub-queries, performs searches, and synthesizes results using an LLM.
+
+
+
+# Broad Search
+Source: https://docs.octen.ai/api-reference/broad-search
+
+/api-reference/openapi.json post /broad-search
+Decomposes a query into related sub-queries from multiple angles, searches them concurrently.
+
+
+
+# Business Search
+Source: https://docs.octen.ai/api-reference/business-search
+
+/api-reference/openapi.json post /business-search
+Searches the web for business content. The companies and people behind the query are also returned as entity cards.
+
+
+
+# LLM Chat (OpenAI-Compatible)
+Source: https://docs.octen.ai/api-reference/chat-completions
+
+/api-reference/openapi.json post /v1/chat/completions
+Compatible with the OpenAI Chat Completions protocol, with optional built-in `octen_broad_search` and `octen_search` tools.
+
+
+
+# Deep Research
+Source: https://docs.octen.ai/api-reference/deep-research
+
+/api-reference/openapi.json post /v1/research
+Generates a deep research report at the selected tier. The `pro-visual` tier also returns relevant images and videos.
+
+**Two-phase invocation**
+- **Phase 1:** the server generates a research plan. If the plan has no ambiguity, the server proceeds directly to research and streams the final report. If the plan is ambiguous, the `plan` event carries `requires_selection=true` together with a `plan_id`, and the SSE stream ends there — waiting for the client to confirm.
+- **Phase 2:** call this endpoint again with the `plan_id` and `selections`. The server loads the stored plan, applies the selections, and streams the final report.
+
+**Notes**
+- Phase 2 only inherits the stored `plan` via `plan_id`. Other parameters are NOT inherited from Phase 1 — they must be supplied again in Phase 2, otherwise they fall back to defaults.
+- `messages` is required in both phases and should carry the same user question.
+
+
+
+# Embedding
+Source: https://docs.octen.ai/api-reference/embedding
+
+/api-reference/openapi.json post /embedding
+Converts text into vector representations. Supports batch input, multiple models, and configurable output dimensions.
+
+
+
+# Extract
+Source: https://docs.octen.ai/api-reference/extract
+
+/api-reference/openapi.json post /extract
+Extracts clean markdown content from URLs. Supports batch processing, query-focused highlights, page classification, and multimedia resources.
+
+
+
+# Generation Result
+Source: https://docs.octen.ai/api-reference/get-grounded-generation
+
+/api-reference/openapi.json get /v1/grounded-generation/{generation_id}
+Returns a grounded generation task by id.
+
+
+
+# Video Download
+Source: https://docs.octen.ai/api-reference/get-video
+
+/api-reference/openapi.json get /v1/videos/{id}
+Returns a video generation task by id.
+
+
+
+# Image Search
+Source: https://docs.octen.ai/api-reference/image-search
+
+/api-reference/openapi.json post /image-search
+Searches the web for images.
+
+
+
+# Image Generation
+Source: https://docs.octen.ai/api-reference/images-generations
+
+/api-reference/openapi.json post /v1/images/generations
+Compatible with the OpenAI Images protocol. Text-to-image when no image is provided; image editing when an image is provided.
+
+
+
+# LLM Chat (Anthropic-Compatible)
+Source: https://docs.octen.ai/api-reference/messages
+
+/api-reference/openapi.json post /v1/messages
+Compatible with the Anthropic Messages protocol, with optional built-in `octen_broad_search` and `octen_search` tools.
+
+
+
+# News Search
+Source: https://docs.octen.ai/api-reference/news-search
+
+/api-reference/openapi.json post /news-search
+Searches live news and returns ranked articles with model-ready highlights, images, and optional full content. Related articles are also grouped into subjects, each with a summary, a representative article, and its own timeline.
+
+
+
+# Grounded Generation
+Source: https://docs.octen.ai/api-reference/post-grounded-generation
+
+/api-reference/openapi.json post /v1/grounded-generation
+Generates an image or a video from a text prompt, grounded in reference material found by search.
+
+
+
+# Video Generation
+Source: https://docs.octen.ai/api-reference/post-video
+
+/api-reference/openapi.json post /v1/videos
+Generates a video from a text prompt, optionally guided by reference images.
+
+
+
+# Web Search
+Source: https://docs.octen.ai/api-reference/search
+
+/api-reference/openapi.json post /search
+Searches the live web and returns ranked results with model-ready highlights and optional full content. Optional filters narrow sources, time windows, and languages.
+
+
+
+# Video Search
+Source: https://docs.octen.ai/api-reference/video-search
+
+/api-reference/openapi.json post /video-search
+Searches the web for videos from a text query. Contact us to request beta access.
+
+
+
+# VL Embedding
+Source: https://docs.octen.ai/api-reference/vl-embedding
+
+/api-reference/openapi.json post /vl-embedding
+Converts multimodal input (text, images, and videos) into vector representations. Supports a single fused vector across modalities, independent per-element vectors, configurable output dimensions, video frame sampling control, and a custom task instruction.
+
+
+
+# Answer
+Source: https://docs.octen.ai/capabilities/answer
+
+Get a cited answer synthesized from a Broad Search.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/answer.md">docs.octen.ai/capabilities/answer.md</a></p>
+
+Getting from a question to a grounded answer takes a pipeline: decompose the question, run the searches, feed results to a model, synthesize, and keep track of sources.
+
+Octen Answer runs that pipeline in one call: it decomposes your messages into sub-queries, searches them, and synthesizes an answer with an LLM, returning the sources it used.
+
+For the full list of parameters, see the [Answer API reference](/api-reference/answer).
+
+## Why Answer
+
+* **One call, complete loop.** A question goes in; a grounded answer comes out. No search, prompt, and synthesis plumbing to build or maintain.
+* **Multi-angle grounding.** Questions decompose into multiple sub-queries, so the answer draws on wider coverage.
+* **Citable answers.** The sub-queries and sources come back with the answer, so replies can link to the pages they stand on.
+
+To run synthesis in your own stack, use [Broad Search](/capabilities/broad-search). For long-form research reports, use [Deep Research](/capabilities/deep-research).
+
+## How It Works
+
+1. Send a question or a conversation.
+2. Octen decomposes it into sub-queries and searches them concurrently.
+3. A model synthesizes an answer grounded in the results; the response returns the answer together with the sub-queries and sources used.
+
+## Scenarios
+
+### Ask a question
+
+One message in, one grounded answer out, with the sub-queries and sources it drew on.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/answer \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "messages": [{ "role": "user", "content": "What changed in the EU AI Act this year?" }]
+  }'
+```
+
+### Build a grounded chat assistant
+
+In a conversation, questions build on each other. Pass the chat history along, and every reply stays grounded in live search, with follow-ups understood in context.
+
+```json theme={null}
+{
+  "messages": [
+    { "role": "user", "content": "What are the current US tariffs on Chinese EVs?" },
+    { "role": "assistant", "content": "The current rate is..." },
+    { "role": "user", "content": "How does the EU compare?" }
+  ]
+}
+```
+
+### Get the full picture on a broad topic
+
+Some questions are really many questions: a market, a technology, a policy area. Answer decomposes them into up to 30 sub-queries and returns a structured Markdown answer that covers the topic angle by angle, cited throughout.
+
+```json theme={null}
+{
+  "messages": [{ "role": "user", "content": "the state of the European EV market in 2026" }]
+}
+```
+
+### Answer from sources you trust
+
+When answers must stand on vetted sources, such as in finance or news products, constrain the searches behind the answer. Answer accepts the same search options as Web Search.
+
+```json theme={null}
+{
+  "messages": [{ "role": "user", "content": "central bank rate decisions this week" }],
+  "web_search_options": {
+    "include_domains": ["reuters.com", "bloomberg.com"],
+    "time_range": "week"
+  }
+}
+```
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/answer">
+    Run Answer live in the Octen console.
+  </Card>
+
+  <Card title="Answer API Reference" icon="code" href="/api-reference/answer">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on July 16, 2026</p>
+
+
+# Broad Search
+Source: https://docs.octen.ai/capabilities/broad-search
+
+Cover every angle of a query in a single Broad Search call.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/broad-search.md">docs.octen.ai/capabilities/broad-search.md</a></p>
+
+Some questions have more than one angle. Comparisons, research tasks, and surveys need sources spread across many subtopics, and a single query only reaches a few of them.
+
+Broad Search closes that gap: it expands your query into several sub-queries from different angles and searches them all at the same time.
+
+For the full list of parameters, see the [Broad Search API reference](/api-reference/broad-search).
+
+## Why Broad Search
+
+* **Wider coverage.** Several sub-queries from one query, each covering a different part of the topic.
+* **No query rewriting.** Pass the original query as is, and Octen generates the sub-queries from it.
+* **Still fast.** Sub-queries run concurrently, so broader coverage does not mean a longer wait.
+* **Made for LLMs and agents.** Results arrive grouped by sub-query, ready for a model to ground a complete answer.
+
+For a single, precise lookup, use [Web Search](/capabilities/web-search) instead.
+
+## How It Works
+
+1. Send one query. Octen decomposes it into multiple sub-queries.
+2. Each sub-query runs as a Web Search.
+3. The response returns the generated sub-queries, with ranked search results grouped under each.
+
+## Scenarios
+
+### Compare options
+
+Comparisons across many sources, such as pricing, products, or vendors.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/broad-search \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "query": "compare cloud GPU pricing across major providers",
+    "max_queries": 5
+  }'
+```
+
+### Research a topic
+
+For surveys and deeper research, raise `max_queries` so more angles are covered.
+
+```json theme={null}
+{
+  "query": "state of solid-state battery technology in 2026",
+  "max_queries": 12
+}
+```
+
+### Get the original text
+
+When you need the full text of each result, turn on full content through `search_options`.
+
+```json theme={null}
+{
+  "query": "compare cloud GPU pricing across major providers",
+  "max_queries": 8,
+  "search_options": {
+    "full_content": { "enable": true, "max_tokens": 2048 }
+  }
+}
+```
+
+### Filter every sub-query
+
+Apply domain or time filters to all sub-queries at once. `search_options` takes the same parameters as Web Search.
+
+```json theme={null}
+{
+  "query": "latest central bank interest rate decisions globally",
+  "max_queries": 8,
+  "search_options": {
+    "include_domains": ["reuters.com", "bloomberg.com"],
+    "time_range": "week"
+  }
+}
+```
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/broad-search">
+    Run Broad Search live in the Octen console.
+  </Card>
+
+  <Card title="Broad Search API Reference" icon="code" href="/api-reference/broad-search">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on September 20, 2026</p>
+
+
+# Business Search
+Source: https://docs.octen.ai/capabilities/business-search
+
+Search business content and get companies and people as entity cards.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/business-search.md">docs.octen.ai/capabilities/business-search.md</a></p>
+
+Answering one question about a company means opening a dozen pages: a profile site for the basics, a filing for the financials, LinkedIn for who runs it, a news story for what just happened. A model has to read all of them, and spend tokens on every one.
+
+Octen Business Search searches the web for business content and returns the companies and people behind the query as entity cards, with the facts already extracted into fields.
+
+For the full list of parameters, see the [Business Search API reference](/api-reference/business-search).
+
+## Why Octen Business Search
+
+* **Structured entity data.** The companies and people behind a query come back as fields: profile, identifiers, financials, key people, and career history.
+* **Recent activity built in.** Every card comes with the latest posts and announcements from the entity's own channels.
+* **Fewer tokens per answer.** One card covers what would otherwise take a dozen pages to piece together.
+
+For general web pages, use [Web Search](/capabilities/web-search). For breaking coverage, use [News Search](/capabilities/news-search).
+
+## How It Works
+
+1. Send a query.
+2. Octen searches its real-time index for business content and ranks the most relevant pages.
+3. The response returns ranked results, each with a query-relevant highlight and optional full page content, plus an entity card for every company or person the query is about.
+
+## Scenarios
+
+### Company due diligence
+
+One query returns the company card and the sources behind it.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/business-search \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "query": "NVIDIA company overview"
+  }'
+```
+
+### Look up a person
+
+A person query returns a person card instead, with the current position and the career history.
+
+```json theme={null}
+{
+  "query": "Lisa Su AMD CEO"
+}
+```
+
+### Compare two companies
+
+Name both companies in one query. Each comes back as its own card, with the same fields on both.
+
+```json theme={null}
+{
+  "query": "compare Stripe and Adyen payment processing"
+}
+```
+
+### Recent activity
+
+Every card carries recent posts and announcements from the entity's own channels. Ask for more of them when you need a fuller timeline.
+
+```json theme={null}
+{
+  "query": "Anthropic",
+  "entities": { "max_activities": 10 }
+}
+```
+
+### Results only
+
+To work with a plain ranked list, turn entity cards off.
+
+```json theme={null}
+{
+  "query": "semiconductor supply chain outlook",
+  "entities": { "enable": false }
+}
+```
+
+### Limit or steer your sources
+
+Constrain the ranked results to outlets you trust. Entity cards draw on the full index.
+
+```json theme={null}
+{
+  "query": "NVIDIA quarterly results",
+  "include_domains": ["reuters.com", "bloomberg.com"]
+}
+```
+
+### Get the original text
+
+For the complete page text, turn on full content. Highlights stay on by default.
+
+```json theme={null}
+{
+  "query": "NVIDIA quarterly results",
+  "count": 8,
+  "full_content": { "enable": true, "max_tokens": 4000 }
+}
+```
+
+The full content of the first 10 results per search is free; only additional results are billed.
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/business-search">
+    Run Business Search live in the Octen console.
+  </Card>
+
+  <Card title="Business Search API Reference" icon="code" href="/api-reference/business-search">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on September 29, 2026</p>
+
+
+# Deep Research
+Source: https://docs.octen.ai/capabilities/deep-research
+
+Turn a research question into a cited report, researched over multiple rounds.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/deep-research.md">docs.octen.ai/capabilities/deep-research.md</a></p>
+
+Some questions aren't answered by a page of results. They need dozens of sources, several rounds of digging, and a structured write-up.
+
+Octen Deep Research is an autonomous research agent: it plans the research, searches and reads over multiple rounds, and streams back a cited report, illustrated with charts, images, and videos from its sources. One call replaces hours of reading, sifting, and writing.
+
+For the full list of parameters, see the [Deep Research API reference](/api-reference/deep-research).
+
+## Why Deep Research
+
+* **Autonomous planning.** Complex topics break down into a structured research plan. When the question is ambiguous, the plan pauses for your confirmation.
+* **Multi-round exploration.** Successive rounds of searching and reading build comprehensive coverage, adjusting as evidence comes in.
+* **Cited reports.** Long-form answers with inline citations linking back to the original sources.
+* **Depth tiers.** Choose lite, standard, pro, or pro-visual to trade depth against cost and time.
+* **Multimodal reports.** Text combined with images and videos relevant to each finding, in one ready-to-use report.
+
+For a quick grounded answer instead of a report, use [Answer](/capabilities/answer).
+
+## How It Works
+
+1. Send a research question. Octen drafts a research plan; if the plan is ambiguous, the stream pauses and waits for your confirmation.
+2. Octen runs successive rounds of searching and reading, following the plan.
+3. The final report streams back as server-sent events, with citations linking to the sources.
+
+## Scenarios
+
+### Run a research task
+
+Send the research question and pick a tier; the report streams back over SSE.
+
+```bash theme={null}
+curl -N -X POST https://api.octen.ai/v1/research \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "tier": "standard",
+    "messages": [{ "role": "user", "content": "state of solid-state battery technology in 2026" }]
+  }'
+```
+
+### Confirm an ambiguous plan
+
+When the plan event returns `requires_selection: true`, call the endpoint again with the plan ID and your selections; the research then proceeds.
+
+```json theme={null}
+{
+  "tier": "standard",
+  "plan_id": "PLAN_ID_FROM_PHASE_1",
+  "selections": [{ "term": "Apollo", "chosen": "nasa_program" }]
+}
+```
+
+### Skip straight to research
+
+Skip the planning pause when no confirmation loop is wanted, such as in unattended pipelines.
+
+```json theme={null}
+{
+  "tier": "lite",
+  "messages": [{ "role": "user", "content": "overview of the humanoid robotics market" }],
+  "skip_plan_confirm": true
+}
+```
+
+### Illustrate a report with images and videos
+
+For topics that live in charts and footage, pick the pro-visual tier; the report comes back illustrated with relevant images and videos.
+
+```json theme={null}
+{
+  "tier": "pro-visual",
+  "messages": [{ "role": "user", "content": "2025 global smartphone shipments by vendor" }]
+}
+```
+
+### Add background and constraints
+
+Pass extra context to steer the research direction without changing the question.
+
+```json theme={null}
+{
+  "tier": "pro",
+  "messages": [{ "role": "user", "content": "evaluate vector database options" }],
+  "extra_context": "We run on AWS, need hybrid search, and expect 100M vectors."
+}
+```
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/deep-research">
+    Run Deep Research live in the Octen console.
+  </Card>
+
+  <Card title="Deep Research API Reference" icon="code" href="/api-reference/deep-research">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on July 31, 2026</p>
+
+
+# Text Embedding
+Source: https://docs.octen.ai/capabilities/embedding
+
+Embed text into vectors for semantic search, RAG, and recommendations.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/embedding.md">docs.octen.ai/capabilities/embedding.md</a></p>
+
+Keyword matching misses meaning: "laptop won't start" and "computer fails to boot" share no words but describe the same problem.
+
+Embeddings close that gap by turning text into vectors that capture meaning, so similar content lands close together. This is the foundation of semantic search, and the Embedding API produces these vectors with Octen's embedding models.
+
+For the full list of parameters, see the [Embedding API reference](/api-reference/embedding).
+
+## What Are Embeddings
+
+Embeddings are fixed-length vectors of real numbers, produced by an embedding model, that represent content in a high-dimensional space.
+
+They preserve semantic relationships geometrically: inputs with similar meaning map to vectors that sit close together, while unrelated inputs land far apart.
+
+An embedding is a representation, not a retrieval mechanism by itself. It gives unstructured content a standard form that can be indexed and compared for semantic retrieval.
+
+## Why Embedding
+
+* **Semantic search.** Match by meaning, so users can phrase queries naturally instead of guessing keywords.
+* **RAG.** Retrieve the most relevant chunks of your own knowledge to ground model responses.
+* **Clustering and recommendations.** Group related content and surface similar items by vector proximity.
+
+For images and videos, use [VL Embedding](/capabilities/vl-embedding) instead.
+
+## Why Octen
+
+* **SOTA retrieval quality.** `octen-embedding-8b` and `octen-embedding-4b` rank #1 and #2 on the RTEB text-retrieval benchmark.
+* **Flexible model choice.** Pick the model that fits your scenario and cost, from best accuracy to high-volume and low-cost.
+* **Retrieval-tuned.** Mark inputs as query or document to apply the right internal prompt, and adjust output dimensions to fit your index.
+* **Works with your stack.** Standard float vectors, compatible with all major vector databases; batch input supported.
+
+## Model Choices
+
+| Model | Max dimension | Best for |
+| - | - | - |
+| `octen-embedding-8b` | 4096 | Best accuracy |
+| `octen-embedding-4b` | 2560 | Most production workloads |
+| `octen-embedding-0.6b` | 1024 | High-volume and low-cost |
+
+## How It Works
+
+1. **Embed your content.** Split large documents into chunks that each carry one coherent idea, then send the chunks in batches. The model encodes each one into a fixed-length vector, and texts with similar meaning land close together in the vector space.
+2. **Build a vector index.** Store the vectors in a vector database. Its index structures, such as HNSW or IVF, locate the closest vectors quickly without scanning them all.
+3. **Embed queries and retrieve.** Encode each incoming query with the same model, so queries and content share one vector space. Compare the query vector against the index with a similarity metric, such as cosine similarity, and the top matches provide the context for re-ranking or answer generation.
+
+### Compared with other retrieval approaches
+
+Embedding retrieval commonly serves as the semantic recall layer in modern search systems.
+
+| Approach | Representation | How it retrieves | Strengths | Limitations |
+| :- | :- | :- | :- | :- |
+| Keyword retrieval | Tokens | Matches query terms with inverted indexes and statistical relevance | Stable, interpretable, strong exact matching | Limited semantic understanding |
+| Embedding retrieval | Embeddings | Computes semantic similarity between query and content vectors | Strong semantic recall; handles natural language and multilingual queries | Depends on embedding model quality; weaker for exact matching and filters |
+| Hybrid retrieval | Tokens + embeddings | Combines keyword matching and semantic similarity | Balances precision and semantic recall | Higher system complexity |
+| Generative-only answering | Model-internal representations | Answers directly without retrieving external content | Natural responses, simple interaction | Prone to hallucinations; no real-time information; no traceable sources |
+
+## Scenarios
+
+### Index documents
+
+Embed content in batches, marked as documents.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/embedding \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "input": ["Octen is the search infrastructure for AI.", "Embeddings capture semantic meaning."],
+    "model": "octen-embedding-4b",
+    "input_type": "document"
+  }'
+```
+
+### Embed the search query
+
+Embed queries with the same model, marked as queries, and compare against your index.
+
+```json theme={null}
+{
+  "input": ["what powers AI search?"],
+  "model": "octen-embedding-4b",
+  "input_type": "query"
+}
+```
+
+### Cluster and recommend
+
+Embed a set of items and compare vector proximity to group similar content or surface related items. The first two items below land close together; the third lands far away.
+
+```json theme={null}
+{
+  "input": [
+    "Wireless noise-cancelling headphones",
+    "Bluetooth over-ear headset",
+    "Espresso machine with grinder"
+  ],
+  "model": "octen-embedding-4b"
+}
+```
+
+### Cut cost and index size
+
+Use a smaller model, or reduce the output dimensions.
+
+```json theme={null}
+{
+  "input": ["support ticket: cannot reset password"],
+  "model": "octen-embedding-0.6b",
+  "dimension": 512
+}
+```
+
+## Next Steps
+
+<Card title="Embedding API Reference" icon="code" href="/api-reference/embedding">
+  Full request/response schema.
+</Card>
+
+***
+
+<p>Last modified on September 21, 2026</p>
+
+
+# Extract
+Source: https://docs.octen.ai/capabilities/extract
+
+Use Extract to pull clean content from URLs you already have.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/extract.md">docs.octen.ai/capabilities/extract.md</a></p>
+
+LLMs and agents are constantly pointed at specific pages: a link pasted into the chat, a source cited in a document, a set of URLs to ingest into a knowledge base. But a web page is built for browsers, not models; the content that matters is buried in markup, navigation, ads, and scripts.
+
+Octen Extract turns URLs into clean, LLM-ready content: the main text of each page, parsed into markdown or plain text, labeled with what the page is (`page_structure`) and what domain it belongs to (`category`).
+
+For the full list of parameters, see the [Extract API reference](/api-reference/extract).
+
+## Why Extract
+
+* **Read what the task points to.** A pasted link, a cited source, a referenced doc: when the task names the page, the agent has to read that exact URL.
+* **Ingest knowledge.** Turn a known set of URLs, such as docs, wikis, and blogs, into clean text for RAG indexing.
+* **Keep answers current.** Re-read the specific pages that matter, such as pricing pages, docs, and changelogs, whenever they change.
+
+## Why Octen
+
+* **LLM-ready clean markdown.** Every page parses into structured markdown, ready to drop into RAG pipelines and agents. PDFs are read natively.
+* **Page understanding built in.** Every result is labeled with its page type and a content category drawn from a taxonomy of 160+ categories, so login walls, error pages, and other non-content can be filtered before they reach the model.
+* **Advanced extraction built in.** Advanced mode gets through the pages a standard fetch cannot. Octen can pick it per URL, so easy pages stay fast.
+* **Multimodal asset extraction.** One request returns the text plus the page's images, videos, and audio, made for multimodal agents and RAG.
+* **Success-only billing.** Up to 20 URLs per request, each succeeding or failing independently, and only successful URLs are billed, at \$1 per 1,000 in standard mode and \$2.5 per 1,000 in advanced mode.
+
+## How It Works
+
+1. Send up to 20 URLs.
+2. Octen fetches each page, classifies what it is, and strips it to the main content.
+3. The response returns one result per URL, with its content, its page labels, and a success or failure status.
+
+## Scenarios
+
+### Read pages
+
+Fetch one or more URLs as clean markdown.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/extract \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "urls": ["https://example.com/article", "https://example.com/report"],
+    "format": "markdown"
+  }'
+```
+
+### Skip pages that aren't content
+
+Every result carries the labels by default; no extra parameter is needed. Check `page_structure` before the content reaches the model: pages labeled `No Main Content`, such as login walls and error pages, can be dropped without spending tokens on them, and `category` tells the agent what domain each remaining page belongs to.
+
+```json theme={null}
+{
+  "urls": ["https://www.instagram.com/instagram/"]
+}
+```
+
+Each result comes back labeled; unrelated fields are omitted here:
+
+```json theme={null}
+{
+  "url": "https://www.instagram.com/instagram/",
+  "status": "success",
+  "page_structure": {
+    "primary": "No Main Content",
+    "secondary": "Operation Page"
+  },
+  "category": {
+    "primary": "Computers, Electronics & Technology",
+    "secondary": "Social Media Networks"
+  },
+  "full_content": "Log into Instagram ..."
+}
+```
+
+### Extract hard-to-reach pages
+
+Let Octen pick standard or advanced extraction for each URL, and raise the timeout to give the harder pages room.
+
+```json theme={null}
+{
+  "urls": ["https://example.com/article"],
+  "mode": "auto",
+  "timeout": 60
+}
+```
+
+### Extract only the relevant parts
+
+Long pages can flood a model's context with content the task never needed. Pass intent-focused keywords to return query-relevant highlights for each URL instead of the complete content.
+
+```json theme={null}
+{
+  "urls": ["https://example.com/annual-report"],
+  "query": "revenue growth and guidance"
+}
+```
+
+### Force fresh content
+
+Lower the maximum cache age when the page changes frequently.
+
+```json theme={null}
+{
+  "urls": ["https://example.com/live-blog"],
+  "max_age_seconds": 300
+}
+```
+
+### Collect media
+
+Return the image, video, and audio URLs found on each page.
+
+```json theme={null}
+{
+  "urls": ["https://example.com/gallery"],
+  "include_images": true,
+  "include_videos": true,
+  "include_audio": true
+}
+```
+
+### Discover linked pages
+
+Return the links found on each page, with their anchor text, to crawl further or map a site's structure. Prioritize the links that stay on the site or the ones that leave it, and cap how many come back.
+
+```json theme={null}
+{
+  "urls": ["https://example.com/docs"],
+  "include_links": {
+    "scope": "prefer_external",
+    "max_links": 50
+  }
+}
+```
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/extract">
+    Run Extract live in the Octen console.
+  </Card>
+
+  <Card title="Extract API Reference" icon="code" href="/api-reference/extract">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on September 28, 2026</p>
+
+
+# Grounded Generation
+Source: https://docs.octen.ai/capabilities/grounded-generation
+
+Generate images and video grounded in real web references.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/grounded-generation.md">docs.octen.ai/capabilities/grounded-generation.md</a></p>
+
+Generation models create from training data, and anything outside it suffers. Something real, such as a product, a place, or an event, drifts from the facts. Anything that appeared after training is simply unknown to the model. An unfamiliar subject or a specific action comes out invented rather than accurate.
+
+Octen Grounded Generation searches first: it retrieves the images and videos that show the subject, then generates an image or a video grounded in that material. With real references to work from, the output is simply better.
+
+For the full list of parameters, see the [Grounded Generation API reference](/api-reference/post-grounded-generation).
+
+## Why Grounded Generation
+
+* **Faithful to the real thing.** Generation is anchored to retrieved web references, so real subjects look like themselves.
+* **Current by default.** References come from live search, so generated visuals reflect how things look now, not at training time.
+* **One step from prompt to visual.** Search and generation run as a single workflow, with no retrieval pipeline to build on your side.
+
+## How It Works
+
+1. Send a generation prompt and say whether you want an image or a video. The call returns a task id right away.
+2. Octen searches the web for the images and videos that show the subject, then picks the references to generate from.
+3. A generation model creates the output from those references. Poll the task until it finishes, then download the result from the returned link.
+
+## Scenarios
+
+### Visuals of real subjects
+
+Generate products, places, people, and events from live web references instead of the model's memory.
+
+```json theme={null}
+{
+  "modality": "image",
+  "prompt": "Ronaldo lifting the World Cup trophy, stadium lights",
+  "aspect_ratio": "16:9"
+}
+```
+
+### Illustrate an article or answer
+
+Turn a topic into a supporting video grounded in what the web actually shows.
+
+```json theme={null}
+{
+  "modality": "video",
+  "prompt": "A Tesla Cybertruck driving through a snowy mountain pass at dawn"
+}
+```
+
+### Vertical video for social feeds
+
+Match the shape and length a feed expects.
+
+```json theme={null}
+{
+  "modality": "video",
+  "prompt": "Barista pouring latte art in a sunlit cafe",
+  "aspect_ratio": "9:16",
+  "duration": 10
+}
+```
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/grounded-generation">
+    Run Grounded Generation live in the Octen console.
+  </Card>
+
+  <Card title="Grounded Generation API Reference" icon="code" href="/api-reference/post-grounded-generation">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on October 9, 2026</p>
+
+
+# Image Search
+Source: https://docs.octen.ai/capabilities/image-search
+
+Find real web images for reference.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/image-search.md">docs.octen.ai/capabilities/image-search.md</a></p>
+
+Some things are faster to show than to describe: what a product looks like, how a room is laid out, which photo matches the one you already have.
+
+Octen Image Search searches the web for images from a text query or a reference image. Results come back ranked, with the source page, pixel dimensions, and a thumbnail, ready to display or pass to a model.
+
+For the full list of parameters, see the [Image Search API reference](/api-reference/image-search).
+
+## Why Octen Image Search
+
+* **Visual references for models.** Give a model real images to describe, compare, or reason about.
+* **Search by image.** Start from a reference image, passed as a public URL or base64, to find visually similar or related results.
+* **Ready to display.** Results carry the source page, pixel dimensions, and a thumbnail, enough to lay out and render without fetching the full image.
+* **Sources you choose.** Restrict results to the domains you trust, matched against each result's source page.
+
+## How It Works
+
+1. Send a text query or a reference image.
+2. Octen searches images across the web and ranks them.
+3. The response returns ranked image results.
+
+## Scenarios
+
+### Find the right image
+
+Image lookup from a plain text query.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/image-search \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "inputs": [{ "type": "text", "data": "red sports car" }],
+    "count": 5
+  }'
+```
+
+### Search by reference image
+
+Pass an image instead of text to find visually similar results.
+
+```json theme={null}
+{
+  "inputs": [{ "type": "image", "url": "https://example.com/reference.jpg" }],
+  "count": 5
+}
+```
+
+### Focus sources
+
+Restrict results by source domain.
+
+```json theme={null}
+{
+  "inputs": [{ "type": "text", "data": "Mars rover photos" }],
+  "include_domains": ["nasa.gov"]
+}
+```
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/image-search">
+    Run Image Search live in the Octen console.
+  </Card>
+
+  <Card title="Image Search API Reference" icon="code" href="/api-reference/image-search">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on October 13, 2026</p>
+
+
+# Model Gateway
+Source: https://docs.octen.ai/capabilities/model-gateway
+
+Access frontier models through one API key, with live web search built in.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/model-gateway.md">docs.octen.ai/capabilities/model-gateway.md</a></p>
+
+Building with LLMs usually means juggling providers, protocols, and API keys, and every model only knows the web as of its training date.
+
+Model Gateway closes both gaps: it serves frontier models from Anthropic, OpenAI, Google, and more behind one API key, with built-in Octen search tools that let any model answer with live web data.
+
+For the full list of parameters, see the [Model Gateway API reference](/api-reference/chat-completions).
+
+## Why Model Gateway
+
+* **One key, frontier lineup.** Claude, GPT, Gemini, and more. Switch models by changing one string.
+* **Built-in search.** Enable the built-in search tools and the model grounds its answers on the live web; Octen runs the searches server-side, with no tool plumbing on your side.
+* **Drop-in compatibility.** Speaks the OpenAI Chat Completions and Anthropic Messages protocols. Point your existing SDK at the Octen base URL.
+* **Image generation.** Create or edit images with image models through the same gateway.
+* **Video generation.** Generate videos from a text prompt, optionally guided by reference images.
+
+## How It Works
+
+1. Point your existing OpenAI or Anthropic SDK at the Octen base URL and pick a model.
+2. Octen routes the request to the model provider; when built-in search tools are enabled, the model decides when to search and Octen executes the searches server-side.
+3. The response comes back in the standard protocol shape, grounded in live web results when search was used.
+
+## Scenarios
+
+### Bring your existing code
+
+If your app already uses the OpenAI or Anthropic SDK, switch to Octen by changing the base URL and API key. The rest of your code stays the same.
+
+<CodeGroup>
+  ```python OpenAI SDK theme={null}
+  from openai import OpenAI
+
+  client = OpenAI(
+      api_key="YOUR_OCTEN_API_KEY",
+      base_url="https://api.octen.ai/v1",
+  )
+
+  response = client.chat.completions.create(
+      model="openai/gpt-5.4",
+      messages=[{"role": "user", "content": "Explain vector search in one paragraph"}],
+  )
+  ```
+
+  ```python Anthropic SDK theme={null}
+  import anthropic
+
+  client = anthropic.Anthropic(
+      api_key="YOUR_OCTEN_API_KEY",
+      base_url="https://api.octen.ai",
+  )
+
+  response = client.messages.create(
+      model="anthropic/claude-sonnet-4.6",
+      max_tokens=1024,
+      messages=[{"role": "user", "content": "Explain vector search in one paragraph"}],
+  )
+  ```
+</CodeGroup>
+
+### Chat with a frontier model
+
+Call any model in the lineup through the OpenAI Chat Completions protocol.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "model": "anthropic/claude-sonnet-4.6",
+    "messages": [{ "role": "user", "content": "Explain vector search in one paragraph" }]
+  }'
+```
+
+### Answer with live web data
+
+Enable a built-in search tool; the model searches when it needs fresh information.
+
+```json theme={null}
+{
+  "model": "openai/gpt-5.4",
+  "messages": [{ "role": "user", "content": "What happened in tech today?" }],
+  "tools": [{ "type": "octen_search" }]
+}
+```
+
+Use `octen_broad_search` instead for multi-angle questions.
+
+### Generate images
+
+Create images from text at `/v1/images/generations`, following the OpenAI Images protocol; pass an input image to edit it instead.
+
+```json theme={null}
+{
+  "model": "openai/gpt-image-2",
+  "prompt": "an isometric illustration of a search engine indexing the web"
+}
+```
+
+### Generate videos
+
+Generate a video from text at `/v1/videos`.
+
+```json theme={null}
+{
+  "model": "google/veo-3.1",
+  "prompt": "an isometric illustration of a search engine indexing the web"
+}
+```
+
+Generation is asynchronous. The call returns a task id; poll `/v1/videos/{id}` until `status` is `completed`, then download the file from `video_url`.
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/model">
+    Run Model Gateway live in the Octen console.
+  </Card>
+
+  <Card title="Model Gateway API Reference" icon="code" href="/api-reference/chat-completions">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on September 16, 2026</p>
+
+
+# Multimodal Chat
+Source: https://docs.octen.ai/capabilities/multimodal-chat
+
+Ask a question and get an answer illustrated with real images and videos.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/multimodal-chat.md">docs.octen.ai/capabilities/multimodal-chat.md</a></p>
+
+Some questions are best answered with more than words: what something looks like, how a step is performed, how two designs differ. A text-only chat can only describe what it should show.
+
+Octen Multimodal Chat answers with the web itself: it runs multimodal search first, then replies with text, images, and videos interleaved in one response, grounded in what the search found.
+
+<Note>
+  In invite-only beta. Email [support@octen.ai](mailto:support@octen.ai) to request access.
+</Note>
+
+## Why Multimodal Chat
+
+* **Answers that show.** Replies carry the images and videos that answer the question, not just a description of them.
+* **Real, current media.** Every image and video comes from live multimodal search, so replies stay grounded in real, up-to-date sources.
+* **Rich chat experiences.** Build assistants whose replies read like illustrated articles: text interleaved with the media that supports it.
+
+## How It Works
+
+1. Send a question or a conversation.
+2. Octen runs multimodal search across the web and retrieves relevant text, images, and videos.
+3. The reply comes back as interleaved text, images, and videos, grounded in the retrieved results.
+
+## Scenarios
+
+### Visual Q\&A
+
+Questions whose answers are visual: what a landmark looks like, how a knot is tied, how two products differ. The reply shows the answer instead of describing it.
+
+### Rich chat experiences
+
+Assistants and consumer apps whose replies read like illustrated articles, with explanations and supporting images and videos woven together.
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Request Access" icon="envelope" href="mailto:support@octen.ai">
+    Email [support@octen.ai](mailto:support@octen.ai) to join the invite-only beta.
+  </Card>
+
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/multimodal-chat">
+    Run Multimodal Chat live in the Octen console.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on July 16, 2026</p>
+
+
+# News Search
+Source: https://docs.octen.ai/capabilities/news-search
+
+Search live news and read each story as a single grouped event.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/news-search.md">docs.octen.ai/capabilities/news-search.md</a></p>
+
+News moves fast, and one story arrives as dozens of reports from dozens of outlets within hours.
+
+Octen News Search searches live news and returns ranked articles with query-relevant highlights, images, and optional full content. It also groups related coverage into subjects, so a story reads as one event: a summary, a representative article, and the sub-events that make it up.
+
+For the full list of parameters, see the [News Search API reference](/api-reference/news-search).
+
+## Why Octen News Search
+
+* **Minute-fresh.** Breaking stories become searchable within minutes of publication, so an agent answers from what is being reported right now.
+* **One story, one event.** Subject grouping clusters related coverage into a single event with its own summary and representative article, so a model gets the whole story in one pass and spends a fraction of the tokens to get it.
+* **Authoritative sources first.** Ranking favors established outlets and original reporting.
+* **Follow a story as it develops.** Each subject carries a start time, the time of its latest article, and its sub-events in order.
+* **Visual by default.** Cover and in-body images come back with every article.
+
+For general web pages, use [Web Search](/capabilities/web-search).
+
+## How It Works
+
+1. Send a query.
+2. Octen searches its real-time news index and ranks the most relevant articles.
+3. The response returns ranked articles, each with a highlight, images, and optional full content. With subject grouping on, it also returns subjects, each with a summary, a representative article, and its sub-events.
+
+## Scenarios
+
+### Latest headlines
+
+Send one query and get ranked coverage with highlights ready for a model to read.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/news-search \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "query": "Federal Reserve interest rate decision"
+  }'
+```
+
+### Group coverage into events
+
+Subject grouping is on by default. Raise `count` to surface more of the distinct events behind a topic, each with its own summary and sub-events.
+
+```json theme={null}
+{
+  "query": "Federal Reserve interest rate decision",
+  "count": 5,
+  "subjects": { "enable": true, "count": 3, "max_sub_news": 5 }
+}
+```
+
+Read `subjects[].summary` for the event, `top_news` for the article that best represents it, and `sub_news` for how it developed.
+
+### Articles only
+
+To work with a plain ranked list, turn subject grouping off.
+
+```json theme={null}
+{
+  "query": "Federal Reserve interest rate decision",
+  "count": 10,
+  "subjects": { "enable": false }
+}
+```
+
+### Recent coverage
+
+Restrict results to a recent window. Filtering applies to articles and subjects alike.
+
+```json theme={null}
+{
+  "query": "Federal Reserve interest rate decision",
+  "time_range": "day"
+}
+```
+
+### Limit or steer your sources
+
+Constrain coverage to outlets you trust.
+
+```json theme={null}
+{
+  "query": "Federal Reserve interest rate decision",
+  "include_domains": ["reuters.com", "apnews.com"]
+}
+```
+
+Domain filters shape the article list. Subject grouping draws on the full index.
+
+### Headlines in one language
+
+International stories return coverage in many languages. Restrict them to the ones you need.
+
+```json theme={null}
+{
+  "query": "日本銀行 金融政策決定会合",
+  "language": ["ja"],
+  "count": 5
+}
+```
+
+### Get the original text
+
+For the complete article text, turn on full content. Highlights stay on by default.
+
+```json theme={null}
+{
+  "query": "Federal Reserve interest rate decision",
+  "count": 8,
+  "full_content": { "enable": true, "max_tokens": 4000 }
+}
+```
+
+The full content of the first 10 results per search is free; only additional results are billed.
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/news-search">
+    Run News Search live in the Octen console.
+  </Card>
+
+  <Card title="News Search API Reference" icon="code" href="/api-reference/news-search">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on September 20, 2026</p>
+
+
+# Video Search
+Source: https://docs.octen.ai/capabilities/video-search
+
+Look up real web videos ready to play.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/video-search.md">docs.octen.ai/capabilities/video-search.md</a></p>
+
+Some answers live in videos: a tutorial that shows the steps, a talk that makes the argument, a demo that proves the product. The hard part is finding the right one across the web.
+
+Octen Video Search searches the web for videos from a text query and returns ranked results with rich metadata, ready to preview, embed, or pass to a model.
+
+For the full list of parameters, see the [Video Search API reference](/api-reference/video-search).
+
+<Note>
+  In invite-only beta. Email [support@octen.ai](mailto:support@octen.ai) to request access.
+</Note>
+
+## Why Video Search
+
+* **Video lookup and clip discovery.** Find the right video across the whole web from one query.
+* **Richer answers.** Let assistants and apps reply with playable videos when showing beats telling.
+* **Reference for generation.** Retrieved videos serve as real-world references for generation models, grounding image and video creation.
+
+## How It Works
+
+1. Send a text query.
+2. Octen searches videos across the web and ranks them.
+3. Each result returns the video and its source page, with title, description, cover image, duration, and publish time.
+
+## Scenarios
+
+### Find the right video
+
+Video lookup from a plain text query.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/video-search \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "inputs": [{ "type": "text", "data": "how to make espresso" }],
+    "count": 5
+  }'
+```
+
+### Answer with videos
+
+When a question is best answered visually, return videos an assistant can show directly in its reply.
+
+```json theme={null}
+{
+  "inputs": [{ "type": "text", "data": "how to tie a bowline knot" }],
+  "count": 3
+}
+```
+
+### Collect generation references
+
+Search real footage first, then pass the results to a generation model as references for grounded image or video creation.
+
+```json theme={null}
+{
+  "inputs": [{ "type": "text", "data": "aurora borealis over a fjord" }],
+  "count": 5
+}
+```
+
+### Recent videos
+
+Keep results to a recent time window, filtered by publish time.
+
+```json theme={null}
+{
+  "inputs": [{ "type": "text", "data": "keynote highlights" }],
+  "count": 5,
+  "time_range": "week"
+}
+```
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/video-search">
+    Run Video Search live in the Octen console.
+  </Card>
+
+  <Card title="Video Search API Reference" icon="code" href="/api-reference/video-search">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on July 16, 2026</p>
+
+
+# VL Embedding
+Source: https://docs.octen.ai/capabilities/vl-embedding
+
+Encode text, images, and video into one vector space for cross-modal search.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/vl-embedding.md">docs.octen.ai/capabilities/vl-embedding.md</a></p>
+
+Text, images, and videos normally live in separate vector spaces: a text query can't find an image, and a product photo can't find its description.
+
+VL Embedding closes that gap: it encodes text, images, and videos into one shared vector space, so any modality can retrieve any other.
+
+For the full list of parameters, see the [VL Embedding API reference](/api-reference/vl-embedding).
+
+For the concept behind embeddings, see [What are Embeddings](/capabilities/embedding#what-are-embeddings).
+
+## Why VL Embedding
+
+* **Cross-modal search.** Query with text and retrieve images or videos, or the other way around.
+* **Visual retrieval.** Find similar images for dedup, recommendations, and visual search.
+* **Multimodal RAG.** Ground models on knowledge that includes screenshots, diagrams, and video.
+
+For text-only workloads, use [Text Embedding](/capabilities/embedding) instead.
+
+## Why Octen
+
+* **SOTA multimodal retrieval.** Top-ranked on MMEB-v2 for retrieval across text, images, videos, and visual documents.
+* **Native video embedding.** Videos embed into the same space as text and images, so video libraries become searchable instead of staying a blind spot.
+* **Flexible output.** One vector per element, or a single fused vector for the whole multimodal input.
+
+## Model Choices
+
+| Model | Max dimension | Best for |
+| - | - | - |
+| `octen-vl-embedding-large` | 4096 | Best accuracy |
+| `octen-vl-embedding` | 2048 | Most production workloads |
+
+## How It Works
+
+1. **Embed your content.** Send text, images, or videos, mixed freely in one request. The model encodes them into one shared vector space: one vector per element, or a single fused vector for the combined input.
+2. **Build a vector index.** Store the vectors in a vector database, the same way as text-only embeddings.
+3. **Embed queries and retrieve.** Encode the query, in any modality, with the same model, and compare it against the index by similarity. The closest matches come back regardless of modality, so text can find images and videos, and an image can find its description.
+
+## Scenarios
+
+### Index your images
+
+Embed a product catalog, photo library, or asset collection so every image can be found by meaning.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/vl-embedding \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "model": "octen-vl-embedding",
+    "input": {
+      "contents": [
+        { "image": "https://example.com/product-1.jpg" },
+        { "image": "https://example.com/product-2.jpg" }
+      ]
+    }
+  }'
+```
+
+### Find images by describing them
+
+No tags, no filenames: embed a plain description in the same space, and the closest image vectors are the results.
+
+```json theme={null}
+{
+  "model": "octen-vl-embedding",
+  "input": {
+    "contents": [{ "text": "red sneakers on a white background" }]
+  }
+}
+```
+
+### One vector for the whole item
+
+A product is more than its photo: fuse the title and the image into a single vector that represents the item as a whole, so one entry per item lands in your index.
+
+```json theme={null}
+{
+  "model": "octen-vl-embedding",
+  "input": {
+    "contents": [
+      { "text": "Ergonomic mesh office chair, black" },
+      { "image": "https://example.com/chair.jpg" }
+    ]
+  },
+  "enable_fusion": true
+}
+```
+
+### Make videos searchable
+
+Tutorials, demos, and recordings hold knowledge that keyword search never reaches. Embed them like any document; lower the frame sampling to cut token cost on long footage.
+
+```json theme={null}
+{
+  "model": "octen-vl-embedding-large",
+  "input": {
+    "contents": [{ "video": "https://example.com/demo.mp4" }]
+  },
+  "fps": 0.5
+}
+```
+
+### Customize the task instruction
+
+Pass a task description to control what the embedding captures. The instruction below makes the vector represent the screenshot's UI layout style, so retrieval matches by design rather than by subject.
+
+```json theme={null}
+{
+  "model": "octen-vl-embedding",
+  "input": {
+    "contents": [{ "image": "https://example.com/screenshot.png" }]
+  },
+  "instruct": "Represent the UI layout style of the input."
+}
+```
+
+## Next Steps
+
+<Card title="VL Embedding API Reference" icon="code" href="/api-reference/vl-embedding">
+  Full request/response schema.
+</Card>
+
+***
+
+<p>Last modified on September 21, 2026</p>
+
+
+# Web Search
+Source: https://docs.octen.ai/capabilities/web-search
+
+Use Web Search to give your LLMs and agents real-time intelligence.
+
+<p>For AI agents: <a href="https://docs.octen.ai/capabilities/web-search.md">docs.octen.ai/capabilities/web-search.md</a></p>
+
+For an LLM or agent, search is the bridge to everything that happened after training: the live web, today's facts, the newest sources. Octen Web Search searches the live web and returns ranked results with query-relevant highlights and optional full content, ready for a model to ground its answers on.
+
+For the full list of parameters, see the [Web Search API reference](/api-reference/search).
+
+## Why Web Search
+
+* **Ground model answers.** Give LLMs and agents fresh sources to reason with, instead of stale training data.
+* **Track fast-moving facts.** Prices, scores, headlines, product launches: data that changes by the minute.
+* **Answer with citations.** Every result carries its source URL, so answers can link back to checkable sources.
+
+For open-ended questions that need multiple angles at once, use [Broad Search](/capabilities/broad-search) instead.
+
+## Why Octen
+
+* **Fresh.** A minute-fresh index keeps fast-moving facts current: live stock and crypto prices, sports scores, breaking news, and just-published releases.
+* **Fast.** P50 latency as low as 62ms, quick enough to stay in an agent's loop.
+* **Accurate.** Built on SOTA models, top-ranked on multiple search benchmarks.
+* **Low cost.** \$1 per 1,000 calls, priced for high-volume production.
+* **LLM-ready.** Ranked results with relevant highlights and optional full content, usable without extra processing.
+
+## How It Works
+
+1. Send a query.
+2. Octen searches its real-time index of the live web and ranks the most relevant pages.
+3. The response returns ranked results, each with a query-relevant highlight and optional full page content.
+
+## Scenarios
+
+### Real-time data
+
+Live stock and crypto prices, sports scores, exchange rates. Octen indexes fast-moving data in real time.
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/search \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "query": "Tesla stock price"
+  }'
+```
+
+### Get the original text
+
+When you need the full text of each page, turn on full content. Highlights stay on by default.
+
+```json theme={null}
+{
+  "query": "standing desk ergonomics guidelines",
+  "count": 8,
+  "full_content": { "enable": true, "max_tokens": 4000 }
+}
+```
+
+### Limit or steer your sources
+
+Constrain results to sites you trust, or require certain terms to appear on the page.
+
+```json theme={null}
+{
+  "query": "central bank interest rate decision",
+  "include_domains": ["reuters.com", "bloomberg.com"],
+  "exclude_domains": ["medium.com"],
+  "include_text": ["interest rate"],
+  "exclude_text": ["opinion"]
+}
+```
+
+### Results in one language
+
+International topics return pages in many languages. Restrict results to the ones you need.
+
+```json theme={null}
+{
+  "query": "recette de ratatouille traditionnelle",
+  "language": ["fr"]
+}
+```
+
+### Visual answers
+
+When answers should carry visuals, such as news digests or product lookups, return each page's cover and in-body images alongside the results.
+
+```json theme={null}
+{
+  "query": "northern lights tonight",
+  "include_images": true
+}
+```
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform/web-search">
+    Run Web Search live in the Octen console.
+  </Card>
+
+  <Card title="Web Search API Reference" icon="code" href="/api-reference/search">
+    Full request/response schema.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on September 20, 2026</p>
+
+
+# Connect Desktop AI Assistants
+Source: https://docs.octen.ai/integrations/connect-desktop-ai-assistants
+
+Wire Octen into a desktop assistant like Claude Desktop.
+
+<p>For AI agents: <a href="https://docs.octen.ai/integrations/connect-desktop-ai-assistants.md">docs.octen.ai/integrations/connect-desktop-ai-assistants.md</a></p>
+
+There are two ways to give a desktop AI assistant access to Octen:
+
+* **MCP** — Model Context Protocol. The app runs a small local server via `npx`, so it needs Node.js on your machine.
+* **Octen skills** — Agent Skills standard. The app runs it directly; when the app executes skills in a hosted sandbox, that's ideal if you don't have Node.
+
+This guide uses Claude Desktop as the example. Any other desktop assistant that supports MCP or Skills standard connects in a similar ways.
+
+## MCP
+
+### Before you start
+
+* An **Octen API key** ([API Platform](https://octen.ai/platform/api-keys)).
+* Claude Desktop
+* Node.js 18+ — the server runs via `npx`.
+
+<Steps>
+  <Step title="Open the MCP config">
+    In Claude Desktop, open **Settings → Developer**, then click **Edit Config** to open `claude_desktop_config.json`.
+
+    <Frame>
+      <img alt="Settings → Developer tab with Edit Config" />
+    </Frame>
+  </Step>
+
+  <Step title="Add Octen MCP">
+    Add `octen` under `mcpServers`, with your key in `env`:
+
+    ```json theme={null}
+    {
+      "mcpServers": {
+        "octen": {
+          "command": "npx",
+          "args": ["-y", "octen-mcp"],
+          "env": {
+            "OCTEN_API_KEY": "your-key-here"
+          }
+        }
+      }
+    }
+    ```
+
+    <Note>
+      Merge this into the file — don't replace it. `mcpServers` may already exist (often empty: `"mcpServers": {}`), and the file may hold other settings. Keep them all — just put the `octen` block inside the existing `mcpServers`.
+    </Note>
+  </Step>
+
+  <Step title="Restart Claude Desktop">
+    Save the file, then fully quit and reopen Claude Desktop.
+  </Step>
+
+  <Step title="Confirm it's connected">
+    Check either place:
+
+    * Settings → Developer → Local MCP servers — `octen` shows a running badge.
+    * In a chat, click the **+** button → Connectors and make sure **octen** is toggled on.
+
+    <Frame>
+      <img alt="Local MCP servers list showing octen with a running badge" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Octen Skills
+
+Octen offers several skills — this guide installs `octen-search` as an example. You add any other Octen skill the same way.
+
+### Before you start
+
+* An **Octen API key** ([API Platform](https://octen.ai/platform/api-keys)).
+* Code execution enabled in Settings → Capabilities (available on Free, Pro, and Max; in an organization, an admin enables it in org settings).
+
+<Steps>
+  <Step title="Enable code execution and allow Octen's domain">
+    Open Settings → Capabilities and turn on Code execution and file creation, then turn on Allow network egress.
+
+    Network egress defaults to package managers only, so the calls to Octen stay blocked until you allow its domain — add `*.octen.ai` to the allowed domains.
+
+    <Note>
+      Who can add the domain depends on your plan. On Pro / Max you add it yourself. On Team / Enterprise an admin adds it in Organization settings → Capabilities. Free plans can't add custom domains — use MCP instead.
+    </Note>
+  </Step>
+
+  <Step title="Add the skill">
+    Download `octen-search.zip` from the [octen-skills repo](https://github.com/Octen-Team/octen-skills) and unzip it. Open Customize → Skills, click the **+** at the top of the list, then choose Create skill → Upload a skill and select `skills/octen-search/SKILL.md`.
+
+    <Frame>
+      <img alt="Customize Skills panel with the Create skill / Upload a skill control" />
+    </Frame>
+
+    <Frame>
+      <img alt="File picker with skills/octen-search/SKILL.md selected" />
+    </Frame>
+  </Step>
+
+  <Step title="Turn on the skill in a chat">
+    In a new chat, click the **+**, choose Skills, and select octen-search to turn it on for the conversation.
+
+    <Frame>
+      <img alt="Chat plus-menu Skills submenu listing octen-search" />
+    </Frame>
+  </Step>
+
+  <Step title="Set your API key (first run)">
+    This skill reads your key from OCTEN\_API\_KEY — add it as an environment variable, or provide your Octen API key when the skill asks for one.
+  </Step>
+</Steps>
+
+## Try It
+
+Ask the assistant something that needs the live web:
+
+* *Search the web for daily news and summarize the top three.*
+
+## Troubleshooting
+
+| Symptom | Fix |
+| - | - |
+| MCP tools don't appear | Fully quit and reopen the app; confirm the MCP config is valid JSON. |
+| `spawn npx ENOENT` | Node isn't installed or isn't on the app's PATH — install Node, or put the absolute path to `npx` in `command`. |
+| Skill can't reach Octen | Network is blocked. Check Enable code execution and allow Octen's domain part or use MCP instead |
+
+***
+
+<p>Last modified on August 22, 2026</p>
+
+
+# Connect LLMs to Octen Search
+Source: https://docs.octen.ai/integrations/connect-llms-to-octen-search
+
+Register Octen Web Search as a function-calling tool for LLMs.
+
+<p>For AI agents: <a href="https://docs.octen.ai/integrations/connect-llms-to-octen-search.md">docs.octen.ai/integrations/connect-llms-to-octen-search.md</a></p>
+
+Give your LLM access to real-time web information. Octen Web Search can be used as a **tool** with any LLM provider that supports function calling.
+
+<CardGroup>
+  <Card title="Get API Key" icon="key" href="https://octen.ai/platform/api-keys">
+    Get your API key from the API Platform
+  </Card>
+
+  <Card title="API Reference" icon="book" href="/api-reference/search">
+    View the full Web Search API reference
+  </Card>
+</CardGroup>
+
+## Install
+
+```bash theme={null}
+pip install octen
+```
+
+## OpenAI
+
+Define Octen Web Search as a tool and let GPT decide when to search.
+
+```python theme={null}
+import json
+from openai import OpenAI
+from octen import Octen
+
+openai = OpenAI(
+    api_key="your-openai-api-key",
+    base_url="https://api.openai.com/v1",  # or your custom endpoint
+)
+octen = Octen(api_key="your-octen-api-key")
+
+tools = [
+    {
+        "type": "function",
+        "function": {
+            "name": "web_search",
+            "description": "Search the web for real-time information.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "The search query"
+                    }
+                },
+                "required": ["query"]
+            }
+        }
+    }
+]
+
+messages = [{"role": "user", "content": "What are the latest AI news today?"}]
+
+response = openai.chat.completions.create(
+    model="gpt-5.4",
+    messages=messages,
+    tools=tools,
+)
+
+# Handle tool calls
+if response.choices[0].message.tool_calls:
+    tool_call = response.choices[0].message.tool_calls[0]
+    args = json.loads(tool_call.function.arguments)
+
+    # Call Octen Web Search
+    search_results = octen.search.search(query=args["query"], count=5)
+
+    # Feed results back to GPT
+    messages.append(response.choices[0].message)
+    messages.append({
+        "role": "tool",
+        "tool_call_id": tool_call.id,
+        "content": json.dumps(search_results.results)
+    })
+
+    final = openai.chat.completions.create(
+        model="gpt-5.4",
+        messages=messages,
+        tools=tools,
+    )
+    print(final.choices[0].message.content)
+```
+
+## Anthropic
+
+Use Octen Web Search as a tool with Claude.
+
+```python theme={null}
+import json
+import anthropic
+from octen import Octen
+
+client = anthropic.Anthropic(
+    api_key="your-anthropic-api-key",
+    base_url="https://api.anthropic.com",  # or your custom endpoint
+)
+octen = Octen(api_key="your-octen-api-key")
+
+tools = [
+    {
+        "name": "web_search",
+        "description": "Search the web for real-time information.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "The search query"
+                }
+            },
+            "required": ["query"]
+        }
+    }
+]
+
+messages = [{"role": "user", "content": "What are the latest AI news today?"}]
+
+response = client.messages.create(
+    model="claude-opus-4-6",
+    max_tokens=4096,
+    messages=messages,
+    tools=tools,
+)
+
+# Handle tool use
+if response.stop_reason == "tool_use":
+    tool_block = next(b for b in response.content if b.type == "tool_use")
+
+    # Call Octen Web Search
+    search_results = octen.search.search(
+        query=tool_block.input["query"], count=5
+    )
+
+    # Feed results back to Claude
+    messages.append({"role": "assistant", "content": response.content})
+    messages.append({
+        "role": "user",
+        "content": [
+            {
+                "type": "tool_result",
+                "tool_use_id": tool_block.id,
+                "content": json.dumps(search_results.results)
+            }
+        ]
+    })
+
+    final = client.messages.create(
+        model="claude-opus-4-6",
+        max_tokens=4096,
+        messages=messages,
+        tools=tools,
+    )
+    print(final.content[0].text)
+```
+
+## Google Gemini
+
+Use Octen Web Search as a tool with Gemini.
+
+```python theme={null}
+from google import genai
+from google.genai import types
+from octen import Octen
+
+client = genai.Client(api_key="your-gemini-api-key")
+octen = Octen(api_key="your-octen-api-key")
+
+web_search_tool = types.Tool(
+    function_declarations=[
+        types.FunctionDeclaration(
+            name="web_search",
+            description="Search the web for real-time information.",
+            parameters=types.Schema(
+                type="OBJECT",
+                properties={
+                    "query": types.Schema(
+                        type="STRING",
+                        description="The search query",
+                    ),
+                },
+                required=["query"],
+            ),
+        )
+    ]
+)
+
+response = client.models.generate_content(
+    model="gemini-3.1-pro-preview",
+    contents="What are the latest AI news today?",
+    config=types.GenerateContentConfig(tools=[web_search_tool]),
+)
+
+# Handle function call
+part = response.candidates[0].content.parts[0]
+if part.function_call:
+    query = part.function_call.args["query"]
+
+    # Call Octen Web Search
+    search_results = octen.search.search(query=query, count=5)
+
+    # Feed results back to Gemini
+    response = client.models.generate_content(
+        model="gemini-3.1-pro-preview",
+        contents=[
+            types.Content(
+                role="user",
+                parts=[types.Part.from_text("What are the latest AI news today?")],
+            ),
+            response.candidates[0].content,
+            types.Content(
+                role="tool",
+                parts=[
+                    types.Part.from_function_response(
+                        name="web_search",
+                        response={"results": search_results.results},
+                    )
+                ],
+            ),
+        ],
+        config=types.GenerateContentConfig(tools=[web_search_tool]),
+    )
+    print(response.text)
+```
+
+## LangChain
+
+Use Octen Web Search as a LangChain tool.
+
+```python theme={null}
+from langchain_core.tools import tool
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import HumanMessage
+from langgraph.prebuilt import create_react_agent
+from octen import Octen
+
+octen = Octen(api_key="your-octen-api-key")
+
+@tool
+def web_search(query: str) -> str:
+    """Search the web for real-time information."""
+    results = octen.search.search(query=query, count=5)
+    return str(results.results)
+
+llm = ChatOpenAI(
+    model="gpt-5.4",
+    api_key="your-api-key",
+    base_url="https://api.openai.com/v1",  # or your custom endpoint
+)
+agent = create_react_agent(llm, [web_search])
+
+response = agent.invoke(
+    {"messages": [HumanMessage(content="What are the latest AI news today?")]}
+)
+
+print(response["messages"][-1].content)
+```
+
+***
+
+<p>Last modified on August 21, 2026</p>
+
+
+# Octen CLI
+Source: https://docs.octen.ai/integrations/octen-cli
+
+Configure a client and run the Octen API from your terminal.
+
+<p>For AI agents: <a href="https://docs.octen.ai/integrations/octen-cli.md">docs.octen.ai/integrations/octen-cli.md</a></p>
+
+`@octen.ai/cli` is the official command-line tool for Octen.
+One command wires Octen's MCP server and Agent Skills into your AI client. It also brings the full Octen API straight to your terminal.
+
+<CardGroup>
+  <Card title="Get API Key" icon="key" href="https://octen.ai/platform/api-keys">
+    Create a key from the API Platform.
+  </Card>
+
+  <Card title="GitHub" icon="github" href="https://github.com/Octen-Team/octen-cli">
+    View the source and releases.
+  </Card>
+
+  <Card title="npm" icon="npm" href="https://www.npmjs.com/package/@octen.ai/cli">
+    The `@octen.ai/cli` package.
+  </Card>
+</CardGroup>
+
+## Install
+
+<Tabs>
+  <Tab title="npm">
+    Requires Node.js 18+.
+
+    ```bash theme={null}
+    npm i -g @octen.ai/cli
+    ```
+
+    Or run without installing: `npx @octen.ai/cli <command>`.
+  </Tab>
+
+  <Tab title="Homebrew">
+    ```bash theme={null}
+    brew install Octen-Team/tap/octen
+    ```
+  </Tab>
+</Tabs>
+
+## Authenticate
+
+<Note>
+  You'll need an Octen API key first. Create one from the [API Platform](https://octen.ai/platform/api-keys).
+</Note>
+
+Set your key as an environment variable — every command picks it up automatically:
+
+```bash theme={null}
+export OCTEN_API_KEY="your-key"          # add to ~/.zshrc or ~/.bashrc to persist
+```
+
+You can also pass `--api-key <key>` on any single command. To point at a staging or self-hosted endpoint, set `OCTEN_API_URL` or pass `--base-url <url>`.
+
+## Set Up Your AI Agent
+
+One command merges the Octen MCP server or Agent Skills into your client.
+
+<Tabs>
+  <Tab title="Agent Skills">
+    Install the Octen Skills into your AI agent:
+
+    ```bash theme={null}
+    octen configure-skills --claude-code --set-key
+    ```
+
+    Supported: Claude Code, Cursor, Codex, OpenClaw, Hermes. For Claude Desktop, use --claude-code.
+  </Tab>
+
+  <Tab title="MCP server">
+    Add the Octen MCP server:
+
+    ```bash theme={null}
+    octen configure-mcp --claude-code
+    ```
+
+    Supported: Claude Code, Claude Desktop, Cursor, Windsurf, VS Code, Codex.
+  </Tab>
+</Tabs>
+
+<Note>
+  `--all` configures every client found on your machine at once.
+</Note>
+
+## Use Octen from the Terminal
+
+| Command | What it does |
+| - | - |
+| `octen broad-search <query>` | Broad, multi-angle web search across auto-generated sub-queries. |
+| `octen search <query>` | Live web search with model-ready highlights and optional full content. |
+| `octen news <query>` | News search for current events and headlines. |
+| `octen image-search <query>` | Image search by text or a reference image. |
+| `octen video-search <query>` | Video search by text query. Beta — contact us for access. |
+| `octen extract <urls...>` | Content extraction from 1–20 URLs into clean, LLM-ready markdown or text. |
+| `octen chat [prompt]` | Chat completions from leading models, with optional live web search. |
+| `octen embed [text...]` | Text embeddings for semantic search, RAG, and recommendations. |
+| `octen vl-embed <content...>` | Multimodal embeddings from text, images, and video for cross-modal search. |
+
+***
+
+<p>Last modified on October 13, 2026</p>
+
+
+# Octen MCP Server
+Source: https://docs.octen.ai/integrations/octen-mcp-server
+
+Add the Octen MCP server to your client, hosted endpoint or local npx.
+
+<p>For AI agents: <a href="https://docs.octen.ai/integrations/octen-mcp-server.md">docs.octen.ai/integrations/octen-mcp-server.md</a></p>
+
+Lets MCP-compatible assistants use Octen directly inside their workflow:
+
+* `broad_search` — decompose one question into concurrent sub-queries for broad, multi-angle coverage
+* `search` — search live web data with ranked results, highlights, filters, and optional full content
+* `image_search` — search the web for images by text or reference image
+* `video_search` — search the web for videos by text query (beta)
+* `extract` — fetch URLs as clean markdown or text
+
+<CardGroup>
+  <Card title="Get API Key" icon="key" href="https://octen.ai/platform/api-keys">
+    Create a key from the API Platform.
+  </Card>
+
+  <Card title="GitHub" icon="github" href="https://github.com/Octen-Team/octen-mcp">
+    View source and contribute.
+  </Card>
+</CardGroup>
+
+## Why Octen MCP
+
+<CardGroup>
+  <Card title="Fast" icon="bolt">
+    Web search averages 62ms. Fast enough for multi-step MCP workflows.
+  </Card>
+
+  <Card title="Accurate" icon="bullseye">
+    Powered by SOTA text and VL embedding models. Better sources, fewer hallucinations.
+  </Card>
+
+  <Card title="Fresh" icon="clock-rotate-left">
+    Live web data with minute-level updates. Useful for news, prices, and fast-moving pages.
+  </Card>
+
+  <Card title="Efficient" icon="filter">
+    Clean highlights, optional full\_content, and page labels keep model context relevant.
+  </Card>
+</CardGroup>
+
+## Installation
+
+<Note>
+  You'll need an Octen API key first. Create one from the [API Platform](https://octen.ai/platform/api-keys).
+</Note>
+
+Pick one of two ways to connect: the hosted endpoint, or running the server locally.
+
+### Connect to the Hosted Endpoint
+
+Point your client at `https://mcp.octen.ai/mcp` with your API key in an `x-api-key` header.
+
+<Tabs>
+  <Tab title="Claude Code">
+    ```bash theme={null}
+    claude mcp add --transport http octen https://mcp.octen.ai/mcp --header "x-api-key: your-key-here"
+    ```
+  </Tab>
+
+  <Tab title="Claude Desktop">
+    In **Settings → Connectors**, click **Add custom connector**, name it `Octen`, and enter the URL `https://mcp.octen.ai/mcp`. Claude offers to sign you in, and a key is issued to that connection when you approve. No config file or bridge needed.
+  </Tab>
+
+  <Tab title="Cursor">
+    Add to `~/.cursor/mcp.json`:
+
+    ```json theme={null}
+    {
+      "mcpServers": {
+        "octen": {
+          "url": "https://mcp.octen.ai/mcp",
+          "headers": { "x-api-key": "your-key-here" }
+        }
+      }
+    }
+    ```
+  </Tab>
+
+  <Tab title="VS Code">
+    Add to `.vscode/mcp.json`. Note `servers`, not `mcpServers`, and the explicit `type`:
+
+    ```json theme={null}
+    {
+      "servers": {
+        "octen": {
+          "type": "http",
+          "url": "https://mcp.octen.ai/mcp",
+          "headers": { "x-api-key": "your-key-here" }
+        }
+      }
+    }
+    ```
+  </Tab>
+
+  <Tab title="Windsurf">
+    Add to `~/.codeium/windsurf/mcp_config.json`. The key is `serverUrl`, not `url`:
+
+    ```json theme={null}
+    {
+      "mcpServers": {
+        "octen": {
+          "serverUrl": "https://mcp.octen.ai/mcp",
+          "headers": { "x-api-key": "your-key-here" }
+        }
+      }
+    }
+    ```
+  </Tab>
+
+  <Tab title="Gemini CLI">
+    Add to `~/.gemini/settings.json`. The key is `httpUrl`:
+
+    ```json theme={null}
+    {
+      "mcpServers": {
+        "octen": {
+          "httpUrl": "https://mcp.octen.ai/mcp",
+          "headers": { "x-api-key": "your-key-here" }
+        }
+      }
+    }
+    ```
+  </Tab>
+
+  <Tab title="Codex">
+    ```bash theme={null}
+    codex mcp add octen --url https://mcp.octen.ai/mcp --header "x-api-key: your-key-here"
+    ```
+  </Tab>
+
+  <Tab title="Other clients">
+    Clients that speak only stdio (Zed, Warp, Raycast, Cline) reach the endpoint through the `mcp-remote` bridge. There is no space after the colon in `--header`:
+
+    ```json theme={null}
+    {
+      "mcpServers": {
+        "octen": {
+          "command": "npx",
+          "args": [
+            "-y", "mcp-remote",
+            "https://mcp.octen.ai/mcp",
+            "--header", "x-api-key:your-key-here"
+          ]
+        }
+      }
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### Run It Locally
+
+Run the server with `npx`. Set your key in `OCTEN_API_KEY`.
+
+<Tabs>
+  <Tab title="Claude Code">
+    ```bash theme={null}
+    claude mcp add --scope user octen \
+      -e OCTEN_API_KEY=your-key-here \
+      -- npx -y octen-mcp
+    ```
+  </Tab>
+
+  <Tab title="Claude Desktop">
+    Add to `claude_desktop_config.json`:
+
+    ```json theme={null}
+    {
+      "mcpServers": {
+        "octen": {
+          "command": "npx",
+          "args": ["-y", "octen-mcp"],
+          "env": {
+            "OCTEN_API_KEY": "your-key-here"
+          }
+        }
+      }
+    }
+    ```
+  </Tab>
+
+  <Tab title="Cursor">
+    Add to `~/.cursor/mcp.json`:
+
+    ```json theme={null}
+    {
+      "mcpServers": {
+        "octen": {
+          "command": "npx",
+          "args": ["-y", "octen-mcp"],
+          "env": {
+            "OCTEN_API_KEY": "your-key-here"
+          }
+        }
+      }
+    }
+    ```
+  </Tab>
+
+  <Tab title="VS Code">
+    Install at the user level:
+
+    [![Install in VS Code](https://img.shields.io/badge/Install%20in-VS%20Code-007ACC?logo=visualstudiocode\&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=octen\&inputs=%5B%7B%22type%22%3A%22promptString%22%2C%22id%22%3A%22apiKey%22%2C%22description%22%3A%22Octen%20API%20Key%22%2C%22password%22%3Atrue%7D%5D\&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22octen-mcp%22%5D%2C%22env%22%3A%7B%22OCTEN_API_KEY%22%3A%22%24%7Binput%3AapiKey%7D%22%7D%7D)
+
+    Or add to `.vscode/mcp.json`:
+
+    ```json theme={null}
+    {
+      "servers": {
+        "octen": {
+          "command": "npx",
+          "args": ["-y", "octen-mcp"],
+          "env": {
+            "OCTEN_API_KEY": "your-key-here"
+          }
+        }
+      }
+    }
+    ```
+  </Tab>
+
+  <Tab title="Codex">
+    ```bash theme={null}
+    codex mcp add octen \
+      --env OCTEN_API_KEY=your-key-here \
+      -- npx -y octen-mcp
+    ```
+  </Tab>
+
+  <Tab title="Other clients">
+    Use the same `npx -y octen-mcp` command with `OCTEN_API_KEY` in your MCP client config.
+  </Tab>
+</Tabs>
+
+## Tools
+
+| Tool | Use for | Returns |
+| - | - | - |
+| `broad_search` | Comparisons, surveys, multi-angle search | Ranked results grouped per generated sub-query |
+| `search` | Search bars, answer engines, news and source lookup | Ranked pages with relevant `highlight` and optional `full_content` |
+| `image_search` | Image lookup, visual references | Ranked images with source page, dimensions, and thumbnail |
+| `video_search` (beta) | Video lookup, clip discovery, media previews | Ranked videos with duration and cover |
+| `extract` | Reading pages, cleaning articles | Clean content with optional highlights, `category`, and `page_structure` |
+
+### Broad Search
+
+Use `broad_search` for comparisons, surveys, and multi-angle research. It decomposes a query into related sub-queries from multiple angles, searches them concurrently. It supports:
+
+* `max_queries`: 1-30 sub-queries (default 5) — raise for broader coverage
+* all `search` options applied to every sub-query
+
+```json theme={null}
+{
+  "query": "compare cloud GPU pricing across major providers",
+  "max_queries": 5,
+  "count": 10
+}
+```
+
+### Web Search
+
+Use `search` for live web retrieval. It supports:
+
+* `count`: 1-100 results
+* `include_domains` / `exclude_domains`
+* `include_text` / `exclude_text`
+* `time_basis`, `time_range`, `start_time`, and `end_time`
+* `language`: restrict result languages
+* `highlight` snippets or `full_content`
+* `include_images`
+* `format` (`text` or `markdown`) and `safesearch`
+
+```json theme={null}
+{
+  "query": "latest AI agent benchmark results",
+  "count": 5,
+  "time_range": "week"
+}
+```
+
+### Image Search
+
+Use `image_search` for image lookup and visual references. It supports:
+
+* `query` (text) or a reference image (`image_url`, or base64 bytes in `image_data`): use one or the other, not both
+* `count`: 1-10 results
+* `include_domains` / `exclude_domains`
+* `safesearch`
+
+```json theme={null}
+{
+  "query": "red sports car",
+  "count": 5
+}
+```
+
+### Video Search
+
+*In beta — contact us for beta access.* Use `video_search` for video lookup, clip discovery, and media previews. It supports:
+
+* `query`
+* `count`: 1-10 results
+* `time_range`, `start_time`, and `end_time`
+* `safesearch`
+
+```json theme={null}
+{
+  "query": "how to make espresso",
+  "count": 5
+}
+```
+
+### Extract
+
+Use `extract` when the input is one or more URLs. It supports:
+
+* `urls`: 1-20 URLs
+* `query`: return ranked highlights from each page instead of the full body
+* `max_age_seconds`: cache freshness control
+* `format`: `markdown` or `text`
+* `include_images`, `include_videos`, and `include_audio`
+
+```json theme={null}
+{
+  "urls": [
+    "https://docs.octen.ai/api-reference/search",
+    "https://docs.octen.ai/api-reference/extract"
+  ],
+  "format": "markdown"
+}
+```
+
+## Response Shapes
+
+Search returns a query and ranked result list:
+
+```json theme={null}
+{
+  "code": 0,
+  "msg": "success",
+  "request_id": "req_abc123def456",
+  "data": {
+    "query": "latest AI agent benchmark results",
+    "results": [
+      {
+        "title": "Example result",
+        "url": "https://example.com/article",
+        "highlight": "Query-relevant snippet...",
+        "time_published": "2026-06-20T00:00:00Z",
+        "time_last_crawled": "2026-06-23T08:30:05Z"
+      }
+    ]
+  },
+  "meta": {
+    "usage": { "num_search_queries": 1, "full_content_extra_count": 0 },
+    "latency": 237
+  }
+}
+```
+
+Extract returns one result per URL:
+
+```json theme={null}
+{
+  "code": 0,
+  "msg": "success",
+  "request_id": "req_abc123def456",
+  "data": {
+    "results": [
+      {
+        "url": "https://docs.octen.ai/api-reference/search",
+        "status": "success",
+        "title": "Search - Octen",
+        "full_content": "Clean markdown or text content...",
+        "time_last_crawled": "2026-04-21T08:30:05Z",
+        "page_structure": { "primary": "Content Page", "secondary": "Article" },
+        "category": { "primary": "Computers, Electronics & Technology", "secondary": "Artificial Intelligence" }
+      }
+    ]
+  },
+  "meta": {
+    "usage": { "total_urls": 1, "successful_urls": 1 },
+    "latency": 1832
+  }
+}
+```
+
+With `extract.query`, each successful URL returns `highlights` instead of `full_content`. Failed URLs return `status: "failed"` and an `error_message`; failed URLs are not billed.
+
+## Configuration
+
+| Variable | Required | Default |
+| - | - | - |
+| `OCTEN_API_KEY` | Yes | - |
+| `OCTEN_API_URL` | No | `https://api.octen.ai` |
+
+***
+
+<p>Last modified on October 13, 2026</p>
+
+
+# Octen Skills
+Source: https://docs.octen.ai/integrations/octen-skills
+
+How to install and use Octen Skills in your coding agent.
+
+<p>For AI agents: <a href="https://docs.octen.ai/integrations/octen-skills.md">docs.octen.ai/integrations/octen-skills.md</a></p>
+
+## Why Octen Skills
+
+Octen Skills put Octen inside your agent: live broad web search with clean, model-ready context.
+
+<CardGroup>
+  <Card title="Fast" icon="bolt">
+    Web search averages 62ms. Fast enough for multi-step agent workflows.
+  </Card>
+
+  <Card title="Accurate" icon="bullseye">
+    Powered by SOTA text and VL embedding models. Better sources, fewer hallucinations.
+  </Card>
+
+  <Card title="Fresh" icon="clock-rotate-left">
+    Live web data with minute-level updates. Useful for news, prices, and fast-moving pages.
+  </Card>
+
+  <Card title="Efficient" icon="filter">
+    Clean highlights, optional full content, and time and domain filters keep model context relevant.
+  </Card>
+</CardGroup>
+
+## Get Started
+
+<CardGroup>
+  <Card title="Get API Key" icon="key" href="https://octen.ai/platform/api-keys">
+    Create a key from the API Platform.
+  </Card>
+
+  <Card title="GitHub" icon="github" href="https://github.com/Octen-Team/octen-skills">
+    View and install the skills.
+  </Card>
+</CardGroup>
+
+## Skills
+
+| Skill | Endpoint | Use for |
+| - | - | - |
+| octen-web-search | *router* | Entry point for live web info. Routes each lookup to the right Octen tool and loads them before any built-in web search. |
+| octen-search | `POST /broad-search`, `POST /search` | Search bars, answer engines, news lookup, and broad multi-angle research. |
+| octen-image-search | `POST /image-search` | Image lookup and visual references. |
+| octen-video-search | `POST /video-search` | Video lookup, clip discovery, and media previews. Invite-only beta — contact us for access. |
+| octen-extract | `POST /extract` | Reading pages, cleaning articles, and knowledge ingestion. |
+
+## Installation
+
+<Tabs>
+  <Tab title="Claude Code">
+    ```bash theme={null}
+    npx skills add Octen-Team/octen-skills -a claude-code
+    ```
+  </Tab>
+
+  <Tab title="Cursor">
+    ```bash theme={null}
+    npx skills add Octen-Team/octen-skills -a cursor
+    ```
+  </Tab>
+
+  <Tab title="Codex">
+    ```bash theme={null}
+    npx skills add Octen-Team/octen-skills -a codex
+    ```
+  </Tab>
+
+  <Tab title="Gemini CLI">
+    ```bash theme={null}
+    npx skills add Octen-Team/octen-skills -a gemini-cli
+    ```
+  </Tab>
+
+  <Tab title="OpenClaw">
+    ```bash theme={null}
+    npx skills add Octen-Team/octen-skills -a openclaw
+    ```
+  </Tab>
+
+  <Tab title="Other agents">
+    `skills` auto-detects your current agent — just run:
+
+    ```bash theme={null}
+    npx skills add Octen-Team/octen-skills
+    ```
+  </Tab>
+</Tabs>
+
+### Without Node (curl)
+
+If you can't run `npx`, copy the `skills/` directory into your agent's skills folder:
+
+```bash theme={null}
+mkdir -p <skills-dir> && \
+  curl -sL https://github.com/Octen-Team/octen-skills/archive/main.tar.gz | \
+  tar xz -C <skills-dir> --strip-components=2 octen-skills-main/skills
+```
+
+## API Key
+
+Set `OCTEN_API_KEY` before using any skill. Get a key from the [API Platform](https://octen.ai/platform/api-keys).
+
+<Tabs>
+  <Tab title="Claude Code">
+    Add to `~/.claude/settings.json`:
+
+    ```json theme={null}
+    {
+      "env": {
+        "OCTEN_API_KEY": "your-key"
+      }
+    }
+    ```
+
+    For per-project use, add the same `env` block to `.claude/settings.local.json`.
+  </Tab>
+
+  <Tab title="Cursor">
+    Use `direnv` for a directory-scoped key:
+
+    ```bash theme={null}
+    echo 'export OCTEN_API_KEY="your-key"' >> .envrc
+    direnv allow
+    ```
+
+    Or export it in your shell profile (`~/.zshrc` or `~/.bashrc`), then fully quit and reopen Cursor:
+
+    ```bash theme={null}
+    export OCTEN_API_KEY="your-key"
+    ```
+  </Tab>
+
+  <Tab title="Codex">
+    Add to `~/.codex/config.toml`:
+
+    ```toml theme={null}
+    [shell_environment_policy]
+    set = { OCTEN_API_KEY = "your-key" }
+    ```
+
+    Or export it in your shell profile (`~/.zshrc` or `~/.bashrc`).
+  </Tab>
+
+  <Tab title="OpenClaw">
+    Add to `~/.openclaw/.env`:
+
+    ```bash theme={null}
+    OCTEN_API_KEY=your-key
+    ```
+  </Tab>
+
+  <Tab title="Other agents">
+    Export the key in the shell environment your agent runs in (covers Hermes Agent, Gemini CLI, Windsurf, and others):
+
+    ```bash theme={null}
+    export OCTEN_API_KEY="your-key"
+    ```
+  </Tab>
+</Tabs>
+
+### octen-search
+
+```bash theme={null}
+curl -s -X POST "https://api.octen.ai/broad-search" \
+  -H "Content-Type: application/json" \
+  -H "X-Api-Key: ${OCTEN_API_KEY}" \
+  -d '{"query": "latest AI research 2026", "search_options": {"count": 5}}'
+```
+
+For broad, multi-angle coverage, pass the full question as-is — Octen expands it into sub-queries searched concurrently and returns results grouped per sub-query:
+
+```bash theme={null}
+curl -s -X POST "https://api.octen.ai/broad-search" \
+  -H "Content-Type: application/json" \
+  -H "X-Api-Key: ${OCTEN_API_KEY}" \
+  -d '{
+    "query": "compare cloud GPU pricing across major providers",
+    "max_queries": 5,
+    "search_options": {"count": 10, "highlight": {"enable": true}}
+  }'
+```
+
+### octen-image-search
+
+Image lookup and visual references, searched by text or a reference image.
+
+```bash theme={null}
+curl -s -X POST "https://api.octen.ai/image-search" \
+  -H "Content-Type: application/json" \
+  -H "X-Api-Key: ${OCTEN_API_KEY}" \
+  -d '{
+    "inputs": [{"type": "text", "data": "red sports car"}],
+    "count": 5
+  }'
+```
+
+### octen-video-search — invite-only beta
+
+Video lookup, clip discovery, and media previews.
+
+```bash theme={null}
+curl -s -X POST "https://api.octen.ai/video-search" \
+  -H "Content-Type: application/json" \
+  -H "X-Api-Key: ${OCTEN_API_KEY}" \
+  -d '{
+    "inputs": [{"type": "text", "data": "how to make espresso"}],
+    "count": 5
+  }'
+```
+
+### octen-extract
+
+```bash theme={null}
+curl -s -X POST "https://api.octen.ai/extract" \
+  -H "Content-Type: application/json" \
+  -H "X-Api-Key: ${OCTEN_API_KEY}" \
+  -d '{
+    "urls": ["https://example.com", "https://octen.ai"],
+    "format": "markdown"
+  }'
+```
+
+## When to Use Each Skill
+
+| Need | Skill |
+| - | - |
+| Any web lookup, unsure which tool | `octen-web-search` |
+| Comprehensive, multi-angle research | `octen-search` (broad search) |
+| A quick web search | `octen-search` |
+| Results scoped to specific sites | `octen-search` with `include_domains` |
+| Photos, diagrams, or visual references | `octen-image-search` |
+| Videos, clips, or a moment within a video | `octen-video-search` (beta) |
+| Reading known URLs as clean content | `octen-extract` |
+
+***
+
+<p>Last modified on October 13, 2026</p>
+
+
+# Python SDK
+Source: https://docs.octen.ai/integrations/python-sdk
+
+Add Octen to your Python project.
+
+<p>For AI agents: <a href="https://docs.octen.ai/integrations/python-sdk.md">docs.octen.ai/integrations/python-sdk.md</a></p>
+
+<CardGroup>
+  <Card title="Get API Key" icon="key" href="https://octen.ai/platform/api-keys">
+    Get your API key from the API Platform
+  </Card>
+
+  <Card title="PyPI" icon="python" href="https://pypi.org/project/octen/">
+    Download and view the SDK on PyPI
+  </Card>
+</CardGroup>
+
+## Install
+
+<CodeGroup>
+  ```bash pip theme={null}
+  pip install octen
+  ```
+</CodeGroup>
+
+Requires Python 3.8+
+
+## Quick Start
+
+```python theme={null}
+from octen import Octen
+
+client = Octen(api_key="your-api-key") # or set OCTEN_API_KEY env var
+```
+
+## Broad Search
+
+Decompose a query into sub-queries, search them concurrently, and get results grouped per sub-query. Best for comparisons, surveys, and multi-angle questions.
+
+```python theme={null}
+response = client.search.broad_search(
+    query="compare cloud GPU pricing across providers",
+    max_queries=5,  # up to N sub-queries (1-30, default 5)
+)
+# response.queries -> sub-queries; response.search_results -> grouped results
+```
+
+## Web Search
+
+Search the live web and get ranked results with model-ready highlights and optional full content. Best for search bars, answer engines, and news lookup.
+
+```python theme={null}
+results = client.search.search(
+    query="blog post about artificial intelligence",
+    count=10,
+    time_range="week",
+    include_domains=["techcrunch.com", "wired.com"],
+)
+```
+
+## Image Search
+
+Search images by a text query or a reference image. Best for image lookup and visual references.
+
+```python theme={null}
+results = client.image_search.search(
+    query="golden retriever puppy",
+    count=5,
+)
+```
+
+## Video Search
+
+*In beta — contact us for beta access.* Search the web for videos by text query. Best for video lookup, clip discovery, and media previews.
+
+```python theme={null}
+results = client.video_search.search(
+    query="how to make fresh pasta",
+    count=5,
+)
+```
+
+## Extract
+
+Fetch 1-20 URLs in one call and return clean markdown or text. Best for reading pages, cleaning articles, and knowledge ingestion.
+
+```python theme={null}
+response = client.extract.extract(
+    urls=["https://docs.octen.ai/api-reference/search", "https://octen.ai"],
+    format="markdown",
+)
+
+for item in response.items:
+    if item.status == "success":
+        print(item.title, item.full_content[:200])
+    else:
+        print(f"[FAIL] {item.url}: {item.error_message}")
+```
+
+## Model
+
+Send messages to leading LLMs through one API, with optional web search via an `OctenSearchTool` in `tools`. Best for Q\&A, chat assistants, and grounded answers.
+
+```python theme={null}
+from octen import ChatMessage, OctenSearchTool
+
+response = client.chat.create(
+    model="openai/gpt-5.4",
+    messages=[ChatMessage(role="user", content="What happened in tech today?")],
+    tools=[OctenSearchTool()],  # enable live web search
+)
+print(response.text)
+print(response.search_results)
+```
+
+## Embedding
+
+Create text embeddings with models of different sizes. Best for semantic search, RAG, and recommendations.
+
+```python theme={null}
+response = client.embedding.create(
+    input=["first document", "second document"],
+    model="octen-embedding-8b",
+    input_type="document",
+)
+vectors = response.get_embeddings()
+```
+
+## VL Embedding
+
+Create multimodal embeddings from text, images, and videos. Best for cross-modal search and visual retrieval.
+
+```python theme={null}
+response = client.vl_embedding.create(
+    model="octen-vl-embedding-large",
+    contents=[
+        {"text": "A cute orange cat on a wooden chair"},
+        {"image": "https://example.com/cat.jpg"},
+    ],
+    enable_fusion=True,
+)
+vector = response.get_first_embedding()
+```
+
+## Async
+
+Use `AsyncOcten` for async operations. Every resource mirrors the sync client.
+
+```python theme={null}
+import asyncio
+from octen import AsyncOcten
+
+async def main():
+    async with AsyncOcten(api_key="your-api-key") as client:
+        results = await client.search.search(query="machine learning startups", count=10)
+
+asyncio.run(main())
+```
+
+## Error Handling
+
+```python theme={null}
+from octen import (
+    OctenAuthenticationError,
+    OctenRateLimitError,
+    OctenTimeoutError,
+    OctenConnectionError,
+    OctenStreamError,
+    OctenAPIError,
+)
+
+try:
+    results = client.search.search("query")
+except OctenAuthenticationError:
+    print("Invalid API key")
+except OctenRateLimitError as e:
+    print(f"Rate limited, retry after {e.retry_after}s")
+except OctenTimeoutError:
+    print("Request timed out")
+except OctenConnectionError:
+    print("Network connection failed")
+except OctenStreamError as e:
+    print(f"Stream error: {e.message} (code: {e.code})")
+except OctenAPIError as e:
+    print(f"API error: {e.status_code} - {e.message}")
+```
+
+Requests that fail due to timeouts, rate limits, or server errors (5xx) are automatically retried with exponential backoff.
+
+***
+
+<p>Last modified on October 13, 2026</p>
+
+
+# Build with Coding Agent
+Source: https://docs.octen.ai/overview/build-with-coding-agent
+
+Point your coding agent at this page to build an Octen integration.
+
+Coding agents such as Claude Code and Cursor can build an Octen integration for you. This page gives an agent what it needs: what Octen offers, the docs in agent-friendly formats, how to connect to Octen, and how to use it in applications.
+
+## What Octen Offers
+
+Octen is the search infrastructure for AI: a real-time web search foundation that lets LLMs, agents, and apps reason with the world's latest information.
+
+| Product | What it does |
+| - | - |
+| [Broad Search](/capabilities/broad-search) | Expands one query into multi-angle sub-queries and searches them concurrently. |
+| [Web Search](/capabilities/web-search) | Live web search with ranked results, plus model-ready highlights and optional full content. |
+| [Image Search](/capabilities/image-search) | Image search from a text query or a reference image. |
+| [Video Search](/capabilities/video-search) (beta) | Video search from a text query, with rich metadata. |
+| [News Search](/capabilities/news-search) | Dozens of reports on one story, grouped into a single event. |
+| [Business Search](/capabilities/business-search) | Companies and people as entity cards, with the facts already in fields. |
+| [Extract](/capabilities/extract) | Turns up to 20 URLs into clean, LLM-ready markdown or text. |
+| [Model Gateway](/capabilities/model-gateway) | Frontier models behind one API key, with built-in Octen search tools. |
+| [Embedding](/capabilities/embedding) | Text embeddings for semantic search, RAG, and recommendations. |
+| [VL Embedding](/capabilities/vl-embedding) | Multimodal embeddings across text, images, and videos. |
+| [Answer](/capabilities/answer) | A question in, a synthesized answer with sources out. |
+| [Deep Research](/capabilities/deep-research) | Autonomous multi-round research that streams back a cited report. |
+| [Multimodal Chat](/capabilities/multimodal-chat) (beta) | Replies with interleaved text, images, and videos, grounded in multimodal search. |
+| [Grounded Generation](/capabilities/grounded-generation) | Generates images and videos grounded in search results. |
+
+## How to Read the Docs
+
+### Plain text pages
+
+Add `.md` to the end of any docs URL to get the page as plain Markdown. For example, the Web Search API reference is available at [https://docs.octen.ai/api-reference/search.md](https://docs.octen.ai/api-reference/search.md).
+
+This format beats scraping or copying the HTML pages:
+
+* Plain text contains fewer formatting tokens.
+* Content that isn't rendered in the default view, such as content hidden in a tab, is included.
+* LLMs parse and understand Markdown hierarchy.
+
+### llms.txt
+
+[docs.octen.ai/llms.txt](https://docs.octen.ai/llms.txt) indexes the comprehensive API documentation designed for LLM consumption, following the llms.txt standard for making websites accessible to LLMs. For the entire documentation in a single file, see [docs.octen.ai/llms-full.txt](https://docs.octen.ai/llms-full.txt).
+
+## Connect to Octen
+
+Connect to Octen with one command through Agent Skills, the MCP server, or the CLI.
+
+<Note>
+  You'll need an Octen API key first. Create one from the [API Platform](https://octen.ai/platform/api-keys).
+</Note>
+
+### Octen Skills
+
+Agent skills for search and extract. One command, agent auto-detected:
+
+```bash theme={null}
+npx skills add Octen-Team/octen-skills
+```
+
+Per-agent commands and API key setup are in [Octen Skills](/integrations/octen-skills).
+
+### Octen MCP Server
+
+Search and extract tools for any MCP-compatible client. In Claude Code:
+
+```bash theme={null}
+claude mcp add --scope user octen \
+  -e OCTEN_API_KEY=your-key-here \
+  -- npx -y octen-mcp
+```
+
+Configs for Claude Desktop, Cursor, VS Code, and other clients are in [Octen MCP Server](/integrations/octen-mcp-server).
+
+### Octen CLI
+
+The full Octen API in your terminal, plus one-command setup of the MCP server or Skills:
+
+```bash theme={null}
+npm i -g @octen.ai/cli
+octen configure-skills --claude-code --set-key
+```
+
+Commands and options are in [Octen CLI](/integrations/octen-cli).
+
+## Use in Applications
+
+In application code, call the Octen API directly: the base URL is `https://api.octen.ai`, authenticated with the `x-api-key` header or a Bearer token.
+
+<CodeGroup>
+  ```bash curl theme={null}
+  curl -X POST https://api.octen.ai/search \
+    -H "Content-Type: application/json" \
+    -H "x-api-key: YOUR_API_KEY" \
+    -d '{"query": "Tesla stock price"}'
+  ```
+
+  ```python Python SDK theme={null}
+  from octen import Octen
+
+  client = Octen(api_key="your-api-key")  # or set OCTEN_API_KEY env var
+  results = client.search.search(query="Tesla stock price")
+  ```
+</CodeGroup>
+
+Every endpoint, parameter, and response schema is in the [API Reference](/api-reference/broad-search). For Model Gateway, existing OpenAI and Anthropic SDK code works after swapping the base URL and key; see [Model Gateway](/capabilities/model-gateway).
+
+***
+
+<p>Last modified on October 13, 2026</p>
+
+
+# Introduction
+Source: https://docs.octen.ai/overview/introduction
+
+What Octen is and what each API and application does.
+
+<p>For AI agents: <a href="https://docs.octen.ai/overview/introduction.md">docs.octen.ai/overview/introduction.md</a></p>
+
+Octen is the search infrastructure for AI: a real-time web search foundation that lets LLMs, agents, and apps reason with the world's latest information.
+
+Going beyond traditional search, Octen spans the whole path from query to result: from Broad Search, which covers one question from multiple angles in a single call, to applications that deliver finished, cited answers and research reports.
+
+Octen is also multimodal end to end. Web pages, images, and videos can all be searched, embedded, and used to generate new content, so AI and agents can work with the web the way people actually see it.
+
+## Why Octen
+
+* **Real-time by default.** Minute-level index freshness, with second-level updates for fast-moving data such as stock prices and live sports.
+* **Built for AI consumption.** Results return relevant highlights and clean full content directly, no crawling or parsing needed: ranked, token-efficient, LLM-ready.
+* **Fast and accurate.** P50 search latency as low as 62ms; SOTA models top-ranked on search benchmarks (SimpleQA, FreshQA), text retrieval (RTEB #1 and #2), and multimodal retrieval (MMEB-v2).
+* **Multilingual and multimodal.** Sites from across the globe in 100+ languages, with dedicated Image Search and Video Search beyond text.
+* **Specialized and flexible.** Purpose-built modes for verticals such as news, plus per-request options that tune sources, time windows, and output format to your needs.
+* **Production-grade.** Up to 500 QPS on Web Search with a subscription plan, and a 99.9% monthly uptime SLA on paid plans.
+* **Low cost.** Search at \$1 per 1,000 calls, priced for high-volume production.
+* **One platform, full loop.** Search, extract, embeddings, model gateway, and research workflows behind a single API key.
+
+## APIs
+
+Each API handles one capability. Start from the card that matches what you have and what you need back.
+
+<CardGroup>
+  <Card title="Broad Search" icon="magnifying-glass-plus" href="/capabilities/broad-search">
+    Input: A text query
+
+    Output: Ranked web results for each sub-query, with relevant highlights and optional full content
+
+    Best for: Comparisons, research, topic surveys, multi-angle questions
+
+    How to use: Feed the grouped results to a model to answer the whole question at once.
+  </Card>
+
+  <Card title="Web Search" icon="magnifying-glass" href="/capabilities/web-search">
+    Input: A text query
+
+    Output: Ranked web results with relevant highlights, optional full content
+
+    Best for: Search bars, answer engines, news lookup, market or company tracking
+
+    How to use: Show the results directly, or pass the results to a model to generate grounded answers.
+  </Card>
+
+  <Card title="Image Search" icon="image" href="/capabilities/image-search">
+    Input: A text query or an image
+
+    Output: Ranked image results
+
+    Best for: Image lookup, visual references
+
+    How to use: Pass the results to a model as visual reference.
+  </Card>
+
+  <Card title="Video Search" icon="video" href="/capabilities/video-search">
+    Input: A text query
+
+    Output: Ranked video results
+
+    Best for: Video lookup, clip discovery, media previews
+
+    How to use: Pass the results to a model to reference the matching video.
+
+    Invite-only beta. Email [support@octen.ai](mailto:support@octen.ai).
+  </Card>
+
+  <Card title="News Search" icon="newspaper" href="/capabilities/news-search">
+    Input: A text query
+
+    Output: Ranked news articles, with related coverage grouped into subjects
+
+    Best for: Breaking news, media monitoring, story tracking
+
+    How to use: Pass a subject to a model to cover a whole story in one read.
+  </Card>
+
+  <Card title="Business Search" icon="building" href="/capabilities/business-search">
+    Input: A text query
+
+    Output: Ranked business results, plus entity cards for companies and people
+
+    Best for: Company due diligence, people lookup, competitor comparison
+
+    How to use: Read values directly from the entity cards, or pass them to a model as context.
+  </Card>
+
+  <Card title="Extract" icon="file-lines" href="/capabilities/extract">
+    Input: One or more URLs
+
+    Output: Clean page content with optional highlights, page classification, and media resources
+
+    Best for: Reading pages, cleaning articles, knowledge ingestion
+
+    How to use: Store, display, summarize, or pass the content to a model as context.
+  </Card>
+
+  <Card title="Model Gateway" icon="robot" href="/capabilities/model-gateway">
+    Input: A question, chat messages, or an image description
+
+    Output: Model responses or generated images
+
+    Best for: Chat assistants, agents, image generation, workloads that need fresh web knowledge
+
+    How to use: Use the responses to build chat, agent, or image features.
+  </Card>
+
+  <Card title="Embedding" icon="binary" href="/capabilities/embedding">
+    Input: Text
+
+    Output: Text vectors
+
+    Best for: Semantic search, RAG, recommendations
+
+    How to use: Convert text into vectors, store them in a vector database, and compare queries against vectors.
+  </Card>
+
+  <Card title="VL Embedding" icon="vector-square" href="/capabilities/vl-embedding">
+    Input: Text, images, videos
+
+    Output: Multimodal vectors
+
+    Best for: Cross-modal search, visual retrieval
+
+    How to use: Convert multimodal content into vectors so text, images, and videos can be searched or matched.
+  </Card>
+</CardGroup>
+
+## Applications
+
+Use applications when you want to run a complete workflow.
+
+<CardGroup>
+  <Card title="Answer" icon="comments" href="/capabilities/answer">
+    Input: A question or chat messages
+
+    Output: A synthesized answer grounded in search results, with the sub-queries and sources used
+
+    Best for: Q\&A, chat assistants, grounded answers with citations
+
+    How to use: Send the user's question. Octen returns the synthesized answer and its sources.
+  </Card>
+
+  <Card title="Deep Research" icon="file-magnifying-glass" href="/capabilities/deep-research">
+    Input: A research question
+
+    Output: A structured report with supporting evidence, optionally illustrated with images and videos
+
+    Best for: Deep dives, strategic research, technical investigations, trend analysis
+
+    How to use: Enter a research question. Octen plans, searches over multiple rounds, and streams the final report.
+  </Card>
+
+  <Card title="Multimodal Chat" icon="message-image" href="/capabilities/multimodal-chat">
+    Input: A question or chat messages
+
+    Output: An interleaved response of text, images, and videos, grounded in multimodal search results
+
+    Best for: Visual Q\&A, rich chat experiences
+
+    How to use: Send the user's question. Octen replies with interleaved text, images, and videos.
+
+    Invite-only beta. Email [support@octen.ai](mailto:support@octen.ai).
+  </Card>
+
+  <Card title="Grounded Generation" icon="wand-magic-sparkles" href="/capabilities/grounded-generation">
+    Input: A generation prompt
+
+    Output: Generated images or videos grounded in search results
+
+    Best for: Fact-grounded visuals, illustrated explainers
+
+    How to use: Send a prompt. Octen generates grounded images or videos.
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Quickstart" icon="rocket" href="/overview/quickstart">
+    Get an API key and make your first request.
+  </Card>
+
+  <Card title="Build with Coding Agent" icon="robot" href="/overview/build-with-coding-agent">
+    Everything a coding agent needs to integrate Octen.
+  </Card>
+
+  <Card title="Try in Console" icon="play" href="https://octen.ai/platform">
+    Run every API live in the Octen console.
+  </Card>
+
+  <Card title="API Reference" icon="code" href="/api-reference/broad-search">
+    Full request/response schemas.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on October 14, 2026</p>
+
+
+# Model Gateway Rebate
+Source: https://docs.octen.ai/overview/model-gateway-rebate
+
+Earn 15% back on Model Gateway usage.
+
+<p>For AI agents: <a href="https://docs.octen.ai/overview/model-gateway-rebate.md">docs.octen.ai/overview/model-gateway-rebate.md</a></p>
+
+Get **15% of your Model Gateway spend back**. The more you build, the more you earn.
+
+* **Every model.** All models on Model Gateway are eligible.
+* **Fully automatic.** Credited to your balance each month, nothing to claim.
+* **Real value.** 15% of what you actually pay, straight back to your balance.
+
+<Card title="Start Earning" icon="play" href="https://octen.ai/platform/model">
+  Use Model Gateway in the Octen console and your rebate builds automatically.
+</Card>
+
+## How It Works
+
+| Item | Detail |
+| :- | :- |
+| Rebate rate | 15% of qualifying Model Gateway usage |
+| Qualifying usage | Model Gateway usage funded by paid amounts, at least \$10 in a calendar month. Free credits, vouchers, and rebate balance do not count. |
+| Supported models | All models on Model Gateway |
+| Payout | Credited to your balance on the 7th of the following month, UTC (August usage → September 7). Spendable on any Octen product, though only Model Gateway usage earns the rebate. Non-refundable, non-transferable, non-withdrawable, no expiry; forfeited if the account is closed or terminated. |
+
+Any usage draws from free credits, vouchers, and rebate balance first, and from the cash you pay in last. The rebate is calculated on that paid usage.
+
+The program takes effect on August 11, 2026 at 19:00 UTC. Only usage after that time earns a rebate. The first settlement period runs from that time through August 31, 2026 (UTC).
+
+## Requirements
+
+* A registered account, individual or organization, with a card added or a topped-up balance.
+* Registered for at least 7 days, and not closed or frozen.
+
+## Terms
+
+* Octen may adjust the rebate rate for, or exclude, specific models at any time.
+* The rebate is for your own use of Model Gateway. Reselling or redistributing Model Gateway access is not permitted and disqualifies the account.
+* Accounts under a separate pricing agreement, such as Enterprise, may not be eligible. Octen determines eligibility at its discretion.
+* Larger rebates may be subject to additional review before they are credited.
+* Rebates are issued as account credit and do not adjust invoices already issued.
+* Octen may change, suspend, or end the program at any time, and may withhold, reduce, or reclaim rebates, or remove an account from the program, in cases of abuse or violation of these terms.
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Model Gateway" icon="server" href="/capabilities/model-gateway">
+    One API key for frontier models with built-in search.
+  </Card>
+
+  <Card title="Python SDK" icon="python" href="/integrations/python-sdk">
+    Call Model Gateway from the Octen Python client.
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on August 11, 2026</p>
+
+
+# Pricing
+Source: https://docs.octen.ai/overview/pricing
+
+Prices for Octen's APIs and models, and how billing works.
+
+<p>For AI agents: <a href="https://docs.octen.ai/overview/pricing.md">docs.octen.ai/overview/pricing.md</a></p>
+
+## Overview
+
+Our pricing combines a **monthly QPS Plan subscription** with **pay-as-you-go API billing**:
+
+<Steps>
+  <Step title="Subscribe to a QPS Plan">
+    New accounts start on the Free plan; adding credits unlocks Base at no monthly cost.
+  </Step>
+
+  <Step title="Top up your balance">
+    API charges are deducted from your balance in real time.
+  </Step>
+
+  <Step title="Pay as you go">
+    Charges are based on actual resource consumption (API calls, tokens).
+  </Step>
+</Steps>
+
+<Tip>All new users receive **\$5 in free balance** upon registration.</Tip>
+
+## QPS Plans
+
+**Free tier:**
+
+| Plan | Web Search QPS | Monthly Price | Notes |
+| - | - | - | - |
+| Free | Up to 10 | \$0 | Default tier for every new account |
+| Base | Up to 20 | \$0 | Unlocked automatically once you add credits |
+
+**QPS plans**, with guaranteed throughput and SLA:
+
+| Plan | Web Search QPS | Monthly Price | Best For |
+| - | - | - | - |
+| Builder | Up to 50 | <s>\$2,999</s> \$2,099 (30% off) | Early-stage teams going to production |
+| Pro | Up to 200 | \$13,999 | Growing production workloads |
+| Max | Up to 500 | \$33,999 | High-volume production at scale |
+
+**Embedding limits**, in tokens per minute (TPM):
+
+| Plan | Embedding TPM | VL Embedding TPM |
+| :- | :- | :- |
+| Free / Base | 1,000,000 | 200,000 |
+| Builder | 2,500,000 | 500,000 |
+| Pro | 10,000,000 | 2,000,000 |
+| Max | 25,000,000 | 5,000,000 |
+
+## API Pricing
+
+### Octen Fast
+
+Octen Fast includes Broad Search, Web Search, Image Search, and Video Search.
+
+| API | Search API Call | Full Content |
+| - | - | - |
+| Broad Search | <s>\$5</s> \$1 / 1k calls (80% off) | \$0.5 / 1k results |
+| Web Search | <s>\$5</s> \$1 / 1k calls (80% off) | \$0.5 / 1k results |
+| Image Search | \$2 / 1k calls | - |
+| Video Search | \$5 / 1k calls | - |
+
+A single Broad Search call may include multiple Search API calls.
+
+For Broad Search and Web Search, the full content of the first 10 results per search is free; only additional results are billed.
+
+### Octen Premier
+
+Octen Premier includes News Search and Business Search.
+
+| API | Search API Call | Full Content |
+| - | - | - |
+| News Search | \$3 / 1k calls | \$0.5 / 1k results |
+| Business Search | \$5 / 1k calls | \$0.5 / 1k results |
+
+The full content of the first 10 results per search is free; only additional results are billed.
+
+### Extract
+
+| Resource | Price (USD) |
+| - | - |
+| Standard mode | \$1 / 1k successful URLs |
+| Advanced mode | \$2.5 / 1k successful URLs |
+
+Each URL is billed at the mode it was processed in, including URLs handled by auto mode. Failed URLs are not billed.
+
+### Model Gateway
+
+Charges include Search fees (based on the number of search queries) and model usage fees (based on token consumption).
+
+**Token fees:**
+
+| Model | Input (USD / 1M tokens) | Output (USD / 1M tokens) | Cache Read (USD / 1M tokens) | Cache Write (USD / 1M tokens) |
+| - | - | - | - | - |
+| openai/gpt-6.1-sol | \$2 (≤272k) / \$4 (>272k) | \$10 (≤272k input) / \$15 (>272k input) | \$0.1 (≤272k) / \$0.2 (>272k) | \$2.5 (≤272k) / \$5 (>272k) |
+| openai/gpt-6-astra | \$10 (≤272k) / \$20 (>272k) | \$50 (≤272k input) / \$75 (>272k input) | \$1 (≤272k) / \$2 (>272k) | \$12.5 (≤272k) / \$25 (>272k) |
+| openai/gpt-5.6-sol | \$4 (≤272k) / \$8 (>272k) | \$20 (≤272k input) / \$30 (>272k input) | \$0.4 (≤272k) / \$0.8 (>272k) | \$5 (≤272k) / \$10 (>272k) |
+| openai/gpt-5.6-terra | \$2 (≤272k) / \$4 (>272k) | \$12 (≤272k input) / \$18 (>272k input) | \$0.2 (≤272k) / \$0.4 (>272k) | \$2.5 (≤272k) / \$5 (>272k) |
+| openai/gpt-5.6-luna | \$0.2 (≤272k) / \$0.4 (>272k) | \$1.2 (≤272k input) / \$1.8 (>272k input) | \$0.02 (≤272k) / \$0.04 (>272k) | \$0.25 (≤272k) / \$0.5 (>272k) |
+| openai/gpt-5.4 | \$2.5 | \$15 | \$0.25 | - |
+| anthropic/claude-fable-5.1 | \$10 | \$50 | \$0.25 | \$12.5 (5m) / \$20 (1h) |
+| anthropic/claude-fable-5 | \$10 | \$50 | \$1 | \$12.5 (5m) / \$20 (1h) |
+| anthropic/claude-opus-5.5 | \$4 | \$20 | \$0.2 | \$5 (5m) / \$8 (1h) |
+| anthropic/claude-opus-5 | \$5 | \$25 | \$0.5 | \$6.25 (5m) / \$10 (1h) |
+| anthropic/claude-opus-4.8 | \$5 | \$25 | \$0.5 | \$6.25 (5m) / \$10 (1h) |
+| anthropic/claude-opus-4.6 | \$5 | \$25 | \$0.5 | \$6.25 (5m) / \$10 (1h) |
+| anthropic/claude-sonnet-5.5 | \$2 | \$10 | \$0.1 | \$2.5 (5m) / \$4 (1h) |
+| anthropic/claude-sonnet-5 | \$2 | \$10 | \$0.2 | \$2.5 (5m) / \$4 (1h) |
+| anthropic/claude-sonnet-4.6 | \$3 | \$15 | \$0.3 | \$3.75 (5m) / \$6 (1h) |
+| anthropic/claude-haiku-5.5 | \$0.1 (≤100k) / \$0.5 (>100k) | \$0.5 (≤100k input) / \$2.5 (>100k input) | \$0.01 (≤100k) / \$0.05 (>100k) | ≤100k: \$0.125 (5m) / \$0.2 (1h); >100k: \$0.625 (5m) / \$1 (1h) |
+| anthropic/claude-haiku-4.5 | \$1 | \$5 | \$0.1 | \$1.25 (5m) / \$2 (1h) |
+| google/gemini-4-argon | \$4 | \$20 | \$0.2 | - |
+| google/gemini-3.8-flash | \$0.75 | \$3.75 | \$0.075 | - |
+| google/gemini-3.5-flash | \$1.5 | \$9 | \$0.15 | - |
+| google/gemini-3.5-flash-lite | \$0.3 | \$2.5 | \$0.03 | - |
+| google/gemini-3.1-pro-preview | \$2 (≤200k) / \$4 (>200k) | \$12 (≤200k input) / \$18 (>200k input) | \$0.2 (≤200k) / \$0.4 (>200k) | - |
+| google/gemini-3.1-flash-lite | \$0.25 | \$1.5 | \$0.025 | - |
+| google/gemini-3-flash-preview | \$0.5 | \$3 | \$0.05 | - |
+| moonshotai/kimi-k3 | \$3 | \$15 | \$0.3 | - |
+| moonshotai/kimi-k2.6 | \$0.95 | \$4 | \$0.16 | - |
+| moonshotai/kimi-k2.5 | \$0.6 | \$3 | \$0.1 | - |
+| minimax/minimax-m2.5 | \$0.3 | \$1.2 | - | - |
+| qwen/qwen3.6-plus | \$0.5 (≤256k) / \$2 (>256k) | \$3 (≤256k input) / \$6 (>256k input) | \$0.05 | \$0.625 (5m) |
+| deepseek/deepseek-v4-pro | \$1.74 | \$3.48 | \$0.145 | - |
+| deepseek/deepseek-v4-flash-0731 | \$0.14 | \$0.28 | \$0.028 | - |
+
+**Image generation token fees:**
+
+| Model | Text Input (USD / 1M tokens) | Text Output (USD / 1M tokens) | Image Input (USD / 1M tokens) | Image Output (USD / 1M tokens) |
+| - | - | - | - | - |
+| openai/gpt-image-2.5-flare | \$5 | - | \$8 | \$30 |
+| openai/gpt-image-2.5-sunburst | \$5 | - | \$8 | \$30 |
+| openai/gpt-image-2 | \$5 | - | \$8 | \$30 |
+| openai/gpt-image-1-mini | \$2 | - | \$2.50 | \$8 |
+| google/gemini-3-pro-image | \$2 | \$12 | \$2 | \$120 |
+| google/gemini-3.1-flash-image | \$0.50 | \$3 | \$0.50 | \$60 |
+
+**Video generation fees:**
+
+| Model | Per Second (USD) | Per 1M Tokens (USD) | Reference Image (USD) |
+| - | - | - | - |
+| minimax/minimax-h3 | 768p: \$0.08 / 2K: \$0.13 | - | First 5 free, then \$0.04 each |
+| bytedance/seedance-2.5 | - | 480p, 720p: \$10.7 / 1080p: \$11.7 | - |
+| google/veo-3.1 | With audio: \$0.4 / Video only: \$0.2 | - | - |
+| google/veo-3.1-fast | With audio: 720p \$0.1, 1080p \$0.12 / Video only: 720p \$0.08, 1080p \$0.1 | - | - |
+| google/veo-3.1-lite | With audio: 720p \$0.05, 1080p \$0.08 / Video only: 720p \$0.03, 1080p \$0.05 | - | - |
+
+**Example cost:**
+
+A single `anthropic/claude-sonnet-4.6` completion that runs 3 search calls, reads 40,000 cached input tokens, adds 10,000 fresh input tokens, and returns 2,000 output tokens:
+
+| Component | Usage | Rate | Cost |
+| - | - | - | - |
+| Input tokens | 10,000 | \$3 / 1M | \$0.030 |
+| Cache read | 40,000 | \$0.3 / 1M | \$0.012 |
+| Output tokens | 2,000 | \$15 / 1M | \$0.030 |
+| Search calls | 3 | \$1 / 1k | \$0.003 |
+| **Total** | | | **\$0.075** |
+
+### Embedding
+
+| Model | Price (USD / 1M tokens) | Best For |
+| - | - | - |
+| octen-embedding-8b | \$0.07 | Best accuracy |
+| octen-embedding-4b | \$0.04 | Balanced performance and cost |
+| octen-embedding-0.6b | \$0.01 | High-volume and low-cost |
+
+### VL Embedding
+
+Billed by input tokens. Text and multimodal (image / video) inputs are priced differently:
+
+| Model | Text (USD / 1M tokens) | Image / Video (USD / 1M tokens) |
+| - | - | - |
+| octen-vl-embedding | \$0.05 | \$0.12 |
+| octen-vl-embedding-large | \$0.10 | \$0.25 |
+
+## Application Pricing
+
+### Answer and Multimodal Chat
+
+Charges include Search fees (based on the number of search queries) and model usage fees (based on token consumption).
+
+### Deep Research
+
+Billed per request, based on the selected tier.
+
+| Tier | Price (USD / request) |
+| - | - |
+| lite | \$0.2 |
+| standard | \$1 |
+| pro | \$2.5 |
+| pro-visual | \$3 |
+
+### Grounded Generation
+
+Billed per generated output, based on the modality.
+
+| Modality | Price (USD) |
+| - | - |
+| Image | \$0.25 / image |
+| Video | \$1 / video |
+
+## Invoices & Receipts
+
+* Each top-up generates an invoice and receipt.
+* Monthly usage statements are available in the [Billing](https://octen.ai/platform/billing) dashboard.
+
+## Contact Us
+
+For custom QPS plans, higher rate limits, or billing inquiries:
+
+<Card title="Get in Touch" icon="envelope" href="mailto:support@octen.ai">
+  Reach out to us at **[support@octen.ai](mailto:support@octen.ai)**
+</Card>
+
+***
+
+<p>Last modified on October 16, 2026</p>
+
+
+# Quickstart
+Source: https://docs.octen.ai/overview/quickstart
+
+Get started with Octen in minutes.
+
+<p>For AI agents: <a href="https://docs.octen.ai/overview/quickstart.md">docs.octen.ai/overview/quickstart.md</a></p>
+
+Start with the path that matches what you are building.
+
+<CardGroup>
+  <Card title="Call the API" icon="code" href="#make-your-first-search-request" />
+
+  <Card title="Install Agent Skills" icon="wand-magic-sparkles" href="/integrations/octen-skills" />
+
+  <Card title="Connect an MCP client" icon="plug" href="/integrations/octen-mcp-server" />
+
+  <Card title="Use Octen CLI" icon="terminal" href="/integrations/octen-cli" />
+</CardGroup>
+
+## Get Your API Key
+
+Create an account in the [Octen API Platform](https://octen.ai/platform).
+
+## Make Your First Search Request
+
+```bash theme={null}
+curl -X POST https://api.octen.ai/search \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -d '{
+    "query": "latest AI developments"
+  }'
+```
+
+Example response:
+
+```json theme={null}
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "query": "latest AI developments",
+    "results": [
+      {
+        "title": "Example AI news result",
+        "url": "https://example.com/ai-news",
+        "highlight": "Recent developments in artificial intelligence...",
+        "time_published": "2026-06-20T00:00:00Z",
+        "time_last_crawled": "2026-06-23T08:30:05Z"
+      }
+    ]
+  }
+}
+```
+
+## Install Agent Skills
+
+Use Octen Skills when your agent supports `SKILL.md`-based Agent Skills. Requires Node.js.
+
+```bash theme={null}
+npx skills add Octen-Team/octen-skills
+```
+
+## Connect an MCP Client
+
+Use Octen MCP when your client supports MCP tools. Requires Node.js.
+
+```json theme={null}
+{
+  "mcpServers": {
+    "octen": {
+      "command": "npx",
+      "args": ["-y", "octen-mcp"],
+      "env": {
+        "OCTEN_API_KEY": "YOUR_API_KEY"
+      }
+    }
+  }
+}
+```
+
+## Install the CLI
+
+Use the Octen CLI to work with Octen from the terminal. Requires Node.js 18+.
+
+```bash theme={null}
+npm i -g @octen.ai/cli
+```
+
+## Use the Python SDK
+
+Install the SDK. Requires Python 3.8+.
+
+```bash theme={null}
+pip install octen
+```
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Build with Coding Agent" icon="robot" href="/overview/build-with-coding-agent">
+    Everything a coding agent needs to integrate Octen
+  </Card>
+
+  <Card title="Capabilities" icon="lightbulb" href="/capabilities/broad-search">
+    Explore every API with scenarios
+  </Card>
+
+  <Card title="API Platform" icon="key" href="https://octen.ai/platform">
+    Manage your API keys
+  </Card>
+
+  <Card title="API Reference" icon="code" href="/api-reference/search">
+    View all API parameters and options
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on July 16, 2026</p>
+
+
+# Welcome
+Source: https://docs.octen.ai/overview/welcome
+
+What Octen can do, and where to start in the docs.
+
+Octen gives LLMs, agents, and apps real-time access to the world's latest information. Explore the guides below to get started.
+
+<Note>
+  **For AI agents**: add `.md` to any docs URL for plain Markdown, or fetch [docs.octen.ai/llms.txt](https://docs.octen.ai/llms.txt) for the full index.
+</Note>
+
+## What Octen Can Do
+
+<CardGroup>
+  <Card title="Search the Live Web" icon="magnifying-glass" href="/capabilities/broad-search">
+    Fast, accurate, minute-fresh search over the live web, spanning text, images, and videos, with ready-to-use highlights and full content.
+  </Card>
+
+  <Card title="Extract Clean Content" icon="file-lines" href="/capabilities/extract">
+    Turn URLs into clean, model-ready content: the whole page, or just the parts the task needs.
+  </Card>
+
+  <Card title="One API for Frontier Models" icon="microchip" href="/capabilities/model-gateway">
+    Access leading models through a single unified API, with real-time web search built in.
+  </Card>
+
+  <Card title="Turn Questions into Results" icon="layer-group" href="/capabilities/answer">
+    One call runs the whole workflow: cited answers, research reports, multimodal chat, and grounded generation.
+  </Card>
+</CardGroup>
+
+<Note>
+  Video Search and Multimodal Chat are in invite-only beta. Email [support@octen.ai](mailto:support@octen.ai) to request access.
+</Note>
+
+## Start Here
+
+The fastest path through the docs:
+
+1. [Introduction](/overview/introduction): what Octen is and what each API and application does.
+2. [Quickstart](/overview/quickstart): start building with Octen in minutes.
+3. [Build with Coding Agent](/overview/build-with-coding-agent): everything a coding agent needs to integrate Octen.
+4. [Capabilities](/capabilities/broad-search): a detailed page for each API and application, from how it works to when to use it.
+5. [API Reference](/api-reference/broad-search): full parameters and options for every endpoint.
+
+***
+
+<p>Last modified on October 13, 2026</p>
+
+
+# Changelog
+Source: https://docs.octen.ai/resources/changelog
+
+What Octen shipped each month.
+
+<p>For AI agents: <a href="https://docs.octen.ai/resources/changelog.md">docs.octen.ai/resources/changelog.md</a></p>
+
+## September 2026
+
+### Extract — Advanced Mode and Link Controls
+
+**Date: September 28, 2026**
+
+**Extract** now decides how hard to work on each page. Set `mode` to `standard` for speed, `advanced` for success rate on pages that resist, or `auto` to let Octen choose per URL.
+
+Links gained controls of their own: prioritize the ones that stay on the site or leave it, and cap how many come back.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Three Modes** | Trade speed for success rate per request, or let Octen decide per URL |
+| **Per-Mode Billing** | Every result reports the mode it was billed at, with the counts in usage |
+| **Link Controls** | Prioritize internal or external links, cap the count, and see which leave the site |
+
+**Try It Now**
+
+* Start using [Extract](https://docs.octen.ai/api-reference/extract)
+* See [Pricing](https://docs.octen.ai/overview/pricing) for standard and advanced rates
+
+***
+
+### News Search — A Dedicated News API
+
+**Date: September 20, 2026**
+
+Introducing **News Search**, a dedicated endpoint for live news. It returns ranked articles with highlights, images, and optional full content, and groups related coverage into subjects, each carrying a summary, a representative article, and its sub-events.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Subject Grouping** | Cluster related coverage into one event with a summary, a top article, and sub-events |
+| **Minute-Fresh Index** | Find breaking stories within minutes of publication |
+| **Images Included** | Return each article's cover and in-body images by default |
+
+**Try It Now**
+
+* Start using [News Search](https://docs.octen.ai/api-reference/news-search)
+* See [Pricing](https://docs.octen.ai/overview/pricing) for the full breakdown
+
+***
+
+### Model Gateway — Video Generation API
+
+**Date: September 16, 2026**
+
+**Model Gateway** now generates video. Send a prompt to `/v1/videos`, optionally guided by reference images, then poll `/v1/videos/{id}` for the finished file.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Five Video Models** | MiniMax H3, Seedance 2.5, and Veo 3.1 in standard, fast, and lite |
+| **Image-Guided Generation** | Set the first and last frames, or pass reference images to steer the shot |
+
+**Try It Now**
+
+* Start using the [Video Generation API](https://docs.octen.ai/api-reference/post-video)
+* See [Pricing](https://docs.octen.ai/overview/pricing) for per-model rates
+
+***
+
+## August 2026
+
+### Broad Search & Web Search — Free Full Content
+
+**Date: August 26, 2026**
+
+The full content of the first 10 results per search is now free. Only results beyond that are billed, at \$0.5 per 1,000 results.
+
+**Try It Now**
+
+* Start using [Web Search](https://docs.octen.ai/api-reference/search) with `full_content`
+* See [Pricing](https://docs.octen.ai/overview/pricing) for the full breakdown
+
+***
+
+### Extract — Native PDF and Page Labels
+
+**Date: August 22, 2026**
+
+**Extract** now reads PDFs natively and labels every result with what the page is.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Native PDF Parsing** | Read PDFs directly into clean, LLM-ready markdown |
+| **Page Understanding** | Label each result with `page_structure` and a `category` drawn from a taxonomy of 160+ categories |
+
+**Try It Now**
+
+* Start using [Extract](https://docs.octen.ai/api-reference/extract)
+* See how to filter out non-content pages in the [Extract guide](https://docs.octen.ai/capabilities/extract)
+
+***
+
+## July 2026
+
+### Multimodal Deep Research — Reports with Text, Images, and Videos
+
+**Date: July 30, 2026**
+
+Introducing **Multimodal Deep Research**: research reports that combine text with images and videos relevant to each finding, available as the new pro-visual tier.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Multimodal Reports** | Weave text, images, and videos into one ready-to-use report |
+| **HTML Output** | Deliver the report directly as a styled, ready-to-render HTML page |
+
+**Try It Now**
+
+* Try it in the [Octen console](https://octen.ai/platform/deep-research) and switch to pro-visual
+* Available to all registered users
+
+***
+
+### Broad Search & Web Search — Language Filter
+
+**Date: July 27, 2026**
+
+**Broad Search** and **Web Search** now accept a `language` parameter that restricts results to the specified languages. It is also available in Answer and the Model Gateway search tools.
+
+**Try It Now**
+
+* Start using [Broad Search](https://docs.octen.ai/api-reference/broad-search) and [Web Search](https://docs.octen.ai/api-reference/search) with `language`
+* Supported languages are listed in the [API reference](https://docs.octen.ai/api-reference/search)
+
+***
+
+### Web Search — Promotional Pricing
+
+**Date: July 16, 2026**
+
+**Web Search** is now \$1 per 1,000 calls, an 80% discount off the \$5 list price, applied automatically to your usage. Broad Search is billed at the same Search API call rate and gets the same discount.
+
+**Try It Now**
+
+* See [Pricing](https://docs.octen.ai/overview/pricing) for the full breakdown
+* Start using [Web Search](https://docs.octen.ai/api-reference/search)
+
+***
+
+### Model Gateway — Frontier Models with Built-in Search
+
+**Date: July 1, 2026**
+
+Introducing **Model Gateway**, a new API that serves frontier models with built-in search tools and image generation.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Model Lineup** | Access frontier models from Anthropic, OpenAI, Google, and more with one API key |
+| **Built-in Search Tools** | Let models call Octen search tools to answer with live web data |
+| **Image Generation** | Create images from text descriptions with image models |
+
+**Try It Now**
+
+* Start using [Model Gateway](https://docs.octen.ai/api-reference/chat-completions)
+* Available to all registered users
+
+***
+
+## June 2026
+
+### Image Search — Search the Web for Images
+
+**Date: June 24, 2026**
+
+Introducing **Image Search**, a new API that searches the web for images from a text query or a reference image, now in invite-only beta.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Text & Image Queries** | Search images by a text query or a reference image |
+| **Filters** | Filter results by domain, with safe-search control |
+
+**Try It Now**
+
+* Start using [Image Search](https://docs.octen.ai/api-reference/image-search)
+* In invite-only beta. Email [support@octen.ai](mailto:support@octen.ai) to request access
+
+***
+
+### Video Search — Search the Web for Videos
+
+**Date: June 24, 2026**
+
+Introducing **Video Search**, a new API that searches the web for videos from a text query, now in invite-only beta.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Web-Wide Coverage** | Search videos across the whole web |
+| **Rich Metadata** | Include duration, cover image, and source page for each result |
+
+**Try It Now**
+
+* Start using [Video Search](https://docs.octen.ai/api-reference/video-search)
+* In invite-only beta. Email [support@octen.ai](mailto:support@octen.ai) to request access
+
+***
+
+### Multimodal Chat — Chat with Text, Images, and Videos
+
+**Date: June 24, 2026**
+
+Introducing **Multimodal Chat**, a new application that replies with interleaved text, images, and videos, now in invite-only beta.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Multimodal Search** | Search across text, images, and videos for each question |
+| **Interleaved Replies** | Answer in a conversation that weaves the retrieved text, images, and videos together |
+
+**Try It Now**
+
+* Start using [Multimodal Chat](https://octen.ai/platform/multimodal-chat)
+* In invite-only beta. Email [support@octen.ai](mailto:support@octen.ai) to request access
+
+***
+
+### Grounded Generation — Generate Images and Videos from Real Content
+
+**Date: June 24, 2026**
+
+Introducing **Grounded Generation**, a new application that generates grounded images and videos, now in invite-only beta.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Search First** | Retrieve relevant text, images, and videos from the web before generating |
+| **Grounded Output** | Generate images and videos based on the retrieved references |
+
+**Try It Now**
+
+* Start using [Grounded Generation](https://octen.ai/platform/grounded-generation)
+* In invite-only beta. Email [support@octen.ai](mailto:support@octen.ai) to request access
+
+***
+
+### News Search — News-Focused Results in Search
+
+**Date: June 12, 2026**
+
+Introducing **News Search**, a new topic that returns news-focused results for current events, headlines, announcements, and time-sensitive reporting, including images and videos from the articles.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **News Topic** | Set `topic` to `news` to search news-focused results with Search API |
+| **Timely Coverage** | Find current events, headlines, announcements, and market updates |
+| **Richer News Results** | Include images and videos from matched articles when options are enabled |
+
+**Try It Now**
+
+* Start using [Search](https://docs.octen.ai/api-reference/search) with `topic: "news"`
+* Available to all registered users
+
+***
+
+## May 2026
+
+### Extract API — Clean, LLM-Ready Content from URLs
+
+**Date: May 29, 2026**
+
+Introducing **Extract API**, a new API that turns URLs into clean, structured content ready for LLM applications, agents, and knowledge ingestion pipelines.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Clean Content** | Extracts complete page content in markdown or text format from known URLs |
+| **Batch Processing** | Processes up to 20 URLs per request with per-URL success and failure handling |
+| **Structured Signals** | Returns query-focused highlights, page classification, and optional multimedia resources |
+
+**Try It Now**
+
+* Start using [Extract API](https://docs.octen.ai/api-reference/extract)
+* Available to all registered users
+
+***
+
+### VL Embedding — Multimodal Embeddings for Text, Images, and Videos
+
+**Date: May 15, 2026**
+
+Introducing VL Embedding, a new API that delivers high-quality multimodal embeddings for retrieval, with SOTA performance on MMEB-v2.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Multimodal Inputs** | Supports text, images, videos, and combinations in a single embedding request |
+| **Retrieval Quality** | SOTA on MMEB-v2 for retrieval across text, images, videos, and visual documents |
+| **Retrieval Controls** | Configure output dimensions, video frame sampling, and task instructions |
+
+**Try It Now**
+
+* Start using [VL Embedding](https://docs.octen.ai/api-reference/vl-embedding)
+* Available to all registered users
+
+***
+
+## April 2026
+
+### Deep Research — Autonomous Multi-Step Research Agent
+
+**Date: April 21, 2026**
+
+Introducing **Deep Research**, a new showcase that autonomously plans, explores, and synthesizes information across the web to produce in-depth, well-cited research reports on complex topics.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Autonomous Planning** | Breaks down complex topics into structured research plans and iterates as new evidence emerges |
+| **Multi-Step Exploration** | Performs successive rounds of search and reading to build comprehensive coverage |
+| **Cited Reports** | Delivers long-form answers with inline citations linking back to original sources |
+
+**Try It Now**
+
+* Start using [Deep Research](https://octen.ai/platform/deep-research)
+* Available to all registered users
+
+***
+
+### Broad Search — Rebuilding search for LLMs
+
+**Date: April 2, 2026**
+
+Introducing **Broad Search**, a new showcase that automatically decomposes complex questions into multiple sub-queries, searches them concurrently, and synthesizes a comprehensive answer.
+
+**Highlights**
+
+| **Feature** | **Description** |
+| :- | :- |
+| **Query Decomposition** | Automatically rewrites messages into multiple targeted sub-queries |
+| **Concurrent Search** | Executes all sub-queries concurrently for comprehensive coverage |
+
+**Try It Now**
+
+* Start using [Broad Search](https://octen.ai/platform/broad-search)
+* Available to all registered users
+
+***
+
+## March 2026
+
+### Octen Public Beta — Open to All Users
+
+**Date: March 15, 2026**
+
+Octen is now open to **everyone**! We've moved from invite-only to a full public beta.
+
+**What's New**
+
+| **Change** | **Details** |
+| :- | :- |
+| **Open Registration** | Anyone can sign up directly on our website and start using the APIs immediately |
+| **Welcome Credit** | Every new user receives a **\$5 free balance** upon registration |
+
+**Getting Started**
+
+* Head to [octen.ai](https://octen.ai) to create your account
+
+***
+
+## February 2026
+
+### Octen Beta Now Open
+
+**Date: February 10, 2026**
+
+We're thrilled to announce the launch of **Octen Beta**! Starting today, selected developers can access our powerful AI infrastructure APIs.
+
+**What's Included**
+
+| **API** | **Description** | **Status** |
+| :- | :- | :- |
+| **Search** | Real-time web search optimized for LLMs and agents | Beta |
+| **Embedding** | High-performance text embedding API for semantic search and RAG | Beta |
+
+**Getting Started**
+
+Join our waitlists to get early access:
+
+* Email [support@octen.ai](mailto:support@octen.ai) to apply
+* We're reviewing applications on a rolling basis
+
+***
+
+<p>Last modified on October 13, 2026</p>
+
+
+# Discord
+Source: https://docs.octen.ai/resources/discord
+
+
+
+<p>For AI agents: <a href="https://docs.octen.ai/resources/discord.md">docs.octen.ai/resources/discord.md</a></p>
+
+
+# Error Codes
+Source: https://docs.octen.ai/resources/error-codes
+
+What each error code means and how to fix it.
+
+<p>For AI agents: <a href="https://docs.octen.ai/resources/error-codes.md">docs.octen.ai/resources/error-codes.md</a></p>
+
+## API Errors
+
+| **Code** | **Message** | **Cause** | **Solution** |
+| :- | :- | :- | :- |
+| **400** | Bad Request | Missing required parameter or invalid request format | Verify all required parameters are included and properly formatted |
+| **401** | Unauthorized | Invalid or missing API key | Ensure your API key is correct and included in request headers |
+| **403** | Forbidden | Insufficient account balance | Check your account balance and add credits if needed |
+| **413** | Request Entity Too Large | Request payload exceeds the allowed size limit | Reduce payload size (e.g., shorten input or split into smaller requests) |
+| **429** | Too Many Requests | Request rate limit exceeded | Implement exponential backoff and reduce request rate |
+| **500** | Internal Server Error | Unexpected server-side error occurred | Retry your request after a brief delay. Contact support if issue persists |
+
+## Error Response Structure
+
+All error responses follow a consistent structure:
+
+```json theme={null}
+{
+  "code": 400,
+  "msg": "Invalid params. Missing parameter query",
+  "request_id": "20260818123456ABCDEFGHIJ"
+}
+```
+
+### Response Fields
+
+| Field | Type | Description |
+| - | - | - |
+| `code` | integer | HTTP status code indicating the error type |
+| `msg` | string | Human-readable message describing the error |
+| `request_id` | string | Unique identifier for the request |
+
+Model Gateway endpoints (`/v1/chat/completions`, `/v1/messages`, `/v1/images/generations`) return errors in the native OpenAI or Anthropic format, which does not include `request_id` in the body. For those, read the `x-request-id` response header, which every endpoint returns on error.
+
+## Extract: Partial Failures
+
+A request to **Extract** may return `200 OK` overall while individual URLs within the request fail; failed URLs are marked with `status: "failed"` and include an `error_message`. Failed URLs are not billed. This per-URL success/failure model is currently unique to the Extract API.
+
+Example response with partial failures:
+
+```json theme={null}
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "results": [
+      { "url": "https://example.com/ok", "status": "success", "resolved_mode": "standard" },
+      {
+        "url": "https://example.com/missing",
+        "status": "failed",
+        "error_message": "Target returned HTTP 404"
+      }
+    ]
+  },
+  "meta": {
+    "usage": {
+      "total_urls": 2,
+      "successful_urls": 1,
+      "successful_by_mode": { "standard_urls": 1, "advanced_urls": 0 }
+    }
+  }
+}
+```
+
+Common `error_message` values returned by Extract:
+
+| Scenario | message |
+| - | - |
+| Invalid URL format, including URLs longer than 2,048 characters | `Invalid URL format` |
+| Scanned or image-only PDF | `PDF has no extractable text (likely scanned)` |
+| DNS resolution failed | `Failed to resolve domain` |
+| Target host unreachable | `Target host unreachable` |
+| Target returned 4xx | `Target returned HTTP {code}` |
+| Target returned 5xx | `Target server error (HTTP {code})` |
+| Anti-bot protection blocked the request | `Blocked by target anti-bot protection` |
+| Target rate-limited the request | `Target rate limited (HTTP 429)` |
+| Extraction timeout exceeded | `Extraction timed out after {timeout}s` |
+| JavaScript rendering failed | `Page requires JavaScript rendering but failed` |
+| Unsupported content type | `Content type not supported: {content_type}` |
+| HTML parsing failed | `Failed to parse page content` |
+
+## Getting Help
+
+If you encounter persistent errors or need clarification:
+
+* **API Reference:** Check our API Documentation for parameter requirements
+* **Rate Limits:** Review the Rate Limits page for your plan
+* **Status Page:** Visit status for real-time system status
+* **Contact Support:** Email [support@octen.ai](mailto:support@octen.ai) with your `request_id`
+
+***
+
+<p>Last modified on August 21, 2026</p>
+
+
+# FAQs
+Source: https://docs.octen.ai/resources/faqs
+
+Common questions about using Octen.
+
+<p>For AI agents: <a href="https://docs.octen.ai/resources/faqs.md">docs.octen.ai/resources/faqs.md</a></p>
+
+1. **How is Octen different from other search APIs?**
+
+> Octen is built from the ground up for LLMs and agents. We offer industry-leading latency, SOTA search models, and real-time index updates. Our output structure is designed for LLM understanding and reasoning. For most use cases, you can directly use Octen without any additional processing.
+
+2. **How do I connect Octen to my agent quickly?**
+
+> Use Octen Agent Skills, the MCP server, or the CLI to add Octen to your agent in one step. See [Octen Skills](/integrations/octen-skills), [Octen MCP Server](/integrations/octen-mcp-server), and [Octen CLI](/integrations/octen-cli).
+
+3. **Can I request specific domains or content types to be indexed?**
+
+> Enterprise customers can submit indexing requests. Contact [support@octen.ai](mailto:support@octen.ai) with your domains and use case.
+
+4. **Can I use Octen with OpenAI SDK or LangChain/LlamaIndex?**
+
+> Yes.
+
+5. **Can I use Octen embeddings with other vector databases?**
+
+> Yes. Octen embeddings are standard float vectors, compatible with all major vector databases.
+
+6. **Can I make batch requests to improve throughput?**
+
+> Embedding API supports batch input. Search API only supports single-query requests.
+
+7. **How can I track my usage and spending?**
+
+> The API platform provides real-time usage monitoring, credit consumption, and per-API-key usage breakdown.
+
+8. **What happens when I run out of credits?**
+
+> API requests will return a `403` error. Monitor your usage in the dashboard and top up balance before running out.
+
+9. **How do plan upgrades or downgrades work?**
+
+> Upgrades take effect immediately with prorated billing. Downgrades take effect at the start of your next billing cycle.
+
+10. **Will my queries or data be used for model training?**
+
+> No. Your queries and data are not used to train our models.
+
+11. **How fresh are the search results? How often is the index updated?**
+
+> Our index updates continuously in real-time (ingested in seconds and updated in minutes). Most results reflect the current state of web pages.
+
+12. **Why are my search results different from what I expected?**
+
+> Check your query phrasing, domain/date filters, and topic coverage. Try adjusting parameters or rephrasing your query.
+
+13. **Can I filter results by domain, date, language, or region?**
+
+> Yes. See the Web Search API Reference for details.
+
+14. **How do I report a bug or request a new feature?**
+
+> Email [support@octen.ai](mailto:support@octen.ai)
+
+***
+
+<p>Last modified on October 9, 2026</p>
+
+
+# GitHub
+Source: https://docs.octen.ai/resources/github
+
+
+
+<p>For AI agents: <a href="https://docs.octen.ai/resources/github.md">docs.octen.ai/resources/github.md</a></p>
+
+
+# Rate Limits
+Source: https://docs.octen.ai/resources/rate-limits
+
+The rate limits on each Octen API.
+
+<p>For AI agents: <a href="https://docs.octen.ai/resources/rate-limits.md">docs.octen.ai/resources/rate-limits.md</a></p>
+
+Octen enforces rate limits to ensure platform stability and fair usage across all customers.
+Rate limits define how frequently you can call the API within a given time window. Requests that exceed these limits will be temporarily rejected.
+
+## Web Search
+
+Your subscription tier sets the Web Search QPS (Queries Per Second) limit:
+
+| Subscription | QPS Limit |
+| :- | :- |
+| Free | 10 |
+| Base | 20 |
+| Builder | 50 |
+| Pro | 200 |
+| Max | 500 |
+
+## Other Search APIs & Answer
+
+Broad Search, News Search, Business Search, Image Search, Video Search, and Answer share one QPS limit: 10 on the Free plan, 20 on every other tier.
+
+Answer is also subject to the Model Gateway RPM and TPM limits.
+
+## How Rate Limits Are Applied
+
+Rate limits are determined by your account plan and optional per-key caps:
+
+* Each account has a default rate limit based on its subscription tier.
+* When creating an API key, you may configure an additional rate limit for that key.
+* If both are configured, requests are throttled by whichever limit is lower.
+
+## Embedding & VL Embedding
+
+The **Embedding** and **VL Embedding** APIs are limited by tokens per minute (TPM), applied per account by subscription tier:
+
+| Subscription | Embedding TPM | VL Embedding TPM |
+| :- | :- | :- |
+| Free / Base | 1,000,000 | 200,000 |
+| Builder | 2,500,000 | 500,000 |
+| Pro | 10,000,000 | 2,000,000 |
+| Max | 25,000,000 | 5,000,000 |
+
+## Extract
+
+The **Extract API** is limited by URLs per minute, based on the mode in the request:
+
+| Mode | URLs / min |
+| :- | :- |
+| `standard` | 2,000 |
+| `auto` | 500 |
+| `advanced` | 200 |
+
+## Model Gateway
+
+The **Model Gateway API** is rate limited by requests per minute (RPM) and tokens per minute (TPM). Each model's usage is counted separately:
+
+| Metric | Limit |
+| :- | :- |
+| RPM | 300 |
+| TPM | 2,000,000 |
+
+## Deep Research
+
+Only a single concurrent request is supported.
+
+## Grounded Generation
+
+Up to 3 concurrent requests are supported.
+
+## What Happens When You Exceed a Limit
+
+If a request exceeds the allowed rate:
+
+* The request is rejected with a rate limit error.
+* HTTP status: `429`
+
+## Recommended Retry Behavior
+
+When receiving a rate limit error:
+
+* Check the `msg` for detail.
+* Avoid immediate retries in a tight loop.
+* Resume requests after the rate limit window resets.
+* For high-throughput or bursty workloads, batching requests where supported can help reduce pressure on rate limits.
+
+## Increasing Rate Limits
+
+If your application requires higher throughput or sustained traffic:
+
+* Custom limits or enterprise plans may be available.
+* Contact the Octen team to discuss your use case.
+* Support: [support@octen.ai](mailto:support@octen.ai)
+
+***
+
+<p>Last modified on October 14, 2026</p>
+
+
+# Security & Compliance
+Source: https://docs.octen.ai/resources/security-&-compliance
+
+How Octen keeps your data secure and compliant.
+
+<p>For AI agents: <a href="https://docs.octen.ai/resources/security-&-compliance.md">docs.octen.ai/resources/security-&-compliance.md</a></p>
+
+Octen is designed with security and privacy suitable for production use.
+
+For legally binding terms, refer to our [Privacy Policy](https://octen.ai/privacy-policy) and [Terms of Service](https://octen.ai/terms-of-service).
+
+## Data Handling
+
+* Customer data is processed solely to provide the requested services
+* Customer data is not used for model training
+* Data encrypted in transit (TLS 1.2+) and at rest (AES-256)
+* Data deletion available upon request
+
+For full details, see our [Privacy Policy](https://octen.ai/privacy-policy).
+
+## Security Practices
+
+* Hosted on secure cloud infrastructure with strict access controls
+* Internal access follows least-privilege principles
+* Regular security monitoring and incident response procedures
+
+## Compliance
+
+| **Certification** | **Status** |
+| :-: | :-: |
+| SOC 2 Type II | Certified |
+| HIPAA | In progress |
+
+We support compliance with applicable privacy regulations:
+
+* **GDPR**: Data subject rights supported, including access, correction, and deletion
+* **CCPA**: Privacy rights supported as described in our Privacy Policy
+
+## Contact
+
+| **Inquiry** | **Contact** |
+| :-: | :-: |
+| General support / Security issues | [support@octen.ai](mailto:support@octen.ai) |
+
+***
+
+<p>Last modified on July 28, 2026</p>
+
+
+# Service Level Agreement (SLA)
+Source: https://docs.octen.ai/resources/sla
+
+Octen's Service Level Agreement.
+
+## Overview
+
+This Service Level Agreement ("SLA") is incorporated into the Octen.AI [Terms of Service](https://octen.ai/terms-of-service) and describes the availability commitment and Service Credit policy for the Octen.AI platform (the "Service"), hosted at `https://api.octen.ai`.
+
+<Note>
+  This SLA applies exclusively to customers on a **paid QPS subscription plan** (Builder, Pro, or Max). Customers on the Free or Base plans or using only pay-as-you-go API calls are **not** covered by this SLA.
+</Note>
+
+## Definitions
+
+| Term | Definition |
+| - | - |
+| **Service** | The Octen.AI platform, including endpoints at `https://api.octen.ai`. |
+| **Downtime** | Any period of five (5) or more consecutive minutes during which the Service returns a rate of HTTP 5xx errors exceeding 5% of total requests, as measured by Octen.AI's server-side monitoring systems. Client-side errors (HTTP 4xx), including rate limiting (429), authentication failures (401), and insufficient balance (403), are not counted. |
+| **Monthly Uptime Percentage** | `(Total minutes in calendar month – Downtime minutes) / Total minutes in calendar month × 100%`, calculated at the end of each calendar month. All calculations are based on UTC. |
+| **Scheduled Maintenance** | Planned maintenance communicated in advance via email, the [Octen.AI status page](https://status.octen.ai), or other appropriate channels. Scheduled Maintenance periods are excluded from Downtime. |
+| **Service Credit** | A dollar credit, calculated as a percentage of the subscription fees actually paid for the Service during the calendar month in which the SLA was not met. |
+
+## Service Commitment
+
+Octen.AI will use commercially reasonable efforts to make the Service available with a **Monthly Uptime Percentage of at least 99.9%** during each calendar month.
+
+Real-time and historical service status is published at [status.octen.ai](https://status.octen.ai).
+
+## Eligible Services
+
+This SLA covers the availability of the Octen API endpoints as part of a **paid QPS subscription plan**.
+
+<Info>
+  Enterprise customers who have executed a separate service level agreement with Octen.AI are governed exclusively by the terms of that agreement and are not eligible for Service Credits under this SLA.
+</Info>
+
+The following are **explicitly excluded** from this SLA and are not eligible for Service Credits:
+
+* The free **Free** and **Base** plans.
+* **Pay-as-you-go** API calls — these usage-based charges are billed separately and are not subject to SLA commitments or Service Credits.
+* Any events described in the [Exclusions](#sla-exclusions) section below.
+
+## Service Credits
+
+If the Monthly Uptime Percentage for any calendar month falls below 99.9%, the Customer is eligible for a Service Credit applied against the subscription fees actually paid for that month:
+
+| Monthly Uptime Percentage | Service Credit |
+| - | - |
+| 99.0% – \< 99.9% | **10%** of monthly subscription fees |
+| \< 99.0% | **25%** of monthly subscription fees |
+
+<Accordion title="Example Calculation">
+  A Customer on the **Pro plan** (\$13,999/month) experiences a Monthly Uptime Percentage of **99.5%**.
+
+  The Service Credit would be:
+
+  `10% × $13,999 = $1,399.90`
+
+  This amount is applied as account credit.
+</Accordion>
+
+<Warning>
+  Service Credits are the **sole and exclusive remedy** for any failure to meet this SLA. Octen.AI shall not be liable for any direct, indirect, consequential, or incidental damages or losses, including loss of profits, whether the claim arises in contract, tort (including negligence), or otherwise.
+</Warning>
+
+Service Credits are applied as account balance and are **not redeemable for cash**.
+
+## SLA Exclusions
+
+This SLA does **not** apply to any unavailability or performance issues caused by:
+
+1. **Force majeure** — Factors outside Octen.AI's reasonable control, including natural disasters, war, government actions, or widespread internet or infrastructure outages.
+2. **Customer infrastructure** — The Customer's equipment, software, network connections, or other infrastructure outside the Octen.AI platform.
+3. **Misuse** — Requests that violate the API documentation or exceed documented rate limits.
+4. **Scheduled Maintenance** — Downtime during pre-announced maintenance windows.
+5. **Account suspension** — Periods in which the Customer's account is suspended due to non-payment or terms of service violations.
+6. **Third-party dependencies** — Services, dependencies, or networks not operated by Octen.AI.
+7. **Beta / free-tier usage** — Any beta, preview, or free-tier usage of the Service.
+
+## Changes to This SLA
+
+Octen.AI reserves the right to change the terms of this SLA at any time by posting an amended and restated version on the [Octen.AI Website](https://docs.octen.ai/resources/sla). Your continued use of the Service after the publication of the amended SLA shall be deemed as your acceptance of the amended SLA.
+
+***
+
+<CardGroup>
+  <Card title="Support" icon="envelope" href="mailto:support@octen.ai">
+    [support@octen.ai](mailto:support@octen.ai)
+  </Card>
+
+  <Card title="Status" icon="signal" href="https://status.octen.ai">
+    status.octen.ai
+  </Card>
+
+  <Card title="Docs" icon="book" href="https://docs.octen.ai">
+    docs.octen.ai
+  </Card>
+</CardGroup>
+
+***
+
+<p>Last modified on August 26, 2026</p>
+
+
+# Status
+Source: https://docs.octen.ai/resources/status
+
+
+
+<p>For AI agents: <a href="https://docs.octen.ai/resources/status.md">docs.octen.ai/resources/status.md</a></p>
+
+

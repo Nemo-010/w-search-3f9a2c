@@ -1,0 +1,472 @@
+Compare Plans and Get Started for Free - ScraperAPI Pricing 
+ ScraperAPI has acquired Traject Data 
+ READ THE ANNOUNCEMENT 
+ Pricing 
+ Solutions 
+ Close Solutions 
+ Open Solutions 
+ Products 
+ Async Scraper Service 
+ Send millions of requests asynchronously. 
+ Structured Data 
+ Get structured JSON data from in-demand domains. 
+ AI & Automation 
+ Connect AI agents and automation tools with live web data. 
+ DataPipeline 
+ Automate data collection without writing a single line of code. 
+ Scraping API 
+ Collecting data from millions of web sources. 
+ Large-Scale Data Acquisition 
+ Handle millions of requests without sacrificing efficiency. 
+ Industries 
+ Ecommerce 
+ Improve profit margins and product offerings. 
+ Market Research Firms 
+ Understand your target market and predict shifts in demand. 
+ SEO Agencies 
+ Inform your strategy and track performance with 1st-party data. 
+ Travel Agencies and Hotels 
+ Spot trending destinations and potential risks. 
+ VCs and Hedge Funds 
+ Find investment opportunities and optimize your portfolio. 
+ AI and ML 
+ Scale training data collection. 
+ Use cases 
+ SERP Data Collection 
+ Collect search data for any query in seconds. 
+ Ecommerce Data Collection 
+ Grow your ecommerce with first-party data. 
+ Market Research Scraper 
+ Empower your marketing strategy with accurate data. 
+ Real Estate Data Collection 
+ Make smart investments by collecting property listing data on autopilot, 24/7. 
+ Online Reputation Management 
+ Monitor the web to identify MAP violations and brand misrepresentation. 
+ Custom Trial 
+ Documentation 
+ Close Documentation 
+ Open Documentation 
+ Documentation 
+ Getting Started 
+ Get your API key and make your first request. 
+ Synchronous API 
+ Get raw HTML back in seconds. 
+ Asynchronous API 
+ Submit 50,000 jobs that retry until they succeed. 
+ JavaScript Rendering 
+ Load dynamic pages in a headless browser. 
+ Structured Data Endpoints 
+ Get clean JSON from Amazon, Google, Walmart and more. 
+ AI Parser 
+ Get clean JSON from any source by training a custom parser. 
+ DataPipeline 
+ Build and automate large scraping jobs. 
+ AI/LLM Integrations 
+ Build scalable web scraping agents. 
+ Custom Trial 
+ Resources 
+ Close Resources 
+ Open Resources 
+ Resources 
+ Developer Guides 
+ Get your scraper up and running in minutes. 
+ Free Downloads 
+ Get free whitepapers, cheat sheets, and more. 
+ Product FAQs 
+ Find an answer to all your ScraperAPI questions. 
+ Case Studies 
+ Learn how big companies are using ScraperAPI. 
+ Webinars 
+ Unlock data insights and stay ahead in your field with our webinars. 
+ Comparisons 
+ Make an informed decision without guesswork. 
+ Learning Hub 
+ Web scraping basics for all skill levels. 
+ Glossary 
+ Scraping terms in simple words. 
+ Blog 
+ Projects, guides, and tutorials in one place. 
+ Custom Trial 
+ Support 
+ Custom Trial 
+ Login 
+ Start Free 
+ CUSTOM TRIAL 
+ Login 
+ Start Free 
+ Start Scraping 
+ Start collecting data with our 7-day trial and 5,000 API credits. No credit card required.  Upgrade to enable more features and increase scraping volume. 
+ Monthly 
+ Yearly 
+ 10% off 
+ Hobby 
+ For small projects and personal use. 
+ $49 /month 
+ $44.10 /month billed annually 
+ Start Trial 
+ 100,000 API Credits 
+ 20 Concurrent Threads 
+ Geotargeting: US & EU only 
+ Ultra Premium 
+ Full crawler access 
+ Startup 
+ For low-volume scraping workflows. 
+ $149 /month 
+ $134.10 /month billed annually 
+ Start Trial 
+ 1,000,000 API Credits 
+ 50 Concurrent Threads 
+ Geotargeting: US & EU only 
+ Ultra Premium 
+ Full crawler access 
+ Business 
+ For production-grade scraping at moderate scale. 
+ $299 /month 
+ $269.10 /month billed annually 
+ Start Trial 
+ 3,000,000 API Credits 
+ 100 Concurrent Threads 
+ Geotargeting: Global 
+ Ultra Premium 
+ Full crawler access 
+ Unlimited analytics history 
+ Scaling 
+ Most popular 
+ For scaling scraping operations. 
+ $475 /month 
+ $427.50  /month billed annually 
+ Start Trial 
+ 5,000,000 API Credits 
+ 200 Concurrent Threads 
+ Geotargeting: Global 
+ Ultra Premium 
+ Full crawler access 
+ Unlimited analytics history 
+ Pay as you go 
+ Professional 
+ For recurring, high-volume scraping. 
+ $975 /month 
+ $877.50 /month billed annually 
+ Start Trial 
+ LIMITED OFFER · +250K BONUS CREDITS 
+ 10,500,000 API Credits 
+ 300 Concurrent Threads 
+ Geotargeting: Global 
+ Priority support 
+ Ultra Premium 
+ Full crawler access 
+ Unlimited analytics history 
+ Pay as you go 
+ Advanced 
+ For continuous, multi-source data pipelines. 
+ $1,975  /month 
+ $1,777.50 /month billed annually 
+ Start Trial 
+ LIMITED OFFER · +500K BONUS CREDITS 
+ 21,500,000 API Credits 
+ 500 Concurrent Threads 
+ Geotargeting: Global 
+ Priority routing 
+ Ultra Premium 
+ Full crawler access 
+ Unlimited analytics history 
+ Pay as you go 
+ Enterprise 
+ For complete control and flexibility with personalized pricing. 
+ Custom  /month 
+ Custom /month billed annually 
+ Contact Sales 
+ 22,000,000 + API Credits 
+ 500 + Concurrent Threads 
+ Ultra Premium 
+ Dedicated Support Team 
+ Slack Support 
+ Full crawler access 
+ Unlimited analytics history 
+ Pay as you go 
+ View pricing as Markdown (for AI Agents) 
+ Guide to scraping costs: See the full list of domains . 
+ ScraperAPI Core Features - Included With All Plans 
+ JS Rendering 
+ Premium Proxies 
+ JSON Auto Parsing 
+ Rotating Proxy Pools 
+ Custom Header Support 
+ CAPTCHA & Anti-Bot Detection 
+ Custom Session Support 
+ Desktop & Mobile User Agents 
+ Automatic Retries 
+ Unlimited Bandwidth 
+ 99.9% Uptime Guarantee 
+ Best-in-class Support 
+ Accepted payment methods 
+ Overview 
+ API Credits 
+ Concurrent Threads 
+ Geotargeting 
+ Analytics Dashboard 
+ Features 
+ JS Rendering 
+ Premium residential & mobile IPs 
+ Advanced bypassing 
+ Parsing & Structured Data APIs 
+ DataPipeline 
+ Full Crawler Access 
+ Pay as you go 
+ Support 
+ Priority Support 
+ Dedicated Support Team 
+ Slack Support 
+ Hobby 
+ For small projects and personal use. 
+ $49 /month 
+ $44.10 /month billed annually 
+ Start Trial 
+ Overview 
+ API Credits 100,000 
+ Concurrent Threads 20 
+ Geotargeting US & EU (only regions) 
+ Analytics Dashboard Up to last 30 days 
+ Features 
+ JS Rendering 
+ Premium residential & mobile IPs 
+ Advanced bypassing 
+ Parsing & Structured Data APIs 
+ DataPipeline 
+ Full Crawler Access 
+ Pay as you go 
+ Support 
+ Priority Support 
+ Dedicated Support Team 
+ Slack Support 
+ Startup 
+ For low-volume scraping workflows. 
+ $149 /month 
+ $134.10 /month billed annually 
+ Start Trial 
+ Overview 
+ API Credits 1,000,000 
+ Concurrent Threads 50 
+ Geotargeting US & EU (only regions) 
+ Analytics Dashboard Up to last 30 days 
+ Features 
+ JS Rendering 
+ Premium residential & mobile IPs 
+ Advanced bypassing 
+ Parsing & Structured Data APIs 
+ DataPipeline 
+ Full Crawler Access 
+ Pay as you go 
+ Support 
+ Priority Support 
+ Dedicated Support Team 
+ Slack Support 
+ Business 
+ For production-grade scraping at moderate scale. 
+ $299 /month 
+ $269.10 /month billed annually 
+ Start Trial 
+ Overview 
+ API Credits 3,000,000 
+ Concurrent Threads 100 
+ Geotargeting Country-level 
+ Analytics Dashboard Unlimited 
+ Features 
+ JS Rendering 
+ Premium residential & mobile IPs 
+ Advanced bypassing 
+ Parsing & Structured Data APIs 
+ DataPipeline 
+ Full Crawler Access 
+ Pay as you go 
+ Support 
+ Priority Support 
+ Dedicated Support Team 
+ Slack Support 
+ Scaling 
+ Most popular 
+ For scaling scraping operations. 
+ $475 /month 
+ $427.50 /month billed annually 
+ Start Trial 
+ Overview 
+ API Credits 5,000,000 
+ Concurrent Threads 200 
+ Geotargeting Country-level 
+ Analytics Dashboard Unlimited 
+ Features 
+ JS Rendering 
+ Premium residential & mobile IPs 
+ Advanced bypassing 
+ Parsing & Structured Data APIs 
+ DataPipeline 
+ Full Crawler Access 
+ Pay as you go 
+ Support 
+ Priority Support 
+ Dedicated Support Team 
+ Slack Support 
+ Professional 
+ For recurring, high-volume scraping. 
+ $975 /month 
+ $877.50  /month billed annually 
+ Start Trial 
+ Overview 
+ API Credits 10,500,000 
+ Concurrent Threads 300 
+ Geotargeting Country-level 
+ Analytics Dashboard Unlimited 
+ Features 
+ JS Rendering 
+ Premium residential & mobile IPs 
+ Advanced bypassing 
+ Parsing & Structured Data APIs 
+ DataPipeline 
+ Full Crawler Access 
+ Pay as you go 
+ Support 
+ Priority Support 
+ Dedicated Support Team 
+ Slack Support 
+ Advanced 
+ For continuous, multi-source data pipelines. 
+ $1,975 /month 
+ $1,777.50  /month billed annually 
+ Start Trial 
+ Overview 
+ API Credits 21,500,000 
+ Concurrent Threads 500 
+ Geotargeting Country-level 
+ Analytics Dashboard Unlimited 
+ Features 
+ JS Rendering 
+ Premium residential & mobile IPs 
+ Advanced bypassing 
+ Parsing & Structured Data APIs 
+ DataPipeline 
+ Full Crawler Access 
+ Pay as you go 
+ Support 
+ Priority Support 
+ Dedicated Support Team 
+ Slack Support 
+ Enterprise 
+ For complete control and flexibility with personalized pricing. 
+ Let’s talk / custom per month 
+ Let’s talk / custom per month 
+ Contact Sales 
+ Overview 
+ API Credits 22,000,000 + 
+ Concurrent Threads 500 + 
+ Geotargeting Country-level 
+ Analytics Dashboard Unlimited 
+ Features 
+ JS Rendering 
+ Premium residential & mobile IPs 
+ Advanced bypassing 
+ Parsing & Structured Data APIs 
+ DataPipeline 
+ Full Crawler Access 
+ Pay as you go 
+ Support 
+ Priority Support 
+ Dedicated Support Team 
+ Slack Support 
+ Need 22M+ Requests a Month? 
+ Let our experts build a custom plan that fits your business needs. 
+ Book a call 
+ ScraperAPI Pricing FAQs 
+ Does ScraperAPI offer a free plan? 
+ Yes, ScraperAPI offers a free plan where you can sign up here and get 1,000 free API credits (with a maximum of 5 concurrent connections). If you need additional API credits for testing purposes, please contact support . 
+ Does one successful ScraperAPI request always equal one API credit? 
+ With ScraperAPI, one credit is the cost of a standard page request, but what you actually consume depends on the site you’re scraping and the parameters you send. You can check the exact cost for any URL using the Domain Cost Estimator in your dashboard, and you can set a max_cost per scrape to keep any single request within your limit. 
+ Are there specific websites or domains that cost more ScraperAPI credits to scrape? 
+ Because some sites are harder to scrape, ScraperAPI has built custom logic for them and prices them accordingly. A standard page costs 1 credit. Amazon costs 5, Google and Bing (including their subdomains) cost 25, and LinkedIn costs 30. Sites behind bot protection like Cloudflare, Datadome, or PerimeterX add 10 credits per request when we bypass them. You can check the exact cost for any URL using the Domain Cost Estimator in your dashboard, and you can set a max_cost per scrape to keep any single request within your limit. 
+ How can I check my ScraperAPI request volume? 
+ You can keep track of your ScraperAPI request volume and your concurrent request count in the dashboard after you sign up for an account. 
+ What happens if I exceed my ScraperAPI "Concurrent Threads" limit? 
+ If you exceed your ScraperAPI limits, you’ll get a 429 response asking you to bring your concurrency back within your plan’s limit and try again. There’s no extra charge for going over, the request is simply turned away rather than queued. 
+ What happens if I run out of credits before the end of my current subscription? 
+ By default, scraping pauses until your credits renew. There are a few ways to keep your requests going without interruption, depending on your plan. On Hobby, Startup, Business, Scaling, and Professional, turn on auto-upgrade to move to the next plan when your credits run out. On Scaling, Professional, Advanced, and Enterprise, you can use pay-as-you-go to keep scraping at a fixed per-credit rate, up to a monthly cap you set. Annual plans can also renew early for a fresh batch of credits. 
+ What's the difference between pay-as-you-go, auto-upgrade, and upgrading my plan? 
+ Upgrading moves you to a higher plan with a larger allowance, usually at a better price per credit. You can upgrade anytime from the billing page. Auto-upgrade does this for you. When your credits run out, your account moves to the next plan automatically. It’s opt-in and available on Hobby, Startup, Business, Scaling, and Professional. Pay-as-you-go lets you keep scraping past your limit at a fixed per-credit rate without changing plans, up to a monthly spending cap you set. It’s available on Scaling, Professional, Advanced, and Enterprise. 
+ Do my unused ScraperAPI credits roll over to the next billing cycle? 
+ No, your ScraperAPI credit balance resets when your subscription renews. If your usage has changed, you can move up or down a plan anytime from the billing page. 
+ If I get a custom ScraperAPI Enterprise volume discount, does it apply to all types of requests? 
+ Custom ScraperAPI Enterprise pricing applies across your usage, with the exception of requests to Ultra Premium which carry their own minimum rate. Your sales contact can walk you through exactly how this applies to your workload. 
+ How do I change my card details for ScraperAPI? 
+ You can change your card details for ScraperAPI anytime in your dashboard or by contacting support . We will help you securely change your card details. 
+ Can I cancel my ScraperAPI subscription anytime? 
+ Yes, you can cancel your ScraperAPI subscription at any time in your dashboard or by contacting support , and you will not be charged for cancelling. 
+ Can I get a refund for my ScraperAPI plan? 
+ ScraperAPI offers a 7-day no-questions-asked refund policy. If you are unhappy with the service for any reason, contact support , and we’ll refund you right away. 
+ What if I have other questions about ScraperAPI? 
+ If you have other questions about ScraperAPI, just contact support . We’re more than happy to answer any other questions you might have. 
+ After building numerous web scrapers and navigating the tedious processes of finding proxies, setting up headless browsers, and handling CAPTCHAs, we created ScraperAPI to simplify this for you. Our service handles all these complexities, allowing you to scrape any page with a simple API call. 
+ X-twitter 
+ Linkedin 
+ Terms of Use 
+ Privacy and Cookies Policy 
+ Privacy Settings 
+ © ScraperAPI 
+ Product 
+ Pricing 
+ Documentation 
+ Product FAQs 
+ Pricing 
+ Documentation 
+ Product FAQs 
+ Company 
+ About 
+ Solutions 
+ Affiliate Program 
+ Support 
+ Case Studies 
+ About 
+ Solutions 
+ Affiliate Program 
+ Support 
+ Case Studies 
+ Resources 
+ Understand Web Scraping Pricing 
+ How to Choose a Data Collection Tool 
+ Enterprise Data Collection 
+ Blog 
+ Learning Hub 
+ Glossary 
+ Developer Guides 
+ Free Downloads 
+ How We Compare 
+ Understand Web Scraping Pricing 
+ How to Choose a Data Collection Tool 
+ Enterprise Data Collection 
+ Blog 
+ Learning Hub 
+ Glossary 
+ Developer Guides 
+ Free Downloads 
+ How We Compare 
+ Use Cases 
+ SERP Data Collection 
+ Ecommerce Data Collection 
+ Real Estate Data Collection 
+ Market Research Data Collection 
+ SERP Data Collection 
+ Ecommerce Data Collection 
+ Real Estate Data Collection 
+ Market Research Data Collection 
+ By Target 
+ Amazon Scraper 
+ Google Shopping Scraper 
+ Walmart Scraper 
+ eBay Scraper 
+ Etsy Scraper 
+ Home Depot Scraper 
+ Target Scraper 
+ Amazon Scraper 
+ Google Shopping Scraper 
+ Walmart Scraper 
+ eBay Scraper 
+ Etsy Scraper 
+ Home Depot Scraper 
+ Target Scraper

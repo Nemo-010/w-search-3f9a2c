@@ -1,0 +1,49 @@
+{
+ "slug": "zenodo",
+ "name": "Zenodo API",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:45+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://developers.zenodo.org/",
+   "status": 200,
+   "final_url": "https://developers.zenodo.org/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 191492,
+   "truncated": false,
+   "sha256": "bbd72463dcf7e07f597ed2b145e8019fb0e861c4811a8d22e0e5d202bde69e61",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 65629
+  },
+  "llms-err-28b71f": {
+   "url": "https://developers.zenodo.org/llms.txt",
+   "status": 404,
+   "final_url": "https://developers.zenodo.org/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 9379,
+   "truncated": false,
+   "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  },
+  "llms-err-eea57f": {
+   "url": "https://developers.zenodo.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://developers.zenodo.org/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 9379,
+   "truncated": false,
+   "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  },
+  "llms-err-7accd6": {
+   "url": "https://docs.developers.zenodo.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.developers.zenodo.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  }
+ }
+}

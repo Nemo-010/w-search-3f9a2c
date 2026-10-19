@@ -1,0 +1,4 @@
+# Agenty (agenty) category=serp-scrape
+home=https://www.agenty.com/ pricing=None docs=None llms=None
+sources_ok: home:https://www.agenty.com/
+--- ranked fact lines ---

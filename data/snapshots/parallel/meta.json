@@ -1,0 +1,63 @@
+{
+ "slug": "parallel",
+ "name": "Parallel",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://docs.parallel.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.parallel.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 26191,
+   "truncated": false,
+   "sha256": "d685f2153a0b80ae4d364a6f570f32146a82f720e51667231e64a89548306691",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 26187
+  },
+  "llms-full": {
+   "url": "https://docs.parallel.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.parallel.ai/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 1138358,
+   "truncated": false,
+   "sha256": "904feebd828e34f0c4a3e485fe387f1c9042de93154f657e754d0081f1058ddd",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 1136354
+  },
+  "pricing": {
+   "url": "https://docs.parallel.ai/resources/pricing",
+   "status": 200,
+   "final_url": "https://docs.parallel.ai/getting-started/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 456238,
+   "truncated": false,
+   "sha256": "8de080287221dff7138546e531cbd201987f493305dfb14b23a52e2d49ce6986",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 8025
+  },
+  "docs": {
+   "url": "https://docs.parallel.ai/",
+   "status": 200,
+   "final_url": "https://docs.parallel.ai/getting-started/overview",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1099304,
+   "truncated": false,
+   "sha256": "7502d99a2b0ee1c509c01a46f1a4de1feb04c846077c9abdd2c10a7e6c28dd07",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 40900
+  },
+  "home": {
+   "url": "https://parallel.ai/",
+   "status": 200,
+   "final_url": "https://parallel.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 493648,
+   "truncated": false,
+   "sha256": "0829fab5340af8e3981f42b09eb39f461b59940f25903e83f957acf2f55a922e",
+   "fetched_at": "2026-10-19T05:54:05+00:00",
+   "text_bytes": 44573
+  }
+ }
+}

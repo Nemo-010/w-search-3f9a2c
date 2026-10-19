@@ -1,0 +1,50 @@
+{
+ "slug": "stackexchange",
+ "name": "StackExchange API",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:46+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://api.stackexchange.com/docs",
+   "status": 200,
+   "final_url": "https://api.stackexchange.com/docs",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 77494,
+   "truncated": false,
+   "sha256": "9b8adafdd30e441fe5f858077829b332887c14f6df137c0f1a8ee6cae6b007a9",
+   "fetched_at": "2026-10-19T05:54:46+00:00",
+   "text_bytes": 16939
+  },
+  "home": {
+   "url": "https://api.stackexchange.com/",
+   "status": 200,
+   "final_url": "https://api.stackexchange.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 53664,
+   "truncated": false,
+   "sha256": "2ae88a8d4442bb4be34ad7efdcfcb233bcc8a7df6c53c9eacbe6051f0a0cfcca",
+   "fetched_at": "2026-10-19T05:54:46+00:00",
+   "text_bytes": 426
+  },
+  "llms-err-d0d78e": {
+   "url": "https://api.stackexchange.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://api.stackexchange.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1999,
+   "truncated": false,
+   "sha256": "a0b35e7acdba7ac30b122076d7c6a0723ef0cc91bb70fe6ad41c754d906e3d79",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  },
+  "llms-err-6e64f1": {
+   "url": "https://api.stackexchange.com/llms.txt",
+   "status": 400,
+   "final_url": "https://api.stackexchange.com/llms.txt",
+   "content_type": "application/json; charset=utf-8",
+   "bytes": 90,
+   "truncated": false,
+   "sha256": "1eb9aaf41e14d587784383acfa0526d19f3fa54771dd591a1c2d0aa46cafb0b5",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  }
+ }
+}

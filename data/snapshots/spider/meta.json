@@ -1,0 +1,82 @@
+{
+ "slug": "spider",
+ "name": "Spider",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:04+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://spider.cloud/pricing",
+   "status": 200,
+   "final_url": "https://spider.cloud/pricing/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 96027,
+   "truncated": false,
+   "sha256": "cafb2760d2589a961a881c14e4f2875bc2244436bad560d5b4c2eaf1ca34dc43",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 4501
+  },
+  "docs-err-ff4fb3": {
+   "url": "https://spider.cloud/docs/",
+   "status": 404,
+   "final_url": "https://spider.cloud/docs/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 74958,
+   "truncated": false,
+   "sha256": "1066419d06522c1c7f5ebe540832b8c03a595741ea9198c52d641d3eb8b1c474",
+   "fetched_at": "2026-10-19T05:54:06+00:00"
+  },
+  "home": {
+   "url": "https://spider.cloud/",
+   "status": 200,
+   "final_url": "https://spider.cloud/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 232433,
+   "truncated": false,
+   "sha256": "4c5227d0a4977238823a19ee930d0aa436e878659d995fef5068be73d65f48cb",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 9308
+  },
+  "llms-err-79795b": {
+   "url": "https://spider.cloud/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://spider.cloud/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 74958,
+   "truncated": false,
+   "sha256": "1066419d06522c1c7f5ebe540832b8c03a595741ea9198c52d641d3eb8b1c474",
+   "fetched_at": "2026-10-19T05:54:07+00:00"
+  },
+  "llms": {
+   "url": "https://spider.cloud/llms.txt",
+   "status": 200,
+   "final_url": "https://spider.cloud/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14831,
+   "truncated": false,
+   "sha256": "8f25a3e83c82060275a8eec3f8e96c2160d66018a641f73c2b2da76c0bc0d6bd",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 14831
+  },
+  "llms-full": {
+   "url": "https://spider.cloud/llms-full.txt",
+   "status": 200,
+   "final_url": "https://spider.cloud/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 21575,
+   "truncated": false,
+   "sha256": "6fb346f5a25dc0fada0be6611e780d664fbc887889fd319f55daa938c6514a64",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 21575
+  },
+  "llms-err-f8f06b": {
+   "url": "https://docs.spider.cloud/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.spider.cloud/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:08+00:00"
+  }
+ }
+}

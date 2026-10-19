@@ -1,0 +1,205 @@
+ipapi - Pricing Plans 
+ Toggle navigation 
+ ipapi
+ Quick Start 
+ Docs 
+ Pricing 
+ Contact 
+ Account 
+ × 
+ Please check the box below & proceed 
+   I agree to the 
+ Terms ,
+ Privacy Policy &
+ and recurring charges for the selected subscription until I cancel.
+ Pricing Plans
+ Transparent Pricing
+ ⋆ Secure Payment
+ ⋆ Easy Cancellation 
+ Warning ! Please enable Javascript for payments
+ Annual 
+ Monthly 
+ Price / Month 
+ IP Lookups / Month 
+ Subscribe 
+ Free Trial 
+ Please contact us for a trial 
+ 30 000 * 
+ * Up-to 1000 / day 
+ Compare 
+ $ 15 
+ billed monthly 
+ 60 000 
+ 60 K / month 
+ Sign Up $15 + tax 
+ $ 25 
+ billed monthly 
+ 150 000 
+ 150 K / month 
+ Sign Up $25 + tax 
+ $ 49 
+ billed monthly 
+ 500 000 
+ 500 K / month 
+ Sign Up $49 + tax 
+ $ 99 
+ billed monthly 
+ 2 000 000 
+ 2 M / month 
+ Sign Up $99 + tax 
+ $ 199 
+ billed monthly 
+ 6 000 000 
+ 6 M / month 
+ Sign Up $199 + tax 
+ $ 399 
+ billed monthly 
+ 15 000 000 
+ 15 M / month 
+ Sign Up $399 + tax 
+ $ 12 
+ billed $144 / year   
+ 60 000 
+ 60 K / month 
+ Sign Up $144 + tax 
+ $ 20 
+ billed $240 / year   
+ 150 000 
+ 150 K / month 
+ Sign Up $240 + tax 
+ $ 39 
+ billed $468 / year   
+ 500 000 
+ 500 K / month 
+ Sign Up $468 + tax 
+ $ 79 
+ billed $948 / year   
+ 2 000 000 
+ 2 M / month 
+ Sign Up $948 + tax 
+ $ 159 
+ billed $1908 / year   
+ 6 000 000 
+ 6 M / month 
+ Sign Up $1908 + tax 
+ $ 319 
+ billed $3828 / year   
+ 15 000 000 
+ 15 M / month 
+ Sign Up $3828 + tax 
+ Custom 
+ click to contact 
+ 15 000 000 + 
+ 15 M+ / month 
+ Contact 
+   I agree to the 
+ Terms ,
+ Privacy Policy &
+ and recurring charges for the selected subscription until I cancel. 
+ We support Credit / Debit Card / Paypal / Apple Pay / ACH / Cheque / Cryptocurrency (Bitcoin, Litecoin & other Altcoins) & more. 
+ If your preferred payment method is not available with the pay option above or if you wish to make a 
+ corporate purchase please contact us .
+ All prices are in USD.
+ Sign Up 
+ Paid Plan 
+ Premium Features 
+ HTTPS / SSL
+ Secure API to find IP location 
+ Production ready & scalable
+ Seamless upgrades as traffic grows. No code changes 
+ E-Mail support
+ Expert help with API usage, integration / issues 
+ Usage alerts
+ E-Mail alerts warn you before you run out of quota 
+ API to monitor usage
+ Transparently track your usage & control costs 
+ Bulk IP lookup 
+ Get location of multiple IP addresses with a GUI 
+ Flexible IPv4 / IPv6 support
+ Use modern 'IPv4 and IPv6' or legacy 'IPv4 only' 
+ Enhanced Privacy
+ Contact us to bypass IP query logging 
+ Select 
+ Free Trial 
+ Standard Features 
+ HTTPS / SSL
+ Secure API to find IP location 
+ Suitable for testing / development
+ Not for production use 
+ No Support
+ No usage alerts 
+ No usage monitoring 
+ Limited Bulk IP lookup
+ Standard IPv4 / IPv6 support
+ Standard Privacy
+ IP queries stored in logs (your data is still safe) 
+ Try Free 
+ FAQ 
+ What is an "IP Lookup" ? 
+ An IP Lookup is defined as finding the geographical location (or related information like currency, timezone etc.) of an IP address. The lookup can be done either with our API or website. For example, with a plan of 60,000 IP Lookups / month, you can find the location of 60,000 IP addresses in a month. Each conversion of IP address to location is counted as a lookup (repeat queries of the same IP address counts as a separate lookup).
+ What types of IP address location plans do you offer ? 
+ We offer subscription plans with monthly & annual billing options. You can choose a plan based on your expected 
+ monthly IP address lookup requirement. This IP lookup limit can be changed by upgrading or downgrading your plan. 
+ You'll receive an API key along with usage instructions when you sign-up for a paid plan.
+ Can I change my plan any time ? 
+ You can change your plan anytime from the account dashboard or 
+ by sending us a message . 
+ Plan upgrades are applied instantly. Downgrades take effect from the start of a new billing cycle.
+ How do you authenticate requests from a paid plan ? 
+ You will receive an API authentication token and usage instructions on sign-up. The token should be included as a query string 
+ in your API requests. It shouldn't take more than a minute to implement this tiny change when you switch from a free plan to 
+ a paid plan. If you have any concerns or need assistance with the setup, please feel free to contact us. 
+ How do I cancel my subscription ? 
+ We have a hassle free, no questions asked cancellation policy. You can cancel your subscription anytime from the
+ account dashboard or by sending us a message 
+ or e-mail (you'll receive the details on sign-up).
+ Once your plan is cancelled, you won't be billed anymore but your plan will continue to work till the end of your billing cycle. 
+ Do you offer a trial plan ? 
+ Yes, we offer a free IP location plan for trial & evaluation of our service. 
+ Please contact us with your requirements. We would be happy to help you out. 
+ Are there any limits on using the free IP location API ? 
+ Under the free trial, you get up-to 1000 IP lookups in a day (approximately 30K/month) for a limited time.
+ The plan is suitable for testing & development purposes. It is not meant for use in production or
+ deployments. The 
+ system may use heuristics to further restrict free trial API calls under certain conditions.
+ If you are unable to access the free plan, please contact us . 
+ We would be happy to help you out. 
+ Is my payment information secure ? 
+ We use a secure, PCI compliant payment provider to handle credit & debit card transactions. 
+ We never view or store any customer’s full credit or debit card details on our platform. 
+ Our primary payment processor is Stripe. It has been audited by an independent PCI QSA and 
+ is certified as a PCI Level 1 Service Provider. This is the most stringent level of 
+ certification available in the payments industry.
+ What can I do with the API and what are the terms of service ? 
+ The API is suitable for a website, mobile or desktop app to automatically
+ find the location of an IP address. If you need to perform bulk lookup, we offer
+ a separate GUI tool covered under the same subscription plan. If you expect an uncommon usage
+ or traffic pattern, please contact us to ensure that the API will be suitable for you. 
+ For further details, please see our terms of service 
+ & privacy policy 
+ Still got queries ? 
+ See our general FAQ or send us a message here . 
+ × 
+ Loading... 
+ About 
+ Contact 
+ Terms 
+ Privacy 
+ GDPR 
+ © 2016 - 2026 Kloudend Inc, USA
+ 1887 Whitney Mesa Dr #4080, Henderson, NV 89014 
+ IP Location lookup and Geolocation API by Kloudend, Inc. 
+ ipapi ™ is a registered trademark of Kloudend in UK & AU 
+ IP Location data is aggregated from multiple sources regularly for an accurate & reliable IP lookup. 
+ † Latitude / Longitude are often near the center of population. 
+ The values aren't precise & shouldn't be used to identify a particular address or household. 
+ The location obtained from an IP address is inherently imprecise and may not always be current. 
+ Please read our terms of service or contact us to understand the limitations. 
+ Do Not Sell or Share My Personal Information. 
+ The entity maintaining this website is a data broker under Texas law. 
+ Information about data broker registrants is available on the Texas SOS website. 
+ To conduct business in Texas, a data broker must register with the Texas Secretary of State (Texas SOS). 
+ This product includes data 
+ from IP geolocation by DB-IP 
+ available under the Creative Commons Attribution 4.0 License . 
+ ipapi uses the IP2Location LITE database for IP geolocation

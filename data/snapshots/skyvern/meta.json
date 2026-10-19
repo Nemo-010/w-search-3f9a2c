@@ -1,0 +1,85 @@
+{
+ "slug": "skyvern",
+ "name": "Skyvern",
+ "category": "browser",
+ "fetched_at": "2026-10-19T05:54:24+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.skyvern.com/pricing",
+   "status": 200,
+   "final_url": "https://www.skyvern.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 77866,
+   "truncated": false,
+   "sha256": "54cbc6d1a371806a3a09616325f4b2acd6010c10a62e0e0e0682a9c492573d82",
+   "fetched_at": "2026-10-19T05:59:40+00:00",
+   "text_bytes": 3932
+  },
+  "docs": {
+   "url": "https://docs.skyvern.com/",
+   "status": 200,
+   "final_url": "https://www.skyvern.com/docs/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 350836,
+   "truncated": false,
+   "sha256": "49e0087361f2adced7505450e6b9cf060309c9ad490841c41fcd8240205ae51d",
+   "fetched_at": "2026-10-19T05:54:25+00:00",
+   "text_bytes": 2625
+  },
+  "home": {
+   "url": "https://www.skyvern.com/",
+   "status": 200,
+   "final_url": "https://www.skyvern.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 118785,
+   "truncated": false,
+   "sha256": "d05ac39665e10c78699ec870de0e1653cfbd8c71ce03989ddad2500328792138",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 6280
+  },
+  "llms": {
+   "url": "https://docs.skyvern.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.skyvern.com/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 19434,
+   "truncated": false,
+   "sha256": "03620be9c46eff1d38e2cc591a86371aef018a1d96315121ff3048256717ff1c",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 19424
+  },
+  "llms-full": {
+   "url": "https://www.skyvern.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.skyvern.com/docs/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 864960,
+   "truncated": false,
+   "sha256": "18f8b9cc89ed9e8619a87c427bcc573cf62eabd73591531d79fd761178507496",
+   "fetched_at": "2026-10-19T05:54:33+00:00",
+   "text_bytes": 863372
+  },
+  "llms-https://www.skyvern.com/llms.txt": {
+   "url": "https://www.skyvern.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.skyvern.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 19789,
+   "truncated": false,
+   "sha256": "256b4656233f3d7c42b9ac1c477fd1d7753bb8dc2476a36e144c52212a782ced",
+   "fetched_at": "2026-10-19T05:54:31+00:00",
+   "text_bytes": 19633
+  },
+  "llms-https://www.skyvern.com/docs/llms.txt": {
+   "url": "https://www.skyvern.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.skyvern.com/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 19434,
+   "truncated": false,
+   "sha256": "03620be9c46eff1d38e2cc591a86371aef018a1d96315121ff3048256717ff1c",
+   "fetched_at": "2026-10-19T05:54:32+00:00",
+   "text_bytes": 19424
+  }
+ }
+}

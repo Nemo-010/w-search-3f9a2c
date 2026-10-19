@@ -1,0 +1,4 @@
+# xAI Live Search (xai-live-search) category=llm-search
+home=https://docs.x.ai/docs/guides/live-search pricing=https://docs.x.ai/docs/models docs=https://docs.x.ai/docs/guides/live-search llms=None
+sources_ok: 
+--- ranked fact lines ---

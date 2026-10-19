@@ -1,0 +1,4 @@
+# OpenAI Web Search (openai-websearch) category=llm-search
+home=https://platform.openai.com/docs/guides/tools-web-search pricing=https://openai.com/api/pricing/ docs=https://platform.openai.com/docs/guides/tools-web-search llms=None
+sources_ok: pricing:https://openai.com/api/pricing/
+--- ranked fact lines ---

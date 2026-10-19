@@ -1,0 +1,93 @@
+{
+ "slug": "ipapi-co",
+ "name": "ipapi.co",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:48+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://ipapi.co/pricing/",
+   "status": 200,
+   "final_url": "https://ipapi.co/pricing/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46419,
+   "truncated": false,
+   "sha256": "ce86770363c8e980744d67c770c6f0a0a6bf32e1c8fb78c184b32f26a70dfd01",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 7579
+  },
+  "docs": {
+   "url": "https://ipapi.co/api/",
+   "status": 200,
+   "final_url": "https://ipapi.co/api/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 98953,
+   "truncated": false,
+   "sha256": "754e9408e03f4651b6bdbe9a56032ca3b7c242844751efad8d1661fce9b4fb6a",
+   "fetched_at": "2026-10-19T06:05:18+00:00",
+   "text_bytes": 24369
+  },
+  "home": {
+   "url": "https://ipapi.co/",
+   "status": 200,
+   "final_url": "https://ipapi.co/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 104189,
+   "truncated": false,
+   "sha256": "11796d0afac3bf3372a313690a9559010cb9d237a1d4ff3d471effb2e712535b",
+   "fetched_at": "2026-10-19T05:54:49+00:00",
+   "text_bytes": 12982
+  },
+  "llms-err-85b843": {
+   "url": "https://ipapi.co/api/llms.txt",
+   "status": 404,
+   "final_url": "https://ipapi.co/api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7753,
+   "truncated": false,
+   "sha256": "06fe86905408f01fdfe5b883f11aeae4e58912bd3fa6c92390852fd8a8727d84",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  },
+  "llms": {
+   "url": "https://ipapi.co/llms.txt",
+   "status": 200,
+   "final_url": "https://ipapi.co/?q=llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 104189,
+   "truncated": false,
+   "sha256": "11796d0afac3bf3372a313690a9559010cb9d237a1d4ff3d471effb2e712535b",
+   "fetched_at": "2026-10-19T05:54:50+00:00",
+   "text_bytes": 12982
+  },
+  "llms-full": {
+   "url": "https://ipapi.co/llms-full.txt",
+   "status": 200,
+   "final_url": "https://ipapi.co/?q=llms-full.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 104189,
+   "truncated": false,
+   "sha256": "11796d0afac3bf3372a313690a9559010cb9d237a1d4ff3d471effb2e712535b",
+   "fetched_at": "2026-10-19T05:54:51+00:00",
+   "text_bytes": 12982
+  },
+  "llms-err-c0f33b": {
+   "url": "https://ipapi.co/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://ipapi.co/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7753,
+   "truncated": false,
+   "sha256": "f29ba8a4c8c8160a06d0e163d941e7b160f9f551adb958bf95958988cbefc9c5",
+   "fetched_at": "2026-10-19T05:54:53+00:00"
+  },
+  "llms-err-ac33c1": {
+   "url": "https://docs.ipapi.co/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.ipapi.co/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:53+00:00"
+  }
+ }
+}

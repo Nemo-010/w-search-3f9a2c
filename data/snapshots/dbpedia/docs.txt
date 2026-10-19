@@ -1,0 +1,43 @@
+OpenLink Virtuoso SPARQL Query Editor 
+ SPARQL Query Editor 
+ About 
+ Tables 
+ Namespace Prefixes 
+ Inference Rules 
+ Macros 
+ RDF Views 
+ Conductor 
+ Facet Browser 
+ Permalink 
+ Extensions:  
+ cxml  
+ save to dav  
+ sponge  
+ User: SPARQL 
+ Default Data Set Name (Graph IRI) 
+ Query Text 
+select distinct ?Concept where {[] a ?Concept} LIMIT 100
+ Results Format 
+ Auto 
+ HTML 
+ HTML (Faceted Browsing Links) 
+ Spreadsheet 
+ XML 
+ JSON 
+ Javascript 
+ Turtle 
+ RDF/XML 
+ N-Triples 
+ CSV 
+ TSV 
+ Execution timeout 
+ milliseconds 
+ Options 
+ Strict checking of void variables 
+ Strict checking of variable names used in multiple clauses but not logically connected to each other 
+ Suppress errors on wrong geometries and errors on geometrical operators (failed operations will return NULL) 
+ Log debug info at the end of output (has no effect on some queries and output formats) 
+ Generate SPARQL compilation report (instead of executing the query) 
+Copyright © 2026 OpenLink Software 
+ Virtuoso version 08.03.3335 (6e8e22a2f0) on Linux (x86_64-generic-linux-glibc2.12)
+Single Server Edition (62 GB total memory, 33 GB memory in use)

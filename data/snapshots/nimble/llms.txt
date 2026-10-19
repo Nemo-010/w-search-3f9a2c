@@ -1,0 +1,63 @@
+﻿# Nimble
+
+
+> Nimble is a real-time web search platform powered by Web Search Agents — turning the live web into structured, reliable data for AI and enterprise. Nimble web APIs enable two core use cases are 1) live web search that enables AI Agents to query the web like a live database, and 2) stream large-scale structured data feeds to applications and data lakes. Developer documentation lives at docs.nimbleway.com and is indexed separately at https://docs.nimbleway.com/llms.txt.
+
+
+## About Nimble
+
+
+- [Nimble Home](https://www.nimbleway.com/): Real-time web intelligence powered by Web Search Agents — turn the live internet into structured, reliable data for AI and enterprise.
+- [About Us](https://www.nimbleway.com/about-us/): Multi-national team of engineers and builders turning web chaos into structured data.
+- [The Platform](https://www.nimbleway.com/platform/): Overview of the Nimble Web Search Agent Platform — Search, Extract, Crawl, Agents, Map, Proxy.
+- [Careers](https://www.nimbleway.com/careers/): Open roles building the Web Search Agent Platform powering real-time intelligence for AI.
+- [Contact](https://www.nimbleway.com/contact/): Reach the Nimble team about the platform, SDK, API, pricing, or partnerships.
+- [Trust Center](https://www.nimbleway.com/trust/): Security, compliance (SOC2, GDPR, CCPA), and reliability information.
+- [Partners](https://www.nimbleway.com/partners/): Partner ecosystem powering real-time web data products, platforms, and AI.
+## Products & Platform
+- [AI Web Search](https://www.nimbleway.com/platform/ai-web-search/): Real-time AI-native web search delivering structured, agent-ready results.
+- [Structured Data Feeds](https://www.nimbleway.com/platform/structured-data-feeds/): Turn the live web into structured, reliable feeds for analytics and AI.
+## Solutions & Use Case Examples
+- [Competitive Pricing](https://www.nimbleway.com/use-cases/competitive-pricing/): Web Search Agents for live pricing intelligence.
+- [Digital Shelf Analytics](https://www.nimbleway.com/use-cases/digital-shelf-analytics/): Track product presentation and discoverability across channels.
+- [Brand Pulse Intelligence](https://www.nimbleway.com/use-cases/brand-pulse-intelligence/): Monitor brand sentiment and presence with Web Search Agents.
+- [Alternative Data](https://www.nimbleway.com/use-cases/alternative-data/): Structured signals for hedge funds, finance, and consulting.
+- [Influencer Tracking](https://www.nimbleway.com/use-cases/influencer-tracking/): Track influencers across social channels at scale.
+- [Deep Search for AI & Agents](https://www.nimbleway.com/use-cases/deep-search-for-agents/): Real-time deep search built for AI agents and RAG pipelines.
+## Pricing & Plans
+- [Pricing](https://www.nimbleway.com/pricing/): Web Search Agent Platform and SDK plans, including support tiers and SLAs.
+## Customer Stories
+- [Grips Intelligence](https://www.nimbleway.com/case-studies/grips-intelligence/): Case study — fast support and product-led fixes.
+- [TrackStreet](https://www.nimbleway.com/case-studies/trackstreet/): Protecting global brands with reliable, cost-efficient web data.
+- [Qodo](https://www.nimbleway.com/case-studies/qodo/): Real-world deployment of Nimble's data platform.
+- [SCALE Agile Solutions](https://www.nimbleway.com/case-studies/scale-agile-solutions/): Long-session, sticky-IP scraping with Nimble IP.
+- [Alta](https://www.nimbleway.com/case-studies/customer-story-alta/): Web data infrastructure powering Alta's product.
+## Featured Blog — AI Agent Search & Infrastructure
+- [Announcing $47M Series B](https://nimbleway.com/blog/announcing-47m-series-b-web-search-agent-platform/): Series B funding and the Nimble Web Search Agent Platform.
+- [The Internet's New Data Layer](https://nimbleway.com/blog/the-internets-new-data-layer-how-web-search-agents-redefine-search-data-and-discovery/): How Web Search Agents redefine search, data, and discovery for AI.
+- [Nimble for Cortex Code: Bring Live Web Data Into Your Snowflake Workflow + Examples
+](https://www.nimbleway.com/blog/nimble-for-cortex-code-bring-live-web-data-into-your-snowflake-workflow-examples): Search the live web from Snowflake Cortex Code with Nimble's MCP server
+- [Your AI Agents Are Only as Good as Their Web Access](https://nimbleway.com/blog/your-ai-agents-are-only-as-good-as-their-web-access-most-have-none/): Why most agents fail without live web access, and how to fix it.
+- [We tried to scrape the web with Claude. Here’s what happened
+(: https://www.nimbleway.com/blog/claude-vs-nimble-web-data-test: We ran five side-by-side tests. 
+- [Building a Real Estate Investment Scout with Nimble Web Search Agents and Claude
+](https://www.nimbleway.com/blog/building-a-real-estate-investment-scout-with-nimble-web-search-agents-and-claude): 
+- [How Your AI Agent Can Learn and Drive Decisions in Real Time](https://nimbleway.com/blog/how-your-ai-agent-can-learn-and-drive-decisions-in-real-time/): Real-time decisioning patterns for AI agents using live web data.
+- [Feeding AI Agents Real-Time Web Data with Nimble MCP](https://nimbleway.com/blog/feeding-ai-agents-real-time-web-data-with-nimble-mcp/): Wiring MCP to live, structured web data for agents.
+- [Build a Company Enrichment Agent](https://nimbleway.com/blog/build-a-company-enrichment-agent/): A multi-agent company enrichment pipeline built with Web Search Agents.
+- [Key Takeaways: New Rules of Agent-Driven Commerce](https://nimbleway.com/blog/key-takeaways-the-new-rules-of-agent-driven-commerce/): What the 1,800% spike in agent-driven commerce activity means for the web.
+## Featured Blog — Claude & AI Coding Assistant Skills
+- [Introducing Nimble Skills](https://nimbleway.com/blog/introducing-nimble-skills-web-expert-agent-builder/): Nimble Skills for AI coding assistants — Web Expert and Agent Builder.
+- [Architecture of Agent Skills](https://nimbleway.com/blog/the-architecture-of-agent-skills-how-we-built-a-web-intelligence-layer-for-ai-coding-assistants/): How Nimble built the web intelligence layer for AI coding assistants.
+- [Nimble Skills for Claude Code](https://nimbleway.com/blog/nimble-skills-for-claude-code-live-scalable-web-data-inside-your-ai-assistant/): Live, scalable web data inside Claude Code.
+- [Nimble Skills for Cursor](https://nimbleway.com/blog/nimble-skills-for-cursor-extract-scale-and-automate-live-web-data-from-your-ai-assistant/): Extract, scale, and automate live web data from Cursor.
+- [Targeted Web Research for Coding Agents](https://nimbleway.com/blog/announcing-web-search-skills-from-fetch-to-full-research/): From single-page fetch to full research workflows for coding agents.
+- [Blog Index](https://nimbleway.com/blog/): Full archive — Web Search Agents, AI agents, real-time data, and developer tooling.
+## Legal
+- [Terms of Use](https://www.nimbleway.com/terms-of-use/): Website terms of use.
+- [Privacy Policy](https://www.nimbleway.com/privacy-policy/): Privacy policy and data handling.
+## Optional
+- [Developer Documentation](https://docs.nimbleway.com/): Full Nimble developer docs — SDKs, API reference, web tools, integrations, MCP, proxy.
+- [Documentation Index (llms.txt)](https://docs.nimbleway.com/llms.txt): Machine-readable index of every documentation page (auto-generated, kept in sync by the docs platform).
+- [OpenAPI Spec](https://docs.nimbleway.com/openapi.json): Full OpenAPI specification for the Nimble API.
+- [Nimble Studio](https://online.nimbleway.com/workflow-builder): No-code agent and workflow builder.

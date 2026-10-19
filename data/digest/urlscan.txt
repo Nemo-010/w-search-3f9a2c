@@ -1,0 +1,35 @@
+# urlscan.io (urlscan) category=archive
+home=https://urlscan.io/ pricing=https://urlscan.io/pricing/ docs=https://urlscan.io/docs/api/ llms=None
+sources_ok: pricing:https://urlscan.io/pricing/, docs:https://urlscan.io/docs/api/, home:https://urlscan.io/, llms:https://docs.urlscan.io/llms.txt
+--- ranked fact lines ---
+[pricing] $5,000 $416 / mo
+[pricing] $12,500 $1,042 / mo
+[pricing] $25,000 $2,084 / mo
+[pricing] $50,000 $4,167 / mo
+[pricing] Start a free 30-day trial or talk to our sales team about a plan for your organization.
+[pricing] If you are unsure if our product meet your needs we would be happy to set you up for a 30-day free trial of any plan, no strings attached.
+[docs] requests remaining but your per-day quota only has 500 requests left, you
+[pricing] Free Reports
+[docs] Only successful requests count against your quota, i.e. requests which return an HTTP 200 status code.
+[docs] to be exceed in absolute numbers, so if your per-hour quota still has 1000
+[docs] will receive the per-day quota. Make sure to respect the rate-limit headers
+[home] Free trials of urlscan Pro are available.
+--- llms/readme head ---
+# urlscan Docs
+> urlscan is a web-based platform to investigate malicious websites and domains.
+[urlscan.io APIs](https://docs.urlscan.io/apis/urlscan-openapi.md): API endpoints for urlscan.io and urlscan Pro.
+## Table of contents
+- [urlscan.io - A sandbox for the web](https://docs.urlscan.io/about.md)
+- [API Changelog](https://docs.urlscan.io/changelog.md)
+- [API Use Best Practices](https://docs.urlscan.io/pages/api-best-practices.md)
+- [APIs - Introduction](https://docs.urlscan.io/pages/api-intro.md)
+- [Brand Detection](https://docs.urlscan.io/pages/brand-detection.md)
+- [Certificate Search](https://docs.urlscan.io/pages/certificates-search.md)
+- [API Error Codes](https://docs.urlscan.io/pages/error-codes.md)
+- [Hostname History API](https://docs.urlscan.io/pages/hostname-history.md)
+- [Hostname Search](https://docs.urlscan.io/pages/hostname-search.md)
+- [Incidents Search](https://docs.urlscan.io/pages/incidents-search.md)
+- [System Labels](https://docs.urlscan.io/pages/labels.md)
+- [Quickstart Guide](https://docs.urlscan.io/guides/quickstart.md)
+- [API Integrations](https://docs.urlscan.io/pages/api-integrations.md)
+- [API Rate Limits](https://docs.urlscan.io/pages/api-rate-limits.md)

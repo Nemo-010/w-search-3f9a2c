@@ -1,0 +1,62 @@
+{
+ "slug": "exa",
+ "name": "Exa",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://exa.ai/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://exa.ai/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 26411,
+   "truncated": false,
+   "sha256": "f0ae9e888a6df64fd1e5a3851d23783a0480273832bc635b57be779bc802a646",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 26405
+  },
+  "llms-full": {
+   "url": "https://exa.ai/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://exa.ai/docs/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 742631,
+   "truncated": false,
+   "sha256": "7e4108ab531194aaeb5cfc253b53b6752a894688a8713283947566950d1e5ba4",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 742144
+  },
+  "pricing": {
+   "url": "https://exa.ai/pricing",
+   "status": 200,
+   "final_url": "https://exa.ai/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 145326,
+   "truncated": false,
+   "sha256": "f5f999833a444f4510aedc99e8e636372eb439ec426a568aa95b2dd619a4246b",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 5691
+  },
+  "docs-err-09a699": {
+   "url": "https://docs.exa.ai/",
+   "status": 403,
+   "final_url": "https://docs.exa.ai/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5839,
+   "truncated": false,
+   "sha256": "be21e23157b892c28bb976442c4c8d1b88a10f83444e17f01ee4a3abfc5acd3c",
+   "fetched_at": "2026-10-19T05:54:03+00:00"
+  },
+  "home": {
+   "url": "https://exa.ai/",
+   "status": 200,
+   "final_url": "https://exa.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 211732,
+   "truncated": false,
+   "sha256": "585c49a7b62ab819b18d2da0f832197c29002586738e43c12ad4e670ee19cf3b",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 5783
+  }
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "slug": "apify",
+ "name": "Apify",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:13+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://docs.apify.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.apify.com/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 98265,
+   "truncated": false,
+   "sha256": "707f7f000d301a4abf95a6dcff3698267484fef16b3494ae57339bb3794a5952",
+   "fetched_at": "2026-10-19T05:54:13+00:00",
+   "text_bytes": 98250
+  },
+  "llms-full": {
+   "url": "https://docs.apify.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.apify.com/llms-full.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 3000000,
+   "truncated": true,
+   "sha256": "f2dda61b3bf6fb67efb8f2005028ca4b6b5e4914d04c1644861eac4f4f7644b8",
+   "fetched_at": "2026-10-19T05:54:14+00:00",
+   "text_bytes": 2996987
+  },
+  "pricing": {
+   "url": "https://apify.com/pricing",
+   "status": 200,
+   "final_url": "https://apify.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 485745,
+   "truncated": false,
+   "sha256": "580b253cee9fc3f6d7902362b5d3584db9bde5060706bdc90b56d2e0a5f0de59",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 12856
+  },
+  "docs": {
+   "url": "https://docs.apify.com/",
+   "status": 200,
+   "final_url": "https://docs.apify.com/",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 98265,
+   "truncated": false,
+   "sha256": "707f7f000d301a4abf95a6dcff3698267484fef16b3494ae57339bb3794a5952",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 98250
+  },
+  "home": {
+   "url": "https://apify.com/",
+   "status": 200,
+   "final_url": "https://apify.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 534999,
+   "truncated": false,
+   "sha256": "f56b96a7f99eccc264a016cacece6fceb0d1dc5eda516db79e7ec8b5f6863d09",
+   "fetched_at": "2026-10-19T05:54:18+00:00",
+   "text_bytes": 10198
+  },
+  "act-pricing": {
+   "url": "https://docs.apify.com/platform/actors/publishing/monetize",
+   "status": 200,
+   "final_url": "https://docs.apify.com/actors/publishing/monetize",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 6958,
+   "truncated": false,
+   "sha256": "0682275f4206fa80d143ebd155219ad00843409386e9d8a798550b2406eabad3",
+   "fetched_at": "2026-10-19T05:59:37+00:00",
+   "text_bytes": 6958
+  }
+ }
+}

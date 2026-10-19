@@ -1,0 +1,63 @@
+{
+ "slug": "anthropic-websearch",
+ "name": "Anthropic Web Search",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:51+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.anthropic.com/pricing",
+   "status": 200,
+   "final_url": "https://claude.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1245869,
+   "truncated": false,
+   "sha256": "0cab64010025f8a21edeed0e4b029f54f8efeadaa3e2f0853150e89d9cd406b1",
+   "fetched_at": "2026-10-19T05:54:51+00:00",
+   "text_bytes": 22094
+  },
+  "docs": {
+   "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool",
+   "status": 200,
+   "final_url": "https://claude.com/app-unavailable-in-region",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 305892,
+   "truncated": false,
+   "sha256": "c8d6bec3afd9fb3722ef57cbb59d0bcd64449fc9970b161d5f4553414e3fa027",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 4101
+  },
+  "llms": {
+   "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool/llms.txt",
+   "status": 200,
+   "final_url": "https://claude.com/app-unavailable-in-region",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 305892,
+   "truncated": false,
+   "sha256": "2aea8f0136b99f9bad84d4e259725f15a43b615e924743e7294bd938ff426878",
+   "fetched_at": "2026-10-19T05:54:54+00:00",
+   "text_bytes": 4101
+  },
+  "llms-full": {
+   "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://claude.com/app-unavailable-in-region",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 305892,
+   "truncated": false,
+   "sha256": "ca2d72a9467997b062c209b10ea8a3603cde3c80aa2446f3c34830ac5ee3bf91",
+   "fetched_at": "2026-10-19T05:55:01+00:00",
+   "text_bytes": 4101
+  },
+  "llms-https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool/docs/llms.txt": {
+   "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://claude.com/app-unavailable-in-region",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 305892,
+   "truncated": false,
+   "sha256": "53268d02b0998c25851acdb45eccd3bfab9b4657318b144dc03ea29bcd38d43c",
+   "fetched_at": "2026-10-19T05:54:59+00:00",
+   "text_bytes": 4101
+  }
+ }
+}

@@ -1,0 +1,30 @@
+# Apify (apify) category=serp-scrape
+home=https://apify.com/ pricing=https://apify.com/pricing docs=https://docs.apify.com/ llms=https://docs.apify.com/llms.txt
+sources_ok: llms:https://docs.apify.com/llms.txt, llms-full:https://docs.apify.com/llms-full.txt, pricing:https://apify.com/pricing, docs:https://docs.apify.com/, home:https://apify.com/
+--- ranked fact lines ---
+[llms] > Apify is the largest marketplace of tools for AI. Thousands of ready-made Actors to automate your business. Get real-time web data, track competitors, generate leads, analyze sentiment, and orchestrate your apps. Actors are created by a global community of builders earning over $1M every month. Apify takes care of infrastructure, billing, and distribution.
+[pricing] Can I try Apify for free? Absolutely! We offer a free plan that lets you use most of the features of the Apify platform, but with certain limits. No credit card is required. The free plan includes Apify Proxy, which is limited to use within the platform and does not extend to external clients.
+[llms] - [Apify Academy](https://docs.apify.com/academy.md): Learn everything about web scraping and automation with our free courses that will turn you into an expert scraper developer.
+[llms] - [Actor rental pricing model](https://docs.apify.com/actors/publishing/monetize/rental.md): Learn how to monetize your Actor with the rental pricing model, offering a free trial and a flat monthly fee, and understand how profit is calculated.
+[pricing] If you'd like a free demo of Apify's custom solutions, please contact us .
+[pricing] What happens after I run out of prepaid usage? If you're a paying user, you can continue using the platform and will be charged for overage until you reach the usage limit configured in the billing. If you're on the free plan, you'll be blocked until the next billing cycle.
+[pricing] I would like to develop Actors. What should I do? Apify Academy is a free course that shows you how to start developing Actors on the Apify platform. You can also find more information in the Apify documentation .
+--- llms/readme head ---
+# Apify Documentation
+> Apify is the largest marketplace of tools for AI. Thousands of ready-made Actors to automate your business. Get real-time web data, track competitors, generate leads, analyze sentiment, and orchestrate your apps. Actors are created by a global community of builders earning over $1M every month. Apify takes care of infrastructure, billing, and distribution.
+The entire content of Apify documentation is available in a single Markdown file at https://docs.apify.com/llms-full.txt
+For pricing details, see https://apify.com/pricing.md
+For autonomous AI agents, the Apify Agent General Interface (AGI) at https://agi.apify.com is the entry point to use and pay for the Apify platform and Actors through agentic payment protocols like x402 or MPP, without account setup or ongoing billing.
+## Apify API
+- [Apify API documentation](https://docs.apify.com/api.md)
+- [Apify API](https://docs.apify.com/api/v2.md): The Apify API (version 2) provides programmatic access to the [Apify
+- [Manage Actor builds](https://docs.apify.com/api/v2/actor-builds.md): Manage Actor builds
+- [Manage Actor runs](https://docs.apify.com/api/v2/actor-runs.md): Manage Actor runs
+- [Manage Actor tasks](https://docs.apify.com/api/v2/actor-tasks.md): Manage Actor tasks
+- [Actors](https://docs.apify.com/api/v2/actors.md): Actors
+- [Actor builds](https://docs.apify.com/api/v2/actors-actor-builds.md): Actor builds
+- [Actor runs](https://docs.apify.com/api/v2/actors-actor-runs.md): Actor runs
+- [Actor versions](https://docs.apify.com/api/v2/actors-actor-versions.md): Actor versions
+- [Webhook collections](https://docs.apify.com/api/v2/actors-webhook-collection.md): Webhook collections
+- [Default dataset](https://docs.apify.com/api/v2/default-dataset.md): Default dataset
+- [Default key-value store](https://docs.apify.com/api/v2/default-key-value-store.md): Default key-value store

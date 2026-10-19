@@ -1,0 +1,459 @@
+# SearchCans - AI Data Infrastructure
+> https://www.searchcans.com
+> The Data Layer Your AI Needs
+> SERP API + Reader API · Credits from $0.56/1K on Ultimate · 100 Free Credits · No Payment Method Required to Start
+
+## API Versioning Notice (Read First)
+- **Current stable version**: `v1` - all endpoints below use `/api/v1/...`
+- **Legacy version**: `v0` (`/api/search`, `/api/url`) is **deprecated** and will be **permanently shut down on 2026-12-31 23:59 UTC**
+- **Migration**: drop-in replacement, just add `/v1` to the path
+- **Legacy docs**: https://www.searchcans.com/api-v0-legacy/
+
+## What is SearchCans?
+SearchCans is AI data infrastructure providing real-time search results (SERP API) and LLM-ready web content extraction (Reader API) from one unified platform. Built for AI agents, RAG systems, and developers who need reliable, affordable access to web data.
+
+SearchCans is powered by Vcans, where its scalable search and extraction workflows run.
+
+**Core Value**: Prepaid credit packs from $18, down to $0.56 per 1,000 credits on Ultimate. Standard SERP uses 1 credit; standard Reader uses 2 credits ($1.12 per 1,000 requests on Ultimate), before proxy add-ons. Parallel Lanes limit in-flight concurrency, with no hourly request caps. 100 free credits for new users.
+
+## Core APIs
+
+### 1. SERP API - Search Google & Bing
+**What it does**: Get real-time search results from Google and Bing
+**Endpoint**: POST https://www.searchcans.com/api/v1/search
+**Cost**: 1 credit per API call
+**Response Time**: Varies by query, requested features, and network conditions. Measure latency on your workload; no benchmark percentile is asserted here.
+**Data returned**: 
+- Organic search results (titles, URLs, descriptions, rankings)
+- Full metadata
+
+**Use cases**:
+- SEO rank tracking
+- Competitive intelligence
+- Market research
+- AI agent web search
+- Content discovery
+
+### 2. Reader API - URL to Markdown
+**What it does**: Extract supported web pages and PDFs into Markdown. Source access, page structure, and rendering options affect completeness.
+**Endpoint**: POST https://www.searchcans.com/api/v1/url
+**Cost**: 2 credits per API call
+**Response Time**: Varies by source page, rendering, proxy mode, and timeout settings. Measure latency and extraction completeness on your own URLs.
+**Data returned**:
+- Clean Markdown format
+- Main content extraction
+- Images and metadata
+- Structured data
+- No ads or navigation noise
+
+**Use cases**:
+- RAG (Retrieval-Augmented Generation) pipelines
+- LLM training data collection
+- Content aggregation
+- Web scraping alternative
+- Knowledge base building
+
+**Alternative to**: Jina Reader, Firecrawl, Diffbot
+
+### 3. File Extraction API - Document to Markdown
+**What it does**: Convert PDF, DOCX, XLSX, PPTX, DOC, XLS, EPUB to clean, structured Markdown
+**Endpoint**: POST https://www.searchcans.com/api/v1/url (with file=1)
+**Cost**: Included in the Reader API base cost; no add-on credits
+**Response field**: fileMarkdown (distinct from Reader API's markdown field)
+**Data returned**:
+- Full document content as Markdown
+- Headings, tables, lists, code blocks preserved
+- Document metadata when available
+
+**Use cases**:
+- RAG pipeline document ingestion
+- Legal/compliance document parsing
+- Enterprise knowledge base conversion
+- LLM training data from documents
+**Docs**: https://www.searchcans.com/file-extraction-api/
+
+### 4. Web Screenshot API - Page to PNG
+**What it does**: Capture full-page or viewport screenshots of any URL
+**Endpoint**: POST https://www.searchcans.com/api/v1/url (with image=1 or image=2)
+**Cost**: Included in the Reader API base cost; no add-on credits
+**Response field**: imageUrl (CDN URL of the captured PNG)
+**Docs**: https://www.searchcans.com/web-screenshot-api/
+
+## Real Pricing (2026)
+
+### Pay-As-You-Go Plans
+| Plan | Credits | Price | Per 1K | Parallel Lanes | Stackable |
+|------|---------|-------|--------|----------------|----------|
+| Free | 100 | $0 | Free | 1 | No |
+| Standard | 20,000 | $18 | $0.90 | 2 | No |
+| Starter | 132,000 | $99 | $0.75 | 5 | Yes |
+| Pro | 995,000 | $597 | $0.60 | 37 | Yes |
+| Ultimate | 3,000,000 | $1,680 | **$0.56** | 113 | Yes |
+
+**Credit Usage**:
+- SERP API (all types - Google/Bing): 1 credit per call
+- Google Search/News page range (page:1): +1 credit per additional page
+- Reader API standard mode: 2 credits per call
+- Reader API + Proxy:1 (Shared): 4 credits total
+- Reader API + Proxy:2 (Datacenter): 7 credits total
+- Reader API + Proxy:3 (Residential): 12 credits total
+- File Parsing (file:1) and Screenshot (image:1/2): Included - no extra credits
+- Credits are deducted only for successful HTTP 200 responses
+- Credits valid for 6 months
+- Current prepaid credit packs have no recurring billing
+
+### What are Parallel Lanes?
+Parallel Lanes are requests that can run at the same time.
+- 1 lane = 1 request running now
+- When one request finishes, that lane opens again right away
+- More lanes help with bursts, queues, and busy agent workflows
+- Lanes control throughput, while credits control total usage
+
+### Lane Stacking (Scale Concurrency)
+Buy multiple eligible plans and we combine their Parallel Lanes:
+- 1× $99 = 5 Lanes
+- 2× $99 = 10 Lanes (twice the in-flight capacity, not a guaranteed speed increase)
+- 1× $99 + 1× $597 = 42 Lanes
+- 2× $1,680 = 226 Lanes
+
+**Rules**: $18 Standard tier is non-stackable. Credits consumed FIFO (oldest order first). When an order's credits deplete or expire, its lanes are automatically detached.
+
+**Price Comparison** (approximate, use qualifiers):
+- SearchCans standard SERP: $0.90/1K requests on Standard through $0.56/1K on Ultimate; Reader standard extraction uses twice the credits.
+- Third-party prices and limits change. Use the comparison pages for current, source-dated details.
+
+## Rewards & Incentive Program
+
+SearchCans offers three ways for registered users to earn free credits without spending money. All managed at https://www.searchcans.com/dashboard/rewards/
+
+### 1. Referral Program
+- Share your referral link (`https://www.searchcans.com?r=YOUR_CODE`)
+- Friend signs up via your link - **you earn +300 credits instantly**
+- Monthly cap: 30 successful referral registrations per calendar month (resets on 1st)
+- Friend purchases >10,000 credits in a single order - **you earn 20% of their purchase as bonus credits** (no monthly cap)
+
+### 2. Free Redemption Codes
+- Platform releases free credit code batches periodically
+- Each account may redeem **one code per batch** (any code from the same batch counts)
+- New batches are released when available after the current batch is exhausted
+- Credits added **instantly** after redemption. Codes are case-insensitive.
+- Browse available codes: https://www.searchcans.com/dashboard/redeem-codes/
+- `valid` field: `0` = credits are permanent; non-zero = validity period in seconds after redemption
+
+### 3. Share & Earn
+- Post about SearchCans on social media (must include `searchcans.com` domain or your referral link)
+- Submit the post URL via Dashboard -> Rewards -> Share & Earn
+- AI agent reviews within **24 hours**
+- Approved -> **+1,000 credits** (no submission limit - every approved post earns)
+- Supported platforms: YouTube, X/Twitter, Reddit, Facebook, TikTok, Instagram, WhatsApp, Quora, Threads, Snapchat, Discord, Medium, LinkedIn, Other (14 total)
+- Content must be positive and genuine. No spam or misleading content.
+- Pending submissions can be retracted by the user before a decision is made.
+
+**Submission status values**: `1` = Pending Review · `4` = Approved (+1,000 cr) · `3` = Rejected · `0` = Withdrawn
+
+---
+
+## Quick Start (5 Minutes)
+
+### Step 1: Get Free Credits
+Sign up at https://www.searchcans.com/register/
+- 100 free credits; no payment method required to start
+
+### Step 2: Get API Key
+Go to Dashboard: https://www.searchcans.com/dashboard/
+- Copy your API key
+
+### Step 3: Make First Call
+
+**Python Example - SERP API**:
+```python
+import requests
+
+response = requests.post(
+    'https://www.searchcans.com/api/v1/search',
+    headers={
+        'Authorization': 'Bearer YOUR_API_KEY',
+        'Content-Type': 'application/json'
+    },
+    json={'s': 'artificial intelligence', 't': 'google', 'd': 30000},
+    timeout=35,
+    allow_redirects=False,
+)
+response.raise_for_status()
+if response.status_code != 200:
+    raise RuntimeError(f'Unexpected HTTP status: {response.status_code}')
+body = response.json()
+if not isinstance(body, dict) or body.get('code') != 0:
+    raise RuntimeError('SearchCans returned an API error')
+data = body.get('data')
+if not isinstance(data, dict) or not isinstance(data.get('organic'), list):
+    raise ValueError('Expected data.organic to be an array')
+for item in data['organic']:
+    if not isinstance(item, dict):
+        raise ValueError('Expected each organic result to be an object')
+    print(item.get('title', ''), item.get('link', ''))
+```
+
+**Python Example - Reader API**:
+```python
+response = requests.post(
+    'https://www.searchcans.com/api/v1/url',
+    headers={
+        'Authorization': 'Bearer YOUR_API_KEY',
+        'Content-Type': 'application/json'
+    },
+    json={'s': 'https://example.com', 't': 'url', 'w': 3000}
+)
+markdown = response.json()['data']['markdown']
+print(markdown)
+```
+
+**Node.js Example**:
+```javascript
+const response = await fetch('https://www.searchcans.com/api/v1/search', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    s: 'machine learning',
+    t: 'bing',
+    d: 30000
+  }),
+  signal: AbortSignal.timeout(35000),
+  redirect: 'error'
+});
+if (!response.ok) throw new Error(`HTTP ${response.status}`);
+const body = await response.json();
+if (body?.code !== 0) throw new Error('SearchCans returned an API error');
+const organic = body.data?.organic;
+if (!Array.isArray(organic)) throw new Error('Expected data.organic to be an array');
+for (const item of organic) {
+  if (item === null || typeof item !== 'object' || Array.isArray(item)) {
+    throw new Error('Expected each organic result to be an object');
+  }
+  console.log(item.title ?? '', item.link ?? '');
+}
+```
+
+## Main Pages
+
+### Essential Links
+- **Homepage**: https://www.searchcans.com/
+- **API Documentation**: https://www.searchcans.com/apis/
+- **Interactive Playground**: https://www.searchcans.com/playground/
+- **Pricing**: https://www.searchcans.com/pricing/
+- **Register (Free)**: https://www.searchcans.com/register/
+- **Dashboard**: https://www.searchcans.com/dashboard/
+- **Blog & Tutorials**: https://www.searchcans.com/blog/
+- **FAQ**: https://www.searchcans.com/faq/
+
+### Documentation Sections
+- Quick Start Guide
+- SERP API Reference
+- Reader API Reference (with Proxy Pool & Advanced Extraction)
+- Authentication (Bearer token)
+- Error Handling & Concurrency Codes
+- Parallel Lanes & Lane Stacking
+- Code Examples (Python, Node.js, cURL)
+
+## Use Cases & Examples
+
+### 1. AI Agents with Web Search
+**Problem**: LLMs have knowledge cutoff dates
+**Solution**: Use SERP API to give AI real-time web search
+**Tutorial**: https://www.searchcans.com/blog/langchain-serper-alternative-top-serp-apis/
+**Benefit**: Break through knowledge limitations
+
+### 2. RAG Systems
+**Problem**: Need fresh web content for LLM context
+**Solution**: Use Reader API to get clean Markdown from URLs
+**Tutorial**: https://www.searchcans.com/blog/building-rag-pipeline-with-reader-api/
+**Benefit**: Always-current information for AI responses
+
+### 3. SEO Rank Tracking
+**Problem**: SEO tools cost $99-499/month
+**Solution**: Build your own with SERP API
+**Tutorial**: https://www.searchcans.com/blog/build-diy-keyword-rank-tracker/
+**Benefit**: $0/month vs $99-499/month for Ahrefs/SEMrush
+
+### 4. Competitive Intelligence
+**Problem**: Manual competitor research is slow
+**Solution**: Automate SERP monitoring for competitor analysis
+**Tutorial**: https://www.searchcans.com/blog/competitive-intelligence-automation-serp-monitoring/
+**Benefit**: Real-time insights vs monthly reports
+
+### 5. Content Aggregation
+**Problem**: Need to collect content from multiple sources
+**Solution**: Use Reader API to extract clean content
+**Tutorial**: https://www.searchcans.com/blog/google-news-monitoring-api-guide/
+**Benefit**: Clean, structured content without scraping
+
+### 6. Market Research
+**Problem**: Need real-time market trends and data
+**Solution**: Use SERP API to track search trends
+**Tutorial**: https://www.searchcans.com/blog/real-time-market-intelligence-api-integration/
+**Benefit**: Live data for strategic decisions
+
+## Technical Specifications
+
+### Authentication
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+Get your key: https://www.searchcans.com/dashboard/
+
+### SERP API Parameters
+- **s**: Search query (required)
+- **t**: Engine - google | bing (required)
+- **d**: Timeout in milliseconds (default 30000)
+- **p**: Page number (optional)
+
+### Reader API Parameters
+- **s**: Target URL (required)
+- **t**: Fixed value "url" (required)
+- **mode**: Render mode - 0 = standard HTTP (default) | 1 = headless browser
+- **w**: Wait time in ms after page load, applies when mode=1 (default 5000)
+- **d**: Max timeout in ms (default 30000)
+- **file**: File Extraction - 0 (default) | 1 = parse document URL as Markdown; returns fileMarkdown field. Included in the Reader API base cost.
+- **image**: Screenshot - 0 (default) | 1 = viewport PNG | 2 = full-page PNG; returns imageUrl field. Included in the Reader API base cost.
+- **proxy**: Proxy tier - 0 none (default) | 1 Shared (+2 credits) | 2 Datacenter (+5 credits) | 3 Residential (+10 credits)
+
+### Response Format
+- Google/Bing SERP API: `data` is an object; `data.organic` is the array of organic results. Result fields include `position`, `title`, `link`, and `snippet`; optional fields may be absent.
+- Reader API: `response.json()["data"]["markdown"]` returns clean Markdown
+- Check HTTP success and top-level `code: 0` before reading results. An empty `data.organic` array means no organic rows were returned; an API error or invalid response shape is not an empty successful result.
+- Use `item["link"]` for the result URL and `item.get("snippet", "")` for optional snippet text. Other search engines and optional SERP features can use different fields; follow the relevant endpoint documentation.
+
+### Supported Languages
+- **Python**: requests library examples
+- **Node.js**: fetch / axios examples
+- **PHP**: cURL examples
+- **Go**: net/http examples
+- **cURL**: Direct HTTP requests
+
+### Performance
+- **Response Time**: Workload-dependent; this document does not provide a measured p95 latency or a latency guarantee.
+- **Availability**: See https://www.searchcans.com/status/ for published service status. This document does not establish a contractual SLA or an independently verified availability benchmark.
+- **Concurrency**: Parallel Lanes (1-113 per plan, stackable up to 200+). No hourly throughput limits.
+- **Credits**: Only successful HTTP 200 responses deduct credits.
+
+## Popular Blog Posts
+
+### AI & LLM Integration
+1. **LangChain + SearchCans Integration**
+   https://www.searchcans.com/blog/langchain-serper-alternative-top-serp-apis/
+   - Build AI agents with real-time web search
+
+2. **Building RAG Pipeline with Reader API**
+   https://www.searchcans.com/blog/building-rag-pipeline-with-reader-api/
+   - Convert web content to LLM-ready format
+
+3. **Scaling AI Agents: Unlimited Concurrency**
+   https://www.searchcans.com/blog/scaling-ai-agents-parallel-search-lanes-faster-requests/
+   - Handle high-volume AI applications
+
+### SEO & Rank Tracking
+4. **Build DIY Keyword Rank Tracker**
+   https://www.searchcans.com/blog/build-diy-keyword-rank-tracker/
+   - Compare SEO tooling workflows and costs using current sources
+
+5. **Cheapest SERP API Comparison 2026**
+   https://www.searchcans.com/blog/cheapest-serp-api-comparison-2026/
+   - Price comparison with current source notes
+
+### Web Scraping Alternatives
+6. **Python Google Scraping Tutorial 2026**
+   https://www.searchcans.com/blog/how-to-scrape-google-search-results-python-2026/
+   - API-based alternative to direct browser scraping
+
+7. **Bypass Google 429 Errors**
+   https://www.searchcans.com/blog/fix-429-too-many-requests-scraping/
+   - Use the SERP API instead of managing browser scraping directly
+
+### Reader API Guides
+8. **Reader API vs Jina Reader**
+   https://www.searchcans.com/blog/reader-api-vs-jina-reader/
+   - Feature and price comparison
+
+9. **Web to Markdown for RAG**
+   https://www.searchcans.com/blog/web-to-markdown-api-rag-optimization/
+   - Prepare web content for LLM and RAG workflows
+
+10. **URL Content Extraction Guide**
+    https://www.searchcans.com/blog/url-content-extraction-api-guide/
+    - Complete Reader API tutorial
+
+## Frequently Asked Questions
+
+**Q: How are credits consumed?**
+A: Standard Google and Bing search use 1 credit per request. Reader API standard mode uses 2 credits per request. Premium add-ons such as Proxy Pool tiers consume additional credits. Credits are deducted only for successful HTTP 200 responses.
+
+**Q: Do credits expire?**
+A: Credits are valid for 6 months from purchase.
+
+**Q: Is there a free tier?**
+A: Yes. New users get 100 free credits, and no payment method is required to start.
+
+**Q: How can I earn free credits beyond the sign-up bonus?**
+A: Three ways: (1) Refer friends - earn +300 credits per successful registration (up to 30/month) and 20% of their first purchase over 10,000 credits; (2) Redeem free codes - browse available batches at /dashboard/redeem-codes/, one code per batch per account; (3) Share & Earn - post about SearchCans on social media and submit the URL for AI review, earn +1,000 credits per approval with no submission limit.
+
+**Q: How does Share & Earn work?**
+A: Post about SearchCans on social media (the post must include searchcans.com or your referral link), then submit the post URL in Dashboard -> Rewards -> Share & Earn. Our AI agent reviews within 24 hours. Approved submissions earn +1,000 credits. There is no limit on how many posts you can submit.
+
+**Q: Are there rate limits?**
+A: No hourly rate limits. We use Parallel Lanes instead. A lane is one request that can run now. When one request finishes, that lane opens again. You can stack eligible plans to increase lanes - for example, 2x $99 = 10 lanes.
+
+**Q: Do more lanes change credit cost?**
+A: No. Credits control usage volume. Lanes control how much work can run at the same time. One request still uses the same credits based on the endpoint you call.
+
+**Q: What's the difference between SearchCans and SerpApi?**
+A: SearchCans combines SERP and Reader APIs in one platform and credit pool, with prepaid plans and Parallel Lanes for concurrent requests. Compare current provider pricing and capabilities using source-dated pages.
+
+**Q: Can I cancel anytime?**
+A: Current prepaid credit packs do not have recurring billing. Buy credits when you need them and use them within their stated validity period.
+
+**Q: Do you offer refunds?**
+A: We offer a 7-day refund window from the date of purchase, provided that less than 10% of the purchased credits have been used. All API activity across your account counts toward the usage threshold. See Terms of Service Section 4.3 for full details.
+
+**Q: What payment methods do you accept?**
+A: Credit card via Stripe. Enterprise customers can request invoice payment.
+
+## Support & Contact
+
+### Get Help
+- **Email**: support@searchcans.com
+- **Response Time**: Within 24 hours
+- **Documentation**: https://www.searchcans.com/apis/
+- **FAQ**: https://www.searchcans.com/faq/
+
+### Try Now
+1. **Free Trial**: https://www.searchcans.com/register/ (100 credits; no payment method required to start)
+2. **Playground**: https://www.searchcans.com/playground/ (test in browser)
+3. **Docs**: https://www.searchcans.com/apis/ (copy-paste code)
+4. **Pricing**: https://www.searchcans.com/pricing/ (see all plans)
+
+## Why SearchCans?
+
+**Prepaid Pricing**: Packs start at $18, with rates from $0.56-0.90 per 1,000 credits across paid plans. Standard SERP uses 1 credit per request; standard Reader uses 2, before proxy add-ons.
+**Parallel Search Lanes**: Concurrent request model with Lane Stacking for scale
+**Dual Engine**: SERP + Reader in one platform
+**Free Start**: 100 free credits; no payment method required to start
+**Real-time Data**: Live search results, not cached
+**LLM-Ready**: Markdown output perfect for RAG/AI
+**5-Minute Setup**: Get started in minutes, not hours
+**Current Prepaid Packs**: No recurring subscription required
+
+## Alternative To
+- SerpApi, Serper.dev, Bright Data, and other SERP providers; compare current, source-dated pricing and limits before choosing.
+- Jina Reader, Firecrawl, and Diffbot for web content extraction workflows; compare extraction scope, response format, and current pricing.
+
+---
+
+## About This File
+This file follows the llms.txt specification for AI-friendly website information.
+Learn more: https://llmstxt.org/
+
+Last updated: 2026-09-10
+Version: 7.4 (Corrected Google/Bing SERP examples and response-field guidance.)

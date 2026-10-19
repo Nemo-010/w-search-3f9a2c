@@ -1,0 +1,263 @@
+ScraperAPI: Scale Data Collection with a Simple Web Scraping API 
+ ScraperAPI has acquired Traject Data 
+ READ THE ANNOUNCEMENT 
+ Pricing 
+ Solutions 
+ Close Solutions 
+ Open Solutions 
+ Products 
+ Async Scraper Service 
+ Send millions of requests asynchronously. 
+ Structured Data 
+ Get structured JSON data from in-demand domains. 
+ AI & Automation 
+ Connect AI agents and automation tools with live web data. 
+ DataPipeline 
+ Automate data collection without writing a single line of code. 
+ Scraping API 
+ Collecting data from millions of web sources. 
+ Large-Scale Data Acquisition 
+ Handle millions of requests without sacrificing efficiency. 
+ Industries 
+ Ecommerce 
+ Improve profit margins and product offerings. 
+ Market Research Firms 
+ Understand your target market and predict shifts in demand. 
+ SEO Agencies 
+ Inform your strategy and track performance with 1st-party data. 
+ Travel Agencies and Hotels 
+ Spot trending destinations and potential risks. 
+ VCs and Hedge Funds 
+ Find investment opportunities and optimize your portfolio. 
+ AI and ML 
+ Scale training data collection. 
+ Use cases 
+ SERP Data Collection 
+ Collect search data for any query in seconds. 
+ Ecommerce Data Collection 
+ Grow your ecommerce with first-party data. 
+ Market Research Scraper 
+ Empower your marketing strategy with accurate data. 
+ Real Estate Data Collection 
+ Make smart investments by collecting property listing data on autopilot, 24/7. 
+ Online Reputation Management 
+ Monitor the web to identify MAP violations and brand misrepresentation. 
+ Custom Trial 
+ Documentation 
+ Close Documentation 
+ Open Documentation 
+ Documentation 
+ Getting Started 
+ Get your API key and make your first request. 
+ Synchronous API 
+ Get raw HTML back in seconds. 
+ Asynchronous API 
+ Submit 50,000 jobs that retry until they succeed. 
+ JavaScript Rendering 
+ Load dynamic pages in a headless browser. 
+ Structured Data Endpoints 
+ Get clean JSON from Amazon, Google, Walmart and more. 
+ AI Parser 
+ Get clean JSON from any source by training a custom parser. 
+ DataPipeline 
+ Build and automate large scraping jobs. 
+ AI/LLM Integrations 
+ Build scalable web scraping agents. 
+ Custom Trial 
+ Resources 
+ Close Resources 
+ Open Resources 
+ Resources 
+ Developer Guides 
+ Get your scraper up and running in minutes. 
+ Free Downloads 
+ Get free whitepapers, cheat sheets, and more. 
+ Product FAQs 
+ Find an answer to all your ScraperAPI questions. 
+ Case Studies 
+ Learn how big companies are using ScraperAPI. 
+ Webinars 
+ Unlock data insights and stay ahead in your field with our webinars. 
+ Comparisons 
+ Make an informed decision without guesswork. 
+ Learning Hub 
+ Web scraping basics for all skill levels. 
+ Glossary 
+ Scraping terms in simple words. 
+ Blog 
+ Projects, guides, and tutorials in one place. 
+ Custom Trial 
+ Support 
+ Custom Trial 
+ Login 
+ Start Free 
+ CUSTOM TRIAL 
+ Login 
+ Start Free 
+ Scale Data Collection with a Simple API 
+ Collect data from any public website with our web scraping API, without worrying about proxies, browsers, or CAPTCHA handling. 
+ GET CUSTOM TRIAL 
+ Start Free 
+ Join the 10,000+ data-focused companies using ScraperAPI 
+ Data Collection Solutions 
+Designed for Scalability and Consistency 
+ Our scraping APIs and low-code tools help you unlock and scrape any website, no matter the scale or difficulty. 
+ Scraping API 
+ Plug-and-play solution to scale your web scrapers. 
+ Learn more 
+ Structured Endpoints 
+ Get structured data from popular domains. 
+ Learn more 
+ Async Scraper 
+ Send millions of requests asynchronously. 
+ Learn more 
+ DataPipeline 
+ Automate data collection without writing a single line of code. 
+ Learn more 
+ Structured Data Endpoints 
+ ScraperAPI transforms the website into readable and predictable structured JSON data. Receive only the information you care about instead of hundreds of unnecessary HTML tags and scripts. 
+ Amazon Product Endpoint 
+ Scrape Amazon product details in JSON format. 
+ Learn more 
+ Google Search Endpoint 
+ Monitor keyword rankings, ads, and more. 
+ Learn more 
+ Walmart Search Endpoint 
+ Discover what products are ranking at the top. 
+ Learn more 
+ Amazon Search Scraper 
+ Submit a list of queries and get all ranking products in JSON or CSV format. 
+ Amazon Product Scraper 
+ Monitor millions of product ASINs and get details like name, price, ratings, and more. 
+ Amazon Offers Scraper 
+ Identify promotions and discounts your competitors’ are running on Amazon to adapt your strategy. 
+ Google Search Scraper 
+ Collect fresh SERP data for your target keywords and feed your own tools and dashboards. 
+ Google Shopping Scraper 
+ Retrieve product details like names, prices, ranking positions, and more from Google Shopping. 
+ Google News Scraper 
+ Monitor news around your brands and relevant keywords in your industry. 
+ Google Jobs Scraper 
+ Extract job listings from Google to identify recruitment trends and improve your job offerings. 
+ Walmart Product Scraper 
+ Scrape millions of Walmart products with just their IDs and get details like name, price, etc. 
+ Walmart Search Scraper 
+ Scrape Walmart search results for thousands of search terms and get product data in JSON. 
+ Discover All SDEs 
+ Get JSON data from the most in-demand domains 
+ Discover All SDEs​ 
+ Data Collection Uses Cases 
+ Data is just the first step – Here are a few ideas you can explore in your business 
+ Ecommerce 
+Scraper API 
+ Extract public data from any marketplace. 
+ Learn more 
+ Market Research Scraper API 
+ Collect consumer and competitor data in autopilot. 
+ Learn more 
+ SERP Scraper API 
+ Get structured and parsed search data. 
+ Learn more 
+ Real Estate Scraper API 
+ Automate property listing data collection. 
+ Learn more 
+ Get Localized Data at Scale with Geotargeting 
+ Get access to a global pool of over 40M proxies located across +50 countries and never get blocked again. 
+ Discover all locations 
+ Obtain a Competitive Advantage 
+in Your Industry 
+ Boost Your Response Time and Success Rates 
+ Get more data at scale faster. With ScraperAPI, you get record-fast results even for the toughest websites to scrape. 
+ Buy Back the Time of a Full-time Engineer 
+ Save hours of development work and reduce costs. Let your team focus on making use of data rather than extracting it. ScraperAPI will take care of proxy rotation, CAPTCHA and browser handling, and structuring data. 
+ Find your Optimal Price-to-Value Combination 
+ Save time and resources on developing complex scraping algorithms — connect our scraping API to your in-house web scrapers and focus your team on making use of high-quality web data. 
+ Enterprise-Level Data Collection Without the Price Tag 
+ Handle millions of requests asynchronously 
+ Get a dedicated support team and Slack channel 
+ Increase success rates to near-perfect in minutes 
+ 10,000+ 
+ Companies and developers  use ScraperAPI 
+ Over 11B Requests 
+ Served in the last 30 days 
+ 100% 
+ CCPA & GDPR compliant 
+ What Our Customers Are Saying 
+ One of the most frustrating parts of automated web scraping is constantly dealing with IP blocks and CAPTCHAs. ScraperAPI gets this task off of your shoulders. 
+ based on 50+ reviews 
+ The team at ScraperAPI was so patient in helping us debug our first scraper. Thanks for being super passionate and awesome!
+ Cristina Saavedra Optimization Director at SquareTrade 
+ A dead simple API plus a generous free tier are hard to beat. ScraperAPI is a good example of how developer experience can make a difference in a crowded category. 
+ Ilya Sukhar Founder of Parse, Partner at YCombinator 
+ I researched a lot of scraping tools and am glad I found ScraperAPI. It has low cost and great tech support. They always respond within 24 hours when I need any help with the product. 
+ Alexander Zharkov Fullstack Javascript Developer 
+ Ready to Get Started? 
+ GET CUSTOM TRIAL 
+ After building numerous web scrapers and navigating the tedious processes of finding proxies, setting up headless browsers, and handling CAPTCHAs, we created ScraperAPI to simplify this for you. Our service handles all these complexities, allowing you to scrape any page with a simple API call. 
+ X-twitter 
+ Linkedin 
+ Terms of Use 
+ Privacy and Cookies Policy 
+ Privacy Settings 
+ © ScraperAPI 
+ Product 
+ Pricing 
+ Documentation 
+ Product FAQs 
+ Pricing 
+ Documentation 
+ Product FAQs 
+ Company 
+ About 
+ Solutions 
+ Affiliate Program 
+ Support 
+ Case Studies 
+ About 
+ Solutions 
+ Affiliate Program 
+ Support 
+ Case Studies 
+ Resources 
+ Understand Web Scraping Pricing 
+ How to Choose a Data Collection Tool 
+ Enterprise Data Collection 
+ Blog 
+ Learning Hub 
+ Glossary 
+ Developer Guides 
+ Free Downloads 
+ How We Compare 
+ Understand Web Scraping Pricing 
+ How to Choose a Data Collection Tool 
+ Enterprise Data Collection 
+ Blog 
+ Learning Hub 
+ Glossary 
+ Developer Guides 
+ Free Downloads 
+ How We Compare 
+ Use Cases 
+ SERP Data Collection 
+ Ecommerce Data Collection 
+ Real Estate Data Collection 
+ Market Research Data Collection 
+ SERP Data Collection 
+ Ecommerce Data Collection 
+ Real Estate Data Collection 
+ Market Research Data Collection 
+ By Target 
+ Amazon Scraper 
+ Google Shopping Scraper 
+ Walmart Scraper 
+ eBay Scraper 
+ Etsy Scraper 
+ Home Depot Scraper 
+ Target Scraper 
+ Amazon Scraper 
+ Google Shopping Scraper 
+ Walmart Scraper 
+ eBay Scraper 
+ Etsy Scraper 
+ Home Depot Scraper 
+ Target Scraper

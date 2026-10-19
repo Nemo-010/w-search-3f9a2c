@@ -1,0 +1,23 @@
+# DBpedia (dbpedia) category=misc-api
+home=https://www.dbpedia.org/ pricing=None docs=https://dbpedia.org/sparql llms=None
+sources_ok: docs:https://dbpedia.org/sparql, home:https://www.dbpedia.org/, llms:https://www.dbpedia.org/llms.txt, llms-full:https://www.dbpedia.org/docs/llms-full.txt, llms-https://www.dbpedia.org/docs/llms.txt:https://www.dbpedia.org/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+Home - DBpedia Association
+Skip to content
+Github
+Forum
+Blog
+About DBpedia
+Resources
+Members
+Community
+Available Resources
+Overview Delve into the DBpedia resources
+Data Downloads
+Knowledge Graphs Use our pre-configured collections
+Snapshot Release Check the stable and consistent release (every 3 months)
+Latest Core Releases Monthly Dev version
+Popular Individual Datasets Spot the community’s favourites
+Language Resources (NIF) Extract Wikipedia text information
+Ontology (DBO) Browse the DBpedia ontologies

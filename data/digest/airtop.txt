@@ -1,0 +1,39 @@
+# Airtop (airtop) category=browser
+home=https://www.airtop.ai/ pricing=https://www.airtop.ai/pricing docs=https://docs.airtop.ai/ llms=None
+sources_ok: pricing:https://www.airtop.ai/pricing, docs:https://docs.airtop.ai/, home:https://www.airtop.ai/, llms:https://docs.airtop.ai/llms.txt, llms-full:https://www.airtop.ai/docs/llms-full.txt, llms-https://www.airtop.ai/docs/llms.txt:https://www.airtop.ai/docs/llms.txt
+--- ranked fact lines ---
+[llms-full] * The **Free plan includes 1,000 credits every month**.
+[llms-full] Yes, credits in the Free plan renew monthly. You receive **1,000 credits** each month with the Free plan to build and test your agents.
+[llms-full] * Credits renew **every month** on **all plans**, including the Free plan.
+[llms-full] Credits renew monthly on all subscription plans, including the Free plan. Your renewal date is the specific day of the month you subscribed to your plan. For Free plans, it is the day of the month you originally created your account.
+[llms-full] * **Trial:** Try Mark free for 7 days or until you use your initial credits.
+[llms] - [Billing & Credits](https://www.airtop.ai/help/billing/billing.md): This guide explains how Airtop billing works, how credits are renewed, and how you can manage your subscription. Whether you’re on the Free plan or a paid plan, the basics are the same.
+[llms-full] This guide explains how Airtop billing works, how credits are renewed, and how you can manage your subscription. Whether you’re on the Free plan or a paid plan, the basics are the same.
+[llms-full] ## Free Plan Credits
+[llms-full] <Accordion title="Do credits in the Free plan renew?">
+[llms-full] * The day you created your account if you’re on the Free plan.
+[llms] - [Connect Airtop with Make](https://www.airtop.ai/help/connections/make.md): Connect Airtop Agents with Make to create code-free automations and integrate with hundreds of apps and services.
+[llms-full] * New accounts also receive a **one-time signup grant of 30,000 credits**, so you start with **31,000 credits**.
+[llms-full] * The signup grant is available for your **first billing cycle only** — at your first renewal, your balance resets to the plan’s 1,000 monthly credits.
+[llms-full] * Monthly credits **automatically renew**, so you always start each month with a fresh allowance.
+[llms-full] If you have questions or need help choosing the right plan, feel free to reach out to **[support@airtop.ai](mailto:support@airtop.ai)**. We’re happy to help!
+[llms-full] Connect Airtop Agents with Make to create code-free automations and integrate with hundreds of apps and services.
+--- llms/readme head ---
+# Airtop
+- [Introduction](https://www.airtop.ai/help/guides/introduction.md): Get a quick overview of Airtop
+- [Meet Mark: Your go-to-market AI agent](https://www.airtop.ai/help/guides/mark.md): Use Mark to turn your go-to-market goals into repeatable, scalable agent workflows.
+- [Quick Start](https://www.airtop.ai/help/guides/quick-start.md): Start building awesome agents in minutes
+- [What you can do with the Agent Builder](https://www.airtop.ai/help/guides/agent-builder.md): Supported features within the Agent Builder
+- [Authentication](https://www.airtop.ai/help/guides/authentication.md): Learn how to authenticate to services with Airtop
+- [Bot Detection Avoidance](https://www.airtop.ai/help/guides/bot-detection.md): Understanding and configuring bot detection avoidance strategies
+- [Self-Healing](https://www.airtop.ai/help/guides/self-healing.md): Keep your deployed agents running without constant supervision
+- [Changelog](https://www.airtop.ai/help/changelog.md): New Airtop features, improvements, and fixes.
+- [FAQ](https://www.airtop.ai/help/guides/FAQ.md): Frequently Asked Questions about Airtop Agents.
+- [Billing & Credits](https://www.airtop.ai/help/billing/billing.md): This guide explains how Airtop billing works, how credits are renewed, and how you can manage your subscription. Whether you’re on the Free plan or a paid plan, the basics are the same.
+- [List of Integrations](https://www.airtop.ai/help/integrations/overview.md): Connect Airtop to the tools you already use. Browse the full list of available integrations and what each one does.
+- [Connect to Google Ads](https://www.airtop.ai/help/integrations/google-ads.md): The Google Ads integration lets Mark connect to a Google Ads advertiser account to audit performance, research keywords, plan campaigns, and make changes. All changes that can affect spend require your explicit approval before they are applied.
+- [Connect Airtop with Make](https://www.airtop.ai/help/connections/make.md): Connect Airtop Agents with Make to create code-free automations and integrate with hundreds of apps and services.
+- [Connect Airtop with n8n](https://www.airtop.ai/help/connections/n8n.md): Connect Airtop Agents with n8n to build workflow automations and integrate with various apps and services.
+- [Connect Airtop with Zapier](https://www.airtop.ai/help/connections/zapier.md): Connect Airtop Agents with Zapier to automate workflows and integrate with thousands of apps.
+- [Trigger Agent Webhook](https://www.airtop.ai/help/api-reference/trigger-agent-webhook.md): Triggers an agent execution via webhook. You can optionally provide configuration variables and a callback URL.
+- [Get Invocation Result](https://www.airtop.ai/help/api-reference/get-invocation-result.md): Retrieves the status and result of a specific agent invocation.

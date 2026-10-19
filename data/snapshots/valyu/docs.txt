@@ -1,0 +1,95 @@
+Valyu - Search API for AI Agents | Web + Proprietary Data Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Valyu home page Search... ⌘ K Join Onboard your agents Get an API key Get an API key Search... Navigation Getting Started Home Home Documentation API Reference SDKs Integrations Changelog Join our Discord Cookbook GitHub Blog Getting Started Build with Valyu The search API for AI knowledge work - agent-native access to the sources knowledge work depends on. Onboard your agents Claude Code Open in Claude Code ↗ Codex Open in Codex ↗ Cursor Open in Cursor ↗ View agents.md ↗ View pricing.md ↗ Search the web Extract content Get answers Deep research Search across the web and the sources knowledge work depends on. Copy prompt Python JavaScript cURL from valyu import Valyu 
+ client = Valyu( api_key = "your-api-key" ) 
+ response = client.search( 
+ query = "Latest AI inference datacenter projects" , 
+ search_type = "all" , 
+ max_num_results = 10 
+ ) 
+ print (response) 
+ import { Valyu } from "valyu-js" ; 
+ const client = new Valyu ( "your-api-key" ); 
+ const response = await client . search ( "Latest AI inference datacenter projects" , { 
+ searchType: "all" , 
+ maxNumResults: 10 
+ }); 
+ console . log ( response ); 
+ curl --request POST \ 
+ --url https://api.valyu.ai/v1/search \ 
+ --header 'Content-Type: application/json' \ 
+ --header "x-api-key: $VALYU_API_KEY " \ 
+ --data '{ 
+ "query": "Latest AI inference datacenter projects", 
+ "search_type": "all", 
+ "max_num_results": 10 
+ }' 
+ Learn more about the Search API → Extract and summarise content from any URL. Copy prompt Python JavaScript cURL from valyu import Valyu 
+ client = Valyu( api_key = "your-api-key" ) 
+ response = client.contents( 
+ [ "https://www.morganstanley.com/insights/articles/economic-outlook-midyear-2025" ], 
+ summary = True , 
+ extract_effort = "high" 
+ ) 
+ print (response) 
+ import { Valyu } from "valyu-js" ; 
+ const client = new Valyu ( "your-api-key" ); 
+ const response = await client . contents ([ 
+ "https://www.morganstanley.com/insights/articles/economic-outlook-midyear-2025" 
+ ], { 
+ summary: true , 
+ extractEffort: "high" 
+ }); 
+ console . log ( response ); 
+ curl --request POST \ 
+ --url https://api.valyu.ai/v1/contents \ 
+ --header 'Content-Type: application/json' \ 
+ --header "x-api-key: $VALYU_API_KEY " \ 
+ --data '{ 
+ "urls": ["https://www.morganstanley.com/insights/articles/economic-outlook-midyear-2025"], 
+ "summary": true, 
+ "extract_effort": "high" 
+ }' 
+ Learn more about the Contents API → Get AI answers grounded by our search. Copy prompt Python JavaScript cURL from valyu import Valyu 
+ client = Valyu( api_key = "your-api-key" ) 
+ response = client.answer( 
+ query = "What did Apple cite as the main drivers of its revenue change in the MD&A section of its 2023 10-K?" 
+ ) 
+ print (response.contents) 
+ import { Valyu } from "valyu-js" ; 
+ const client = new Valyu ( "your-api-key" ); 
+ const response = await client . answer ( 
+ "What did Apple cite as the main drivers of its revenue change in the MD&A section of its 2023 10-K?" 
+ ); 
+ console . log ( response . contents ); 
+ curl --request POST \ 
+ --url https://api.valyu.ai/v1/answer \ 
+ --header 'Content-Type: application/json' \ 
+ --header "x-api-key: $VALYU_API_KEY " \ 
+ --data '{ 
+ "query": "What did Apple cite as the main drivers of its revenue change in the MD&A section of its 2023 10-K?" 
+ }' 
+ Learn more about the Answer API → Let AI search and research for you, delivering comprehensive reports. Copy prompt Python JavaScript cURL from valyu import Valyu 
+ client = Valyu( api_key = "your-api-key" ) 
+ # Start a research task 
+ task = client.deepresearch.create( 
+ query = "Analyze the impact of AI on healthcare" 
+ ) 
+ # Check status 
+ status = client.deepresearch.status(task.deepresearch_id) 
+ print (status) 
+ import { Valyu } from "valyu-js" ; 
+ const client = new Valyu ( "your-api-key" ); 
+ // Start a research task 
+ const task = await client . deepresearch . create ({ 
+ query: "Analyze the impact of AI on healthcare" 
+ }); 
+ // Check status 
+ const status = await client . deepresearch . status ( task . deepresearch_id ); 
+ console . log ( status ); 
+ curl --request POST \ 
+ --url https://api.valyu.ai/v1/deepresearch/tasks \ 
+ --header 'Content-Type: application/json' \ 
+ --header "x-api-key: $VALYU_API_KEY " \ 
+ --data '{ 
+ "query": "Analyze the impact of AI on healthcare" 
+ }' 
+ Learn more about DeepResearch → Start Building Onboard your agents Hand one prompt to your coding agent and it sets Valyu up itself Quickstart Make your first API call in minutes Overview What Valyu is, the core APIs, and how they fit together Pricing Pay-per-use pricing, with plans that lower cost per credit Valyu home page discord x github linkedin Product Platform Data sources Pricing Developers API status OpenAPI spec Cookbook Company valyu.ai Blog Contact discord x github linkedin Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

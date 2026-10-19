@@ -1,0 +1,23 @@
+# Zyte (zyte) category=serp-scrape
+home=https://www.zyte.com/ pricing=https://www.zyte.com/pricing/ docs=https://docs.zyte.com/ llms=None
+sources_ok: pricing:https://www.zyte.com/pricing/, docs:https://docs.zyte.com/, home:https://www.zyte.com/, llms:https://docs.zyte.com/llms.txt, llms-https://www.zyte.com/llms.txt:https://www.zyte.com/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+# Zyte – The complete toolbox for web scraping, data extraction, and proxy infrastructure at scale. Trusted by thousands of companies worldwide.
+## Key Pages
+[Homepage](https://www.zyte.com/): Zyte homepage – all-in-one web data extraction platform
+[Pricing](https://www.zyte.com/pricing/): Current pricing and plans for all products
+[Solution Overview](https://www.zyte.com/solution-overview/): High-level overview of Zyte API capabilities
+[Developers Hub](https://www.zyte.com/developers/): Developer documentation, API references, and tools
+[Open Source](https://www.zyte.com/open-source/): Zyte's open-source projects (Scrapy, Splash, etc.)
+[Jobs](https://www.zyte.com/jobs/): Current career opportunities at Zyte
+[Meet Zyte](https://www.zyte.com/meet-zyte/): Company mission, team, and values
+[Contact Us](https://www.zyte.com/talk-to-us/): Contact form for sales and enterprise inquiries
+## Products (all live offerings)
+[Zyte API](https://www.zyte.com/zyte-api/): Single API for scraping, unblocking, browser automation, and AI extraction
+[Zyte API Enterprise](https://www.zyte.com/zyte-api-enterprise/): High-volume, SLA-backed solutions for enterprises
+[Headless Browser](https://www.zyte.com/zyte-api/headless-browser/): Full browser automation with built-in anti-bot bypass
+[Unblocking](https://www.zyte.com/zyte-api/unblocking/): Advanced proxy rotation and ban avoidance
+[Scrapy Cloud](https://www.zyte.com/scrapy-cloud/): Deploy and scale Scrapy spiders in the cloud
+[Smart Proxy Manager](https://www.zyte.com/smart-proxy-manager/): Intelligent rotating proxies
+[Web Scraping Copilot](https://www.zyte.com/products/web-scraping-copilot/): AI-powered spider builder for VS Code

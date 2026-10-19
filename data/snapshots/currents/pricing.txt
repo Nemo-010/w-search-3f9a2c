@@ -1,0 +1,201 @@
+News API Pricing – Free 250 Requests/Day, Plans from $69/mo | Currents 
+ Platform
+ Introduction 
+ Sources 
+ Solutions
+ Use Cases 
+ Compare Alternatives 
+ Pricing Comparison 
+ Features Comparison 
+ Pricing
+ Developers
+ Documentation 
+ FAQ 
+ Blog
+ ◐ 
+ Comfort off 
+ Login 
+ Sign Up Free 
+ ◐ 
+ Comfort off 
+ Login 
+ Sign Up Free 
+ Simple, Transparent Pricing 
+ Start free, test a real JSON news request, then upgrade when you need more requests, more history, or larger results. View documentation for API details.
+ Over 31,000 developers have registered for Currents API.
+ Create Free Account 
+ Get API Key 
+ Docs examples 
+ Request Quotas 
+ Start with 250 free requests per day. Move to Builder when you need more monthly requests. 
+ History Windows 
+ Choose the plan that matches your required archive depth, from recent access to longer historical search. 
+ Usage Rights 
+ Self-service plans provide API access to available fields; redistribution and republication rights require separate terms. 
+ Free News API plan 
+ Latest News API 
+ News API key setup 
+ Pricing comparison 
+ Which plan should I start with? 
+ Free: try the API 
+ Use the free plan to get an API key, run your first request, and validate whether Latest News or Search fits your app. 
+ Get Free API Key 
+ Builder $69: serious evaluation 
+ Choose Builder when a prototype becomes a real integration and needs more monthly volume and archive depth. 
+ View Builder 
+ Professional $150: production growth 
+ Choose Professional for heavier monitoring, enrichment, or production workflows that need larger quota. 
+ View Professional 
+ Free News API plan 
+ The free developer plan is the entry point for testing Currents with 250 daily requests , recent history access, and clear result limits before moving to paid quotas.
+ Create Free Account 
+ Run First Request 
+ Plan fit examples 
+ Free: prototypes, evaluation, and small news features. 
+ Builder $69: production apps that need more monthly volume and archive depth. 
+ Professional $150: monitoring, enrichment, and customer-facing products with heavier usage. 
+ Pricing questions 
+ Is there a free News API plan? 
+ Yes. The free developer plan includes 250 requests per day for evaluation, prototypes, and small apps. 
+ When should I upgrade? 
+ Upgrade when you need higher monthly volume, a longer history window, larger result limits, or production support. 
+ Can I redistribute article content? 
+ Self-service plans provide technical API access. Redistribution, republication, OEM use, or long-term archival use may require separate terms. 
+ Monthly
+ Yearly
+ Two months free 
+ Developer 
+ $0 
+ 250 requests per day 
+ Access to headlines 
+ Partial access; max 20 results per request 
+ Recent history up to 30 days 
+ Basic Email Support 
+ Sign Up For Free
+ Builder 
+ $69 
+ 75,000 requests per month, enforced as 2,500 per day 
+ Access to headlines 
+ Available article content fields with source links 
+ Access to 6 months of historical news 
+ Max 50 results per request 
+ Purchase
+ Professional 
+ $150 
+ 300,000 requests per month, enforced as 10,000 per day 
+ Access to headlines 
+ Available article content fields with source links 
+ Access to 1 year of historical news 
+ Max 100 results per request 
+ Purchase
+ Scale 
+ $300 
+ 600,000 requests per month, enforced as 20,000 per day 
+ Access to headlines 
+ Available article content fields with source links 
+ Access to 1 year of historical news 
+ Max 200 results per request 
+ Dedicated Email Support 
+ Purchase
+ Developer 
+ $0 
+ 250 requests per day 
+ Access to headlines 
+ Partial access; max 20 results per request 
+ Recent history up to 30 days 
+ Basic Email Support 
+ Sign Up For Free
+ Builder 
+ $690 
+ 75,000 requests per month, enforced as 2,500 per day 
+ Access to headlines 
+ Available article content fields with source links 
+ Access to 6 months of historical news 
+ Max 50 results per request 
+ Purchase
+ Professional 
+ $1,500 
+ 300,000 requests per month, enforced as 10,000 per day 
+ Access to headlines 
+ Available article content fields with source links 
+ Access to 1 year of historical news 
+ Max 100 results per request 
+ Purchase
+ Scale 
+ $3,000 
+ 600,000 requests per month, enforced as 20,000 per day 
+ Access to headlines 
+ Available article content fields with source links 
+ Access to 1 year of historical news 
+ Max 200 results per request 
+ Dedicated Email Support 
+ Purchase
+ Plan quotas are enforced daily and reset at 00:00 UTC. When a day's cap is reached, requests return HTTP 429 with a Retry-After header until the next reset. Unused daily volume does not roll over, and there is no overage billing.
+ Usage Rights 
+ Self-service plans are for technical API access, processing, attribution, and link-out. If you plan to show AI summaries to customers, republish articles, keep a long-term archive, resell data, or embed Currents into an OEM product, scope it with us before launch.
+ Use case 
+ Self-service plans 
+ Custom Enterprise terms 
+ API requests, metadata, available content fields, attribution, and source links 
+ Included within plan limits 
+ Available for higher limits and SLA needs 
+ Internal analysis, monitoring, alerts, and internal RAG workflows 
+ Allowed when results stay internal and link back to sources 
+ Recommended for teams that need custom retention, review, or compliance terms 
+ Customer-facing AI summaries, derivative content products, or article substitutes 
+ Not included by default 
+ Scope with us before launch 
+ Long-term caching, persistent vector stores, archives, datasets, OEM distribution, resale, or republication 
+ Not included by default 
+ Requires separate terms and may require publisher-side rights 
+ Production Reliability 
+ Monitored availability to support business-critical functions. Enterprise SLA terms are available by agreement. 
+ Fast News Availability 
+ Newly indexed stories are available to all account tiers without an artificial plan delay. 
+ Advanced Search 
+ Keyword, category, country, language, date, and source filters support focused discovery workflows. 
+ Cost-Effective News API 
+ Transparent Limits 
+ Clear request quotas, history access, and result caps by plan 
+ Comprehensive Coverage 
+ Source directory: 168 countries, 20+ languages, and new articles indexed daily 
+ Discover More Features 
+ Cancel subscription? 
+ Your plan stays active until the end of the billing cycle. After that, you will move to the free tier with 250 requests per day.
+ This action cannot be undone. 
+ Keep my plan 
+ Downgrade to Free 
+ Currents News API 
+ Access real-time news from a source directory spanning 168 countries in 20+ languages with our developer-friendly JSON API.
+ Use Cases 
+ News Aggregator API 
+ Media Monitoring API 
+ Google News API Alternative 
+ Solutions & Docs 
+ Free News API (250 req/day) 
+ Documentation Home 
+ Latest News Stream 
+ Search API Reference 
+ Financial & Trading News 
+ News API for AI / RAG 
+ AI Agent Integration Spec 
+ Python Integration Guide 
+ Comparisons 
+ News API Alternatives Hub 
+ Compare News APIs 
+ NewsAPI.org Alternatives 
+ Bing News API Migration 
+ AYLIEN News API Alternative 
+ Event Registry Alternative 
+ Mediastack Alternative 
+ NewsData.io Alternative 
+ Top 9 News APIs Guide 
+ Platform & Legal 
+ Pricing & Plans 
+ About Currents 
+ Frequently Asked Questions 
+ Terms of Service 
+ Privacy Policy 
+ GitHub 
+ Contact Support 
+ © 2026 Currents API. All rights reserved. Made with ♥ for developers.

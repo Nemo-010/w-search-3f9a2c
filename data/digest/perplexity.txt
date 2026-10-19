@@ -1,0 +1,33 @@
+# Perplexity (perplexity) category=ai-search
+home=https://www.perplexity.ai/ pricing=https://docs.perplexity.ai/getting-started/pricing docs=https://docs.perplexity.ai/ llms=https://docs.perplexity.ai/llms.txt
+sources_ok: llms:https://docs.perplexity.ai/llms.txt, llms-full:https://docs.perplexity.ai/llms-full.txt, pricing:https://docs.perplexity.ai/getting-started/pricing, docs:https://docs.perplexity.ai/, home:https://www.perplexity.ai/
+--- ranked fact lines ---
+[pricing] Model Price ($/1M input tokens) Output tokens Per-request fee pplx-decider-v1.2 $0.02 Free None pplx-decider-flash-v1.2 $0.01 Free None
+[pricing] Model Dimensions Price ($/1M tokens) pplx-embed-v1-0.6b 1024 $0.004 pplx-embed-v1-4b 2560 $0.03
+[pricing] Model Dimensions Price ($/1M tokens) pplx-embed-context-v1-0.6b 1024 $0.008 pplx-embed-context-v1-4b 2560 $0.05
+[pricing] API Price per 1K requests Description Search API $5.00 Raw web search results with advanced filtering Search API with Fast Search $1.00 Lower-latency web search results. Set search_type: "fast"
+[llms] - [Analytics API](https://docs.perplexity.ai/docs/admin/computer-analytics-api.md): Query your organization's Perplexity usage analytics programmatically with a free, org-scoped API key
+[llms] - [Perplexity web search in Hermes](https://docs.perplexity.ai/docs/getting-started/integrations/hermes.md): Use free Fast Search by default in Hermes Agent, or configure standard Perplexity web search and page extraction with your API key.
+[pricing] Most tool costs are per invocation. sandbox is billed per container session — a 20-minute billing window per container, not a runtime cap — plus per SDK search query made from inside it. Tool costs are separate from model token costs.
+[pricing] Example: “What is the weather in New York?” = ~8 input tokens ​ Output Tokens The number of tokens in the API’s response. This includes:
+[pricing] Example: “The weather in New York is currently sunny with a temperature of 72°F.” = ~15 output tokens ​ Search Context Size vs Context Window Search context size is not the same as the context window .
+[pricing] Token Calculation: 1 token ≈ 4 characters in English text. The exact count may vary based on language and content complexity.
+--- llms/readme head ---
+# Perplexity
+> Perplexity API documentation for building with the Agent API, the default for web-grounded AI and multi-provider applications, plus Search and Embeddings APIs.
+- [Overview](https://docs.perplexity.ai/docs/getting-started/overview.md): Perplexity API Platform - build with the Orchestrator, Agent, Search, Embeddings, and Decisions APIs. Real-time, web-wide research and Q&A capabilities for your products.
+- [Quickstart](https://docs.perplexity.ai/docs/getting-started/quickstart.md): Generate an API key and make your first call in < 3 minutes.
+- [Pricing](https://docs.perplexity.ai/docs/getting-started/pricing.md): Understand Perplexity API pricing, model rates, request fees, billing setup, and rate-limit references.
+- [Perplexity API MCP Server](https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server.md): Connect AI assistants to Perplexity's search and reasoning capabilities using the Model Context Protocol (MCP).
+- [Perplexity Computer MCP Server](https://docs.perplexity.ai/docs/getting-started/integrations/computer-mcp-server.md): Give AI assistants the ability to complete real-world tasks using Perplexity Computer through the Model Context Protocol (MCP).
+- [Perplexity CLI](https://docs.perplexity.ai/docs/cli/overview.md): Install and use Perplexity's pplx command-line interface for web search and query-relevant page snippets from your terminal or coding agent.
+- [Perplexity Orchestrator API](https://docs.perplexity.ai/docs/router/quickstart.md): Unified access to open-weight models through OpenAI Chat Completions, OpenAI Responses, and Anthropic Messages APIs, with your Perplexity API key.
+- [Orchestrator Models & Pricing](https://docs.perplexity.ai/docs/router/models.md): The model catalog for the Perplexity Orchestrator API, with per-token pricing for Perplexity-hosted and third-party models.
+- [Routing & Reliability](https://docs.perplexity.ai/docs/router/routing-and-reliability.md): How the Perplexity Orchestrator API routes requests across model deployments, and what happens automatically when a provider degrades or fails.
+- [Agent API](https://docs.perplexity.ai/docs/agent-api/quickstart.md): The Agent API is a multi-provider, interoperable API specification for building LLM applications. Access models from multiple providers with integrated real-time web search, tool configuration, reasoning control, and token budgets—all through one unified interface.
+- [Define the run](https://docs.perplexity.ai/docs/agent-api/building-agents/define-the-run.md): Configure the agent run: start from a preset, then customize the system prompt, the loop bound, and the model.
+- [Prompt the agent](https://docs.perplexity.ai/docs/agent-api/building-agents/prompt-the-agent.md): Split the standing rules (the system prompt) from the question (input), and ground the run so the agent searches and answers on the right thing.
+- [Give it tools](https://docs.perplexity.ai/docs/agent-api/building-agents/give-it-tools.md): Enable built-in tools and your own custom tools in the tools array, let the model decide when to call them, and read the results back from the response.
+- [Run code](https://docs.perplexity.ai/docs/agent-api/building-agents/run-code.md): Give the agent a sandbox so it computes exact answers instead of estimating them, runs real code, and returns generated files.
+- [Structure the output](https://docs.perplexity.ai/docs/agent-api/building-agents/shape-output.md): Force the model to return JSON your code can parse instead of prose you have to scrape.
+- [Keep context](https://docs.perplexity.ai/docs/agent-api/building-agents/keep-context.md): Carry a conversation across turns by replaying it in the input array, so a follow-up understands what came before.

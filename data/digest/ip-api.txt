@@ -1,0 +1,5 @@
+# ip-api (ip-api) category=misc-api
+home=https://ip-api.com/ pricing=None docs=https://ip-api.com/docs/api:json llms=None
+sources_ok: docs:https://ip-api.com/docs/api:json, home:https://ip-api.com/
+--- ranked fact lines ---
+[home] IP-API.com - Geolocation API Documentation Sign up Contact IP Geolocation API Fast, accurate, reliable Free for non-commercial use, no API key required Easy to integrate, available in JSON, XML, CSV, Newline, PHP Serving more than 1 billion requests per day, trusted by thousands of businesses API Documentation API Demo Search any IP address/domain Search {

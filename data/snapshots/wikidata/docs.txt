@@ -1,0 +1,199 @@
+Wikidata:SPARQL query service - Wikidata 
+ Jump to content 
+ Main menu 
+ Main menu 
+ move to sidebar 
+ hide 
+ Navigation
+ Main page Community portal Project chat Create a new Item Recent changes Random Item Query Service Nearby Help Special pages 
+ Lexicographical data
+ Create a new Lexeme Recent changes Random Lexeme 
+ In Wikipedia
+ العربية 
+ Edit links 
+ Search 
+ Search 
+ English 
+ Appearance 
+ Donate 
+ Create account 
+ Log in 
+ Personal tools 
+ Donate 
+ Create account 
+ Log in 
+ Contents 
+ move to sidebar 
+ hide 
+ Beginning 
+ 1 
+ What is SPARQL 
+ 2 
+ Learning SPARQL 
+ Toggle Learning SPARQL subsection 
+ 2.1 
+ Help for new queries 
+ 2.2 
+ Other materials 
+ 3 
+ Interfacing 
+ 4 
+ Wikimedia SPARQL query services 
+ 5 
+ Federated queries 
+ 6 
+ Stats 
+ 7 
+ Further resources 
+ Toggle the table of contents 
+ Wikidata : SPARQL query service 
+ Shortcuts : WD:WDQ, WD:WDQS, WD:SPARQL 
+ Project page 
+ Discussion 
+ English 
+ Read 
+ View source 
+ View history 
+ Tools 
+ Tools 
+ move to sidebar 
+ hide 
+ Actions
+ Read 
+ View source 
+ View history 
+ General
+ What links here Related changes Permanent link Page information Get shortened URL 
+ Print/export
+ Create a book Download as PDF Printable version 
+ In other projects
+ Wikimedia Commons Wikidata item 
+ Appearance 
+ move to sidebar 
+ hide 
+ From Wikidata 
+ Translate this page ; This page contains changes . Please contact a translation admin to mark them for translation. Other languages: Bahasa Indonesia 
+ Bahasa Melayu 
+ British English 
+ Deutsch 
+ English 
+ Esperanto 
+ Hausa 
+ Lëtzebuergesch 
+ Nederlands 
+ Tiếng Việt 
+ català 
+ dansk 
+ eesti 
+ español 
+ euskara 
+ français 
+ italiano 
+ lietuvių 
+ polski 
+ português 
+ português do Brasil 
+ slovenščina 
+ svenska 
+ čeština 
+ Ελληνικά 
+ беларуская (тарашкевіца) 
+ български 
+ къумукъ 
+ македонски 
+ русский 
+ українська 
+ հայերեն 
+ עברית 
+ العربية 
+ فارسی 
+ مصرى 
+ 中文 
+ 日本語 
+ 閩南語 / Bân-lâm-gí 
+ 한국어 
+ What is SPARQL 
+ SPARQL (pronounced "sparkle") is an RDF query language, that is, a semantic query language for databases. Wikidata provides an SPARQL endpoint including a powerful web GUI since September 2015. With SPARQL, you can extract any kind of data, with a query composed of logical combinations of triples.
+ Learning SPARQL 
+ Presentation "SPARQL and Wikidata intro" by shonagon- École de Bibliothécaires Documentalistes (French) (2016-04-04) 
+ Help for new queries 
+ Wikidata Query Service help portal 
+ Wikidata:SPARQL query service/queries 
+ Wikidata:SPARQL query service/queries/examples 
+ Wikidata:SPARQL query service/queries/examples/advanced 
+ Wikidata:SPARQL query service/queries/examples/human 
+ Wikidata:SPARQL query service/queries/examples/maintenance 
+ Lexemes examples 
+ If you can't adjust the examples to create a new query, you could request the query , try using the query helper tool , or try using the Spinach Wikidata bot to create a new query or adjust an existing one using natural language 
+ Queries from Wikidata status update weekly summaries 
+ Other materials 
+ SPARQL in 11 minutes (video, English) 
+ SPARQL Tutorial at the Apache Jena website (English) 
+ 2016 SPARQL Workshop presented by the Wikimedia Foundation (English) 
+ Querying Wikidata with SPARQL for Absolute Beginners , 2-hour video tutorial (English) 
+ Wikidata:SPARQL tutorial (multiple languages) 
+ Query optimization 
+ Query limits 
+ {{ Item documentation }} and other generic queries templates 
+ Interfacing 
+ In 2026-2027, the Wikidata Query Service is migrating to a new backend. This migration includes new endpoint URLs for v2, and may require you to revise existing queries. Learn more about the backend migration . 
+ SPARQL queries can be submitted directly to the SPARQL endpoint with GET request to https://query.wikidata.org/bigdata/namespace/wdq/sparql?query={SPARQL} or the endpoint's alias https://query.wikidata.org/sparql?query={SPARQL} . The result is returned as XML by default, or as JSON if either the query parameter format=json or the header Accept: application/sparql-results+json are provided. See the user manual for more detailed information.
+ The R package WikidataQueryServiceR which queries the WDQS SPARQL endpoint and returns data.frames . 
+ The R script leprosyInAmerica.r that plots Wikidata content on a world map. (Andra Waagmeester, mailing list discussion ) 
+ An introduction to Observable for Wikidata users 
+ Python example, how to make a plot of causes of death for U.S. Presidents 
+ An example of using SPARQLWrapper library to query WDQS in Python: https://people.wikimedia.org/~bearloga/notes/wdqs-python.html 
+ An example using the Apache Jena command line tools . (This is useful e.g. for very large SPARQL statements with +2000 lines which WDQS UI currently cannot handle properly because of the parsing, or e.g., for scripting a batch of queries to run every week (via cron) and report the results by email) 
+ Convert WDQ (the previous tool to query Wikidata) queries syntax to SPARQL (by Stas Malyshev) 
+ Generate plots for results by cutting-and-pasting queries to (Visual) SPARQL query tool . Some examples by User:Pyb : U.S. States by date of creation , Burial counts for Père Lachaise cemetery by year , Dates of birth of 2000 centenarians 
+ Wikimedia SPARQL query services 
+ On Wikidata, the WDQS allows practicing SPARQL queries creation in an intuitive way. 
+ Human interface 
+ Machine's endpoint 
+ Description
+ Wikidata Query Service (WDQS) 
+ https://query.wikidata.org/sparql 
+ Run SPARQL Queries on the "main" subset upon the Wikidata Wikibase instance. Run, test, download the data as XML, JSON, CSV, or TSV. Data with geographical coordinates can also be downloaded as GeoJSON, GPX or KML (using the first column for name values). Has advanced user-friendly features such as: word hovering to see a term's meaning, code optimization, etc.
+ Wikidata Query Service (WDQS) 
+ https://query-scholarly.wikidata.org/sparql 
+ Run SPARQL Queries on the "scholarly" subset upon the Wikidata Wikibase instance (cf. WDQS graph split for more information). Run, test, download the data as XML, JSON, CSV, or TSV. Data with geographical coordinates can also be downloaded as GeoJSON, GPX or KML (using the first column for name values). Has advanced user-friendly features such as: word hovering to see a term's meaning, code optimization, etc.
+ Wikimedia Commons Query Service (WCQS) 
+ https://commons-query.wikimedia.org/sparql 
+ Run SPARQL Queries upon the Wikimedia Commons Wikibase instance.
+ LinguaLibre Query Service (LLQS) 
+ https://lingualibre.org/bigdata/#query 
+ Run SPARQL Queries upon the LinguaLibre Wikibase instance. Run, test, download the data as XML, JSON, CSV, or TSV.
+ The Wikidata Query Service operates on an RDF dataset from Wikidata, as described in the RDF dump format documentation . The service's dataset does not exactly match the dataset produced by RDF dumps, mainly for performance reasons.
+ Federated queries 
+ Up-to-date federation documentation is gathered on the page Wikidata:SPARQL_query_service/Federated_queries .
+ Stats 
+ WDQS Metrics Dashboard 
+ Report on SPARQL endpoints available for federation 
+ Further resources 
+ Migration page - page for ongoing WDQS backend migration updates 
+ Special:ListDatatypes - covers approximate prefixes and explanation of some values 
+ Help:Dates - additional notes about dates 
+ Wikidata:SPARQL query service/Documentation - a hub for documents about the WDQS, organized under the Diátaxis framework 
+ SPARQL 1.1 W3C Recommendation 
+ Blazegraph wiki - Blazegraph is the query engine used by the Wikidata SPARQL query service. The wiki provides useful insights. 
+ Alternative endpoints 
+ Blazegraph comparison and limitations 
+ Retrieved from " https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&oldid=2551846291 " 
+ Categories : SPARQL Wikidata:SPARQL query service Wikidata-en Wikidata front ends 
+ This page was last edited on 1 October 2026, at 17:25. 
+ All structured data from the main, Property, Lexeme, and EntitySchema namespaces is available under the Creative Commons CC0 License ; text in the other namespaces is available under the Creative Commons Attribution-ShareAlike License ; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy . 
+ Privacy policy 
+ About Wikidata 
+ Disclaimers 
+ Legal & safety contacts 
+ Code of Conduct 
+ Developers 
+ Statistics 
+ Cookie statement 
+ Mobile view 
+ Data access 
+ Search 
+ Search 
+ Toggle the table of contents 
+ Wikidata : SPARQL query service 
+ Add topic

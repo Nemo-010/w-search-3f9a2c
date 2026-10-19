@@ -1,0 +1,73 @@
+# SearchCans (searchcans) category=serp-scrape
+home=https://searchcans.com/ pricing=https://searchcans.com/pricing docs=None llms=None
+sources_ok: pricing:https://searchcans.com/pricing, home:https://searchcans.com/, llms:https://searchcans.com/llms.txt
+--- ranked fact lines ---
+[llms] > SERP API + Reader API · Credits from $0.56/1K on Ultimate · 100 Free Credits · No Payment Method Required to Start
+[llms] **Core Value**: Prepaid credit packs from $18, down to $0.56 per 1,000 credits on Ultimate. Standard SERP uses 1 credit; standard Reader uses 2 credits ($1.12 per 1,000 requests on Ultimate), before proxy add-ons. Parallel Lanes limit in-flight concurrency, with no hourly request caps. 100 free credits for new users.
+[llms] | Free | 100 | $0 | Free | 1 | No |
+[home] $0.90/1K credits
+[home] $0.75/1K credits
+[home] $0.60/1K credits
+[home] $0.56/1K credits
+[llms] - SERP API (all types - Google/Bing): 1 credit per call
+[llms] - Reader API standard mode: 2 credits per call
+[llms] **Rules**: $18 Standard tier is non-stackable. Credits consumed FIFO (oldest order first). When an order's credits deplete or expire, its lanes are automatically detached.
+[llms] - SearchCans standard SERP: $0.90/1K requests on Standard through $0.56/1K on Ultimate; Reader standard extraction uses twice the credits.
+[llms] A: Standard Google and Bing search use 1 credit per request. Reader API standard mode uses 2 credits per request. Premium add-ons such as Proxy Pool tiers consume additional credits. Credits are deducted only for successful HTTP 200 responses.
+[llms] **Prepaid Pricing**: Packs start at $18, with rates from $0.56-0.90 per 1,000 credits across paid plans. Standard SERP uses 1 credit per request; standard Reader uses 2, before proxy add-ons.
+[home] 100 free credits on signup. No payment method required.
+[home] Test before you pay Full access for 100 free credits. No payment method required to start. Pay only when you're ready Current prepaid packs have predictable pricing and no recurring subscription required. Scale concurrency when you need it Parallel Lanes and Lane Stacking add concurrency when jobs queue — no rebuild required.
+[home] Create an account, get your API key, and start with 100 free credits.
+[llms] | Plan | Credits | Price | Per 1K | Parallel Lanes | Stackable |
+[llms] ### Step 1: Get Free Credits
+[llms] - 100 free credits; no payment method required to start
+[llms] **Problem**: SEO tools cost $99-499/month
+[llms] **Benefit**: $0/month vs $99-499/month for Ahrefs/SEMrush
+[llms] A: Yes. New users get 100 free credits, and no payment method is required to start.
+[llms] 1. **Free Trial**: https://www.searchcans.com/register/ (100 credits; no payment method required to start)
+[llms] **Free Start**: 100 free credits; no payment method required to start
+[pricing] Google Search API, SERP & Reader API Pricing | $0.56/1K
+[pricing] Earn free credits — refer friends, redeem promo codes & share on social.
+[pricing] Home Pricing Google Search API & Reader API Pricing Google and Bing Search API requests start at $0.56 per 1K. Prepaid credit packs start at $18. 100 free credits after registration · Current credit packs do not renew automatically Prepaid API credit packs Standard $18.00 $90.00 -80% 20K credits $0.90/1K credits Get 20,000 credits 2 Parallel Lanes ? What are Parallel Lanes? A lane is one request r
+[home] Real-time SERP results from Google and Bing , plus clean Markdown or HTML from any URL, PDF, or Office document. One API key, no hourly rate limits, from $0.56 per 1,000 requests .
+[home] Start with free credits, then add prepaid credits when needed. Current plans require no recurring subscription.
+[home] Start with free credits. Buy what you need — no subscription. Add more concurrency with Lane Stacking when you need it.
+[home] View Documentation → Standard $18.00 $90.00
+[home] Starter $99.00 $495.00
+[home] Pro $597.00 $2985.00
+[home] Ultimate $1680.00 $8400.00
+[home] Free $0 / forever For testing & side projects Get started free 1 Parallel Search Lane 100 Free Credits Shared Cluster Resources CUSTOM Enterprise Custom pricing For high-volume & compliance Contact Sales Custom Parallel Lanes Dedicated Cluster Node SLA & Priority Support Lane Stacking in one line Eligible paid plans stack their lanes in one account — raise concurrency without switching products or
+[llms] | Standard | 20,000 | $18 | $0.90 | 2 | No |
+[llms] | Starter | 132,000 | $99 | $0.75 | 5 | Yes |
+[llms] | Pro | 995,000 | $597 | $0.60 | 37 | Yes |
+[llms] | Ultimate | 3,000,000 | $1,680 | **$0.56** | 113 | Yes |
+[llms] - 1× $99 = 5 Lanes
+[llms] - 2× $99 = 10 Lanes (twice the in-flight capacity, not a guaranteed speed increase)
+[llms] - 1× $99 + 1× $597 = 42 Lanes
+[llms] - 2× $1,680 = 226 Lanes
+[llms] SearchCans offers three ways for registered users to earn free credits without spending money. All managed at https://www.searchcans.com/dashboard/rewards/
+[llms] - Platform releases free credit code batches periodically
+[llms] **Q: How can I earn free credits beyond the sign-up bonus?**
+[llms] A: No hourly rate limits. We use Parallel Lanes instead. A lane is one request that can run now. When one request finishes, that lane opens again. You can stack eligible plans to increase lanes - for example, 2x $99 = 10 lanes.
+[llms] ### 2. Free Redemption Codes
+[home] Get started free
+[home] Earn credits beyond your first 100
+--- llms/readme head ---
+# SearchCans - AI Data Infrastructure
+> https://www.searchcans.com
+> The Data Layer Your AI Needs
+> SERP API + Reader API · Credits from $0.56/1K on Ultimate · 100 Free Credits · No Payment Method Required to Start
+## API Versioning Notice (Read First)
+- **Current stable version**: `v1` - all endpoints below use `/api/v1/...`
+- **Legacy version**: `v0` (`/api/search`, `/api/url`) is **deprecated** and will be **permanently shut down on 2026-12-31 23:59 UTC**
+- **Migration**: drop-in replacement, just add `/v1` to the path
+- **Legacy docs**: https://www.searchcans.com/api-v0-legacy/
+## What is SearchCans?
+SearchCans is AI data infrastructure providing real-time search results (SERP API) and LLM-ready web content extraction (Reader API) from one unified platform. Built for AI agents, RAG systems, and developers who need reliable, affordable access to web data.
+SearchCans is powered by Vcans, where its scalable search and extraction workflows run.
+**Core Value**: Prepaid credit packs from $18, down to $0.56 per 1,000 credits on Ultimate. Standard SERP uses 1 credit; standard Reader uses 2 credits ($1.12 per 1,000 requests on Ultimate), before proxy add-ons. Parallel Lanes limit in-flight concurrency, with no hourly request caps. 100 free credits for new users.
+## Core APIs
+### 1. SERP API - Search Google & Bing
+**What it does**: Get real-time search results from Google and Bing
+**Endpoint**: POST https://www.searchcans.com/api/v1/search
+**Cost**: 1 credit per API call

@@ -1,0 +1,83 @@
+Quick start - Browser Use Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Browser Use home page Cloud Cloud SDK API v4 API v3 API v2 Search... ⌘ K Ask Assistant ⌘ I GitHub Discord Dashboard Browser Use home page Search or ask... Navigation Get Started Quick start Get Started Quick start Which product? Choosing an Agent Prompt for Vibecoders Pillars Agent Browser More Integrations Tutorials Concurrency and limits EU deployment Billing and credits iMessage Troubleshooting FAQ Legacy (v2) Get Started Quick start Copy page Copy page Run a hosted agent or launch a cloud browser. Copy page Copy page Browser Use Agents Give an agent a task and get the result. Browser Infrastructure Launch a cloud browser and connect to it from your code. 
+ Both Cloud paths use API V4. Choose whether Browser Use drives the browser or
+your Playwright or Browser Use code connects directly over CDP. For a local agent,
+use the open-source library . 
+ Get an API key and
+export it: 
+ export BROWSER_USE_API_KEY = your_key 
+ ​ Check your key (no install) 
+ This one request starts a cloud browser that stops itself after 5 minutes. Open
+the liveUrl it returns to watch it. 
+ curl -sS https://api.browser-use.com/api/v4/browsers \ 
+ -H "X-Browser-Use-API-Key: $BROWSER_USE_API_KEY" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{"timeout": 5}' 
+ To stop it early, put the returned id in place of BROWSER_ID : 
+ curl -sS -X PATCH https://api.browser-use.com/api/v4/browsers/BROWSER_ID \ 
+ -H "X-Browser-Use-API-Key: $BROWSER_USE_API_KEY" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{"action":"stop"}' 
+ A 401 means the key is wrong or not exported in this shell. 
+ ​ Install the SDK 
+ Use Python 3.10 or newer for the Python SDK. Skip installation if you use curl. 
+ Python TypeScript pip install --upgrade browser-use-sdk playwright 
+ npm install browser-use-sdk@latest playwright-core 
+ ​ Run Browser Use Agents 
+ Python TypeScript curl from browser_use_sdk . v4 import BrowserUse 
+ with BrowserUse () as client : 
+ run = client . runs . create ( "Find the top Hacker News story" ) 
+ result = client . runs . wait_for_completion (run.id) 
+ print (result.result) 
+ import { BrowserUse } from "browser-use-sdk/v4" ; 
+ const client = new BrowserUse (); 
+ const run = await client . runs .create ({ 
+ task : "Find the top Hacker News story" , 
+ }); 
+ const result = await client . runs .waitForCompletion ( run .id); 
+ console .log ( result .result); 
+ curl https://api.browser-use.com/api/v4/runs \ 
+ -H "X-Browser-Use-API-Key: $BROWSER_USE_API_KEY" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{"task":"Find the top Hacker News story"}' 
+ ​ Use Browser Infrastructure 
+ These examples connect to the managed browser’s existing context and stop it
+in finally , including when connecting or navigating fails. 
+ Python TypeScript from browser_use_sdk . v4 import BrowserUse 
+ from playwright . sync_api import sync_playwright 
+ with BrowserUse () as client : 
+ session = client . browsers . create (proxy_country_code = "us" ) 
+ try : 
+ if not session . cdp_url : 
+ raise RuntimeError ( "The browser did not return a CDP URL" ) 
+ with sync_playwright () as p : 
+ browser = p . chromium . connect_over_cdp (session.cdp_url) 
+ context = browser . contexts [ 0 ] 
+ page = context . pages [ 0 ] if context . pages else context . new_page () 
+ page . goto ( "https://example.com" ) 
+ print (page. title ()) 
+ finally : 
+ client . browsers . stop (session.id) 
+ import { BrowserUse } from "browser-use-sdk/v4" ; 
+ import { chromium } from "playwright-core" ; 
+ const client = new BrowserUse (); 
+ const session = await client . browsers .create ({ proxyCountryCode : "us" }); 
+ try { 
+ if ( ! session .cdpUrl) throw new Error ( "The browser did not return a CDP URL" ); 
+ const browser = await chromium .connectOverCDP ( session .cdpUrl); 
+ try { 
+ const context = browser .contexts ()[ 0 ]; 
+ const page = context .pages ()[ 0 ] ?? await context .newPage (); 
+ await page .goto ( "https://example.com" ); 
+ console .log ( await page .title ()); 
+ } finally { 
+ await browser .close (); 
+ } 
+ } finally { 
+ await client . browsers .stop ( session .id); 
+ } 
+ Disconnecting CDP does not stop the managed browser. Use
+ client.browsers.stop(session.id) as above, or call
+ PATCH /api/v4/browsers/{id} with {"action":"stop"} . 
+ For curl and additional connection options, follow the
+ Browser Infrastructure quickstart . 
+ Copy for an LLM Give your coding agent the compact API V4 context. Was this page helpful? Yes No Which Browser Use do I need? Next ⌘ I x github linkedin Powered by This documentation is built and hosted on Mintlify, a developer documentation platform On this page Check your key (no install) Install the SDK Run Browser Use Agents Use Browser Infrastructure Assistant Responses are generated using AI and may contain mistakes.

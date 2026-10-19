@@ -1,0 +1,519 @@
+GNews API: News API with Full Articles, Archive Since 2020 
+ Product
+ Documentation
+ Libraries & SDKs
+ Sources
+ Pricing
+ Resources
+ Google News API
+ Why Choose GNews API
+ FAQ
+ Contact
+ Sign in
+ Register
+ Documentation
+ Libraries & SDKs
+ Sources
+ Pricing
+ Google News API
+ Why Choose GNews API
+ FAQ
+ Contact
+ Sign in
+ Register
+ Real-Time News API with Full Article Content and an Archive Back to 2020
+ Search real-time articles from 80,000+ trusted sources across 41 languages and 71 countries, and tap into years of historical news going back to 2020, all delivered in clean JSON that is ready to use. Build news monitoring, aggregation, and analytics features in minutes, not weeks.
+ Get API key
+ View documentation
+ Start on the free tier instantly, no credit card needed.
+ Try GNews API
+ Search
+ {
+ "totalArticles": 94809 ,
+ "articles": [
+ {
+ "id": "66531cd2df1d8361c48f7d157d28829d" ,
+ "title": "Does Google Maps Use More Data When You Zoom In?" ,
+ "description": "Zooming and scrolling in Google Maps can use more mobile data than you might expect. Here's why data usage varies and how to keep it under control." ,
+ "content": "Anyone who remembers the Apple vs. Samsung days knows how important pinch to zoom has become in our daily lives. There are few apps where this is more apparent than Google Maps. But did you know that you'll typically consume 1 to 2MB of data every ti... [2317 chars]" ,
+ "url": "https://www.bgr.com/2286294/does-google-maps-use-more-data-when-zoom-in/" ,
+ "image": "https://www.bgr.com/img/gallery/does-google-maps-use-more-data-when-you-zoom-in/l-intro-1791973125.jpg" ,
+ "publishedAt": "2026-10-18T23:47:00Z" ,
+ "lang": "en" ,
+ "source": {
+ "id": "b98becfda029f124cf65538c8af36d20" ,
+ "name": "BGR" ,
+ "url": "https://www.bgr.com" ,
+ "country": "us" 
+ }
+ },
+ {
+ "id": "efb7e98a09327c9e7a6a1641dc8f6c48" ,
+ "title": "How To Use Google's SynthID AI Detection Website" ,
+ "description": "It's a simple way to check whether an image has been created or manipulated, with a few caveats." ,
+ "content": "With the proliferation of generative AI tools pumping out images, videos and even songs in recent years, it's hard to spend time on the internet without wondering whether what you're seeing or hearing is real. Google, itself one of the largest purvey... [3830 chars]" ,
+ "url": "https://www.engadget.com/2286802/how-to-use-google-ai-detection-website-synthid/" ,
+ "image": "https://www.engadget.com/img/gallery/how-to-use-googles-synthid-ai-detection-website/l-intro-1791998472.jpg" ,
+ "publishedAt": "2026-10-18T23:30:00Z" ,
+ "lang": "en" ,
+ "source": {
+ "id": "549a7a859b2345bbe231b00e7244ef99" ,
+ "name": "Engadget" ,
+ "url": "https://www.engadget.com" ,
+ "country": "us" 
+ }
+ },
+ {
+ "id": "e24c949a580dbc5ed5537528902c7f52" ,
+ "title": "Google is renaming Gemini again; here's what each feature does now" ,
+ "description": "Gems, Skills, Spark, Scheduled Actions: a field guide to renamed features" ,
+ "content": "Google loves building several tools for one job and giving them names that blur together.\nDon't believe me? This is the company that gave us Talk, Hangouts, Allo, Duo, Meet, and Chat. On November 17, that habit becomes your problem.\nGoogle will begin... [5424 chars]" ,
+ "url": "https://www.androidpolice.com/googles-renamed-gemini-features-field-guide/" ,
+ "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/10/gemini-gems-spark-and-scheduled-actions-icons-floating-on-a-light-blue-gradient-background.png?w=1600&h=900&fit=crop" ,
+ "publishedAt": "2026-10-18T21:00:13Z" ,
+ "lang": "en" ,
+ "source": {
+ "id": "3855a489b685d9599a636250ed950d3c" ,
+ "name": "Android Police" ,
+ "url": "https://www.androidpolice.com" ,
+ "country": "us" 
+ }
+ }
+ ]
+} 
+ Does Google Maps Use More Data When You Zoom In? 
+ https://www.bgr.com/2286294/does-google-maps-use-more-data-when-zoom-in/ 
+ How To Use Google's SynthID AI Detection Website 
+ https://www.engadget.com/2286802/how-to-use-google-ai-detection-website-synthid/ 
+ Google is renaming Gemini again; here's what each feature does now 
+ https://www.androidpolice.com/googles-renamed-gemini-features-field-guide/ 
+ * Search results are in English and US sources only. For other languages/regions, see documentation at docs.gnews.io .
+ Trusted by more than 150,000 developers, including at
+ Easy-to-use
+ Clear, comprehensive documentation walks you through every endpoint, with copy-paste examples that get you to your first request in minutes.
+ Start for free
+ Build and test your applications at no cost during development. When you're ready to deploy to production, you can activate your subscription in minutes.
+ Fast, accurate responses
+ Every article is indexed in our own database, so queries return in milliseconds with results ranked for relevance, never scraped on demand.
+ Built for scale
+ Live coverage that keeps growing every day in 2026.
+ Articles indexed 
+ 100M+ 
+ News sources 
+ 80,000+ 
+ Languages 
+ 41 
+ Live updates 
+ 24/7 
+ Countries 
+ 71 
+ Years of history 
+ 6+ 
+ From request to 
+ response in seconds 
+ Make your first call with a single GET request and get back clean JSON you can drop straight into your app. GNews API gives you two endpoints.
+ Search 
+ Search 
+ Top Headlines 
+ GET 
+ https://gnews.io/api/v4/search?q=Apple&lang=en&apikey=YOUR_API_KEY 
+ https://gnews.io/api/v4/top-headlines?category=technology&lang=en&apikey=YOUR_API_KEY 
+ Query the entire archive by keyword, with filters for language, country, and date range. Best for monitoring and research.
+ Pull the latest breaking stories by category and country. Best for live news feeds and front pages.
+ cURL 
+ Python 
+ JavaScript 
+ PHP 
+ C# 
+ curl --get "https://gnews.io/api/v4/search" \
+ --data-urlencode "q=Apple" \
+ --data-urlencode "lang=en" \
+ --data-urlencode "apikey=YOUR_API_KEY" 
+ import requests
+API_KEY = "YOUR_API_KEY" 
+response = requests. get (
+ "https://gnews.io/api/v4/search" ,
+ params={ "q" : "Apple" , "lang" : "en" , "apikey" : API_KEY},
+ timeout= 10 ,
+)
+response. raise_for_status ()
+ for article in response. json ()[ "articles" ]:
+ print (article[ "title" ]) 
+ const API_KEY = "YOUR_API_KEY" ;
+ const params = new URLSearchParams ({
+ q: "Apple" ,
+ lang: "en" ,
+ apikey: API_KEY,
+});
+ const response = await fetch ( `https://gnews.io/api/v4/search?${params}` );
+ if (!response.ok) {
+ throw new Error ( `Request failed: ${response.status}` );
+}
+ const { articles } = await response. json ();
+ for ( const article of articles) {
+ console. log (article.title);
+} 
+ On the Free plan, browser requests only work from localhost. Paid plans accept requests from any website. Keep in mind that a key in front-end code is visible to anyone, so on a public site it is safer to call the API from your backend. 
+ <?php
+$apiKey = "YOUR_API_KEY" ;
+$query = http_build_query ([
+ "q" => "Apple" ,
+ "lang" => "en" ,
+ "apikey" => $apiKey,
+]);
+$response = file_get_contents ( "https://gnews.io/api/v4/search?" . $query);
+ if ($response === false ) {
+ throw new RuntimeException ( "Request failed" );
+}
+$data = json_decode ($response, true );
+ foreach ($data[ "articles" ] as $article) {
+ echo $article[ "title" ] . PHP_EOL;
+} 
+ using System.Net.Http.Json;
+ const string ApiKey = "YOUR_API_KEY" ;
+ using var client = new HttpClient ();
+ var url = $"https://gnews.io/api/v4/search?q=Apple&lang=en&apikey={ApiKey}" ;
+ var data = await client. GetFromJsonAsync <ApiResponse>(url)
+ ?? throw new InvalidOperationException ( "Empty response" );
+ foreach ( var article in data.Articles)
+{
+ Console. WriteLine (article.Title);
+}
+ record ApiResponse (List<Article> Articles);
+ record Article ( string Title); 
+ curl --get "https://gnews.io/api/v4/top-headlines" \
+ --data-urlencode "category=technology" \
+ --data-urlencode "lang=en" \
+ --data-urlencode "apikey=YOUR_API_KEY" 
+ import requests
+API_KEY = "YOUR_API_KEY" 
+response = requests. get (
+ "https://gnews.io/api/v4/top-headlines" ,
+ params={ "category" : "technology" , "lang" : "en" , "apikey" : API_KEY},
+ timeout= 10 ,
+)
+response. raise_for_status ()
+ for article in response. json ()[ "articles" ]:
+ print (article[ "title" ]) 
+ const API_KEY = "YOUR_API_KEY" ;
+ const params = new URLSearchParams ({
+ category: "technology" ,
+ lang: "en" ,
+ apikey: API_KEY,
+});
+ const response = await fetch ( `https://gnews.io/api/v4/top-headlines?${params}` );
+ if (!response.ok) {
+ throw new Error ( `Request failed: ${response.status}` );
+}
+ const { articles } = await response. json ();
+ for ( const article of articles) {
+ console. log (article.title);
+} 
+ On the Free plan, browser requests only work from localhost. Paid plans accept requests from any website. Keep in mind that a key in front-end code is visible to anyone, so on a public site it is safer to call the API from your backend. 
+ <?php
+$apiKey = "YOUR_API_KEY" ;
+$query = http_build_query ([
+ "category" => "technology" ,
+ "lang" => "en" ,
+ "apikey" => $apiKey,
+]);
+$response = file_get_contents ( "https://gnews.io/api/v4/top-headlines?" . $query);
+ if ($response === false ) {
+ throw new RuntimeException ( "Request failed" );
+}
+$data = json_decode ($response, true );
+ foreach ($data[ "articles" ] as $article) {
+ echo $article[ "title" ] . PHP_EOL;
+} 
+ using System.Net.Http.Json;
+ const string ApiKey = "YOUR_API_KEY" ;
+ using var client = new HttpClient ();
+ var url = $"https://gnews.io/api/v4/top-headlines?category=technology&lang=en&apikey={ApiKey}" ;
+ var data = await client. GetFromJsonAsync <ApiResponse>(url)
+ ?? throw new InvalidOperationException ( "Empty response" );
+ foreach ( var article in data.Articles)
+{
+ Console. WriteLine (article.Title);
+}
+ record ApiResponse (List<Article> Articles);
+ record Article ( string Title); 
+ 200 OK · JSON response
+ {
+ "totalArticles" : 54231 ,
+ "articles" : [
+ {
+ "id" : "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4" ,
+ "title" : "Apple unveils the iPhone 17 lineup at its fall event" ,
+ "description" : "The company showed new models, a faster chip, and camera upgrades." ,
+ "content" : "Apple introduced its new iPhone lineup on Tuesday at its annual fall event, led by a faster chip and upgraded cameras across the range. Preorders open this week and devices ship later this... [1654 chars]" ,
+ "url" : "https://www.theverge.com/apple-iphone-17" ,
+ "image" : "https://cdn.example.com/iphone-17.jpg" ,
+ "publishedAt" : "2026-06-28T12:00:00Z" ,
+ "lang" : "en" ,
+ "source" : {
+ "id" : "f9e8d7c6b5a4f9e8d7c6b5a4f9e8d7c6" ,
+ "name" : "The Verge" ,
+ "url" : "https://www.theverge.com" ,
+ "country" : "us" 
+ }
+ }
+ ]
+} 
+ {
+ "totalArticles" : 38492 ,
+ "articles" : [
+ {
+ "id" : "b2c3d4e5f6a7b2c3d4e5f6a7b2c3d4e5" ,
+ "title" : "New chip delivers faster on-device AI" ,
+ "description" : "The processor targets phones and laptops with lower power use." ,
+ "content" : "The chipmaker unveiled a processor aimed at phones and laptops that runs AI models locally with lower power draw. The company said devices using the chip will arrive... [1356 chars]" ,
+ "url" : "https://techcrunch.com/on-device-ai-chip" ,
+ "image" : "https://cdn.example.com/ai-chip.jpg" ,
+ "publishedAt" : "2026-06-28T08:30:00Z" ,
+ "lang" : "en" ,
+ "source" : {
+ "id" : "c3d4e5f6a7b8c3d4e5f6a7b8c3d4e5f6" ,
+ "name" : "TechCrunch" ,
+ "url" : "https://techcrunch.com" 
+ }
+ }
+ ]
+} 
+ All the world's news, one API
+ Access a global news database with live updates and extensive historical archives to power your business applications and use cases. It is the news data infrastructure thousands of developers rely on in 2026.
+ Worldwide scale
+ Our database features more than 100 million articles from 80,000+ trusted sources in 41 languages across 71 countries. Use our filters to search by language or source country for precise global media coverage.
+ Rich article data
+ Every result comes fully structured, with the title, description, full article content, source, publication date, image, URL, and language. Rigorous extraction and continuous quality checks keep the data clean and consistent.
+ Historical data
+ Our database maintains a permanent archive of all indexed articles, providing access to years of historical data. Our coverage spans from 2020 to the present, giving you over 6 years of searchable news history.
+ Live news articles
+ Our continuous crawling system automatically retrieves new articles from all covered sources. Articles are immediately indexed and made available through the API upon discovery.
+ Response performance
+ Low response time is a core priority. We continuously tune our infrastructure to keep latency minimal on every request, at any scale.
+ Easy integration
+ Retrieve API results in JSON format through standard HTTP GET requests from any programming language. Integration is straightforward: send a request, receive results, parse the JSON response, and implement the data in your application.
+ Having trouble integrating the API?
+ Contact us
+ Libraries, SDKs & MCP Server
+ Launch your applications faster with our official SDKs for Python, JavaScript, TypeScript and PHP. Our MCP server and LangChain tools bring real-time news directly into your AI agents, and ready-to-use examples get you up and running in minutes.
+ Discover the libraries
+ Missing Sources?
+ Help us expand our global news coverage. If you know of a reliable news website that isn't yet included in the GNews API, we welcome your suggestions. Community contributions help us maintain a diverse, accurate, and up-to-date news database.
+ Add missing sources
+ Student Access
+ Are you a student working on a project or thesis? We offer free access to the GNews API for academic use. Submit your request and get started with real-world news data for your project or thesis.
+ Request access
+ Advanced Request Options
+ Build precise queries with logical search operators, then refine every request with a wide range of optional parameters.
+ Search operators
+ Perform advanced searches using search operators such as AND, OR, and NOT to combine, separate, and exclude keywords.
+ Go to documentation
+ Access full content
+ Go beyond headlines and snippets and retrieve the full text of each article. Full content comes standard on every paid plan, ideal for analysis, summarization, and AI pipelines.
+ View plans
+ Integrate GNews API in minutes
+ GNews API fits seamlessly into your development workflow. With official libraries and easy-to-follow examples, you can start fetching news data in your favorite language with just a few lines of code.
+ Media monitoring 
+ Track coverage of any topic, company, or person across thousands of outlets as stories break. 
+ Brand and reputation tracking 
+ See what the press is saying about your brand and respond quickly to emerging narratives. 
+ Financial and market research 
+ Feed live and historical headlines into trading signals, risk models, and market analysis. 
+ AI, LLMs, and RAG 
+ Ground your models and agents in fresh, factual news for retrieval and summarization. 
+ News aggregation apps 
+ Build readers, newsletters, and dashboards on a single global news feed. 
+ Academic research 
+ Study media trends and narratives with years of structured, searchable archives. 
+ Start in three 
+ simple steps 
+ Go to documentation
+ 1 
+ Create your free account 
+ Sign up in under a minute. No credit card needed to start on the free tier. 
+ 2 
+ Grab your API key 
+ Your key is ready in the dashboard the moment you sign in. 
+ 3 
+ Make your first request 
+ Send a single GET request and get clean JSON back, ready for your app. 
+ Find the Right Plan 
+ for Your Needs 
+ Monthly 
+ Yearly 
+ Save 20%
+ Free 
+ €0
+ For development, testing and non-commercial projects 
+ Non-commercial use only 
+ 100 requests per day 
+ Up to 10 articles returned per request 
+ 12-hour delay 
+ 30 days historical data 
+ CORS enabled for localhost 
+ Access to all sources 
+ Start for free 
+ Essential 
+ €49.99 /month 
+ Most popular
+ For production and published commercial projects 
+ Commercial use allowed 
+ 1,000 requests per day 
+ Up to 25 articles returned per request 
+ Real-time article availability 
+ Historical data from 2020 
+ CORS enabled for all origins 
+ Access to all sources 
+ Email support 
+ Full article content 
+ Start 10-day free trial 
+ Business 
+ €99.99 /month 
+ For larger projects that require more resources 
+ Commercial use allowed 
+ 5,000 requests per day 
+ Up to 50 articles returned per request 
+ Real-time article availability 
+ Historical data from 2020 
+ CORS enabled for all origins 
+ Access to all sources 
+ Email support 
+ Full article content 
+ 99.95% uptime SLA 
+ Start 10-day free trial 
+ Enterprise 
+ €249.99 /month 
+ For enterprise projects that require exceptional resources 
+ Commercial use allowed 
+ 25,000 requests per day 
+ Up to 100 articles returned per request 
+ Real-time article availability 
+ Historical data from 2020 
+ CORS enabled for all origins 
+ Access to all sources 
+ Premium email support 
+ Full article content 
+ 99.95% uptime SLA 
+ Start 10-day free trial 
+ Free 
+ €0
+ For development, testing and non-commercial projects 
+ Non-commercial use only 
+ 100 requests per day 
+ Up to 10 articles returned per request 
+ 12-hour delay 
+ 30 days historical data 
+ CORS enabled for localhost 
+ Access to all sources 
+ Start for free 
+ Essential 
+ €49.99 
+ €39.99 /month 
+ €479.99 billed annually
+ Most popular
+ For production and published commercial projects 
+ Commercial use allowed 
+ 1,000 requests per day 
+ Up to 25 articles returned per request 
+ Real-time article availability 
+ Historical data from 2020 
+ CORS enabled for all origins 
+ Access to all sources 
+ Email support 
+ Full article content 
+ Start 10-day free trial 
+ Business 
+ €99.99 
+ €79.99 /month 
+ €959.99 billed annually
+ For larger projects that require more resources 
+ Commercial use allowed 
+ 5,000 requests per day 
+ Up to 50 articles returned per request 
+ Real-time article availability 
+ Historical data from 2020 
+ CORS enabled for all origins 
+ Access to all sources 
+ Email support 
+ Full article content 
+ 99.95% uptime SLA 
+ Start 10-day free trial 
+ Enterprise 
+ €249.99 
+ €199.99 /month 
+ €2,399.99 billed annually
+ For enterprise projects that require exceptional resources 
+ Commercial use allowed 
+ 25,000 requests per day 
+ Up to 100 articles returned per request 
+ Real-time article availability 
+ Historical data from 2020 
+ CORS enabled for all origins 
+ Access to all sources 
+ Premium email support 
+ Full article content 
+ 99.95% uptime SLA 
+ Start 10-day free trial 
+ Missing something? 
+ Create Your Own Plan 
+ We'll create a custom plan designed around your specific requirements. Starting from any plan, Essential and above, you can customize:
+ Number of requests per day 
+ Number of articles returned per request 
+ Your support level 
+ Request additional features 
+ Contact us now
+ FAQ 
+ What is GNews API? 
+ GNews API is a REST API that lets you search and retrieve news articles from over 80,000 sources worldwide. Results come back as clean, structured JSON, so you can build news feeds, monitoring dashboards, market and brand tracking, research datasets, or AI pipelines without running your own crawler. 
+ How do I get an API key? 
+ Create an account at gnews.io/register , confirm your email address, and your API key is waiting on your dashboard . It works immediately on the Free plan, no credit card required. 
+ How can I test paid features before subscribing? 
+ Every paid plan comes with a 10-day free trial that unlocks all of its features. Start it from Change plan ; you will be asked for a payment method but nothing is charged during the trial, and cancelling before it ends costs you nothing. Data retrieved during a trial that does not turn into a paid subscription is for non-commercial use only. The trial is available once per account. 
+ Can I use the Free plan for a commercial project? 
+ No. A commercial project needs an active paid plan for as long as it uses GNews API. On the Free plan, you may use the API and its data for personal, academic, evaluation and other non-commercial purposes only. Commercial use means any product, application, service or project that is offered for sale, generates revenue, or is used in the course of a business. Developing and testing an integration that has not been published or put into production is not commercial use. We may suspend or terminate accounts that violate these terms. See our Terms of Service for the full conditions. 
+ How far back does your historical news data go? 
+ Our archive goes back to 2020. Paid plans can query the whole archive with the from and to parameters. On the Free plan, results are limited to the last 30 days; older articles are removed from the response and the API tells you how many were dropped. 
+ Do I get the full article content? 
+ Yes, on paid plans the content field contains the full text of the article. On the Free plan the content is truncated to a short excerpt. You can also request a truncated excerpt on any plan by adding truncate=content to your request. 
+ Can I filter results by source? 
+ Not yet. Source filtering is on our roadmap. In the meantime, every article carries its source object (name, homepage URL and, on the Search endpoint, country), so you can filter or group results on your side. 
+ What happens when I reach my plan's request limit? 
+ Once the daily limit is reached, the API answers 403 Forbidden and returns no more data until the counter resets, which happens every day at 00:00 UTC. Unused requests do not carry over to the next day. You can follow your usage on your dashboard , and upgrade at any time from Change plan if you need more headroom. 
+ Can I cancel my subscription at any time? 
+ Yes, at any time and at no extra cost: Open Plan & Billing . In the Subscription section, click Cancel subscription . Tell us in a few words why you are leaving, then confirm. You keep full access until the end of the period you have already paid for, and your account then returns to the Free plan. Changed your mind before that date? Click Resume subscription on the same page. Cancelling during a free trial means you are never charged. 
+ What is the refund policy? 
+ You can request a refund within 7 days of your initial subscription or of a renewal, provided you have not made any API call in that period. Email contact@gnews.io with a short explanation; we review requests within 3 to 5 business days and approved refunds usually reach your account 5 to 10 business days later. Requests we consider fraudulent or abusive may be denied. Full details are in our Terms of Service . 
+ Why can't I verify my email address? 
+ First request a new verification email from your dashboard and check your spam folder, as the link in older emails expires. If it still does not work, write to contact@gnews.io from the address you signed up with and we will activate the account for you. 
+ How do I contact support? 
+ Email contact@gnews.io or use the contact form . Paid plans include email support, and Enterprise customers get premium support. 
+ Looking for something else?
+ See all frequently asked questions .
+ Ready to build 
+ with GNews API? 
+ Get your free API key and make your first request in minutes.
+ Get API key 
+ Go to documentation 
+ Handcrafted by Gigathink 
+ © 2026 GNews API 
+ Product
+ Documentation
+ Libraries & SDKs
+ Sources
+ Pricing
+ Student & Education Access
+ Resources
+ Google News API
+ News Sources by Country
+ Why Choose GNews API
+ Blog
+ FAQ
+ Legal
+ Contact
+ Terms of Service
+ Privacy Policy
+ More APIs
+ Recipe API
+ Handcrafted by Gigathink 
+ © 2026 GNews API

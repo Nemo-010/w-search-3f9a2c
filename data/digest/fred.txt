@@ -1,0 +1,23 @@
+# FRED (fred) category=misc-api
+home=https://fred.stlouisfed.org/docs/api/fred/ pricing=None docs=https://fred.stlouisfed.org/docs/api/fred/ llms=None
+sources_ok: docs:https://fred.stlouisfed.org/docs/api/fred/, llms:https://fred.stlouisfed.org/docs/api/fred/llms.txt, llms-full:https://fred.stlouisfed.org/docs/api/fred/docs/llms-full.txt, llms-https://fred.stlouisfed.org/docs/api/fred/docs/llms.txt:https://fred.stlouisfed.org/docs/api/fred/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+St. Louis Fed Web Services: FRED® API
+Skip to main content
+Explore Our Apps
+FRED
+Tools and resources to find and use economic data worldwide
+FRASER
+U.S. financial, economic, and banking history
+ALFRED
+Vintages of economic data from specific dates in history
+CASSIDI
+View banking market concentrations and perform HHI analysis
+Release Calendar
+Tools
+FRED Add-in for Excel
+FRED API
+FRED Mobile Apps
+News
+Blog

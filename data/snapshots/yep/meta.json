@@ -1,0 +1,61 @@
+{
+ "slug": "yep",
+ "name": "Yep",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:31+00:00",
+ "sources": {
+  "home": {
+   "url": "https://yep.com/",
+   "status": 200,
+   "final_url": "https://yep.com/",
+   "content_type": "text/html",
+   "bytes": 14241,
+   "truncated": false,
+   "sha256": "1543138d8830f6275fe3f61305692ba262121a026ab6fb9c95412e81143ca368",
+   "fetched_at": "2026-10-19T05:54:31+00:00",
+   "text_bytes": 259
+  },
+  "llms": {
+   "url": "https://yep.com/llms.txt",
+   "status": 200,
+   "final_url": "https://yep.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 5302,
+   "truncated": false,
+   "sha256": "1bf68fa0dd4e8fc254870b7c5332f2a9004930b582b4702127ffa451e05f62f6",
+   "fetched_at": "2026-10-19T05:54:31+00:00",
+   "text_bytes": 5302
+  },
+  "llms-full": {
+   "url": "https://yep.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://yep.com/llms-full.txt",
+   "content_type": "text/plain",
+   "bytes": 109352,
+   "truncated": false,
+   "sha256": "52de248e3668e4d663795da81a4b07869446d16c6dfa6548bfcc5a183748ed34",
+   "fetched_at": "2026-10-19T05:54:31+00:00",
+   "text_bytes": 109292
+  },
+  "llms-err-d888d1": {
+   "url": "https://yep.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://yep.com/docs/llms.txt",
+   "content_type": "",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  },
+  "llms-err-07f10d": {
+   "url": "https://docs.yep.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.yep.com/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  }
+ }
+}

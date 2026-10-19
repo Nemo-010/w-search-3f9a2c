@@ -1,0 +1,228 @@
+Plans & Pricing | Webz 
+Skip to content 
+ Menu 
+ × 
+ Open Web APIs 
+ Open Web APIs 
+ Create Deeper Insights with the World's Biggest APIs 
+ Main Page 
+ Products 
+ News Search API 
+ News API 
+ Blogs API 
+ Forums API 
+ Archived Data 
+ Solutions 
+ Media Monitoring & PR 
+ Risk Intelligence 
+ Financial Analysis 
+ Knowledge 
+ Blogs 
+ Whitepapers 
+ Case Studies 
+ Webinars 
+ Product Articles 
+ Glossary 
+ News API Benchmarks 
+ Dark Web APIs 
+ Dark Web APIs 
+ Accelerate Your Cyber Software with Deep and Dark Web Data 
+ Main Page 
+ Products 
+ Dark Web API 
+ Data Breach Detection API 
+ Solutions 
+ Fraud Detection 
+ Cyber Security Threats 
+ Web Intelligence 
+ Knowledge 
+ The Dark Web Pulse 
+ Whitepapers 
+ Case Studies 
+ Webinars 
+ Product Articles 
+ Glossary 
+ Lunar 
+ Blog 
+ Pricing 
+ Help 
+ Getting Started 
+ Open Web 
+ Dark Web API 
+ Data Breaches API 
+ Archive Data 
+ System Status 
+ Contact us 
+ TALK TO AN EXPERT
+ Login 
+ SIGN UP 
+ Plans & Pricing 
+ Choose the Webz.io API package that fits your data needs. 
+Start free, pay only for what you use, and move to custom high-volume pricing as your needs grow. 
+ No upfront commitment. No complex packages. 
+ Open web apis 
+ dark web apis 
+ Free 
+ Explore Webz.io and build your first integration. 
+ $0 / month 
+ Includes $5 in free credits every month 
+ Start For free 
+ Includes 
+ $5 free monthly usage credits 
+ No credit card required 
+ Search & Open Web APIs 
+ Limited historical access 
+ Self-service support 
+ Scale 
+ Build and run production with flexible usage-based pricing. 
+ Pay as you go 
+ See Endpoint Pricing below 
+ Get Started 
+ Includes 
+ $5 free monthly usage credits 
+ Pay-as-you-go usage 
+ No commitment or minimum spend 
+ Search & Open Web APIs 
+ Limited historical access 
+ Self-service support 
+ High Volume 
+ Built for enterprise and data-intensive applications. 
+ Custom pricing for tailored access 
+ Contact Sales 
+ Includes 
+ Bulk volume discount 
+ Flexible packages 
+ Custom source additions 
+ Premium support 
+ Tailored data feeds 
+ Custom setup for AI, analytics, monitoring, and business intelligence use cases 
+ Archive Data – Up to 10 years of historical data. 
+ Dark Web API 
+ Access structured and enriched data from millions of deep and dark web sources. 
+ Contact for pricing 
+ Talk To a Cyber Expert 
+ Includes 
+ Extensive coverage: Multilingual forums, marketplaces, messaging channels, and more. 
+ Advanced search: Filter by entities, keywords, sites, and other fields. 
+ Rich context: Author, site, publication, files, and images. 
+ Enriched feeds: Categories, cyber entities, and threat-actor profiles. 
+ Data Breach API 
+ Detect compromised data from infostealer logs, breaches, database dumps, combo lists, and cookies. 
+ Contact for pricing 
+ Talk To a Cyber Expert 
+ Includes 
+ Real-time intelligence: New exposures delivered within minutes. 
+ Unified JSON: Consistent structure for easy integration. 
+ Forensic context: Malware name and path, Machine ID, IP Address, and more. 
+ Advanced filtering: Search by Email domain, Login domain, Password, Data type, Breach name, date, and more. 
+ Usage-based rates on the Scale plan Endpoint pricing 
+ Search API 
+ Open Web Data Feeds News, blogs, discussions, reviews 
+ Cost per 1 API call 
+ $0.001 
+ $0.01 
+ Cost per result (1 post) 
+ $0.0005 
+ $0.005 
+ Cost per 1 fact-check API call 
+ NA 
+ $0.15 
+ Cost per 1 API call 
+ Search API 
+ $0.001 
+ Open Web Data Feeds News, blogs, discussions, reviews 
+ $0.01 
+ Cost per result (1 post) 
+ Search API 
+ $0.0005 
+ Open Web Data Feeds News, blogs, discussions, reviews 
+ $0.005 
+ Cost per 1 fact-check API call 
+ Search API 
+ NA 
+ Open Web Data Feeds News, blogs, discussions, reviews 
+ $0.15 
+ *Open Web Data Feeds: news, blogs, discussions, reviews. 
+ Included in every package Search API 
+ Search API 
+ Retrieve the most relevant web context for AI, research, and intelligence applications. 
+ Natural-language and semantic search. 
+ Filter by country, language, category, sentiment, and date. 
+ Get the articles and passages most relevant to your query. 
+ Get structured metadata with every result. 
+ Receive titles, URLs, dates, summaries, and article content. 
+ Search news across countries, languages, and sources. 
+ Data Feeds from news, blogs, discussions, and reviews 
+ Data Coverage 
+ Access structured open-web data from news, blogs, discussions, and reviews. 
+ Full-text content and summaries. 
+ Filtering by country, language, domain, and source. 
+ Up to 10 years of historical data 
+ Rich metadata including author, title, URL, language, country, and publication date. 
+ Sources in 170+ languages. 
+ Enrichment & Intelligence 
+ Turn raw web content into structured, searchable, and analysis-ready data. 
+ Categorization and topic labels. 
+ Fake news and satirical news indicators. 
+ Trust and source credibility signals. 
+ Entity extraction for companies, people, organizations, and locations. 
+ Archive Data – Up to 10 years of historical data. 
+(not included in the Pay as you go plan). 
+ API features 
+ Built for developers, data teams, AI applications, analytics, and monitoring systems. 
+ RESTful API access. 
+ Large-scale pagination. 
+ Advanced Boolean and field-based search. 
+ Filtering, sorting, JSON and XML output. 
+ API Query Playground. 
+ Power AI with Web Data 
+ START FOR FREE 
+ Open Web 
+ News Search API 
+ News API 
+ Blogs API 
+ Forums API 
+ Archived Web Data 
+ Media Monitoring & PR 
+ Risk Intelligence 
+ Financial Analysis 
+ News API Benchmarks 
+ Dark Web 
+ Dark Web API 
+ Data Breach Detection API 
+ Cyber Security Threats 
+ Identity Theft API 
+ Web Intelligence 
+ Company 
+ About Us 
+ Careers 
+ Contact Us 
+ Press 
+ Trust Center 
+ Getting Started 
+ System Status 
+ AI Info 
+ Knowledge 
+ Blog 
+ Dark Web Pulse 
+ Glossary 
+ Product Articles 
+ Whitepapers 
+ Case Studies 
+ Webinars 
+ Lunar 
+ Lunarcyber.com 
+ GET STARTED
+ © 2026 Webz.io Ltd. All rights reserved
+ Terms of Service 
+ Open Web Terms of Service 
+ Dark Web Terms of Service 
+ Cancellation and Refund Policy 
+ Privacy Policy 
+ Dark Web Policy 
+ Information Notice 
+ Ready to Explore Web Data at Scale? 
+ Speak with a data expert to learn more about Webz.io’s solutions 
+ Get started 
+ Create your API account and get instant access to millions of web sources 
+ See Demo

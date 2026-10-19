@@ -1,0 +1,15 @@
+# ScrapingAnt (scrapingant) category=serp-scrape
+home=https://scrapingant.com/ pricing=https://scrapingant.com/pricing docs=https://docs.scrapingant.com/ llms=None
+sources_ok: docs:https://docs.scrapingant.com/, home:https://scrapingant.com/
+--- ranked fact lines ---
+[home] 10,000 free credits every month · no credit card required
+[home] ✓ 10,000 free credits every month
+[home] No. The free plan includes 10,000 API credits every month with no credit card required. You only enter payment details if you upgrade.
+[home] Get 10,000 free credits
+[home] Compare plans side by side. Every tier includes 10,000 free credits to start.
+[home] 3M+ IPs across 100+ countries. Rotate per request, geo-target by code.
+[home] Do I need a credit card to start the free trial?
+[home] try it free → scraping ant
+[home] Scraping API Docs Endpoints, parameters, code samples. Proxies Docs Residential & datacenter proxy setup. Sign in Start free
+[home] Standalone HTTP/HTTPS proxies for direct use — residential and datacenter pools across 100+ countries. Country, state, and city targeting in the proxy username; sticky sessions on demand; unlimited concurrency. Bandwidth-priced, separate from API credits.
+[home] Start Free →

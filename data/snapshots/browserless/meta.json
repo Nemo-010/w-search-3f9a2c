@@ -1,0 +1,84 @@
+{
+ "slug": "browserless",
+ "name": "Browserless",
+ "category": "browser",
+ "fetched_at": "2026-10-19T05:54:23+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.browserless.io/pricing",
+   "status": 200,
+   "final_url": "https://www.browserless.io/pricing",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 164868,
+   "truncated": false,
+   "sha256": "fcd4322205699e08b000cae172979a64532f16abab0960002c774fa01e91a471",
+   "fetched_at": "2026-10-19T05:54:23+00:00",
+   "text_bytes": 5883
+  },
+  "docs": {
+   "url": "https://docs.browserless.io/",
+   "status": 200,
+   "final_url": "https://docs.browserless.io/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 57994,
+   "truncated": false,
+   "sha256": "1792d2f07b1bd3c7b4bcbf6d477b70d7589a1aa8a7c0a3fea40712a119d34aa1",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 26630
+  },
+  "home": {
+   "url": "https://www.browserless.io/",
+   "status": 200,
+   "final_url": "https://www.browserless.io/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 200105,
+   "truncated": false,
+   "sha256": "924c1ec8e8d553cbeeb111ada517582e4a5888595fb94d1d28f844f52d20a6cc",
+   "fetched_at": "2026-10-19T05:54:25+00:00",
+   "text_bytes": 8391
+  },
+  "llms": {
+   "url": "https://docs.browserless.io/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.browserless.io/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 90199,
+   "truncated": false,
+   "sha256": "2f27eee736e7aa9d2106526b8bcf70e9c628f6f013836311215cf5fa019eb290",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 90171
+  },
+  "llms-full": {
+   "url": "https://docs.browserless.io/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.browserless.io/llms-full.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 3000000,
+   "truncated": true,
+   "sha256": "afd952329dce9c52e654d5e7979d492861d2c5371d358e0886f8751278c1c5fc",
+   "fetched_at": "2026-10-19T05:54:27+00:00",
+   "text_bytes": 2998501
+  },
+  "llms-https://www.browserless.io/llms.txt": {
+   "url": "https://www.browserless.io/llms.txt",
+   "status": 200,
+   "final_url": "https://www.browserless.io/llms.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 3255,
+   "truncated": false,
+   "sha256": "58db222af130148f3f9952c55b0f4ff2deee0ef4914fbd2484bc11bd8ac4c6b5",
+   "fetched_at": "2026-10-19T05:54:31+00:00",
+   "text_bytes": 3255
+  },
+  "llms-err-dc7a7f": {
+   "url": "https://www.browserless.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.browserless.io/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 106140,
+   "truncated": false,
+   "sha256": "26c6cbfa2230ba6024d4afcb30d28a070f6aab0bdcfa70450aa9586ccfcb7cd5",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  }
+ }
+}

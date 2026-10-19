@@ -1,0 +1,5 @@
+# StackExchange API (stackexchange) category=misc-api
+home=https://api.stackexchange.com/ pricing=None docs=https://api.stackexchange.com/docs llms=None
+sources_ok: docs:https://api.stackexchange.com/docs, home:https://api.stackexchange.com/
+--- ranked fact lines ---
+[docs] The maximum page number that will be returned for anonymous API access (no access token or app key) is 25

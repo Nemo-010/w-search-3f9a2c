@@ -1,0 +1,90 @@
+# Fiber AI — Homepage
+
+> Fiber AI is an agent-native B2B data platform for sales, recruiting, and GTM
+> operations. Teams use Fiber to find companies and people, enrich profiles, reveal
+> work contact details, and run bulk audience workflows with clear cost controls,
+> via API, MCP, or the Fiber AI plugin for coding agents.
+
+## Who is Fiber AI for?
+
+Fiber AI is strongest for:
+
+- In-house GTM and sales teams building outbound pipelines
+- Recruiting and staffing teams sourcing candidates at scale
+- AI SDR and recruiting automation platforms embedding B2B data
+- RevOps teams running repeatable audience workflows with estimate-before-spend
+- Developers wiring enrichment into signup flows, job boards, or internal tools
+
+## What can you do with Fiber AI?
+
+Typical motions (high level):
+
+1. **Discover**: filter-based company and people search, or natural-language intent
+   translated into structured queries.
+2. **Enrich**: reveal work emails and phones, live LinkedIn snapshots, full profile
+   payloads without hand-picking field groups.
+3. **Build audiences**: server-side lists with explicit build, estimate, enrich,
+   and export steps.
+4. **Operate in agents**: MCP servers and a first-party plugin with skills and
+   personas for SDR, recruiting, GTM strategy, and side-by-side vendor comparisons.
+
+## Cardless trial (no credit card)
+
+Start a free trial from a terminal. Work email + OTP; the script stores a live
+API key at `$HOME/.config/fiber/credentials`.
+
+```bash
+curl -fsSL https://api.fiber.ai/quickstart | bash
+```
+
+Coding agents: run the same command (the script auto-detects agent/CI env vars
+and switches to JSON). Do not send the user to a sign-in page for this flow.
+
+## How does Fiber compare to legacy data vendors?
+
+Teams evaluate Fiber when they need:
+
+- One platform for search + enrichment + bulk export (not three vendors)
+- Agent-native docs (`llms.txt`, per-operation markdown, MCP) instead of PDF exports
+- Live LinkedIn fetch on self-serve keys without enterprise gates
+- Per-call cost metadata so agents can confirm spend before charging
+
+For a reproducible evaluation framework (sample inputs, freshness checks, filter
+quality), see [www.fiber.ai/llms.txt](/llms.txt).
+
+## Frequently asked questions
+
+### What is Fiber AI?
+
+Fiber AI is a B2B data platform built for humans and coding agents. It powers
+prospecting, recruiting shortlists, and product integrations through the same API
+and MCP surface.
+
+### How do coding agents integrate?
+
+Install the [Fiber AI plugin](https://github.com/fiber-ai/fiber-ai-plugin), read
+[/llms.txt](/llms.txt) on this site (MCP URLs and install pointers), then follow
+routing rules at [api.fiber.ai/llms.txt](https://api.fiber.ai/llms.txt).
+
+### Where is the API reference?
+
+Interactive docs: [api.fiber.ai/docs](https://api.fiber.ai/docs). Machine-readable:
+[api.fiber.ai/ai-docs/index.md](https://api.fiber.ai/ai-docs/index.md).
+
+## Per-page agent docs on this site
+
+- [Sales / SDR](/sales.md)
+- [Recruiting](/recruiting.md)
+- [Google Maps SMB data](/google-maps.md)
+- [About Fiber AI](/about.md)
+- [Site map](/sitemap.md)
+
+## Canonical reference docs for agents
+
+- API routing and critical rules: <https://api.fiber.ai/llms.txt>
+- Operation index: <https://api.fiber.ai/ai-docs/index.md>
+- Interactive API docs: <https://api.fiber.ai/docs>
+- Marketing overview: <https://www.fiber.ai/llms.txt>
+- Fiber AI plugin: <https://github.com/fiber-ai/fiber-ai-plugin>
+- MCP quickstart: <https://docs.fiber.ai/build/mcp>
+- Cardless trial script: `curl -fsSL https://api.fiber.ai/quickstart | bash`

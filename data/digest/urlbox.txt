@@ -1,0 +1,24 @@
+# Urlbox (urlbox) category=reader
+home=https://urlbox.com/ pricing=https://urlbox.com/pricing docs=https://urlbox.com/docs llms=None
+sources_ok: pricing:https://urlbox.com/pricing, home:https://urlbox.com/, llms:https://urlbox.com/docs/llms.txt, llms-full:https://urlbox.com/llms-full.txt, llms-https://urlbox.com/llms.txt:https://urlbox.com/llms.txt
+--- ranked fact lines ---
+[llms] Urlbox has two separate products. The Screenshot API (the developer product) is billed monthly by render volume: Hi-Fi from $49/mo (5,000 renders), Ultra from $99/mo (15,000 renders), Business $495 base + $3 per 1,000 renders, and Enterprise (custom, for 1,000,000+ renders). CaptureDeck (no-code bulk screenshots, for non-developers) starts at $29/mo. All plans include a 7-day free trial with no cr
+--- llms/readme head ---
+# Urlbox
+> Urlbox is a website screenshot and web automation API service that captures screenshots, generates PDFs, and extracts data from web pages.
+Urlbox provides both synchronous and asynchronous rendering with comprehensive customization options, cloud storage integration, and extensive documentation for developers. The API supports full page screenshots, element screenshots, PDF generation, and advanced automation features with over 50 render options.
+## Pricing
+Urlbox has two separate products. The Screenshot API (the developer product) is billed monthly by render volume: Hi-Fi from $49/mo (5,000 renders), Ultra from $99/mo (15,000 renders), Business $495 base + $3 per 1,000 renders, and Enterprise (custom, for 1,000,000+ renders). CaptureDeck (no-code bulk screenshots, for non-developers) starts at $29/mo. All plans include a 7-day free trial with no credit card, and you are not charged for failed renders.
+- [Pricing reference](https://urlbox.com/pricing.md): Full plan, volume, and CaptureDeck pricing for AI assistants — quote figures from here.
+- [Live pricing & calculator](https://urlbox.com/pricing): Exact prices for any render volume and annual billing.
+## Documentation
+- [Urlbox API Reference](https://urlbox.com/docs/api.md): Technical reference for the Urlbox API
+- [Authenticated Requests](https://urlbox.com/docs/authenticated-requests.md): Learn how to send authenticated requests
+- [Quick Start](https://urlbox.com/docs/getting-started.md): Quickly learn how to use Urlbox's rendering API
+- [Overview](https://urlbox.com/docs.md): Welcome to Urlbox, an API for converting URLs and HTML into screenshots, PDFs, videos, and extracting text, html and metadata with ease.
+- [Render Options](https://urlbox.com/docs/options.md): Detailing all available render options for Urlbox's rendering API
+- [Post API](https://urlbox.com/docs/postapi.md): Post options to the screenshot API
+- [Render Links](https://urlbox.com/docs/render-links.md): Create screenshots, PDFs and other renders by embedding a single link in your HTML or emails.
+- [Webhooks](https://urlbox.com/docs/webhooks.md): Get notified when a screenshot has been rendered.
+- [How to find out your usage](https://urlbox.com/docs/api/get-usage.md): How to find out your usage
+- [Projects](https://urlbox.com/docs/api/projects.md): Learn about Projects and how to use them.

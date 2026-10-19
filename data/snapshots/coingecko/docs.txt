@@ -1,0 +1,11 @@
+Welcome to CoinGecko API - CoinGecko API Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content CoinGecko API home page Search... ⌘ K Contact Sales Status Get Free API Key Get Free API Key Search... Navigation Get Started Welcome to CoinGecko API Overview AI Integration Pro API Reference Demo API Reference WebSocket Webhooks Changelog CoinGecko API Enterprise Case Studies Newsletter Feedback Get Started Welcome API Basics Data Delivery Methods Guides How-To Common Use Cases Endpoint Showcase Pay with Crypto Resources SDK Spreadsheet Useful Links Get Started Welcome to CoinGecko API Copy page Copy page Copy page Copy page ​ CoinGecko is the world’s largest independent crypto data aggregator 
+ The CoinGecko API provides comprehensive crypto market data through REST endpoints, WebSocket streams, Webhooks, and AI-native tools. 
+ CoinGecko — 1,500+ exchanges, 18,000+ coins, 600+ categories 
+ Onchain DEX data — 200+ blockchain networks, 1,800+ DEXes, 39M+ tokens, powered by GeckoTerminal 
+ ​ Get Started 
+ Set Up Your API Key Create your CoinGecko API key and start making requests. Data Delivery Methods Choose between REST API, WebSocket, and Webhooks. AI Integration MCP servers, SKILL, CLI, and coding agent setup guides. Common Use Cases Trading, portfolio tracking, market research, DeFi analytics, and more. 
+ ​ Build 
+ Pro API Reference Full endpoint reference for paid plan users. Demo API Reference Free Demo API with limited endpoints and rate limits. WebSocket Ultra-low latency streaming with persistent connections. Webhooks Receive automated metadata updates via HTTP callbacks. 
+ ​ Explore 
+ SDK Official TypeScript and Python SDKs. Spreadsheet Add-ons Google Sheets and Excel integrations for crypto data. How-To Querying coin data, onchain data, and common API patterns. Endpoint Showcase See which API endpoints power CoinGecko and GeckoTerminal features. 
+ Was this page helpful? Yes No github x linkedin Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

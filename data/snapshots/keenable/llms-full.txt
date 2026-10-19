@@ -1,0 +1,3808 @@
+# API reference
+Source: https://docs.keenable.ai/api-reference
+
+The HTTP API behind the Keenable CLI, MCP server, and integrations.
+
+Two endpoints sit under everything else Keenable ships — the [CLI](/cli), the [MCP server](/mcp-server), and every [integration](/integrations) call one or both of them. Reach for the HTTP API directly when you are building something none of those cover.
+
+## Base URL
+
+```
+https://api.keenable.ai
+```
+
+## Authentication
+
+There are three ways in, and the one you pick decides the path you call.
+
+**With an API key**, in the `X-API-Key` header:
+
+```bash theme={"system"}
+curl -X POST "https://api.keenable.ai/v1/search" \
+  -H "X-API-Key: keen_<your_key>" \
+  -H "Content-Type: application/json" \
+  -d '{ "query": "typescript best practices" }'
+```
+
+`Authorization: Bearer keen_<your_key>` works too, and `X-API-Key` wins if both are present. See [Authentication](/authentication) for obtaining and rotating a key, and for the error responses both endpoints share.
+
+**Without one**, on the `/public` twin of each endpoint:
+
+```bash theme={"system"}
+curl -X POST "https://api.keenable.ai/v1/search/public" \
+  -H "X-Keenable-Title: My App" \
+  -H "Content-Type: application/json" \
+  -d '{ "query": "typescript best practices" }'
+```
+
+`X-Keenable-Title` names the application making the call. It is **required** on the public endpoints — a request without it is rejected with `400 Missing app identifier` — and it is how keyless traffic is attributed. Values longer than 256 characters are truncated, and `?keenable_title=` carries the same value when a header is not an option.
+
+**Paying per request**, on the `/v1/x402/*` paths, with no key and no account: each call pays \$0.01 in USDC on Base over the x402 protocol. See [Pay per request](/pay-per-request) for the payment flow and a client example.
+
+Parameters and response shapes are identical across all three, so moving between them means changing the path and swapping one header. The keyless tier is what the [CLI](/cli), the [MCP server](/mcp-server), and every [integration](/integrations) fall back to when no key is configured.
+
+## Endpoints
+
+| Endpoint | Method | Path | Keyless path | Pay-per-request path | Returns |
+| - | - | - | - | - | - |
+| [Search](/api-reference/search) | `POST` | `/v1/search` | `/v1/search/public` | `/v1/x402/search` | Ranked results with URLs, titles, descriptions, and snippets |
+| [Fetch](/api-reference/fetch) | `GET` | `/v1/fetch` | `/v1/fetch/public` | `/v1/x402/fetch` | Page content as markdown, with title, description, and author |
+
+Each endpoint page carries the full request and response shape, examples in curl, Python, and TypeScript, and a playground you can call with your own key.
+
+## Limits and billing
+
+Authenticated requests are rate limited per organization rather than per IP — see [Rate limits](/rate-limits) for the numbers — and draw on your [credit](/credits) balance.
+
+Keyless requests are limited per IP instead, on a public pool capped at 1,000 requests per hour and 10 per second, and they consume no credits. Responses carry `X-RateLimit-Limit`, `X-RateLimit-Remaining` and `X-RateLimit-Reset`, and a `429` adds `Retry-After`. That pool is shared with everyone else on your egress address, so its headroom is outside your control: use a key for anything past a first look.
+
+Pay-per-request calls consume no credits either: each one is paid for on its own, and has its own [limits](/pay-per-request#limits).
+
+
+# Fetch
+Source: https://docs.keenable.ai/api-reference/fetch
+
+GET https://api.keenable.ai/v1/fetch
+Fetch webpage contents
+
+Retrieve content from a URL in markdown format.
+
+Part of the [API reference](/api-reference), which covers the base URL, authentication, and the limits both endpoints share.
+
+<CodeGroup>
+  ```bash curl theme={"system"}
+  curl "https://api.keenable.ai/v1/fetch?url=https://example.com/ts-best-practices" \
+    -H "X-API-Key: keen_<your_key>"
+  ```
+
+  ```python Python theme={"system"}
+  import requests
+
+  r = requests.get(
+      "https://api.keenable.ai/v1/fetch",
+      headers={"X-API-Key": "keen_<your_key>"},
+      params={"url": "https://example.com/ts-best-practices"},
+  )
+  print(r.json()["content"])
+  ```
+
+  ```typescript TypeScript theme={"system"}
+  const url = "https://example.com/ts-best-practices";
+  const r = await fetch(
+    `https://api.keenable.ai/v1/fetch?url=${encodeURIComponent(url)}`,
+    { headers: { "X-API-Key": "keen_<your_key>" } },
+  );
+  const { content } = await r.json();
+  ```
+</CodeGroup>
+
+<Warning>
+  By default, only URLs that Keenable indexes are supported, and attempting to fetch a document that is not indexed results in an error. Pass `live=true` to fetch directly from the source, including URLs that are not indexed.
+</Warning>
+
+## Without a key
+
+`GET /v1/fetch/public` takes the same query parameters and returns the same shape, with no API key:
+
+```bash theme={"system"}
+curl "https://api.keenable.ai/v1/fetch/public?url=https://example.com/ts-best-practices" \
+  -H "X-Keenable-Title: My App"
+```
+
+`X-Keenable-Title` names your application and is required on the public endpoint; without it the request is rejected with `400 Missing app identifier`. Keyless calls are rate limited per IP and consume no credits — see [Authentication](/api-reference#authentication) for the details. The playground on this page calls the keyed endpoint.
+
+## Request
+
+<ParamField type="string">
+  URL to fetch.
+</ParamField>
+
+<ParamField type="integer">
+  Maximum number of characters of content to return. Longer content is truncated.
+</ParamField>
+
+<ParamField type="boolean">
+  Fetch the page live from the source instead of returning Keenable's indexed copy. Enables fetching URLs that are not indexed.
+</ParamField>
+
+<ParamField type="string">
+  Optional extraction instruction, at most 2000 characters. When set, an LLM reads the fetched page and `content` contains only the output for this instruction instead of the full page. Example: `List all pricing tiers with their monthly prices`.
+</ParamField>
+
+## Response
+
+<ResponseField name="url" type="string">
+  The fetched URL.
+</ResponseField>
+
+<ResponseField name="title" type="string">
+  Page title (if available).
+</ResponseField>
+
+<ResponseField name="description" type="string">
+  Short summary of the page (if available).
+</ResponseField>
+
+<ResponseField name="author" type="string">
+  Page author (if available).
+</ResponseField>
+
+<ResponseField name="content" type="string">
+  Extracted page content in markdown.
+</ResponseField>
+
+<ResponseField name="published_at" type="integer">
+  Publication time as a Unix timestamp in seconds (if available).
+</ResponseField>
+
+### Example
+
+```json theme={"system"}
+{
+  "url": "https://example.com/ts-best-practices",
+  "title": "TypeScript Best Practices 2026",
+  "description": "A comprehensive guide to modern TypeScript patterns and best practices.",
+  "author": "Jane Doe",
+  "published_at": 1768435200,
+  "content": "# TypeScript Best Practices 2026\n\nUse strict mode, prefer interfaces over type aliases for object shapes..."
+}
+```
+
+
+# Search
+Source: https://docs.keenable.ai/api-reference/search
+
+POST https://api.keenable.ai/v1/search
+Search the web and return ranked results
+
+Search the web and return ranked results with URLs, titles, and descriptions.
+
+Part of the [API reference](/api-reference), which covers the base URL, authentication, and the limits both endpoints share.
+
+<CodeGroup>
+  ```bash curl theme={"system"}
+  curl -X POST "https://api.keenable.ai/v1/search" \
+    -H "X-API-Key: keen_<your_key>" \
+    -H "Content-Type: application/json" \
+    -d '{ "query": "typescript best practices" }'
+  ```
+
+  ```python Python theme={"system"}
+  import requests
+
+  r = requests.post(
+      "https://api.keenable.ai/v1/search",
+      headers={"X-API-Key": "keen_<your_key>"},
+      json={"query": "typescript best practices"},
+  )
+  for hit in r.json()["results"]:
+      print(hit["title"], hit["url"])
+  ```
+
+  ```typescript TypeScript theme={"system"}
+  const r = await fetch("https://api.keenable.ai/v1/search", {
+    method: "POST",
+    headers: {
+      "X-API-Key": "keen_<your_key>",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query: "typescript best practices" }),
+  });
+  const { results } = await r.json();
+  ```
+</CodeGroup>
+
+## Without a key
+
+`POST /v1/search/public` takes the same body and returns the same shape, with no API key:
+
+```bash theme={"system"}
+curl -X POST "https://api.keenable.ai/v1/search/public" \
+  -H "X-Keenable-Title: My App" \
+  -H "Content-Type: application/json" \
+  -d '{ "query": "typescript best practices" }'
+```
+
+`X-Keenable-Title` names your application and is required on the public endpoint; without it the request is rejected with `400 Missing app identifier`. Keyless calls are rate limited per IP and consume no credits — see [Authentication](/api-reference#authentication) for the details. The playground on this page calls the keyed endpoint.
+
+## Request
+
+<ParamField type="string">
+  The search query.
+</ParamField>
+
+<ParamField type="string">
+  Search mode: `pro` for deeper retrieval, `realtime` for the fastest results. Each mode is billed as its own SKU, `search.pro` or `search.realtime`; see [Credits](/credits#what-a-call-costs).
+</ParamField>
+
+<ParamField type="string">
+  Restrict results to a specific site (e.g. `"techcrunch.com"`).
+</ParamField>
+
+<ParamField type="string">
+  Filter to pages acquired/indexed at or after this point in time. See [Date and time filters](#date-and-time-filters) for accepted formats.
+</ParamField>
+
+<ParamField type="string">
+  Filter to pages acquired/indexed at or before this point in time. See [Date and time filters](#date-and-time-filters) for accepted formats.
+</ParamField>
+
+<ParamField type="string">
+  Filter to pages published at or after this point in time. See [Date and time filters](#date-and-time-filters) for accepted formats.
+</ParamField>
+
+<ParamField type="string">
+  Filter to pages published at or before this point in time. See [Date and time filters](#date-and-time-filters) for accepted formats.
+</ParamField>
+
+<ParamField type="string">
+  Search the index as it stood at this point in time: pages acquired after it are excluded. Accepts a timestamp or a date (a date resolves to `00:00:00` UTC, not to the end of the day). Also re-bases relative deltas — see [Point-in-time search](/mcp-server#point-in-time-search).
+</ParamField>
+
+<ParamField type="integer">
+  Maximum length, in characters, of the `snippet` returned per result. Must be between 180 and 10000. When omitted, a default snippet length is used.
+</ParamField>
+
+<ParamField type="integer">
+  Maximum number of results to return. Must be between 1 and 50. When omitted, up to 10 results are returned.
+</ParamField>
+
+## Response
+
+<ResponseField name="query" type="string">
+  The query that was searched.
+</ResponseField>
+
+<ResponseField name="mode" type="string">
+  The search mode that served the request, `pro` or `realtime`.
+</ResponseField>
+
+<ResponseField name="results" type="array">
+  List of search results.
+
+  <Expandable title="result">
+    <ResponseField name="title" type="string">
+      Page title.
+    </ResponseField>
+
+    <ResponseField name="url" type="string">
+      Page URL.
+    </ResponseField>
+
+    <ResponseField name="description" type="string">
+      Short summary of the page.
+    </ResponseField>
+
+    <ResponseField name="snippet" type="string">
+      Longer text excerpt from the page content (if available).
+    </ResponseField>
+
+    <ResponseField name="published_at" type="string">
+      When the page was published, as an ISO 8601 timestamp in UTC (if available).
+    </ResponseField>
+
+    <ResponseField name="acquired_at" type="string">
+      When the page was acquired/indexed, as an ISO 8601 timestamp in UTC (if available).
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+### Example
+
+```json theme={"system"}
+{
+  "query": "typescript best practices",
+  "mode": "pro",
+  "results": [
+    {
+      "title": "TypeScript Best Practices 2026",
+      "url": "https://example.com/ts-best-practices",
+      "description": "A comprehensive guide to modern TypeScript patterns and best practices.",
+      "snippet": "TypeScript Best Practices 2026 Use strict mode, prefer interfaces over type aliases for object shapes...",
+      "published_at": "2026-01-15T10:30:00Z",
+      "acquired_at": "2026-01-16T08:12:34Z"
+    }
+  ]
+}
+```
+
+### Date and time filters
+
+`acquired_after`, `acquired_before`, `published_after`, and `published_before` each accept **one** of the following formats:
+
+* **Date** in RFC 3339 `full-date` form (`YYYY-MM-DD`) — covers that whole day in UTC. On an `_after` bound it resolves to `00:00:00` on that date; on a `_before` bound it resolves to `23:59:59.999` on that date, so pages from the named day are kept at either end. Pass a timestamp instead to cut at an exact instant.
+* **Timestamp** in ISO 8601 form (`YYYY-MM-DDTHH:MM:SS[.sss][±HH:MM]`). When a timezone offset is not provided, the timezone is interpreted as UTC.
+* **Relative delta** (`<number><unit>`, e.g. `7d`, `30min`) — resolves to the request time minus the delta, truncated to minute precision, or to `query_time` minus the delta when that is set. Supported units: `min` (minutes), `h` (hours), `d` (days), `mo` (months), `y` (years).
+
+Example values:
+
+| Value | Resolves to |
+| - | - |
+| `2026-01-15` on `acquired_after` / `published_after` | `2026-01-15T00:00:00Z` |
+| `2026-01-15` on `acquired_before` / `published_before` | `2026-01-15T23:59:59.999Z` |
+| `2026-01-15T10:30:00` | `2026-01-15T10:30:00Z` (no offset → UTC) |
+| `2026-01-15T10:30:00Z` | `2026-01-15T10:30:00Z` |
+| `2026-01-15T10:30:00.500-05:00` | `2026-01-15T15:30:00.500Z` |
+| `7d` | 7 days before request time, truncated to the minute |
+| `30min` | 30 minutes before request time, truncated to the minute |
+
+Relative deltas may be combined with absolute values across the two bounds of a window:
+
+```json theme={"system"}
+{
+  "query": "...",
+  "published_after": "1y",
+  "published_before": "6mo"
+}
+```
+
+```json theme={"system"}
+{
+  "query": "...",
+  "acquired_after": "2024-01-01",
+  "acquired_before": "30d"
+}
+```
+
+For example, at request time `2026-05-18T14:23:45Z`, `acquired_after: "2h"` resolves to `2026-05-18T12:23:00Z` — a document acquired at `12:22:59Z` is dropped, one acquired at `12:23:00Z` is kept.
+
+Mind the difference between a date and a timestamp on a `_before` bound: `acquired_before: "2026-05-01"` keeps a page acquired at `2026-05-01T14:31:13Z`, while `acquired_before: "2026-05-01T00:00:00Z"` drops it. Use the date form to mean "up to and including that day", and the timestamp form to cut at midnight.
+
+
+# Authentication
+Source: https://docs.keenable.ai/authentication
+
+Get an API key, pass it to the API, CLI and MCP server, and read the error responses.
+
+Keenable authenticates with an API key. [Log in](https://app.keenable.ai/login) to obtain one.
+
+Authenticated requests remove the hourly request limit, are rate limited per organization rather than per IP, and report per-call usage back to you. See [rate limits](/rate-limits) for the numbers.
+
+## CLI
+
+Run `keenable login` and follow the browser flow to authenticate. The CLI uses device authorization, so an agent can provide the link for a human to complete.
+
+```bash theme={"system"}
+keenable login
+```
+
+## MCP
+
+The easiest way is via the CLI:
+
+```bash theme={"system"}
+# if not authenticated yet
+keenable login
+
+keenable configure-mcp --all
+```
+
+This detects supported clients and configures them with your credentials. Alternatively, create an API key in the [console](https://app.keenable.ai/console) and add it manually — see [API key header](#api-key-header) below.
+
+A client that signs you in instead of taking a key, such as a Claude custom connector, connects to `https://api.keenable.ai/mcp-oauth` and opens the Keenable sign-in page; see [Claude](/integrations/claude#use-your-own-account).
+
+## API key header
+
+For manual MCP setup, pass your API key as the `X-API-Key` header.
+
+<CodeGroup>
+  ```bash Claude Code theme={"system"}
+  claude mcp add keenable \
+    --transport http https://api.keenable.ai/mcp \
+    --scope user \
+    --header "X-API-Key: keen_<your_key>"
+  ```
+
+  ```toml Codex theme={"system"}
+  [mcp_servers.keenable]
+  url = "https://api.keenable.ai/mcp"
+  http_headers = { "X-API-Key" = "keen_<your_key>" }
+  ```
+
+  ```json JSON theme={"system"}
+  {
+    "mcpServers": {
+      "keenable": {
+        "url": "https://api.keenable.ai/mcp",
+        "headers": {
+          "X-API-Key": "keen_<your_key>"
+        }
+      }
+    }
+  }
+  ```
+
+  ```json Claude Desktop theme={"system"}
+  {
+    "mcpServers": {
+      "keenable": {
+        "command": "npx",
+        "args": ["-y", "@keenable/mcp-server"],
+        "env": {
+          "KEENABLE_API_KEY": "keen_<your_key>"
+        }
+      }
+    }
+  }
+  ```
+</CodeGroup>
+
+Claude Desktop needs that last shape: its config file accepts only local `command` servers, so a remote `"url"` entry is ignored without an error. If you don't need your key applied, skip the file and add Keenable as a [connector](/mcp-server#claude-remote-connector) instead.
+
+Keys are scoped to your workspace, never expire on their own, and can be rotated at any time.
+
+Alternatively, you can pass your API key in the `Authorization` header using the `Bearer` scheme. This can be useful when integrating with MCP clients or frameworks that only support bearer tokens.
+
+```http theme={"system"}
+Authorization: Bearer keen_<your_key>
+```
+
+If both headers are present, `X-API-Key` takes precedence.
+
+## Evaluating without a key
+
+The MCP server, the CLI and the HTTP API all run unauthenticated, so you can try them before creating an account. For the HTTP API this means the `/public` endpoints described in the [API reference](/api-reference#authentication), which take no key but require an `X-Keenable-Title` header naming your application. Unauthenticated requests draw on a shared public pool capped at 1,000 requests per hour and 10 requests per second per IP, and they carry no usage metadata — the `_meta["keenable/usage"]` block described in the [MCP reference](/mcp-server#metadata-for-integrators) is only returned for authenticated calls.
+
+Use an API key for anything beyond a first look: the per-IP pool is shared with everyone else on your network or egress address, so its available headroom is outside your control.
+
+## Paying per request without a key
+
+A third option sits between the two: an agent with a wallet can [pay per request](/pay-per-request) over the x402 protocol — \$0.01 per search or fetch in USDC on Base, on the `/v1/x402/*` paths, with no account and no key. It has its own limits and error responses, described on that page. For regular use an API key stays cheaper.
+
+## Error responses
+
+| Status | Meaning |
+| - | - |
+| `400` | Malformed API key (invalid format) |
+| `401` | Missing or invalid API key |
+| `402` | No credits available — the monthly allowance is spent and no purchased credits remain (see [credits](/credits)) |
+| `403` | API key disabled or revoked |
+| `429` | Rate limit exceeded |
+
+
+# Auto top-up
+Source: https://docs.keenable.ai/auto-top-up
+
+Refill purchased credits automatically: the threshold, amount and monthly limit you set, when your card is charged, and what happens when a charge is declined.
+
+Auto top-up keeps your purchased balance from running out. You choose a threshold and an amount, and whenever the balance falls below the threshold, Keenable charges your saved card that amount and adds the credits it buys. A monthly limit caps how much can be charged in one month.
+
+It is off until you turn it on, under **Billing** in the [console](https://app.keenable.ai/console/billing).
+
+## Settings
+
+| Setting | Default | Allowed |
+| - | - | - |
+| When balance falls below | \$5 | \$1 to \$10,000 |
+| Add | \$20 | \$5 to \$10,000 |
+| Monthly limit | \$1,000 | \$5 to \$100,000, and no less than one top-up |
+
+A top-up buys credits at the same price as a purchase in the console, and the console shows how many requests each amount buys. Change the settings at any time while auto top-up is on: **Edit**, then **Save**.
+
+## Turning it on
+
+The first time, the console sends you to Stripe to add a card. If your balance is already below the threshold, Stripe takes the first top-up in the same step; otherwise it only saves the card. When you come back, auto top-up is on. Once a card is saved, turning it on or saving new settings takes effect at once.
+
+Turning it on, or saving new settings, charges straight away when your balance is already below the threshold. The console says so above the button before you confirm.
+
+## When your card is charged
+
+**The threshold watches your purchased balance**, the dollar balance shown on the Billing page. The free [monthly allowance](/credits#monthly-allowance) does not count toward it. Free requests are used first, so while some are left your purchased balance does not go down and nothing is charged.
+
+**Every charge is an invoice.** An automatic top-up appears in the console's invoice list, like any purchase.
+
+**The monthly limit counts whole top-ups.** A top-up is charged only if all of it fits under what is left of the limit. Once the next one would go over, nothing more is charged until the limit resets; the console shows how much has been charged this month and when the limit resets, on the same day as the free allowance. If the balance and the allowance both run out before then, requests return `402`, as described in [Credits](/credits#when-credits-run-out).
+
+## When a charge fails
+
+If the card is declined, or the bank asks to confirm the payment (3-D Secure, which cannot happen while you are away), auto top-up turns off. Nothing is retried. The person who turned it on gets an email, and the Billing page shows **Off · payment failed** with the reason.
+
+To start again, check the card, or replace it with **Manage payment methods** at the top of the Billing page, then turn auto top-up back on. If your balance is below the threshold at that point, the first top-up is charged straight away.
+
+If a charge fails for a reason that is not the card's, such as an outage on our side or Stripe's, auto top-up stays on and tries again the next time the balance is low.
+
+## Changing the card or turning it off
+
+While auto top-up is on, **Change card** opens Stripe to set a different card. **Turn off** stops all further charges at once; the credits already added stay on your balance and never expire.
+
+Automatic charges are covered by the Automatic Top-Ups section of the [Terms of Service](https://keenable.ai/terms). Turning auto top-up on authorizes charges for exactly the amounts you set.
+
+
+# Changelog
+Source: https://docs.keenable.ai/changelog
+
+Product updates and announcements from Keenable.
+
+<Update label="October 2026">
+  **Pay per request with x402** — search and fetch can now be bought one call at a time,
+  with no account and no API key. `/v1/x402/search` and `/v1/x402/fetch` answer `402` with
+  an [x402](https://www.x402.org) offer; the client pays \$0.01 in USDC on Base and retries,
+  and gets the result with an on-chain receipt. Any standard x402 client works. See
+  [Pay per request](/pay-per-request).
+
+  **Auto top-up** — purchased credits can now refill themselves. Set a threshold, an
+  amount and a monthly limit under Billing in the console, and Keenable charges your saved
+  card whenever your balance falls below the threshold. A declined card turns it off and
+  emails you; nothing is retried. See [Auto top-up](/auto-top-up).
+
+  **Built into Hermes Agent.** Keenable ships in [Hermes Agent](/integrations/hermes-agent)
+  as a bundled web backend for `web_search` and `web_extract`, with no plugin and no key.
+  `hermes config set web.backend keenable` selects it; the standalone `hermes-keenable-web`
+  plugin is no longer needed.
+</Update>
+
+<Update label="September 2026">
+  **Keenable on Baseten** — web search and page fetch run as
+  [server-side tools](/integrations/baseten) on Baseten Model APIs. Name the two tools in a
+  chat request and the model searches and reads pages inside Baseten's inference loop; no MCP
+  client and no Keenable key, because Baseten meters the calls onto your Baseten invoice.
+
+  **Keenable SELECT in both directories** — the [SELECT](/select) server is now a listed
+  connector in Claude (Settings → Connectors → **Keenable SELECT**) and a published plugin in
+  OpenAI's Plugins Directory, shared by ChatGPT and Codex. Both sign you in with your
+  Keenable account; nothing to paste. The custom-connector and developer-mode routes keep
+  working for accounts the listings have not reached yet.
+</Update>
+
+<Update label="August 2026">
+  **Point-in-time search** — [`query_time`](/mcp-server#point-in-time-search) is now
+  documented on both the MCP tool and the [Search API](/api-reference/search): search the
+  index as it stood at an instant, and have relative date filters resolve against that
+  instant rather than now.
+
+  **Two more search parameters** — `max_results` caps how many results come back (1–50),
+  and `snippet_max_length` caps the snippet per result. Both are documented on the
+  [MCP server](/mcp-server) and [Search API](/api-reference/search) pages.
+
+  **Integrations directory** — a [catalog](/integrations) of the frameworks, agents and
+  editors Keenable plugs into, with one-click installs where the client supports them.
+  Added this month: Claude, Convex, OpenCode, Pipecat, the Vercel AI SDK tool package,
+  Lightpanda, LibreChat, and a listing in the OpenAI Plugins Directory.
+
+  **Keyless endpoints, written down** — `/v1/search/public` and `/v1/fetch/public` are
+  documented in the [API reference](/api-reference). They exist to evaluate the API
+  without an account; keyed access is what production use wants.
+
+  **Credits, on their own page** — the monthly credit allowance and the per-SKU pricing
+  model moved out of Rate limits into [Credits](/credits).
+</Update>
+
+<Update label="July 2026">
+  **Prompt-driven extraction** — the [Fetch endpoint](/api-reference/fetch) accepts a
+  `prompt`, and returns what an LLM read out of the page for that instruction instead of
+  the whole page.
+
+  **Usage and overrides over MCP** — every authenticated tool call now reports its cost
+  under [`_meta["keenable/usage"]`](/credits#reading-usage-per-call), and an integrator can
+  pin the search mode with
+  [`_meta["keenable/overrides"]`](/mcp-server#operator-overrides-request-meta).
+
+  **Date-only cutoffs cover the whole day** — a bare `YYYY-MM-DD` on `acquired_before` /
+  `published_before` now resolves to `23:59:59.999` on that date, so pages from the named
+  day are kept at either end of a window. Pass a timestamp to cut at an exact instant.
+</Update>
+
+<Update label="June 2026">
+  **Live fetching on the Fetch API** — the [Fetch endpoint](/api-reference/fetch) now
+  accepts a `live` parameter to retrieve a page in real time instead of serving the
+  cached copy. Use it when freshness matters more than latency.
+
+  **Published rate limits** — request limits are now documented: 10 requests/second per
+  organization for authenticated API keys, and a 1,000 requests/hour quota for
+  unauthenticated use. See [Rate limits](/rate-limits).
+
+  **One-click MCP install** — added one-click install buttons for Cursor and VS Code
+  (including VS Code Insiders) so you can add Keenable to your editor without editing
+  config by hand. See [MCP server](/mcp-server).
+</Update>
+
+<Update label="May 2026">
+  **Unauthenticated access** — the [CLI](/cli) and [MCP server](/mcp-server) now answer
+  requests without an API key, on a shared public tier, so you can evaluate them before
+  creating an account. See [Authentication](/authentication).
+
+  **Authentication & rate-limit guides** — new [Authentication](/authentication) and
+  [Rate limits](/rate-limits) pages cover the device-code login flow, API keys, and the
+  unauthenticated vs. authenticated tiers.
+</Update>
+
+<Update label="April 2026">
+  **Keenable API launch** — the initial public release of the Keenable platform for AI
+  agents: the [Search API](/api-reference/search) (`/v1/search`), the
+  [Fetch API](/api-reference/fetch) (`/v1/fetch`), the [CLI](/cli), and the
+  [MCP server](/mcp-server) — one API key across all of them.
+</Update>
+
+
+# CLI
+Source: https://docs.keenable.ai/cli
+
+Authenticate, configure MCP, and search from the terminal
+
+[`keenable-cli`](https://github.com/keenableai/keenable-cli) is a single-binary CLI for Keenable — configure MCP for your AI clients, search the web, and manage API keys from the terminal.
+Run `keenable login` once to authenticate; the CLI stores your credentials and reuses them for every command. See [authentication](/authentication) for the details, and [rate limits](/rate-limits) for the caps that apply with and without a key.
+
+## Installation
+
+<CodeGroup>
+  ```bash Homebrew theme={"system"}
+  brew install keenableai/tap/keenable-cli
+  ```
+
+  ```bash macOS / Linux theme={"system"}
+  curl --proto '=https' --tlsv1.2 -LsSf \
+    https://github.com/keenableai/keenable-cli/releases/latest/download/keenable-cli-installer.sh \
+    | sh
+  ```
+
+  ```powershell PowerShell theme={"system"}
+  irm https://github.com/keenableai/keenable-cli/releases/latest/download/keenable-cli-installer.ps1 | iex
+  ```
+
+  ```bash Source theme={"system"}
+  cargo install --git https://github.com/keenableai/keenable-cli
+  ```
+</CodeGroup>
+
+## Quick start
+
+```bash theme={"system"}
+# Login with your Keenable account
+keenable login
+
+# Configure MCP for your AI clients (Claude Code, Cursor, etc.)
+keenable configure-mcp --all
+
+# Search the web
+keenable search "rust async patterns" -p
+```
+
+## Authentication
+
+```bash theme={"system"}
+# Device-code login (opens browser)
+keenable login
+
+# Save API key directly (CI, servers)
+keenable login --api-key <KEY>
+
+# Clear stored credentials
+keenable logout
+```
+
+## MCP setup
+
+```bash theme={"system"}
+# Show client status
+keenable configure-mcp
+
+# Configure all detected clients
+keenable configure-mcp --all
+
+# Configure a specific client
+keenable configure-mcp --cursor
+
+# Remove Keenable from all clients
+keenable reset --all
+```
+
+Supported clients: Claude Code, Cursor, Windsurf, Codex, OpenCode.
+
+## Search
+
+```bash theme={"system"}
+# YAML output (for agents)
+keenable search "AI news"
+
+# Pretty output (for humans)
+keenable search "AI news" -p
+
+# Restrict to site
+keenable search "AI news" --site techcrunch.com
+
+# Date filter
+keenable search "AI news" --published-after 2026-01-01
+
+# Date filter
+keenable search "AI news" --acquired-before 2026-05-01
+
+# Longer snippets, in characters (180-10000)
+keenable search "rust async" --snippet-max-length 2000
+
+# More results (1-50, default 10)
+keenable search "rust async" --max-results 25
+
+# Point-in-time search: the index as it stood then
+keenable search "AI news" --query-time 2026-01-01T00:00:00Z
+
+# Use a specific API key
+keenable search "AI news" --api-key KEY
+```
+
+### Date and time filters
+
+`--acquired-after`, `--acquired-before`, `--published-after`, and `--published-before` each accept **one** of the following formats:
+
+* **Date** in RFC 3339 `full-date` form (`YYYY-MM-DD`) — covers that whole day in UTC. On an `--*-after` flag it resolves to `00:00:00` on that date; on a `--*-before` flag it resolves to `23:59:59.999` on that date, so pages from the named day are kept at either end. Pass a timestamp instead to cut at an exact instant.
+* **Timestamp** in ISO 8601 form (`YYYY-MM-DDTHH:MM:SS[.sss][±HH:MM]`). When a timezone offset is not provided, the timezone is interpreted as UTC.
+* **Relative delta** (`<number><unit>`, e.g. `7d`, `30min`) — resolves to the request time minus the delta, truncated to minute precision, or to [`--query-time`](#point-in-time-search) minus the delta when that is set. Supported units: `min` (minutes), `h` (hours), `d` (days), `mo` (months), `y` (years).
+
+```bash theme={"system"}
+# Resolves to 2026-01-15T00:00:00Z
+keenable search "AI news" --published-after 2026-01-15
+
+# Resolves to 2026-01-15T23:59:59.999Z — the 15th is kept
+keenable search "AI news" --published-before 2026-01-15
+
+# No offset → UTC
+keenable search "AI news" --published-after 2026-01-15T10:30:00
+keenable search "AI news" --published-after 2026-01-15T10:30:00.500-05:00
+
+# 7 days before request time
+keenable search "AI news" --acquired-after 7d
+
+# 30 minutes before request time
+keenable search "AI news" --acquired-after 30min
+```
+
+Relative deltas may be combined with absolute values across the two bounds of a window:
+
+```bash theme={"system"}
+keenable search "AI news" --published-after 1y --published-before 6mo
+keenable search "AI news" --acquired-after 2024-01-01 --acquired-before 30d
+```
+
+For example, at request time `2026-05-18T14:23:45Z`, `--acquired-after 2h` resolves to `2026-05-18T12:23:00Z` — a document acquired at `12:22:59Z` is dropped, one acquired at `12:23:00Z` is kept.
+
+Mind the difference between a date and a timestamp on a `--*-before` flag: `--acquired-before 2026-05-01` keeps a page acquired at `2026-05-01T14:31:13Z`, while `--acquired-before 2026-05-01T00:00:00Z` drops it. Use the date form to mean "up to and including that day", and the timestamp form to cut at midnight.
+
+### Point-in-time search
+
+`--query-time` moves the whole search back to an instant: a page acquired after it is not a candidate at all, so the answer is the one the index would have given then rather than today's answer filtered down. It takes the same formats as the filters above.
+
+```bash theme={"system"}
+keenable search "champions league final" --query-time 2025-05-30T00:00:00Z
+```
+
+It also **re-bases every relative delta in the same command**. A delta resolves against the request time only when `--query-time` is absent; with it, `--published-after 30d` means thirty days before `--query-time`:
+
+```bash theme={"system"}
+keenable search "cloud computing" --query-time 2026-06-13T00:00:00Z --published-after 30d
+```
+
+returns pages published between `2026-05-14` and `2026-06-13` — not the last thirty days. Absolute bounds are unaffected.
+
+A date-only `--query-time` resolves to `00:00:00` UTC, which is the opposite end of the day from a date-only `--*-before` flag: `--query-time 2026-06-13` cuts at the start of 13 June, while `--acquired-before 2026-06-13` keeps all of it.
+
+## Fetch
+
+```bash theme={"system"}
+# Fetch page content (YAML)
+keenable fetch https://example.com
+
+# Pretty output
+keenable fetch https://example.com -p
+
+# LLM extraction: return only the instruction's output instead of the full page
+keenable fetch https://example.com --prompt "List all pricing tiers with their monthly prices"
+```
+
+## Updating
+
+The CLI checks for updates automatically once per hour. To update manually:
+
+```bash theme={"system"}
+# Homebrew
+brew update && brew upgrade keenable-cli
+```
+
+Or re-run the installer script.
+
+
+# Credits
+Source: https://docs.keenable.ai/credits
+
+The free allowance of 100,000 requests a month, how authenticated usage is metered against it, and what happens when it runs out.
+
+[Rate limits](/rate-limits) cap how *fast* you can call the API. Credits cap how *much*: authenticated usage is metered in credits, and every organization gets an allowance of them at no cost.
+
+## Monthly allowance
+
+**100,000 requests a month, free.** The allowance resets each month, so it is a recurring budget rather than a one-off trial. To keep going once it is spent, buy a credit package in the [console](https://app.keenable.ai/console) — that is also where your current allowance and remaining balance are shown.
+
+Quoting it in requests works because a credit *is* a request for the two operations that matter here: search and fetch each cost one. Anything priced differently draws more than one credit per call, which is why the rule below still holds — read what a call cost from the response rather than counting calls.
+
+Unauthenticated requests are not metered at all. They are capped by the [request limits](/rate-limits) instead, so evaluating without a key does not draw on the allowance. [Pay-per-request](/pay-per-request) calls do not touch it either: each one is paid for in USDC as it is made.
+
+## What a call costs
+
+Each billed operation has its own credit price, keyed by SKU:
+
+| SKU | Operation |
+| - | - |
+| `search.realtime` | A search served in `realtime` mode |
+| `search.pro` | A search served in `pro` mode |
+| `fetch` | A fetch of Keenable's indexed copy of a page |
+| `fetch.live` | A fetch made live from the source ([`live=true`](/api-reference/fetch)) |
+
+Two things to keep in mind when you budget against these:
+
+* **Prices are per-organization.** Read what a call actually cost from the response rather than assuming a flat rate.
+* **Search mode picks the SKU.** Over HTTP, pass [`mode`](/api-reference/search#request) on `/v1/search`; over MCP an integrator can pin it with [`_meta["keenable/overrides"]`](/mcp-server#operator-overrides-request-meta). When neither is set the search runs in `pro` mode, unless your organization has a different default. The response echoes the mode that served the call.
+
+## Reading usage per call
+
+Over MCP, every authenticated tool call reports its cost under `_meta["keenable/usage"]`, alongside the result rather than inside the model-visible `content`:
+
+```json theme={"system"}
+{
+  "content": [{ "type": "text", "text": "..." }],
+  "_meta": {
+    "keenable/usage": { "sku": "search.realtime", "amount": 1, "credits": 1, "paid": true }
+  }
+}
+```
+
+`credits` is what the call cost, and `paid` tells you which bucket it came from — `false` for the free monthly allowance, `true` for purchased credits. This is what to attribute cost against per call; see [Metadata for integrators](/mcp-server#metadata-for-integrators) for the full field list.
+
+Unauthenticated calls are unbilled and omit the block entirely.
+
+## When credits run out
+
+With the allowance spent and no purchased credits remaining, `/v1/search` and `/v1/fetch` return [`402`](/authentication#error-responses). Buy a package in the [console](https://app.keenable.ai/console) to resume, or wait for the allowance to reset.
+
+To keep it from getting that far, turn on [auto top-up](/auto-top-up): it buys more credits whenever your purchased balance runs low.
+
+
+# Quickstart
+Source: https://docs.keenable.ai/index
+
+Install the Keenable CLI, log in, wire the MCP server into your agents, and run your first search.
+
+Keenable provides web search and content access for AI agents. There are three ways in — for an agent, **MCP is the recommended one**; the CLI wires it up and searches from the terminal, and the REST API is there when you want to call the endpoints directly.
+
+<Columns>
+  <Column>
+    <Card title="MCP" icon="plug" href="/mcp-server">
+      Add tools to your agent — the recommended path
+    </Card>
+  </Column>
+
+  <Column>
+    <Card title="CLI" icon="rectangle-terminal" href="/cli">
+      Search from the terminal, and configure MCP in one command
+    </Card>
+  </Column>
+
+  <Column>
+    <Card title="REST API" icon="code" href="/api-reference">
+      Call the endpoints directly over HTTP
+    </Card>
+  </Column>
+</Columns>
+
+Install the CLI with your preferred method:
+
+<CodeGroup>
+  ```bash Homebrew theme={"system"}
+  brew install keenableai/tap/keenable-cli
+  ```
+
+  ```bash macOS / Linux theme={"system"}
+  curl --proto '=https' --tlsv1.2 -LsSf \
+    https://github.com/keenableai/keenable-cli/releases/latest/download/keenable-cli-installer.sh \
+    | sh
+  ```
+
+  ```powershell PowerShell theme={"system"}
+  irm https://github.com/keenableai/keenable-cli/releases/latest/download/keenable-cli-installer.ps1 | iex
+  ```
+</CodeGroup>
+
+Then authenticate — this stores your credentials so every command and every MCP client the CLI configures below picks them up:
+
+```bash theme={"system"}
+keenable login
+```
+
+To give your agents web search, set up MCP. The CLI can configure it for all supported agents in one command:
+
+```bash theme={"system"}
+keenable configure-mcp --all
+```
+
+This sets up Claude Code, Cursor, Windsurf, and other detected clients. See [MCP](/mcp-server) for manual setup.
+
+Once installed, run a search straight from the terminal:
+
+```bash theme={"system"}
+keenable search "AI news" -p
+```
+
+## Prefer raw HTTP?
+
+The REST API is a first-class way in — no CLI, no MCP. `POST` your query with your key in the `X-API-Key` header:
+
+```bash theme={"system"}
+curl -X POST "https://api.keenable.ai/v1/search" \
+  -H "X-API-Key: keen_<your_key>" \
+  -H "Content-Type: application/json" \
+  -d '{ "query": "typescript best practices" }'
+```
+
+See the [API reference](/api-reference) for every endpoint, the keyless `/public` twins, and playgrounds you can call with your own key. For an agent, though, MCP is the smoother path — it hands the tools to the model directly rather than leaving it to compose HTTP calls.
+
+That's it. See [authentication](/authentication) for API keys and [rate limits](/rate-limits) for the request caps that apply.
+
+
+# Integrations
+Source: https://docs.keenable.ai/integrations
+
+Connect Keenable web search to your agent stack — LangChain, LlamaIndex, Haystack, MCP, and more.
+
+Bring Keenable's web search and content retrieval into the agents and AI tools you already use. Every integration takes the same `KEENABLE_API_KEY` credential, so one key covers your whole stack — see [Authentication](/authentication).
+
+<Note>
+  Tell your agent to install this itself: `Read https://app.keenable.ai/SKILL.md and install this skill.`
+</Note>
+
+## MCP server
+
+Point any MCP-compatible client at `https://api.keenable.ai/mcp` for web search and page-fetch tools. See the [MCP server reference](/mcp-server) for one-click install links (Cursor, VS Code) and per-client setup (Claude Code, Codex, Claude Desktop, Claude connectors).
+
+Also listed on [Smithery](https://smithery.ai/servers/keenable/web-search), [Glama](https://glama.ai/mcp/connectors/ai.keenable.api/keenable-web-search), the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ai.keenable), and [PulseMCP](https://www.pulsemcp.com/servers/keenable-web-search).
+
+## Available now
+
+### Inference providers
+
+| Integration | Description |
+| - | - |
+| [Baseten](/integrations/baseten) | Server-side tools on Baseten Model APIs — no client, no key. |
+| [OpenRouter](/integrations/openrouter) | Search and fetch tools for any OpenRouter model, from Python, the AI SDK or the Agent SDK over MCP. |
+
+### Frameworks & SDKs
+
+| Integration | Description |
+| - | - |
+| [Haystack](/integrations/haystack) | Listed in the Haystack integrations catalog. |
+| [LangChain](/integrations/langchain) | `langchain-keenable`, listed in the LangChain docs. |
+| [LlamaIndex](/integrations/llamaindex) | `KeenableToolSpec` for search and read. |
+| [Mastra](/integrations/mastra) | `@keenable/mastra` search and fetch tools. |
+| [NVIDIA NeMo Agent Toolkit](/integrations/nemo-agent-toolkit) | `keenable__search` / `keenable__fetch`. |
+| [PraisonAI](/integrations/praisonai) | `keenable_search` in `praisonai-tools`, no key required. |
+| [Vercel](/integrations/vercel) | `@keenable/ai-sdk` tools for `generateText` and `streamText`, plus Vercel Connect to keep the key out of env vars. |
+
+### Coding agents
+
+| Integration | Description |
+| - | - |
+| [Codex](/integrations/codex) | Both routes — `config.toml` or the plugin listing — plus the one line that stops the built-in search winning. |
+| [DeepSeek Harness](/integrations/deepseek-harness) | Plugin for the built-in `web_search` and `web_fetch`, with any model and no key. |
+| [OpenCode](/integrations/opencode) | Native tools, no CLI or login step. |
+| [Pi](/integrations/pi) | Web search and page fetch for the Pi coding agent. |
+
+### Chat apps
+
+| Integration | Description |
+| - | - |
+| [AnythingLLM](/integrations/anythingllm) | Built-in web search provider for agents, no key required. |
+| [ChatGPT](/integrations/chatgpt) | Published in OpenAI's Plugins Directory, and how to keep ChatGPT's own web search out of the way. |
+| [Claude](/integrations/claude) | Listed in Claude's connector directory, plus Claude Code, and how to keep Claude's own web search out of the way. |
+| [LibreChat](/integrations/librechat) | Built-in search provider and scraper — a fully keyless web-search stack. |
+
+### Low-code builders
+
+| Integration | Description |
+| - | - |
+| [Convex](/integrations/convex) | `@keenable/convex` — `search` and `fetch` component actions. |
+| [Dify](/integrations/dify) | Search and page fetch in the Dify marketplace. |
+| [Langflow](/integrations/langflow) | Drag-and-drop search component. |
+| [n8n](/integrations/n8n) | Community node with Search and Fetch operations. |
+| [RAGFlow](/integrations/ragflow) | Built into the visual agent builder. |
+| [Replit](/integrations/replit) | One-click MCP server for Replit Agent, signed in to your Keenable account. |
+
+### Search & RAG
+
+| Integration | Description |
+| - | - |
+| [de-anthropocentric research engine](/integrations/de-anthropocentric-research-engine) | Pre-wired in the engine's bundled MCP config. |
+| [GPT Researcher](/integrations/gpt-researcher) | `gpt-researcher-keenable` retriever plugin, `RETRIEVER=keenable`. |
+| [Hermes Agent](/integrations/hermes-agent) | Built-in web backend for `web_search` and `web_extract`, keyless. |
+| [ketch](/integrations/ketch) | Built into the Go CLI, zero-config. |
+| [Lightpanda](/integrations/lightpanda) | The keyless engine behind the headless browser's `search` tool. |
+| [Nanobot](/integrations/nanobot) | Built in, with a DuckDuckGo fallback. |
+| [Omnigent](/integrations/omnigent) | Built-in backend for the `web_search` tool. |
+| [OpenClaw](/integrations/openclaw) | Installable from ClawHub or npm. |
+| [SearXNG](/integrations/searxng) | Core engine, shortcut `!keen`. |
+| [Vellum Assistant](/integrations/vellum-assistant) | Built-in provider, selected in `config.json`. |
+| [web-search-plus (Hermes)](/integrations/web-search-plus) | Community plugin for the Hermes agent. |
+| [WeKnora (Tencent)](/integrations/weknora) | Built into Tencent WeKnora. |
+| [ZeroClaw](/integrations/zeroclaw) | Built-in provider for `web_search_tool`, selected in `config.toml`. |
+
+### Memory
+
+| Integration | Description |
+| - | - |
+| [cognee](/integrations/cognee) | Web-fetch backend for URL ingestion into graph memory, built into cognee 1.5+. |
+
+### Voice agents
+
+| Integration | Description |
+| - | - |
+| [Pipecat](/integrations/pipecat) | `KeenableWebSearch`, tuned for voice latency. |
+
+## Coming soon
+
+* **AstrBot** — Keenable web search and page-fetch tools for AstrBot.
+* **CrewAI** — `KeenableSearchTool`, a web-search tool for CrewAI agents.
+* **Lobe Chat** — a built-in Keenable web-search provider.
+* **Onyx** — a built-in Keenable web-search provider.
+* **smolagents (Hugging Face)** — `KeenableSearchTool`, a web-search tool for smolagents (and txtai agents through it).
+
+Missing yours? [Get in touch](https://keenable.ai/contact) — integrations ship weekly.
+
+
+# AnythingLLM
+Source: https://docs.keenable.ai/integrations/anythingllm
+
+Keenable is a built-in web search provider for AnythingLLM agents, with no API key required.
+
+*Built-in search provider*
+
+AnythingLLM ships Keenable as one of the web search providers for its agents, starting with v1.16.2. It works without an API key.
+
+→ [The Keenable provider in AnythingLLM](https://github.com/Mintplex-Labs/anything-llm/pull/6336)
+
+## Turn it on
+
+<Steps>
+  <Step title="Open the web search skill">
+    Open **Settings → Agent Skills** and select **Web Search**.
+  </Step>
+
+  <Step title="Pick Keenable">
+    Switch the skill on and choose **Keenable** as the provider. Leave **API Key** empty to use the public tier, then save.
+  </Step>
+
+  <Step title="Ask an agent">
+    In a workspace chat, start your message with `@agent` and ask something that needs the web.
+  </Step>
+</Steps>
+
+## Use your API key
+
+Paste your key (`keen_<your_key>`, from the [console](https://app.keenable.ai/console)) into **API Key (optional)** in the same panel. On a Docker install you can set it in the environment instead:
+
+```bash theme={"system"}
+AGENT_KEENABLE_API_KEY=keen_<your_key>
+```
+
+Leave **Base URL** empty unless you route requests through a proxy; it defaults to `https://api.keenable.ai`.
+
+<Note>
+  Without a key, searches run on the shared public tier at [lower rate limits](/rate-limits). A key moves them to your organization's limits and removes the hourly cap.
+</Note>
+
+
+# Baseten
+Source: https://docs.keenable.ai/integrations/baseten
+
+Keenable web search and page fetch as server-side tools on Baseten Model APIs — the model calls them inside the inference loop.
+
+*Server-side tools*
+
+Baseten Model APIs run Keenable's tools on their own side of the request. You send one chat request that names the tools; the model searches, reads the pages it picked, and answers from what it read. Nothing runs in your process — no MCP client, no tool loop to write, and no Keenable API key, because Baseten meters the calls and bills them with your inference.
+
+→ [Baseten Model APIs](https://docs.baseten.co/inference/model-apis/overview)
+
+## Install
+
+### Enable server tools
+
+Server tools are in early access. Ask Baseten to enable them for your workspace, then send the `x-baseten-server-tools: true` header with each request.
+
+### Name the tools in a request
+
+```bash theme={"system"}
+curl -sS -X POST https://inference.baseten.co/v1/messages \
+  -H "Authorization: Bearer ${BASETEN_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -H "x-baseten-server-tools: true" \
+  -d '{
+    "model": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "max_tokens": 4096,
+    "messages": [
+      {"role": "user", "content": "What shipped in the latest Bun release? Cite the pages you used."}
+    ],
+    "tools": [
+      {"type": "baseten__keenable__search_web_pages"},
+      {"type": "baseten__keenable__fetch_page_content"}
+    ]
+  }'
+```
+
+A tool entry is a type and nothing else. The schemas live on Baseten's side, so there is no Keenable JSON schema to paste and no arguments to declare.
+
+### Or use an SDK
+
+The endpoint is the Anthropic Messages API, so an Anthropic SDK client reaches it by base URL. The SDK sends the key as `x-api-key`, which Baseten does not read, so set both headers yourself:
+
+```python theme={"system"}
+import os
+
+from anthropic import Anthropic
+
+api_key = os.environ["BASETEN_API_KEY"]
+
+client = Anthropic(
+    api_key=api_key,
+    base_url="https://inference.baseten.co",
+    default_headers={
+        "Authorization": f"Bearer {api_key}",
+        "x-baseten-server-tools": "true",
+    },
+)
+
+answer = client.messages.create(
+    model="deepseek-ai/DeepSeek-V4.1-Flash",
+    max_tokens=4096,
+    messages=[{"role": "user", "content": "What shipped in the latest Bun release?"}],
+    tools=[
+        {"type": "baseten__keenable__search_web_pages"},
+        {"type": "baseten__keenable__fetch_page_content"},
+    ],
+)
+```
+
+The tools also work on `/v1/chat/completions` and on `/v1/responses`. Messages is the one to prefer: mirroring the assistant, tool-call and tool-result blocks back byte for byte is straightforward there, and that is what keeps the KV cache warm across turns.
+
+## The two tools
+
+| Tool | What it does |
+| - | - |
+| `baseten__keenable__search_web_pages` | Searches the web and returns ranked results with URLs, titles and snippets. |
+| `baseten__keenable__fetch_page_content` | Reads one URL and returns the page as clean markdown. |
+
+They are the [MCP server](/mcp-server)'s two tools, with the same names and the same arguments — the `baseten__keenable__` prefix is Baseten's namespace for hosted tools. The model fills in every argument it sees.
+
+## What comes back
+
+The whole loop is in one response. Each round the model ran is a `tool_use` block — its `name` is the full tool type, its `input` is the arguments the model wrote — followed by the `tool_result` block Keenable answered with, and the final answer is the last `text` block. Tool calls the model emits together are executed together, so independent lookups overlap instead of running one after another.
+
+Two things end a turn early and are worth handling:
+
+* **The iteration cap.** Baseten limits how many tool rounds one request may run. A turn that hits the cap comes back with `stop_reason: "pause_turn"`, and it can stop on a tool result with no answer written. Send the message history back in a new request to continue with a fresh budget.
+* **Failed tool calls.** A call that fails is marked as an error for the model, which usually retries or works around it. It is not billed.
+* **`max_tokens`.** The budget covers the reasoning and commentary between the tool rounds, not the answer alone, so a grounded answer needs more of it than the same question asked without tools. Too low a value returns `stop_reason: "max_tokens"` and a sentence that stops mid-word.
+
+## Reading your usage
+
+Alongside the content, the response carries a `baseten` object with one entry per tool call: the `provider` and tool `name`, its `status`, whether it was `billable`, and the Keenable [SKU](/credits#what-a-call-costs) and quantity it was metered as. Failed calls show `billable: false` and no SKU. Use it to attribute cost per call, and treat the shape as informational — it is Baseten's extension field, not a stable protocol surface.
+
+## Models
+
+Server tools are enabled per model, on a set that keeps growing — Baseten's model list is what to check. The flagship open models carry them — DeepSeek V4.1 Flash, DeepSeek V4 Pro, GLM 5.3 and 5.3 Fast, and Kimi K3 among them.
+
+## Billing
+
+No Keenable account is involved and nothing is metered on your Keenable [credits](/credits). Baseten reads the SKU and amount Keenable reports for each successful call — one of the [four SKUs](/credits#what-a-call-costs) — and puts the usage on your Baseten invoice. Failed calls are not billed. Per-model tool usage is at the bottom of the model's metrics page in the Baseten console.
+
+## When to call Keenable directly
+
+The hosted tools trade control for having nothing to run. Bring your own key and use the [MCP server](/mcp-server) or the [REST API](/api-reference) instead when you want to pick the search mode, filter by site or date, search the index as it stood at [a past instant](/mcp-server#point-in-time-search), or extract a page with a [prompt](/api-reference/fetch).
+
+
+# ChatGPT
+Source: https://docs.keenable.ai/integrations/chatgpt
+
+Install Keenable from OpenAI's Plugins Directory, and keep ChatGPT's own web search from competing with it.
+
+*Plugin directory listing*
+
+Keenable is published in OpenAI's Plugins Directory, the catalog ChatGPT shares with Codex, and it works in ChatGPT chats, ChatGPT Work and Codex. There is no config file, no developer mode and no MCP URL to paste. The plugin bundles web search and page fetch with two skills: focused lookups, and multi-source research with citations. ChatGPT also searches the web on its own, and with both available it picks between them from one lookup to the next, so the second half of this page covers turning its search off.
+
+→ [Keenable in the OpenAI Plugins Directory](https://chatgpt.com/plugins/plugin_asdk_app_6984a0b396708191a7856354b86ce047)
+
+## Install
+
+<Steps>
+  <Step title="Find the plugin">
+    Open the [listing](https://chatgpt.com/plugins/plugin_asdk_app_6984a0b396708191a7856354b86ce047), or search for **Keenable** in the directory: **Plugins** in the sidebar of ChatGPT web or desktop, or **Settings → Plugins**.
+  </Step>
+
+  <Step title="Connect">
+    Select **Connect** and sign in to your Keenable account. There is no API key to paste: usage is attributed to the account you connect and metered against that account's organization, so it draws on the same [rate limits](/rate-limits) and [credits](/credits) as every API key the organization has issued.
+  </Step>
+
+  <Step title="Use it in a chat">
+    Mention **@Keenable** in your prompt, or click **+**, then **More**, and pick Keenable. Two tools become available: `search_web_pages` for ranked results, and `fetch_page_content` to read any URL as clean markdown.
+  </Step>
+</Steps>
+
+<Note>
+  On Enterprise and Edu workspaces, plugins are off until an admin enables them. An admin turns Keenable on under **Workspace settings → Plugins**, and setting it to **Installed** for a role adds it for everyone in that role, with nothing for members to install. On Business, plugins are on by default. If **Connect** says **Disabled by admin**, ask your workspace admin.
+</Note>
+
+## What to ask
+
+The plugin gives ChatGPT two tools and two skills that tell it how to combine them.
+
+<Columns>
+  <Card title="Search" icon="magnifying-glass">
+    Ranked results with an excerpt of each page's text, narrowed to one site or a date range when the question calls for it.
+  </Card>
+
+  <Card title="Read" icon="file-lines">
+    Any URL as clean markdown: documentation, changelogs, issues, papers, pricing pages.
+  </Card>
+
+  <Card title="Research" icon="compass">
+    Several searches, the pages worth reading, and an answer that cites them.
+  </Card>
+</Columns>
+
+Ask for the result you want, and say which sources count:
+
+```text theme={"system"}
+@Keenable What changed in the EU AI Act guidance this month? Use the official
+pages and cite each one.
+```
+
+```text theme={"system"}
+@Keenable Read https://docs.keenable.ai/rate-limits and tell me which limits
+apply without an API key.
+```
+
+```text theme={"system"}
+@Keenable Compare the entry-level plans of three managed Postgres providers
+from their own pricing pages, in a table with a link next to every price.
+```
+
+The last one makes a good task for ChatGPT Work, which can hand the table back as a spreadsheet.
+
+## Turn off web search
+
+**On Enterprise and Edu**, a workspace owner or admin turns it off once for everyone: open **[Admin settings](https://chatgpt.com/admin/settings)**, find **Web search**, and switch it off. ChatGPT then can't search the web in that workspace even when someone asks it to, and Keenable is the only search left. Switch it back on in the same place.
+
+**For your own account**, open **Settings → Personalization**, and under **Additional ChatGPT settings** switch **Web search** off. ChatGPT stops searching on its own; you can still start one of its searches by hand from **+ → Web search**. Switch it back on to undo.
+
+To steer ChatGPT toward Keenable whether or not its own search is on, add a line to **Settings → Personalization → Custom instructions**:
+
+```
+For web searches and reading web pages, use the Keenable plugin (search_web_pages and fetch_page_content).
+```
+
+## More from Keenable
+
+<Note>
+  **Keenable SELECT** is a second Keenable plugin in the same directory. It is a separate server that answers a question with one SQL query over live web results and returns a table; see [SELECT](/select).
+</Note>
+
+Prefer the MCP server directly? Point any MCP client at `https://api.keenable.ai/mcp`, with your API key in the `X-API-Key` header; see the [MCP server reference](/mcp-server).
+
+<Note>
+  **Using Codex?** It installs from this same directory, but it also ships its own web search, enabled by default, which keeps winning unless you turn it off, and the `config.toml` route is the one that takes your own API key. See [Codex](/integrations/codex).
+</Note>
+
+
+# Claude
+Source: https://docs.keenable.ai/integrations/claude
+
+Add Keenable to Claude and Claude Code, and keep Claude's own web search from competing with it.
+
+*MCP connector*
+
+Keenable is listed in Claude's Connectors Directory as **Keenable Web Search**, so on claude.ai, Claude Desktop, Cowork and mobile it takes a few clicks and no config file. Claude Code adds the same server with one command. Either way Claude also has a web search of its own, and with both available it picks between them from one lookup to the next. Each section below covers adding Keenable, then turning Claude's search off, and how to turn it back on.
+
+## Claude (web, Desktop, mobile)
+
+### Add the connector
+
+<Steps>
+  <Step title="Find it in the directory">
+    Open **Customize → Connectors**, click **+**, and search for **Keenable Web Search**. From a chat you get to the same place through **+ → Connectors → Manage connectors**.
+  </Step>
+
+  <Step title="Connect">
+    Click **Connect**. There is no sign-in and nothing to paste.
+  </Step>
+
+  <Step title="Turn it on in the chat">
+    Click **+** in the lower left of the message box, hover **Connectors**, and toggle **Keenable Web Search** on. Connectors are switched on per conversation, so if Claude answers without ever calling Keenable, this is the step that was skipped.
+  </Step>
+</Steps>
+
+The listed connector runs on the shared public tier at [lower rate limits](/rate-limits). It works in Cowork tasks as well as in chats, so a longer task can search and read pages while it works with your files and other connectors.
+
+### Use your own account
+
+To run on your own Keenable account, with its rate limits and billing, add Keenable by URL instead of from the directory and sign in:
+
+1. **Customize → Connectors → + Add → Add custom connector**.
+
+2. Name it **Keenable**, enter this URL, and click **Add**:
+
+   ```
+   https://api.keenable.ai/mcp-oauth
+   ```
+
+3. Click **Connect**, sign in to Keenable, and allow access.
+
+Searches then count against your current organization in Keenable. On Team and Enterprise plans an Owner adds the connector once under **Organization settings → Connectors**, and each member connects it and signs in to their own account.
+
+<Note>
+  You can pass an API key instead of signing in: add `https://api.keenable.ai/mcp`, choose **No sign-in** under **Authentication**, and under **Request headers** pick `x-api-key` with your key (`keen_<your_key>`, from the [console](https://app.keenable.ai/console)). Anthropic is rolling request headers out in beta to a limited set of organizations, and a connector's authentication can't be edited after it is added, so to change the key, remove the connector and add it again.
+</Note>
+
+### Turn off web search
+
+**On a Team or Enterprise plan**, an Owner turns it off once for everyone: open **Organization settings → Capabilities** and switch **Web search** off under **Data sources**. Members then see it as set by the admin, and Claude has Keenable as its only way to search in every chat. Switch it back on in the same place.
+
+**On a Pro or Max plan**, it depends on which version of the Claude interface your account has.
+
+If your message box offers **Chat** and **Cowork** options, web search is a switch in each chat. Click **+** in the lower left of the message box, then click **Web search** so its checkmark disappears. Click it again to turn it back on.
+
+If it doesn't (the newer interface, rolling out to Pro and Max first), there is no web search switch and Claude decides when to search on its own. You can still tell it which tool to use: open **Settings → General**, and add this to **Instructions for Claude**:
+
+```
+For web searches and reading web pages, use the Keenable Web Search connector (search_web_pages and fetch_page_content) instead of the built-in web search.
+```
+
+Delete the line to go back. If Claude still doesn't reach for Keenable, open **+ → Connectors → Tool access** in the chat and choose **Always available**, which loads every connector's tools at the start of the conversation.
+
+## Claude Code
+
+### Add the server
+
+```bash theme={"system"}
+claude mcp add --transport http --scope user keenable https://api.keenable.ai/mcp \
+  --header "X-API-Key: keen_<your_key>"
+```
+
+`--scope user` makes it available in every project. Omit the `--header` flag to run on the public tier.
+
+### Turn off the built-in search
+
+Claude Code ships its own `WebSearch` and `WebFetch` tools. Deny them in `~/.claude/settings.json`:
+
+```json theme={"system"}
+{
+  "permissions": {
+    "deny": ["WebSearch", "WebFetch"]
+  }
+}
+```
+
+A rule that names a whole tool removes it from Claude's context, so Keenable's `search_web_pages` and `fetch_page_content` are the only search and fetch tools it has left. If the file already has a `permissions` block, add the two names to its `deny` list rather than adding a second block. Drop `"WebFetch"` if you want to keep Claude's own page reader.
+
+To turn the built-in search back on, delete the entries. To try it for a single session without editing the file:
+
+```bash theme={"system"}
+claude --disallowedTools WebSearch WebFetch
+```
+
+### Verify
+
+Run `/mcp` to confirm **keenable** is connected with both tools listed, then ask something that needs the live web. Claude should call `mcp__keenable__search_web_pages` without being told to.
+
+## What to ask
+
+Keenable gives Claude two tools, and Claude combines them across a longer task.
+
+<Columns>
+  <Card title="Search" icon="magnifying-glass">
+    Ranked results with an excerpt of each page's text, narrowed to one site or a date range when the question calls for it.
+  </Card>
+
+  <Card title="Read" icon="file-lines">
+    Any URL as clean markdown: documentation, changelogs, issues, papers, pricing pages.
+  </Card>
+
+  <Card title="Research" icon="compass">
+    Several searches, the pages worth reading, and an answer that cites them.
+  </Card>
+</Columns>
+
+Ask for the result you want, and say which sources count:
+
+```text theme={"system"}
+Find the release notes for every version of zod between the one in package.json
+and the latest, list the breaking changes, and update our schemas to match.
+```
+
+```text theme={"system"}
+Before you change anything, look for reports of this error on github.com from
+the last 30 days and tell me whether there is a known fix.
+```
+
+```text theme={"system"}
+Check each price in this comparison table against the vendor's own pricing page
+today, fix what is out of date, and link the page next to every number.
+```
+
+The first two suit Claude Code, where Claude can act on what it finds in your repository. The third works in a chat or a Cowork task with the table attached.
+
+## Keenable SELECT
+
+**Keenable SELECT** is listed in the same directory as a second connector. It is a separate server that answers a question with one SQL query over live web results and returns a table; see [SELECT](/select).
+
+→ [Full MCP server reference](/mcp-server)
+
+
+# Codex
+Source: https://docs.keenable.ai/integrations/codex
+
+Wire Keenable into Codex over MCP — and stop its built-in web search from winning every lookup.
+
+*MCP server*
+
+Codex reaches Keenable two ways: the plugin listing it shares with ChatGPT, or an MCP entry in `config.toml`. The MCP route takes your own API key, so it is the one to use on a paid tier — but it needs a second step that is easy to miss.
+
+<Warning>
+  **Adding the server is not enough.** Codex ships its own web search, enabled by default, and it will keep reaching for that instead of Keenable — so the tools look connected in `/mcp` yet never get called unless you name them in the prompt. [Turn the built-in search off](#turn-off-the-built-in-search) and the problem goes away.
+</Warning>
+
+## Install
+
+### Add the server
+
+Add the following to `~/.codex/config.toml`:
+
+```toml theme={"system"}
+[mcp_servers.keenable]
+url = "https://api.keenable.ai/mcp"
+http_headers = { "X-API-Key" = "keen_<your_key>" }
+```
+
+The key travels in the `X-API-Key` header, not an environment variable — Codex reads nothing from `KEENABLE_API_KEY` for a remote server. Create one in the [console](https://app.keenable.ai/console); see [Authentication](/authentication). Omit the `http_headers` line and the server still answers, on the shared public tier at [lower rate limits](/rate-limits).
+
+### Turn off the built-in search
+
+Codex enables web search by default for local chats, in `cached` mode — results come from an index OpenAI maintains rather than a live fetch. Setting `web_search` to `disabled` removes that tool entirely, and with nothing to fall back on Codex uses `search_web_pages` for every lookup.
+
+It is a **top-level** key, so it has to sit above the `[mcp_servers.keenable]` line. A bare key written after a table header belongs to that table, which would make it `mcp_servers.keenable.web_search` — not a setting Codex looks at, and it fails quietly. The finished file:
+
+```toml theme={"system"}
+web_search = "disabled"
+
+[mcp_servers.keenable]
+url = "https://api.keenable.ai/mcp"
+http_headers = { "X-API-Key" = "keen_<your_key>" }
+```
+
+<Note>
+  The mode key takes four values: `cached` (the default), `indexed`, `live`, and `disabled`. A full-access sandbox — `--yolo` or `danger-full-access` — silently upgrades `cached` to `live`, so a permissive session searches the live web whether or not you asked for it.
+
+  Don't confuse the mode with the `[tools.web_search]` table, which carries settings like `allowed_domains` and `context_size` and does **not** switch the tool off. Older releases used `[tools] web_search = true` and then `[features] web_search_request = true`; both are deprecated in favour of the top-level key.
+</Note>
+
+Want to keep the built-in tool for other work? Scope the change to a profile instead, and invoke it with `codex --profile research`. Here the key belongs inside the table, which is the one place nesting it is correct:
+
+```toml theme={"system"}
+[profiles.research]
+web_search = "disabled"
+```
+
+### Tell the agent which tool to use
+
+Codex reads `AGENTS.md` for project instructions — `~/.codex/AGENTS.md` applies everywhere. Naming the tools there is worth doing even with the built-in search disabled, because Codex loads MCP tool schemas on demand: it sees a tool's name and description upfront and fetches the rest only when it decides the tool is relevant, so that decision is made on the description alone.
+
+```markdown theme={"system"}
+## Web search
+
+- Use `search_web_pages` for anything that needs the web.
+- Follow a search with `fetch_page_content` to read the sources you cite.
+```
+
+### Verify
+
+Run `/mcp` in the TUI to confirm the server connected and both tools are listed, then ask something that needs the live web. Codex should call `search_web_pages` without being told to.
+
+<Note>
+  Still going around Keenable on a recent Codex? Check `codex --version`. Releases before v0.121.0 registered on-demand tool names in a format their own lookup table did not match, which produced exactly this symptom for every MCP server, not just this one.
+</Note>
+
+## No config file
+
+Keenable is also published in OpenAI's Plugins Directory, the catalog Codex shares with ChatGPT. Install it from the [listing](https://chatgpt.com/plugins/plugin_asdk_app_6984a0b396708191a7856354b86ce047) and sign in through OAuth — there is no key to paste. Usage is attributed to the account you connect and metered against that account's organization, so it draws on the same [rate limits](/rate-limits) and [credits](/credits) as every API key the organization has issued. The same listing covers [ChatGPT](/integrations/chatgpt).
+
+The built-in search competes with the plugin exactly as it does with the MCP server, so the `web_search` change above is worth making on either route.
+
+**Keenable SELECT** is a second Keenable plugin in the same directory — a separate server that answers a question with one SQL query over live web results and returns a table. See [SELECT](/select) for both routes into it.
+
+→ [Full MCP server reference](/mcp-server)
+
+
+# cognee
+Source: https://docs.keenable.ai/integrations/cognee
+
+Keenable as the web-fetch backend behind cognee's URL ingestion and scheduled scraper: pages come back as clean Markdown before they enter graph memory.
+
+*Fetch backend*
+
+cognee turns what an agent reads into persistent, graph-backed memory. From cognee 1.5.0 it can fetch URLs through Keenable: pass a URL to `remember()` or `add()`, and cognee asks Keenable for the page as Markdown instead of crawling the HTML itself. The rest of the pipeline (chunking, embeddings, entity extraction, recall) does not change.
+
+→ [View the change on GitHub](https://github.com/topoteretes/cognee/pull/4421) · [cognee's URL-ingestion guide](https://docs.cognee.ai/guides/web-url-ingestion)
+
+## Install
+
+### No separate install
+
+The backend lives in cognee itself (`cognee/tasks/web_scraper/`) and uses the `httpx` client cognee already ships, so there is no Keenable package to add:
+
+```bash theme={"system"}
+pip install "cognee>=1.5.0"
+```
+
+### Set the key
+
+```bash theme={"system"}
+export KEENABLE_API_KEY="keen_..."
+```
+
+<Note>
+  This is one of the few integrations where the key is not optional. cognee picks Keenable **because** `KEENABLE_API_KEY` is set, and it calls the keyed `/v1/fetch` endpoint, so a missing key means a different backend is chosen, not a keyless call. Create a key at [keenable.ai/console](https://keenable.ai/console).
+</Note>
+
+### Check the precedence
+
+cognee chooses a fetch backend from the environment, in this order:
+
+1. Tavily, if `TAVILY_API_KEY` is set
+2. Keenable, if `KEENABLE_API_KEY` is set
+3. The built-in crawler
+
+Tavily wins when both keys are present. If a Tavily key is already in your environment, unset it to route URL ingestion through Keenable, or select the backend explicitly (below).
+
+## Use
+
+### Give cognee a URL
+
+```python theme={"system"}
+import cognee
+
+await cognee.remember("https://docs.example.com/pricing")
+await cognee.recall("what does the enterprise tier cost?")
+```
+
+`remember()` fetches the page through Keenable, ingests the Markdown, and builds the graph; `recall()` answers from what was learned, without touching the original HTML again.
+
+### Fetch pages that are not indexed
+
+By default Keenable returns its indexed copy of a page and rejects URLs it has not indexed. For arbitrary URLs, turn on live fetching:
+
+```bash theme={"system"}
+export KEENABLE_LIVE_FETCH="true"
+```
+
+With live fetching on, every request goes to the source page. Leave it off when you only ingest pages Keenable already indexes and want the faster cached path.
+
+### Select the backend explicitly
+
+When calling cognee's fetch layer directly, the backend is a parameter and the environment precedence does not apply:
+
+```python theme={"system"}
+from cognee.tasks.web_scraper import fetch_page_content
+
+pages = await fetch_page_content(urls, preferred_tool="keenable")
+```
+
+### Narrow the page with an extraction prompt
+
+`KeenableConfig` carries the per-call options. `prompt` makes Keenable return only the part of the page you ask for instead of the whole document:
+
+```python theme={"system"}
+from cognee.tasks.web_scraper import fetch_page_content
+from cognee.tasks.web_scraper.config import KeenableConfig
+
+cfg = KeenableConfig(live=True, prompt="Extract the pricing table and plan limits only.")
+pages = await fetch_page_content(url, preferred_tool="keenable", keenable_config=cfg)
+```
+
+### Track a page over time
+
+cognee's scheduled scraper runs through the same fetch path (it needs `apscheduler`):
+
+```python theme={"system"}
+from cognee.tasks.web_scraper import cron_web_scraper_task
+from cognee.tasks.web_scraper.config import KeenableConfig
+
+await cron_web_scraper_task(
+    url=["https://docs.example.com/changelog"],
+    schedule="0 6 * * *",
+    job_name="daily_changelog",
+    keenable_config=KeenableConfig(live=True),
+    tavily_api_key=None,  # defaults to TAVILY_API_KEY, which would win
+)
+```
+
+Each run writes `WebPage` nodes into the graph, linked `is_part_of` to a `WebSite`, which the `ScrapingJob` links to with `is_scraping`. Every page carries a SHA-256 `content_hash`, so the job can tell whether a page changed between runs. Unlike `remember()`, this path indexes the nodes directly and skips chunking and entity extraction; what the two share is the Keenable fetch.
+
+## How it behaves
+
+* **Request.** `GET /v1/fetch?url=...` with `X-API-Key`, plus `live=true` and `prompt=...` when set. cognee keeps the `content` field of the response.
+* **Concurrency.** Up to 5 URLs in flight at once (`KeenableConfig.concurrency`), 30-second timeout per request (`timeout`, 1 to 120).
+* **Failures are isolated.** A URL that fails is skipped with a warning and the rest of the batch continues. If every URL fails, the first error is raised instead of returning an empty result, so a bad key surfaces as an authentication error and not as a silent empty ingest.
+* **Logs stay clean.** Warnings identify a failed URL by its position in the batch and the exception class, never by the URL, so credentials in query strings cannot leak into logs.
+
+## Configuration
+
+| Setting | Environment variable | `KeenableConfig` field | Default |
+| - | - | - | - |
+| API key | `KEENABLE_API_KEY` | `api_key` | none (required) |
+| Base URL | `KEENABLE_BASE_URL` | `base_url` | `https://api.keenable.ai` |
+| Live fetch | `KEENABLE_LIVE_FETCH` | `live` | `false` |
+| Extraction prompt | — | `prompt` | none (max 2000 chars) |
+| Concurrency | — | `concurrency` | `5` |
+| Timeout (s) | — | `timeout` | `30` |
+
+The environment variables cover the memory path (`remember()`, `add()`). The `KeenableConfig` fields cover direct calls to `fetch_page_content`, `web_scraper_task` and `cron_web_scraper_task`, and override the environment for that call.
+
+
+# Convex
+Source: https://docs.keenable.ai/integrations/convex
+
+@keenable/convex — a Convex component exposing search and fetch as component actions.
+
+*Convex component*
+
+`@keenable/convex` installs into a Convex app's `convex.config.ts` and exposes `search` and `fetch` as component actions behind a typed client. Both env vars are optional, so registering the component is the whole setup — no key, no env wiring before the first call.
+
+→ [@keenable/convex on npm](https://www.npmjs.com/package/@keenable/convex)
+
+## Install
+
+### Install the package
+
+```bash theme={"system"}
+npm install @keenable/convex
+```
+
+### Register the component
+
+```typescript theme={"system"}
+// convex/convex.config.ts
+import { defineApp } from "convex/server";
+import keenable from "@keenable/convex/convex.config";
+
+const app = defineApp();
+app.use(keenable);
+export default app;
+```
+
+### Call it from your own action
+
+Wrap the component in an app-owned action rather than exposing it directly — that wrapper is where your auth and rate limiting belong.
+
+```typescript theme={"system"}
+// convex/search.ts
+import { KeenableClient, toContext } from "@keenable/convex";
+import { v } from "convex/values";
+import { action } from "./_generated/server";
+import { components } from "./_generated/api";
+
+const keenable = new KeenableClient(components.keenable);
+
+export const searchWeb = action({
+  args: { query: v.string() },
+  handler: async (ctx, args) => {
+    const { results } = await keenable.search(ctx, { query: args.query, maxResults: 5 });
+    return toContext(results);   // numbered, citable sources for a prompt
+  },
+});
+```
+
+`toContext` renders results as numbered sources and drops whole sources at the budget rather than cutting one mid-page. `keenable.fetch(ctx, { url })` returns the page as markdown with a `truncated` flag, so a caller can tell a whole page from one the budget cut.
+
+### Add a key to lift the rate limit
+
+The component cannot read `process.env` — Convex passes env vars in through the app, so declare the key on the app and bind it:
+
+```typescript theme={"system"}
+const app = defineApp({ env: { KEENABLE_API_KEY: v.string() } });
+app.use(keenable, { env: { KEENABLE_API_KEY: app.env.KEENABLE_API_KEY } });
+```
+
+```bash theme={"system"}
+npx convex env set KEENABLE_API_KEY keen_...
+```
+
+<Note>
+  Binding a key removes the hourly request cap. Without one, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+## Parameters
+
+`search` takes `site`, `publishedAfter` / `publishedBefore`, `acquiredAfter` / `acquiredBefore`, `snippetMaxLength` (default 1000) and `maxResults`. `fetch` takes `contentMaxLength` (default 10000).
+
+
+# de-anthropocentric research engine
+Source: https://docs.keenable.ai/integrations/de-anthropocentric-research-engine
+
+Keenable is one of the MCP servers the de-anthropocentric research engine ships with, pre-wired in its bundled config.
+
+*Bundled MCP server*
+
+Keenable is one of the seven MCP servers the de-anthropocentric research engine ships with, pre-wired in its bundled config.
+
+→ [View the change on GitHub](https://github.com/yogsoth-ai/de-anthropocentric-research-engine/pull/29)
+
+Copy the bundled example config and Keenable is already in it, and the engine's web-search skill lists it as a first-class provider so research runs can pick it explicitly.
+
+## Install
+
+### Copy the bundled MCP config
+
+```bash theme={"system"}
+cp mcp.example.json .mcp.json
+```
+
+### What it wires up
+
+```json theme={"system"}
+{
+  "mcpServers": {
+    "keenable": { "type": "http", "url": "https://api.keenable.ai/mcp" }
+  }
+}
+```
+
+### Use it
+
+Research runs can name Keenable as the web-search provider and call `search_web_pages` / `fetch_page_content`. See the [MCP server reference](/mcp-server) for the full tool list.
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# DeepSeek Harness
+Source: https://docs.keenable.ai/integrations/deepseek-harness
+
+Keenable web search and page fetch for DeepSeek Harness's built-in web_search and web_fetch tools, with any model and no API key.
+
+*Plugin*
+
+A DeepSeek Harness plugin that answers the built-in `web_search` and `web_fetch` tools through Keenable. The search provider Harness ships with needs a DeepSeek account or API key; this one works with whatever model you run, local models included, as soon as it is installed.
+
+→ [@keenable/dsh-keenable on npm](https://www.npmjs.com/package/@keenable/dsh-keenable)
+
+## Install
+
+### Install the plugin
+
+In Harness, open **Plugins → Add plugin**, enter `@keenable/dsh-keenable`, then choose **Install → Enable now**.
+
+If you use the [dsh-market](https://github.com/dsh-market/dsh-market) plugin market, Keenable is in its catalog: search for Keenable and install it from there.
+
+Or install from the terminal into the profile you run, then restart Harness:
+
+```bash theme={"system"}
+npx @deepseek-ai/dsh plugin --profile web add @keenable/dsh-keenable
+npx @deepseek-ai/dsh web
+```
+
+Profiles are separate: `web`, `tui`, and `headless` each need their own install. Requires DeepSeek Harness 0.1.7-rc.2 or newer and Node.js 22.12 or newer.
+
+### Use it
+
+There is nothing to configure. The plugin points both web tools at Keenable, so ask the model to search the web or read a URL.
+
+`web_search` returns a title, URL, excerpt, and publication date (when known) for each result. `web_fetch` returns the page as markdown. Pages are retrieved on Keenable's servers, so a URL the model chose is never requested from the machine running Harness, and private or internal hosts are refused.
+
+### Add a key (optional)
+
+Without a key, both tools use Keenable's public endpoints. To lift their per-IP limit, either set `KEENABLE_API_KEY` in the environment Harness starts in, or enter the key as **apiKey** in the plugin's settings on the **Plugins** page. A key in the settings wins over the environment variable.
+
+To keep Harness's local fetch provider and use Keenable for search only, see the [plugin README](https://github.com/keenableai/dsh-keenable#keeping-the-local-fetch-provider).
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# Dify
+Source: https://docs.keenable.ai/integrations/dify
+
+Keenable web search and page fetch as a plugin in the Dify marketplace.
+
+*Marketplace plugin*
+
+Keenable web search and page fetch as a plugin in the Dify marketplace.
+
+→ [keenable on Dify Marketplace](https://marketplace.dify.ai/plugins/keenable/keenable)
+
+## Install
+
+### Install from the Marketplace
+
+Open the Dify Marketplace, search for "Keenable", and install the plugin.
+
+### Use it
+
+Add Keenable Search / Keenable Fetch to an Agent or Workflow, and paste your `keen_…` key into the tool's API key field.
+
+<Note>
+  Paste a `keen_…` key to authenticate — this removes the hourly request cap. Leave the field empty and calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# GPT Researcher
+Source: https://docs.keenable.ai/integrations/gpt-researcher
+
+gpt-researcher-keenable, a retriever plugin that gives GPT Researcher Keenable web search with no API key.
+
+*Retriever plugin*
+
+`gpt-researcher-keenable` adds Keenable to [GPT Researcher](https://github.com/assafelovic/gpt-researcher) as a retriever. GPT Researcher discovers it through its plugin entry point, so nothing in GPT Researcher itself changes, and it works without an API key.
+
+→ [gpt-researcher-keenable on PyPI](https://pypi.org/project/gpt-researcher-keenable/)
+
+## Install
+
+```bash theme={"system"}
+pip install gpt-researcher-keenable
+```
+
+It needs GPT Researcher 0.16.1 or later.
+
+## Select it
+
+```bash theme={"system"}
+export RETRIEVER=keenable
+```
+
+It combines with the built-in retrievers like any other name, for example `RETRIEVER=keenable,arxiv`.
+
+## How results are used
+
+* Each result gives GPT Researcher a title, a URL and a short preview of the page; GPT Researcher then scrapes the pages it keeps, as it does with its built-in web retrievers.
+* `MAX_SEARCH_RESULTS_PER_QUERY` is passed through as the number of results (1 to 50).
+* With `query_domains`, the search is restricted to the first domain.
+* A network or API failure is logged and returns no results, so one retriever cannot stop a research run.
+
+<Note>
+  Without a key, searches run on the shared public tier at [lower rate limits](/rate-limits). Set `KEENABLE_API_KEY` to use your organization's limits and remove the hourly cap.
+</Note>
+
+
+# Haystack
+Source: https://docs.keenable.ai/integrations/haystack
+
+Keenable web search and page-fetch components for Haystack pipelines.
+
+*Pipeline components*
+
+Keenable web search and page-fetch components for Haystack pipelines — listed in the Haystack integrations catalog.
+
+→ [keenable in the Haystack integrations catalog](https://haystack.deepset.ai/integrations/keenable)
+
+<video />
+
+pip install, then `KeenableWebSearch().run` returns ranked links.
+
+## Install
+
+### Install
+
+```bash theme={"system"}
+pip install keenable-haystack
+```
+
+### Use the components
+
+```python theme={"system"}
+from haystack_integrations.components.websearch.keenable import KeenableWebSearch
+from haystack_integrations.components.fetchers.keenable import KeenableFetcher
+
+hits = KeenableWebSearch(top_k=5).run(query="latest AI agents")
+pages = KeenableFetcher().run(urls=hits["links"][:2])   # -> {"documents": [...]}
+```
+
+<Note>
+  Set `KEENABLE_API_KEY` or pass `api_key=Secret.from_token(…)` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# Hermes Agent
+Source: https://docs.keenable.ai/integrations/hermes-agent
+
+Keenable is built into Hermes Agent as a web backend for web_search and web_extract, and works without a key.
+
+*Built-in web backend*
+
+Keenable ships inside [Hermes Agent](https://hermes-agent.nousresearch.com/) as a bundled web backend. It serves both of Hermes's web tools, `web_search` and `web_extract`, with no plugin to install and no account to create.
+
+→ [View the provider on GitHub](https://github.com/NousResearch/hermes-agent/tree/main/plugins/web/keenable)
+
+A fresh install with no web credentials already reaches Keenable some of the time: Hermes rotates keyless requests across the public free tiers of Exa, Parallel, Firecrawl and Keenable, and moves to the next vendor when one is rate-limited. With a Nous Portal sign-in, including the desktop app's free guest tier, `web_search` goes to Nous's managed search instead. Select Keenable and every call goes to Keenable, so results stay consistent from one run to the next, with or without a key.
+
+## Install
+
+### Install Hermes Agent
+
+On Linux, macOS, WSL2 or Termux:
+
+```bash theme={"system"}
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+```
+
+On native Windows, in PowerShell:
+
+```powershell theme={"system"}
+iex (irm https://hermes-agent.nousresearch.com/install.ps1)
+```
+
+Nothing Keenable-specific to install: the backend is part of Hermes itself.
+
+### Select Keenable
+
+Run `hermes tools` and pick **Keenable · Free (keyless)** for web search and extract, or set it directly:
+
+```bash theme={"system"}
+hermes config set web.backend keenable
+```
+
+A backend you select always wins over the rotation and over the managed search. To use Keenable for only one of the two tools, set `web.search_backend` or `web.extract_backend` instead of `web.backend`.
+
+### Add an API key (optional)
+
+```bash theme={"system"}
+hermes config set KEENABLE_API_KEY keen_<your_key>
+```
+
+Hermes keeps the key in `~/.hermes/.env` and sends it to Keenable's authenticated endpoint. On an install where no backend was ever selected, the key alone is enough for Hermes to pick Keenable, unless a Tavily, Perplexity, Exa or Parallel key is set too. Create one in the [console](https://app.keenable.ai/console); see [Authentication](/authentication). In `hermes tools`, **Keenable · Paid (API key)** pins the keyed path, so a missing key fails with an error instead of dropping to the free tier, while **Free (keyless)** stays keyless even after you add a key.
+
+### Check it
+
+```bash theme={"system"}
+hermes doctor
+hermes config get web.backend
+```
+
+`hermes doctor` reports whether `web_search` and `web_extract` are ready. Then start `hermes` and ask something that needs the web.
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+## The `hermes-keenable-web` plugin
+
+Before Keenable was bundled, this page pointed to a standalone PyPI plugin, `hermes-keenable-web`. The built-in backend replaces it. If you installed the plugin, uninstall it from the environment Hermes runs in (`pip uninstall hermes-keenable-web`), or delete `~/.hermes/plugins/web/keenable/` if you copied it there by hand: it registers under the same name, `keenable`, and takes the built-in backend's place.
+
+
+# ketch
+Source: https://docs.keenable.ai/integrations/ketch
+
+Keenable as a built-in search backend in the ketch agent CLI (Go).
+
+*Search backend*
+
+Keenable as a built-in search backend in the ketch agent CLI (Go).
+
+→ [View the change on GitHub](https://github.com/1broseidon/ketch/pull/20)
+
+<video />
+
+brew install the CLI, run a search, then make Keenable the default backend.
+
+## Install
+
+### Install ketch
+
+keenable is a built-in search backend (merged upstream, shipped since v0.11.0) — there is no Keenable package to install, just the CLI itself.
+
+```bash theme={"system"}
+brew install 1broseidon/tap/ketch
+# or: go install github.com/1broseidon/ketch@latest
+```
+
+### Use it
+
+Add `--json` for machine-readable output, or `--scrape` to pull full page content per result.
+
+```bash theme={"system"}
+ketch config set keenable_api_key keen_...   # authenticate
+ketch config set backend keenable            # make it the default, then -b is unnecessary
+ketch search "golang error handling" -b keenable
+```
+
+<Warning>
+  **Known defect in the shipped backend.** Results currently come back as a title and a link with no text under them, because the backend reads a field Keenable leaves empty for most pages. Until the fix lands, pass `--scrape` to pull the page content per result. The fix is open upstream as [PR #43](https://github.com/1broseidon/ketch/pull/43).
+</Warning>
+
+<Note>
+  Run `ketch config set keenable_api_key keen_…` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# LangChain
+Source: https://docs.keenable.ai/integrations/langchain
+
+langchain-keenable — KeenableSearch and KeenableFetch tools for any LangChain agent.
+
+*Tool package*
+
+A standalone partner package (LangChain's sanctioned path for third-party integrations), listed in the official LangChain docs: in the provider index and in the web-search tools comparison table next to Exa, Tavily and Linkup.
+
+→ [langchain-keenable on PyPI](https://pypi.org/project/langchain-keenable/)
+
+<video />
+
+pip install, then `KeenableSearch().invoke` returns live web results.
+
+## Install
+
+### Install
+
+```bash theme={"system"}
+pip install langchain-keenable
+```
+
+### Use the tools
+
+```python theme={"system"}
+from langchain_keenable import KeenableSearch, KeenableFetch
+
+# reads KEENABLE_API_KEY from the environment
+results = KeenableSearch().invoke({"query": "typescript best practices"})
+page = KeenableFetch().invoke({"url": results[0]["url"]})
+```
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# Langflow
+Source: https://docs.keenable.ai/integrations/langflow
+
+A drag-and-drop Keenable search component for the Langflow canvas.
+
+*Visual component*
+
+A drag-and-drop Keenable search component for the Langflow canvas.
+
+→ [lfx-keenable on PyPI](https://pypi.org/project/lfx-keenable/)
+
+## Install
+
+### Install
+
+```bash theme={"system"}
+pip install lfx-keenable
+```
+
+### Restart Langflow
+
+Restart the Langflow server; the Keenable components appear in the palette under the keenable group.
+
+<Note>
+  Set `KEENABLE_API_KEY` (env var or on the component input) to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# LibreChat
+Source: https://docs.keenable.ai/integrations/librechat
+
+Keenable is the keyless search provider and content scraper built into LibreChat's web search.
+
+*Search provider and content scraper*
+
+Keenable ships inside [LibreChat](https://github.com/danny-avila/LibreChat)'s web-search pipeline as both a **search provider** and a **content scraper** — the only entry in either category that needs no key.
+
+→ [View the change on GitHub](https://github.com/danny-avila/LibreChat/pull/15288)
+
+LibreChat authenticates three categories for web search: a provider, a scraper, and a reranker. Every other provider and scraper requires an account; rerankers all do. Keenable fills the first two keylessly, and the `None` reranker choice completes the stack — so web search works on a fresh LibreChat install with no signup for any of the three.
+
+<Note>
+  Merged to `dev` on 2026-08-27, after `v0.8.8-rc1` — available now in the `librechat-dev` Docker images, and in the next tagged release. The backend package [`@librechat/agents`](https://www.npmjs.com/package/@librechat/agents) carries the provider since 3.2.58 and the scraper since 3.3.5.
+</Note>
+
+## Setup
+
+### Pin the keyless stack for every user
+
+In `librechat.yaml`:
+
+```yaml theme={"system"}
+webSearch:
+  searchProvider: keenable
+  scraperProvider: keenable
+  rerankerType: none          # rerankers all require a key; 'none' skips reranking
+  keenableSearchOptions:
+    maxResults: 5             # 1-20 (default 8)
+    # site: example.com       # restrict search to a single domain
+```
+
+That is the whole setup — no key for any category. An optional `KEENABLE_API_KEY` in `.env` lifts the rate limit; `KEENABLE_API_URL` and `KEENABLE_FETCH_URL` override the endpoints.
+
+### Or let each user pick it
+
+Leave the providers unpinned and every user can save the same keyless combination themselves: in the agent search dialog, choose **Keenable** as the search provider and the scraper, and **None** as the reranker. The selection persists without a key.
+
+### Mixing categories
+
+Each category is configured independently, so Keenable search with a Firecrawl scraper works, and so does the reverse — another provider's search with the Keenable scraper:
+
+```yaml theme={"system"}
+webSearch:
+  searchProvider: searxng
+  searxngInstanceUrl: '${SEARXNG_INSTANCE_URL}'
+  scraperProvider: keenable
+  rerankerType: none
+```
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# Lightpanda
+Source: https://docs.keenable.ai/integrations/lightpanda
+
+Keenable is the keyless search engine behind the search tool in the Lightpanda headless browser.
+
+*Search engine*
+
+Keenable is the search engine behind the `search` tool in [Lightpanda](https://github.com/lightpanda-io/browser), the headless browser built for AI agents — and the one engine there that answers without a key.
+
+→ [View the change on GitHub](https://github.com/lightpanda-io/browser/pull/3252)
+
+Lightpanda's agent REPL and its native MCP server share a single `search` tool. Its default `auto` mode tries Brave, Tavily and Exa in order, each only when that vendor's API key is in the environment, and then Keenable — which works with or without one. So a Lightpanda binary in an empty environment still returns real `{title, url, snippet}` results instead of failing, which is why upstream dropped its DuckDuckGo HTML scrape in favour of this path.
+
+## Install
+
+### Install Lightpanda
+
+Nothing Keenable-specific to install: the engine ships in core. It is in the nightly builds — the latest tag predates the merge — and nightly is what Homebrew, the AUR package and the `:nightly` Docker image all track.
+
+```bash theme={"system"}
+brew install lightpanda-io/browser/lightpanda
+```
+
+```bash theme={"system"}
+# or take the nightly binary directly (aarch64-macos here; Linux builds are published too)
+curl -L -o lightpanda https://github.com/lightpanda-io/browser/releases/download/nightly/lightpanda-aarch64-macos
+chmod a+x lightpanda
+```
+
+Homebrew puts `lightpanda` on your `PATH`. The direct download leaves it in the working directory instead, so run it as `./lightpanda` below.
+
+### Search from the agent
+
+The REPL takes tools as slash commands, so searching needs no model key either — `--no-llm` is enough. Quote a multi-word query: it binds to the tool's one positional argument.
+
+```console theme={"system"}
+$ lightpanda agent --no-llm
+> /searchEngine keenable
+searchEngine: keenable
+KEENABLE_API_KEY is not set; using the keyless endpoint (rate-limited per client IP)
+> /search "zig 0.16 release notes"
+1. **0.16.0 Release Notes ⚡ The Zig Programming Language** — https://ziglang.org/download/0.16.0/release-notes.html
+   0.16.0 Release Notes  Zig is a general-purpose programming language and toolchain …
+```
+
+`/searchEngine keenable` pins the engine and is remembered in `.lp-agent.zon`, so later sessions skip the keyed engines entirely. Leave the setting on its `auto` default instead and Keenable is used whenever no other engine's key is set.
+
+### Or drive it over MCP
+
+```json theme={"system"}
+{
+  "mcpServers": {
+    "lightpanda": {
+      "command": "/path/to/lightpanda",
+      "args": ["mcp"]
+    }
+  }
+}
+```
+
+`tools/call search` returns the same numbered markdown to whichever model is driving the browser. The browser does not navigate on a search — pass a result's URL to the `goto` tool to open it.
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# LlamaIndex
+Source: https://docs.keenable.ai/integrations/llamaindex
+
+A Keenable ToolSpec so LlamaIndex agents can search and read the web.
+
+*Tool spec*
+
+A Keenable ToolSpec so LlamaIndex agents can search and read the web.
+
+→ [llama-index-tools-keenable on PyPI](https://pypi.org/project/llama-index-tools-keenable/)
+
+<video />
+
+pip install, then `KeenableToolSpec().search` returns docs with source URLs.
+
+## Install
+
+### Install
+
+```bash theme={"system"}
+pip install llama-index-tools-keenable
+```
+
+### Use the tool spec
+
+```python theme={"system"}
+from llama_index.tools.keenable import KeenableToolSpec
+
+spec = KeenableToolSpec()               # or KeenableToolSpec(api_key="keen_...")
+docs = spec.search("typescript best practices")
+page = spec.fetch(docs[0].metadata["url"])
+```
+
+<Note>
+  Pass `api_key=…` or set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# Mastra
+Source: https://docs.keenable.ai/integrations/mastra
+
+@keenable/mastra — keenable-search and keenable-fetch tools for any Mastra agent.
+
+*Tool package*
+
+`@keenable/mastra` — `keenable-search` and `keenable-fetch` tools for any Mastra agent.
+
+→ [@keenable/mastra on npm](https://www.npmjs.com/package/@keenable/mastra)
+
+<video />
+
+npm install, then `createKeenableTools().keenableSearch` returns live web results in Node.
+
+## Install
+
+### Install
+
+```bash theme={"system"}
+npm install @keenable/mastra
+```
+
+### Use the tools
+
+`@mastra/core` and `zod` are peer deps (already present in a Mastra project).
+
+```typescript theme={"system"}
+import { createKeenableTools } from "@keenable/mastra";
+
+const tools = createKeenableTools(); // reads KEENABLE_API_KEY; or { apiKey: "keen_..." }
+// exposes the tools `keenable-search` and `keenable-fetch`
+```
+
+<Note>
+  Set `KEENABLE_API_KEY` or pass `{ apiKey }` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# n8n
+Source: https://docs.keenable.ai/integrations/n8n
+
+A Keenable web-search and page-fetch community node for n8n workflows.
+
+*Workflow node*
+
+A Keenable web-search and page-fetch community node for n8n workflows.
+
+→ [n8n-nodes-keenable on npm](https://www.npmjs.com/package/n8n-nodes-keenable)
+
+## Install
+
+### Install the community node
+
+In n8n, open Settings → Community Nodes → Install and enter the package name:
+
+```text theme={"system"}
+n8n-nodes-keenable
+```
+
+### Add the node
+
+Add the Keenable node to a workflow and choose the Search or Fetch operation.
+
+<Note>
+  Add a `KEENABLE_API_KEY` credential to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# Nanobot
+Source: https://docs.keenable.ai/integrations/nanobot
+
+Keenable web search built into Nanobot, with a DuckDuckGo fallback.
+
+*Search provider*
+
+Keenable web search built into Nanobot, with a DuckDuckGo fallback.
+
+→ [View the change on GitHub](https://github.com/HKUDS/nanobot/pull/4350)
+
+## Install
+
+### No separate install
+
+Keenable ships as a built-in web-search provider in Nanobot (merged upstream) — there is no separate package to install.
+
+### Select Keenable
+
+Choose keenable as the search provider in your Nanobot configuration.
+
+<Note>
+  Set `KEENABLE_API_KEY` on the Nanobot backend to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# NVIDIA NeMo Agent Toolkit
+Source: https://docs.keenable.ai/integrations/nemo-agent-toolkit
+
+A Keenable function group (keenable__search, keenable__fetch) for the NVIDIA NeMo Agent Toolkit.
+
+*Function group*
+
+A Keenable function group (`keenable__search`, `keenable__fetch`) for the NVIDIA NeMo Agent Toolkit.
+
+→ [nemo-agent-toolkit-keenable on PyPI](https://pypi.org/project/nemo-agent-toolkit-keenable/)
+
+## Install
+
+### Install
+
+```bash theme={"system"}
+pip install nemo-agent-toolkit-keenable
+```
+
+### Enable it in your workflow config
+
+The keenable function group auto-registers via an entry point. Enable it and pick the tools to expose:
+
+```yaml theme={"system"}
+function_groups:
+  keenable:
+    _type: keenable          # reads api_key, or KEENABLE_API_KEY from the environment
+    include: [search, fetch]
+```
+
+<Note>
+  Set `KEENABLE_API_KEY` or `api_key` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# Omnigent
+Source: https://docs.keenable.ai/integrations/omnigent
+
+Keenable as a built-in web_search backend in Omnigent, selectable via the tool's search_provider config.
+
+*web\_search backend*
+
+Keenable as a built-in `web_search` backend in Omnigent, selectable via the tool's `search_provider` config.
+
+→ [View the change on GitHub](https://github.com/omnigent-ai/omnigent/pull/1722)
+
+<video />
+
+pip install omnigent, then the built-in web\_search tool on the keenable backend.
+
+## Install
+
+### No separate install
+
+Keenable ships as a built-in web\_search backend in Omnigent (merged upstream) — there is no separate package to install.
+
+### Select Keenable in the agentspec
+
+Set `search_provider` on the `web_search` tool. Omnigent never picks an engine for you — with no `search_provider` the tool returns an error naming the options.
+
+```yaml theme={"system"}
+tools:
+  builtins:
+    - name: web_search
+      search_provider: keenable
+      api_key: keen_...           # removes the hourly request cap
+      # max_results: 5            # 1-20, default 5
+```
+
+### Or drive the tool directly
+
+`invoke` takes a JSON argument string and a `ToolContext`:
+
+```python theme={"system"}
+import json
+from omnigent.tools.base import ToolContext
+from omnigent.tools.builtins.web_search import WebSearchTool
+
+tool = WebSearchTool(config={
+    "search_provider": "keenable",
+    "api_key": "keen_...",
+    "max_results": "3",
+})
+args = json.dumps({"query": "retrieval augmented generation"})
+print(tool.invoke(args, ToolContext("demo", "demo")))
+```
+
+<Warning>
+  **Known defect in the merged backend.** Results currently reach the model as titles and links with no page text, because the backend reads a field Keenable leaves empty for most pages. The fix is open upstream as [PR #5020](https://github.com/omnigent-ai/omnigent/pull/5020); there is no workaround in the meantime.
+</Warning>
+
+<Note>
+  Add `"api_key": "keen_…"` to the config to authenticate — this removes the hourly request cap. Leave it out and the backend calls `/v1/search/public` instead, on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# OpenClaw
+Source: https://docs.keenable.ai/integrations/openclaw
+
+A web-search provider for OpenClaw, installable from ClawHub or npm.
+
+*Search provider plugin*
+
+A web-search provider for OpenClaw, installable from ClawHub or npm. It slots in next to the built-in providers.
+
+→ [@keenable/openclaw-search on npm](https://www.npmjs.com/package/@keenable/openclaw-search)
+
+<video />
+
+Plugin install, enable, and a first search.
+
+<video />
+
+A live agent turn: web\_search routes through Keenable and the answer cites its sources.
+
+## Install
+
+### Install the plugin
+
+Install from npm:
+
+```bash theme={"system"}
+openclaw plugins install @keenable/openclaw-search
+```
+
+Or install from ClawHub:
+
+```bash theme={"system"}
+openclaw plugins install clawhub:keenable/openclaw-search
+```
+
+### Select Keenable
+
+Pick Keenable as the web-search provider. Requires OpenClaw 2026.6.1 or newer.
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# OpenCode
+Source: https://docs.keenable.ai/integrations/opencode
+
+opencode-keenable — a native plugin giving OpenCode agents web search and page fetch.
+
+*Coding-agent plugin*
+
+`opencode-keenable` gives OpenCode agents web search and page fetch as native tools — no CLI to install, no login step. Calls the Keenable REST API directly from the plugin rather than wrapping a separate binary.
+
+→ [opencode-keenable on npm](https://www.npmjs.com/package/opencode-keenable)
+
+## Install
+
+### Add the plugin
+
+Add one line to `opencode.json`:
+
+```json theme={"system"}
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["opencode-keenable"]
+}
+```
+
+OpenCode installs the plugin with Bun on startup, and the tools register on the next launch.
+
+### Use it
+
+Two tools register automatically: `keenable_search` (natural-language `query`, plus optional `site` and date filters) and `keenable_fetch` (one `http(s)` URL → clean markdown). Just ask something that needs the web.
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# OpenRouter
+Source: https://docs.keenable.ai/integrations/openrouter
+
+Web search and page fetch for any model on OpenRouter, as tools the model calls itself: from Python, the AI SDK, or OpenRouter's Agent SDK over MCP. Works without a Keenable key.
+
+*Tools for any OpenRouter model*
+
+OpenRouter serves hundreds of models through one OpenAI-compatible API. Keenable gives any of them web search and page fetch as tools: the model decides when to search, your code runs the call, and every result comes back with the page text already extracted. No Keenable key is needed to start, so each example below runs with only an OpenRouter key.
+
+| Stack | Packages | The model sees |
+| - | - | - |
+| [Python](#python) | `keenable` with the OpenAI SDK | `keenable_search`, `keenable_fetch` |
+| [TypeScript, AI SDK](#typescript-ai-sdk) | `@keenable/ai-sdk` with `@openrouter/ai-sdk-provider` | `keenable_search`, `keenable_fetch` |
+| [OpenRouter Agent SDK](#openrouter-agent-sdk-mcp) | `@openrouter/mcp` with the [Keenable MCP server](/mcp-server) | `search_web_pages`, `fetch_page_content` |
+
+The examples use `deepseek/deepseek-v4.1-flash`; any OpenRouter model that supports tool calling works. Set `OPENROUTER_API_KEY` first.
+
+## Python
+
+```bash theme={"system"}
+pip install keenable openai
+```
+
+```python theme={"system"}
+import os
+
+from keenable import Keenable, KeenableError, TOOLS, run_tool_call
+from openai import OpenAI
+
+openrouter = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.environ["OPENROUTER_API_KEY"],
+)
+keenable = Keenable()  # reads KEENABLE_API_KEY if set, works without it
+
+messages = [
+    {
+        "role": "system",
+        "content": "Use the web tools when the answer depends on recent information, and cite the URLs you used.",
+    },
+    {"role": "user", "content": "What changed in the latest Python release?"},
+]
+
+while True:
+    completion = openrouter.chat.completions.create(
+        model="deepseek/deepseek-v4.1-flash", messages=messages, tools=TOOLS
+    )
+    message = completion.choices[0].message
+
+    if not message.tool_calls:
+        print(message.content)
+        break
+
+    messages.append(message.model_dump(exclude_none=True))
+    for call in message.tool_calls:
+        try:
+            output = run_tool_call(keenable, call.function.name, call.function.arguments)
+        except KeenableError as exc:
+            # Hand the failure back so the model can try another source.
+            output = f"Tool call failed: {exc}"
+        messages.append({"role": "tool", "tool_call_id": call.id, "content": output})
+```
+
+`TOOLS` holds OpenAI-format definitions for `keenable_search` and `keenable_fetch`. `run_tool_call` runs whichever one the model picked and returns a numbered, citable block for the `tool` message, so the model can cite a fetched page the same way it cites a search result. Filters, async and errors are in the [SDK reference](https://github.com/keenableai/keenable-sdk).
+
+## TypeScript, AI SDK
+
+```bash theme={"system"}
+npm install @keenable/ai-sdk @openrouter/ai-sdk-provider ai zod
+```
+
+```typescript theme={"system"}
+import { createOpenRouter } from "@openrouter/ai-sdk-provider";
+import { generateText, stepCountIs } from "ai";
+import { keenableTools } from "@keenable/ai-sdk";
+
+const openrouter = createOpenRouter({ apiKey: process.env.OPENROUTER_API_KEY });
+
+const { text } = await generateText({
+  model: openrouter("deepseek/deepseek-v4.1-flash"),
+  tools: keenableTools(),
+  stopWhen: stepCountIs(5),
+  prompt: "What changed in the latest Bun release? Cite the pages you used.",
+});
+
+console.log(text);
+```
+
+`stopWhen` lets the model search, read the results and then answer; without it `generateText` stops after the first step and returns only the tool call. The same tools work in `streamText`. To keep the key out of environment variables on Vercel, see [Vercel](/integrations/vercel).
+
+## OpenRouter Agent SDK, MCP
+
+```bash theme={"system"}
+npm install @openrouter/agent @openrouter/mcp
+```
+
+```typescript theme={"system"}
+import { OpenRouter } from "@openrouter/agent";
+import { callModel } from "@openrouter/agent/call-model";
+import { createMCPTools } from "@openrouter/mcp";
+
+const client = new OpenRouter({ apiKey: process.env.OPENROUTER_API_KEY });
+
+const keenable = await createMCPTools({ url: "https://api.keenable.ai/mcp" });
+
+const result = callModel(client, {
+  model: "deepseek/deepseek-v4.1-flash",
+  input: "What changed in the latest Bun release? Cite the pages you used.",
+  tools: keenable.tools,
+});
+
+console.log(await result.getText());
+await keenable.close();
+```
+
+`createMCPTools` reads the tool list from the [Keenable MCP server](/mcp-server) and runs the calls, so there is no tool code to write. To use your key, pass it as a header:
+
+```typescript theme={"system"}
+const keenable = await createMCPTools({
+  url: "https://api.keenable.ai/mcp",
+  auth: { kind: "headers", headers: { "X-API-Key": process.env.KEENABLE_API_KEY } },
+});
+```
+
+## Use your API key
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+The Python SDK and `@keenable/ai-sdk` read `KEENABLE_API_KEY` from the environment; the MCP client takes it as the header above. Create a key in the [Keenable console](https://app.keenable.ai/console).
+
+## Billing
+
+OpenRouter bills the model's tokens, including the search results the model reads. Keenable calls are billed separately against your Keenable [credits](/credits), or run on the public tier without a key. This setup is separate from OpenRouter's own `openrouter:web_search` server tool: Keenable runs as your tool, so it behaves the same on every model and every call goes through your code.
+
+
+# Pi
+Source: https://docs.keenable.ai/integrations/pi
+
+A Keenable web-search and page-fetch package for the Pi coding agent.
+
+*Coding-agent package*
+
+A Keenable web-search and page-fetch package for the Pi coding agent.
+
+→ [@keenable/pi-search on Pi](https://pi.dev/packages/@keenable/pi-search)
+
+<video />
+
+A live `pi -p` agent turn: `keenable_search` is the only web tool, and the answer cites its sources.
+
+## Install
+
+### Install
+
+```bash theme={"system"}
+pi install npm:@keenable/pi-search
+```
+
+### Use it
+
+Tools auto-register — just run Pi and ask something that needs the web.
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# Pipecat
+Source: https://docs.keenable.ai/integrations/pipecat
+
+KeenableWebSearch — low-latency web search for Pipecat voice agents.
+
+*Voice-agent service*
+
+`KeenableWebSearch` gives Pipecat voice agents web search and page fetch as function-call tools, tuned for the latency budget of a spoken conversation. It ships in Pipecat itself — a thin wrapper over `MCPClient` pointed at the hosted Keenable MCP server, so the tools register themselves on the LLM context.
+
+→ [View the change on GitHub](https://github.com/pipecat-ai/pipecat/pull/4942)
+
+## Install
+
+### Install the extra
+
+```bash theme={"system"}
+pip install "pipecat-ai[keenable]"
+```
+
+<Note>
+  `KeenableWebSearch` is merged upstream and ships in Pipecat **1.8.0**, which is not released yet. Until it is, install from `main`:
+
+  ```bash theme={"system"}
+  pip install "pipecat-ai[keenable] @ git+https://github.com/pipecat-ai/pipecat"
+  ```
+</Note>
+
+### Add it to the context
+
+```python theme={"system"}
+from pipecat.processors.aggregators.llm_context import LLMContext
+from pipecat.services.keenable.search import KeenableWebSearch
+
+
+async def run_bot(transport):
+    search = KeenableWebSearch()
+    context = LLMContext(messages=[...], tools=await search.tools())
+    ...
+```
+
+`tools()` is a coroutine, so it belongs inside the async entry point your bot already runs in. It connects on first use and returns the tool schemas with their handlers attached, so the LLM auto-registers `search_web_pages` and `fetch_page_content`. The connection closes at pipeline teardown — call `close()` only to release it earlier.
+
+### Pick a search mode
+
+Keyless calls run in `pro` mode. Pass an API key to raise the limits and unlock `realtime`, the lower-latency mode built for voice:
+
+```python theme={"system"}
+search = KeenableWebSearch(api_key="keen_<your_key>", mode="realtime")
+```
+
+The mode is pinned per call and hidden from the model. With a key and no `mode`, `realtime` is the default — so if your account is not entitled to it, pass `mode="pro"` explicitly, or every search fails.
+
+<Note>
+  Set an `api_key` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+→ [Full example in the Pipecat repo](https://github.com/pipecat-ai/pipecat/blob/main/examples/features/features-keenable-web-search.py)
+
+
+# PraisonAI
+Source: https://docs.keenable.ai/integrations/praisonai
+
+keenable_search, a web-search tool for PraisonAI agents from praisonai-tools, with no API key required.
+
+*Tool in praisonai-tools*
+
+`keenable_search` gives PraisonAI agents Keenable web search. It ships in [praisonai-tools](https://github.com/MervinPraison/PraisonAI-Tools), the official tools package for PraisonAI, and runs without an API key.
+
+→ [praisonai-tools on PyPI](https://pypi.org/project/praisonai-tools/)
+
+## Install
+
+```bash theme={"system"}
+pip install "praisonai-tools>=0.2.45" praisonaiagents
+```
+
+## Give it to an agent
+
+`keenable_search` is a plain function, so it goes straight into an agent's `tools`:
+
+```python theme={"system"}
+from praisonaiagents import Agent
+from praisonai_tools import keenable_search
+
+agent = Agent(
+    instructions="You are a research assistant. Cite the pages you use.",
+    tools=[keenable_search],
+)
+
+agent.start("What changed in the latest Python release?")
+```
+
+Each result is a dict with `title`, `url` and `snippet`, the page text as a short excerpt. The agent picks `max_results` itself (5 by default, up to 50).
+
+## Call it directly
+
+For search outside an agent, use the tool class:
+
+```python theme={"system"}
+from praisonai_tools import KeenableSearchTool
+
+results = KeenableSearchTool().search("vector database benchmarks", max_results=5)
+for r in results:
+    print(r["title"], r["url"])
+```
+
+An error comes back as a single `{"error": "..."}` item instead of an exception, so an agent can read it and move on.
+
+<Note>
+  Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits). Set `KEENABLE_API_KEY`, or pass `KeenableSearchTool(api_key=...)`, to use your organization's limits and remove the hourly cap.
+</Note>
+
+
+# RAGFlow
+Source: https://docs.keenable.ai/integrations/ragflow
+
+A Keenable web-search agent tool built into RAGFlow, usable in the visual agent builder.
+
+*Agent tool*
+
+A Keenable web-search agent tool built into RAGFlow, usable in the visual agent builder.
+
+→ [View the change on GitHub](https://github.com/infiniflow/ragflow/pull/16233)
+
+## Install
+
+### No separate install
+
+Keenable ships as a built-in agent tool in RAGFlow (merged upstream) — there is no separate package to install.
+
+### Add it to a workflow
+
+Add Keenable Search to a workflow in RAGFlow's visual agent builder.
+
+<Note>
+  Set `KEENABLE_API_KEY` on the RAGFlow backend to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# Replit
+Source: https://docs.keenable.ai/integrations/replit
+
+Give Replit Agent web search and page fetch through the Keenable MCP server: one click, then sign in to Keenable.
+
+*MCP server*
+
+Replit Agent connects to remote MCP servers from **Integrations → MCP Servers for Replit Agent**. Add Keenable there once and Agent can search the web and read pages in every app and chat on your Replit account: `search_web_pages` returns live results with site and date filters, `fetch_page_content` returns a page as clean markdown.
+
+## Add Keenable
+
+<div>
+  <a href="https://replit.com/integrations?mcp=eyJkaXNwbGF5TmFtZSI6IktlZW5hYmxlIiwiYmFzZVVybCI6Imh0dHBzOi8vYXBpLmtlZW5hYmxlLmFpL21jcC1vYXV0aCJ9">
+    <svg>
+      <path />
+
+      <path />
+
+      <path />
+    </svg>
+
+    Add to Replit
+  </a>
+</div>
+
+<Steps>
+  <Step title="Open the install link">
+    Click **Add to Replit**. Replit opens its Integrations page with the Keenable server filled in.
+  </Step>
+
+  <Step title="Sign in to Keenable">
+    Click **Test & save**. Replit finds Keenable's sign-in by itself, so there is nothing to paste: sign in to Keenable and allow access.
+  </Step>
+
+  <Step title="Ask Agent to use it">
+    Keenable now shows under **MCP Servers** with its status, and Agent loads its tools in every project. Name it in a request when you want Agent to reach for it:
+
+    > Use Keenable to find this week's releases of the libraries this app depends on and list what changed.
+  </Step>
+</Steps>
+
+Searches count against your current organization in Keenable, with its [rate limits](/rate-limits) and the free monthly allowance in [credits](/credits).
+
+To add it by hand instead, open [replit.com/integrations](https://replit.com/integrations), scroll to **MCP Servers for Replit Agent**, click **+ Add MCP server**, name it **Keenable**, enter this URL and click **Test & save**:
+
+```
+https://api.keenable.ai/mcp-oauth
+```
+
+### With an API key
+
+To use a key instead of signing in, add `https://api.keenable.ai/mcp`, open **Advanced settings**, and add the header `X-API-Key` with your key (`keen_<your_key>`, from the [console](https://app.keenable.ai/console)).
+
+<Note>
+  With neither a sign-in nor a key, `https://api.keenable.ai/mcp` still answers, on the shared public tier. Replit Agent calls MCP servers from Replit's cloud, so that tier's per-IP hourly limit is shared with other Replit traffic and can run out in the middle of a task. Sign in or use a key for anything past a first try.
+</Note>
+
+## Search inside the app you build
+
+The server above gives Agent a tool for its own work. For an app that searches the web for its users, have Agent call Keenable from the app's backend with the SDK (`npm install keenable` or `pip install keenable`). Put your key in the app's **Secrets** as `KEENABLE_API_KEY` first: a published app serves all its users from one server, so without a key they would all share one per-IP hourly limit.
+
+> Add web search to this app with the Keenable SDK (the `keenable` package). Call it from the server, read the key from the `KEENABLE_API_KEY` secret, and show each result's title, URL and snippet.
+
+Endpoints and parameters are in the [API reference](/api-reference).
+
+
+# SearXNG
+Source: https://docs.keenable.ai/integrations/searxng
+
+A keenable search engine built into SearXNG (shortcut !keen), enabled in settings.yml.
+
+*Search engine*
+
+A keenable search engine built into SearXNG (shortcut `!keen`) — an operator flips it on in `settings.yml`.
+
+→ [View the change on GitHub](https://github.com/searxng/searxng/pull/6412)
+
+Keenable ships as a core SearXNG engine (`searx/engines/keenable.py`). Like every newly added engine it is registered disabled by default, per SearXNG convention, so the instance operator enables it explicitly. SearXNG is a rolling release — the engine lands in the next master docker build.
+
+## Install
+
+### No separate install
+
+Keenable ships as a built-in search engine in SearXNG (merged upstream) — there is no separate package to install.
+
+### Enable it in settings.yml
+
+Upstream registers the engine as `disabled: true`, `inactive: true` (the convention for a new engine), so the operator turns it on:
+
+```yaml theme={"system"}
+engines:
+  - name: keenable
+    engine: keenable
+    shortcut: keen
+    inactive: false
+    disabled: false
+    api_key: keen_...       # removes the hourly request cap
+    # keenable_mode: pro    # search mode, defaults to pro
+```
+
+### Search
+
+Restart the instance, then use the `!keen` bang or select Keenable in the engine list.
+
+<Note>
+  Add `api_key` to the engine settings to authenticate — this removes the hourly request cap. Leave it out and calls run on the shared public tier at [lower rate limits](/rate-limits); on a multi-user instance that pool is shared across everyone behind the instance's egress address.
+</Note>
+
+
+# Vellum Assistant
+Source: https://docs.keenable.ai/integrations/vellum-assistant
+
+Keenable as a built-in web-search provider in Vellum Assistant, alongside Brave, Perplexity, Tavily and Firecrawl.
+
+*Search provider*
+
+Keenable as a built-in web-search provider in Vellum Assistant, alongside Brave, Perplexity, Tavily and Firecrawl.
+
+→ [View the change on GitHub](https://github.com/vellum-ai/vellum-assistant/pull/39431)
+
+## Install
+
+### No separate install
+
+Keenable ships as a built-in web-search provider in Vellum Assistant (merged upstream) — there is no separate package to install.
+
+### Point the web-search service at Keenable
+
+Edit `~/.vellum/workspace/config.json` (the workspace root follows `VELLUM_WORKSPACE_DIR` when that is set):
+
+```json theme={"system"}
+{
+  "services": {
+    "web-search": { "provider": "keenable" }
+  }
+}
+```
+
+### Run it
+
+The key is read from the environment, and the CLI forwards it into self-hosted containers and VMs.
+
+```bash theme={"system"}
+export KEENABLE_API_KEY=keen_...
+vellum wake
+```
+
+<Warning>
+  **Known defect in the merged provider.** Search results currently render as a title, a URL and a published date with no text, because the provider reads a field Keenable leaves empty for most pages. The fix is open upstream as [PR #40928](https://github.com/vellum-ai/vellum-assistant/pull/40928); there is no workaround in the meantime.
+</Warning>
+
+### Note on the Settings picker
+
+Keenable is not in the desktop/web Settings provider picker yet — that card gates BYOK providers behind a required API key field, and our provider entry does not declare one. For now select it through `config.json` or the env var.
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# Vercel
+Source: https://docs.keenable.ai/integrations/vercel
+
+Web search and page fetch for apps on Vercel: AI SDK tools that work without a key, and Vercel Connect to keep the key out of your environment variables.
+
+*AI SDK tools and Vercel Connect*
+
+Two pieces, used together or on their own:
+
+* **`@keenable/ai-sdk`** gives any `generateText` or `streamText` call web search and page fetch as AI SDK tools. It works without a key, so the first snippet below runs as-is, with no signup before the first call.
+* **Vercel Connect** lists Keenable in its catalog. Connect keeps your API key at the team level and hands it to your code at runtime with `getToken`, so the key never sits in an environment variable.
+
+→ [@keenable/ai-sdk on npm](https://www.npmjs.com/package/@keenable/ai-sdk) · [Keenable on Vercel Connect](https://vercel.com/connect/keenable)
+
+## AI SDK tools
+
+### Install
+
+```bash theme={"system"}
+npm install @keenable/ai-sdk ai zod
+```
+
+`ai` and `zod` are peer dependencies, already present in an AI SDK project. Works on `ai` v5, v6 and v7, and on zod v3 and v4. The examples use `@ai-sdk/openai`; any model provider works.
+
+### Add the tools
+
+```typescript theme={"system"}
+import { openai } from "@ai-sdk/openai";
+import { generateText, stepCountIs } from "ai";
+import { keenableTools } from "@keenable/ai-sdk";
+
+const { text } = await generateText({
+  model: openai("gpt-5.6-sol"),
+  tools: keenableTools(),
+  stopWhen: stepCountIs(6),
+  prompt: "What changed in the latest Bun release? Cite the pages you used.",
+});
+```
+
+`stopWhen` lets the model search, read the results and then answer; without it `generateText` stops after the first step and returns only the tool call. The model sees the tools as `keenable_search` and `keenable_fetch`. To add just one, import `keenableSearch` or `keenableFetch` instead of the pair. The tools are built on the official [`keenable`](https://www.npmjs.com/package/keenable) SDK.
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+Or pass the key directly: `keenableTools({ apiKey: "keen_<your_key>" })`. On Vercel, the next section keeps it out of your environment.
+
+## Keep the key in Vercel Connect
+
+You don't need Connect, or a key, to start. A key lifts the [request limits](/rate-limits), and Connect is where a Vercel project keeps it.
+
+### Get a key
+
+Create an API key in the [Keenable console](https://app.keenable.ai/console).
+
+### Create the connector
+
+In the Vercel dashboard, open **Connect** for your project, select **Create Connector** and choose Keenable. A connector created from the project page is linked to that project. Or, from a directory linked to the project:
+
+```bash theme={"system"}
+vercel connect create keenable --name keenable
+vercel connect attach keenable/keenable
+```
+
+The CLI asks for the connection method and the key. Choose **API key**: it covers both the REST API and the MCP server, and it works with no signed-in user, so backends and cron jobs can use it.
+
+### Fetch the key at runtime
+
+```bash theme={"system"}
+npm install @vercel/connect
+```
+
+```typescript theme={"system"}
+import { getToken } from "@vercel/connect";
+import { openai } from "@ai-sdk/openai";
+import { generateText, stepCountIs } from "ai";
+import { keenableTools } from "@keenable/ai-sdk";
+
+export async function answer(prompt: string) {
+  const apiKey = await getToken("keenable/keenable", {
+    subject: { type: "app" },
+  });
+
+  const { text } = await generateText({
+    model: openai("gpt-5.6-sol"),
+    tools: keenableTools({ apiKey }),
+    stopWhen: stepCountIs(6),
+    prompt,
+  });
+  return text;
+}
+```
+
+`keenable/keenable` is the connector's UID: the service, then the name you gave it. On Vercel, `getToken` authenticates with the deployment's OIDC token; locally, run `vercel env pull` first. Call it per request rather than once at startup. The SDK caches the key in process.
+
+Without the AI SDK package, send the same value to the [REST API](/api-reference) as `X-API-Key` or `Authorization: Bearer`:
+
+```typescript theme={"system"}
+const res = await fetch("https://api.keenable.ai/v1/search", {
+  method: "POST",
+  headers: { "X-API-Key": apiKey, "Content-Type": "application/json" },
+  body: JSON.stringify({ query: "latest Bun release" }),
+});
+```
+
+### OAuth for MCP
+
+The connector also offers OAuth on the [MCP server](/mcp-server). Without sign-in, the MCP server answers on the public tier, which is how a URL-only client such as a Claude custom connector uses it. With Connect's OAuth method, each user signs in to Keenable once and Connect stores their token, so their calls run on their own Keenable account, the same way the [ChatGPT](/integrations/chatgpt) install works, and there is no key to copy. It issues user tokens only (`subject: { type: "user", id }`), so use the API key method for anything that runs without a signed-in user.
+
+## Billing
+
+Connect stores the credential and nothing else. Calls are metered against the [credits](/credits) of the Keenable organization that owns the key, and Vercel does not charge for them.
+
+
+# web-search-plus (Hermes)
+Source: https://docs.keenable.ai/integrations/web-search-plus
+
+Keenable as a web-search and extract provider in the web-search-plus community plugin for the Hermes agent.
+
+*Search provider plugin*
+
+Keenable as a web-search and extract provider in the web-search-plus community plugin for the Hermes agent.
+
+→ [View the change on GitHub](https://github.com/robbyczgw-cla/hermes-web-search-plus/pull/56)
+
+<video />
+
+Install the plugin, pin Keenable as the default provider, and run a first search.
+
+## Install
+
+### Install and enable the plugin
+
+```bash theme={"system"}
+hermes plugins install robbyczgw-cla/hermes-web-search-plus --enable
+```
+
+### Pin Keenable as the default provider
+
+Run `set-default` to make every search use Keenable and turn the plugin's auto-routing off. After this both the `web_search_plus` agent tool and the standalone `search.py` (with no `--provider` flag) route through Keenable.
+
+```bash theme={"system"}
+python3 ~/.hermes/plugins/web-search-plus/setup.py config set-default keenable
+```
+
+### Authenticate
+
+```bash theme={"system"}
+export KEENABLE_API_KEY=keen_...
+```
+
+Verify the pin with `setup.py config show` → default provider: keenable.
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. To run without a key you also have to opt into the plugin's public-tier flag, which is off by default: `KEENABLE_ALLOW_PUBLIC=1` (or `keenable.allow_public: true` in `config.json`). That path runs on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# WeKnora (Tencent)
+Source: https://docs.keenable.ai/integrations/weknora
+
+Keenable as a built-in web-search provider in Tencent WeKnora.
+
+*Search provider*
+
+Keenable as a built-in web-search provider in Tencent WeKnora.
+
+→ [View the change on GitHub](https://github.com/Tencent/WeKnora/pull/1946)
+
+## Install
+
+### No separate install
+
+Keenable ships as a built-in web-search provider in WeKnora (merged upstream) — there is no separate package to install.
+
+### Add the provider
+
+In WeKnora's Web Search settings, add a provider of type Keenable and paste your `keen_…` key. Agents then use it through the configured provider.
+
+<Note>
+  Paste a `keen_…` key in the provider settings to authenticate — this removes the hourly request cap. Leave the field empty and calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# ZeroClaw
+Source: https://docs.keenable.ai/integrations/zeroclaw
+
+Keenable as a built-in web-search provider in ZeroClaw, the Rust agent runtime — the one provider that needs no key.
+
+*Search provider*
+
+Keenable as a built-in web-search provider in ZeroClaw, the Rust agent runtime. Every other real search API in its list wants a key or a self-hosted instance; this one works as soon as you select it.
+
+→ [View the change on GitHub](https://github.com/zeroclaw-labs/zeroclaw/pull/10679)
+
+## Install
+
+### No separate install
+
+Keenable ships as a provider of ZeroClaw's `web_search_tool` (merged upstream on September 17, 2026) — there is no Keenable package to install, just ZeroClaw itself.
+
+<Note>
+  The provider is in `master` and ships with **v0.9.0**. Until that release is out, the pre-built binaries the installer downloads (v0.8.5) do not have it, so build from source:
+
+  ```bash theme={"system"}
+  curl -fsSL https://raw.githubusercontent.com/zeroclaw-labs/zeroclaw/master/install.sh | sh -s -- --source
+  ```
+</Note>
+
+### Select Keenable
+
+The default provider stays DuckDuckGo. Switch it in `~/.zeroclaw/config.toml`:
+
+```toml theme={"system"}
+[web_search]
+search_provider = "keenable"
+# Optional; omit to run keyless on the public endpoint.
+keenable_api_key = "keen_..."
+```
+
+Without a key, searches go to Keenable's public endpoint. With a key, they go to the authenticated endpoint and the per-IP rate limits no longer apply. The key is read from `config.toml` on every call, so adding, rotating, or removing it takes effect without a restart.
+
+### Or set the key from the environment
+
+ZeroClaw's schema-mirror variables override any field at startup:
+
+```bash theme={"system"}
+export ZEROCLAW_web_search__keenable_api_key=keen_...
+```
+
+A non-empty value wins over the key stored in `config.toml`; an empty value forces keyless search.
+
+### Try it
+
+```text theme={"system"}
+> search the web for what changed in Rust 1.95
+```
+
+The tool reports `Search results for: ... (via Keenable)` with a title, URL, and a text snippet per result, so the model can answer from the snippets without fetching every page.
+
+<Note>
+  Set `KEENABLE_API_KEY` to authenticate — this removes the hourly request cap. Without a key, calls run on the shared public tier at [lower rate limits](/rate-limits).
+</Note>
+
+
+# MCP
+Source: https://docs.keenable.ai/mcp-server
+
+Connect Keenable APIs as tools to clients that support MCP
+
+The Keenable tools are also available as a Model Context Protocol server, so agents like Claude Code, Claude Desktop, Cursor, and Windsurf can call them directly. Pass your API key in the `X-API-Key` header to remove the hourly request limit and raise rate limits — see [Authentication](/authentication) and [Rate limits](/rate-limits). Drop the header and the server still answers, on the shared public tier.
+
+## Installation
+
+### One-click install
+
+Add Keenable to Cursor, VS Code or Replit with a single click:
+
+<div>
+  <a href="cursor://anysphere.cursor-deeplink/mcp/install?name=keenable&config=eyJ1cmwiOiJodHRwczovL2FwaS5rZWVuYWJsZS5haS9tY3AifQ==">
+    <svg>
+      <path />
+    </svg>
+
+    Add to Cursor
+  </a>
+
+  <a href="vscode:mcp/install?%7B%22name%22%3A%22keenable%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.keenable.ai%2Fmcp%22%7D">
+    <svg>
+      <path />
+    </svg>
+
+    Add to VS Code
+  </a>
+
+  <a href="vscode-insiders:mcp/install?%7B%22name%22%3A%22keenable%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.keenable.ai%2Fmcp%22%7D">
+    <svg>
+      <path />
+    </svg>
+
+    Add to VS Code Insiders
+  </a>
+
+  <a href="https://replit.com/integrations?mcp=eyJkaXNwbGF5TmFtZSI6IktlZW5hYmxlIiwiYmFzZVVybCI6Imh0dHBzOi8vYXBpLmtlZW5hYmxlLmFpL21jcC1vYXV0aCJ9">
+    <svg>
+      <path />
+
+      <path />
+
+      <path />
+    </svg>
+
+    Add to Replit
+  </a>
+</div>
+
+### Install via CLI
+
+The easiest way to set up the Keenable MCP server for local coding agents is via the [Keenable CLI](/cli). Once you've installed the CLI, run the following to be guided through the MCP server setup.
+
+```shellscript theme={"system"}
+keenable configure-mcp
+```
+
+### Claude Code
+
+Add the Keenable MCP server with the Claude Code CLI:
+
+```bash theme={"system"}
+claude mcp add keenable \
+  --transport http https://api.keenable.ai/mcp \
+  --scope user \
+  --header "X-API-Key: keen_<your_key>"
+```
+
+Omit the `--header` flag to run on the public tier instead.
+
+<Note>
+  Claude Code ships its own `WebSearch` and `WebFetch` tools and picks between them and Keenable from one lookup to the next. Add `"permissions": { "deny": ["WebSearch", "WebFetch"] }` to `~/.claude/settings.json` to leave Keenable as the only search; see [Claude](/integrations/claude#turn-off-the-built-in-search) for the details and how to undo it.
+</Note>
+
+### Codex
+
+Add the following to `~/.codex/config.toml`
+
+```toml theme={"system"}
+[mcp_servers.keenable]
+url = "https://api.keenable.ai/mcp"
+http_headers = { "X-API-Key" = "keen_<your_key>" }
+```
+
+Omit the `http_headers` line to run on the public tier instead.
+
+<Note>
+  **Codex needs one more line.** It ships its own web search, enabled by default, and keeps reaching for that instead — so the tools show up in `/mcp` but never get called unless you ask for them by name. Add `web_search = "disabled"` to the same file, **above** the `[mcp_servers.keenable]` line — it's a top-level key, and a bare key written under a table header belongs to that table instead, where Codex never reads it. See [Codex](/integrations/codex) for the finished file, the other modes, and an `AGENTS.md` snippet.
+</Note>
+
+### Other MCP clients
+
+For Cursor and other clients that accept a remote MCP URL in their config file:
+
+```json theme={"system"}
+{
+  "mcpServers": {
+    "keenable": {
+      "url": "https://api.keenable.ai/mcp",
+      "headers": {
+        "X-API-Key": "keen_<your_key>"
+      }
+    }
+  }
+}
+```
+
+Omit the `headers` block to run on the public tier instead.
+
+<Warning>
+  **Claude Desktop is not one of these clients.** Its config file accepts only local `command` servers, so a `"url"` entry is ignored without an error and the tools never appear. Use a [connector](#claude-remote-connector) instead, or the [local bridge](#local-bridge-with-an-api-key) if you want your key applied.
+</Warning>
+
+### OpenAI API (Responses API)
+
+This is for calling the MCP server from your own code against OpenAI's API — different from adding Keenable inside the ChatGPT app itself, which is the [Plugins Directory listing](/integrations/chatgpt). Pass it as a remote `mcp` tool:
+
+```python theme={"system"}
+from openai import OpenAI
+
+client = OpenAI()
+response = client.responses.create(
+    model="gpt-5",
+    input="What's new in retrieval-augmented generation this week?",
+    tools=[
+        {
+            "type": "mcp",
+            "server_label": "keenable",
+            "server_url": "https://api.keenable.ai/mcp",
+            "headers": {"X-API-Key": "keen_<your_key>"},
+            "require_approval": "never",
+        }
+    ],
+)
+print(response.output_text)
+```
+
+Omit the `headers` entry to run on the public tier instead.
+
+<Note>
+  Keenable's search and fetch cover the same ground as a client's own built-in tools
+  (`WebSearch`, `WebFetch`, `brave_search`, `tavily_search`). With both sets active an agent
+  picks between them inconsistently from one call to the next, so most people turn the
+  built-in ones off in client settings once Keenable is in place.
+</Note>
+
+### Claude (remote connector)
+
+Claude (Desktop, claude.ai, mobile) connects to the remote MCP server as a **connector**, with no config file. The connection is made from Anthropic's cloud, so your server just needs to be reachable at its public URL.
+
+<Note>
+  **[ChatGPT](/integrations/chatgpt) installs from the Plugins Directory** — Keenable is published there, so it comes from the catalog and signs you in to your Keenable account. [Codex](/integrations/codex) can install from the same listing, but has a `config.toml` route of its own.
+</Note>
+
+<Steps>
+  <Step title="Add the connector">
+    Keenable is listed in Claude's Connectors Directory as **Keenable Web Search**: open **Customize → Connectors**, click **+**, search for it, and click **Connect**. There is nothing to paste.
+
+    To run on your own Keenable account, add it by URL instead: **Customize → Connectors → + Add → Add custom connector** with the URL below, then click **Connect** and sign in to Keenable. An API key in a request header works too; see [Claude](/integrations/claude#use-your-own-account).
+
+    ```
+    https://api.keenable.ai/mcp-oauth
+    ```
+  </Step>
+
+  <Step title="Enable it in a chat">
+    Click **+** in the lower left of the message box, hover **Connectors**, and toggle Keenable on for the conversation.
+  </Step>
+</Steps>
+
+To stop Claude's own web search from competing with Keenable, see [Claude](/integrations/claude#turn-off-web-search).
+
+### Local bridge (with an API key)
+
+Any client that only speaks local stdio needs a bridge to apply your own key. Claude Desktop's config file is the common case. `@keenable/mcp-server` runs as a subprocess and forwards to the same endpoint:
+
+```json theme={"system"}
+{
+  "mcpServers": {
+    "keenable": {
+      "command": "npx",
+      "args": ["-y", "@keenable/mcp-server"],
+      "env": {
+        "KEENABLE_API_KEY": "keen_<your_key>"
+      }
+    }
+  }
+}
+```
+
+Needs Node.js on the machine, and the client has to be restarted after editing its config file (for Claude Desktop, `claude_desktop_config.json`). Drop the `env` block to run it without a key. The same block works verbatim in any other stdio-only client's config, not just Claude Desktop's.
+
+## Available tools
+
+Two tools are exposed by the MCP server.
+
+### `search_web_pages`
+
+Search the web and return ranked results with URLs, titles, and descriptions.
+
+<ParamField type="string">
+  The search query.
+</ParamField>
+
+<ParamField type="string">
+  Restrict results to a specific site (e.g. `"techcrunch.com"`).
+</ParamField>
+
+<ParamField type="string">
+  Filter to pages acquired/indexed at or after this point in time.
+</ParamField>
+
+<ParamField type="string">
+  Filter to pages acquired/indexed at or before this point in time.
+</ParamField>
+
+<ParamField type="string">
+  Filter to pages published at or after this point in time.
+</ParamField>
+
+<ParamField type="string">
+  Filter to pages published at or before this point in time.
+</ParamField>
+
+<ParamField type="string">
+  Search the index as it stood at this point in time: pages acquired after it are excluded. Accepts a timestamp or a date (a date resolves to `00:00:00` UTC, not to the end of the day). See [Point-in-time search](#point-in-time-search).
+</ParamField>
+
+<ParamField type="integer">
+  Maximum length, in characters, of the snippet returned per result. Must be between 180 and 10000. When omitted, a default snippet length is used.
+</ParamField>
+
+<ParamField type="integer">
+  Maximum number of results to return. Must be between 1 and 50. When omitted, up to 10 results are returned.
+</ParamField>
+
+#### Date and time filters
+
+`acquired_after`, `acquired_before`, `published_after`, and `published_before` each accept **one** of the following formats:
+
+* **Date** in RFC 3339 `full-date` form (`YYYY-MM-DD`) — covers that whole day in UTC. On an `_after` bound it resolves to `00:00:00` on that date; on a `_before` bound it resolves to `23:59:59.999` on that date, so pages from the named day are kept at either end. Pass a timestamp instead to cut at an exact instant.
+* **Timestamp** in ISO 8601 form (`YYYY-MM-DDTHH:MM:SS[.sss][±HH:MM]`). When a timezone offset is not provided, the timezone is interpreted as UTC.
+* **Relative delta** (`<number><unit>`, e.g. `7d`, `30min`) — resolves to the request time minus the delta, truncated to minute precision, or to [`query_time`](#point-in-time-search) minus the delta when that is set. Supported units: `min` (minutes), `h` (hours), `d` (days), `mo` (months), `y` (years).
+
+Example values:
+
+| Value | Resolves to |
+| - | - |
+| `2026-01-15` on `acquired_after` / `published_after` | `2026-01-15T00:00:00Z` |
+| `2026-01-15` on `acquired_before` / `published_before` | `2026-01-15T23:59:59.999Z` |
+| `2026-01-15T10:30:00` | `2026-01-15T10:30:00Z` (no offset → UTC) |
+| `2026-01-15T10:30:00Z` | `2026-01-15T10:30:00Z` |
+| `2026-01-15T10:30:00.500-05:00` | `2026-01-15T15:30:00.500Z` |
+| `7d` | 7 days before request time, truncated to the minute |
+| `30min` | 30 minutes before request time, truncated to the minute |
+
+Relative deltas may be combined with absolute values across the two bounds of a window:
+
+```json theme={"system"}
+{
+  "query": "...",
+  "published_after": "1y",
+  "published_before": "6mo"
+}
+```
+
+```json theme={"system"}
+{
+  "query": "...",
+  "acquired_after": "2024-01-01",
+  "acquired_before": "30d"
+}
+```
+
+For example, at request time `2026-05-18T14:23:45Z`, `acquired_after: "2h"` resolves to `2026-05-18T12:23:00Z` — a document acquired at `12:22:59Z` is dropped, one acquired at `12:23:00Z` is kept.
+
+Mind the difference between a date and a timestamp on a `_before` bound: `acquired_before: "2026-05-01"` keeps a page acquired at `2026-05-01T14:31:13Z`, while `acquired_before: "2026-05-01T00:00:00Z"` drops it. Use the date form to mean "up to and including that day", and the timestamp form to cut at midnight.
+
+#### Point-in-time search
+
+`query_time` moves the whole search back to an instant: a page acquired after it is
+not a candidate at all, so the answer is the one the index would have given then
+rather than today's answer filtered down. Reach for it to reproduce an agent run, to
+build an evaluation set that does not drift as the index grows, or to ask what was
+knowable before an event.
+
+It also **re-bases every relative delta on this request**. A delta resolves against
+the request time only when `query_time` is absent; with it, `published_after: "30d"`
+means thirty days before `query_time`:
+
+```json theme={"system"}
+{
+  "query": "...",
+  "query_time": "2026-06-13T00:00:00Z",
+  "published_after": "30d"
+}
+```
+
+resolves to pages published between `2026-05-14` and `2026-06-13` — not to the last
+thirty days. Absolute bounds are unaffected.
+
+A date-only `query_time` resolves to `00:00:00` UTC, which is the opposite end of the
+day from a date-only `_before` bound: `query_time: "2026-06-13"` cuts at the start of
+13 June, while `acquired_before: "2026-06-13"` keeps all of it.
+
+### `fetch_page_content`
+
+Fetch a URL and extract content as clean markdown. By default only URLs from the index are supported; this is not a general web scraper. Pass `live=true` to fetch directly from the source, including URLs that are not indexed.
+
+<ParamField type="string">
+  The URL to fetch.
+</ParamField>
+
+<ParamField type="integer">
+  Maximum number of characters of content to return. Longer content is truncated.
+</ParamField>
+
+<ParamField type="boolean">
+  Fetch the page live from the source instead of returning Keenable's indexed copy. Enables fetching URLs that are not indexed.
+</ParamField>
+
+<ParamField type="string">
+  Optional extraction instruction, at most 2000 characters. When set, an LLM reads the fetched page and the returned content is only the output for this instruction instead of the full page. Example: `List all pricing tiers with their monthly prices`.
+</ParamField>
+
+Returns `url`, `title`, and `content` (markdown). See the [Fetch reference](/api-reference/fetch) for the response shape.
+
+## Metadata for integrators
+
+Platforms embedding Keenable's MCP tools can read billing usage and control tool behaviour through the MCP `_meta` side channel. `_meta` travels alongside the tool result or request and is **not** part of the model-visible tool `content`, so none of it enters the agent's context. [Baseten](/integrations/baseten) uses both channels to run the tools as hosted tools on its Model APIs.
+
+### Usage metadata (response `_meta`)
+
+Every billed (authenticated) tool call returns usage under `_meta["keenable/usage"]`, so you can attribute cost per call without parsing the tool's text output. Unauthenticated calls are unbilled and omit it.
+
+<ParamField type="string">
+  Billing SKU for the operation: `search.realtime`, `search.pro`, `fetch`, or `fetch.live`.
+</ParamField>
+
+<ParamField type="integer">
+  Number of billed operations — always `1` for a single tool call.
+</ParamField>
+
+<ParamField type="number">
+  Credits metered for this call (the org-specific price for the operation).
+</ParamField>
+
+<ParamField type="boolean">
+  `true` when drawn from purchased credits; `false` while still on the free monthly allowance. See [credits](/credits).
+</ParamField>
+
+Example tool result:
+
+```json theme={"system"}
+{
+  "content": [{ "type": "text", "text": "..." }],
+  "_meta": {
+    "keenable/usage": { "sku": "search.realtime", "amount": 1, "credits": 1, "paid": true }
+  }
+}
+```
+
+### Operator overrides (request `_meta`)
+
+To control tool behaviour yourself instead of letting the model decide, send overrides under `_meta["keenable/overrides"]` on a `tools/call` request. They take precedence over the arguments the model generated.
+
+<ParamField type="string">
+  Force the search mode: `realtime` or `pro`. Overrides any `mode` the model chose.
+</ParamField>
+
+<ParamField type="boolean">
+  Bypass cached results for this call.
+</ParamField>
+
+Example request:
+
+```json theme={"system"}
+{
+  "method": "tools/call",
+  "params": {
+    "name": "search_web_pages",
+    "arguments": { "query": "..." },
+    "_meta": { "keenable/overrides": { "mode": "realtime", "skip_cache": true } }
+  }
+}
+```
+
+Invalid or unknown override values are ignored rather than erroring the call.
+
+
+# Pay per request (x402)
+Source: https://docs.keenable.ai/pay-per-request
+
+Call search and fetch with no account and no API key: each request pays $0.01 in USDC on Base over the x402 protocol, or spends prepaid credit bought through ZeroClick.
+
+[x402](https://www.x402.org) is an open payment protocol built on HTTP `402 Payment Required`. Keenable accepts it on its own paths, so an agent with a wallet can search and fetch without signing up, holding a key, or topping up a balance: every request pays for itself.
+
+**\$0.01 per request**, in USDC on Base (`eip155:8453`). The buyer needs USDC only — no ETH for gas, because the payment is a signed transfer authorization (EIP-3009) that the payment network submits on your behalf.
+
+If you call Keenable regularly, an [API key](/authentication) is the better deal: prepaid [credits](/credits) cost \$4 per 1,000 requests rather than \$10, and keyed [rate limits](/rate-limits) can be raised. x402 is for agents that have no account and no key. An agent with no account can also buy the same \$4 per 1,000 rate as prepaid credit [through ZeroClick](#prepaid-credits-through-zeroclick).
+
+## Endpoints
+
+| Endpoint | Method | Path | Same parameters and response as |
+| - | - | - | - |
+| Search | `GET`, `POST` | `/v1/x402/search` | [`/v1/search`](/api-reference/search) |
+| Fetch | `GET` | `/v1/x402/fetch` | [`/v1/fetch`](/api-reference/fetch) |
+
+`GET` search takes its parameters in the query string; `POST` takes the same JSON body as `/v1/search`.
+
+An API key sent to these paths is ignored — for keyed access, call `/v1/search` and `/v1/fetch`. The `webql` and `realtime_content` search [modes](/api-reference/search#request) are available with an API key only and answer `403` here.
+
+## How a paid call works
+
+<Steps>
+  <Step title="Ask">
+    Call the endpoint without payment. The answer is `402`, with the offer in the `PAYMENT-REQUIRED` header as base64-encoded JSON. The same offer is mirrored in the body.
+  </Step>
+
+  <Step title="Pay">
+    Sign one of the `accepts` options and send the same request again with the signed payload in the `PAYMENT-SIGNATURE` header.
+  </Step>
+
+  <Step title="Receive">
+    Keenable verifies the payment, runs the request and settles the payment on-chain. The result is returned only after settlement succeeds, with the receipt — including the transaction hash — in the `PAYMENT-RESPONSE` header.
+  </Step>
+</Steps>
+
+The offer looks like this:
+
+```bash theme={"system"}
+curl -i "https://api.keenable.ai/v1/x402/search?query=typescript+best+practices"
+```
+
+```json theme={"system"}
+{
+  "x402Version": 2,
+  "error": "Payment required",
+  "resource": { "url": "https://api.keenable.ai/v1/x402/search" },
+  "accepts": [
+    {
+      "scheme": "exact",
+      "network": "eip155:8453",
+      "amount": "10000",
+      "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "payTo": "0x…",
+      "maxTimeoutSeconds": 300,
+      "extra": { "name": "USD Coin", "version": "2" }
+    }
+  ]
+}
+```
+
+`amount` is in USDC base units (6 decimals), so `10000` is \$0.01. `asset` is the USDC contract on Base. A signed payment stays valid for `maxTimeoutSeconds`.
+
+## Using an x402 client
+
+Any standard x402 v2 client handles the ask–pay–receive loop for you. With the official [`@x402/fetch`](https://www.npmjs.com/package/@x402/fetch) package:
+
+```bash theme={"system"}
+npm install @x402/fetch @x402/evm viem
+```
+
+```typescript theme={"system"}
+import { wrapFetchWithPaymentFromConfig, decodePaymentResponseHeader } from "@x402/fetch";
+import { ExactEvmScheme } from "@x402/evm/exact/client";
+import { privateKeyToAccount } from "viem/accounts";
+
+const account = privateKeyToAccount(process.env.WALLET_PRIVATE_KEY as `0x${string}`);
+
+const fetchWithPayment = wrapFetchWithPaymentFromConfig(fetch, {
+  schemes: [{ network: "eip155:8453", client: new ExactEvmScheme(account) }],
+});
+
+const query = "typescript best practices";
+const res = await fetchWithPayment(
+  `https://api.keenable.ai/v1/x402/search?query=${encodeURIComponent(query)}`,
+);
+
+const { results } = await res.json();
+const receipt = decodePaymentResponseHeader(res.headers.get("PAYMENT-RESPONSE")!);
+console.log(results.length, receipt.transaction);
+```
+
+The wallet behind `account` needs a USDC balance on Base and nothing else. Keep that balance small: a client signs whatever amount the offer asks for, so check the offer — or set a spending limit in your client — before giving an agent a funded key.
+
+## What is charged
+
+* A request is charged only once it has succeeded and its payment has settled.
+* A response of `400` or above is never charged: bad parameters, a page that cannot be fetched, an upstream failure.
+* If settlement fails after the request ran, the answer is `402 Payment settlement failed` and the result is withheld. Retry with a new payment.
+* Each signed payment is good for one request. Sending the same signature again is rejected.
+
+## Limits
+
+| Limit | Value |
+| - | - |
+| Paid requests per paying wallet | 50 per second |
+| Requests per IP | 100 per second |
+| Hourly cap | none |
+
+The per-IP limit counts both halves of a paid call — the unpaid request that returns the offer and the paid retry — which is why it is twice the wallet limit. A `429` carries `Retry-After`. See [rate limits](/rate-limits) for how this compares to keyed and keyless access.
+
+## Errors
+
+| Status | Meaning |
+| - | - |
+| `402` | Payment required — the offer, a payment that was rejected, or a settlement that failed |
+| `403` | The requested search mode needs an API key (`webql`, `realtime_content`) |
+| `429` | Rate limit exceeded, per wallet or per IP |
+| `451` | Unavailable for legal reasons — pay-per-request access is not offered in Cuba, Iran, North Korea, Syria, or the Crimea, Donetsk and Luhansk regions of Ukraine |
+| `503` | Payments are temporarily unavailable — retry shortly, or use an API key |
+
+A `451` is returned before any offer is made, so nothing is signed or charged.
+
+## Prepaid credits through ZeroClick
+
+Keenable also sells search and fetch through [ZeroClick](https://zeroclick.ai), a storefront for agents, at `zeroclick.keenable.ai`. An agent buys credit once, from \$0.50, and spends it at **\$4 per 1,000 requests** for both search and fetch, the same rate as an API key's [credits](/credits). ZeroClick takes the payment (USDC over x402 on Base, MPP, or a card through Stripe Link), keeps the balance, and forwards each call to Keenable, signed. There is no Keenable account or API key involved.
+
+| Endpoint | Method | Path on `https://zeroclick.keenable.ai` | Same parameters and response as |
+| - | - | - | - |
+| Search | `GET`, `POST` | `/v1/zeroclick/search` | [`/v1/search`](/api-reference/search) |
+| Fetch | `GET` | `/v1/zeroclick/fetch` | [`/v1/fetch`](/api-reference/fetch) |
+
+Point the agent at [`zeroclick.keenable.ai/llms.txt`](https://zeroclick.keenable.ai/llms.txt). It walks through creating an agent identity, buying credit and calling these paths with the resulting `Bearer` token; the full contract is in the storefront's [API reference](https://zeroclick.keenable.ai/openapi.json). Calls must go through the storefront: the same paths on `api.keenable.ai` answer `401` to anything but ZeroClick's signed forwards.
+
+Keenable reports a request as used only when it succeeds, so error responses draw nothing from the credit. Each agent can make 50 requests per second, with no hourly cap; a `429` carries `Retry-After`. A `503` means ZeroClick could not confirm the remaining credit at that moment: nothing was charged, and the request can be retried after `Retry-After`.
+
+
+# Rate limits
+Source: https://docs.keenable.ai/rate-limits
+
+How fast you can call search and fetch — the per-second and hourly limits for authenticated and unauthenticated requests, and how they differ from the credit allowance.
+
+Keenable applies rate limits across search and fetch endpoints in accordance with the authentication
+status of the request. To learn more about authentication, see [authentication](/authentication).
+
+| Authentication status | Rate limit |
+| - | - |
+| Authenticated | 10 requests per second (per organization) |
+| Unauthenticated | 1,000 requests per hour, max 10 requests per second (per IP) |
+| [Pay per request](/pay-per-request) (x402) | 50 paid requests per second per paying wallet, 100 requests per second per IP, no hourly cap |
+| [Prepaid credits through ZeroClick](/pay-per-request#prepaid-credits-through-zeroclick) | 50 requests per second per agent, no hourly cap |
+
+A few things worth keeping in mind:
+
+* Rate limits on authenticated requests are applied on the organization-level.
+* Authentication removes the hourly request cap; the per-second limit still applies.
+* Higher per-second limits are available on some plans.
+* The unauthenticated pool is shared per IP address, so its available headroom depends on other traffic from the same address.
+* On the pay-per-request paths, the per-IP limit counts both the unpaid request that returns the offer and the paid retry, which is why it is twice the per-wallet limit.
+
+To increase rate limits on the authenticated tier, please [talk to us](https://keenable.ai/contact).
+
+Rate limits cap how *fast* you can call the API. How *much* you can call it is a separate limit: authenticated usage draws on a free allowance of 100,000 requests a month — see [credits](/credits).
+
+

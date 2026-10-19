@@ -1,0 +1,13 @@
+Welcome - Octen Docs Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Octen Docs home page Search... ⌘ K Support API Platform API Platform Search... Navigation Overview Welcome Documentation API Reference Overview Welcome Introduction Quickstart Build with Coding Agent Pricing Model Gateway Rebate Capabilities Octen Fast Octen Premier Extract Model Gateway Embedding Applications Integrations Octen Skills Octen MCP Server Octen CLI Connect Desktop AI Assistants Connect LLMs to Octen Search Python SDK Resources Changelog FAQs Rate Limits Error Codes Security & Compliance SLA Status Discord GitHub On this page What Octen Can Do Start Here Overview Welcome Copy page Copy page What Octen can do, and where to start in the docs. Copy page Copy page Octen gives LLMs, agents, and apps real-time access to the world’s latest information. Explore the guides below to get started. 
+ For AI agents : add .md to any docs URL for plain Markdown, or fetch docs.octen.ai/llms.txt for the full index. 
+ ​ What Octen Can Do 
+ Search the Live Web Fast, accurate, minute-fresh search over the live web, spanning text, images, and videos, with ready-to-use highlights and full content. Extract Clean Content Turn URLs into clean, model-ready content: the whole page, or just the parts the task needs. One API for Frontier Models Access leading models through a single unified API, with real-time web search built in. Turn Questions into Results One call runs the whole workflow: cited answers, research reports, multimodal chat, and grounded generation. 
+ Video Search and Multimodal Chat are in invite-only beta. Email support@octen.ai to request access. 
+ ​ Start Here 
+ The fastest path through the docs: 
+ Introduction : what Octen is and what each API and application does. 
+ Quickstart : start building with Octen in minutes. 
+ Build with Coding Agent : everything a coding agent needs to integrate Octen. 
+ Capabilities : a detailed page for each API and application, from how it works to when to use it. 
+ API Reference : full parameters and options for every endpoint. 
+ Last modified on October 13, 2026 Was this page helpful? Yes No Introduction Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

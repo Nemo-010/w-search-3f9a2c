@@ -1,0 +1,51 @@
+{
+ "slug": "scrapehero",
+ "name": "ScrapeHero Cloud",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:15+00:00",
+ "sources": {
+  "home": {
+   "url": "https://www.scrapehero.com/",
+   "status": 200,
+   "final_url": "https://www.scrapehero.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 341383,
+   "truncated": false,
+   "sha256": "a488473c6bb9e2dec895168378fab02a317d1104689431a30d6df087c272dd58",
+   "fetched_at": "2026-10-19T05:54:15+00:00",
+   "text_bytes": 12493
+  },
+  "llms": {
+   "url": "https://www.scrapehero.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.scrapehero.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 9261,
+   "truncated": false,
+   "sha256": "d102aa95ecd9b576f06a520fdc953e95ffd321907007467258d752da3cccc2d2",
+   "fetched_at": "2026-10-19T05:54:16+00:00",
+   "text_bytes": 9261
+  },
+  "llms-err-1d5ed1": {
+   "url": "https://www.scrapehero.com/docs/llms.txt",
+   "status": 403,
+   "final_url": "https://www.scrapehero.com/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 8792,
+   "truncated": false,
+   "sha256": "2492bde0b3a36a703af383a3d7da923973765f7ecc862611952b0c725795b3e1",
+   "fetched_at": "2026-10-19T05:54:18+00:00"
+  },
+  "pricing": {
+   "url": "https://www.scrapehero.com/pricing/",
+   "status": 200,
+   "final_url": "https://www.scrapehero.com/pricing/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 306845,
+   "truncated": false,
+   "sha256": "d3f710ed5a1d0d32fa40e634987543c043931fd9d06da23a34154b552dc3d9a5",
+   "fetched_at": "2026-10-19T05:59:42+00:00",
+   "text_bytes": 10784
+  }
+ }
+}

@@ -1,0 +1,45 @@
+# Rainforest API (rainforest) category=serp-scrape
+home=https://www.rainforestapi.com/ pricing=https://www.rainforestapi.com/pricing docs=https://www.rainforestapi.com/docs llms=None
+sources_ok: pricing:https://www.rainforestapi.com/pricing, docs:https://www.rainforestapi.com/docs, home:https://www.rainforestapi.com/, llms:https://www.rainforestapi.com/docs/llms.txt, llms-full:https://www.rainforestapi.com/llms-full.txt, llms-https://www.rainforestapi.com/llms.txt:https://www.rainforestapi.com/llms.txt
+--- ranked fact lines ---
+[pricing] +$0.0118/extra credit
+[pricing] +$0.003/extra credit
+[pricing] +$0.002/extra credit
+[pricing] +$0.001760 per extra credit
+[pricing] +$0.0016 per extra credit
+[pricing] +$0.0009 per extra credit
+[pricing] +$0.06 per extra credit
+[pricing] $1,000/month
+[pricing] $2,200/month
+[pricing] $4,000/month
+[pricing] $9,000/month
+[pricing] 10,000 credits/month
+[pricing] 250,000 credits/month
+[pricing] 1,000,000 credits/month
+[pricing] 2,500,000 credits/month
+[pricing] 5,000,000 credits/month
+[pricing] 20,000,000 credits/month
+[pricing] 500 credits/month
+[pricing] Try for free
+[pricing] Get Started for Free
+[pricing] Can I try it for free?
+[pricing] Absolutely! Start a free trial to see results instantly.
+--- llms/readme head ---
+Real-Time Amazon Product Data API – Rainforest
+Skip to content
+Traject Data joins ScraperAPI
+See what's new
+Ecommerce APIs
+Close Ecommerce APIs
+Open Ecommerce APIs
+Rainforest API
+BlueCart API
+RedCircle API
+Backyard API
+BigBox API
+Countdown API
+Serp APIs
+Close Serp APIs
+Open Serp APIs
+SerpWow
+Scale SERP

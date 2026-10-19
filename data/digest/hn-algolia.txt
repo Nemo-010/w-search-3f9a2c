@@ -1,0 +1,4 @@
+# Hacker News (Algolia) (hn-algolia) category=misc-api
+home=https://hn.algolia.com/api pricing=None docs=https://hn.algolia.com/api llms=None
+sources_ok: docs:https://hn.algolia.com/api
+--- ranked fact lines ---

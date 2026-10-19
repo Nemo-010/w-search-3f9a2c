@@ -1,0 +1,7 @@
+# The Guardian Open Platform (guardian) category=news
+home=https://open-platform.theguardian.com/ pricing=https://open-platform.theguardian.com/access/ docs=https://open-platform.theguardian.com/documentation/ llms=None
+sources_ok: pricing:https://open-platform.theguardian.com/access/, docs:https://open-platform.theguardian.com/documentation/, home:https://open-platform.theguardian.com/
+--- ranked fact lines ---
+[pricing] Free for non-commercial usage
+[home] Free instant access for developers
+[home] We believe in the open source community. That's why any non-profit project can use our content for free .

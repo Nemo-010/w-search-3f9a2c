@@ -1,0 +1,79 @@
+{
+ "slug": "4get",
+ "name": "4get (OSS)",
+ "category": "oss",
+ "fetched_at": "2026-10-19T05:54:34+00:00",
+ "sources": {
+  "docs-err-bd4179": {
+   "url": "https://git.4get.ca/4get/4get",
+   "status": 404,
+   "final_url": "https://git.4get.ca/4get/4get",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+   "fetched_at": "2026-10-19T05:54:34+00:00"
+  },
+  "home": {
+   "url": "https://4get.ca/",
+   "status": 200,
+   "final_url": "https://4get.ca/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1738,
+   "truncated": false,
+   "sha256": "d4068082a6a191f4aee41847e15c0980db25d279ffe5e0fe1ec98709c2cfaebc",
+   "fetched_at": "2026-10-19T05:54:34+00:00",
+   "text_bytes": 128
+  },
+  "llms-err-5987ae": {
+   "url": "https://git.4get.ca/4get/4get/llms.txt",
+   "status": 404,
+   "final_url": "https://git.4get.ca/4get/4get/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+   "fetched_at": "2026-10-19T05:54:35+00:00"
+  },
+  "llms-err-a021a8": {
+   "url": "https://4get.ca/llms.txt",
+   "status": 404,
+   "final_url": "https://4get.ca/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+   "fetched_at": "2026-10-19T05:54:36+00:00"
+  },
+  "llms-err-dd1316": {
+   "url": "https://4get.ca/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://4get.ca/docs/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+   "fetched_at": "2026-10-19T05:54:36+00:00"
+  },
+  "llms-err-563d7d": {
+   "url": "https://docs.git.4get.ca/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.git.4get.ca/llms.txt",
+   "content_type": "",
+   "bytes": 157,
+   "truncated": false,
+   "sha256": "86c66be453ca72a505d87dc9d616ca44d1a0c6fb669c2ec7e48218a1a6b81c17",
+   "fetched_at": "2026-10-19T05:54:37+00:00"
+  },
+  "llms-err-cf2a0b": {
+   "url": "https://docs.4get.ca/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.4get.ca/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+   "fetched_at": "2026-10-19T05:54:37+00:00"
+  }
+ }
+}

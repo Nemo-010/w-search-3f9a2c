@@ -1,0 +1,70 @@
+{
+ "slug": "nominatim",
+ "name": "Nominatim (OSM)",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:48+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://nominatim.org/release-docs/latest/api/Overview/",
+   "status": 200,
+   "final_url": "https://nominatim.org/release-docs/latest/api/Overview/",
+   "content_type": "text/html",
+   "bytes": 31692,
+   "truncated": false,
+   "sha256": "db73c78f4ef620dc23852ad6289dac2f8e370947f9305191f5cb8dbdca4174db",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 1871
+  },
+  "home": {
+   "url": "https://nominatim.org/",
+   "status": 200,
+   "final_url": "https://nominatim.org/",
+   "content_type": "text/html",
+   "bytes": 8178,
+   "truncated": false,
+   "sha256": "2bf3645b1e578bda72572c7732d49532b1f82a4cd3b9d90f72de08aa010bc9ae",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 2069
+  },
+  "llms-err-c591d3": {
+   "url": "https://nominatim.org/release-docs/latest/api/Overview/llms.txt",
+   "status": 404,
+   "final_url": "https://nominatim.org/release-docs/latest/api/Overview/llms.txt",
+   "content_type": "text/html",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  },
+  "llms-err-83a609": {
+   "url": "https://nominatim.org/llms.txt",
+   "status": 404,
+   "final_url": "https://nominatim.org/llms.txt",
+   "content_type": "text/html",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-19T05:54:50+00:00"
+  },
+  "llms-err-cfd84d": {
+   "url": "https://nominatim.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://nominatim.org/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-19T05:54:51+00:00"
+  },
+  "llms-err-0b6aaa": {
+   "url": "https://docs.nominatim.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.nominatim.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:51+00:00"
+  }
+ }
+}

@@ -1,0 +1,4 @@
+# Groq Compound (groq) category=llm-search
+home=https://console.groq.com/docs/compound pricing=https://groq.com/pricing docs=https://console.groq.com/docs/compound llms=None
+sources_ok: pricing:https://groq.com/pricing
+--- ranked fact lines ---

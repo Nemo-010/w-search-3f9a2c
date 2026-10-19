@@ -1,0 +1,273 @@
+DataForSEO API v3 Pricing – Transparent Pay-As-You-Go Pricing Model 
+ Your API for data-powered LLM Brand Monitoring >> API Docs Free Tools Top 1000 Websites By Ranking Keywords Top 1000 Keywords Top 1000 Websites By Domain Rank Top 1000 Websites By Traffic Trends SERP Volatility Index DataForSEO Trends AI Visibility Tracker About us Mission and vision Our data Ukrainian Bravery Status Page AI Assistant Contact us Login 
+ Products APIs 
+ SERP API 
+ Keywords Data APIs Google Ads API Google Trends API Bing Ads API Clickstream Data API DataForSEO Trends API 
+ Backlinks API 
+ On-Page API 
+ DataForSEO Labs API Keyword Research API Market Analysis API Competitor Research API 
+ AI Optimization Data API LLM Mentions API 
+ Reviews API Google Reviews API Google Shopping Reviews API Trustpilot Reviews API Tripadvisor Reviews API Google Play Reviews API App Store Reviews API 
+ App Data API Google Play Store API App Store API 
+ Business Data API Google My Business API Google Hotels API Trustpilot API Tripadvisor API Business Listings API 
+ Merchant API Amazon Google Shopping 
+ Domain Analytics API 
+ Content Analysis API Databases 
+ Google Databases 
+ Historical Google Databases 
+ Bing Databases 
+ Amazon Database 
+ App Store Database 
+ Google Play Database 
+ Business Listings Database 
+ Domains’ Whois & HTML Databases 
+ Domains’ Backlink Stats Database Integrations Automation Platforms 
+ Google Sheets Connector 
+ n8n Integration 
+ Make Integration 
+ Airtable Integration 
+ Postman Integration 
+ Zapier integration 
+ Pabbly integration 
+ Lindy.ai integration AI / LLM Agents 
+ DataForSEO MCP 
+ Custom GPT 
+ Codex Plugin Solutions By industry 
+ Media 
+ Ecommerce 
+ Digital Marketing 
+ Marketing Tech 
+ AI Development By company type 
+ SEO Agency 
+ SEO Software 
+ Enterprise By application 
+ Backlink App 
+ Reputation Management 
+ Rank Tracking App 
+ Keyword Research App 
+ Keyword Trends Tool By use cases 
+ GEO 
+ SEO 
+ Lead Enrichment 
+ Lead Generation 
+ Local SEO Pricing Knowledge base Knowledge base 
+ Blog 
+ API Documentation 
+ DataForSEO Academy 
+ No-code Templates 
+ Help Center 
+ Product Updates 
+ FAQ 
+ SERP Features Guide 
+ White Papers 
+ Success Stories 
+ Try for free 
+ API Docs 
+ Free Tools 
+ Top 1000 Websites By Ranking Keywords 
+ Top 1000 Keywords 
+ Top 1000 Websites By Domain Rank 
+ Top 1000 Websites By Traffic Trends 
+ SERP Volatility Index 
+ DataForSEO Trends 
+ AI Visibility Tracker 
+ About us 
+ Mission and vision 
+ Our data 
+ Ukrainian Bravery 
+ Status Page 
+ AI Assistant 
+ Contact us 
+ Login 
+ Try for free 
+ API Pricing 
+ Search API pricing 
+ APIs SERP API Google SERP API Google Organic SERP API Google AI Mode SERP API Google Maps SERP API Google Local Finder SERP API Google News SERP API Google Images SERP API Google Search by Image SERP API Google Jobs SERP API Google Autocomplete SERP API Google Ads Search SERP API Google Ads Advertisers SERP API Google Finance SERP API Google Dataset Search SERP API Google Dataset Info SERP API YouTube SERP API Bing Organic SERP API Yahoo Organic SERP API Baidu Organic SERP API Naver Organic SERP API Seznam Organic SERP API AI Optimization API LLM Mentions AI Keyword Search Volume LLM Responses LLM Scraper Backlinks API Content Analysis API DataForSEO Labs API DataForSEO Labs Google API DataForSEO Labs Amazon API DataForSEO Labs App Store API DataForSEO Labs Google Play API Keywords Data API Google Ads Google Trends Bing Ads DataForSEO Trends Clickstream Data OnPage API OnPage Lighthouse Merchant API Amazon Google Shopping App Data API Google Play API App Store API Business Data API Business Listings Google My Business Google Reviews Google Q&A Google Hotels Trustpilot Search Trustpilot Reviews Tripadvisor Reviews Tripadvisor Search Reviews API Google Reviews Trustpilot Reviews Tripadvisor Reviews Google Play Reviews App Store Reviews Domain Analytics API Domain Analytics Whois API Domain Technologies API 
+ Can’t find an answer? 
+ Ask support about your account, billing, or implementation. 
+ AI Chat → 
+ Pricing 
+ Transparent pay-as-you-go pricing for DataForSEO APIs. Find the API you need, understand how it is billed, and view the detailed pricing page for exact rates and parameters. 
+ Pay as you go 
+ No subscriptions 
+ $50 minimum top-up 
+ Balance never expires 
+ Try for free 
+ Pay only for the data you use 
+ With DataForSEO, you pay only for data and individual services you actually use. Our pay-as-you-go pricing model is designed to help our customers minimize costs, while maximizing efficiency. Choose the data you need, scale your usage as your project grows, and keep your costs predictable. 
+ Control your spending 
+ Your DataForSEO Account Dashboard includes a set of cost management tools that will help you monitor your API usage, control budget allocation, set spending limits, and more. 
+ Explore API pricing 
+ Detailed endpoint pricing lives on the next level. 
+ SERP API 
+ Search engine results from Google, Bing, YouTube and other engines. 
+ Google Organic 
+ Google Maps 
+ Google AI Mode 
+ And more 
+ From $0.0006 / SERP 
+ View pricing → 
+ AI Optimization API 
+ LLM visibility, keyword demand, responses, and generative-engine data. 
+ LLM Responses 
+ LLM Scraper 
+ AI Keyword Data 
+ And more 
+ Multiple billing models 
+ View pricing → 
+ DataForSEO Labs API 
+ Keyword, competitor, market, app and ecommerce intelligence. 
+ Google 
+ Amazon 
+ App Store 
+ And more 
+ $0.012 / task + $0.00012 / item 
+ View pricing → 
+ Keywords Data API 
+ Search volume, trends, keyword metrics, and advertising data. 
+ Google Ads 
+ Google Trends 
+ Bing Ads 
+ And more 
+ From $0.0012 / task 
+ View pricing → 
+ On-Page API 
+ Website crawling, page auditing, content parsing and screenshots. 
+ Site Crawl 
+ Instant Pages 
+ Content Parsing 
+ And more 
+ From $0.00015 / page 
+ View pricing → 
+ Merchant API 
+ Amazon and Google Shopping product and merchant data. 
+ Google Shopping 
+ Amazon 
+ Pricing varies by endpoint 
+ View pricing → 
+ App Data API 
+ App metadata, reviews, searches and rankings from app stores. 
+ Google Play 
+ App Store 
+ Task / result based pricing 
+ View pricing → 
+ Business Data API 
+ Business listings, reviews, hotels and local business data. 
+ Business Listings 
+ Google 
+ Trustpilot 
+ And more 
+ Task + item based pricing 
+ View pricing → 
+ Reviews API 
+ Review data from Google, Trustpilot, Tripadvisor and app stores. 
+ Google 
+ Trustpilot 
+ Tripadvisor 
+ Google Play 
+ And more 
+ Pricing varies by source 
+ View pricing → 
+ Domain Analytics API 
+ WHOIS records and technologies detected on websites. 
+ WHOIS 
+ Technologies 
+ From $0.012 / task 
+ View pricing → 
+ Need an exact cost estimate? 
+ For high volume, multiple APIs, or a custom data workflow, get help estimating your expected spend. 
+ Get a Pricing quote 
+ FAQ 
+ Questions about pricing 
+ How does DataForSEO pay-as-you-go pricing work? 
+ DataForSEO uses a pay-as-you-go pricing model with no subscriptions or recurring fees. Add funds to your account and pay for API services as you use them. Each API has its own rates and billing units, which you can review on the corresponding API pricing pages. 
+ Is there a minimum payment to use DataForSEO APIs? 
+ Yes. The minimum account top-up is $50. This amount is added to your account balance and used to pay for API requests you make. It is not a subscription fee or a monthly payment, and you can use the balance at your own pace since it has no expiration date. 
+ Does my DataForSEO account balance expire at the end of the month? 
+ No. Funds added to your DataForSEO account do not expire. Any unused balance remains available for future API requests. 
+ Can I try DataForSEO APIs for free? 
+ Yes. You can sign up for free and use your $1 trial credit available to new accounts for trying our APIs in the Playground section of your DataForSEO Dashboard, via MCP in your preferred AI tool, or through our ready-made templates and integrations with platforms like n8n, Postman, Google Sheets. You can also test API integration for free using the DataForSEO Sandbox. The Sandbox provides sample responses for testing, while trial credit lets you test paid API functionality. 
+ How can I monitor and limit my API spending? 
+ You can track your API usage and costs in the DataForSEO Account Dashboard. Set daily spending limits for your entire account or individual APIs and endpoints to help manage your budget. You can also configure automatic balance top-ups. 
+ Can I get a custom pricing quote for high-volume API usage? 
+ Yes. If your project involves high request volumes, multiple APIs, or a custom data workflow, contact our support team for help estimating your expected costs and discussing your requirements. 
+ How is the cost of an API request calculated? 
+ The cost depends on the API, endpoint, mode (Standard and Live) and request parameters. Depending on the endpoint, pricing may be based on tasks, returned results, rows, pages, or other usage units. Check the dedicated pricing page of the API you're interested in for exact rates. 
+ What is the difference between Standard and Live mode pricing? 
+ Standard API requests are processed in a queue and generally cost less, but results take longer to become available. Live requests are processed immediately through a single POST request, delivering results faster at a higher cost. Available modes and exact rates vary by API endpoint. 
+ What payment methods does DataForSEO accept? 
+ DataForSEO accepts credit and debit cards, PayPal, and Amazon Pay. For payments of $5,000 or more, bank wire transfers and ACH payments are also available. An invoice is provided for every transaction. If you need an alternative payment method or assistance with a bank transfer, contact our 24/7 support team. 
+ Get a Pricing Quote 
+ Your Name 
+ Your Email 
+ Phone 
+ Your Subject 
+ Your Message 
+ Built with love in Ukraine 
+ Vesivärava tn 50-201, Kesklinna linnaosa, Tallinn, Harju maakond, Republic of Estonia, 10152 
+ 63 Profesora Otamanovskoho St , Kharkiv, Ukraine, 61166 
+ Email: [email protected] 
+ LinkedIn 
+ Facebook 
+ X 
+ YouTube 
+ APIs 
+ SERP API 
+ Google Ads API 
+ Backlinks API 
+ OnPage API 
+ DataForSEO Labs API 
+ Reviews API 
+ App Data API 
+ Business Data API 
+ Amazon API 
+ Google Shopping API 
+ Domain Analytics API 
+ Content Analysis API 
+ AI Optimization API 
+ Databases 
+ Google Databases 
+ Bing Databases 
+ Amazon Database 
+ App Store Database 
+ Google Play Database 
+ Domains Database 
+ Backlink Database 
+ Business Listings Database 
+ Solutions 
+ Backlink App 
+ SEO Agency 
+ SEO Software 
+ Media 
+ Ecommerce 
+ Market Research 
+ Digital Marketing 
+ Marketing Tech 
+ Scraping Services 
+ AI Development 
+ Knowledge Base 
+ Blog 
+ No-code Templates 
+ White Papers 
+ Help Center 
+ Updates 
+ Success Stories 
+DataForSEO Academy 
+ Resources 
+ About us 
+ FAQ 
+ Ukrainian Bravery 
+ SERP Features 
+ Top 1000 Sites 
+ Google Sheets Connector 
+ Make Integration 
+ DataForSEO Trends Tool 
+ Our data 
+ Status Page 
+ DataForSEO AI Assistant 
+ Alternatives 
+ Affiliate program 
+ Legal information 
+ Privacy Policy 
+ Terms of Services 
+ Payment Methods:

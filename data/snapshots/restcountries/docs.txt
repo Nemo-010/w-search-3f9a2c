@@ -1,0 +1,229 @@
+REST Countries - Country data API 
+ REST Countries 
+ APIs 
+ Docs 
+ Log in 
+ Get an API key 
+ 250+ countries. 
+ 90+ fields. 
+ One API. 
+ Normalized country data: populations, political leaders,
+ currencies, economic indicators, languages, borders,
+ flags, calling codes, timezones, classifications,
+ memberships, capitals and (much) more. Updated hourly
+ against
+ 35+ sources and
+ trusted by
+ 22,500+ developers .
+ Get an API key 
+ View the docs 
+ Daily requests 
+ 5M+ 
+ trailing 24h 
+ Countries 
+ 250+ 
+ incl. dependencies 
+ Sync 
+ 4h 
+ data sync cadence 
+ Avg response 
+ <150ms 
+ based on >1m requests 
+ Try a real request 
+ // Fires a real request against the demo API key.
+// Click the button below to run it. The response opens in the Explorer panel.
+const response = await fetch(
+ 'https://api.restcountries.com/countries/v5/codes.alpha_2/CA?pretty=1',
+ { headers: { 'Authorization': 'Bearer rc_live_demo' } }
+);
+const result = await response.json();
+ Run this request → 
+ Hits the live API. The response opens in an Explorer panel on the right. 
+ Inside one record 
+ Every field you'd expect, on every country 
+ A trimmed sample; the full response covers names, classifications, codes, currencies, languages, geography, borders, leaders, demographics, calendars, and time zones. Pick the fields you want with ?response_fields= . 
+ {
+ "names": { "common": "Canada", "official": "Canada", "native": { "eng": { "common": "Canada", "official": "Canada" }, "fra": { … } } },
+ "codes": { "alpha_2": "CA", "alpha_3": "CAN", "ccn3": "124", "fifa": "CAN", "cioc": "CAN" },
+ "capitals": [{ "name": "Ottawa", "primary": true, "coordinates": { "lat": 45.42, "lng": -75.7 } }],
+ "flag": { "emoji": "🇨🇦", "url_svg": "https://flags.restcountries.com/v5/svg/ca.svg", "url_png": "https://flags.restcountries.com/v5/w640/ca.png" },
+ "region": "Americas",
+ "subregion": "North America",
+ "area": { "kilometers": 9984670, "miles": 3855101.1 },
+ "borders": ["USA"],
+ "calling_codes": ["1"],
+ "currencies": [{ "code": "CAD", "name": "Canadian dollar", "symbol": "$" }],
+ "languages": [{ "name": "English", "bcp47": "en", … }, { "name": "French", "bcp47": "fr", … }],
+ "leaders": [
+ { "assets": [], "attributes": { "head_of_government": true, "head_of_state": false }, "links": { "wikipedia": "https://en.wikipedia.org/wiki/Mark_Carney" }, "name": "Mark Carney", "title": "Prime Minister" },
+ { "assets": [], "attributes": { "head_of_government": false, "head_of_state": true }, "links": { "wikipedia": "https://en.wikipedia.org/wiki/Charles_III" }, "name": "Charles III", "title": "Monarch" }
+ ],
+ "memberships": { "un": true, "nato": true, "g7": true, "g20": true, "commonwealth": true, "oecd": true, … },
+ "population": 38005238,
+ "timezones": ["UTC-08:00", "UTC-07:00", "UTC-06:00", "UTC-05:00", "UTC-04:00", "UTC-03:30"],
+ "tlds": [".ca"],
+ "uuid": "189581ed-44b0-47d7-9849-6b097401a7d6"
+}
+// and 51 more fields. 13 groups hidden entirely (cars, classification, continents,
+// coordinates, date, demonyms, economy, government_type, landlocked, links,
+// number_format, parent, postal_code) plus subfields under names, codes, flag, memberships 
+ Yearly requests 
+ 1.5B+ 
+ trailing 12m 
+ Languages 
+ 25+ 
+ localized country names 
+ Years online 
+ 6+ 
+ since 2020 
+ Intl. orgs 
+ 20+ 
+ EU, NATO, OPEC, etc. 
+ Sample Requests 
+ How you can use REST Countries 
+ Twelve everyday patterns. Click any one for a copy-paste code example in your language of choice, wired to your API key. 
+ Search 
+ Full-Text Search 
+ Fuzzy-match a name, capital, or code from a single q parameter, so a partial or misspelled query still returns the countries you meant. 
+ View code 
+ Run in Explorer 
+ Search 
+ Lookup by ISO Code 
+ Fetch a single country directly by its ISO alpha-3 code when you already know exactly which record you want back. 
+ View code 
+ Run in Explorer 
+ Search 
+ Currency Search 
+ Find every country that uses a given currency, handy for building price lists or grouping markets by the money they share. 
+ View code 
+ Run in Explorer 
+ Search 
+ Search by Leader 
+ Look up countries by the name of a current political leader, matching heads of state and government across the whole dataset. 
+ View code 
+ Run in Explorer 
+ Filter 
+ Filter by Region 
+ Narrow results down to a single continent, returning just the countries that belong to the region you ask for. 
+ View code 
+ Run in Explorer 
+ Filter 
+ EU Members 
+ Filter to the members of a bloc or organization, in this case every country that currently belongs to the European Union. 
+ View code 
+ Run in Explorer 
+ Filter 
+ G7 Members 
+ The same membership filter applied to the G7, returning only the seven advanced economies that make up the group. 
+ View code 
+ Run in Explorer 
+ Filter 
+ Combine Filters 
+ Stack filters and field selection in one request, narrowing to a region and a bloc while trimming the payload at the same time. 
+ View code 
+ Run in Explorer 
+ Fields 
+ Field Selection 
+ Trim the payload down to just the fields your interface needs, keeping responses small and fast for the browser to handle. 
+ View code 
+ Run in Explorer 
+ Fields 
+ Omit Heavy Fields 
+ Keep the full record but drop the bulky sub-objects you do not need, like the long list of localized name translations. 
+ View code 
+ Run in Explorer 
+ Paging 
+ Limit Response 
+ Cap how many countries come back in a single call, useful for previews, autocomplete menus, or quick sanity checks while building. 
+ View code 
+ Run in Explorer 
+ Paging 
+ Pagination 
+ Page through the full list with limit and offset, pulling the dataset down in steady, predictable chunks your client can render. 
+ View code 
+ Run in Explorer 
+ Trusted by 
+ The APIs 
+ One key, every API 
+ The same bearer token works across all of them, and a single plan covers your combined usage rather than metering each one separately. 
+ Countries API 
+ Names, ISO codes, currencies, languages, capitals, borders, flags and timezones for 250+ countries, at 90+ fields a record, refreshed every 4 hours. 
+ Overview 
+ · 
+ Documentation 
+ User Agent API 
+ Hand it any user-agent string and get back the named client, engine, operating system and device, with bot and AI crawler flags. 
+ Overview 
+ · 
+ Documentation 
+ IP API 
+ IPv4 and IPv6 geolocation down to the city, with network ownership plus Tor, proxy, VPN and datacenter signals. 
+ Overview 
+ · 
+ Documentation 
+ Email Intelligence API 
+ One lookup on an address returns the operator handling its mail, its SPF and DMARC posture, and flags for free, disposable and role-based addresses. 
+ Overview 
+ · 
+ Documentation 
+ Currencies API 
+ Conversion and exchange rates across fiat and crypto. Convert into five targets at once, or pull a full rate table for any base. 
+ Overview 
+ · 
+ Documentation 
+ Common questions 
+ Things people ask before signing up 
+ How fresh is the data? 
+ Synced from official sources every 4 hours. Names, leaders, memberships, and statistical fields land in the API the same day they update upstream. 
+ What about edge cases like Kosovo, Taiwan, or Palestine? 
+ All present, with explicit recognition status, alternate names, and the ISO codes the standards bodies actually publish (or omit). You don't have to take a position; we expose the data and let your app decide. 
+ Why not just scrape Wikipedia? 
+ Because then it's your job to handle disambiguation, formatting drift, vandalism, name collisions, and multi-language fallbacks. We did that already; you point at /countries/v5 . 
+ What's free, what's paid? 
+ The free tier covers most prototypes and small apps outright. See plans → 
+ About 
+ Home 
+ About 
+ FAQ 
+ Roadmap 
+ Changelog 
+ Partner Program 
+ Support 
+ Status 
+ APIs 
+ Countries API 
+ User Agent API 
+ IP API 
+ Email Intelligence API 
+ Currencies API 
+ Docs 
+ Documentation 
+ Countries API 
+ User Agent API 
+ IP API 
+ Email Intelligence API 
+ Currencies API 
+ Free Flag CDN 
+ Free Favicon CDN 
+ Supported Countries 
+ Supported Currencies 
+ Popular user agents 
+ Use Cases 
+ Account 
+ Log in 
+ Sign up 
+ Reset password 
+ Plans 
+ Academia 
+ Legal 
+ Terms of Service 
+ Privacy Policy 
+ Cookie Policy 
+ DPA 
+ GDPR Rights 
+ Credits 
+ In compliance with: 
+ REST Countries © 2026 ·
+ 720 Bathurst Street, Toronto, Canada
+ ·
+ [email protected]

@@ -1,0 +1,116 @@
+{
+ "slug": "oxylabs",
+ "name": "Oxylabs",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:10+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://oxylabs.io/pricing",
+   "status": 200,
+   "final_url": "https://oxylabs.io/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 370950,
+   "truncated": false,
+   "sha256": "e6e8d8b50fe29b0cd667749c6cef61a5f55cb5b5ade151c2432aa316463a5c44",
+   "fetched_at": "2026-10-19T05:54:10+00:00",
+   "text_bytes": 9880
+  },
+  "docs": {
+   "url": "https://developers.oxylabs.io/",
+   "status": 200,
+   "final_url": "https://developers.oxylabs.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 592694,
+   "truncated": false,
+   "sha256": "f67150cdeb72bc25456703e3f3f1d0b629e6a9dd18136c36a37e831a1b396398",
+   "fetched_at": "2026-10-19T05:54:11+00:00",
+   "text_bytes": 3382
+  },
+  "home": {
+   "url": "https://oxylabs.io/",
+   "status": 200,
+   "final_url": "https://oxylabs.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 377725,
+   "truncated": false,
+   "sha256": "f007a8f58b6cbb95b1c09f67a7dc9caa51cbd1340f0770e01e0d58a853735919",
+   "fetched_at": "2026-10-19T05:54:12+00:00",
+   "text_bytes": 12822
+  },
+  "llms": {
+   "url": "https://developers.oxylabs.io/llms.txt",
+   "status": 200,
+   "final_url": "https://developers.oxylabs.io/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 59433,
+   "truncated": false,
+   "sha256": "c0a58f7948bc37a7eaca9b3cac388788ad922936d27a87eea2b58604f9bd1684",
+   "fetched_at": "2026-10-19T05:54:12+00:00",
+   "text_bytes": 59397
+  },
+  "llms-full": {
+   "url": "https://docs.oxylabs.io/llms-full.txt",
+   "status": 200,
+   "final_url": "https://developers.oxylabs.io/llms-full.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 617339,
+   "truncated": false,
+   "sha256": "99abc16902167308281d7266002ccb49af89dcd3e5300aff71f5fd2b5a0169ad",
+   "fetched_at": "2026-10-19T05:54:16+00:00",
+   "text_bytes": 616860
+  },
+  "llms-https://oxylabs.io/llms.txt": {
+   "url": "https://oxylabs.io/llms.txt",
+   "status": 200,
+   "final_url": "https://oxylabs.io/llms.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 4354,
+   "truncated": false,
+   "sha256": "3d38efd3a06b47993beedaedc08a2fc5ae3969c30df64080eab6a12cd3bba63f",
+   "fetched_at": "2026-10-19T05:54:14+00:00",
+   "text_bytes": 4354
+  },
+  "llms-err-314127": {
+   "url": "https://oxylabs.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://oxylabs.io/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 199990,
+   "truncated": false,
+   "sha256": "d27b284eee6dc79cae2ef212e934044acc7f8922e83b6c148fe01a422eb8bd16",
+   "fetched_at": "2026-10-19T05:54:16+00:00"
+  },
+  "llms-err-bd9f44": {
+   "url": "https://docs.developers.oxylabs.io/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.developers.oxylabs.io/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:16+00:00"
+  },
+  "llms-https://docs.oxylabs.io/llms.txt": {
+   "url": "https://docs.oxylabs.io/llms.txt",
+   "status": 200,
+   "final_url": "https://developers.oxylabs.io/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 59433,
+   "truncated": false,
+   "sha256": "c0a58f7948bc37a7eaca9b3cac388788ad922936d27a87eea2b58604f9bd1684",
+   "fetched_at": "2026-10-19T05:54:16+00:00",
+   "text_bytes": 59397
+  },
+  "trial": {
+   "url": "https://oxylabs.io/products/scraper-api/serp",
+   "status": 200,
+   "final_url": "https://oxylabs.io/products/web-api/scrape/serp",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 2533972,
+   "truncated": false,
+   "sha256": "f2c361efededf25db17ee37592593adcfed1a7654eca8a4fd8a0a8d04bf3daea",
+   "fetched_at": "2026-10-19T05:59:41+00:00",
+   "text_bytes": 48138
+  }
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "slug": "figshare",
+ "name": "Figshare API",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:45+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://docs.figshare.com/",
+   "status": 200,
+   "final_url": "https://docs.figshare.com/v2/",
+   "content_type": "text/html",
+   "bytes": 243312,
+   "truncated": false,
+   "sha256": "fd0f3c90f9ba5f8d08d3ee10e8e91ae3344a0f226c8dd364384cf2262d344de4",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 141044
+  },
+  "llms-err-c617a4": {
+   "url": "https://docs.figshare.com/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.figshare.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  },
+  "llms-err-68e202": {
+   "url": "https://docs.figshare.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.figshare.com/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  }
+ }
+}

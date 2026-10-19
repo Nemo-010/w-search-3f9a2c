@@ -1,0 +1,49 @@
+{
+ "slug": "stract",
+ "name": "Stract",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:29+00:00",
+ "sources": {
+  "home": {
+   "url": "https://stract.com/",
+   "status": 200,
+   "final_url": "https://stract.com/",
+   "content_type": "text/html",
+   "bytes": 43907,
+   "truncated": false,
+   "sha256": "8c9343c84dcf936b90bce518fa3c54a1708bda036364c8d802af8b93d4f03ed9",
+   "fetched_at": "2026-10-19T05:54:29+00:00",
+   "text_bytes": 1503
+  },
+  "llms-err-12af46": {
+   "url": "https://stract.com/llms.txt",
+   "status": 404,
+   "final_url": "https://stract.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 1582,
+   "truncated": false,
+   "sha256": "f5eeb1e1830fb685fadeaf987492b35406dabcc36af456acebc65ed994a5c453",
+   "fetched_at": "2026-10-19T05:54:31+00:00"
+  },
+  "llms-err-675208": {
+   "url": "https://stract.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://stract.com/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 1589,
+   "truncated": false,
+   "sha256": "edc761156633d4fc8c2e38c71213a388017f9db495d146a9b0a4665c40206955",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  },
+  "llms-err-dcc66e": {
+   "url": "https://docs.stract.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.stract.com/llms.txt",
+   "content_type": "",
+   "bytes": 113,
+   "truncated": false,
+   "sha256": "c0eb85d40c81d548fc18c7c16860219335766521b2b8591835b3330aac9b2032",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  }
+ }
+}

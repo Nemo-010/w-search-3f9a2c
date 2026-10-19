@@ -1,0 +1,49 @@
+{
+ "slug": "bocha",
+ "name": "Bocha AI",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:33+00:00",
+ "sources": {
+  "home": {
+   "url": "https://open.bochaai.com/",
+   "status": 200,
+   "final_url": "https://open.bochaai.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 54606,
+   "truncated": false,
+   "sha256": "9476be773b027632075b14e48d4cd6185337b4167ce13df523785f8fe5ca0059",
+   "fetched_at": "2026-10-19T05:54:33+00:00",
+   "text_bytes": 3017
+  },
+  "llms-err-2aa692": {
+   "url": "https://open.bochaai.com/llms.txt",
+   "status": 404,
+   "final_url": "https://open.bochaai.com/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 22405,
+   "truncated": false,
+   "sha256": "7211ab04643317865c40f5d9dd6451c52218c9b1f58d05e258ed51e8bcf9dfcd",
+   "fetched_at": "2026-10-19T05:54:35+00:00"
+  },
+  "llms-err-0f2fb5": {
+   "url": "https://open.bochaai.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://open.bochaai.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 22414,
+   "truncated": false,
+   "sha256": "35c56d52965130dbf4957f05ead1eeea108b5071d11c34835bd6bcbe1f16c00a",
+   "fetched_at": "2026-10-19T05:54:38+00:00"
+  },
+  "llms-err-b5a486": {
+   "url": "https://docs.open.bochaai.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.open.bochaai.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:40+00:00"
+  }
+ }
+}

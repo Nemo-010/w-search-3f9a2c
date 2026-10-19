@@ -1,0 +1,68 @@
+{
+ "slug": "perplexica",
+ "name": "Perplexica (OSS)",
+ "category": "oss",
+ "fetched_at": "2026-10-19T05:54:54+00:00",
+ "sources": {
+  "readme": {
+   "url": "https://raw.githubusercontent.com/ItzCrazyKns/Perplexica/HEAD/README.md",
+   "status": 200,
+   "final_url": "https://raw.githubusercontent.com/ItzCrazyKns/Perplexica/HEAD/README.md",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 12956,
+   "truncated": false,
+   "sha256": "5d534fafeb1e3d1355751e82241b74ab6c5e3d89561e98178512a704dba28268",
+   "fetched_at": "2026-10-19T05:54:55+00:00",
+   "text_bytes": 12915
+  },
+  "llms-err-887e4d": {
+   "url": "https://github.com/ItzCrazyKns/Perplexica/llms.txt",
+   "status": 404,
+   "final_url": "https://github.com/ItzCrazyKns/Perplexica/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9,
+   "truncated": false,
+   "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+   "fetched_at": "2026-10-19T05:54:55+00:00"
+  },
+  "llms-err-3212de": {
+   "url": "https://github.com/ItzCrazyKns/Perplexica/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://github.com/ItzCrazyKns/Perplexica/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9,
+   "truncated": false,
+   "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+   "fetched_at": "2026-10-19T05:54:56+00:00"
+  },
+  "llms": {
+   "url": "https://docs.github.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.github.com/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 28642,
+   "truncated": false,
+   "sha256": "c10af0cdb5576f81fd29373cf56ac65608d24c3e4c935c7993d2bba27d56af4e",
+   "fetched_at": "2026-10-19T05:54:56+00:00",
+   "text_bytes": 28634
+  }
+ },
+ "github": {
+  "full_name": "ItzCrazyKns/Vane",
+  "stargazers_count": 37392,
+  "forks_count": 4167,
+  "created_at": "2024-04-09T10:51:32Z",
+  "pushed_at": "2026-09-01T14:12:12Z",
+  "license": {
+   "key": "mit",
+   "name": "MIT License",
+   "spdx_id": "MIT",
+   "url": "https://api.github.com/licenses/mit",
+   "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "archived": false,
+  "open_issues_count": 362,
+  "subscribers_count": 214,
+  "description": "Vane is an AI-powered answering engine."
+ }
+}

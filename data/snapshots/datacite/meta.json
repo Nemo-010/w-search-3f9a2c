@@ -1,0 +1,49 @@
+{
+ "slug": "datacite",
+ "name": "DataCite API",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:45+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://support.datacite.org/docs/api",
+   "status": 200,
+   "final_url": "https://support.datacite.org/docs/api",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 346977,
+   "truncated": false,
+   "sha256": "efbe19631dbcc9602e36f7770e5e572f7a5857c5cb33653cdf2df83ccd28df89",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 14551
+  },
+  "llms-err-aadeee": {
+   "url": "https://support.datacite.org/docs/api/llms.txt",
+   "status": 404,
+   "final_url": "https://support.datacite.org/docs/api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  },
+  "llms-err-ba8f4f": {
+   "url": "https://support.datacite.org/docs/api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://support.datacite.org/docs/api/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 82454,
+   "truncated": false,
+   "sha256": "773da052e8d6edb9a797e5527d9f9fc36189e80616bd395dcef0b569e24c02e9",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  },
+  "llms-err-c2b7bb": {
+   "url": "https://docs.support.datacite.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.support.datacite.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  }
+ }
+}

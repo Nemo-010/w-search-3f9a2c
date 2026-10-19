@@ -1,0 +1,917 @@
+Web Data Infrastructure for AI Agents | Olostep 
+ Click to try 
+ Wait... 
+ Olostep Manifesto | read more → 
+ Product 
+ Product 
+ Playground 
+ Test the APIs 
+ API Endpoints 
+ Explore available endpoints 
+ Integrations 
+ Connect to AI tools 
+ MCP Server & CLI 
+ Enable agent access 
+ Agent 
+ Automate web research with a prompt 
+ Resources 
+ Docs 
+ Docs to get started 
+ API Reference 
+ Detailed API specs 
+ Use Cases 
+ Real-world applications 
+ Glossary 
+ Key terms and definitions 
+ Tools 
+ See Olostep in action 
+ Company 
+ Careers 
+ We're hiring 
+ Join the team 
+ Changelog 
+ Product updates from Olostep 
+ Blog 
+ Read the latest blog posts 
+ Slack 
+ Join the community 
+ About us 
+ Get to know Olostep 
+ Pricing 
+ Docs 
+ Contact Sales 
+ Sign Up → 
+ Web Data Infrastructure for AI 
+ Built to power knowledge work AIs, Olostep is the best agentic search, scraping and crawling API for AI 
+ Start for free 
+ Contact Sales 
+ Thank you! Your submission has been received! 
+ Oops! Something went wrong while submitting the form. 
+ Scrape 
+ Crawl 
+ Map 
+ Search 
+ Answer 
+ Trusted by the best startups startups in the world 
+ One API to Automate Web Data 
+ Search, scrape, structure and monitor the whole web with one API. Reliable, cost-effective, scalable. Handling Billions of requests 
+ Monitor 
+ Set up monitors for events happening across the Web 
+ Monitor when AirOps publishes a new blog 
+ New blog: The Next Chapter for AirOps... 
+ Latest updates SpaceX... 
+ Updates - SpaceX... 
+ Search 
+ Search the web with natural language and get ranked links 
+ Roosevelt's quote of critics 
+ "It's not the critic who counts; not the man" 
+ Answer 
+ Search the web and get AI-powered answers 
+ Olostep - The way we're going to ratchet up our species 
+ Scrape 
+ Get real-time data from websites. Clean Markdown, HTML, Screenshots, JSON... 
+ Stripe Docs 
+ Crawl 
+ Retrieve all pages on a site and get their contents 
+ Batch 
+ Process up to 100k URLs in 5-7 minutes 
+ The operating system for knowledge work AI 
+ The infrastructure, data, intelligence, and execution layers that makes the world’s data useful to AIs doing knowledge work 
+ Bare Metal Infrastructure & Web Access 
+ Web infrastructure for AI workloads, powered by bare metal servers, residential proxies, and headless browsers. 
+ FBO Harness & Data Integrations 
+ Connect AI systems to APIs, exclusive data sources, and third-party services through a unified API layer. 
+ Web Data APIs 
+ Search, scrape, crawl, and extract structured web data to power AI applications, agents, and data pipelines. 
+ Web Time Machine 
+ Build vertical Indexes with memory and search current and historical web data using a living index, snapshots, and temporal and composite queries. 
+ LLMs & System One Models 
+ Combine large language models and specialized AI models for reasoning, classification, and information synthesis. 
+ Agentic Harness & Execution 
+ Turn user intent into completed work with AI agents that research, reason, and execute multi-step tasks. 
+ Security & Governance 
+ Secure AI workflows with enterprise access controls, data governance, policy enforcement, and auditability. 
+ Built for Developers 
+ Object-oriented API, native Python and NodeJS SDK clients, metadata support, webhook events, easy to try and easy to scale 
+ /scrapes 
+ /crawls 
+ /maps 
+ /batches 
+ /searches 
+ /answers 
+ /monitors 
+ Get clean data from any URL 
+ Python 
+ Node JS 
+ cURL 
+ 1 # pip install olostep 
+ 2 from olostep import Olostep
+ 3 
+ 4 client = Olostep(api_key= "YOUR_REAL_KEY" )
+ 5 
+ 6 result = client.scrapes.create(
+ 7 url_to_scrape= "https://en.wikipedia.org/wiki/Alexander_the_Great" ,
+ 8 formats=[ "markdown" , "html" ],
+ 9 )
+ 10 
+ 11 print (result.markdown_content)
+ 12 print (result.html_content) 
+ 1 // npm i olostep 
+ 2 import Olostep from 'olostep' 
+ 3 
+ 4 const client = new Olostep({ apiKey : 'YOUR_REAL_KEY' })
+ 5 
+ 6 const result = await client.scrapes.create({
+ 7 url : 'https://en.wikipedia.org/wiki/Alexander_the_Great' ,
+ 8 formats : [ 'markdown' , 'html' ],
+ 9 })
+ 10 
+ 11 console .log(result.markdown_content)
+ 12 console .log(result.html_content) 
+ 1 curl -s -X POST "https://api.olostep.com/v1/scrapes" \
+ 2 -H "Authorization: Bearer <YOUR_API_KEY>" \
+ 3 -H "Content-Type: application/json" \
+ 4 -d '{
+ 5 "url_to_scrape": "https://en.wikipedia.org/wiki/Alexander_the_Great",
+ 6 "formats": ["markdown", "html"]
+ 7 }' 
+ Docs 
+ Crawl all the subpages 
+ Python 
+ NodeJS 
+ cURL 
+ 1 # pip install olostep 
+ 2 from olostep import Olostep
+ 3 
+ 4 client = Olostep(api_key= "YOUR_REAL_KEY" )
+ 5 
+ 6 crawl = client.crawls.create(
+ 7 start_url= "https://olostep.com" ,
+ 8 max_pages= 100 ,
+ 9 include_urls=[ "/**" ],
+ 10 exclude_urls=[ "/collections/**" ],
+ 11 include_external= False ,
+ 12 )
+ 13 
+ 14 print (crawl. id , crawl.status)
+ 15 
+ 16 # Wait for completion and iterate pages 
+ 17 for page in crawl.pages():
+ 18 print (page.url)
+ 19 content = page.retrieve([ "markdown" ])
+ 20 print (content.markdown_content[: 200 ]) 
+ 1 // npm i olostep 
+ 2 import Olostep from 'olostep' 
+ 3 
+ 4 const client = new Olostep({ apiKey : 'YOUR_REAL_KEY' })
+ 5 
+ 6 const crawl = await client.crawls.create({
+ 7 url : 'https://olostep.com' ,
+ 8 maxPages : 100 ,
+ 9 includeUrls : [ '/**' ],
+ 10 excludeUrls : [ '/collections/**' ],
+ 11 includeExternal : false ,
+ 12 })
+ 13 
+ 14 console .log(crawl.id, crawl.status)
+ 15 
+ 16 // Wait for completion and iterate pages 
+ 17 for await ( const page of crawl.pages()) {
+ 18 console .log(page.url)
+ 19 const content = await client.retrieve({ retrieveId : page.retrieve_id, formats : [ 'markdown' ] })
+ 20 console .log(content.markdown_content.slice( 0 , 200 ))
+ 21 } 
+ 1 # Start crawl 
+ 2 curl -s -X POST "https://api.olostep.com/v1/crawls" \
+ 3 -H "Authorization: Bearer <YOUR_API_KEY>" \
+ 4 -H "Content-Type: application/json" \
+ 5 -d '{
+ 6 "start_url": "https://olostep.com",
+ 7 "max_pages": 100,
+ 8 "include_urls": ["/**"],
+ 9 "exclude_urls": ["/collections/**"],
+ 10 "include_external": false
+ 11 }' 
+ 12 
+ 13 # Check status (replace <CRAWL_ID>) 
+ 14 curl -s "https://api.olostep.com/v1/crawls/<CRAWL_ID>" \
+ 15 -H "Authorization: Bearer <YOUR_API_KEY>" 
+ 16 
+ 17 # Get pages (replace <CRAWL_ID>) 
+ 18 curl -s "https://api.olostep.com/v1/crawls/<CRAWL_ID>/pages" \
+ 19 -H "Authorization: Bearer <YOUR_API_KEY>" 
+ 20 
+ 21 # Retrieve content (replace <RETRIEVE_ID>) 
+ 22 curl -s -G "https://api.olostep.com/v1/retrieve" \
+ 23 -H "Authorization: Bearer <YOUR_API_KEY>" \
+ 24 --data-urlencode "retrieve_id=<RETRIEVE_ID>" \
+ 25 --data-urlencode "formats=markdown" 
+ Docs 
+ Get all the URLs on a website 
+ Python 
+ Node JS 
+ cURL 
+ 1 # pip install olostep 
+ 2 from olostep import Olostep
+ 3 
+ 4 client = Olostep(api_key= "YOUR_REAL_KEY" )
+ 5 
+ 6 sitemap = client.maps.create(
+ 7 url= "https://docs.olostep.com" ,
+ 8 include_urls=[ "/features/**" ],
+ 9 top_n= 100 ,
+ 10 )
+ 11 
+ 12 print ( f"Map ID: {sitemap. id } " )
+ 13 
+ 14 # Iterate all URLs (handles pagination automatically) 
+ 15 for url in sitemap.urls():
+ 16 print (url) 
+ 1 // npm i olostep 
+ 2 import Olostep from 'olostep' 
+ 3 
+ 4 const client = new Olostep({ apiKey : 'YOUR_REAL_KEY' })
+ 5 
+ 6 const map = await client.maps.create({
+ 7 url : 'https://docs.olostep.com' ,
+ 8 includeUrls : [ '/features/**' ],
+ 9 topN : 100 ,
+ 10 })
+ 11 
+ 12 console .log( `Map ID: ${map.id} ` )
+ 13 
+ 14 // Iterate all URLs (handles pagination automatically) 
+ 15 for await ( const url of map.urls()) {
+ 16 console .log(url)
+ 17 } 
+ 1 curl -s -X POST "https://api.olostep.com/v1/maps" \
+ 2 -H "Authorization: Bearer <YOUR_API_KEY>" \
+ 3 -H "Content-Type: application/json" \
+ 4 -d '{
+ 5 "url": "https://docs.olostep.com",
+ 6 "include_urls": ["/features/**"],
+ 7 "top_n": 100
+ 8 }' 
+ Docs 
+ Process up to 10k URLs in one batch. Get results in 5-8 mins 
+ Python 
+ Node JS 
+ cURL 
+ 1 # pip install olostep 
+ 2 from olostep import Olostep
+ 3 
+ 4 client = Olostep(api_key= "YOUR_REAL_KEY" )
+ 5 
+ 6 batch = client.batches.create(
+ 7 urls=[
+ 8 { "custom_id" : "item-1" , "url" : "https://www.google.com/search?q=stripe&gl=us&hl=en" },
+ 9 { "custom_id" : "item-2" , "url" : "https://www.google.com/search?q=paddle&gl=us&hl=en" },
+ 10 ],
+ 11 parser= "@olostep/google-search" ,
+ 12 )
+ 13 
+ 14 print (batch. id , batch.status)
+ 15 
+ 16 # Wait and iterate results (auto-waits for completion) 
+ 17 for item in batch.items():
+ 18 content = item.retrieve([ "json" ])
+ 19 print (item.url, item.custom_id)
+ 20 print (content.json_content) 
+ 1 // npm i olostep 
+ 2 import Olostep from 'olostep' 
+ 3 
+ 4 const client = new Olostep({ apiKey : 'YOUR_REAL_KEY' })
+ 5 
+ 6 const batch = await client.batches.create([
+ 7 { url : 'https://www.google.com/search?q=stripe&gl=us&hl=en' , customId : 'item-1' },
+ 8 { url : 'https://www.google.com/search?q=paddle&gl=us&hl=en' , customId : 'item-2' },
+ 9 ], {
+ 10 parser : '@olostep/google-search' ,
+ 11 })
+ 12 
+ 13 console .log(batch.id, batch.total_urls)
+ 14 
+ 15 // Wait and iterate results (auto-waits for completion) 
+ 16 for await ( const item of batch.items()) {
+ 17 const content = await item.retrieve([ 'json' ])
+ 18 console .log(item.url, item.custom_id)
+ 19 console .log(content.json_content)
+ 20 } 
+ 1 curl -s -X POST "https://api.olostep.com/v1/batches" \
+ 2 -H "Authorization: Bearer <YOUR_API_KEY>" \
+ 3 -H "Content-Type: application/json" \
+ 4 -d '{
+ 5 "items": [
+ 6 {"custom_id": "item-1", "url": "https://www.google.com/search?q=stripe&gl=us&hl=en"},
+ 7 {"custom_id": "item-2", "url": "https://www.google.com/search?q=paddle&gl=us&hl=en"}
+ 8 ],
+ 9 "parser": {"id": "@olostep/google-search"}
+ 10 }' 
+ Docs 
+ Semantically search the Web 
+ Python 
+ Node JS 
+ cURL 
+ 1 # pip install olostep 
+ 2 from olostep import Olostep
+ 3 
+ 4 client = Olostep(api_key= "YOUR_REAL_KEY" )
+ 5 
+ 6 search = client.searches.create( "Latest updates with SpaceX" )
+ 7 
+ 8 print (search. id , len (search.links)) 
+ 1 // npm i olostep 
+ 2 import Olostep from 'olostep' 
+ 3 
+ 4 const client = new Olostep({ apiKey : 'YOUR_REAL_KEY' })
+ 5 
+ 6 const search = await client.searches.create( 'Latest updates with SpaceX' )
+ 7 
+ 8 console .log(search.id, search.links.length) 
+ 1 curl -s -X POST "https://api.olostep.com/v1/searches" \
+ 2 -H "Authorization: Bearer <YOUR_API_KEY>" \
+ 3 -H "Content-Type: application/json" \
+ 4 -d '{
+ 5 "query": "Latest updates with SpaceX"
+ 6 }' 
+ Docs 
+ Get answers from the Web 
+ Python 
+ Node JS 
+ cURL 
+ 1 # pip install olostep 
+ 2 from olostep import Olostep
+ 3 
+ 4 client = Olostep(api_key= "YOUR_REAL_KEY" )
+ 5 
+ 6 answer = client.answers.create(
+ 7 task= "What does Olostep do and what is its core offering?" ,
+ 8 json_format={ "company" : "" , "what_it_does" : "" , "core_offering" : "" },
+ 9 )
+ 10 
+ 11 print (answer.json_content)
+ 12 print (answer.sources) 
+ 1 // npm i olostep 
+ 2 import Olostep from 'olostep' 
+ 3 
+ 4 const client = new Olostep({ apiKey : 'YOUR_REAL_KEY' })
+ 5 
+ 6 const answer = await client.answers.create({
+ 7 task : 'What does Olostep do and what is its core offering?' ,
+ 8 jsonFormat : { company : '' , what_it_does : '' , core_offering : '' },
+ 9 })
+ 10 
+ 11 console .log(answer.json_content)
+ 12 console .log(answer.sources) 
+ 1 curl -s -X POST "https://api.olostep.com/v1/answers" \
+ 2 -H "Authorization: Bearer <YOUR_API_KEY>" \
+ 3 -H "Content-Type: application/json" \
+ 4 -d '{
+ 5 "task": "What does Olostep do and what is its core offering?",
+ 6 "json": {"company": "", "what_it_does": "", "core_offering": ""}
+ 7 }' 
+ Docs 
+ Monitor pages on a schedule and get change alerts 
+ Python 
+ Node JS 
+ cURL 
+ 1 import requests
+ 2 import json
+ 3 
+ 4 API_KEY = "<YOUR_API_KEY>" 
+ 5 API_URL = "https://api.olostep.com/v1" 
+ 6 
+ 7 # Create a monitor 
+ 8 payload = {
+ 9 "query" : "Alert me when Tesla stock price is above $500" ,
+ 10 "frequency" : "every hour" ,
+ 11 "email" : "alerts@example.com" 
+ 12 }
+ 13 
+ 14 headers = {
+ 15 "Authorization" : f"Bearer {API_KEY} " ,
+ 16 "Content-Type" : "application/json" 
+ 17 }
+ 18 
+ 19 response = requests.post( f" {API_URL} /monitors" , headers=headers, json=payload)
+ 20 monitor = response.json()
+ 21 monitor_id = monitor[ 'id' ]
+ 22 
+ 23 print ( f"Monitor created: {monitor_id} " )
+ 24 print ( f"Status: {monitor[ 'status' ]} " )
+ 25 
+ 26 # List all monitors 
+ 27 monitors = requests.get( f" {API_URL} /monitors" , headers=headers).json()
+ 28 for m in monitors[ 'monitors' ]:
+ 29 print ( f" {m[ 'id' ]} : {m[ 'url' ]} ( {m[ 'frequency' ]} )" )
+ 30 
+ 31 # Get monitor details 
+ 32 details = requests.get( f" {API_URL} /monitors/ {monitor_id} " , headers=headers).json()
+ 33 print (json.dumps(details, indent= 2 ))
+ 34 
+ 35 # Delete a monitor 
+ 36 requests.delete( f" {API_URL} /monitors/ {monitor_id} " , headers=headers)
+ 37 print ( f"Monitor {monitor_id} deleted" ) 
+ 1 const API_URL = 'https://api.olostep.com/v1' 
+ 2 const headers = { 
+ 3 'Authorization' : 'Bearer <YOUR_API_KEY>' , 
+ 4 'Content-Type' : 'application/json' 
+ 5 }
+ 6 
+ 7 // Create a monitor 
+ 8 const res = await fetch( ` ${API_URL} /monitors` , {
+ 9 method : 'POST' ,
+ 10 headers,
+ 11 body : JSON .stringify({
+ 12 query : 'Alert me when Tesla stock price is above $500' ,
+ 13 frequency : 'every hour' ,
+ 14 email : 'alerts@example.com' 
+ 15 })
+ 16 })
+ 17 
+ 18 const monitor = await res.json()
+ 19 console .log( `Monitor created: ${monitor.id} ` )
+ 20 console .log( `Status: ${monitor.status} ` )
+ 21 
+ 22 // List all monitors 
+ 23 const monitors = await fetch( ` ${API_URL} /monitors` , { headers }).then( r => r.json())
+ 24 monitors.monitors.forEach( m => console .log( ` ${m.id} : ${m.url} ( ${m.frequency} )` ))
+ 25 
+ 26 // Get monitor details 
+ 27 const details = await fetch( ` ${API_URL} /monitors/ ${monitor.id} ` , { headers }).then( r => r.json())
+ 28 console .log(details)
+ 29 
+ 30 // Delete a monitor 
+ 31 await fetch( ` ${API_URL} /monitors/ ${monitor.id} ` , { method : 'DELETE' , headers })
+ 32 console .log( `Monitor ${monitor.id} deleted` ) 
+ 1 # Create a monitor 
+ 2 curl -s -X POST "https://api.olostep.com/v1/monitors" \
+ 3 -H "Authorization: Bearer <YOUR_API_KEY>" \
+ 4 -H "Content-Type: application/json" \
+ 5 -d '{
+ 6 "query": "Track changes in product pricing and stock information",
+ 7 "url": "https://example.com/products/widget-pro",
+ 8 "frequency": "daily",
+ 9 "email": "alerts@example.com"
+ 10 }' 
+ 11 
+ 12 # List all monitors 
+ 13 curl -s "https://api.olostep.com/v1/monitors" \
+ 14 -H "Authorization: Bearer <YOUR_API_KEY>" 
+ 15 
+ 16 # Get monitor details (replace <MONITOR_ID>) 
+ 17 curl -s "https://api.olostep.com/v1/monitors/<MONITOR_ID>" \
+ 18 -H "Authorization: Bearer <YOUR_API_KEY>" 
+ 19 
+ 20 # Delete a monitor (replace <MONITOR_ID>) 
+ 21 curl -s -X DELETE "https://api.olostep.com/v1/monitors/<MONITOR_ID>" \
+ 22 -H "Authorization: Bearer <YOUR_API_KEY>" 
+ Docs 
+ /scrapes 
+ Turn any URL into LLM-ready Markdown, HTML, screenshots, PDFs, or structured JSON. Handle JS-rendered pages, actions, and extraction workflows without maintaining browsers, proxies, or brittle scrapers. 
+ /crawls 
+ Crawl websites at scale, collect content from subpages, control depth and URL patterns, and retrieve clean HTML or Markdown for indexing, enrichment, RAG, and AI workflows. 
+ /maps 
+ Discover every URL on a website using sitemaps and on-page links. Filter by path patterns, paginate large results, and prepare clean URL lists for SEO, crawls, and batches. 
+ /batches 
+ Process up to 10k concurrent URLs in a single batch in 5-8 mins to get clean web data and aggregate content. Run many batches in parallel to scale to millions of concurrent requests. 
+ /searches 
+ Search the web with natural language and get relevant links, titles, and descriptions. Find the information you need with semantic search across the web. 
+ /answers 
+ Search the web with natural language and get AI-powered answers in the JSON format you need. Ground your products in real-world data, enrich datasets, and automate research. 
+ /monitors 
+ Create scheduled web monitors from natural-language instructions. Track for changes on a single page or across the web, deltas, extract structured insights, and get change notifications by email, webhook, or SMS. 
+ Flexible 
+ Get data as HTML, Markdown, text, PDF, JSON, screenshots, or raw bytes. 
+ Structured 
+ Extract clean, structured data using parsers or AI-powered LLM extraction. 
+ Managed 
+ Stop managing headless browsers, proxies, and CAPTCHAs. 
+ Your Request 
+ https:/olostep.com/ 
+ Extract the legal name, mission, and features 
+ Scraping Infrastructure 
+ Browsers 
+ Proxies 
+ CAPTCHAs 
+ Structured Result 
+ Formats 
+ HTML 
+ Markdown 
+ Text 
+ PDF 
+ Raw Bytes 
+ Screenshot 
+ Structured Data 
+ {    "name": 'Olostep Technologies',     "mission": 'Build infrastruct...',     "features": 'monitors, batch...' } 
+ Scalable 
+ Built for large-scale crawling across blogs, documentation, and websites. 
+ Controlled 
+ Define crawl depth and target only URLs matching specific patterns. 
+ Notified 
+ Receive webhook alerts automatically when crawling jobs complete. 
+ https://docs.olostep.com/ 
+ Depth 1 
+ Depth 2 
+ Depth 3 
+ Crawled/ Included 
+ Excluded by Rules 
+ Complete 
+ Discover all URLs across a website, including pages beyond sitemaps. 
+ Customizable 
+ Include or exclude paths using flexible URL pattern matching. 
+ Insightful 
+ Explore website structure and identify URLs worth scraping next. 
+ https://www.olostep.com/ 
+ /docs 
+ /get-started/welcome 
+ /features/maps 
+ /integrations/n8n 
+ .... 
+ /blog 
+ /monitors-api 
+ /parsers-vs-llm 
+ /olostep-orthogonal 
+ .... 
+ /store 
+ /google-search 
+ /brave-search 
+ /bing-search 
+ .... 
+ /api-ref 
+ /scrapes/create 
+ /batches/create 
+ /crawls/create 
+ .... 
+ Concurrent 
+ Process up to 10k concurrent URLs in a single batch in 5-8 mins. 
+ Massive 
+ Run multiple batches simultaneously to process millions of URLs. 
+ Unique 
+ Unique feature on the market purpose-built for large-scale concurrent processing. 
+ Input: URLs 
+ 1,000,000 
+ olostep.com/pg-1 
+ olostep.com/pg-2 
+ olostep.com/pg-3 
+ olostep.com/pg-4 
+ olostep.com/pg-5 
+ olostep.com/pg-6 
+ olostep.com/pg-n 
+ Concurrent Batch Processing 
+ Batch 1 
+ Processing 
+ Batch 2 
+ Processing 
+ Batch 3 
+ Processing 
+ Batch n 
+ Processing 
+ URLs Processed 
+ 1,000,000 
+ Concurrent Batches 
+ 128 
+ Throughput 
+ 48,752 /min 
+ Total time 
+ 20m 14s 
+ Natural 
+ Get relevant links with titles and descriptions using natural language queries. 
+ Expandable 
+ Combine search and scraping into a single API call for faster data retrieval. 
+ Focused 
+ Include or exclude domains to refine search results precisely. 
+ Your Query 
+ Best AI Agents Framework 2026 
+ Include 
+ LangGraph 
+ CrewAi 
+ Exclude 
+ OpenAI SDK 
+ AutoGen 
+ LangGraph 
+ AutoGen 
+ CrewAI 
+ OpenAI SDK 
+ Structured Results 
+ https:/langchain... 
+ LangGraph 
+ Balance agent control with agency... 
+ https://crewai.com/ 
+ CrewAI 
+ The open platform that accelerates agent... 
+ Grounded 
+ Search the web and generate answers from real-world sources. 
+ Structured 
+ Return validated results and sources in the exact JSON shape you need. 
+ Enrich 
+ Enhance products, datasets, and spreadsheets with web data. 
+ Your Question 
+ Find YC startups building voice AI 
+ Processing Layer 
+ Search 
+ Clean 
+ Validate 
+ Structured Results 
+ {"results": [    {      "company": "Retell AI",      "yc_batch": "W24",      "category": "Voice Agents"    },    {      "company": "Vapi",      "yc_batch": "W21",      "category": "Voice Infrastructure"    }  ]} 
+ Scheduled 
+ Track website changes automatically on a recurring schedule. 
+ Alerts 
+ Get notified via email, SMS, webhooks, or custom channels. 
+ Deterministic 
+ Create monitors with natural language and run them deterministically. 
+ Setup to monitor 
+ Monitor the OpenAI pricing page & alert me if any pricing changes 
+ Schedule 
+ Every 6 hours 
+ Alert Delivered 
+ Change Summary 
+ $20 -> $22 (+$2) 
+ Email 
+ Webhook 
+ Sms 
+ Data tailored to your industry 
+ See how Olostep powers Knowledge Work AI companies, from AI for Marketers, AI for manufacturers to AI for local businesses and construction 
+ AI for Procurement 
+ Spot fast-growing brands before their revenue is public, using web signals like reviews, social followers, store coverage and product ingredients. 
+ Growth Signals 
+ Track e-commerce reviews 
+ Count social followers 
+ Map stores by zip code 
+ Count products per brand 
+ Extract product ingredients 
+ AI for Manufacturers 
+ See how component stock and prices change across suppliers over time, and catch shortages before they reach your production line. 
+ Supply Time Machine 
+ Track stock across distributors 
+ Compare prices over time 
+ Monitor lead times 
+ Detect supplier changes 
+ Flag emerging shortages 
+ AI for Legal 
+ Scan the web for IP infringements and capture timestamped screenshots as proof, so every case starts with a dated record. 
+ IP Protection 
+ Scan marketplaces and websites 
+ Detect copied brands and designs 
+ Capture timestamped screenshots 
+ Archive page snapshots 
+ Build an evidence trail 
+ AI for Marketers 
+ Track how brands show up across the web and in AI answers, and analyze how share of voice shifts over time, not just where it stands today. 
+ Brand Intelligence 
+ Crawl blog content 
+ Analyze brand mentions 
+ Research competitors 
+ Tag citations in AI answers 
+ Monitor competitor pages 
+ Monitor the Web 
+ Monitor any webpage for DOM changes, stock availability, price changes, job openings or fresh content. Run automatically on a schedule and get alerted 
+ Monitor Webpage 
+ Monitor pricing & stock 
+ Monitor content & DOM changes 
+ Monitor job openings 
+ Monitor reviews & ratings 
+ Set schedule & alerts 
+ Automate data pipelines 
+ Automate complex data pipelines with the /agents endpoint through natural language prompts. You can also pass your own internal knowledge as context 
+ Natural language to data pipelines 
+ Power your search product 
+ Track portfolio companies 
+ Build market intelligence 
+ Research companies at scale 
+ Automate GTM and recruiting 
+ Automate data pipelines 
+ Automate complex data pipelines with the /agents endpoint through natural language prompts. You can also pass your own internal knowledge as context 
+ Pricing that Makes Sense 
+ Most cost-effective web data API on the market 
+ No credit card required 
+ Trial 
+ $0 
+ Includes: 
+ 500 successful requests 
+ All requests are JS rendered + utilizing residential IP addresses 
+ Low rate limits 
+ Get started 
+ COST/1K $1.800 
+ Starter 
+ $9 
+ / month 
+ Everything in Free, Plus: 
+ 5000 successful requests 
+ 150 concurrent requests 
+ Purchase now 
+ COST/1K $0.495 
+ Standard 
+ $99 
+ / month 
+ Everything in Starter, Plus: 
+ 200K successful requests 
+ 500 concurrent requests 
+ Purchase now 
+ COST/1K $ 0.399 
+ Scale 
+ $399 
+ / month 
+ Everything in Standard, Plus: 
+ 1 Million successful requests 
+ AI-powered Browser Automations 
+ Purchase now 
+ Top-ups 
+ Have spiky usage or don't like subscriptions? You can buy credit packs. They are valid for 6 months. 
+ Credit pack 
+ 10k credits 
+ $20 
+ Purchase Credit Pack 
+ Credit pack 
+ 250k credits 
+ $200 
+ Purchase Credit Pack 
+ Credit pack 
+ 2M credits 
+ $1000 
+ Purchase Credit Pack 
+ Enterprise 
+ Hundreds of millions of credits with enterprise-grade reliability. We offer custom discounts 
+ Contact Sales 
+ Trusted by Amazing Teams Building the Future of AI 
+ Michelle Julia 
+ Co-founder & CEO Aurium 
+ Olostep is the best!!! We automated entire data pipelines with just a prompt 
+ Richard He 
+ Co-founder & CEO Openmart 
+ Olostep has become the default Web Layer infrastructure for our company 
+ Max Brodeur-Urbas 
+ Co-founder & CEO Gumloop 
+ Olostep works like a charm! And your customer service is exceptional 
+ Rob Hayes 
+ Co-founder Merchkit 
+ Olostep lets us turn any website into an API. Great product, great people 
+ Brandon Cohen 
+ Co-founder & CTO CivilGrid 
+ I highly recommend Olostep, great product! 
+ Berk Serbetcioglu 
+ Co-founder & CEO Gedd.it 
+ We verify coupon codes at scale. Love Olostep. It works on any e-commerce 
+ Trevor West 
+ Co-founder & CEO Podqi 
+ Olostep is the best API to search, extract, and structure data from the Web. Happy to be customers 
+ Rida Naveed 
+ Co-founder Zecento 
+ We use /batches combined with parsers and it's magical how we can get structured data at large scale 
+ Kieran V. 
+ Growth PlotsEvents 
+ Olostep allowed us to search and structure events data across the Web 
+ Paul Mit 
+ Founder Foundbase 
+ Reliable and cost-effective API for working with data. Congrats on the cool product 
+ Connect Olostep to Your AI Stack 
+ Official Olostep integrations. Add web scraping, crawling and AI-powered search to any tool in your stack. 
+ Cursor 
+ Claude 
+ n8n 
+ LangChain 
+ Apify 
+ Mastra 
+ Zapier 
+ Relay 
+ Windsurf 
+ Cline 
+ VS Code 
+ Gemini CLI 
+ OpenAI Codex 
+ Qwen 
+ Smithery 
+ Amazon Q 
+ Amp 
+ Augment 
+ BoltAI 
+ Bun 
+ Deno 
+ Copilot 
+ Crush 
+ Docker 
+ JetBrains 
+ Kiro 
+ LM Studio 
+ Opencode 
+ Perplexity 
+ Qodo Gen 
+ Roo Code 
+ Rovo Dev CLI 
+ Trae 
+ Visual Studio 
+ Warp 
+ Windows 
+ Zed 
+ Zencoder 
+ MCP client 
+ Connect with your AI agents 
+ A deterministic, repeatable, controllable pipeline that automates any web research workflow and pipeline exactly as you described it. 
+ Use the Olostep CLI 
+ Map, scrape, crawl, batch process, and generate answers directly from your terminal, with clean JSON output built for scripts, CI pipelines and AI agents. 
+ npx -y olostep-cli@latest --help 
+ Add Olostep to your MCP client 
+ Works with any product that implements the Model Context Protocol: register Olostep once and call web tools from chat, agents, or IDEs that support MCP. 
+ {  "mcpServers": {    "olostep-web": {      "command": " npx ",      "args": [" -y ", " olostep-mcp "],      "env": {        "OLOSTEP_API_KEY": " YOUR_API_KEY "      }    }  } } 
+ Ready to start? 
+ Get clean data for your AI from any website with Olostep Most cost-effective API. Built for scale 
+ Start for free 
+ See Pricing 
+ Are you an AI Agent? Get started here 
+ Frequently asked questions 
+ Product & Capabilities 
+ What is Olostep? 
+ Olostep is Web Infrastructure for Knowledge work AIs . It started by providing a suite of Web Data APIs that let businesses’ AI agents search, extract, and structure web data. It helps AI application companies turn public web content into clean, structured outputs. Olostep's mission is to make the world's data useful to knowledge work AIs and become the business operating systems of AI-native companies. 
+ Why are we building Olostep? 
+ Olostep is built on a bet that, over time, most knowledge work will flow through AI models. A new generation of AI application companies is emerging to assist and automate knowledge work in specific domains, such as marketing, manufacturing, legal and property appraisals. Olostep exists for them: the data infrastructure for their agents, enterprise-ready and embedded in their core products. Those agents are shifting from writing text to making decisions. Decision models return a choice with a probability that code can act on directly, imbuing software itself with intelligence. Every decision needs fresh, domain-specific data and produces new data in turn. Within a year, these companies will rebuild around decision loops and lock in the infrastructure underneath. Olostep is positioned to be that infrastructure. 
+ Why do AI agents need web infrastructure? 
+ The primary users of the web are shifting from humans to AI agents. Today, billions of people use the web. Tomorrow, trillions of agents will use it These agents need web infrastructure built specifically for them — infrastructure that can help them access information, assist people, and automate knowledge work at a scale the web has never seen before. 
+ How is Olostep different? 
+ Olostep is an infrastructure company for knowledge-work AIs, where data is a first-class citizen : data as infrastructure. We’re not building Google for agents (search-as-infrastructure) or a developer tool. Search APIs index the whole web for anyone; we index the portions that matter to our customers and capture snapshots over time, so their agents see not just what the web says but what changed. And we’re built for AI knowledge-work businesses and their teams, not individual developers: enterprise-ready and embedded in their core products. Our mission is to make the world’s data useful to knowledge-work AIs and to become the business operating system of AI-native companies. 
+ Why should I use Olostep? 
+ Olostep is built for business use cases: reliable, scalable, cost-effective, flexible and designed to fit your existing workflows and backend. It’s enterprise-ready, trusted by teams that run it inside their core products. You can build custom parsers that return deterministic, structured results at scale, so your agents and decision models always get data in the exact shape they need. And our talent-dense team works alongside yours, building the features your product needs. You can test Olostep for free to see if it fits your use case. Get your free API keys here . 
+ Who should use Olostep? 
+ Olostep is built for AI agents deployed within businesses, especially agents built by AI application companies that assist areas of knowledge work — from AI for marketers and engineers to AI for lawyers and property appraisals. 
+ What is a Web Data API? 
+ A Web Data API allows developers to extract, crawl and structure data from websites at scale. It handles rendering, anti-bot protection and parsing, returning clean outputs such as JSON or HTML for use in applications, analytics or AI workflows. 
+ Can Olostep support my high-volume requests? 
+ Yes, Olostep is built to handle high-volume data extraction at scale, supporting up to billions of requests per month. With features like batch processing, distributed infrastructure and scalable workflows, it is designed for both growing teams and enterprise-level use cases. 
+ Usage & Automation 
+ How does a Web Data API work? 
+ A Web Data API processes requests by rendering web pages, handling anti-bot protections, extracting structured data and returning it in formats such as JSON or Markdown. This removes the need to manage scraping infrastructure manually. 
+ What is the difference between crawling and scraping? 
+ Crawling refers to discovering and navigating multiple pages across a website, while scraping focuses on extracting data from a specific page. A Web Data API typically supports both processes in a unified workflow. 
+ What formats does Olostep return results in? 
+ Most Web Data APIs return data in structured formats such as JSON, as well as HTML, Markdown or raw content depending on the use case. Structured outputs are commonly used for automation and AI workflows. 
+ Can Olostep automate my data pipelines? 
+ Yes, Olostep is designed to support automated data pipelines and research workflows on the web. With capabilities for searching, crawling, scraping, structuring data and running repeatable workflows, it can support a wide range of business and AI use cases. ‍ If you have a specific workflow in mind, contact the team at info@olostep.com or via the Contact Sales page to discuss the best setup for your use case. 
+ Can I extract data with a prompt? 
+ Yes, Olostep lets you extract data using natural language prompts. If you already know the exact page you want to process, you can use the /scrapes endpoint with LLM extraction to describe the data you want returned. For high-volume or deterministic extraction, Olostep's parsers are the better option, as they return structured JSON more consistently at scale. For more advanced workflows, such as searching for data, navigating across pages, handling pagination or validating results, the /agents endpoint can automatically carry out multi-step extraction based on your prompt. 
+ What is counted as a request? 
+ One request equals one webpage or one PDF processed. We do not charge separately for bandwidth, proxies, or data usage. All infrastructure costs are included in the price per request. 
+ Does Olostep charge for failed requests? 
+ No, Olostep does not charge for failed requests. You are only billed for successful requests, ensuring predictable and fair usage-based pricing. For endpoints that involve LLM processing (such as the Answers API), any underlying model costs may still apply. However, Olostep itself only charges for requests that are successfully completed. 
+ Pricing & Plans 
+ Does Olostep offer a free trial? 
+ Yes, Olostep includes a free plan with 500 requests to help you test the API before upgrading. Paid plans start from $9/month and include 5,000 credits per month. This gives teams a low-risk way to evaluate Olostep's reliability, scalability and cost-effectiveness before moving to higher-volume usage. 
+ Can I switch plans after signing up? 
+ Yes, you can switch plans at any time. Plans are pro-rated, meaning any unused value from your current plan is carried over to your new plan. This ensures you don't pay twice for usage you've already covered, giving you flexibility as your needs grow. 
+ Can I ask for a refund if I don't use it? 
+ Yes. If you're not satisfied with the Olostep API or it doesn't end up being useful for your use case, you can email info@olostep.com to request a refund. If you cancel after a period of non-use, Olostep can also refund the unused portion of your plan where applicable. 
+ How can I pay? 
+ You can pay through Stripe Payment Links. To access billing, you must be logged in to your Olostep account. Go to your dashboard, navigate to Billing & Invoices, click Manage on Stripe, and add your card details. Once your card is added, you’re good to go. 
+ Making the world's data useful to AIs doing knowledge work 
+ Web Infra for knowledge work AI 
+ Product 
+ Playground 
+ Agent 
+ Orbit 
+ MCP Server 
+ Integrations 
+ Tools 
+ Pricing 
+ Developers 
+ API Reference 
+ API Endpoints 
+ Scrape API 
+ Crawl API 
+ Map API 
+ Batch API 
+ Search API 
+ Answer API 
+ Monitor API 
+ People and Company Search API 
+ Solutions 
+ Tools 
+ Connect to Slack 
+ Use Cases 
+ AI Platforms 
+ Deep Research 
+ Competitive Intelligence 
+ Sales Lead Enrichment 
+ SEO & GEO Teams 
+ Brand Protection 
+ Resources 
+ Documentation 
+ Blog 
+ Glossary 
+ Changelog 
+ Company 
+ About 
+ Careers 
+ Customers 
+ Contact Sales 
+ AI Instructions 
+ Legal 
+ Privacy Policy 
+ Terms of Service 
+ Data Processing Agreement 
+ Socials 
+ X 
+ LinkedIn 
+ Join Slack 
+ Need a hand with anything? Join our Slack or send an email to info@olostep.com 
+ Made in Italy | United States 
+ © 2026 Olostep Technologies, Inc. 
+ English 
+ English Deutsch Italiano

@@ -1,0 +1,6 @@
+# Simplescraper (simplescraper) category=serp-scrape
+home=https://simplescraper.io/ pricing=https://simplescraper.io/pricing docs=None llms=None
+sources_ok: pricing:https://simplescraper.io/pricing, home:https://simplescraper.io/, llms:https://simplescraper.io/llms.txt, llms-full:https://simplescraper.io/docs/llms-full.txt, llms-https://simplescraper.io/docs/llms.txt:https://simplescraper.io/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+Simplescraper - Web scraper and website change monitoring

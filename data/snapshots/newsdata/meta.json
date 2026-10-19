@@ -1,0 +1,95 @@
+{
+ "slug": "newsdata",
+ "name": "NewsData.io",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:39+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://newsdata.io/pricing",
+   "status": 200,
+   "final_url": "https://newsdata.io/pricing",
+   "content_type": "text/html",
+   "bytes": 5657,
+   "truncated": false,
+   "sha256": "5a732063470fbc80f4b96506a639c9cd1f49f7ee6715f97b646b1458477dc344",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 59
+  },
+  "docs": {
+   "url": "https://newsdata.io/documentation",
+   "status": 200,
+   "final_url": "https://newsdata.io/documentation",
+   "content_type": "text/html",
+   "bytes": 5657,
+   "truncated": false,
+   "sha256": "5a732063470fbc80f4b96506a639c9cd1f49f7ee6715f97b646b1458477dc344",
+   "fetched_at": "2026-10-19T06:05:16+00:00",
+   "text_bytes": 59
+  },
+  "home": {
+   "url": "https://newsdata.io/",
+   "status": 200,
+   "final_url": "https://newsdata.io/",
+   "content_type": "text/html",
+   "bytes": 5657,
+   "truncated": false,
+   "sha256": "5a732063470fbc80f4b96506a639c9cd1f49f7ee6715f97b646b1458477dc344",
+   "fetched_at": "2026-10-19T05:54:40+00:00",
+   "text_bytes": 59
+  },
+  "llms": {
+   "url": "https://newsdata.io/documentation/llms.txt",
+   "status": 200,
+   "final_url": "https://newsdata.io/documentation/llms.txt",
+   "content_type": "text/html",
+   "bytes": 5657,
+   "truncated": false,
+   "sha256": "5a732063470fbc80f4b96506a639c9cd1f49f7ee6715f97b646b1458477dc344",
+   "fetched_at": "2026-10-19T05:54:40+00:00",
+   "text_bytes": 59
+  },
+  "llms-full": {
+   "url": "https://newsdata.io/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://newsdata.io/documentation/llms-full.txt",
+   "content_type": "text/html",
+   "bytes": 5657,
+   "truncated": false,
+   "sha256": "5a732063470fbc80f4b96506a639c9cd1f49f7ee6715f97b646b1458477dc344",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 59
+  },
+  "llms-https://newsdata.io/llms.txt": {
+   "url": "https://newsdata.io/llms.txt",
+   "status": 200,
+   "final_url": "https://newsdata.io/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 2258,
+   "truncated": false,
+   "sha256": "cf45278e018de6bccb191bf9a187c0d3db1dee97b593dc6bc461ed7c6050142d",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 2258
+  },
+  "llms-https://newsdata.io/docs/llms.txt": {
+   "url": "https://newsdata.io/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://newsdata.io/documentation/llms.txt",
+   "content_type": "text/html",
+   "bytes": 5657,
+   "truncated": false,
+   "sha256": "5a732063470fbc80f4b96506a639c9cd1f49f7ee6715f97b646b1458477dc344",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 59
+  },
+  "llms-err-92df81": {
+   "url": "https://docs.newsdata.io/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.newsdata.io/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:42+00:00"
+  }
+ }
+}

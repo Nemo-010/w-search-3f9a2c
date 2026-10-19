@@ -1,0 +1,23 @@
+# Scrapy (OSS) (scrapy) category=oss
+home=https://scrapy.org/ pricing=None docs=https://docs.scrapy.org/ llms=None
+sources_ok: docs:https://docs.scrapy.org/, home:https://scrapy.org/, llms:https://docs.scrapy.org/llms.txt, llms-full:https://docs.scrapy.org/llms-full.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+# Scrapy
+> Scrapy is a fast high-level web crawling and web scraping framework, used
+> to crawl websites and extract structured data from their pages. It can be used
+> for a wide range of purposes, from data mining to monitoring and automated
+> testing.
+## Docs
+- [Scrapy 2.19 documentation](en/latest/index.md)
+- [Scrapy at a glance](en/latest/intro/overview.md)
+- [Examples](en/latest/intro/examples.md)
+- [Installation guide](en/latest/intro/install.md)
+- [Scrapy Tutorial](en/latest/intro/tutorial.md)
+- [Scrapy’s building blocks](en/latest/topics/concepts.md)
+- [Add-ons](en/latest/topics/addons.md)
+- [Using Scrapy with coding agents](en/latest/topics/agents.md)
+- [Core API](en/latest/topics/api.md)
+- [Architecture overview](en/latest/topics/architecture.md)
+- [asyncio](en/latest/topics/asyncio.md)
+- [AutoThrottle extension](en/latest/topics/autothrottle.md)

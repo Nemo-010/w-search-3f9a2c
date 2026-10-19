@@ -1,0 +1,49 @@
+{
+ "slug": "rightdao",
+ "name": "Right Dao",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:32+00:00",
+ "sources": {
+  "home": {
+   "url": "https://rightdao.com/",
+   "status": 200,
+   "final_url": "https://rightdao.com/",
+   "content_type": "text/html",
+   "bytes": 9426,
+   "truncated": false,
+   "sha256": "fbfb90849a316f6b5820f8ecab79f95f90165e2f49a56468c03028ae715c4121",
+   "fetched_at": "2026-10-19T05:54:32+00:00",
+   "text_bytes": 152
+  },
+  "llms-err-8d4393": {
+   "url": "https://rightdao.com/llms.txt",
+   "status": 404,
+   "final_url": "https://rightdao.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  },
+  "llms-err-5b6639": {
+   "url": "https://rightdao.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://rightdao.com/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-19T05:54:33+00:00"
+  },
+  "llms-err-ed20d1": {
+   "url": "https://docs.rightdao.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.rightdao.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:34+00:00"
+  }
+ }
+}

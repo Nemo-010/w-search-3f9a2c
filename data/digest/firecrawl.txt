@@ -1,0 +1,30 @@
+# Firecrawl (firecrawl) category=ai-search
+home=https://www.firecrawl.dev/ pricing=https://www.firecrawl.dev/pricing docs=https://docs.firecrawl.dev/ llms=https://docs.firecrawl.dev/llms.txt
+sources_ok: llms:https://docs.firecrawl.dev/llms.txt, llms-full:https://docs.firecrawl.dev/llms-full.txt, pricing:https://www.firecrawl.dev/pricing, docs:https://docs.firecrawl.dev/, home:https://www.firecrawl.dev/
+--- ranked fact lines ---
+[docs] "snippet" : "It's now placed three new ads on YC's job board for “AI agents only” and has set aside a $1 million budget total to make it happen." ,
+[docs] "markdown" : "Launch Week I is here! [See our Day 2 Release 🚀](https://www.firecrawl.dev/blog/launch-week-i-day-2-doubled-rate-limits)[💥 Get 2 months free..." ,
+[docs] "output" : "The iPhone 16 Pro Max (256GB) is priced at $1,199.00." ,
+[home] 3 " output " : " Keyboard available at $100 " ,
+[docs] "title" : "Y Combinator startup Firecrawl is ready to pay $1M to hire three AI agents as employees" ,
+[pricing] auth, API key setup, and Firecrawl capabilities. Prefer a free account
+[pricing] describes a keyless free tier to search, scrape, and interact:
+[docs] Get your API key Create a free account for direct API access and higher limits Try it in the Playground Test Firecrawl in the browser without writing code
+[home] Firecrawl | Web Data API for AI Agents Introducing Alexandria and our $75M Series B. Read the announcement → Products Resources Pricing Docs Blog Playground 192.9K Sign up 2 Months Free - Annually Give your AI agents web data and beyond The web data API to search and scrape with access to more sources through Alexandria . It's also open source. Start for free Setup for agents Search Scrape Map Cra
+--- llms/readme head ---
+# Firecrawl Docs
+- [v2 (221 pages)](https://docs.firecrawl.dev/_llms/en/v2.txt): Documentation for v2.
+## v1
+### Documentation
+#### Get Started
+- [Introduction](https://docs.firecrawl.dev/introduction.md): The web data API for AI agents. Search the web, scrape any page, and interact with it through one API.
+- [Get Started](https://docs.firecrawl.dev/mcp-server.md): Set up Firecrawl MCP with keyless access, account sign-in, or an API key.
+- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide.md): Configure scrape options, browser actions, crawl, map, and the agent endpoint with Firecrawl's full API surface.
+##### Plans and Billing
+- [Billing](https://docs.firecrawl.dev/billing.md): How Firecrawl billing, credits, and plans work
+- [Rate Limits](https://docs.firecrawl.dev/rate-limits.md): Rate limits for different pricing plans and API requests
+- [Partner Credits](https://docs.firecrawl.dev/partner-credits.md): How Firecrawl partner credits work, including eligibility, expiration, and plan limits
+##### Enterprise
+- [Enterprise](https://docs.firecrawl.dev/enterprise.md): Enterprise plans, security, and features for Firecrawl at scale
+- [SSO and SCIM](https://docs.firecrawl.dev/features/sso.md): Set up single sign-on (SSO) and SCIM directory sync so your team signs in through your identity provider and user access stays in sync with your directory.
+- [IP Restrictions](https://docs.firecrawl.dev/features/ip-restrictions.md): Restrict your team's API keys to an allowlist of IP addresses or CIDR ranges, so they only work from approved networks. Enforced server-side.

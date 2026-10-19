@@ -1,0 +1,218 @@
+# Olostep Docs
+
+> Olostep: infrastructure for the Web's second user. Search, scraping and crawling API for AI.
+
+## Documentation
+
+### Get Started
+
+- [Welcome to Olostep](https://docs.olostep.com/get-started/welcome.md): Olostep: Infrastructure for the Web's second user. The best search, scraping and crawling API for AI.
+- [Authentication](https://docs.olostep.com/get-started/authentication.md): Authenticate to the Olostep search, scraping, and crawling API with API keys.
+- [Olostep CLI](https://docs.olostep.com/sdks/cli.md): Command-line interface for scrape, search, map, crawl, answers, and batches — JSON output for scripts, CI, and AI agents
+- [Pay-per-use (x402)](https://docs.olostep.com/x402.md): Pay-per-use API endpoints with stablecoins
+
+### Features
+
+- [Scrape](https://docs.olostep.com/features/scrapes.md): Turn any URL into LLM-ready Markdown, HTML, screenshots, PDFs, or structured JSON.
+- [Crawl](https://docs.olostep.com/features/crawls.md): Crawl a URL and get the content from all subpages
+- [Maps](https://docs.olostep.com/features/maps.md): Get all the URLs on a website.
+- [Batch Endpoint](https://docs.olostep.com/features/batches.md): Best for large-scale, async data aggregation
+- [Answers API](https://docs.olostep.com/features/answers.md): AI answers backed by live web search, scraping, and crawling — not a stale index.
+- [Search API](https://docs.olostep.com/features/search.md): Search the web with natural language and get structured links — Olostep's AI search API.
+- [Monitors](https://docs.olostep.com/features/monitors.md): Monitor pages on a schedule and send change alerts
+- [Files](https://docs.olostep.com/features/files.md): Upload and manage JSON files for use as context in API requests
+- [Schedules](https://docs.olostep.com/features/schedules.md): Schedule API calls to run automatically at specified times
+- [Agents API](https://docs.olostep.com/features/agents.md): Build no-code research agents that search, scrape, and crawl the web with Olostep.
+- [Skills](https://docs.olostep.com/features/skills.md): Install and manage Olostep skills in your AI coding agents
+
+#### Structured Data
+
+- [Introduction](https://docs.olostep.com/features/structured-content/intro.md)
+- [Using Parsers](https://docs.olostep.com/features/structured-content/parsers.md)
+- [Using LLM Extraction](https://docs.olostep.com/features/structured-content/llm-extraction.md)
+
+### Balance & Billing
+
+- [Balance & billing](https://docs.olostep.com/balance-billing/balance-and-billing.md): Check your credit balance and purchase top-ups programmatically.
+
+## SDKs
+
+### SDKs
+
+- [Overview](https://docs.olostep.com/sdks/overview.md): Official Olostep SDKs for Python and Node.js — search, scrape, crawl, and batch the web.
+- [Olostep Python SDK](https://docs.olostep.com/sdks/python.md): Official Python SDK to search, extract and structure data from the Web
+- [Olostep NodeJS SDK](https://docs.olostep.com/sdks/node-js.md): Official NodeJS SDK to search, extract and structure data from the Web
+- [Olostep CLI](https://docs.olostep.com/sdks/cli.md): Command-line interface for scrape, search, map, crawl, answers, and batches — JSON output for scripts, CI, and AI agents
+
+## Examples
+
+### Examples
+
+- [Get the Markdown of a Website](https://docs.olostep.com/examples/get-markdown-from-website.md): Learn how to extract content as LLM-friendly markdown from any web page.
+- [Get Google Search Results (python)](https://docs.olostep.com/examples/serp.md): SERP API to scrape Google search results using Olostep and a Python code snippet.
+- [Get Google Search Results (JS)](https://docs.olostep.com/examples/google-search-js.md): SERP API to scrape Google search results using Olostep and a Javascript code snippet.
+- [Get Google Maps Results](https://docs.olostep.com/examples/google-maps.md): SERP API to scrape Google Maps location data using Olostep and a Python code snippet.
+- [Extract All URLs from Stripe's Website](https://docs.olostep.com/examples/get-website-structure.md): Get a complete map of Stripe's website structure to understand its organization and discover available content.
+- [Extract Blog URLs from Stripe's Website](https://docs.olostep.com/examples/extract-specific-paths.md): Filter and extract only the blog URLs from Stripe's website for targeted content analysis.
+- [Crawl and Extract Content from Stripe's Blog Pages](https://docs.olostep.com/examples/crawl-matching-pages.md): Learn how to crawl and extract content from Stripe's blog posts.
+- [Price Tracking with Olostep](https://docs.olostep.com/examples/price-monitoring.md): Learn how to use Olostep to track product prices at scale on an e-commerce.
+- [Get the content of multiple websites in one go](https://docs.olostep.com/examples/batch.md): Start a batch scrape to extract content from up to 100k URLs in 5-7 mins
+- [Track AI search engines](https://docs.olostep.com/examples/geo.md): Call /v1/batches with dedicated parsers to extract structured answers, citations, ads, and shopping data from Google AI Mode, ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overview.
+
+## Integrations
+
+### Integrations
+
+- [Olostep MCP Server](https://docs.olostep.com/integrations/mcp-server.md): Give any MCP-compatible AI client web scraping, search, crawling, and AI-answer tools in under a minute
+- [Olostep + ChatGPT](https://docs.olostep.com/integrations/chatgpt.md): Give ChatGPT live web access — scrape, search, crawl, and get cited answers — billed to your own Olostep account.
+- [Olostep + Raycast Integration](https://docs.olostep.com/integrations/raycast.md): Add web scraping, search, crawling, and AI answers to Raycast AI with the official Olostep MCP server
+- [Olostep + n8n](https://docs.olostep.com/integrations/n8n.md): Add web scraping, search, batch jobs, crawls, and site maps to any n8n workflow, no code required.
+- [Olostep + Relay](https://docs.olostep.com/integrations/relay.md): Add web scraping, AI-powered research, batch jobs, crawls, and site maps to any Relay workflow, no code required.
+- [Olostep + Zapier](https://docs.olostep.com/integrations/zapier.md): Add web scraping, AI-powered research, batch jobs, crawls, and site maps to any Zap, no code required.
+- [Olostep + viaSocket](https://docs.olostep.com/integrations/viasocket.md): Connect Olostep with 2,300+ apps through viaSocket — build no-code workflows or use Olostep from AI clients like Claude, Cursor, and ChatGPT.
+- [Olostep + LangChain Integration](https://docs.olostep.com/integrations/langchain.md): Build intelligent AI agents with web scraping and search capabilities using LangChain
+- [Olostep + Nanobot Integration](https://docs.olostep.com/integrations/nanobot.md): Use Olostep as a web-search backend for nanobot's web_search tool.
+- [Olostep + ElizaOS Integration](https://docs.olostep.com/integrations/eliza.md): Add Olostep web search to Eliza agents with the `OLOSTEP_SEARCH` action.
+- [Olostep + Mastra Integration](https://docs.olostep.com/integrations/mastra.md): Build AI agents with web search, scraping and crawling capabilities using Mastra.ai's agent framework
+- [Olostep + Apify Integration](https://docs.olostep.com/integrations/apify.md): Automate web search, scraping and crawling with Apify Actors using Olostep — the API to search, extract and structure web data.
+- [Olostep + Kilo Integration](https://docs.olostep.com/integrations/kilo.md): Use Olostep MCP Server as an external tool in Kilo for web search, scraping, and content extraction
+- [Olostep + OpenClaw Integration](https://docs.olostep.com/integrations/clawhub.md): Give your OpenClaw agent live web access with 13 skills and a 9-tool MCP server
+
+## API Reference
+
+### Common
+
+- [Object-Oriented API](https://docs.olostep.com/api-reference/common/object-oriented.md): Understanding how Olostep API objects work together
+- [Metadata](https://docs.olostep.com/api-reference/common/metadata.md): Attach custom key-value pairs to API resources
+- [Webhooks](https://docs.olostep.com/api-reference/common/webhooks.md): Receive real-time notifications when async operations complete
+
+### Scrapes
+
+- [Create Scrape](https://docs.olostep.com/api-reference/scrapes/create.md): [Scrape](https://docs.olostep.com/features/scrapes) a url with provided configuration and get content.
+- [Get Scrape](https://docs.olostep.com/api-reference/scrapes/get.md): Can be used to retrieve response for a scrape.
+
+### Batches
+
+- [Create Batch](https://docs.olostep.com/api-reference/batches/create.md): Starts a new batch. You receive an `id` that you can use to track the progress of the batch as shown [here](/api-reference/batches/info). Note: Processing time is constant regardless of batch size
+- [Batch Info](https://docs.olostep.com/api-reference/batches/info.md): Retrieves the status and progress information about a batch. To retrieve the content for a batch, see [here](/api-reference/batches/items)
+- [Update Batch](https://docs.olostep.com/api-reference/batches/update.md): Updates the metadata for a specific batch. Only metadata can be updated after batch creation.
+- [Batch Items](https://docs.olostep.com/api-reference/batches/items.md): Retrieves the list of items processed for a batch. You can then use the `retrieve_id` to get the content with the Retrieve Endpoint
+
+### Crawls
+
+- [Create Crawl](https://docs.olostep.com/api-reference/crawls/create.md): Starts a new crawl. You receive a `id` to track the progress. The operation may take 1-10 mins depending upon the site and depth and pages parameters.
+- [Crawl Info](https://docs.olostep.com/api-reference/crawls/info.md): Fetches information about a specific crawl.
+- [Crawl Pages](https://docs.olostep.com/api-reference/crawls/pages.md): Fetches the list of pages for a specific crawl.
+
+### Maps
+
+- [Create Map](https://docs.olostep.com/api-reference/maps/create.md): This endpoint allows users to get all the urls on a certain website.  It can take up to 120 seconds for complex websites. For large websites, results are paginated using cursor-based pagination
+- [Get Map](https://docs.olostep.com/api-reference/maps/get.md): Retrieve a previously completed map by its ID.
+
+### Answers
+
+- [Create Answer](https://docs.olostep.com/api-reference/answers/create.md): The AI will perform actions like searching and browsing web pages to find the answer to the provided task. Execution time is 3-30s depending upon complexity.
+- [Get Answer](https://docs.olostep.com/api-reference/answers/get.md): This endpoint retrieves a previously completed answer by its ID.
+
+### Search
+
+- [Create Search](https://docs.olostep.com/api-reference/searches/create.md): Search the web with a natural language query and get back a deduplicated list of relevant links with titles and descriptions.
+- [Get Search](https://docs.olostep.com/api-reference/searches/get.md): Retrieve a previously completed search by its ID. Returns whatever was persisted at search time, including any scraped per-link content. Pure idempotent read — no re-scraping, no re-billing.
+
+### Monitors
+
+- [Create Monitor](https://docs.olostep.com/api-reference/monitors/create.md): Creates a monitor from a natural-language query. Provisions a shadow agent, generates a workflow spec, queues DAG planning, and schedules recurring runs. Configure delivery with notification.channels and/or webhook. Returns 202 with status provisioning, or stream progress with ?stream=1.
+- [List Monitors](https://docs.olostep.com/api-reference/monitors/list.md): Retrieves all monitors for your team. Returns active monitors by default and can include deleted monitors when requested.
+- [Get Monitor](https://docs.olostep.com/api-reference/monitors/get.md): Retrieves a monitor by ID, including last_run and total_count. Use include-diagram=true for a Mermaid DAG diagram and include_total_count=false to omit the snapshot count.
+- [List Monitor Events](https://docs.olostep.com/api-reference/monitors/events.md): Lists paginated snapshot events (newest first) with pre-signed snapshot_url values. Supports count_only=true for total_count only.
+- [Get Monitor Planning](https://docs.olostep.com/api-reference/monitors/planning.md): Returns the FDA workflow spec and planner DAG for a monitor shadow agent.
+- [Get Monitor Run](https://docs.olostep.com/api-reference/monitors/run.md): Returns snapshot metadata and parsed agent log events for a single monitor run.
+- [Stream Monitor Agent Logs](https://docs.olostep.com/api-reference/monitors/agent-logs.md): Tails CloudWatch logs for the monitor agent, filtered to this monitor_id. Requires ?stream=1 or Accept: text/event-stream.
+- [Update Monitor](https://docs.olostep.com/api-reference/monitors/update.md): Updates frequency, metadata, notification, and/or webhook. Frequency changes recreate the schedule. Returns 409 while status is provisioning.
+- [Pause Monitor](https://docs.olostep.com/api-reference/monitors/pause.md): Pauses a monitor by disabling future scheduled runs.
+- [Resume Monitor](https://docs.olostep.com/api-reference/monitors/resume.md): Resumes a paused monitor by re-enabling scheduled runs.
+- [Delete Monitor](https://docs.olostep.com/api-reference/monitors/delete.md): Soft-deletes a monitor and removes its related scheduling/shadow-agent resources.
+
+### Files
+
+- [Create File Upload](https://docs.olostep.com/api-reference/files/create.md): Generate a pre-signed URL for uploading a JSON file. After uploading, you must call the [complete endpoint](/api-reference/files/complete) to finalize the upload.
+- [Complete File Upload](https://docs.olostep.com/api-reference/files/complete.md): Complete the file upload process and validate the uploaded JSON file. This endpoint verifies the file exists, validates its JSON format, and updates the file status to completed.
+- [Get File](https://docs.olostep.com/api-reference/files/get.md): Retrieve metadata for a file by its ID.
+- [Get File Content](https://docs.olostep.com/api-reference/files/content.md): Download the content of a completed file. Returns the JSON file content.
+- [List Files](https://docs.olostep.com/api-reference/files/list.md): List all completed files for your team. Optionally filter by purpose.
+- [Delete File](https://docs.olostep.com/api-reference/files/delete.md): Delete a file and its associated data from storage.
+
+### Schedules
+
+- [Create Schedule](https://docs.olostep.com/api-reference/schedules/create.md): Creates a new schedule to execute API calls at specified times. Supports both one-time executions and recurring schedules using cron expressions. You can also use natural language text to generate cron expressions automatically.
+- [List Schedules](https://docs.olostep.com/api-reference/schedules/list.md): Retrieves all schedules for your team. Returns a list of schedules with their configuration, status, and metadata.
+- [Get Schedule](https://docs.olostep.com/api-reference/schedules/get.md): Retrieves a single schedule by its ID.
+- [Delete Schedule](https://docs.olostep.com/api-reference/schedules/delete.md): Deletes a schedule by its ID. This will stop any future executions and remove the schedule from EventBridge.
+
+### Retrieve
+
+- [Retrieve Content](https://docs.olostep.com/api-reference/retrieve.md): Retrieve content of processed batches and crawls urls.
+
+### Balance & Billing
+
+- [Get credit info](https://docs.olostep.com/api-reference/billing/credits-info.md): Returns the authenticated team credit balance, per-lot breakdown, active subscription, and whether usage is allowed.
+- [Purchase top-up](https://docs.olostep.com/api-reference/billing/purchase-topup.md): Charge a saved card and purchase credits in one step. No Checkout redirect or embedded payment UI.
+
+## OpenAPI Specs
+
+- [scrapes](/openapi/scrapes.json)
+- [batches](/openapi/batches.json)
+- [crawls](/openapi/crawls.json)
+- [maps](/openapi/maps.json)
+- [answers](/openapi/answers.json)
+- [search](/openapi/search.json)
+- [monitors](/openapi/monitors.json)
+- [files](/openapi/files.json)
+- [schedules](/openapi/schedules.json)
+- [utility](/openapi/utility.json)
+- [billing](/openapi/billing.json)
+- [airops-batches](/de/openapi/airops-batches.json)
+- [builder](/de/openapi/builder.json)
+- [partnerships](/de/openapi/partnerships.json)
+- [airops-batches](/es/openapi/airops-batches.json)
+- [builder](/es/openapi/builder.json)
+- [partnerships](/es/openapi/partnerships.json)
+- [airops-batches](/fr/openapi/airops-batches.json)
+- [builder](/fr/openapi/builder.json)
+- [partnerships](/fr/openapi/partnerships.json)
+- [airops-batches](/it/openapi/airops-batches.json)
+- [builder](/it/openapi/builder.json)
+- [partnerships](/it/openapi/partnerships.json)
+- [airops-batches](/ja/openapi/airops-batches.json)
+- [builder](/ja/openapi/builder.json)
+- [partnerships](/ja/openapi/partnerships.json)
+- [airops-batches](/nl/openapi/airops-batches.json)
+- [builder](/nl/openapi/builder.json)
+- [partnerships](/nl/openapi/partnerships.json)
+- [airops-batches](/openapi/airops-batches.json)
+- [builder](/openapi/builder.json)
+- [partnerships](/openapi/partnerships.json)
+- [airops-batches](/zh/openapi/airops-batches.json)
+- [builder](/zh/openapi/builder.json)
+- [partnerships](/zh/openapi/partnerships.json)
+
+## Optional
+
+- [Playground](https://www.olostep.com/playground)
+- [Join Community](https://olostep-users.slack.com/join/shared_invite/zt-2bfddyi8h-JzfjOgavg~98DJ1om1B5Lg#/shared-invite/email)
+- [Blog](https://www.olostep.com/blog)
+
+> The links below point to documentation indexes. Follow each `/_llms/` index recursively until you reach documentation pages.
+
+## Indexes
+
+- [German (88 pages)](https://docs.olostep.com/_llms/de.txt): Documentation for German.
+- [French (88 pages)](https://docs.olostep.com/_llms/fr.txt): Documentation for French.
+- [Spanish (88 pages)](https://docs.olostep.com/_llms/es.txt): Documentation for Spanish.
+- [Dutch (88 pages)](https://docs.olostep.com/_llms/nl.txt): Documentation for Dutch.
+- [Chinese (88 pages)](https://docs.olostep.com/_llms/zh.txt): Documentation for Chinese.
+- [Italian (88 pages)](https://docs.olostep.com/_llms/it.txt): Documentation for Italian.
+- [Japanese (88 pages)](https://docs.olostep.com/_llms/ja.txt): Documentation for Japanese.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

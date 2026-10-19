@@ -1,0 +1,80 @@
+{
+ "slug": "librey",
+ "name": "LibreY (OSS)",
+ "category": "oss",
+ "fetched_at": "2026-10-19T05:54:34+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://github.com/Ahwxorg/LibreY",
+   "status": 200,
+   "final_url": "https://github.com/Ahwxorg/LibreY",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 319728,
+   "truncated": false,
+   "sha256": "4383582e1db4b2172737660d0200198965064540292716f57802ad8f1e2f3a3c",
+   "fetched_at": "2026-10-19T05:54:34+00:00",
+   "text_bytes": 5739
+  },
+  "home-err-75d307": {
+   "url": "https://librey.org/",
+   "status": 0,
+   "final_url": "https://librey.org/",
+   "content_type": "",
+   "bytes": 78,
+   "truncated": false,
+   "sha256": "6aac684f71b4365c3c89966fee02d233053bda10a46b39cc84c43ed67a7aecd9",
+   "fetched_at": "2026-10-19T05:54:35+00:00"
+  },
+  "llms-err-9af2c6": {
+   "url": "https://github.com/Ahwxorg/LibreY/llms.txt",
+   "status": 404,
+   "final_url": "https://github.com/Ahwxorg/LibreY/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9,
+   "truncated": false,
+   "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+   "fetched_at": "2026-10-19T05:54:37+00:00"
+  },
+  "llms-err-3071e8": {
+   "url": "https://librey.org/llms.txt",
+   "status": 0,
+   "final_url": "https://librey.org/llms.txt",
+   "content_type": "",
+   "bytes": 78,
+   "truncated": false,
+   "sha256": "6aac684f71b4365c3c89966fee02d233053bda10a46b39cc84c43ed67a7aecd9",
+   "fetched_at": "2026-10-19T05:54:37+00:00"
+  },
+  "llms-err-fd8cff": {
+   "url": "https://librey.org/docs/llms.txt",
+   "status": 0,
+   "final_url": "https://librey.org/docs/llms.txt",
+   "content_type": "",
+   "bytes": 78,
+   "truncated": false,
+   "sha256": "6aac684f71b4365c3c89966fee02d233053bda10a46b39cc84c43ed67a7aecd9",
+   "fetched_at": "2026-10-19T05:54:38+00:00"
+  },
+  "llms": {
+   "url": "https://docs.github.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.github.com/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 28642,
+   "truncated": false,
+   "sha256": "c10af0cdb5576f81fd29373cf56ac65608d24c3e4c935c7993d2bba27d56af4e",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 28634
+  },
+  "llms-err-5fe83e": {
+   "url": "https://docs.librey.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.librey.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:39+00:00"
+  }
+ }
+}

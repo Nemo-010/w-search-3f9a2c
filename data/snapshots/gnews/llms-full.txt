@@ -1,0 +1,59 @@
+Get Started - Documentation - GNews API 
+ Skip to main content Back to gnews.io Get API key Get Started Libraries & SDKs MCP Server LangChain Authentication Endpoints Search Endpoint Top Headlines Endpoint Query Syntax Article Availability JSON Response Error Handling Get Started On this page Get Started with GNews API 
+ What is GNews API? ​ 
+ GNews API is a REST API service to search articles from over 80,000 worldwide sources. The API provides access to real-time news and historical data, as well as top headlines based on Google News rankings. 
+ This documentation covers how to use the API with examples in JavaScript, Python, C#, PHP, and Bash to help you integrate news data into your applications. 
+ Quick Start Guide ​ 
+ 1. Create Your Account ​ 
+ Get started in seconds: 
+ Sign up for free - no credit card required 
+ Verify your email 
+ Access your dashboard to get your API key 
+ 2. Make Your First API Call ​ 
+ All API requests follow this simple pattern: 
+ GET https://gnews.io/api/v4/ {endpoint} ? {parameters} & apikey = YOUR_API_KEY 
+ Try this example in your browser or terminal: 
+ GET https://gnews.io/api/v4/search ? q = Google & lang = en & max = 5 & apikey = YOUR_API_KEY 
+ 3. Choose Your Endpoint ​ 
+ Want to search for specific news? Start with the Search Endpoint to find articles
+matching keywords. 
+ Need the top headlines? Explore the Top Headlines Endpoint based on Google News
+rankings. 
+ Two Powerful Endpoints ​ 
+ Search Endpoint ​ 
+ Perfect for finding specific news stories with advanced filtering options. 
+ Use cases: 
+ Keyword-based news search 
+ Date range filtering 
+ Language and country targeting 
+ Boolean search operators 
+ Learn more 
+ Top Headlines Endpoint ​ 
+ Get trending articles based on Google News rankings across 9 categories. 
+ Categories available: 
+ General 
+ World 
+ Nation 
+ Business 
+ Technology 
+ Entertainment 
+ Sports 
+ Science 
+ Health 
+ Learn more 
+ What Your Plan Includes ​ 
+ Both endpoints are available on every plan. What changes is how many articles you can reach, and how far back: 
+ Plan Requests / day Articles / request Historical archive Data freshness Full content Free 100 10 Last 30 days 12-hour delay Truncated Essential 1,000 25 Since 2020 Real-time Yes Business 5,000 50 Since 2020 Real-time Yes Enterprise 25,000 100 Since 2020 Real-time Yes 
+ The historical archive is what bounds the from and to parameters, see
+ Article Availability . See the pricing for the full comparison. 
+ Next Steps ​ 
+ OpenAPI Specification ​ 
+ The full API is described in an OpenAPI 3.1 specification . Import it into
+Postman or Insomnia, generate a client in your language, or give it to an AI agent as a tool definition. 
+ Community & Support ​ 
+ GitHub - Sample projects and integrations 
+ Email Support - Get help from our team 
+ FAQ - Common questions answered 
+ Ready to Build? ​ 
+ Your journey starts here. Create your free account and make your first API call in under 2 minutes. 
+ Get Your API Key Next Libraries & SDKs What is GNews API? Quick Start Guide 1. Create Your Account 2. Make Your First API Call 3. Choose Your Endpoint Two Powerful Endpoints Search Endpoint Top Headlines Endpoint What Your Plan Includes Next Steps OpenAPI Specification Community & Support Ready to Build? © 2026 GNews API

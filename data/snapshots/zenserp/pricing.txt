@@ -1,0 +1,348 @@
+Zenserp - Pricing & Plans - zenserp 
+ Workflow 
+ Open main menu 
+ Features 
+ Google 
+ Google SERP 
+ Organic, ads, snippets 
+ Image Search 
+ Images for a query 
+ Maps Search 
+ Local businesses 
+ News 
+ Latest news 
+ Shopping 
+ Products + pages 
+ Trends 
+ Popularity over time 
+ Reverse Image 
+ Find pages by image 
+ Youtube 
+ Video results 
+ AI Search 
+ Coming Soon 
+ AI Overview 
+ Google AI answer + citations 
+ Answer Engines 
+ ChatGPT, Perplexity, Gemini, Grok, Copilot 
+ Other Engines 
+ Bing Search 
+ Organic, ads, video 
+ Yandex Search 
+ JSON results 
+ Specialized Verticals 
+ Coming Soon 
+ Reviews 
+ Hotels 
+ Flights 
+ Jobs 
+ Try in Playground 
+ Documentation & Examples 
+ Contact Sales 
+ Pricing 
+ Blog 
+ Status
+ Contact 
+ Start Building
+ Log in
+ Pricing that scales with your searches 
+ Start with 50 free searches a month, then pick a plan for the volume you need. Only successful requests are billed, and you can upgrade, downgrade or cancel at any time. 
+ Monthly 
+ Yearly -20% 
+ Free 
+ All basic to get started 
+ $0 
+ /mo 
+ Free forever 
+ 50 searches 
+ Try now 
+ Core SERP 
+ Google Search All SERP types Batch endpoint 
+ AI Search 
+ AI Overview Answer Engines 
+ Small 
+ Best for hobby projects 
+ $49.99 
+ /mo 
+ Billed monthly 
+ 25,000 searches 
+ Try now 
+ Core SERP 
+ Google, Bing, Yandex, DuckDuckGo Images, News, Maps, Shopping, Trends, Video Hotels, Flights, Jobs New Markdown output New Batch endpoint 
+ AI Search 
+ AI Overview 3 credits each Answer Engines 
+ Most popular 
+ Medium 
+ More features, SLA 
+ $149.99 
+ /mo 
+ Billed monthly 
+ 100,000 searches 
+ Try now 
+ Everything in Small, plus 
+ Batch endpoint Keyword volume + CPC Personal support Concierge onboarding Service level agreement 
+ AI Search 
+ AI Overview 3 credits each Answer Engines New 
+ Large 
+ More requests 
+ $299.99 
+ /mo 
+ Billed monthly 
+ 250,000 searches 
+ Try now 
+ Everything in Medium, with 
+ 2.5× the monthly searches Lower cost per search 
+ AI Search 
+ AI Overview 3 credits each Answer Engines New 
+ Premium 
+ For large SERP projects 
+ $499.99 
+ /mo 
+ Billed monthly 
+ 500,000 searches 
+ Try now 
+ Everything in Large, plus 
+ Custom queue 
+ AI Search 
+ AI Overview 3 credits each Answer Engines New 
+ Lowest cost per search 
+ Enterprise 
+ For high-volume and AI workloads 
+ $899 
+ /mo 
+ Billed monthly 
+ 1,000,000 searches 
+ Try now 
+ Everything in Premium, plus 
+ Priority support 
+ AI Search 
+ AI Overview 3 credits each Answer Engines New 
+ Only successful requests are billed 
+ An AI Overview request uses 3 searches 
+ Email alerts at 90% and 100% usage 
+ Compare all features 
+ Feature 
+ Free 
+ Small 
+ Medium 
+ Large 
+ Premium 
+ Enterprise 
+ Usage 
+ Searches per month 
+ 50 
+ 25,000 
+ 100,000 
+ 250,000 
+ 500,000 
+ 1,000,000 
+ Cost per 1,000 searches 
+ — 
+ $2.00 
+ $1.50 
+ $1.20 
+ $1.00 
+ $0.90 
+ Core SERP 
+ Google Search 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Bing, Yandex, DuckDuckGo 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Images, News, Maps, Shopping, Trends, Video 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Hotels, Flights, Jobs New 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Markdown output New 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Batch endpoint 
+ — Not included 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Keyword volume + CPC 
+ — Not included 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Custom queue 
+ — Not included 
+ — Not included 
+ — Not included 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ AI Search 
+ AI Overview (3 credits each) 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Answer Engines New 
+ — Not included 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Support 
+ Support 
+ Email 
+ Email 
+ Personal 
+ Personal 
+ Personal 
+ Priority 
+ Concierge onboarding 
+ — Not included 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Service level agreement 
+ — Not included 
+ — Not included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ ✓ Included 
+ Need more than 1,000,000 searches? 
+ Tell us your volume and we'll put together a custom quote. 
+ Contact sales 
+ Choose us 
+ Why Zenserp? 
+ We have been in the SERP industry for many years and know what it takes to scrape SERP at scale. 
+ We have become the preferred partner for companies reaching from startup to Fortune 500 enterprise. 
+ Location Based 
+ Zenserp enables you to obtain accurate and geolocated search engine results. 
+ Highly Scalable 
+ Zenserp always provides you with enough performance, no matter how high your volume might be. 
+ Maximum Speed 
+ Our Google Search Results API is powered by strong infrastructure to return results in realtime. 
+ Affordable 
+ Only pay what you need. Choose between our free or custom plan and let our servers do the work. 
+ Frequently asked questions 
+ Can I also pay annually? 
+ Yes. We also offer you a 20% discount if you choose an annual subscription plan. 
+ Will request errors be counted towards my monthly limit? 
+ No, we only charge you for successful responses. Invalid requests are not going to affect your usage volume! 
+ How much load can your API take? 
+ Our API handles millions of API requests on a daily basis. For our standard plans, we encourage not to exceed 400 concurrent connections. If you need more, please let us know and we are happy to increase that limit for you. Also, we offer an asynchronous batch endpoint, which is useful for extremely large data sets. 
+ Which payment methods do you support? 
+ We accept all common payment methods, including credit cards (MasterCard, Visa, American Express). Enterprise and high-volume customers may request annual bank transfer payments to be enabled. 
+ What is the difference between the different plans? 
+ The plans vary according to the number of the available search requests. Also, our larger plans come with unlimited support and come with a service level agreement (SLA). No matter how small or big your project is, there is the right plan for you. 
+ What is zenserp.com? 
+ Zenserp.com is a Google SERP API, that enables you to scrape search engine result pages in an easy and efficient way. In realtime and without interruption. 
+ What is the API's uptime? 
+ We are constantly tracking and monitoring the uptime of our service. We are doing every effort to ensure a maximum of availability and reliability, leading to an uptime of 99.9%, calculated on the past 12 months. You can see more detailed information about our API's status, here . 
+ Will you notify me if I run out of requests? 
+ Sure! We will send you an email notification when your monthly usage hits 90% and 100%, so you have enough time to react and adapt your plan. 
+ Still have questions? Let's talk! 
+ Still have questions or need more information? Our team is here to help. Contact us today via phone, email, or live chat and we'll be more than happy to assist you in finding the perfect plan for your needs. 
+ support@apilayer.com 
+ Or fill a contact form 
+ Zenserp enables you to scrape search engine result pages in a fast and scalable way. Getting SERPs has never been easier.
+ Zenserp is not endorsed or affiliated by any search engine provider in any way and does not make use of any API provided by any search engine.
+ General
+ Pricing
+ Free Plan
+ FAQ
+ Contact
+ API Glossary
+ Support
+ API Playground
+ Documentation
+ Legal
+ Privacy Policy
+ Terms of Service (Idera)
+ Imprint
+ Content
+ Top 7 Google Search API Comparison
+ Google Index Checker Tool
+ SERP API Alternative
+ Blog
+ © 2026 Zenserp API, an APILayer product. All rights reserved.
+ Close menu 
+ Pricing 
+ Playground 
+ Documentation 
+ Features
+ Google 
+ Google SERP 
+ Organic, ads, snippets 
+ Image Search 
+ Images for a query 
+ Maps Search 
+ Local businesses 
+ News 
+ Latest news 
+ Shopping 
+ Products + pages 
+ Trends 
+ Popularity over time 
+ Reverse Image 
+ Find pages by image 
+ Youtube 
+ Video results 
+ AI Search 
+ Coming Soon 
+ AI Overview 
+ Google AI answer + citations 
+ Answer Engines 
+ ChatGPT, Perplexity, Gemini, Grok, Copilot 
+ Other Engines 
+ Bing Search 
+ Organic, ads, video 
+ Yandex Search 
+ JSON results 
+ Specialized Verticals 
+ Coming Soon 
+ Reviews 
+ Hotels 
+ Flights 
+ Jobs 
+ Log in
+ Register
+ You want to chat? We need your consent! 
+ The Freshchat Widget is a service for interacting with the Freshchat live chat platform provided, by Freshworks, Inc. 
+ Personal Data processed: Data communicated while using the service; email address; Tracker; Usage Data. 
+ Place of processing: European Union - Privacy Policy 
+ You want to chat? We need your consent! 
+ The Freshchat Widget is a service for interacting with the Freshchat live chat platform provided, by Freshworks, Inc. 
+ Personal Data processed: Data communicated while using the service; email address; Tracker; Usage Data. 
+ Place of processing: European Union - Privacy Policy 
+ Yes, I Agree
+ No, Thanks
+ By using our website you agree to our privacy policy .

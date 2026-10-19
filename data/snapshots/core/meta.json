@@ -1,0 +1,70 @@
+{
+ "slug": "core",
+ "name": "CORE",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:43+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://core.ac.uk/services/api",
+   "status": 200,
+   "final_url": "https://core.ac.uk/services/api",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 3000000,
+   "truncated": true,
+   "sha256": "7f5dfe5cd975395107f0cfde8b5e61a39c0fa64ace046139268b23a6a4b878d1",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 2909009
+  },
+  "docs": {
+   "url": "https://api.core.ac.uk/docs/v3",
+   "status": 200,
+   "final_url": "https://api.core.ac.uk/docs/v3",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 148085,
+   "truncated": false,
+   "sha256": "4277f5f4c3ce23434f7c50d3937a3888527a4d2a946e89a4226a713641714274",
+   "fetched_at": "2026-10-19T05:54:49+00:00",
+   "text_bytes": 22
+  },
+  "llms-err-be9183": {
+   "url": "https://api.core.ac.uk/docs/v3/llms.txt",
+   "status": 0,
+   "final_url": "https://api.core.ac.uk/docs/v3/llms.txt",
+   "content_type": "",
+   "bytes": 28,
+   "truncated": false,
+   "sha256": "693919be92a592d0ab39d3a80a50801930732ee20d6dee5aaf1c0eb0cda7c5ff",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  },
+  "llms-err-eaec00": {
+   "url": "https://core.ac.uk/services/api/llms.txt",
+   "status": 404,
+   "final_url": "https://core.ac.uk/services/api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 55077,
+   "truncated": false,
+   "sha256": "087fc64e04771ba05dcf805bff4e5b246a90e61dabae3a23c39937495d6a6f0c",
+   "fetched_at": "2026-10-19T05:55:15+00:00"
+  },
+  "llms-err-b01d23": {
+   "url": "https://core.ac.uk/services/api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://core.ac.uk/services/api/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 55077,
+   "truncated": false,
+   "sha256": "087fc64e04771ba05dcf805bff4e5b246a90e61dabae3a23c39937495d6a6f0c",
+   "fetched_at": "2026-10-19T05:55:15+00:00"
+  },
+  "llms-err-11038e": {
+   "url": "https://docs.core.ac.uk/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.core.ac.uk/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:55:19+00:00"
+  }
+ }
+}

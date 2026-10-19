@@ -1,0 +1,5 @@
+# Wayback Machine CDX (wayback) category=archive
+home=https://web.archive.org/ pricing=None docs=https://archive.org/help/wayback_api.jsp llms=None
+sources_ok: home:https://web.archive.org/
+--- ranked fact lines ---
+[home] Sign up for free

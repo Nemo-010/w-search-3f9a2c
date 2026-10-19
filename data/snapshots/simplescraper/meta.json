@@ -1,0 +1,73 @@
+{
+ "slug": "simplescraper",
+ "name": "Simplescraper",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:21+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://simplescraper.io/pricing",
+   "status": 200,
+   "final_url": "https://simplescraper.io/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 4882,
+   "truncated": false,
+   "sha256": "b47bb540f8848ee40ea2fac312eac0de5961363dbfc4da48f84a076646d3a3cc",
+   "fetched_at": "2026-10-19T05:54:21+00:00",
+   "text_bytes": 57
+  },
+  "home": {
+   "url": "https://simplescraper.io/",
+   "status": 200,
+   "final_url": "https://simplescraper.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 4882,
+   "truncated": false,
+   "sha256": "b47bb540f8848ee40ea2fac312eac0de5961363dbfc4da48f84a076646d3a3cc",
+   "fetched_at": "2026-10-19T05:54:21+00:00",
+   "text_bytes": 57
+  },
+  "llms": {
+   "url": "https://simplescraper.io/llms.txt",
+   "status": 200,
+   "final_url": "https://simplescraper.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 16207,
+   "truncated": false,
+   "sha256": "94cf9e425966d891aede01e46f6ac9c41558db0e97fe35ec3dc66c445bcb60b5",
+   "fetched_at": "2026-10-19T05:54:22+00:00",
+   "text_bytes": 16205
+  },
+  "llms-full": {
+   "url": "https://simplescraper.io/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://simplescraper.io/docs/llms-full.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 4882,
+   "truncated": false,
+   "sha256": "b47bb540f8848ee40ea2fac312eac0de5961363dbfc4da48f84a076646d3a3cc",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 57
+  },
+  "llms-https://simplescraper.io/docs/llms.txt": {
+   "url": "https://simplescraper.io/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://simplescraper.io/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 4882,
+   "truncated": false,
+   "sha256": "b47bb540f8848ee40ea2fac312eac0de5961363dbfc4da48f84a076646d3a3cc",
+   "fetched_at": "2026-10-19T05:54:23+00:00",
+   "text_bytes": 57
+  },
+  "llms-err-6a4a86": {
+   "url": "https://docs.simplescraper.io/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.simplescraper.io/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:24+00:00"
+  }
+ }
+}

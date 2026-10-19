@@ -1,0 +1,151 @@
+Quick Start - Overview - Z.AI DEVELOPER DOCUMENT Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Overview - Z.AI DEVELOPER DOCUMENT home page English Search... ⌘ K API Keys Payment Method Search... Navigation Get Started Quick Start Guides API Reference Coding Plan Released Notes Terms and Policy Help Center Get Started Quick Start Overview Pricing Core Parameters SDKs Guide Migrate to GLM-5.3 Models GLM-5.3-Flash/FlashX New GLM-5.3 Hot GLM-5.2 Capabilities Thinking Mode Deep Thinking Streaming Messages Tool Streaming Output Function Calling Context Caching Structured Output Tools Web Search Stream Tool Call Agents GLM Slide/Poster Agent(beta) Translation Agent Video Effect Template Agent On this page Getting Started Get More Get Started Quick Start Copy page Copy page Copy page Copy page Tired of limits? GLM Coding Plan — monthly access to world-class models for coding and office tasks, compatible with 20+ top agent tools. All from just $18/month. Try it now → 
+ ​ Getting Started 
+ 1 Get API Key 
+ Access Z.AI Open Platform , Register or Login. 
+ Access Billing Page to top up if needed. 
+ Create a Standard API Key in the API Keys management page. 
+ Copy your API Key for use. 
+ Z.AI Open Platform Access Z.AI Open Platform , Register or Login. API Keys Management Create a Standard API Key in the API Keys management page. 
+ 2 Choose Model 
+ The platform offers multiple models, and you can select the appropriate model based on your needs. For detailed model introductions, please refer to the Models & Agents . 
+ GLM-5.3 Z.ai’s latest flagship model, delivering comprehensive advancements in software engineering and agent capabilities. GLM-5.3-FLASH Multimodal Coding model, specializing in visual programming. 3 Choose the Calling Method Our platform provides various development approaches; you can select the best fit for your project needs and tech stack. HTTP API Standard RESTful API, compatible with all programming languages. Z.AI Python SDK Official Python SDK, featuring full type hints and async support. Z.AI Java SDK Official Java SDK, designed for high concurrency and availability. OpenAI Python SDK OpenAI SDK Compatibility, quickly migrating from OpenAI. API Reference Complete API documentation with parameter descriptions. 4 Make API Call After preparing your API Key and selecting a model, you can start making API calls. Here are examples using curl , Python SDK , and Java SDK : When using GLM Coding Plan, please follow the tutorial to configure your dedicated endpoint. cURL Official Python SDK Official Java SDK OpenAI Python SDK OpenAI NodeJs SDK OpenAI Java SDK curl -X POST "https://api.z.ai/api/paas/v4/chat/completions" \ 
+ -H "Content-Type: application/json" \ 
+ -H "Accept-Language: en-US,en" \ 
+ -H "Authorization: Bearer YOUR_API_KEY" \ 
+ -d '{ 
+ "model": "glm-5.3", 
+ "messages": [ 
+ { 
+ "role": "system", 
+ "content": "You are a helpful AI assistant." 
+ }, 
+ { 
+ "role": "user", 
+ "content": "Hello, please introduce yourself." 
+ } 
+ ] 
+ }' 
+ Install SDK # Install latest version 
+ pip install zai-sdk 
+ # Or specify version 
+ pip install zai-sdk== 0.2.3 
+ Verify Installation import zai 
+ print (zai. __version__ ) 
+ Usage Example from zai import ZaiClient 
+ # Initialize client 
+ client = ZaiClient( api_key = "YOUR_API_KEY" ) 
+ # Create chat completion request 
+ response = client.chat.completions.create( 
+ model = "glm-5.3" , 
+ messages = [ 
+ { 
+ "role" : "system" , 
+ "content" : "You are a helpful AI assistant." 
+ }, 
+ { 
+ "role" : "user" , 
+ "content" : "Hello, please introduce yourself." 
+ } 
+ ] 
+ ) 
+ # Get response 
+ print (response.choices[ 0 ].message.content) 
+ Install SDK Maven < dependency > 
+ < groupId > ai.z.openapi </ groupId > 
+ < artifactId > zai-sdk </ artifactId > 
+ < version > 0.3.5 </ version > 
+ </ dependency > 
+ Gradle (Groovy) implementation 'ai.z.openapi:zai-sdk:0.3.5' 
+ Usage Example import ai.z.openapi.ZaiClient; 
+ import ai.z.openapi.service.model. * ; 
+ import java.util.Arrays; 
+ public class QuickStart { 
+ public static void main ( String [] args ) { 
+ // Initialize client 
+ ZaiClient client = ZaiClient . builder (). ofZAI () 
+ . apiKey ( "YOUR_API_KEY" ) 
+ . build (); 
+ // Create chat completion request 
+ ChatCompletionCreateParams request = ChatCompletionCreateParams . builder () 
+ . model ( "glm-5.3" ) 
+ . messages ( Arrays . asList ( 
+ ChatMessage . builder () 
+ . role ( ChatMessageRole . USER . value ()) 
+ . content ( "Hello, who are you?" ) 
+ . build () 
+ )) 
+ . stream ( false ) 
+ . build (); 
+ // Send request 
+ ChatCompletionResponse response = client . chat (). createChatCompletion (request); 
+ // Get response 
+ System . out . println ( response . getData (). getChoices (). get ( 0 ). getMessage (). getContent ()); 
+ } 
+ } 
+ Install SDK # Install or upgrade to latest version 
+ pip install --upgrade 'openai>=1.0' 
+ Verify Installation python - c "import openai; print(openai.__version__)" 
+ Usage Example from openai import OpenAI 
+ client = OpenAI( 
+ api_key = "your-Z.AI-api-key" , 
+ base_url = "https://api.z.ai/api/paas/v4/" 
+ ) 
+ completion = client.chat.completions.create( 
+ model = "glm-5.3" , 
+ messages = [ 
+ { "role" : "system" , "content" : "You are a smart and creative novelist" }, 
+ { "role" : "user" , "content" : "Please write a short fairy tale story as a fairy tale master" } 
+ ] 
+ ) 
+ print (completion.choices[ 0 ].message.content) 
+ Install SDK # Install or upgrade to latest version 
+ npm install openai 
+ # Or using yarn 
+ yarn add openai 
+ Usage Example import OpenAI from "openai" ; 
+ const client = new OpenAI ({ 
+ apiKey: "your-Z.AI-api-key" , 
+ baseURL: "https://api.z.ai/api/paas/v4/" 
+ }); 
+ async function main () { 
+ const completion = await client . chat . completions . create ({ 
+ model: "glm-5.3" , 
+ messages: [ 
+ { role: "system" , content: "You are a helpful AI assistant." }, 
+ { role: "user" , content: "Hello, please introduce yourself." } 
+ ] 
+ }); 
+ console . log ( completion . choices [ 0 ]. message . content ); 
+ } 
+ main (); 
+ Install SDK Maven < dependency > 
+ < groupId > com.openai </ groupId > 
+ < artifactId > openai-java </ artifactId > 
+ < version > 2.20.1 </ version > 
+ </ dependency > 
+ Gradle (Groovy) implementation 'com.openai:openai-java:2.20.1' 
+ Usage Example import com.openai.client.OpenAIClient; 
+ import com.openai.client.okhttp.OpenAIOkHttpClient; 
+ import com.openai.models.chat.completions.ChatCompletion; 
+ import com.openai.models.chat.completions.ChatCompletionCreateParams; 
+ public class QuickStart { 
+ public static void main ( String [] args ) { 
+ // Initialize client 
+ OpenAIClient client = OpenAIOkHttpClient . builder () 
+ . apiKey ( "your-Z.AI-api-key" ) 
+ . baseUrl ( "https://api.z.ai/api/paas/v4/" ) 
+ . build (); 
+ // Create chat completion request 
+ ChatCompletionCreateParams params = ChatCompletionCreateParams . builder () 
+ . addSystemMessage ( "You are a helpful AI assistant." ) 
+ . addUserMessage ( "Hello, please introduce yourself." ) 
+ . model ( "glm-5.3" ) 
+ . build (); 
+ // Send request and get response 
+ ChatCompletion chatCompletion = client . chat (). completions (). create (params); 
+ Object response = chatCompletion . choices (). get ( 0 ). message (). content (); 
+ System . out . println (response); 
+ } 
+ } 
+ ​ Get More 
+ API Reference Access API Reference. Python SDK Access Python SDK Github Java SDK Access Java SDK Github Was this page helpful? Yes No Overview x github discord linkedin Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

@@ -1,0 +1,85 @@
+# NewsAPI.ai
+
+> NewsAPI.ai is the news API of Event Registry: real-time and archive (since 2014) access to news, blog and press-release articles from 150,000+ publishers in 50+ languages. Every article is enriched with entities (concepts linked to Wikipedia), categories, sentiment, locations and duplicate information; related articles are clustered into events, and Signal Types classify 136+ kinds of real-world developments (mergers, layoffs, protests, wildfires, ...) at the sentence level. Access is via a REST API (JSON over GET or POST), Python and Node.js SDKs, and an MCP server.
+
+Key facts for using the API:
+
+- Authentication: every request carries an `apiKey` parameter. Registration at https://newsapi.ai/register is free and includes 2,000 tokens (no credit card); the key is shown on https://newsapi.ai/dashboard.
+- Base URL: `https://eventregistry.org/api/v1/...` (the same paths also work on `https://newsapi.ai`). Text-analytics endpoints live on `https://analytics.eventregistry.org/api/v1/...`. Send `POST` requests with a JSON body (`Content-Type: application/json`); `GET` with query parameters also works for simple calls.
+- Most-used endpoints: `/api/v1/article/getArticles` (search articles), `/api/v1/event/getEvents` (search events), `/api/v1/suggestConceptsFast` (turn a name into a concept URI). Prefer concept URIs (e.g. `http://en.wikipedia.org/wiki/Tesla,_Inc.`) over keywords: they match an entity in every language.
+- Costs: searching recent data (last 30 days) costs 1 token per article search and 5 per event search; searching the archive costs 5 / 20 tokens per searched year. A search returns at most 100 articles or 50 events per page.
+- Limits: at most 5 simultaneous requests per user (HTTP 429 otherwise); make requests sequentially. HTTP 401/403 mean the token limit was reached or the key/IP is disabled.
+- Complex boolean queries use the `query` parameter with a MongoDB-like JSON (`$query` with `$and` / `$or` / `$not`, plus an optional `$filter`); it cannot be combined with the simple `keyword`, `conceptUri`, ... parameters in the same request.
+
+## Docs
+
+- [Full documentation for LLMs](https://newsapi.ai/llms-full.txt): this index plus the complete endpoint reference, query language and data models in one Markdown file
+- [Documentation introduction](https://newsapi.ai/documentation?tab=introduction): API keys, response codes, rate limits, query-condition limits, token costs, SDKs
+- [Terminology](https://newsapi.ai/documentation?tab=terminology): articles, events, concepts, categories (IPTC, DMOZ, News taxonomies), sources, locations
+- [Search query language](https://newsapi.ai/documentation?tab=query_language): simple parameters vs. the advanced JSON query language with `$and` / `$or` / `$not` and `$filter`
+- [Keyword search modes](https://newsapi.ai/documentation?tab=keyword_search_options): `phrase` (default), `exact` (Boolean AND/OR/NOT, NEAR/x, NEXT/x) and `simple` (relevance-based) matching
+- [Data models](https://newsapi.ai/documentation?tab=data_models): fields of the returned article, event, concept, category, source and location objects
+- [Supported languages](https://newsapi.ai/documentation?tab=supported_languages): ISO 639-3 codes for the `lang` parameter (eng, deu, fra, spa, zho, ...)
+- [OpenAPI specification](https://newsapi.ai/static/api.yaml): YAML description of the REST endpoints
+- [MCP integration](https://newsapi.ai/documentation?tab=newsapi_mcp): use NewsAPI.ai from Claude, Cursor, VS Code, Gemini CLI and other MCP clients: the hosted server `https://mcp.newsapi.ai/mcp` (OAuth sign-in) or locally `npx -y newsapi-mcp` with the `NEWSAPI_KEY` environment variable
+
+## Articles
+
+- [Get articles](https://newsapi.ai/documentation?tab=searchArticles): search articles by keyword, concept, category, source, author, location, language, date, sentiment and more; also returns aggregates (timeline, top concepts, sources, sentiment, ...)
+- [Get articles for topic page](https://newsapi.ai/documentation?tab=searchArticlesForTopic): articles matching a topic page saved in the Event Registry web app
+- [Get article details](https://newsapi.ai/documentation?tab=articleDetails): full information about one or more articles by article URI
+- [Stream of new articles](https://newsapi.ai/documentation?tab=feedOfArticles): articles added in the last minutes, for real-time ingestion
+
+## Events
+
+- [Get events](https://newsapi.ai/documentation?tab=searchEvents): search events (clusters of articles in any language about the same real-world happening)
+- [Get events for a topic page](https://newsapi.ai/documentation?tab=searchEventsForTopic): events matching a saved topic page
+- [Get event details](https://newsapi.ai/documentation?tab=eventDetails): an event's summary, articles, concepts, categories, similar events and other details
+- [Stream of events](https://newsapi.ai/documentation?tab=feedOfEvents): events added or updated in the last minutes
+- [Breaking events](https://newsapi.ai/documentation?tab=breakingEvents): events that are currently receiving a burst of new coverage
+
+## Signal Types
+
+- [Get mentions](https://newsapi.ai/documentation?tab=searchMentions): sentence-level mentions of real-world developments, classified into Signal Types (event types), with facticity (fact / opinion / forecast), entities and sentiment
+- [Suggest event types](https://newsapi.ai/documentation?tab=suggEventTypes): find the URI of a Signal Type by name
+- [Signal Types overview](https://newsapi.ai/signal-types): the 136+ Signal Types across Business, Society and Environment, and their use cases
+
+## Autosuggest (name to URI)
+
+- [Suggest concepts](https://newsapi.ai/documentation?tab=suggConcepts): concept URI for a person, organization, location or thing
+- [Suggest categories](https://newsapi.ai/documentation?tab=suggCategories): category URI (IPTC, DMOZ or News taxonomy)
+- [Suggest sources](https://newsapi.ai/documentation?tab=suggSources): source URI for a publisher name or domain
+- [Suggest authors](https://newsapi.ai/documentation?tab=suggAuthors): author URI for a journalist's name
+- [Suggest locations](https://newsapi.ai/documentation?tab=suggLocations): location URI for a place name
+
+## Text analytics
+
+- [Annotate](https://newsapi.ai/documentation?tab=annotate): identify people, organizations, locations and concepts in your own text, linked to Wikipedia
+- [Categorize](https://newsapi.ai/documentation?tab=categorize): classify text into the category taxonomies
+- [Semantic similarity](https://newsapi.ai/documentation?tab=semanticSimilarity): similarity of two documents, also across languages
+- [Sentiment](https://newsapi.ai/documentation?tab=sentiment): sentiment of a text
+- [Extract article information](https://newsapi.ai/documentation?tab=extractArticleInfo): title, body, authors, date and image from an article URL
+- [Detect language](https://newsapi.ai/documentation?tab=detectLanguage): language of a text
+
+## SDKs and tools
+
+- [Python SDK](https://github.com/EventRegistry/event-registry-python): `pip install eventregistry`; [wiki with guides](https://github.com/EventRegistry/event-registry-python/wiki)
+- [Node.js SDK](https://github.com/EventRegistry/event-registry-node-js): `npm install eventregistry`
+- [NewsAPI.ai MCP server](https://github.com/EventRegistry/newsapi-mcp): MCP tools `suggest`, `search` (articles, events or mentions), `get_breaking_events`, `get_topic_page_articles`, `get_topic_page_events`, `get_api_usage`
+- [API sandbox](https://newsapi.ai/documentation/sandbox): build and run requests in the browser
+- [Code examples](https://newsapi.ai/documentation/examples): ready-made requests for common tasks
+
+## Pricing
+
+- [Plans](https://newsapi.ai/plans): monthly token plans; free tier of 2,000 tokens on registration
+- [Token usage](https://newsapi.ai/documentation?tab=introduction): how many tokens each type of request costs (recent vs. archive, searches, aggregates, text analytics)
+- [API usage endpoint](https://newsapi.ai/documentation?tab=usage): `/api/v1/usage` returns the available and used tokens of your key
+
+## Optional
+
+- [Python introduction](https://newsapi.ai/intro-python): getting started with the Python SDK
+- [Free news API](https://newsapi.ai/free-news-api): what the free tier includes
+- [Media monitoring](https://newsapi.ai/media-monitoring), [risk monitoring](https://newsapi.ai/risk-monitoring), [market intelligence](https://newsapi.ai/market-intelligence), [geopolitical intelligence](https://newsapi.ai/geopolitical-intelligence), [news aggregation](https://newsapi.ai/news-aggregation), [data mining](https://newsapi.ai/data-mining), [text analytics](https://newsapi.ai/text-analytics): use-case pages
+- [Category lists](https://newsapi.ai/static/categorization/iptc.txt): downloadable IPTC, [News](https://newsapi.ai/static/categorization/news.txt) and [DMOZ](https://newsapi.ai/static/categorization/dmoz.txt) category URIs
+- [Blog](https://newsapi.ai/blog/): articles, tutorials and product news
+- [About Event Registry](https://newsapi.ai/about), [terms of service](https://newsapi.ai/terms), [contact sales](https://newsapi.ai/contact-sales)

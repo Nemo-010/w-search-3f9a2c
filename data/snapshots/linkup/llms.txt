@@ -1,0 +1,105 @@
+# Linkup
+
+> The production-grade Web Search API for AI. Used by McKinsey, SNCF, Cohere, Legora, Polymarket, and Artisan AI. #1 on OpenAI's SimpleQA.
+
+Linkup is a web search API that gives AI applications and agents real-time, grounded access to the web through a single API call, or deployed inside your own cloud for enterprise needs. Prefer the Documentation links below (markdown) for API usage; use Key pages for product, pricing, and proof.
+
+## Key pages
+- [Linkup](https://www.linkup.so/): Product overview and live API playground.
+- [Enterprise](https://www.linkup.so/product/enterprise): Private and on-prem deployments for enterprise AI systems.
+- [Pricing](https://www.linkup.so/pricing): Pay-as-you-go, transparent pricing for the search API.
+- [Blog](https://www.linkup.so/blog): Guides, benchmarks, and engineering notes on web search for AI.
+- [Benchmarks](https://www.linkup.so/benchmarks): SimpleQA, SealQA-0, GTM, Legal, and Finance benchmark results.
+- [Case Studies](https://www.linkup.so/case-studies): How customers build with Linkup APIs.
+- [Startups](https://www.linkup.so/startups): Free API credits for startups building with real-time web search.
+- [About](https://www.linkup.so/about): The team and mission behind Linkup.
+- [Careers](https://www.linkup.so/careers): Open roles at Linkup.
+- [Contact](https://www.linkup.so/contact): Talk to the team and start building.
+
+## Documentation
+- [Full documentation index](https://docs.linkup.so/llms.txt): Complete llms.txt for API reference, tutorials, SDKs, and integrations.
+- [Introduction](https://docs.linkup.so/pages/documentation/get-started/introduction.md): What the Linkup API is and when to use it.
+- [Quickstart](https://docs.linkup.so/pages/documentation/get-started/quickstart.md): Integrate with Linkup in about five minutes.
+- [For AI agents](https://docs.linkup.so/pages/documentation/get-started/for-agents.md): Knowledge pack for agents: which API to call and how to write queries.
+- [/search](https://docs.linkup.so/pages/documentation/endpoints/search/overview.md): Agentic web search with depths and sourced, structured, or answer output.
+- [/fetch](https://docs.linkup.so/pages/documentation/endpoints/fetch/overview.md): Turn any public URL (HTML or PDF) into clean, LLM-ready markdown or JSON.
+- [/research](https://docs.linkup.so/pages/documentation/endpoints/research/overview.md): Multi-step research agent that produces sourced answers and reports.
+- [/tasks](https://docs.linkup.so/pages/documentation/endpoints/tasks/overview.md): Asynchronous batch wrapper around /search, /fetch, and /research.
+- [Authentication](https://docs.linkup.so/pages/documentation/platform/authentication.md): API keys and how to authenticate requests.
+- [Python SDK](https://docs.linkup.so/pages/sdk/python/python.md): Use Linkup natively from Python.
+- [JavaScript SDK](https://docs.linkup.so/pages/sdk/js/js.md): Use Linkup natively from JavaScript and TypeScript.
+- [MCP server](https://docs.linkup.so/pages/integrations/mcp/mcp.md): Use Linkup from MCP clients such as Cursor and Claude.
+- [Security & privacy](https://docs.linkup.so/pages/security-and-privacy/overview.md): Certifications, data processing model, and security controls.
+
+## Case studies
+- [Aleph Alpha x Linkup: Sovereign AI Search](https://www.linkup.so/case-studies/aleph-alpha-sovereign-search): How Aleph Alpha uses Linkup for EU-hosted, GDPR-compliant web search with zero data retention across sovereign AI solutions.
+- [Sapiom AI Agents Get Real-Time Web Intelligence | Linkup](https://www.linkup.so/case-studies/sapiom-real-time-web-intelligence-ai-agents): See how Sapiom embeds Linkup's search API to give AI agents real-time, source-cited web intelligence through one unified access and billing layer.
+- [Computer use agent](https://www.linkup.so/case-studies/h-company-agentic-platform-with-linkup): Discover how H Company uses Linkup to power the search of its computer use agent
+- [How Artisan leverage Linkup web search API for sales enablement](https://www.linkup.so/case-studies/sales-enablement-enriched-pipeline-real-time-intent): Sales enablement with enriched pipeline data and real-time web intent signals.
+- [Automated Deal Sourcing and Investment Intelligence at Scale](https://www.linkup.so/case-studies/blackfin-case-study): BlackFin built three AI workflows powered by Linkup to qualify LinkedIn signals, enrich their CRM, and automate fintech news briefings. See how they did it.
+- [Legal AI Case Study](https://www.linkup.so/case-studies/delivers-up-to-date-web-data-legal-ai): Delivers the most relevant, up-to-date web data for legal AI applications.
+- [Case study: scaling 120+ AI agents in a top Middle East bank](https://www.linkup.so/case-studies/how-a-leading-middle-east-bank-powers-ai-agents-with-linkup): How one of the Middle East's leading banks deployed 120+ AI agents on Linkup as a centralized intelligence layer
+- [Barebone × Linkup: 77% Returns with AI-Powered Investment Research](https://www.linkup.so/case-studies/user-story-barebone-linkup): Barebone's AI agents detect viral market narratives early, delivering 77% annual returns. See how Linkup powers their real-time investment research.
+- [GitGuardian / Linkup](https://www.linkup.so/case-studies/gitguardian-corporate-entity-mapping): How GitGuardian uses Linkup's search API to map parent-subsidiary relationships in real time
+- [Agentic corporate reputation monitoring with live web context](https://www.linkup.so/case-studies/omniscient-reputation-monitoring): How Omniscient Powers Real-Time Corporate Reputation Management with Linkup
+- [Pipeline enrichment & business intelligence web search](https://www.linkup.so/case-studies/pennylane-sales-enrichment-intelligence): How Pennylane scaled companies intelligence with Linkup
+- [Chatbot Insights Case Study](https://www.linkup.so/case-studies/retrieves-live-user-feedback-market-insights-chatbots): Retrieves live user feedback and market insights for customer-facing chatbots.
+- [Asset Management AI Case Study](https://www.linkup.so/case-studies/Polymarket): Case study from a 100B+ in assets firm using Linkup APIs.
+- [Deep Research Tool Case Study](https://www.linkup.so/case-studies/built-internal-productivity-deep-research-tool): Built an internal productivity and deep research tool powered by real-time web data.
+
+## Blog
+- [Sovereign AI is a control problem](https://www.linkup.so/blog/sovereign-ai-is-a-control-problem): Sovereign AI means control, not a vendor's nationality. Five tests for data use, regions, models, agents, and switching providers.
+- [How to Migrate from Exa to Linkup (Without Breaking Your Integration)](https://www.linkup.so/blog/how-to-migrate-from-exa-to-linkup): A practical guide to porting Exa API calls to Linkup - covering query rewriting, parameter mapping, and the key difference between Exa's noun-phrase model and Linkup's instruction-based approach.
+- [SPARSEUP - Open-Source Sparse Retrieval Model (SOTA on BEIR-13)](https://www.linkup.so/blog/introducing-sparseup-by-linkup): SPARSEUP is Linkup Research's open-source sparse embedding model - under 150M params, SOTA on BEIR-13, sub-millisecond retrieval. Apache 2.0, free to use.
+- [Linkup Flash (Alpha): Accurate Web Search for Agents in Under 200ms](https://www.linkup.so/blog/introducing-linkup-flash): Linkup Flash (Alpha) returns web context in under 200 ms at the median, measured client-side — the most accurate web search API on SimpleQA under 200 ms.
+- [How we tuned a GPU pipeline 6x in one day](https://www.linkup.so/blog/how-we-tune-a-gpu-pipeline-in-an-agentic-world): From 4% to 25% GPU utilization in one day. Roofline model, coding agent loop, vLLM. How Linkup tuned its embedding pipeline 6x without changing the model.
+- [Best Web Search API 2026: Enterprise Buyer's Guide](https://www.linkup.so/blog/enterprise-web-search-api-buyers-guide-2026): The best web search API for enterprise in 2026, compared on compliance (ZDR/BYOC), citation accuracy, latency at scale, and true total cost.
+- [How to Migrate from Tavily to Linkup (Step-by-Step)](https://www.linkup.so/blog/how-to-migrate-from-tavily-to-linkup): Complete migration guide from Tavily to Linkup: parameter mapping, code examples in Python, Fetch vs Extract differences, and compliance features. Switch in under an hour.
+- [Data enrichment for AI agents: real-time web](https://www.linkup.so/blog/data-enrichment-for-ai-agents-real-time-web): Data enrichment done right: an AI agent fetches and verifies each field from the live web at query time, with a citation per attribute, instead of a stale database.
+- [LLM Knowledge Reconciliation vs RAG: The Grounding Gap](https://www.linkup.so/blog/llm-knowledge-reconciliation-vs-rag): LLM knowledge reconciliation vs RAG both depend on one thing: fresh, verifiable facts. Here is why a grounding API is the missing input layer.
+- [Real-time web search for AI agents: 2026 checklist](https://www.linkup.so/blog/real-time-web-search-for-ai-agents-buyers-checklist): The 2026 buyer's checklist for real-time web search for AI agents: freshness, source diversity, latency, compliance, and accuracy scored per provider.
+- [Zero Data Retention for a Web Search API for LLM](https://www.linkup.so/blog/what-is-zero-data-retention-and-why-does-it-matter-for-ai-teams): Zero Data Retention means queries and results are never stored. Here is why it matters when choosing a web search API for LLM workloads in production.
+- [Perplexity Sonar API Alternative for RAG (2026)](https://www.linkup.so/blog/perplexity-sonar-api-alternative-for-rag): Linkup is the Perplexity Sonar API alternative for RAG: 94% SimpleQA F-score, exact citations, zero data retention. Full pipeline comparison for 2026.
+- [Build a Real-Time Research Agent (Grounded Evidence)](https://www.linkup.so/blog/build-a-real-time-research-agent-grounded-web-evidence): How to build a real-time research agent with grounded web evidence: multi-step retrieval, dedup, source-diversity checks, and citation-ready output.
+- [Building Web Search for AI #1 Mercator](https://www.linkup.so/blog/how-we-crawl-the-web-for-ai-search): A web crawler is, on paper, one of the simplest programs you can write. Start from a page, download it, pull out the links, follow them, repeat. You could sketc
+- [Step-by-step guide to connecting Linkup's web search API to SambaCloud](https://www.linkup.so/blog/sambanova-with-web-search-using-linkup): Step-by-step guide to connecting Linkup's web search API to SambaCloud so SambaNova's inference stack answers with grounded, sourced, current data instead of stale training knowledge
+- [What Is a Grounding API for AI Agents?](https://www.linkup.so/blog/what-is-a-grounding-api-for-ai-agents): A grounding API for AI agents connects LLMs to real-time web evidence to stop hallucinations. Definition, rubric, and grounding vs RAG explained.
+- [Why LLM websearch is inaccurate (and how to fix it)](https://www.linkup.so/blog/llm-websearch-inaccurate-fix-grounding-api-layer): LLM websearch is inaccurate because of stale indexes, low-precision ranking, and missing citations. Fix grounding at the API layer, with benchmark data.
+- [Web Search API for AI: Enterprise Buyer's Guide 2026](https://www.linkup.so/blog/web-search-api-enterprise-buyers-guide): The enterprise buyer's guide to the best web search API for AI in 2026. Compared on accuracy, P95 latency, citations, and compliance, with a scoring rubric.
+- [OpenAI deep research API vs Gemini vs Linkup: 2026 guide](https://www.linkup.so/blog/best-deep-research-api-in-2026-openai-gemini-and-linkup-compared): OpenAI and Gemini deep research APIs price by token with no public benchmark. Linkup /research: $0.25–$2.50/request, 61% SealQA-0, SOC 2 Type II.
+- [Pre-Launch anti-hallucination checklist](https://www.linkup.so/blog/pre-launch-anti-hallucination-checklist): 7 checks to run before you ship your AI agent. 15 minutes, Pass / Review / Fail format — grounded in current hallucination research.
+- [Real cost of rag](https://www.linkup.so/blog/the-real-cost-of-rag): The real cost of RAG lives in four other places: initial embedding, ongoing storage, vector database hosting, and re-embedding documents that never actually changed.
+- [Best Tavily Alternative 2026: Web Search APIs Compared](https://www.linkup.so/blog/tavily-alternative-web-search-api-comparison): Linkup is the best Tavily alternative for benchmarked accuracy (94% F-score) and compliance. Full comparison of AI web search APIs with pricing.
+- [Open WebUI web search: setup and provider compare](https://www.linkup.so/blog/best-web-search-for-open-webui-setup-guide-and-provider-comparison): Enable web search in Open WebUI and compare Linkup, SearXNG, Brave, and Tavily on accuracy, pricing, and self-hosted options.
+- [Best web search for OpenClaw: providers compared](https://www.linkup.so/blog/best-web-search-for-openclaw-providers-compared): OpenClaw's 11 native search providers compared on price and accuracy, plus how to call Linkup's 94% F-score API directly.
+- [Best Researcher API 2026: Deep Research APIs Compared](https://www.linkup.so/blog/best-researcher-api-in-2026-deep-research-apis-compared): Compare the best researcher APIs in 2026: Linkup, Valyu, Exa, Perplexity, You.com. Benchmarks (SealQA-0 vs DRACO), pricing, and code examples.
+- [Web Search API Comparison 2026: What Enterprise Teams Actually Check](https://www.linkup.so/blog/best-web-search-api-in-2026-top-providers-compared): Six providers benchmarked on SimpleQA accuracy, Zero Data Retention, latency, and cost per query. Open-source eval you can run yourself.
+- [AI Search API Cost: Why Tokens Matter More Than Price Per Call](https://www.linkup.so/blog/your-search-api-isn-t-what-s-expensive-your-tokens-are): Cost Per Resolved Query: The Right Way to Evaluate Search APIs. Why Your Search API Looks Cheap But Isn't
+- [Why Your AI Cites Sources It Never Read — And How to Fix It](https://www.linkup.so/blog/your-ai-searched-the-web-it-just-didn-t-read-it): Native AI search cites sources it never reads. We tested it against real retrieval - here's what broke, and why it matters for production systems.
+- [AI Search API Compliance: Enterprise Guide 2026](https://www.linkup.so/blog/what-is-ai-search-api-compliance-and-what-enterprise-teams-should-demand-in-2026): AI search API compliance for enterprise: GDPR, EU AI Act, data residency, and zero data retention as 2026 vendor selection criteria.
+- [How to Migrate from SerpAPI to Linkup: Step-by-Step Guide](https://www.linkup.so/blog/how-to-migrate-from-serp-apis-to-linkup): SerpAPI returns ranked links. AI systems need content. Learn how to replace SerpAPI with Linkup in under a day.
+- [linkup vs exa](https://www.linkup.so/blog/why-developers-are-choosing-linkup-over-exa): Why developers are choosing Linkup over Exa
+- [/research vs /search: web search API for LLM](https://www.linkup.so/blog/what-is-the-research-endpoint-and-when-should-you-use-it): Linkup offers two web search API endpoints for LLMs: sub-second /search and multi-step /research. Here is when to use each.
+- [Bring Your Own Cloud for Enterprise Search Explained](https://www.linkup.so/blog/what-is-bring-your-own-cloud-for-search): BYOC is the only fast enterprise search engine architecture where queries never leave your VPC. How it differs from ZDR and when it is required.
+- [Source Diversity in Search APIs: Enterprise Guide](https://www.linkup.so/blog/what-source-diversity-means-in-a-search-api-and-why-it-matters): Source diversity decides factual accuracy and compliance in enterprise search generative AI. Why single-index APIs fall short and what to use instead.
+- [Linkup vs Parallel: Web Search API Comparison (2026)](https://www.linkup.so/blog/linkup-vs-parallel): Compare Linkup and Parallel for AI agents. See how they differ on accuracy, pricing, latency, structured output, and compliance.
+- [Secure GPT for Enterprise: Build a Private AI Assistant in 2026](https://www.linkup.so/blog/how-to-build-a-secure-gpt-style-assistant-in-2026-the-enterprise-roadmap): How to build a secure GPT for your enterprise — private, compliant, grounded on live web data. Step-by-step roadmap for AI teams in 2026.
+- [Best AI tools for enterprise applications in 2026](https://www.linkup.so/blog/best-ai-tools-for-enterprise-applications-in-2026): Enterprise AI stacks in 2026 span five distinct layers. Here is how the stack is evolving – and which tools matter at each layer.
+- [Best European Web Search API](https://www.linkup.so/blog/web-search-apis-in-europe): Choosing a web search provider in Europe is no longer just about relevance or latency. It’s about where data flows, who governs the infrastructure, and whether your AI stack can meet regulatory expectations without adding operational risk.
+- [Linkup × LightOn: Real-Time Web Search for Secure Enterprise AI](https://www.linkup.so/blog/linkup-powers-real-time-web-access-for-lighton-s-secure-ai-platform-paradigm): LightOn integrates Linkup into Paradigm, its secure AI platform for regulated industries. AI agents can now combine internal document analysis with real-time web data — within a fully secure stack for finance, defense, healthcare, and the public sector.
+- [Linkup x x402: Web Search for AI Agents, No Human Account Needed](https://www.linkup.so/blog/linkup-web-search-for-ai-agents-no-human-account-needed): Linkup is the first web search API to support x402, the open payment protocol by Coinbase. AI agents can now search the web and pay per request — no signup, no API key, no human in the loop.
+- [Best Web Search API for AI in 2026, Benchmarked on Accuracy](https://www.linkup.so/blog/best-serp-apis-web-search): We ran 600+ queries across Linkup, Tavily, Exa, Brave, and SerpApi. Here's what the accuracy data shows - with an open-source benchmark you can reproduce.
+- [Baseten + Linkup: Real-Time Web Search for Open-Source Models](https://www.linkup.so/blog/baseten-linkup): Open-source models are powerful but their knowledge is frozen at training time. Learn how to combine Baseten's serverless inference with Linkup's real-time search API to deploy grounded, production-ready AI applications.
+- [Linkup vs. GPT: Retrieval vs. Reasoning in the AI Stack](https://www.linkup.so/blog/retrieval-vs-reasoning-where-linkup-and-gpt-fit-in-your-ai-stack): Linkup and OpenAI solve different problems at different layers of the AI stack. Learn when retrieval is the bottleneck, when reasoning is, and how to compose both for production-grade AI systems.
+- [Bing Search API Is Retired: Best Alternatives for AI Agents in 2026](https://www.linkup.so/blog/what-s-the-best-alternative-to-the-bing-search-api): Microsoft retired the Bing Search API in August 2025. Here are the best alternatives for AI agents and LLM applications.
+- [A Practical Guide to Visibility in AI Search](https://www.linkup.so/blog/a-practical-guide-to-visibility-in-ai-search): We keep getting asked how to win AI search – here’s what we’ve learned.
+- [Linkup raises $10M to build web search for AIs](https://www.linkup.so/blog/linkup-raises-10m-seed-to-build-web-search-for-ai): We’re thrilled to announce that Linkup has raised a $10M seed round led by Gradient to build the Google Search for AIs and released /fast, the world's most accurate sub-second web search API
+- [Linkup vs SERP](https://www.linkup.so/blog/google-vs-serp-apis-why-linkup-users-stay-safe): Why Linkup remains a safe and reliable alternative after Google's lawsuit against SerpApi
+- [Web Search API Benchmark: We Tested Linkup, Exa, Tavily and Perplexity](https://www.linkup.so/blog/evaluating-ai-search-systems-on-complex-queries): 600 enterprise queries, 4 APIs. Linkup showed 2-3x higher source diversity and lower missing-entity rates than Exa, Tavily and Perplexity.
+- [Linkup has achieved SOTA performance](https://www.linkup.so/blog/linkup-establishes-sota-performance-on-simpleqa): Linkup has achieved state-of-the-art (SOTA) performance on SimpleQA scoring 91.0%.
+- [Why Developers are Choosing the Linkup API Over Perplexity Sonar](https://www.linkup.so/blog/perplexity-sonar-vs-linkup): A Comparison of Accuracy, Cost, and Why Sonar is Capped to Protect Perplexity's B2C Product
+- [Web RAG: From 6 Fragile Calls to 1 Reliable Endpoint](https://www.linkup.so/blog/from-6-fragile-calls-to-1-reliable-endpoint): Modern internet retrieval‑augmented generation (RAG) stacks often resemble a Rube Goldberg machine: half a dozen APIs stitched together just to turn a plain‑language question into an answer. Every extra hop adds dollars, seconds, and operational headache. What if you could collapse that entire chain into a single endpoint?
+
+## Optional
+- [App](https://app.linkup.so): Sign up and get a free API key. Dashboard pages are noindex; do not crawl them for content.
+- [Prompt Optimizer](https://prompt.linkup.so): Interactive tool to rewrite queries for Linkup's agentic search API.

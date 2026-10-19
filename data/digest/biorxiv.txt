@@ -1,0 +1,4 @@
+# bioRxiv API (biorxiv) category=academic
+home=https://api.biorxiv.org/ pricing=None docs=https://api.biorxiv.org/ llms=None
+sources_ok: docs:https://api.biorxiv.org/
+--- ranked fact lines ---

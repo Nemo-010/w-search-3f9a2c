@@ -1,0 +1,4 @@
+# GitHub Search API (github-search) category=misc-api
+home=https://docs.github.com/en/rest/search pricing=None docs=https://docs.github.com/en/rest/search llms=None
+sources_ok: docs:https://docs.github.com/en/rest/search
+--- ranked fact lines ---

@@ -1,0 +1,62 @@
+{
+ "slug": "fetchin",
+ "name": "Fetchin",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:06+00:00",
+ "sources": {
+  "home": {
+   "url": "https://fetchin.io/",
+   "status": 200,
+   "final_url": "https://fetchin.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 319145,
+   "truncated": false,
+   "sha256": "453d37685a5ca9c32ae481a175b0833251aa04cbf9f66d64b947af4b17a7491e",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 5778
+  },
+  "llms-err-757f09": {
+   "url": "https://fetchin.io/llms.txt",
+   "status": 404,
+   "final_url": "https://fetchin.io/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 247563,
+   "truncated": false,
+   "sha256": "9c36aa4608a91f355fdeb24f2f82e93e401f69640af3f6378acfc6510f7d42df",
+   "fetched_at": "2026-10-19T05:54:07+00:00"
+  },
+  "llms": {
+   "url": "https://fetchin.io/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://fetchin.io/login",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 246460,
+   "truncated": false,
+   "sha256": "ce6482a145d0bffb15bc359f7d28c745c78b3478401091ad3965b70f6afd3272",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 28
+  },
+  "llms-full": {
+   "url": "https://docs.fetchin.io/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.fetchin.io/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 362453,
+   "truncated": false,
+   "sha256": "039dfba40b8fad7ddb99a9991cb9c4371f127bd6828883206d82d122153c1fe3",
+   "fetched_at": "2026-10-19T05:54:14+00:00",
+   "text_bytes": 361658
+  },
+  "llms-https://docs.fetchin.io/llms.txt": {
+   "url": "https://docs.fetchin.io/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.fetchin.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3178,
+   "truncated": false,
+   "sha256": "cfd1106c20a278ae382c0f95254aefd9469b6d19437165609536dacf1442b19b",
+   "fetched_at": "2026-10-19T05:54:13+00:00",
+   "text_bytes": 3176
+  }
+ }
+}

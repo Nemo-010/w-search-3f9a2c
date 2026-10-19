@@ -1,0 +1,84 @@
+{
+ "slug": "brightdata",
+ "name": "Bright Data",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:10+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://brightdata.com/pricing",
+   "status": 200,
+   "final_url": "https://brightdata.com/pricing",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 234123,
+   "truncated": false,
+   "sha256": "6876498c68daf2eb99328988b73b1ea891e402fb1885aa5f70a9a727b75ca4a5",
+   "fetched_at": "2026-10-19T05:54:10+00:00",
+   "text_bytes": 6597
+  },
+  "docs": {
+   "url": "https://docs.brightdata.com/",
+   "status": 200,
+   "final_url": "https://docs.brightdata.com/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 458137,
+   "truncated": false,
+   "sha256": "e6361f5221f15109f49ec9f986410a00941e486943c02f80f4584c88c9631b42",
+   "fetched_at": "2026-10-19T05:54:16+00:00",
+   "text_bytes": 4919
+  },
+  "home": {
+   "url": "https://brightdata.com/",
+   "status": 200,
+   "final_url": "https://brightdata.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 283747,
+   "truncated": false,
+   "sha256": "f6ad80b9a08d87e2ac0f6dde43490289ab4e93565fc65a7fa720fb7740b0da0d",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 10593
+  },
+  "llms": {
+   "url": "https://docs.brightdata.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.brightdata.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 17161,
+   "truncated": false,
+   "sha256": "6eebabce5484c33d19175eb7717fcd35174736ebfca39f8c6c9e29ca8c5245c6",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 17161
+  },
+  "llms-full": {
+   "url": "https://brightdata.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://brightdata.com/llms-full.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 88491,
+   "truncated": false,
+   "sha256": "c18d378c1971cab49cb4c6bfcb6168a093a426ab31ed46433c577e349ac23e9d",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 88125
+  },
+  "llms-https://brightdata.com/llms.txt": {
+   "url": "https://brightdata.com/llms.txt",
+   "status": 200,
+   "final_url": "https://brightdata.com/llms.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 13239,
+   "truncated": false,
+   "sha256": "d48295932168c79a4f66eccdc3e1c54def84e45ffaeae9f88e7979d36f24559c",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 13239
+  },
+  "llms-err-a27771": {
+   "url": "https://brightdata.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://brightdata.com/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-19T05:54:21+00:00"
+  }
+ }
+}

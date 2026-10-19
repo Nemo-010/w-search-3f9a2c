@@ -1,0 +1,4 @@
+# Reddit JSON (reddit-json) category=misc-api
+home=https://www.reddit.com/dev/api/ pricing=None docs=https://www.reddit.com/dev/api/ llms=None
+sources_ok: docs:https://www.reddit.com/dev/api/
+--- ranked fact lines ---

@@ -1,0 +1,85 @@
+{
+ "slug": "olostep",
+ "name": "Olostep",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.olostep.com/pricing",
+   "status": 200,
+   "final_url": "https://www.olostep.com/pricing",
+   "content_type": "text/html",
+   "bytes": 50468,
+   "truncated": false,
+   "sha256": "73e05a3f07b51a77f59379a7a19e2212bd111161defa6c8d64cea2609eccde59",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 4210
+  },
+  "docs": {
+   "url": "https://docs.olostep.com/",
+   "status": 200,
+   "final_url": "https://docs.olostep.com/get-started/welcome",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 463976,
+   "truncated": false,
+   "sha256": "919a0bc4d87e8e1b4b2c134ee1b9d5a6e7b2c0ae41871aa14fd5aa63a9d4e9b5",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 7507
+  },
+  "home": {
+   "url": "https://www.olostep.com/",
+   "status": 200,
+   "final_url": "https://www.olostep.com/",
+   "content_type": "text/html",
+   "bytes": 374719,
+   "truncated": false,
+   "sha256": "03d556802b0b87e5af486a11b63b70f56ffd291a91e4109c597114b8d7047a99",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 34451
+  },
+  "llms": {
+   "url": "https://docs.olostep.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.olostep.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 18247,
+   "truncated": false,
+   "sha256": "af6ef9df866e7cfbff408cf93b1f1f6b7f34a30147d681c29489b82b0d28b30b",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 18227
+  },
+  "llms-full": {
+   "url": "https://www.olostep.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.olostep.com/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 589470,
+   "truncated": false,
+   "sha256": "34c32b96f0c8fc9fcbe93f5e68bc395ded78d95d8c6c371e3d16d33b5a821f65",
+   "fetched_at": "2026-10-19T05:54:18+00:00",
+   "text_bytes": 588389
+  },
+  "llms-https://www.olostep.com/llms.txt": {
+   "url": "https://www.olostep.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.olostep.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 17094,
+   "truncated": false,
+   "sha256": "1c98bdded008c2e86c59cce304ca5ff5fcff8cd23aa5d27c262ed416bb3d73f6",
+   "fetched_at": "2026-10-19T05:54:11+00:00",
+   "text_bytes": 17048
+  },
+  "llms-https://www.olostep.com/docs/llms.txt": {
+   "url": "https://www.olostep.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.olostep.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 18247,
+   "truncated": false,
+   "sha256": "af6ef9df866e7cfbff408cf93b1f1f6b7f34a30147d681c29489b82b0d28b30b",
+   "fetched_at": "2026-10-19T05:54:17+00:00",
+   "text_bytes": 18227
+  }
+ }
+}

@@ -1,0 +1,1986 @@
+{
+ "generated": "2026-10-19",
+ "note": "candidate provider inventory; URLs fetched by scripts/fetch.py",
+ "providers": [
+  {
+   "slug": "tavily",
+   "name": "Tavily AI",
+   "category": "ai-search",
+   "home": "https://tavily.com/",
+   "pricing": "https://www.tavily.com/#pricing",
+   "docs": "https://docs.tavily.com/",
+   "llms": "https://docs.tavily.com/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "exa",
+   "name": "Exa",
+   "category": "ai-search",
+   "home": "https://exa.ai/",
+   "pricing": "https://exa.ai/pricing",
+   "docs": "https://docs.exa.ai/",
+   "llms": "https://exa.ai/docs/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "firecrawl",
+   "name": "Firecrawl",
+   "category": "ai-search",
+   "home": "https://www.firecrawl.dev/",
+   "pricing": "https://www.firecrawl.dev/pricing",
+   "docs": "https://docs.firecrawl.dev/",
+   "llms": "https://docs.firecrawl.dev/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "jina",
+   "name": "Jina AI",
+   "category": "ai-search",
+   "home": "https://jina.ai/",
+   "pricing": "https://jina.ai/pricing",
+   "docs": "https://docs.jina.ai/",
+   "llms": "https://docs.jina.ai/llms.txt",
+   "note": "also models: https://jina.ai/models/llms.txt"
+  },
+  {
+   "slug": "brave",
+   "name": "Brave Search API",
+   "category": "ai-search",
+   "home": "https://brave.com/search/api/",
+   "pricing": "https://brave.com/search/api/#pricing",
+   "docs": "https://api.search.brave.com/app/documentation",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "perplexity",
+   "name": "Perplexity",
+   "category": "ai-search",
+   "home": "https://www.perplexity.ai/",
+   "pricing": "https://docs.perplexity.ai/getting-started/pricing",
+   "docs": "https://docs.perplexity.ai/",
+   "llms": "https://docs.perplexity.ai/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "you",
+   "name": "You.com",
+   "category": "ai-search",
+   "home": "https://you.com/",
+   "pricing": "https://api.you.com/",
+   "docs": "https://you.com/docs",
+   "llms": "https://you.com/docs/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "parallel",
+   "name": "Parallel",
+   "category": "ai-search",
+   "home": "https://parallel.ai/",
+   "pricing": "https://docs.parallel.ai/resources/pricing",
+   "docs": "https://docs.parallel.ai/",
+   "llms": "https://docs.parallel.ai/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "linkup",
+   "name": "Linkup",
+   "category": "ai-search",
+   "home": "https://www.linkup.so/",
+   "pricing": "https://www.linkup.so/pricing",
+   "docs": "https://docs.linkup.so/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "valyu",
+   "name": "Valyu",
+   "category": "ai-search",
+   "home": "https://valyu.ai/",
+   "pricing": "https://docs.valyu.ai/pricing",
+   "docs": "https://docs.valyu.ai/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "fiber",
+   "name": "Fiber AI",
+   "category": "ai-search",
+   "home": "https://fiber.ai/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "olostep",
+   "name": "Olostep",
+   "category": "ai-search",
+   "home": "https://www.olostep.com/",
+   "pricing": "https://www.olostep.com/pricing",
+   "docs": "https://docs.olostep.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "nimble",
+   "name": "Nimble",
+   "category": "ai-search",
+   "home": "https://nimbleway.com/",
+   "pricing": "https://nimbleway.com/pricing",
+   "docs": "https://docs.nimbleway.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "contextdev",
+   "name": "Context.dev",
+   "category": "ai-search",
+   "home": "https://context.dev/",
+   "pricing": "https://context.dev/pricing",
+   "docs": "https://docs.context.dev/",
+   "llms": "https://docs.context.dev/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "branddev",
+   "name": "Brand.dev",
+   "category": "ai-search",
+   "home": "https://brand.dev/",
+   "pricing": "https://brand.dev/pricing",
+   "docs": "https://docs.brand.dev/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "diffbot",
+   "name": "Diffbot",
+   "category": "ai-search",
+   "home": "https://www.diffbot.com/",
+   "pricing": "https://www.diffbot.com/pricing/",
+   "docs": "https://docs.diffbot.com/",
+   "llms": "https://www.diffbot.com/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "keenable",
+   "name": "Keenable",
+   "category": "ai-search",
+   "home": "https://keenable.ai/",
+   "pricing": null,
+   "docs": "https://docs.keenable.ai/",
+   "llms": "https://docs.keenable.ai/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "octen",
+   "name": "Octen",
+   "category": "ai-search",
+   "home": "https://octen.ai/",
+   "pricing": null,
+   "docs": "https://docs.octen.ai/",
+   "llms": "https://docs.octen.ai/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "tinyfish",
+   "name": "TinyFish",
+   "category": "ai-search",
+   "home": "https://www.tinyfish.ai/",
+   "pricing": null,
+   "docs": "https://docs.tinyfish.ai/",
+   "llms": "https://docs.tinyfish.ai/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "search1api",
+   "name": "Search1API",
+   "category": "ai-search",
+   "home": "https://search1api.com/",
+   "pricing": "https://search1api.com/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "spider",
+   "name": "Spider",
+   "category": "ai-search",
+   "home": "https://spider.cloud/",
+   "pricing": "https://spider.cloud/pricing",
+   "docs": "https://spider.cloud/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapegraphai",
+   "name": "ScrapeGraphAI",
+   "category": "ai-search",
+   "home": "https://scrapegraphai.com/",
+   "pricing": "https://scrapegraphai.com/pricing",
+   "docs": "https://docs.scrapegraphai.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "anyapi",
+   "name": "AnyAPI",
+   "category": "ai-search",
+   "home": "https://anyapi.io/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "litescrape",
+   "name": "Litescrape",
+   "category": "ai-search",
+   "home": "https://litescrape.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "cloro",
+   "name": "Cloro",
+   "category": "ai-search",
+   "home": "https://cloro.dev/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "fetchin",
+   "name": "Fetchin",
+   "category": "ai-search",
+   "home": "https://fetchin.io/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapecreators",
+   "name": "ScrapeCreators",
+   "category": "ai-search",
+   "home": "https://www.scrapecreators.com/",
+   "pricing": null,
+   "docs": "https://docs.scrapecreators.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "justoneapi",
+   "name": "Just One API",
+   "category": "ai-search",
+   "home": "https://justoneapi.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "tikhub",
+   "name": "TikHub",
+   "category": "ai-search",
+   "home": "https://tikhub.io/",
+   "pricing": "https://tikhub.io/pricing",
+   "docs": "https://docs.tikhub.io/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "treg",
+   "name": "treg",
+   "category": "ai-search",
+   "home": "https://treg.to/",
+   "pricing": "https://treg.to/web-access",
+   "docs": "https://treg.to/llms.txt",
+   "llms": "https://treg.to/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "dataforseo",
+   "name": "DataForSEO",
+   "category": "serp-scrape",
+   "home": "https://dataforseo.com/",
+   "pricing": "https://dataforseo.com/pricing",
+   "docs": "https://docs.dataforseo.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "serpapi",
+   "name": "SerpApi",
+   "category": "serp-scrape",
+   "home": "https://serpapi.com/",
+   "pricing": "https://serpapi.com/pricing",
+   "docs": "https://serpapi.com/search-api",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "serper",
+   "name": "Serper",
+   "category": "serp-scrape",
+   "home": "https://serper.dev/",
+   "pricing": "https://serper.dev/pricing",
+   "docs": "https://docs.serper.dev/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapingdog",
+   "name": "ScrapingDog",
+   "category": "serp-scrape",
+   "home": "https://www.scrapingdog.com/",
+   "pricing": "https://www.scrapingdog.com/pricing/",
+   "docs": "https://docs.scrapingdog.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrape.do",
+   "name": "Scrape.do",
+   "category": "serp-scrape",
+   "home": "https://scrape.do/",
+   "pricing": "https://scrape.do/pricing/",
+   "docs": "https://scrape.do/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapingbee",
+   "name": "ScrapingBee",
+   "category": "serp-scrape",
+   "home": "https://www.scrapingbee.com/",
+   "pricing": "https://www.scrapingbee.com/pricing/",
+   "docs": "https://www.scrapingbee.com/documentation/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scraperapi",
+   "name": "ScraperAPI",
+   "category": "serp-scrape",
+   "home": "https://www.scraperapi.com/",
+   "pricing": "https://www.scraperapi.com/pricing/",
+   "docs": "https://docs.scraperapi.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapfly",
+   "name": "Scrapfly",
+   "category": "serp-scrape",
+   "home": "https://scrapfly.io/",
+   "pricing": "https://scrapfly.io/pricing",
+   "docs": "https://scrapfly.io/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "zenrows",
+   "name": "ZenRows",
+   "category": "serp-scrape",
+   "home": "https://www.zenrows.com/",
+   "pricing": "https://www.zenrows.com/pricing",
+   "docs": "https://docs.zenrows.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "brightdata",
+   "name": "Bright Data",
+   "category": "serp-scrape",
+   "home": "https://brightdata.com/",
+   "pricing": "https://brightdata.com/pricing",
+   "docs": "https://docs.brightdata.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "oxylabs",
+   "name": "Oxylabs",
+   "category": "serp-scrape",
+   "home": "https://oxylabs.io/",
+   "pricing": "https://oxylabs.io/pricing",
+   "docs": "https://developers.oxylabs.io/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "decodo",
+   "name": "Decodo",
+   "category": "serp-scrape",
+   "home": "https://decodo.com/",
+   "pricing": "https://decodo.com/pricing",
+   "docs": "https://help.decodo.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "netnut",
+   "name": "NetNut",
+   "category": "serp-scrape",
+   "home": "https://netnut.io/",
+   "pricing": "https://netnut.io/pricing/",
+   "docs": "https://help.netnut.io/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "crawlbase",
+   "name": "Crawlbase",
+   "category": "serp-scrape",
+   "home": "https://crawlbase.com/",
+   "pricing": "https://crawlbase.com/pricing",
+   "docs": "https://crawlbase.com/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "zyte",
+   "name": "Zyte",
+   "category": "serp-scrape",
+   "home": "https://www.zyte.com/",
+   "pricing": "https://www.zyte.com/pricing/",
+   "docs": "https://docs.zyte.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "apify",
+   "name": "Apify",
+   "category": "serp-scrape",
+   "home": "https://apify.com/",
+   "pricing": "https://apify.com/pricing",
+   "docs": "https://docs.apify.com/",
+   "llms": "https://docs.apify.com/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "scraperbox",
+   "name": "ScraperBox",
+   "category": "serp-scrape",
+   "home": "https://scraperbox.com/",
+   "pricing": "https://scraperbox.com/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapehero",
+   "name": "ScrapeHero Cloud",
+   "category": "serp-scrape",
+   "home": "https://www.scrapehero.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapeops",
+   "name": "ScrapeOps",
+   "category": "serp-scrape",
+   "home": "https://scrapeops.io/",
+   "pricing": "https://scrapeops.io/pricing/",
+   "docs": "https://scrapeops.io/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapingant",
+   "name": "ScrapingAnt",
+   "category": "serp-scrape",
+   "home": "https://scrapingant.com/",
+   "pricing": "https://scrapingant.com/pricing",
+   "docs": "https://docs.scrapingant.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "zenserp",
+   "name": "Zenserp",
+   "category": "serp-scrape",
+   "home": "https://zenserp.com/",
+   "pricing": "https://zenserp.com/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "valueserp",
+   "name": "ValueSERP",
+   "category": "serp-scrape",
+   "home": "https://www.valueserp.com/",
+   "pricing": "https://www.valueserp.com/pricing",
+   "docs": "https://www.valueserp.com/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "searchcans",
+   "name": "SearchCans",
+   "category": "serp-scrape",
+   "home": "https://searchcans.com/",
+   "pricing": "https://searchcans.com/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "serply",
+   "name": "Serply",
+   "category": "serp-scrape",
+   "home": "https://serply.io/",
+   "pricing": "https://serply.io/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "serpdog",
+   "name": "Serpdog",
+   "category": "serp-scrape",
+   "home": "https://serpdog.io/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "hasdata",
+   "name": "HasData",
+   "category": "serp-scrape",
+   "home": "https://hasdata.com/",
+   "pricing": "https://hasdata.com/pricing",
+   "docs": "https://docs.hasdata.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "nodemaven",
+   "name": "Nodemaven",
+   "category": "serp-scrape",
+   "home": "https://nodemaven.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "serpwow",
+   "name": "SerpWow",
+   "category": "serp-scrape",
+   "home": "https://www.serpwow.com/",
+   "pricing": "https://www.serpwow.com/pricing",
+   "docs": "https://www.serpwow.com/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "serpstack",
+   "name": "SerpStack",
+   "category": "serp-scrape",
+   "home": "https://serpstack.com/",
+   "pricing": "https://serpstack.com/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "rainforest",
+   "name": "Rainforest API",
+   "category": "serp-scrape",
+   "home": "https://www.rainforestapi.com/",
+   "pricing": "https://www.rainforestapi.com/pricing",
+   "docs": "https://www.rainforestapi.com/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapeninja",
+   "name": "ScrapeNinja",
+   "category": "serp-scrape",
+   "home": "https://scrapeninja.net/",
+   "pricing": "https://scrapeninja.net/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "agenty",
+   "name": "Agenty",
+   "category": "serp-scrape",
+   "home": "https://www.agenty.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "browse-ai",
+   "name": "Browse AI",
+   "category": "serp-scrape",
+   "home": "https://www.browse.ai/",
+   "pricing": "https://www.browse.ai/pricing",
+   "docs": "https://www.browse.ai/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "simplescraper",
+   "name": "Simplescraper",
+   "category": "serp-scrape",
+   "home": "https://simplescraper.io/",
+   "pricing": "https://simplescraper.io/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "webscraperio",
+   "name": "Web Scraper",
+   "category": "serp-scrape",
+   "home": "https://webscraper.io/",
+   "pricing": "https://webscraper.io/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "parsehub",
+   "name": "ParseHub",
+   "category": "serp-scrape",
+   "home": "https://www.parsehub.com/",
+   "pricing": "https://www.parsehub.com/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "octoparse",
+   "name": "Octoparse",
+   "category": "serp-scrape",
+   "home": "https://www.octoparse.com/",
+   "pricing": "https://www.octoparse.com/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "browserless",
+   "name": "Browserless",
+   "category": "browser",
+   "home": "https://www.browserless.io/",
+   "pricing": "https://www.browserless.io/pricing",
+   "docs": "https://docs.browserless.io/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "browserbase",
+   "name": "Browserbase",
+   "category": "browser",
+   "home": "https://www.browserbase.com/",
+   "pricing": "https://www.browserbase.com/pricing",
+   "docs": "https://docs.browserbase.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "steel",
+   "name": "Steel.dev",
+   "category": "browser",
+   "home": "https://steel.dev/",
+   "pricing": "https://steel.dev/pricing",
+   "docs": "https://docs.steel.dev/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "hyperbrowser",
+   "name": "Hyperbrowser",
+   "category": "browser",
+   "home": "https://www.hyperbrowser.ai/",
+   "pricing": "https://www.hyperbrowser.ai/pricing",
+   "docs": "https://docs.hyperbrowser.ai/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "kernel",
+   "name": "Kernel",
+   "category": "browser",
+   "home": "https://www.onkernel.com/",
+   "pricing": "https://www.onkernel.com/pricing",
+   "docs": "https://docs.onkernel.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "anchor",
+   "name": "Anchor Browser",
+   "category": "browser",
+   "home": "https://anchorbrowser.io/",
+   "pricing": "https://anchorbrowser.io/pricing",
+   "docs": "https://docs.anchorbrowser.io/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "airtop",
+   "name": "Airtop",
+   "category": "browser",
+   "home": "https://www.airtop.ai/",
+   "pricing": "https://www.airtop.ai/pricing",
+   "docs": "https://docs.airtop.ai/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "notte",
+   "name": "Notte",
+   "category": "browser",
+   "home": "https://www.notte.cc/",
+   "pricing": "https://www.notte.cc/pricing",
+   "docs": "https://docs.notte.cc/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "skyvern",
+   "name": "Skyvern",
+   "category": "browser",
+   "home": "https://www.skyvern.com/",
+   "pricing": "https://www.skyvern.com/pricing",
+   "docs": "https://docs.skyvern.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "cloudflare-browser",
+   "name": "Cloudflare Browser Rendering",
+   "category": "browser",
+   "home": "https://developers.cloudflare.com/browser-rendering/",
+   "pricing": "https://developers.cloudflare.com/browser-rendering/platform/pricing/",
+   "docs": "https://developers.cloudflare.com/browser-rendering/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "google-cse",
+   "name": "Google Programmable Search",
+   "category": "search-engine",
+   "home": "https://developers.google.com/custom-search/v1/overview",
+   "pricing": "https://developers.google.com/custom-search/v1/overview#pricing",
+   "docs": "https://developers.google.com/custom-search/v1/overview",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "bing-api",
+   "name": "Bing Web Search API",
+   "category": "search-engine",
+   "home": "https://www.microsoft.com/en-us/bing/apis/bing-web-search-api",
+   "pricing": null,
+   "docs": "https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview",
+   "llms": "",
+   "note": "retired 2025-08-11 for new signups"
+  },
+  {
+   "slug": "kagi",
+   "name": "Kagi Search API",
+   "category": "search-engine",
+   "home": "https://kagi.com/api",
+   "pricing": "https://kagi.com/api/pricing",
+   "docs": "https://help.kagi.com/kagi/api/search.html",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "mojeek",
+   "name": "Mojeek Search API",
+   "category": "search-engine",
+   "home": "https://www.mojeek.com/services/search/web-search-api/",
+   "pricing": "https://www.mojeek.com/services/search/web-search-api/",
+   "docs": "https://www.mojeek.com/support/api/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "marginalia",
+   "name": "Marginalia",
+   "category": "search-engine",
+   "home": "https://marginalia-search.com/",
+   "pricing": null,
+   "docs": "https://api.marginalia.nu/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "stract",
+   "name": "Stract",
+   "category": "search-engine",
+   "home": "https://stract.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "presearch",
+   "name": "Presearch",
+   "category": "search-engine",
+   "home": "https://presearch.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "yep",
+   "name": "Yep",
+   "category": "search-engine",
+   "home": "https://yep.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "wiby",
+   "name": "Wiby",
+   "category": "search-engine",
+   "home": "https://wiby.me/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "rightdao",
+   "name": "Right Dao",
+   "category": "search-engine",
+   "home": "https://rightdao.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "teclis",
+   "name": "Teclis",
+   "category": "search-engine",
+   "home": "https://teclis.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "mwmbl",
+   "name": "Mwmbl",
+   "category": "search-engine",
+   "home": "https://mwmbl.org/",
+   "pricing": null,
+   "docs": "https://github.com/mwmbl/mwmbl",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "naver",
+   "name": "Naver Search API",
+   "category": "search-engine",
+   "home": "https://developers.naver.com/docs/serviceapi/search/blog/blog.md",
+   "pricing": "https://developers.naver.com/docs/serviceapi/search/blog/blog.md",
+   "docs": "https://developers.naver.com/docs/serviceapi/search/blog/blog.md",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "kakao",
+   "name": "Kakao/Daum Search API",
+   "category": "search-engine",
+   "home": "https://developers.kakao.com/docs/latest/en/daum-search/common",
+   "pricing": "https://developers.kakao.com/docs/latest/en/daum-search/common",
+   "docs": "https://developers.kakao.com/docs/latest/en/daum-search/common",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "bocha",
+   "name": "Bocha AI",
+   "category": "search-engine",
+   "home": "https://open.bochaai.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "duckduckgo-ia",
+   "name": "DuckDuckGo Instant Answer",
+   "category": "search-engine",
+   "home": "https://duckduckgo.com/api",
+   "pricing": "https://duckduckgo.com/api",
+   "docs": "https://duckduckgo.com/api",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "searxng",
+   "name": "SearXNG (OSS)",
+   "category": "oss",
+   "home": "https://searxng.org/",
+   "pricing": null,
+   "docs": "https://docs.searxng.org/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "whoogle",
+   "name": "Whoogle (OSS)",
+   "category": "oss",
+   "home": "https://github.com/benbusby/whoogle-search",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "4get",
+   "name": "4get (OSS)",
+   "category": "oss",
+   "home": "https://4get.ca/",
+   "pricing": null,
+   "docs": "https://git.4get.ca/4get/4get",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "librey",
+   "name": "LibreY (OSS)",
+   "category": "oss",
+   "home": "https://librey.org/",
+   "pricing": null,
+   "docs": "https://github.com/Ahwxorg/LibreY",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "opensaucenao",
+   "name": "SauceNAO",
+   "category": "search-engine",
+   "home": "https://saucenao.com/",
+   "pricing": "https://saucenao.com/user.php?page=search-api",
+   "docs": "https://saucenao.com/user.php?page=search-api",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "microlink",
+   "name": "Microlink",
+   "category": "reader",
+   "home": "https://microlink.io/",
+   "pricing": "https://microlink.io/#pricing",
+   "docs": "https://microlink.io/docs/api/getting-started",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "apiflash",
+   "name": "ApiFlash",
+   "category": "reader",
+   "home": "https://apiflash.com/",
+   "pricing": "https://apiflash.com/#pricing",
+   "docs": "https://apiflash.com/documentation",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "screenshotone",
+   "name": "ScreenshotOne",
+   "category": "reader",
+   "home": "https://screenshotone.com/",
+   "pricing": "https://screenshotone.com/pricing/",
+   "docs": "https://screenshotone.com/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "urlbox",
+   "name": "Urlbox",
+   "category": "reader",
+   "home": "https://urlbox.com/",
+   "pricing": "https://urlbox.com/pricing",
+   "docs": "https://urlbox.com/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "screenshotapi",
+   "name": "ScreenshotAPI.net",
+   "category": "reader",
+   "home": "https://screenshotapi.net/",
+   "pricing": "https://screenshotapi.net/pricing",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "urltomarkdown",
+   "name": "URLtoMarkdown",
+   "category": "reader",
+   "home": "https://urltomarkdown.com/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "fivefilters-ftr",
+   "name": "FiveFilters Full-Text RSS",
+   "category": "reader",
+   "home": "https://fivefilters.org/content-only/",
+   "pricing": "https://fivefilters.org/content-only/#download",
+   "docs": "https://fivefilters.org/content-only/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "trafilatura",
+   "name": "Trafilatura (OSS)",
+   "category": "oss",
+   "home": "https://trafilatura.readthedocs.io/",
+   "pricing": null,
+   "docs": "https://trafilatura.readthedocs.io/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "markitdown",
+   "name": "MarkItDown (OSS)",
+   "category": "oss",
+   "home": "https://github.com/microsoft/markitdown",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "docling",
+   "name": "Docling (OSS)",
+   "category": "oss",
+   "home": "https://github.com/docling-project/docling",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "mineru",
+   "name": "MinerU (OSS)",
+   "category": "oss",
+   "home": "https://github.com/opendatalab/MinerU",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "wayback",
+   "name": "Wayback Machine CDX",
+   "category": "archive",
+   "home": "https://web.archive.org/",
+   "pricing": null,
+   "docs": "https://archive.org/help/wayback_api.jsp",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "commoncrawl",
+   "name": "Common Crawl",
+   "category": "archive",
+   "home": "https://commoncrawl.org/",
+   "pricing": null,
+   "docs": "https://commoncrawl.org/cc-index",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "arquivo",
+   "name": "Arquivo.pt",
+   "category": "archive",
+   "home": "https://arquivo.pt/",
+   "pricing": null,
+   "docs": "https://arquivo.pt/api",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "urlscan",
+   "name": "urlscan.io",
+   "category": "archive",
+   "home": "https://urlscan.io/",
+   "pricing": "https://urlscan.io/pricing/",
+   "docs": "https://urlscan.io/docs/api/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "openverse",
+   "name": "Openverse API",
+   "category": "misc-api",
+   "home": "https://api.openverse.org/",
+   "pricing": "https://api.openverse.org/",
+   "docs": "https://api.openverse.org/v1/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "internetarchive-scholar",
+   "name": "Internet Archive Scholar",
+   "category": "archive",
+   "home": "https://scholar.archive.org/",
+   "pricing": null,
+   "docs": "https://scholar.archive.org/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "newsapi",
+   "name": "NewsAPI",
+   "category": "news",
+   "home": "https://newsapi.org/",
+   "pricing": "https://newsapi.org/pricing",
+   "docs": "https://newsapi.org/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "gnews",
+   "name": "GNews",
+   "category": "news",
+   "home": "https://gnews.io/",
+   "pricing": "https://gnews.io/#pricing",
+   "docs": "https://gnews.io/docs/v4",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "newsdata",
+   "name": "NewsData.io",
+   "category": "news",
+   "home": "https://newsdata.io/",
+   "pricing": "https://newsdata.io/pricing",
+   "docs": "https://newsdata.io/documentation",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "thenewsapi",
+   "name": "TheNewsAPI",
+   "category": "news",
+   "home": "https://www.thenewsapi.com/",
+   "pricing": "https://www.thenewsapi.com/pricing",
+   "docs": "https://www.thenewsapi.com/documentation",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "mediastack",
+   "name": "Mediastack",
+   "category": "news",
+   "home": "https://mediastack.com/",
+   "pricing": "https://mediastack.com/pricing",
+   "docs": "https://mediastack.com/documentation",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "currents",
+   "name": "Currents API",
+   "category": "news",
+   "home": "https://currentsapi.services/",
+   "pricing": "https://currentsapi.services/en/pricing",
+   "docs": "https://currentsapi.services/en/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "eventregistry",
+   "name": "Event Registry",
+   "category": "news",
+   "home": "https://eventregistry.org/",
+   "pricing": "https://eventregistry.org/pricing",
+   "docs": "https://eventregistry.org/documentation",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "newscatcher",
+   "name": "NewsCatcher",
+   "category": "news",
+   "home": "https://www.newscatcherapi.com/",
+   "pricing": "https://www.newscatcherapi.com/pricing",
+   "docs": "https://docs.newscatcherapi.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "webz",
+   "name": "Webz.io",
+   "category": "news",
+   "home": "https://webz.io/",
+   "pricing": "https://webz.io/pricing",
+   "docs": "https://docs.webz.io/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "gdelt",
+   "name": "GDELT",
+   "category": "news",
+   "home": "https://www.gdeltproject.org/",
+   "pricing": null,
+   "docs": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "guardian",
+   "name": "The Guardian Open Platform",
+   "category": "news",
+   "home": "https://open-platform.theguardian.com/",
+   "pricing": "https://open-platform.theguardian.com/access/",
+   "docs": "https://open-platform.theguardian.com/documentation/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "nyt",
+   "name": "New York Times API",
+   "category": "news",
+   "home": "https://developer.nytimes.com/",
+   "pricing": "https://developer.nytimes.com/pricing",
+   "docs": "https://developer.nytimes.com/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "semanticscholar",
+   "name": "Semantic Scholar",
+   "category": "academic",
+   "home": "https://www.semanticscholar.org/product/api",
+   "pricing": "https://www.semanticscholar.org/product/api",
+   "docs": "https://api.semanticscholar.org/api-docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "openalex",
+   "name": "OpenAlex",
+   "category": "academic",
+   "home": "https://openalex.org/",
+   "pricing": null,
+   "docs": "https://docs.openalex.org/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "core",
+   "name": "CORE",
+   "category": "academic",
+   "home": "https://core.ac.uk/services/api",
+   "pricing": "https://core.ac.uk/services/api",
+   "docs": "https://api.core.ac.uk/docs/v3",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "arxiv",
+   "name": "arXiv API",
+   "category": "academic",
+   "home": "https://info.arxiv.org/help/api/index.html",
+   "pricing": null,
+   "docs": "https://info.arxiv.org/help/api/index.html",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "pubmed",
+   "name": "PubMed E-utilities",
+   "category": "academic",
+   "home": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+   "pricing": null,
+   "docs": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "crossref",
+   "name": "Crossref REST API",
+   "category": "academic",
+   "home": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+   "pricing": null,
+   "docs": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "unpaywall",
+   "name": "Unpaywall",
+   "category": "academic",
+   "home": "https://unpaywall.org/products/api",
+   "pricing": null,
+   "docs": "https://unpaywall.org/products/api",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "doaj",
+   "name": "DOAJ API",
+   "category": "academic",
+   "home": "https://doaj.org/api/docs",
+   "pricing": null,
+   "docs": "https://doaj.org/api/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "europepmc",
+   "name": "Europe PMC",
+   "category": "academic",
+   "home": "https://europepmc.org/RestfulWebService",
+   "pricing": null,
+   "docs": "https://europepmc.org/RestfulWebService",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scite",
+   "name": "Scite",
+   "category": "academic",
+   "home": "https://scite.ai/",
+   "pricing": "https://scite.ai/pricing",
+   "docs": "https://api.scite.ai/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "openalex-base",
+   "name": "BASE",
+   "category": "academic",
+   "home": "https://www.base-search.net/",
+   "pricing": "https://www.base-search.net/about/en/",
+   "docs": "https://api.base-search.net/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "openaire",
+   "name": "OpenAIRE",
+   "category": "academic",
+   "home": "https://www.openaire.eu/",
+   "pricing": null,
+   "docs": "https://graph.openaire.eu/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "zenodo",
+   "name": "Zenodo API",
+   "category": "academic",
+   "home": "https://developers.zenodo.org/",
+   "pricing": null,
+   "docs": "https://developers.zenodo.org/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "figshare",
+   "name": "Figshare API",
+   "category": "academic",
+   "home": "https://docs.figshare.com/",
+   "pricing": null,
+   "docs": "https://docs.figshare.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "osf",
+   "name": "OSF API",
+   "category": "academic",
+   "home": "https://developer.osf.io/",
+   "pricing": null,
+   "docs": "https://developer.osf.io/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "datacite",
+   "name": "DataCite API",
+   "category": "academic",
+   "home": "https://support.datacite.org/docs/api",
+   "pricing": null,
+   "docs": "https://support.datacite.org/docs/api",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "biorxiv",
+   "name": "bioRxiv API",
+   "category": "academic",
+   "home": "https://api.biorxiv.org/",
+   "pricing": null,
+   "docs": "https://api.biorxiv.org/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "hal",
+   "name": "HAL API",
+   "category": "academic",
+   "home": "https://api.archives-ouvertes.fr/docs",
+   "pricing": null,
+   "docs": "https://api.archives-ouvertes.fr/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "openlibrary",
+   "name": "Open Library",
+   "category": "misc-api",
+   "home": "https://openlibrary.org/developers/api",
+   "pricing": null,
+   "docs": "https://openlibrary.org/developers/api",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "googlebooks",
+   "name": "Google Books API",
+   "category": "misc-api",
+   "home": "https://developers.google.com/books",
+   "pricing": null,
+   "docs": "https://developers.google.com/books",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "hn-algolia",
+   "name": "Hacker News (Algolia)",
+   "category": "misc-api",
+   "home": "https://hn.algolia.com/api",
+   "pricing": null,
+   "docs": "https://hn.algolia.com/api",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "stackexchange",
+   "name": "StackExchange API",
+   "category": "misc-api",
+   "home": "https://api.stackexchange.com/",
+   "pricing": null,
+   "docs": "https://api.stackexchange.com/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "reddit-json",
+   "name": "Reddit JSON",
+   "category": "misc-api",
+   "home": "https://www.reddit.com/dev/api/",
+   "pricing": null,
+   "docs": "https://www.reddit.com/dev/api/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "github-search",
+   "name": "GitHub Search API",
+   "category": "misc-api",
+   "home": "https://docs.github.com/en/rest/search",
+   "pricing": null,
+   "docs": "https://docs.github.com/en/rest/search",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "wikidata",
+   "name": "Wikidata SPARQL",
+   "category": "misc-api",
+   "home": "https://query.wikidata.org/",
+   "pricing": null,
+   "docs": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "wikipedia",
+   "name": "Wikimedia REST",
+   "category": "misc-api",
+   "home": "https://api.wikimedia.org/",
+   "pricing": null,
+   "docs": "https://api.wikimedia.org/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "dbpedia",
+   "name": "DBpedia",
+   "category": "misc-api",
+   "home": "https://www.dbpedia.org/",
+   "pricing": null,
+   "docs": "https://dbpedia.org/sparql",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "itunes",
+   "name": "iTunes Search API",
+   "category": "misc-api",
+   "home": "https://performance-partners.apple.com/search-api",
+   "pricing": null,
+   "docs": "https://performance-partners.apple.com/search-api",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "nominatim",
+   "name": "Nominatim (OSM)",
+   "category": "misc-api",
+   "home": "https://nominatim.org/",
+   "pricing": null,
+   "docs": "https://nominatim.org/release-docs/latest/api/Overview/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "open-meteo",
+   "name": "Open-Meteo",
+   "category": "misc-api",
+   "home": "https://open-meteo.com/",
+   "pricing": "https://open-meteo.com/en/pricing",
+   "docs": "https://open-meteo.com/en/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "ipapi-co",
+   "name": "ipapi.co",
+   "category": "misc-api",
+   "home": "https://ipapi.co/",
+   "pricing": "https://ipapi.co/pricing/",
+   "docs": "https://ipapi.co/api/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "ip-api",
+   "name": "ip-api",
+   "category": "misc-api",
+   "home": "https://ip-api.com/",
+   "pricing": null,
+   "docs": "https://ip-api.com/docs/api:json",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "coingecko",
+   "name": "CoinGecko",
+   "category": "misc-api",
+   "home": "https://www.coingecko.com/en/api",
+   "pricing": "https://www.coingecko.com/en/api/pricing",
+   "docs": "https://docs.coingecko.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "fred",
+   "name": "FRED",
+   "category": "misc-api",
+   "home": "https://fred.stlouisfed.org/docs/api/fred/",
+   "pricing": null,
+   "docs": "https://fred.stlouisfed.org/docs/api/fred/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "worldbank",
+   "name": "World Bank",
+   "category": "misc-api",
+   "home": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
+   "pricing": null,
+   "docs": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "uspto",
+   "name": "USPTO",
+   "category": "misc-api",
+   "home": "https://developer.uspto.gov/",
+   "pricing": null,
+   "docs": "https://developer.uspto.gov/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "crtsh",
+   "name": "crt.sh",
+   "category": "misc-api",
+   "home": "https://crt.sh/",
+   "pricing": null,
+   "docs": "https://github.com/crtsh",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "rdap",
+   "name": "RDAP",
+   "category": "misc-api",
+   "home": "https://rdap.org/",
+   "pricing": null,
+   "docs": "https://about.rdap.org/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "restcountries",
+   "name": "REST Countries",
+   "category": "misc-api",
+   "home": "https://restcountries.com/",
+   "pricing": null,
+   "docs": "https://restcountries.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "bluesky",
+   "name": "Bluesky AT Protocol",
+   "category": "misc-api",
+   "home": "https://docs.bsky.app/",
+   "pricing": null,
+   "docs": "https://docs.bsky.app/docs/api/app-bsky-feed-search-posts",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "mastodon",
+   "name": "Mastodon API",
+   "category": "misc-api",
+   "home": "https://docs.joinmastodon.org/api/",
+   "pricing": null,
+   "docs": "https://docs.joinmastodon.org/api/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "openai-websearch",
+   "name": "OpenAI Web Search",
+   "category": "llm-search",
+   "home": "https://platform.openai.com/docs/guides/tools-web-search",
+   "pricing": "https://openai.com/api/pricing/",
+   "docs": "https://platform.openai.com/docs/guides/tools-web-search",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "anthropic-websearch",
+   "name": "Anthropic Web Search",
+   "category": "llm-search",
+   "home": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool",
+   "pricing": "https://www.anthropic.com/pricing",
+   "docs": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "gemini-grounding",
+   "name": "Google Gemini Grounding",
+   "category": "llm-search",
+   "home": "https://ai.google.dev/gemini-api/docs/grounding",
+   "pricing": "https://ai.google.dev/gemini-api/docs/pricing",
+   "docs": "https://ai.google.dev/gemini-api/docs/grounding",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "xai-live-search",
+   "name": "xAI Live Search",
+   "category": "llm-search",
+   "home": "https://docs.x.ai/docs/guides/live-search",
+   "pricing": "https://docs.x.ai/docs/models",
+   "docs": "https://docs.x.ai/docs/guides/live-search",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "mistral",
+   "name": "Mistral",
+   "category": "llm-search",
+   "home": "https://docs.mistral.ai/",
+   "pricing": "https://mistral.ai/pricing",
+   "docs": "https://docs.mistral.ai/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "cohere",
+   "name": "Cohere",
+   "category": "llm-search",
+   "home": "https://docs.cohere.com/",
+   "pricing": "https://cohere.com/pricing",
+   "docs": "https://docs.cohere.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "groq",
+   "name": "Groq Compound",
+   "category": "llm-search",
+   "home": "https://console.groq.com/docs/compound",
+   "pricing": "https://groq.com/pricing",
+   "docs": "https://console.groq.com/docs/compound",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "zhipu",
+   "name": "Z.ai / Zhipu",
+   "category": "llm-search",
+   "home": "https://docs.z.ai/",
+   "pricing": "https://z.ai/subscribe",
+   "docs": "https://docs.z.ai/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "qwen",
+   "name": "Alibaba Qwen (DashScope)",
+   "category": "llm-search",
+   "home": "https://help.aliyun.com/zh/dashscope/",
+   "pricing": "https://help.aliyun.com/zh/dashscope/",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "moonshot",
+   "name": "Moonshot Kimi",
+   "category": "llm-search",
+   "home": "https://platform.moonshot.ai/",
+   "pricing": "https://platform.moonshot.ai/docs/pricing",
+   "docs": "https://platform.moonshot.ai/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "deepseek",
+   "name": "DeepSeek",
+   "category": "llm-search",
+   "home": "https://platform.deepseek.com/",
+   "pricing": "https://api-docs.deepseek.com/quick_start/pricing",
+   "docs": "https://api-docs.deepseek.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "minimax",
+   "name": "MiniMax",
+   "category": "llm-search",
+   "home": "https://www.minimax.io/",
+   "pricing": "https://www.minimax.io/platform/document",
+   "docs": "https://www.minimax.io/platform/document",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "openrouter",
+   "name": "OpenRouter",
+   "category": "llm-search",
+   "home": "https://openrouter.ai/",
+   "pricing": "https://openrouter.ai/pricing",
+   "docs": "https://openrouter.ai/docs",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "morphic",
+   "name": "Morphic (OSS)",
+   "category": "oss",
+   "home": "https://github.com/miurla/morphic",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "perplexica",
+   "name": "Perplexica (OSS)",
+   "category": "oss",
+   "home": "https://github.com/ItzCrazyKns/Perplexica",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "gpt-researcher",
+   "name": "GPT Researcher (OSS)",
+   "category": "oss",
+   "home": "https://github.com/assafelovic/gpt-researcher",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "storm",
+   "name": "STORM (OSS)",
+   "category": "oss",
+   "home": "https://github.com/stanford-oval/storm",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "khoj",
+   "name": "Khoj (OSS)",
+   "category": "oss",
+   "home": "https://github.com/khoj-ai/khoj",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "crawl4ai",
+   "name": "Crawl4AI (OSS)",
+   "category": "oss",
+   "home": "https://github.com/unclecode/crawl4ai",
+   "pricing": "https://crawl4ai.com/",
+   "docs": "https://docs.crawl4ai.com/",
+   "llms": "https://crawl4ai.com/llms.txt",
+   "note": ""
+  },
+  {
+   "slug": "katana",
+   "name": "Katana (OSS)",
+   "category": "oss",
+   "home": "https://github.com/projectdiscovery/katana",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "crawlee",
+   "name": "Crawlee (OSS)",
+   "category": "oss",
+   "home": "https://crawlee.dev/",
+   "pricing": null,
+   "docs": "https://crawlee.dev/docs/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapy",
+   "name": "Scrapy (OSS)",
+   "category": "oss",
+   "home": "https://scrapy.org/",
+   "pricing": null,
+   "docs": "https://docs.scrapy.org/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "playwright",
+   "name": "Playwright (OSS)",
+   "category": "oss",
+   "home": "https://playwright.dev/",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "browser-use",
+   "name": "Browser Use (OSS)",
+   "category": "oss",
+   "home": "https://browser-use.com/",
+   "pricing": "https://browser-use.com/pricing",
+   "docs": "https://docs.browser-use.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "lightpanda",
+   "name": "Lightpanda (OSS)",
+   "category": "oss",
+   "home": "https://lightpanda.io/",
+   "pricing": "https://lightpanda.io/",
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "maxun",
+   "name": "Maxun (OSS)",
+   "category": "oss",
+   "home": "https://github.com/getmaxun/maxun",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "stagehand",
+   "name": "Stagehand (OSS)",
+   "category": "oss",
+   "home": "https://github.com/browserbase/stagehand",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "firecrawl-oss",
+   "name": "Firecrawl self-host (OSS)",
+   "category": "oss",
+   "home": "https://github.com/firecrawl/firecrawl",
+   "pricing": null,
+   "docs": null,
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "rapidapi",
+   "name": "RapidAPI",
+   "category": "marketplace",
+   "home": "https://rapidapi.com/",
+   "pricing": "https://rapidapi.com/products/hub/pricing",
+   "docs": "https://docs.rapidapi.com/",
+   "llms": null,
+   "note": ""
+  },
+  {
+   "slug": "scrapeops-proxy",
+   "name": "ScrapeOps Proxy",
+   "category": "marketplace",
+   "home": "https://scrapeops.io/proxy-api/",
+   "pricing": "https://scrapeops.io/pricing/",
+   "docs": "https://scrapeops.io/docs/",
+   "llms": null,
+   "note": ""
+  }
+ ]
+}

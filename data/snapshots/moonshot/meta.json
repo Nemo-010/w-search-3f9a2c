@@ -1,0 +1,84 @@
+{
+ "slug": "moonshot",
+ "name": "Moonshot Kimi",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:53+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://platform.moonshot.ai/docs/pricing",
+   "status": 200,
+   "final_url": "https://platform.kimi.ai/docs/pricing/chat",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 283999,
+   "truncated": false,
+   "sha256": "d5ccb6fd56dae63e9c87604fc42ec821bc87fc2e395b1e4179f39f7a171cb6dd",
+   "fetched_at": "2026-10-19T05:54:53+00:00",
+   "text_bytes": 3339
+  },
+  "docs": {
+   "url": "https://platform.moonshot.ai/docs/",
+   "status": 200,
+   "final_url": "https://platform.kimi.ai/docs/overview",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 448072,
+   "truncated": false,
+   "sha256": "12aafd38743325e64480db774263d72eba6dbf8d6f5bb15adad2caaed20471e3",
+   "fetched_at": "2026-10-19T05:54:56+00:00",
+   "text_bytes": 9822
+  },
+  "home": {
+   "url": "https://platform.moonshot.ai/",
+   "status": 200,
+   "final_url": "https://platform.kimi.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 109755,
+   "truncated": false,
+   "sha256": "71b0d3fe91182090e001b3a8f24c1fe6e5d6c983b9856e9247ea1e1ea57de56b",
+   "fetched_at": "2026-10-19T05:55:00+00:00",
+   "text_bytes": 8499
+  },
+  "llms": {
+   "url": "https://platform.moonshot.ai/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://platform.kimi.ai/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 16662,
+   "truncated": false,
+   "sha256": "922caa1c2a0db996d56364d679f5952edd63368b9c3836382d2853c1434ff7a3",
+   "fetched_at": "2026-10-19T05:55:02+00:00",
+   "text_bytes": 16660
+  },
+  "llms-full": {
+   "url": "https://platform.moonshot.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://platform.kimi.ai/llms-full.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 41825,
+   "truncated": false,
+   "sha256": "091c734942b7ba7eea305afea75ea5ec02e9fee3f462fd1a8909c7bef9f94838",
+   "fetched_at": "2026-10-19T05:55:06+00:00",
+   "text_bytes": 17
+  },
+  "llms-https://platform.moonshot.ai/llms.txt": {
+   "url": "https://platform.moonshot.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://platform.kimi.ai/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 41805,
+   "truncated": false,
+   "sha256": "69eb40d437962d0530beefa2352ed7fe00afb90f418d01221aebc3e6647af375",
+   "fetched_at": "2026-10-19T05:55:05+00:00",
+   "text_bytes": 17
+  },
+  "llms-err-7f301b": {
+   "url": "https://docs.platform.moonshot.ai/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.platform.moonshot.ai/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:55:07+00:00"
+  }
+ }
+}

@@ -1,0 +1,71 @@
+# Currents API (currents) category=news
+home=https://currentsapi.services/ pricing=https://currentsapi.services/en/pricing docs=https://currentsapi.services/en/docs/ llms=None
+sources_ok: pricing:https://currentsapi.services/en/pricing, docs:https://currentsapi.services/en/docs/, home:https://currentsapi.services/, llms:https://currentsapi.services/llms.txt, llms-full:https://currentsapi.services/llms-full.txt
+--- ranked fact lines ---
+[pricing] News API Pricing – Free 250 Requests/Day, Plans from $69/mo | Currents
+[home] A free key allows 250 requests per UTC day and up to 20 articles per request. Free searches have a 30-day lookback and a 7-day max date span per request.
+[home] Pricing starts at $0 for the free tier (250 daily requests). Paid plans begin at $69/month for Builder (75K monthly requests), $150/month for Professional (300K monthly requests), and $300/month for Scale (600K monthly requests).
+[llms-full] | Free | $0 | 250/day | 20 | 30 days |
+[llms] - Builder: $69/mo — 2,500 requests/day enforced daily (75K/mo billing allowance), 50 results/request, 6-month archive
+[llms] - Professional: $150/mo — 10,000 requests/day enforced daily (300K/mo billing allowance), 100 results/request, 1-year archive
+[llms] - Scale: $300/mo — 20,000 requests/day enforced daily (600K/mo billing allowance), 200 results/request, 1-year archive
+[home] Get a free API key, test latest-news feeds and keyword search, and access real-time and historical news from a source directory spanning 168 countries and 20+ languages. Start with 250 free requests per day, no credit card required.
+[home] Start with 250 requests per day, no credit card required. See free plan details .
+[home] Yes! Currents offers a free tier with 250 daily requests. No credit card required to sign up. Simply register and start using the API immediately.
+[home] Start free with 250 daily requests — no credit card required.
+[llms-full] | Builder | $69 | 2,500/day (75,000/mo) | 50 | 6 months |
+[llms-full] | Professional | $150 | 10,000/day (300,000/mo) | 100 | 1 year |
+[llms-full] | Scale | $300 | 20,000/day (600,000/mo) | 200 | 1 year |
+[pricing] Start with 250 free requests per day. Move to Builder when you need more monthly requests.
+[pricing] Builder $69: serious evaluation
+[pricing] Professional $150: production growth
+[pricing] Builder $69: production apps that need more monthly volume and archive depth.
+[pricing] Professional $150: monitoring, enrichment, and customer-facing products with heavier usage.
+[pricing] Yes. The free developer plan includes 250 requests per day for evaluation, prototypes, and small apps.
+[pricing] Partial access; max 20 results per request
+[pricing] Max 50 results per request
+[pricing] Max 100 results per request
+[pricing] Max 200 results per request
+[pricing] Your plan stays active until the end of the billing cycle. After that, you will move to the free tier with 250 requests per day.
+[pricing] Free News API (250 req/day)
+[docs] Sign up for free, get an API key, and test up to 250 requests per day.
+[docs] Most teams start by testing the free request quota, then choosing whether latest-news feeds or keyword search fits their workflow.
+[llms] - Free: 250 requests/day (resets 00:00 UTC), 20 results/request, 30-day lookback, 300-character text preview
+[llms] - [Sign Up](https://currentsapi.services/en/register) — free account, no credit card
+[llms-full] - Rate limits: enforced daily caps (Free 250/day, Builder 2,500/day, Professional 10,000/day, Scale 20,000/day) resetting at 00:00 UTC; monthly figures (up to 600K/mo on Scale) are billing allowances
+[pricing] The free developer plan is the entry point for testing Currents with 250 daily requests , recent history access, and clear result limits before moving to paid quotas.
+[docs] 1. Get a free key. Sign up and open your account dashboard.
+[llms] > Real-time news API with a large historical article index, broad monitored source catalog, and 20+ languages. Developer-friendly JSON with monitored production reliability and a free tier.
+[pricing] Sign Up Free
+[pricing] Start free, test a real JSON news request, then upgrade when you need more requests, more history, or larger results. View documentation for API details.
+[pricing] Create Free Account
+[pricing] Free News API plan
+[pricing] Free: try the API
+[pricing] Use the free plan to get an API key, run your first request, and validate whether Latest News or Search fits your app.
+[pricing] Get Free API Key
+[pricing] Free: prototypes, evaluation, and small news features.
+[pricing] Is there a free News API plan?
+[pricing] Two months free
+[pricing] Sign Up For Free
+[pricing] Downgrade to Free
+[docs] Use this quick start to create a free Currents account, copy your API key, and test a JSON response from the Latest News API before choosing a paid plan.
+[docs] New to Currents? Start here: create a free account , copy your key, then run the first request below.
+[docs] 3. Pick a plan later. Upgrade only when quota, history, or result limits become real blockers.
+[docs] Free Account
+--- llms/readme head ---
+# Currents News API
+> Real-time news API with a large historical article index, broad monitored source catalog, and 20+ languages. Developer-friendly JSON with monitored production reliability and a free tier.
+## Overview
+Currents News API provides structured news data via REST endpoints. New articles are indexed daily from a source directory of 12,000+ source entries assigned to 168 country designations.
+## Key endpoints
+- [Latest News](https://currentsapi.services/en/docs/latest_news) — breaking news with language/country/category filters
+- [Search](https://currentsapi.services/en/docs/search) — archive keyword search across indexed articles
+- [OpenAPI Specification](https://currentsapi.services/json/swagger.json) — machine-readable API reference including available language/region/category endpoints
+## Docs
+- [Getting Started](https://currentsapi.services/en/docs/) — authentication, rate limits, endpoint reference
+- [FAQ](https://currentsapi.services/en/faq) — pricing, limits, auth, reliability
+- [Introduction](https://currentsapi.services/en/introduction) — data overview and sample responses
+- [Official Python SDK](https://github.com/currentslab/currentsapi-python) — currentslab/currentsapi-python client library
+- [Facts Page](https://currentsapi.services/en/ai-info) — plain factual statements about Currents API that AI assistants may quote
+## Provider alternatives
+- [Alternative Hub](https://currentsapi.services/en/alternative) — index of every provider comparison

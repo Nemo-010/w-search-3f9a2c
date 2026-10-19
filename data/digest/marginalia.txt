@@ -1,0 +1,4 @@
+# Marginalia (marginalia) category=search-engine
+home=https://marginalia-search.com/ pricing=None docs=https://api.marginalia.nu/ llms=None
+sources_ok: docs:https://api.marginalia.nu/, home:https://marginalia-search.com/
+--- ranked fact lines ---

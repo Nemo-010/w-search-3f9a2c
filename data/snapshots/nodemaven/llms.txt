@@ -1,0 +1,184 @@
+# NodeMaven Help Center
+
+> A selection of Help resources from the NodeMaven Team
+
+## English
+
+### Get Started with NodeMaven
+
+- [Create an Account](https://docs.nodemaven.com/en/articles/9596394-create-an-account.md): Sign up, verify your email, choose a plan, and generate your first proxy.
+- [How to add more traffic to your account](https://docs.nodemaven.com/en/articles/9596734-how-to-add-more-traffic-to-your-account.md): Top up your current plan mid-cycle. Note that a top-up will not unfreeze frozen traffic.
+- [How to upgrade your subscription](https://docs.nodemaven.com/en/articles/9596774-how-to-upgrade-your-subscription.md): Upgrading moves you to a larger plan. Your remaining traffic transfers and your per-GB rate drops.
+- [How to unfreeze your traffic](https://docs.nodemaven.com/en/articles/9596806-how-to-unfreeze-your-traffic.md): Traffic freezes when your subscription ends. Only reactivating or starting a subscription releases it.
+- [How to cancel your subscription](https://docs.nodemaven.com/en/articles/9596822-how-to-cancel-your-subscription.md): Cancelling stops the next payment. Remaining traffic freezes and returns when you subscribe again.
+- [MyBrocard](https://docs.nodemaven.com/en/articles/9652281-mybrocard.md)
+- [Proxy usage statistics](https://docs.nodemaven.com/en/articles/9652267-proxy-usage-statistics.md): Your Dashboard shows traffic used, requests made and top domains. How to read them together to find where your traffic went.
+- [Change password](https://docs.nodemaven.com/en/articles/9652292-change-password.md)
+- [The Sub-user feature](https://docs.nodemaven.com/en/articles/10225129-the-sub-user-feature.md): Create multiple proxy credentials under one main account
+- [Changing the proxy password](https://docs.nodemaven.com/en/articles/10245794-changing-the-proxy-password.md)
+- [How do monthly subscriptions work?](https://docs.nodemaven.com/en/articles/10263215-how-do-monthly-subscriptions-work.md): A monthly subscription gives you set traffic each month, and unused traffic carries over when you renew.
+- [How does Pay-as-you-go work?](https://docs.nodemaven.com/en/articles/10290028-how-does-pay-as-you-go-work.md): Pay-as-you-go is a one-off purchase with no expiry. Traffic from a cancelled subscription does not transfer to it.
+- [How to apply a coupon?](https://docs.nodemaven.com/en/articles/10316413-how-to-apply-a-coupon.md)
+- [Nodemaven referral program](https://docs.nodemaven.com/en/articles/10328111-nodemaven-referral-program.md)
+- [Can I delete my account?](https://docs.nodemaven.com/en/articles/13231432-can-i-delete-my-account.md)
+- [Can I set a password after signing up with Google?](https://docs.nodemaven.com/en/articles/13231469-can-i-set-a-password-after-signing-up-with-google.md)
+- [Get started: How to start using a proxy for the first time](https://docs.nodemaven.com/en/articles/12864793-get-started-how-to-start-using-a-proxy-for-the-first-time.md)
+
+### Rotating Residential & Mobile Proxies
+
+- [Available locations](https://docs.nodemaven.com/en/articles/9596833-available-locations.md): How to target countries, regions, cities, ZIPs and carriers with Residential and Mobile proxies, plus what the availability badges mean.
+- [Session control](https://docs.nodemaven.com/en/articles/9618865-session-control.md)
+- [IP filter modes](https://docs.nodemaven.com/en/articles/9597024-ip-filter-modes.md): The four IP filter modes, what each prioritises, and how they appear in your proxy username.
+- [Getting Started with Residential and Mobile proxies](https://docs.nodemaven.com/en/articles/9596871-getting-started-with-residential-and-mobile-proxies.md)
+- [Authentication methods](https://docs.nodemaven.com/en/articles/9979031-authentication-methods.md): Username and password, or IP whitelist. Where to find your proxy credentials and how to change them.
+- [How to connect to proxies directly through Wi-Fi \(iPhone\)](https://docs.nodemaven.com/en/articles/11722280-how-to-connect-to-proxies-directly-through-wi-fi-iphone.md)
+- [Set up a proxy directly on your Wi-Fi settings \(macOS\)](https://docs.nodemaven.com/en/articles/12982162-set-up-a-proxy-directly-on-your-wi-fi-settings-macos.md): With this method, all system and browser traffic will be routed through your proxy server without needing any extra software. It’s useful for IP masking, geo-testing, secure routing, or working wit...
+- [Understanding your proxy string](https://docs.nodemaven.com/en/articles/12663937-understanding-your-proxy-string.md): What each part of your proxy string means, every parameter the dashboard can add, and worked examples.
+- [IP Whitelist setup](https://docs.nodemaven.com/en/articles/13585316-ip-whitelist-setup.md): Let an approved IP address connect without a username and password. Residential and Mobile only.
+- [Personal Setup](https://docs.nodemaven.com/en/articles/12872383-personal-setup.md)
+- [ISP/Static Proxies](https://docs.nodemaven.com/en/articles/13165405-isp-static-proxies.md): ISP proxies \(Static Residential\) are dedicated IPs that stay the same for your whole order. Availability, connection format, billing and dashboard features.
+
+### Integrations
+
+- [Multilogin X](https://docs.nodemaven.com/en/articles/9639535-multilogin-x.md)
+- [Google Chrome \(SwitchyOmega 3 ZeroOmega extension\)](https://docs.nodemaven.com/en/articles/9644868-google-chrome-switchyomega-3-zeroomega-extension.md): How to set up a proxy in Google Chrome?
+- [MoreLogin](https://docs.nodemaven.com/en/articles/9647927-morelogin.md)
+- [Firefox \(SwitchyOmega extension\)](https://docs.nodemaven.com/en/articles/9645550-firefox-switchyomega-extension.md)
+- [AdsPower](https://docs.nodemaven.com/en/articles/9647492-adspower.md)
+- [GoLogin](https://docs.nodemaven.com/en/articles/9645665-gologin.md)
+- [Dolphin Anty](https://docs.nodemaven.com/en/articles/9647537-dolphin-anty.md)
+- [Octo Browser](https://docs.nodemaven.com/en/articles/9647629-octo-browser.md)
+- [Multilogin](https://docs.nodemaven.com/en/articles/9644458-multilogin.md)
+- [Incogniton](https://docs.nodemaven.com/en/articles/9647701-incogniton.md)
+- [Super Proxy](https://docs.nodemaven.com/en/articles/9699380-super-proxy.md)
+- [BitBrowser](https://docs.nodemaven.com/en/articles/9784818-bitbrowser.md)
+- [Proxifier](https://docs.nodemaven.com/en/articles/10072501-proxifier.md): Proxifier is a tool that allows applications to connect to the internet through a proxy server, even if they don’t natively support proxies.
+- [nstbrowser](https://docs.nodemaven.com/en/articles/10077129-nstbrowser.md): nstbrowser is an advanced anti-detection browser designed for web scraping, automation, and managing multiple accounts.
+- [ixBrowser](https://docs.nodemaven.com/en/articles/9699345-ixbrowser.md): IX Browser is a secure anti-detect browser ideal for managing multiple accounts while protecting user privacy and data.
+- [Hidemyacc](https://docs.nodemaven.com/en/articles/10077161-hidemyacc.md): Hidemyacc is an anti-detect browser designed for secure, multi-account management, minimizing detection and tracking risks.
+- [GhostBrowser](https://docs.nodemaven.com/en/articles/10108646-ghostbrowser.md): Ghost Browser is a multi-session browser designed to streamline workflows, enabling users to log into multiple accounts on the same site.
+- [GeeLark \(Cloud Phone Profile\)](https://docs.nodemaven.com/en/articles/10108718-geelark-cloud-phone-profile.md): GeeLark is a new antidetect solution for multi-accounting.
+- [Undetectable](https://docs.nodemaven.com/en/articles/10204853-undetectable.md): How to setup an Undetectable browser profile with NodeMaven proxies
+- [VMLogin](https://docs.nodemaven.com/en/articles/10272813-vmlogin.md): How to setup a VMLogin profile with NodeMaven proxies
+- [Firefox Browser](https://docs.nodemaven.com/en/articles/10354163-firefox-browser.md)
+- [Shadowrocket \(iOS or Android\)](https://docs.nodemaven.com/en/articles/10386676-shadowrocket-ios-or-android.md)
+- [Telegram](https://docs.nodemaven.com/en/articles/10431343-telegram.md)
+- [Mulogin](https://docs.nodemaven.com/en/articles/10491852-mulogin.md)
+- [Kameleo](https://docs.nodemaven.com/en/articles/10504420-kameleo.md)
+- [DICloak](https://docs.nodemaven.com/en/articles/11922101-dicloak.md)
+- [Google Chrome \(Simple Proxy Switcher extension\)](https://docs.nodemaven.com/en/articles/12036896-google-chrome-simple-proxy-switcher-extension.md): How to set up a proxy in Google Chrome?
+- [Firefox \(Simple Proxy Switcher extension\)](https://docs.nodemaven.com/en/articles/12037194-firefox-simple-proxy-switcher-extension.md): How to set up proxies in Firefox
+- [FoxyProxy extension \(Firefox\)](https://docs.nodemaven.com/en/articles/12040377-foxyproxy-extension-firefox.md)
+- [FoxyProxy extension \(Google Chrome\)](https://docs.nodemaven.com/en/articles/12040888-foxyproxy-extension-google-chrome.md)
+- [Happ - Proxy Utility \(Android and iOS\)](https://docs.nodemaven.com/en/articles/12982103-happ-proxy-utility-android-and-ios.md): Happ is a mobile app that makes it easy to use proxy and VPN servers by offering a user-friendly interface and useful features.
+- [Proxy Helper \(Chrome Extension\)](https://docs.nodemaven.com/en/articles/12982408-proxy-helper-chrome-extension.md)
+- [Potatso \(iOS\)](https://docs.nodemaven.com/en/articles/12982187-potatso-ios.md): Potatso is a powerful network tool which empowers your phone to have fully customized network environment. It's friendly for both beginners and power users.
+- [Postman API setup](https://docs.nodemaven.com/en/articles/12667387-postman-api-setup.md)
+- [Proxy for Arc Browser](https://docs.nodemaven.com/en/articles/12686534-proxy-for-arc-browser.md): Arc Browser Setup
+- [Proxy for Kamelo](https://docs.nodemaven.com/en/articles/12849366-proxy-for-kamelo.md)
+- [Proxy for MasQ Browser](https://docs.nodemaven.com/en/articles/12686474-proxy-for-masq-browser.md)
+- [Proxy for MostLogin](https://docs.nodemaven.com/en/articles/12875338-proxy-for-mostlogin.md)
+- [Proxy for N8N](https://docs.nodemaven.com/en/articles/12688347-proxy-for-n8n.md)
+- [Proxy for Turn2Socks](https://docs.nodemaven.com/en/articles/12826425-proxy-for-turn2socks.md)
+- [Proxy for Turn2Tap](https://docs.nodemaven.com/en/articles/12854122-proxy-for-turn2tap.md)
+- [Setting Up a Proxy Natively on Windows](https://docs.nodemaven.com/en/articles/12657415-setting-up-a-proxy-natively-on-windows.md): How to setup a proxy directly on windows
+- [Puppeteer](https://docs.nodemaven.com/en/articles/10183127-puppeteer.md): How to setup Puppeteer with NodeMaven Proxies
+- [Selenium](https://docs.nodemaven.com/en/articles/10187184-selenium.md): Setting Up Selenium with Python Using NodeMaven Proxies and IP Whitelisting
+- [Playwright](https://docs.nodemaven.com/en/articles/10200340-playwright.md): How to setup Playwright with NodeMaven Proxies and IP Whitelisting
+- [LazyNode](https://docs.nodemaven.com/en/articles/10521048-lazynode.md): A guide on how to use the LazyNode platfom with NodeMaven proxies
+
+### Troubleshooting
+
+- [Why is my proxy slow/slower](https://docs.nodemaven.com/en/articles/9656811-why-is-my-proxy-slow-slower.md)
+- [I cannot connect to proxy while using the SOCKS 5 protocol. If I use HTTP the connection works.](https://docs.nodemaven.com/en/articles/9657859-i-cannot-connect-to-proxy-while-using-the-socks-5-protocol-if-i-use-http-the-connection-works.md)
+- [I think my traffic is burning faster than it should.](https://docs.nodemaven.com/en/articles/9657866-i-think-my-traffic-is-burning-faster-than-it-should.md)
+- [I selected a specific Country and Region and my anti-detect browser is showing my IP is from a totally different one](https://docs.nodemaven.com/en/articles/9657875-i-selected-a-specific-country-and-region-and-my-anti-detect-browser-is-showing-my-ip-is-from-a-totally-different-one.md)
+- [My traffic is reducing 15-30 minutes after closing my anti-detect browser.](https://docs.nodemaven.com/en/articles/9657870-my-traffic-is-reducing-15-30-minutes-after-closing-my-anti-detect-browser.md)
+- [Why is my crypto payment pending?](https://docs.nodemaven.com/en/articles/10193060-why-is-my-crypto-payment-pending.md)
+- [Why was my card declined?](https://docs.nodemaven.com/en/articles/10222433-why-was-my-card-declined.md)
+- [Verify your proxy's status with the Curl command](https://docs.nodemaven.com/en/articles/13056040-verify-your-proxy-s-status-with-the-curl-command.md): The curl command is an essential tool for anyone using proxies. It allows you to quickly verify that your proxy server works, check your public IP, test authentication, and diagnose errors — all fr...
+- [Troubleshot: Why does this specific website not load](https://docs.nodemaven.com/en/articles/12864591-troubleshot-why-does-this-specific-website-not-load.md)
+- [Why doesn’t SOCKS5 work for me?](https://docs.nodemaven.com/en/articles/14604031-why-doesn-t-socks5-work-for-me.md)
+- [Understanding Browser Fingerprinting: Best Practices for Security](https://docs.nodemaven.com/en/articles/9670016-understanding-browser-fingerprinting-best-practices-for-security.md)
+- [Account warm-up](https://docs.nodemaven.com/en/articles/10450556-account-warm-up.md)
+- [Pixelscan Bulk checker](https://docs.nodemaven.com/en/articles/13038535-pixelscan-bulk-checker.md): If you need to verify the IP and quality of multiple proxies at once, here's your guide!
+
+### API Access
+
+- [API Access](https://docs.nodemaven.com/en/articles/10329935-api-access.md): Use our API to get information about your account
+
+### Product FAQs
+
+- [Can I select specific locations?](https://docs.nodemaven.com/en/articles/9582627-can-i-select-specific-locations.md)
+- [How many IPs do I get when I subscribe?](https://docs.nodemaven.com/en/articles/9582631-how-many-ips-do-i-get-when-i-subscribe.md)
+- [Is it legal to use residential IPs?](https://docs.nodemaven.com/en/articles/9582634-is-it-legal-to-use-residential-ips.md)
+- [Do you block any domains?](https://docs.nodemaven.com/en/articles/9582642-do-you-block-any-domains.md)
+- [What kind of authentication method do you use?](https://docs.nodemaven.com/en/articles/9582643-what-kind-of-authentication-method-do-you-use.md)
+- [What protocols do I have access to?](https://docs.nodemaven.com/en/articles/9582648-what-protocols-do-i-have-access-to.md)
+- [Can I access port 25 with your proxies?](https://docs.nodemaven.com/en/articles/9582650-can-i-access-port-25-with-your-proxies.md)
+- [Do you offer a free trial?](https://docs.nodemaven.com/en/articles/9582651-do-you-offer-a-free-trial.md): We offer a paid trial: 750 MB for $3.50, covering Residential and Mobile.
+- [What Session types do you offer?](https://docs.nodemaven.com/en/articles/9583591-what-session-types-do-you-offer.md): NodeMaven Residential and Mobile proxies offer three session types: Sticky, No rotating, and Rotating. Here is what each does and when to use it.
+- [I just created an account why can’t I generate any proxies?](https://docs.nodemaven.com/en/articles/9583595-i-just-created-an-account-why-can-t-i-generate-any-proxies.md)
+- [How can I test my proxies?](https://docs.nodemaven.com/en/articles/9583601-how-can-i-test-my-proxies.md)
+- [Where can I check my IP and geo location?](https://docs.nodemaven.com/en/articles/9583676-where-can-i-check-my-ip-and-geo-location.md)
+- [Are your proxies fast?](https://docs.nodemaven.com/en/articles/9583682-are-your-proxies-fast.md)
+- [How clean are your IPs?](https://docs.nodemaven.com/en/articles/9583686-how-clean-are-your-ips.md)
+- [Can I use your proxies on my phone \(Android & iOS\)?](https://docs.nodemaven.com/en/articles/9583688-can-i-use-your-proxies-on-my-phone-android-ios.md)
+- [Do you offer unlimited traffic?](https://docs.nodemaven.com/en/articles/9583692-do-you-offer-unlimited-traffic.md)
+- [How do you source your IPs?](https://docs.nodemaven.com/en/articles/9583698-how-do-you-source-your-ips.md)
+- [Do you offer static proxies?](https://docs.nodemaven.com/en/articles/9657914-do-you-offer-static-proxies.md)
+- [How is traffic usage calculated?](https://docs.nodemaven.com/en/articles/9667156-how-is-traffic-usage-calculated.md): Traffic is the total data passing through the proxy, in both directions.
+- [What will happen to my traffic if I don't use it within a month?](https://docs.nodemaven.com/en/articles/9784670-what-will-happen-to-my-traffic-if-i-don-t-use-it-within-a-month.md): Unused traffic carries over. What happens depends on whether you renew, lapse, or switch to Pay-as-you-go.
+- [Is there an affiliate program?](https://docs.nodemaven.com/en/articles/10193112-is-there-an-affiliate-program.md)
+- [How many proxies can I get?](https://docs.nodemaven.com/en/articles/10333407-how-many-proxies-can-i-get.md)
+- [Can I buy a proxy from a certain location?](https://docs.nodemaven.com/en/articles/10333409-can-i-buy-a-proxy-from-a-certain-location.md)
+- [What ports can I use with your proxies?](https://docs.nodemaven.com/en/articles/10333414-what-ports-can-i-use-with-your-proxies.md)
+- [How does IP rotation work?](https://docs.nodemaven.com/en/articles/10333417-how-does-ip-rotation-work.md): A Rotating session gives you a new IP on every request. How to turn it on, why your location stays fixed, and when to use it.
+- [How does the Sticky session work?](https://docs.nodemaven.com/en/articles/10333422-how-does-the-sticky-session-work.md): Sticky holds one IP for up to 24 hours. Duration limits, how to get a new IP, and when to use it.
+- [Do you offer reseller options?](https://docs.nodemaven.com/en/articles/10333431-do-you-offer-reseller-options.md)
+- [How can I get a different IP for each web request?](https://docs.nodemaven.com/en/articles/10333555-how-can-i-get-a-different-ip-for-each-web-request.md): How to generate a new IP for each web request
+- [Will I get any IPs that have already been used by other customers?](https://docs.nodemaven.com/en/articles/10333633-will-i-get-any-ips-that-have-already-been-used-by-other-customers.md)
+- [How can I deactivate my previously generated proxies?](https://docs.nodemaven.com/en/articles/10333782-how-can-i-deactivate-my-previously-generated-proxies.md)
+- [How to change my proxy’s IP](https://docs.nodemaven.com/en/articles/11770175-how-to-change-my-proxy-s-ip.md)
+- [Can I pay crypto with a Smart Contract?](https://docs.nodemaven.com/en/articles/11885154-can-i-pay-crypto-with-a-smart-contract.md)
+- [Can I choose between IPv4 or IPv6?](https://docs.nodemaven.com/en/articles/11885541-can-i-choose-between-ipv4-or-ipv6.md)
+- [Do you require a KYC?](https://docs.nodemaven.com/en/articles/13231444-do-you-require-a-kyc.md)
+- [How many sessions can I use simultaneously?](https://docs.nodemaven.com/en/articles/13231457-how-many-sessions-can-i-use-simultaneously.md)
+- [FAQ: I bought a package, but my traffic is still frozen](https://docs.nodemaven.com/en/articles/12854208-faq-i-bought-a-package-but-my-traffic-is-still-frozen.md)
+- [Can I renew the same IP on ISP proxies?](https://docs.nodemaven.com/en/articles/14587871-can-i-renew-the-same-ip-on-isp-proxies.md): ISP proxies renew automatically and indefinitely, and your IPs carry over. Only Swap IPs changes them.
+- [Do your proxies support HTTP 2.0?](https://docs.nodemaven.com/en/articles/14792983-do-your-proxies-support-http-2-0.md)
+- [Can I convert between ISP and Residential proxies?](https://docs.nodemaven.com/en/articles/14627992-can-i-convert-between-isp-and-residential-proxies.md): Yes - conversions run both ways. ISP IPs can become Residential traffic and Residential traffic can become ISP IPs. Support handles the request and confirms the rate.
+- [Why do my Static Proxies show different locations on different IP checkers?](https://docs.nodemaven.com/en/articles/14605116-why-do-my-static-proxies-show-different-locations-on-different-ip-checkers.md)
+- [Which is better: ISP Proxies or Rotating Proxies?](https://docs.nodemaven.com/en/articles/14604979-which-is-better-isp-proxies-or-rotating-proxies.md): ISP proxies give one steady dedicated IP; rotating Residential and Mobile give many. Compare targeting, billing, protocols and countries to pick the right one.
+- [Can an ISP Proxy be used on different devices at the same time?](https://docs.nodemaven.com/en/articles/14589830-can-an-isp-proxy-be-used-on-different-devices-at-the-same-time.md)
+- [How the proxy quality guarantee works](https://docs.nodemaven.com/en/articles/14589518-how-the-proxy-quality-guarantee-works.md)
+- [Why does my OS is displayed as Android on Browserleaks?](https://docs.nodemaven.com/en/articles/14587948-why-does-my-os-is-displayed-as-android-on-browserleaks.md)
+- [Can I specify the fingerprint on your proxies?](https://docs.nodemaven.com/en/articles/14587918-can-i-specify-the-fingerprint-on-your-proxies.md)
+- [Does the referral link work for the trial package?](https://docs.nodemaven.com/en/articles/15276263-does-the-referral-link-work-for-the-trial-package.md)
+
+### Accounts and Billing
+
+- [Where can I find my invoices?](https://docs.nodemaven.com/en/articles/13231421-where-can-i-find-my-invoices.md): Invoices live in Billing. How to download them and how to get company details added.
+- [Refund Policy](https://docs.nodemaven.com/en/articles/11770151-refund-policy.md)
+- [Why am I getting charged for the subscription?](https://docs.nodemaven.com/en/articles/10333701-why-am-i-getting-charged-for-the-subscription.md): Subscriptions renew automatically from the card kept on file. How to check the date and stop future charges.
+- [What methods of payment do you offer?](https://docs.nodemaven.com/en/articles/9583579-what-methods-of-payment-do-you-offer.md): Card \(Visa and Mastercard\), YooMoney and MIR, or cryptocurrency. Only card subscriptions renew automatically.
+- [How does the billing cycle works?](https://docs.nodemaven.com/en/articles/11770163-how-does-the-billing-cycle-works.md)
+- [Custom Packages](https://docs.nodemaven.com/en/articles/11770149-custom-packages.md)
+
+### Scraping Browser
+
+- [Scraping Browser API reference](https://docs.nodemaven.com/en/articles/16297672-scraping-browser-api-reference.md): Run a real Chrome browser on NodeMaven infrastructure through your proxy. Sessions, profiles, automation endpoints, and connection options.
+- [Proxy & Profile Best Practices](https://docs.nodemaven.com/en/articles/16888101-proxy-profile-best-practices.md): How to configure proxies, browser profiles and the CAPTCHA solver in the Scraping Browser so your runs stay fast, consistent and unblocked.
+
+### LLM API Reference
+
+- [Ask ChatGPT and Gemini through one endpoint, priced only for what actually comes back.](https://docs.nodemaven.com/en/articles/16886728-ask-chatgpt-and-gemini-through-one-endpoint-priced-only-for-what-actually-comes-back.md): Ask ChatGPT and Gemini through one endpoint. Authentication, submitting questions, polling for results.
+
+## Pусский
+
+### Прокси
+
+- [Доступные локации](https://docs.nodemaven.com/ru/articles/9596833-доступные-локации.md)
+- [Контроль сессии](https://docs.nodemaven.com/ru/articles/9618865-контроль-сессии.md)
+- [Фильтр качества IP](https://docs.nodemaven.com/ru/articles/9597024-фильтр-качества-ip.md)
+- [Начало работы с прокси](https://docs.nodemaven.com/ru/articles/9596871-начало-работы-с-прокси.md)

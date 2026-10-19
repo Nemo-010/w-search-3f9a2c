@@ -1,0 +1,80 @@
+{
+ "slug": "crtsh",
+ "name": "crt.sh",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:50+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://github.com/crtsh",
+   "status": 200,
+   "final_url": "https://github.com/crtsh",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 291240,
+   "truncated": false,
+   "sha256": "a797ba268a4d15454ece5dbbaced94b01656abd800711375f7ef5ed9357a7fdd",
+   "fetched_at": "2026-10-19T05:54:50+00:00",
+   "text_bytes": 5018
+  },
+  "home-err-98ecb8": {
+   "url": "https://crt.sh/",
+   "status": 502,
+   "final_url": "https://crt.sh/",
+   "content_type": "text/html",
+   "bytes": 150,
+   "truncated": false,
+   "sha256": "61b30d408583991fd69f3dec694e154cb652471e663328ad9c8482c9021ab5db",
+   "fetched_at": "2026-10-19T05:54:50+00:00"
+  },
+  "llms-err-55bb7c": {
+   "url": "https://github.com/crtsh/llms.txt",
+   "status": 404,
+   "final_url": "https://github.com/crtsh/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 264483,
+   "truncated": false,
+   "sha256": "0c10b2f53e79eceb8ea6e9eee054cfc0a577efab85e01e2ee7b9974837ac5077",
+   "fetched_at": "2026-10-19T05:54:51+00:00"
+  },
+  "llms-err-0df5d8": {
+   "url": "https://crt.sh/llms.txt",
+   "status": 502,
+   "final_url": "https://crt.sh/llms.txt",
+   "content_type": "text/html",
+   "bytes": 150,
+   "truncated": false,
+   "sha256": "61b30d408583991fd69f3dec694e154cb652471e663328ad9c8482c9021ab5db",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  },
+  "llms-err-f0217d": {
+   "url": "https://crt.sh/docs/llms.txt",
+   "status": 502,
+   "final_url": "https://crt.sh/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 150,
+   "truncated": false,
+   "sha256": "61b30d408583991fd69f3dec694e154cb652471e663328ad9c8482c9021ab5db",
+   "fetched_at": "2026-10-19T05:54:53+00:00"
+  },
+  "llms": {
+   "url": "https://docs.github.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.github.com/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 28642,
+   "truncated": false,
+   "sha256": "c10af0cdb5576f81fd29373cf56ac65608d24c3e4c935c7993d2bba27d56af4e",
+   "fetched_at": "2026-10-19T05:54:53+00:00",
+   "text_bytes": 28634
+  },
+  "llms-err-7a3023": {
+   "url": "https://docs.crt.sh/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.crt.sh/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:54:54+00:00"
+  }
+ }
+}

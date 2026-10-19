@@ -1,0 +1,6 @@
+# Unpaywall (unpaywall) category=academic
+home=https://unpaywall.org/products/api pricing=None docs=https://unpaywall.org/products/api llms=None
+sources_ok: docs:https://unpaywall.org/products/api, llms:https://unpaywall.org/products/api/llms.txt, llms-full:https://unpaywall.org/products/api/docs/llms-full.txt, llms-https://unpaywall.org/products/api/docs/llms.txt:https://unpaywall.org/products/api/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+Unpaywall

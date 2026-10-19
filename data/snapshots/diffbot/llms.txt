@@ -1,0 +1,19 @@
+# Diffbot
+
+> Documentation for Diffbot — APIs that transform the raw web into structured
+> knowledge (Extract, Knowledge Graph, Natural Language, Crawl).
+
+This site is a VitePress static site. All pages are server-rendered HTML and
+safe to crawl. Canonical sitemap: /sitemap.xml
+
+## Docs
+
+- [Getting started](/guide/getting-started): how to call the Diffbot APIs
+- [API reference](/api/): endpoints, parameters, response shapes
+- [Technology](/technology): how the pipeline works, stage by stage — rendering, extraction, crawl, the global index, web search, the Knowledge Graph and its services
+- Products: [Extract](/products/extract), [Crawl](/products/crawl), [Natural Language](/products/natural-language), [Knowledge Graph](/products/knowledge-graph), [Web Search](/products/web-search)
+
+## Conventions for agents
+
+- Accent green #9FFF87 is reserved for API-console EXTRACT / form actions;
+  all other CTAs are white bracketed links.

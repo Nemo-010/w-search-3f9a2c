@@ -1,0 +1,341 @@
+Pricing - urlscan.io 
+ urlscan. io 
+ Home 
+ Search 
+ Live 
+ API 
+ Blog 
+ Docs 
+ Pricing 
+ Login 
+ Plans & Pricing 
+ Plan Modules 
+ Free
+ API Only 
+ Automate
+ API Only 
+ Professional
+ API 
+ Threat Hunting 
+ Popular! Enterprise
+ API 
+ Threat Hunting 
+ Ultimate
+ API 
+ Threat Hunting 
+ Monthly Price 
+ $0 
+ N/A 
+ $1,250 
+ $2,500 
+ $5,000 
+ Annual Price
+ $0 
+ $5,000 $416 / mo 
+ $12,500 $1,042 / mo 
+ $25,000 $2,084 / mo 
+ $50,000 $4,167 / mo 
+ Daily API & Platform Quotas Quotas applied per day, use via UI or API (Hover for more info) 
+ Private Scans
+ Private Scans are only visible to yourself, they are not visible to
+ other users through our search API or the urlscan Pro product.
+ Private Scans are perfect for URLs you don't want to share with
+ anyone. If set, we delete your Private Scans after the Scan Retention
+ period.
+ 50 
+ 2,500 
+ 20,000 
+ 100,000 
+ 200,000 
+ Unlisted Scans
+ Unlisted Scans are only visible to yourself and users of urlscan Pro. They are not visible to the general public.
+ Unlisted Scans should be used when you want to scan and report malicious websites but are concerned about potentially leaking sensitive information.
+ 1,000 
+ 5,000 
+ 40,000 
+ 100,000 
+ 200,000 
+ Public Scans
+ Public Scans are visible to anyone using urlscan.io. Public Scans
+ should be used when you want to publicly document the state of a
+ website and do not care about who is able to see the scan.
+ 5,000 
+ 10,000 
+ 50,000 
+ 150,000 
+ 300,000 
+ Search Requests
+ You can perform this many Search Requests against our Search API
+ or UI. Each Search Request can contain a complex query term which
+ queries for multiple terms simultaneously. Only syntactically
+ correct searches count against your quota.
+ 1,000 
+ 12,500 
+ 150,000 
+ 500,000 
+ 500,000 
+ Result Requests
+ You can retrieve this many API results for individual scans from our Results API.
+ 10,000 
+ 25,000 
+ 150,000 
+ 500,000 
+ 1,000,000 
+ Residential / Tor
+ Quickly scan websites from different geographical locations,
+ residential IP addresses and the Tor network. Choose different
+ device settings.
+ None 
+ None 
+ 10,000 
+ 50,000 
+ 100,000 
+ Country Selection
+ You will be able to select which country your scan should
+ performed from from a list of common choices. This allows you to
+ more closely control the scan to potentially bypass
+ geo-restrictions.
+ Public Scans 
+ All Scans 
+ All Scans 
+ All Scans 
+ All Scans 
+ Private Locations
+ Private scanning locations which can be customised to your
+ requirements, e.g., residential IPs. These are not shared with
+ other customers.
+ No 
+ No 
+ No 
+ 1 Location 
+ 2 Locations 
+ Threat Hunting & Intelligence
+ - Click for more information
+ urlscan Pro 
+ Access to the urlscan Pro - Threat Hunting platform.
+ No 
+ No 
+ 10 Seats
+ 30 Seats
+ 100 Seats
+ Phishing Feed
+ Access the list of scans detected as malicious, brand impersonation or phishing from our database of 1500+ brands.
+ No 
+ No 
+ Yes
+ Yes
+ Yes
+ Domain Feed
+ Real-time search and alerting for newly observed hostnames and
+ domains. Can be used to hunt for domain impersonation and to set
+ up automatic monitoring rules.
+ Contains 6 billion historical domains and hostnames with 250k new
+ domains being added every day.
+ No 
+ No 
+ Yes 
+ Yes 
+ Yes 
+ Search Visibility
+ Which scans performed by other users you will be able to see via the Search API.
+ Public 
+ Public 
+ Public Unlisted 
+ Public Unlisted 
+ Public Unlisted 
+ Search Alerts
+ Setup saved searches in urlscan Pro and get notified when there
+ are new scans or domains that match your search. You can choose
+ to automatically monitor changes to hostnames, domains,
+ and URLs discovered by one of your saved searches.
+ No 
+ No 
+ Yes 
+ Yes 
+ Yes 
+ Saved Searches
+ Maximum number of Saved Searches you can create in urlscan Pro.
+ Saved Searches let you store and reuse complex search queries and match on incoming new scans, domains, and hostnames.
+ Saved Searches can be used as the basis for alert subscriptions.
+ No 
+ No 
+ 100 
+ 300 
+ 1000 
+ Subscriptions
+ Subscriptions are used to send out notifications for one or
+ multiple Saved Searches. Each subscription can notify multiple
+ recipients and track hits from multiple Saved Searches.
+ No 
+ No 
+ 30 
+ 100 
+ 300 
+ Similarity Search
+ Find similar pages based on page structure or visual appearance of a page. Available in the UI and via the API.
+ No 
+ No 
+ Yes 
+ Yes 
+ Yes 
+ Advanced Search
+ Search for historical scans using additional fields, including text on the page and the page title.
+ No 
+ No 
+ Yes 
+ Yes 
+ Yes 
+ Domain Monitoring
+ Automatically monitor domains, hostnames and URLs for activity
+ and changes using the urlscan Observe module.
+ No 
+ No 
+ 100 Domains
+ 300 Domains
+ 1000 Domains
+ Intel Reports
+ Frequent threat reports produced by the urlscan Threat Research
+ team. The reports cover interesting clusters of activity, provide
+ background, and show you how to use the urlscan platform to
+ discover and continuously track these threats.
+ No 
+ No 
+ Free Reports 
+ Premium Reports 
+ Premium Reports 
+ Labs
+ Early access to experimental, cutting-edge features, and prototypes.
+ No 
+ No 
+ No 
+ Yes 
+ Yes 
+ Data Dumps
+ Hourly and daily single-file compressed data dumps of newly
+ scanned websites and newly observed hostnames and
+ domains. This will make it easy to consume our data feed without
+ complex and resource-intensive API calls.
+ No 
+ No 
+ No 
+ Yes 
+ Yes 
+ Managed Rules & Brands
+ Quarterly review and setup of watch rules with our team on behalf
+ of the customer.
+ No 
+ No 
+ No 
+ No 
+ Yes 
+ Enterprise Features 
+ Support
+ Available channels for customer support. Customer support via phone and Zoom is generally available during CET business hours.
+ No 
+ Email 
+ Email, Zoom 
+ Email, Phone, Zoom 
+ Email, Phone, Zoom 
+ Single Sign-On (SSO)
+ Support for Single Sign-On based on SAML 2.0 and integrating with
+ the majority of modern identity providers such as Okta and
+ Onelogin. SSO can be set to optional or mandatory.
+ No 
+ No 
+ SAML 2.0 
+ SAML 2.0 
+ SAML 2.0 
+ Custom Retention
+ Custom retention time for your Private Scans.
+ No 
+ No 
+ Yes 
+ Yes 
+ Yes 
+ Onboarding Call
+ One Hour onboarding call with our team.
+ No 
+ No 
+ 1 Hour 
+ 1 Hour 
+ 2 Hours 
+ Enterprise Security
+ Access restrictions based on IP and IP subnets. 
+ Custom idle session timeout. 
+ Custom max session duration. 
+ Exclusive session enforcement per user. 
+ No 
+ No 
+ No 
+ Yes 
+ Yes 
+ Frequent Trainings
+ One Hour training calls with your team.
+ No 
+ No 
+ No 
+ Semiannually 
+ Quarterly 
+ Custom T&Cs
+ We will work with you to get set up on your vendor management
+ system and allow you to request custom terms & conditions.
+ No 
+ No 
+ No 
+ Yes 
+ Yes 
+ Get started today 
+ Start a free 30-day trial or talk to our sales team about a plan for your organization. 
+ Contact Sales 
+ Additional Information 
+ urlscan Pro 
+ The urlscan Pro - Threat
+ Hunting platform is our complete solution that allows
+ your team to harness our API, get access to our Phishing URL Feed,
+ and use our powerful urlscan Pro 
+ portal to hunt for related websites and infrastructure.
+ Learn More 
+ Phishing URL Feed 
+ Our phishing detection flags thousands of malicious and phishing URLs every day, many of them targeting one of the
+ 900+ popular brands we track. You can retrieve the feed of
+ detected URLs via our API.
+ Learn More 
+ API & UI 
+ You can use the features of products via the UI or the API, it does
+ not make a difference. All of our products are API-first, meaning you
+ never have to use our UI unless you want to. 
+ SOAR 
+ All of our plans work with the majority of popular SOAR platforms . Just plug your API key into your SOAR platform and you are ready to go! 
+ Proof of Value 
+ If you are unsure if our product meet your needs we would be happy to set you up for a 30-day free trial of any plan, no strings attached. 
+ Custom Pricing 
+ Do you require a plan that goes beyond our available commercial plans? Do you need a custom payment schedule? Contact us and we will figure something out! 
+ Resellers 
+ We work with various trusted global partners who distribute our products. 
+ OEM 
+ Do you want to use our data or APIs in your own product? Talk to us about the available options! 
+ Third-party API Integrations 
+ Some of the existing API integrations. See the full list here . 
+ Disclaimer : All trademarks belong to their respective owners. 
+ Our Trusted Partners 
+ See the full list of our resellers and technology partners here . 
+ Disclaimer This site is for informational
+ purposes only, it does not constitute a formal quote or offer. All prices
+ shown are in USD and are quoted without any applicable taxes.
+ All product and company names are trademarks or registered trademarks of their respective holders.
+ Copyright © 2026, urlscan GmbH 
+ Version: 
+ Follow @urlscanio
+ 0 
+ 0 
+ 0 
+ 0 
+ 0 
+ Page generated on 2026-10-19 05:54:04 
+ About Us 
+ Security 
+ Sitemap 
+ Status Page 
+ Terms of Service 
+ Privacy Policy 
+ Impressum / Legal

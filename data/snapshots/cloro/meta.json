@@ -1,0 +1,63 @@
+{
+ "slug": "cloro",
+ "name": "Cloro",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:06+00:00",
+ "sources": {
+  "home": {
+   "url": "https://cloro.dev/",
+   "status": 200,
+   "final_url": "https://cloro.dev/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 389836,
+   "truncated": false,
+   "sha256": "1af7337dd2477dbdf41354f62a7bfdd9f227a17fde0982dd09142a35ad24767a",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 14222
+  },
+  "llms": {
+   "url": "https://cloro.dev/llms.txt",
+   "status": 200,
+   "final_url": "https://cloro.dev/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 66384,
+   "truncated": false,
+   "sha256": "f7603a00e4171503fa8aedf95f613aa353ffc34801cdf9a9864f65d4cb2bc6e9",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 66178
+  },
+  "llms-https://cloro.dev/docs/llms.txt": {
+   "url": "https://cloro.dev/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://cloro.dev/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 19667,
+   "truncated": false,
+   "sha256": "91deef762c345685b008d8d05b420d6168ef8a44055894b87cb563c671addb90",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 19649
+  },
+  "llms-full": {
+   "url": "https://docs.cloro.dev/llms-full.txt",
+   "status": 200,
+   "final_url": "https://cloro.dev/docs/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 500121,
+   "truncated": false,
+   "sha256": "932c5a07e96f888bdc2f751d5a7a23bf331c144158f2171e643c5359546218ee",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 499121
+  },
+  "llms-https://docs.cloro.dev/llms.txt": {
+   "url": "https://docs.cloro.dev/llms.txt",
+   "status": 200,
+   "final_url": "https://cloro.dev/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 19667,
+   "truncated": false,
+   "sha256": "91deef762c345685b008d8d05b420d6168ef8a44055894b87cb563c671addb90",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 19649
+  }
+ }
+}

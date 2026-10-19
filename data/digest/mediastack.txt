@@ -1,0 +1,39 @@
+# Mediastack (mediastack) category=news
+home=https://mediastack.com/ pricing=https://mediastack.com/pricing docs=https://mediastack.com/documentation llms=None
+sources_ok: pricing:https://mediastack.com/pricing, docs:https://mediastack.com/documentation, home:https://mediastack.com/, llms:https://mediastack.com/llms.txt
+--- ranked fact lines ---
+[pricing] or $22.99 if billed yearly
+[pricing] or $87.99 if billed yearly
+[pricing] or $212.99 if billed yearly
+[home] 100 Free Requests per month
+[pricing] The mediastack API is built on top of a highly available cloud infrastructure, leading to an uptime of nearly 100%. For more information, feel free to take a quick look at our dedicated API status page, available at: status.mediastack.com .
+[llms] A free API key is available at https://mediastack.com/signup/free — the Free Plan includes 100 requests per month with access to all news sources and all 13 languages over HTTPS, but serves delayed rather than live news data, excludes historical data and support, and is restricted to non-commercial use. Paid plans add live news data, historical data, standard support, and commercial-use rights: St
+[llms] - [Free API Key Signup](https://mediastack.com/signup/free): Create a free account with 100 monthly requests
+[pricing] Sign Up Free
+[pricing] Free forever.
+[pricing] Get Free API Key
+[home] Free, Simple REST API for
+[home] Free Plan Available
+[home] Sign up for the Free Plan, grab your API access key, and implement news data into your application.
+[home] What are you waiting for? Get an API key to start collecting live news data — it's free
+[llms] - [Mediastack Homepage](https://mediastack.com/): Free, real-time and historical global news data API
+[llms] - [Pricing](https://mediastack.com/pricing): Free and premium plan tiers with request volumes and features
+--- llms/readme head ---
+# Mediastack
+> Mediastack is a real-time, historical, and blog news data REST API, used by developers and 2,000+ customers to power news aggregators, brand-monitoring tools, financial analytics platforms, and content feeds. It aggregates thousands of daily articles from 7,500+ global news sources and blogs across 50+ countries and 13 languages (Arabic, German, English, Spanish, French, Hebrew, Italian, Dutch, Norwegian, Portuguese, Russian, Swedish, and Chinese). Every minute it collects, parses, and standardizes news into lightweight JSON, searchable by keywords, dates/timeframe, country, language, source, and category (business, health, entertainment, sports, technology, and more). It also exposes a catalog of the underlying publishers. Responses use a pagination + data envelope over CDN-accelerated, cached endpoints, hosted on APILayer cloud infrastructure with an uptime of nearly 100%. Mediastack is part of the APILayer suite (one account, one API key, one dashboard across the APILayer product family).
+A free API key is available at https://mediastack.com/signup/free — the Free Plan includes 100 requests per month with access to all news sources and all 13 languages over HTTPS, but serves delayed rather than live news data, excludes historical data and support, and is restricted to non-commercial use. Paid plans add live news data, historical data, standard support, and commercial-use rights: Standard ($24.99/month, 10,000 requests), Professional ($99.99/month, 50,000 requests), and Business ($249.99/month, 250,000 requests), plus custom Enterprise pricing, with up to 15% off on annual billing. To call the API, append your access_key as a query parameter. The base URL is api.mediastack.com/v1. A single lookup is one HTTP GET request: api.mediastack.com/v1/news?access_key=YOUR_KEY. The API provides two endpoints: News (live, historical, and blog articles, filterable by keywords, sources, categories, countries, languages, date, sort, limit, and offset) and Sources (browse and search the publisher catalog to find the source IDs used to filter news). Code examples are provided for PHP, Python, Node.js, Go, and more.
+## Getting Started
+- [Mediastack Homepage](https://mediastack.com/): Free, real-time and historical global news data API
+- [API Documentation](https://docs.apilayer.com/mediastack/docs/api-documentation): Full reference — endpoints, parameters, response objects, errors, and code examples
+- [API Features](https://docs.apilayer.com/mediastack/docs/api-features): Live News, Historical News, and News Sources endpoints with parameters and examples
+- [Free API Key Signup](https://mediastack.com/signup/free): Create a free account with 100 monthly requests
+- [Login](https://mediastack.com/login): Access your dashboard, API key, and usage statistics
+- [Pricing](https://mediastack.com/pricing): Free and premium plan tiers with request volumes and features
+## Tools
+- [News Sources Catalog](https://mediastack.com/sources): Browse the 7,500+ publishers and find the source IDs used to filter news
+- [API Status](https://mediastack.com/api-status): Real-time updates on API performance and uptime
+- [Overage Billing Documentation](https://mediastack.com/billing-overages-documentation): How per-call charges apply once a plan's monthly quota is reached
+## Resources
+- [FAQs](https://mediastack.com/faq): Common questions on real-time vs. historical news, sources, languages, plans, and integration
+- [APILayer Blog](https://blog.apilayer.com/): Tutorials, use cases, and product updates
+## Support

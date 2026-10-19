@@ -1,0 +1,98 @@
+Google Books APIs  |  Google for Developers 
+ Skip to main content
+ Books APIs 
+ / 
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ Sign in 
+ Learn to use the Google Books API so your app can search text and retrieve book information.
+ Home
+ Guides
+ Reference
+ Samples
+ Books APIs
+ Home
+ Guides
+ Reference
+ Samples
+ Home
+ Products
+ Google Books APIs
+ Stay organized with collections
+ Save and categorize content based on your preferences.
+ Integrate with the Google Books repository
+ Google Books is our effort to make book content more discoverable on the Web. Using the Google Books API, your application can perform full-text searches and retrieve book information, viewability and eBook availability. You can also manage your personal bookshelves.
+ Overview 
+ Get started 
+ Embed book previews on your site
+ The Embedded Viewer API lets you embed Google Books previews on your own website and programmatically control these previews.
+ Get started with Embedded Viewer 
+ Case studies
+ See how the Google Books APIs are being used by WorldCat, GoodReads, the University of California Libraries, and more.
+ See featured integrations 
+ [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],[],[],[]]
+ Product Info 
+ Terms of Service
+ Case Studies
+ Connect 
+ Google Books API Forums
+ Build 
+ Android
+ Chrome
+ Firebase
+ Google AI Studio
+ Google Antigravity
+ Google Cloud
+ Google Play
+ View all
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ All products
+ Terms
+ Privacy
+ Manage cookies
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어

@@ -1,0 +1,39 @@
+{
+ "slug": "github-search",
+ "name": "GitHub Search API",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:47+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://docs.github.com/en/rest/search",
+   "status": 200,
+   "final_url": "https://docs.github.com/en/rest/search",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 426082,
+   "truncated": false,
+   "sha256": "6cb98da4cc97f0bc313749d7c1c44c04887e219cd25f904cf2296fc077be02f6",
+   "fetched_at": "2026-10-19T05:54:47+00:00",
+   "text_bytes": 4463
+  },
+  "llms-err-103852": {
+   "url": "https://docs.github.com/en/rest/search/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.github.com/en/rest/search/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 502,
+   "truncated": false,
+   "sha256": "979615bad4719ae23bf76385ee60de8b1b05c785ce74497dee80ecb54c69c522",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  },
+  "llms-err-68e9f0": {
+   "url": "https://docs.github.com/en/rest/search/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.github.com/en/rest/search/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 502,
+   "truncated": false,
+   "sha256": "979615bad4719ae23bf76385ee60de8b1b05c785ce74497dee80ecb54c69c522",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  }
+ }
+}

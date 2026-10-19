@@ -1,0 +1,74 @@
+{
+ "slug": "search1api",
+ "name": "Search1API",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:03+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://search1api.com/pricing",
+   "status": 200,
+   "final_url": "https://s1.dev/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 187017,
+   "truncated": false,
+   "sha256": "c01ece8e1ce7967b0d87bbac9dde2907dcdd0c3ccaa9687286057bec7e86e2f2",
+   "fetched_at": "2026-10-19T05:54:03+00:00",
+   "text_bytes": 4610
+  },
+  "home": {
+   "url": "https://search1api.com/",
+   "status": 200,
+   "final_url": "https://s1.dev/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 294170,
+   "truncated": false,
+   "sha256": "9c2b1773a54579030a1351fc6e4911bda6e0fbd685c6b2971dfa40c896a0c2aa",
+   "fetched_at": "2026-10-19T05:54:05+00:00",
+   "text_bytes": 10910
+  },
+  "llms": {
+   "url": "https://search1api.com/llms.txt",
+   "status": 200,
+   "final_url": "https://s1.dev/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 13722,
+   "truncated": false,
+   "sha256": "a3b112c793675bed3bf6083bb8afdeae9ff124b70afc3f8d13acf7c4a75e8951",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 13680
+  },
+  "llms-full": {
+   "url": "https://docs.search1api.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.search1api.com/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 4553,
+   "truncated": false,
+   "sha256": "04ba8af5888750a9f66464767404009574a67a018b4fa35440887581b15394fc",
+   "fetched_at": "2026-10-19T05:54:15+00:00",
+   "text_bytes": 4553
+  },
+  "llms-https://search1api.com/docs/llms.txt": {
+   "url": "https://search1api.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://s1.dev/docs/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 7503,
+   "truncated": false,
+   "sha256": "b1dfe82f23f10bd1da91920d80b9f8817fa21671226aa1e7455d6a5a064de87a",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 7495
+  },
+  "llms-https://docs.search1api.com/llms.txt": {
+   "url": "https://docs.search1api.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.search1api.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 1641,
+   "truncated": false,
+   "sha256": "bd26c95e0443028ea19c012a2a7790f7c1ee53bf1844facbce60f1ef46cd9b40",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 1641
+  }
+ }
+}

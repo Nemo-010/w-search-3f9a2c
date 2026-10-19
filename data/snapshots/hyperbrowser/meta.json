@@ -1,0 +1,85 @@
+{
+ "slug": "hyperbrowser",
+ "name": "Hyperbrowser",
+ "category": "browser",
+ "fetched_at": "2026-10-19T05:54:23+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.hyperbrowser.ai/pricing",
+   "status": 200,
+   "final_url": "https://www.hyperbrowser.ai/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 113527,
+   "truncated": false,
+   "sha256": "082a21742f1942976e43f05d59da9fa670844c148c706467be247ed89b98eddf",
+   "fetched_at": "2026-10-19T05:59:39+00:00",
+   "text_bytes": 4231
+  },
+  "docs": {
+   "url": "https://docs.hyperbrowser.ai/",
+   "status": 200,
+   "final_url": "https://www.hyperbrowser.ai/docs/home",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 257153,
+   "truncated": false,
+   "sha256": "601cee512d0c99edd953200a78131477a09ca98ad25a6b4c29924a0d46cc7233",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 1306
+  },
+  "home": {
+   "url": "https://www.hyperbrowser.ai/",
+   "status": 200,
+   "final_url": "https://www.hyperbrowser.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 139061,
+   "truncated": false,
+   "sha256": "4e24e102cef86ac133f9ea9371f4b68f1fdd234b5d51605782630bdc0b472a55",
+   "fetched_at": "2026-10-19T05:54:28+00:00",
+   "text_bytes": 3414
+  },
+  "llms": {
+   "url": "https://docs.hyperbrowser.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://www.hyperbrowser.ai/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 26946,
+   "truncated": false,
+   "sha256": "1c9fe8440bde6bef97aa34af56dc7f20a0ef5511c9d7a3d560265a4b5331723c",
+   "fetched_at": "2026-10-19T05:54:29+00:00",
+   "text_bytes": 26942
+  },
+  "llms-full": {
+   "url": "https://www.hyperbrowser.ai/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.hyperbrowser.ai/docs/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 935647,
+   "truncated": false,
+   "sha256": "8614777fd8a94877ddac4b7c799145e2b12ee1feb741a46de61d17006d60cfe2",
+   "fetched_at": "2026-10-19T05:54:34+00:00",
+   "text_bytes": 935308
+  },
+  "llms-https://www.hyperbrowser.ai/llms.txt": {
+   "url": "https://www.hyperbrowser.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://www.hyperbrowser.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 5345,
+   "truncated": false,
+   "sha256": "af06e1384027d320a7856d877b9342621eac2c29cfb937f58d9ac11e826f894f",
+   "fetched_at": "2026-10-19T05:54:33+00:00",
+   "text_bytes": 5345
+  },
+  "llms-https://www.hyperbrowser.ai/docs/llms.txt": {
+   "url": "https://www.hyperbrowser.ai/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.hyperbrowser.ai/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 26946,
+   "truncated": false,
+   "sha256": "1c9fe8440bde6bef97aa34af56dc7f20a0ef5511c9d7a3d560265a4b5331723c",
+   "fetched_at": "2026-10-19T05:54:34+00:00",
+   "text_bytes": 26942
+  }
+ }
+}

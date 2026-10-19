@@ -1,0 +1,39 @@
+{
+ "slug": "reddit-json",
+ "name": "Reddit JSON",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:46+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://www.reddit.com/dev/api/",
+   "status": 200,
+   "final_url": "https://www.reddit.com/dev/api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 303111,
+   "truncated": false,
+   "sha256": "7ad07ab17e036ed1439652e93afc49822c6f2d6ef8fd4f0ec07c7a5e5648d546",
+   "fetched_at": "2026-10-19T05:54:46+00:00",
+   "text_bytes": 103685
+  },
+  "llms-err-6df6c9": {
+   "url": "https://www.reddit.com/dev/api/llms.txt",
+   "status": 404,
+   "final_url": "https://www.reddit.com/dev/api/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 32583,
+   "truncated": false,
+   "sha256": "29efcd5d26db68b923f23c36381245039090921e257c8d41419e321a9effee74",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  },
+  "llms-err-5dc4cf": {
+   "url": "https://www.reddit.com/dev/api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.reddit.com/dev/api/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 32596,
+   "truncated": false,
+   "sha256": "53a694179df3f632986984b2eadd06abd460a8689541ad08908dffaa2dd159d9",
+   "fetched_at": "2026-10-19T05:54:47+00:00"
+  }
+ }
+}

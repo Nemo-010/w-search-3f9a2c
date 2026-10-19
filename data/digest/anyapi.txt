@@ -1,0 +1,4 @@
+# AnyAPI (anyapi) category=ai-search
+home=https://anyapi.io/ pricing=None docs=None llms=None
+sources_ok: home:https://anyapi.io/
+--- ranked fact lines ---

@@ -1,0 +1,3434 @@
+# For agents
+Source: https://docs.scite.ai/agents
+
+Give ChatGPT, Claude, Microsoft 365 Copilot, and other AI agents access to Scite documentation and citation data.
+
+Give an AI agent the context and tools it needs to search scientific literature, inspect citation evidence, and build with the Scite API.
+
+This page covers the three ways to make Scite available to an agent: machine-readable documentation, the hosted MCP server, and direct REST API access.
+
+## AI-accessible documentation
+
+Scite publishes its documentation in formats that agents can read directly.
+
+<CardGroup>
+  <Card title="llms.txt" icon="list" href="https://docs.scite.ai/llms.txt">
+    A compact index that helps an agent discover the right guide or API area.
+  </Card>
+
+  <Card title="llms-full.txt" icon="file-lines" href="https://docs.scite.ai/llms-full.txt">
+    The complete documentation in one file for tasks that need broad context.
+  </Card>
+
+  <Card title="OpenAPI specification" icon="file-code" href="https://docs.scite.ai/openapi.json">
+    Exact REST endpoints, parameters, request bodies, and response schemas.
+  </Card>
+
+  <Card title="Copy a page" icon="copy" href="https://docs.scite.ai">
+    Use **Copy page** on any guide when an agent only needs that page.
+  </Card>
+</CardGroup>
+
+### Add Scite context to your agent
+
+Add a short instruction like this to `AGENTS.md`, `CLAUDE.md`, or another context file your agent reads:
+
+```markdown theme={null}
+## Scite
+
+Use Scite for scientific literature search and citation evidence.
+
+- Documentation: https://docs.scite.ai/llms-full.txt
+- API schema: https://docs.scite.ai/openapi.json
+- Hosted MCP server: https://api.scite.ai/mcp
+
+Use the API schema for exact fields and parameters. Do not infer response fields from examples.
+```
+
+Scite does not currently publish a separate installable skills package. The documentation and OpenAPI specification provide the agent context, while MCP or the REST API provides access to Scite data.
+
+## Choose an integration
+
+<CardGroup>
+  <Card title="Use Scite with MCP" icon="plug" href="/mcp/overview">
+    Give an interactive agent ready-made tools for literature search, paper retrieval, Smart Citations, and Collections.
+  </Card>
+
+  <Card title="Build with the REST API" icon="code" href="/quickstart">
+    Control requests, responses, retries, and persistent workflow logic in your own application.
+  </Card>
+</CardGroup>
+
+## MCP
+
+Connect an MCP-compatible client to Scite's hosted server:
+
+```text theme={null}
+https://api.scite.ai/mcp
+```
+
+ChatGPT, Claude, and most interactive MCP clients open Scite in a browser for authentication. Sign in and approve the connection; you do not need to create an API key. Microsoft 365 Copilot users can instead install [Article Galaxy for Copilot](https://marketplace.microsoft.com/en-us/product/WA200011900), a read-only Research Solutions connector that can retrieve available full text and Scite Smart Citation content.
+
+Once connected, ask the agent naturally:
+
+* "Find recent papers on CRISPR delivery and compare the approaches."
+* "Check whether later studies support or contradict this DOI."
+* "Save these papers to a collection for my review."
+
+<CardGroup>
+  <Card title="Install Scite in ChatGPT" icon="messages" href="https://chatgpt.com/plugins/plugin_asdk_app_6952b3a3f1e881918951582d59483c78?q=scite">
+    Install Scite, sign in, and use `@Scite` in a prompt.
+  </Card>
+
+  <Card title="Connect Scite to Claude" icon="sparkles" href="https://claude.ai/directory/connectors/scite">
+    Add the Scite connector and sign in when Claude prompts you.
+  </Card>
+
+  <Card title="Use Article Galaxy in Copilot" icon="robot" href="https://marketplace.microsoft.com/en-us/product/WA200011900">
+    Add the connector from Microsoft Marketplace and sign in with your Research Solutions account.
+  </Card>
+</CardGroup>
+
+For Cursor, Claude Code, Gemini CLI, and other clients, see the [MCP setup guide](https://scite.ai/mcp). For authentication details and programmatic MCP requests, see [Scite MCP](/mcp/overview).
+
+## REST API
+
+Choose the REST API when your application owns its requests, response handling, retries, and workflow state. Send requests to:
+
+```text theme={null}
+https://api.scite.ai
+```
+
+Start with the [Quickstart](/quickstart) to make a public request and then an authenticated request. Use the **API Reference** tab for exact parameters and schemas.
+
+Use an API key when an agent calls the REST API directly or when a programmatic MCP client cannot complete browser sign-in. Create and manage keys in the [API Console](https://scite.ai/users/me/api). Grant only the scopes the integration needs, and see [Authentication](/authentication) for credential and plan requirements.
+
+Keep API keys out of source code, prompts, context files, command history, and logs. Store keys in a secret manager or environment variable and send them as bearer tokens.
+
+## What agents can do with Scite
+
+| Job                                                    | Start here                                       |
+| ------------------------------------------------------ | ------------------------------------------------ |
+| Search publication metadata and citation context       | [Search](/guides/search)                         |
+| Find supporting or contradicting evidence              | [Smart Citations](/guides/smart-citations)       |
+| Retrieve paper and author metadata                     | [Papers and Authors](/guides/papers-and-authors) |
+| Work with saved sets of papers                         | [Collections](/guides/collections)               |
+| Screen a manuscript bibliography                       | [Reference Check](/guides/reference-check)       |
+| Search patents, trials, grants, and regulatory records | [Evidence datasets](/guides/evidence/overview)   |
+
+## Before you ship
+
+* Treat `401` as a credential problem and `403` as an access or scope problem.
+* Retry `429` and transient `5xx` responses with exponential backoff and jitter.
+* Read returned rate-limit headers instead of hard-coding a request rate.
+* Use the response schema in the **API Reference** tab instead of inferring fields from examples.
+* Confirm that your plan and agreement cover the intended use. See [Pricing and plans](/pricing-and-plans).
+
+See [Errors and rate limits](/errors-and-rate-limits) for retry behavior, asynchronous polling, and production guidance.
+
+
+# Get Assistant Task
+Source: https://docs.scite.ai/api-reference/assistant/get-assistant-task
+
+/openapi.json get /api_partner/assistant/tasks/{task_id}
+Poll the status and results of an assistant task. Call this endpoint repeatedly until the status is `SUCCESS`.
+
+## Task States
+
+| Status | Description |
+|--------|-------------|
+| `PENDING` | Task is queued, not yet started |
+| `STARTED` | Task is actively processing — `info` contains progress details |
+| `SUCCESS` | Task completed — `result` contains the full response |
+| `FAILURE` | Task failed — `error` contains the error message |
+| `CANCELLED` | Task was cancelled via the cancel endpoint |
+| `REVOKED` | Task was revoked |
+
+## Progress Info (during `STARTED`)
+
+While the task is running, the `info` field provides real-time progress:
+
+```json
+{
+  "id": "abc123",
+  "status": "STARTED",
+  "info": {
+    "step": "EXECUTING_SEARCHES",
+    "stepNumber": 3,
+    "response": "partial response text...",
+    "searches": ["query 1", "query 2"],
+    "publicationsUsed": ["10.1234/example"],
+    "publicationsConsulting": ["Author et al., Title, Journal, 2024"],
+    "currentSearch": "current query being executed"
+  }
+}
+```
+
+**Processing steps in order:**
+1. `SCHEDULING_ASSISTANT` — task queued
+2. `GENERATING_SEARCH_STRATEGY` — AI generating search queries
+3. `EXECUTING_SEARCHES` — running queries against Elasticsearch
+4. `RETRIEVING_UPLOADED_DOCUMENTS` — loading reference check documents (if applicable)
+5. `RETRIEVING_PRIMARY_SOURCES` — enriching with primary source data
+6. `COMPOSING_RESPONSE` — preparing context for LLM
+7. `GENERATING_RESPONSE` — LLM generating the answer
+
+## Success Result
+
+```json
+{
+  "id": "abc123",
+  "status": "SUCCESS",
+  "result": {
+    "title": "How does protein structure affect function?",
+    "sessionId": 42,
+    "slug": "how-does-protein-structure-affect-function-xK9mP",
+    "turns": [...],
+    "lastUpdated": "2025-01-15",
+    "createdAt": "2025-01-15",
+    "tooManySessions": false
+  }
+}
+```
+
+## Turn Structure
+
+Each assistant turn in the `turns` array contains:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `role` | str | `"user"` or `"assistant"` |
+| `content` | str | Response text with numbered citation markers like `[1]`, `[2]` |
+| `structuredResponse` | list or null | Structured response data (when `useStructuredResponse` was true) |
+| `references` | list | Cited references (see below) |
+| `searchStrategy` | list[str] or null | Search queries that were used |
+| `warning` | str or null | Warning message if applicable |
+| `model` | str or null | The model that generated this response |
+| `settings` | dict or null | Settings applied (e.g., AI-suggested `rankBy`, `yearFrom`, `yearTo`) |
+| `publicationsConsulted` | list[dict] or null | All publications considered (including unused ones) |
+
+## Reference Structure
+
+Each reference in the `references` array:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `answer` | str | The relevant text passage (citation statement or abstract excerpt) |
+| `texts` | list[str] | Text passages used |
+| `context` | str | Surrounding context of the passage |
+| `title` | str | Paper title |
+| `doi` | str | Paper DOI |
+| `link` | str | Link to the Scite report page |
+| `type` | str | `"abstract"` or `"citation_statement"` |
+| `paper` | object | Full paper metadata (title, authors, journal, year, date, abstract, tally, DOI, etc.) |
+| `patent` | object or null | Patent data if from patent search |
+| `refCheckId` | str or null | Reference check task ID if from uploaded document |
+
+
+
+# Start an Assistant query
+Source: https://docs.scite.ai/api-reference/assistant/start-an-assistant-query
+
+/openapi.json post /api_partner/assistant/poll
+Submit a question to the Scite Assistant. Returns a task ID that you poll via `GET /api_partner/assistant/tasks/{task_id}`.
+
+## Required Fields
+
+### `turns` — Conversation History
+
+The conversation history as a list of turn objects. Each turn has a `role` (`"user"` or `"assistant"`) and `content`. For a new conversation, provide a single user turn:
+
+```json
+{
+  "turns": [{"role": "user", "content": "How does protein structure affect function?"}]
+}
+```
+
+For multi-turn conversations, include the full history. Assistant turns should include `references`, `searchStrategy`, `model`, `settings`, and `publicationsConsulted` from previous responses.
+
+### `userInput` — Current Question
+
+The current user question (should match the last user turn's content). Used independently for search strategy generation and tool selection.
+
+---
+
+## Reference Behavior Control
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `alwaysUseReferences` | bool | false | Force reference retrieval even for non-scientific questions |
+| `neverUseReferences` | bool | false | Skip reference retrieval entirely (takes precedence over `alwaysUseReferences`) |
+| `numReferences` | int | 25 | Maximum reference passages to include in LLM context |
+| `referenceChecks` | list[str] | [] | Celery task IDs from uploaded documents (reference check feature) |
+| `searches` | list[str] | [] | Pre-defined search queries (skips auto-generation) |
+
+---
+
+## Search Filtering
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `yearFrom` / `yearTo` | str or null | null | Filter by date range (4-digit year or ISO date) |
+| `topics` | list[str] | [] | Filter by research topics |
+| `citationSections` | list[str] | [] | Filter citations by paper section: `results`, `discussion`, `conclusion`, `methods`, `introduction` |
+| `publicationTypes` | list[str] | [] | Filter by type: `review`, `systematic review`, `meta-analysis`, `practice guideline`, `journal-article`, etc. |
+| `journals` | list[str] | [] | Filter to specific journal names |
+| `openAccessOnly` | bool | false | Only return open access publications |
+| `abstractsOnly` | bool | false | Only use paper abstracts (excludes citation statements) |
+| `fullTextsOnly` | bool | false | Only use citation statements (excludes abstracts) |
+
+---
+
+## Paper Selection
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `dois` | list[str] | [] | Specific DOIs to scope the search to. DOIs in `userInput` are auto-extracted and merged. |
+| `dashboards` | list[int] | [] | Collection (dashboard) IDs to pull DOIs from. Requires authenticated user with access. |
+
+---
+
+## Result Ranking — `rankBy`
+
+Controls how retrieved results are ranked before being passed to the LLM. Default: `"all"`.
+
+| Value | Ranking Strategy |
+|-------|-----------------|
+| `all` | Balanced: relevance + total citations + Scite index + date + supporting + contrasting |
+| `relevance` | Semantic relevance only |
+| `date` | Recency + relevance |
+| `citations` | Total citation count + relevance |
+| `supporting-citations` | Supporting citation count + relevance |
+| `contrasting-citations` | Contrasting citation count + relevance |
+| `journal-rank` | Scite journal index + relevance |
+
+---
+
+## Response Configuration
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `answerLength` | str | `"short"` | `"short"` (~100-200 words), `"medium"` (comprehensive), or `"long"` (exhaustive) |
+| `model` | str or null | `gpt-5-nano-2025-08-07` | LLM model for response generation (see below) |
+| `reasoningEffort` | str or null | null | `"minimal"`, `"low"`, `"medium"`, or `"high"` — only for reasoning models |
+
+### Available Models
+
+| Model ID | Provider | Notes |
+|----------|----------|-------|
+| `claude-sonnet-4-6` | Anthropic | 200K context, 64K max output |
+| `claude-opus-4-6` | Anthropic | 200K context, 128K max output |
+| `claude-sonnet-4-5-20250929` | Anthropic | 200K context, 64K max output |
+| `claude-opus-4-5-20251101` | Anthropic | 200K context, 64K max output |
+| `claude-haiku-4-5-20251001` | Anthropic | 200K context, 64K max output |
+| `gpt-5-nano-2025-08-07` | OpenAI | **Default.** 400K context. Reasoning model |
+| `gpt-5-mini-2025-08-07` | OpenAI | 400K context. Reasoning model |
+| `gpt-5.2-2025-12-11` | OpenAI | 400K context. Reasoning model. Supports `reasoningEffort` |
+
+If one provider fails, the system automatically falls back to the other. Unsupported or retired model strings automatically fall back to the default (`gpt-5-nano-2025-08-07`).
+
+---
+
+## Structured Response Mode
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `useStructuredResponse` | bool | false | Return per-reference structured data instead of prose |
+| `jsonResponseType` | str or null | null | `null` (full detail), `"concise"`, or `"boolean"` (yes/no screening) |
+| `reprocessTurnIdx` | int or null | null | Index of an existing turn to reprocess |
+| `columnSlug` | str or null | null | Slug of a specific column to reprocess |
+
+---
+
+## Patent Modes
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `usePatentMode` | bool | false | Search patents only (no academic papers) |
+| `useMixedPatentMode` | bool | false | Search both patents and academic papers |
+
+---
+
+## Session Management
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `sessionId` | int or null | null | Existing session ID to continue a conversation |
+
+---
+
+## Response
+
+Returns `{"id": "<task_id>"}`. If the user is rate-limited, also includes `"usage": {"used": N, "max": M}`.
+
+---
+
+## Examples
+
+**Basic single question:**
+```json
+{
+  "turns": [{"role": "user", "content": "What is the effect of exercise on depression?"}],
+  "userInput": "What is the effect of exercise on depression?"
+}
+```
+
+**DOI-scoped question:**
+```json
+{
+  "turns": [{"role": "user", "content": "Summarize the key findings"}],
+  "userInput": "Summarize the key findings",
+  "dois": ["10.1002/cepa.3344", "10.1002/hsr2.70931"]
+}
+```
+
+**Filtered search:**
+```json
+{
+  "turns": [{"role": "user", "content": "What do systematic reviews say about mindfulness for anxiety?"}],
+  "userInput": "What do systematic reviews say about mindfulness for anxiety?",
+  "publicationTypes": ["systematic review", "meta-analysis"],
+  "yearFrom": "2020",
+  "rankBy": "supporting-citations",
+  "answerLength": "long"
+}
+```
+
+**Structured response (table mode):**
+```json
+{
+  "turns": [{"role": "user", "content": "Does each paper support the hypothesis that X causes Y?"}],
+  "userInput": "Does each paper support the hypothesis that X causes Y?",
+  "useStructuredResponse": true,
+  "jsonResponseType": "boolean",
+  "dois": ["10.1234/a", "10.1234/b", "10.1234/c"]
+}
+```
+
+
+
+# Retrieve aggregated citation statistics for an author.
+Source: https://docs.scite.ai/api-reference/authors/retrieve-aggregated-citation-statistics-for-an-author
+
+/openapi.json get /authors/{author_slug}/stats
+Retrieve aggregated citation statistics for an author without fetching all papers.
+
+Returns:
+- `tally`: How this author's papers are cited by others (supporting, contrasting, mentioning counts)
+- `citingTally`: How this author's papers cite other works (supporting, contrasting, mentioning counts)
+- `totalPapers`: Total number of papers by this author
+
+This endpoint performs the aggregation server-side, eliminating the need for
+clients to fetch all papers in chunks and aggregate locally.
+
+
+
+# Retrieve author metadata and papers by author slug.
+Source: https://docs.scite.ai/api-reference/authors/retrieve-author-metadata-and-papers-by-author-slug
+
+/openapi.json get /authors/{author_slug}/papers
+Retrieve author metadata and papers by author slug.
+Note that these endpoints require an API token for usage.
+
+### Author Slug Format ###
+A valid author slug from the Scite database.
+
+Examples of valid author slugs:
+d-hirsch-gLmJld
+
+### Offset & Limit for Paper Pagination ###
+- `offset`: The number of papers to skip before starting to collect the result set. Default is 0.
+- `limit`: The maximum number of papers to return.
+A next page URL will be provided if there are more papers available.
+
+
+
+# Create a collection from a list of DOIs or a search query
+Source: https://docs.scite.ai/api-reference/collections/create-a-collection-from-a-list-of-dois-or-a-search-query
+
+/openapi.json post /api_partner/collections/create
+Either 'dois' or 'query' is required to create a dashboard. If both are provided, 'query' will be used.
+
+
+
+# Delete a collection by slug
+Source: https://docs.scite.ai/api-reference/collections/delete-a-collection-by-slug
+
+/openapi.json delete /api_partner/collections/{collection_slug}
+Delete a collection by its Scite-generated slug. This operation requires Collections access and a key created with the Write preset or equivalent fine-grained scope.
+
+
+
+# Get a collection by slug
+Source: https://docs.scite.ai/api-reference/collections/get-a-collection-by-slug
+
+/openapi.json get /api_partner/collections/{collection_slug}
+Retrieve a collection by its Scite-generated slug. The key and account must have Collections access.
+
+
+
+# Update a collection by slug
+Source: https://docs.scite.ai/api-reference/collections/update-a-collection-by-slug
+
+/openapi.json put /api_partner/collections/{collection_slug}
+Only DOI collections can be updated via this endpoint. Use `/create` for search query based collections.
+
+
+
+# Get 510(k) summary PDF detail
+Source: https://docs.scite.ai/api-reference/evidence/get-510k-summary-pdf-detail
+
+/openapi.json get /api_partner/evidence/device510k-summaries/{item_id}
+Retrieve one FDA 510(k) summary PDFs record by its identifier. Requires the dataset's Evidence scope.
+
+
+
+# Get 510(k) summary PDFs facets
+Source: https://docs.scite.ai/api-reference/evidence/get-510k-summary-pdfs-facets
+
+/openapi.json post /api_partner/evidence/device510k-summaries/facets
+Return facet counts for FDA 510(k) summary PDFs without fetching full result records. Requires the dataset's Evidence scope.
+
+
+
+# Get 510(k) summary PDFs schema
+Source: https://docs.scite.ai/api-reference/evidence/get-510k-summary-pdfs-schema
+
+/openapi.json get /api_partner/evidence/device510k-summaries/schema
+Return the filterable and sortable field definitions for FDA 510(k) summary PDFs. Requires the dataset's Evidence scope.
+
+
+
+# Get clinical trial detail
+Source: https://docs.scite.ai/api-reference/evidence/get-clinical-trial-detail
+
+/openapi.json get /api_partner/evidence/clinical-trials/{trial_id}
+Retrieve one clinical trials record by its identifier. Requires the dataset's Evidence scope.
+
+
+
+# Get clinical trials facets
+Source: https://docs.scite.ai/api-reference/evidence/get-clinical-trials-facets
+
+/openapi.json post /api_partner/evidence/clinical-trials/facets
+Return facet counts for clinical trials without fetching full result records. Requires the dataset's Evidence scope.
+
+
+
+# Get clinical trials schema
+Source: https://docs.scite.ai/api-reference/evidence/get-clinical-trials-schema
+
+/openapi.json get /api_partner/evidence/clinical-trials/schema
+Returns all queryable and facetable fields for the clinical trials dataset.
+
+
+
+# Get device 510(k) detail
+Source: https://docs.scite.ai/api-reference/evidence/get-device-510k-detail
+
+/openapi.json get /api_partner/evidence/device510k/{device_id}
+Retrieve one FDA 510(k) device clearances record by its identifier. Requires the dataset's Evidence scope.
+
+
+
+# Get device 510(k) facets
+Source: https://docs.scite.ai/api-reference/evidence/get-device-510k-facets
+
+/openapi.json post /api_partner/evidence/device510k/facets
+Return facet counts for FDA 510(k) device clearances without fetching full result records. Requires the dataset's Evidence scope.
+
+
+
+# Get device 510(k) schema
+Source: https://docs.scite.ai/api-reference/evidence/get-device-510k-schema
+
+/openapi.json get /api_partner/evidence/device510k/schema
+Returns all queryable and facetable fields for the device 510(k) dataset.
+
+
+
+# Get drug detail
+Source: https://docs.scite.ai/api-reference/evidence/get-drug-detail
+
+/openapi.json get /api_partner/evidence/drugs/{drug_id}
+Retrieve one FDA drug labels, Orange Book, and Drugs@FDA records record by its identifier. Requires the dataset's Evidence scope.
+
+
+
+# Get drugs facets
+Source: https://docs.scite.ai/api-reference/evidence/get-drugs-facets
+
+/openapi.json post /api_partner/evidence/drugs/facets
+Return facet counts for FDA drug labels, Orange Book, and Drugs@FDA records without fetching full result records. Requires the dataset's Evidence scope.
+
+
+
+# Get drugs schema
+Source: https://docs.scite.ai/api-reference/evidence/get-drugs-schema
+
+/openapi.json get /api_partner/evidence/drugs/schema
+Return the filterable and sortable field definitions for FDA drug labels, Orange Book, and Drugs@FDA records. Requires the dataset's Evidence scope.
+
+
+
+# Get FAERS facets
+Source: https://docs.scite.ai/api-reference/evidence/get-faers-facets
+
+/openapi.json post /api_partner/evidence/faers/facets
+Return facet counts for FDA FAERS drug adverse-event reports without fetching full result records. Requires the dataset's Evidence scope.
+
+
+
+# Get FAERS report detail
+Source: https://docs.scite.ai/api-reference/evidence/get-faers-report-detail
+
+/openapi.json get /api_partner/evidence/faers/{report_id}
+Retrieve one FDA FAERS drug adverse-event reports record by its identifier. Requires the dataset's Evidence scope.
+
+
+
+# Get FAERS schema
+Source: https://docs.scite.ai/api-reference/evidence/get-faers-schema
+
+/openapi.json get /api_partner/evidence/faers/schema
+Return the filterable and sortable field definitions for FDA FAERS drug adverse-event reports. Requires the dataset's Evidence scope.
+
+
+
+# Get grant detail
+Source: https://docs.scite.ai/api-reference/evidence/get-grant-detail
+
+/openapi.json get /api_partner/evidence/grants/{grant_id}
+Retrieve one research grants record by its identifier. Requires the dataset's Evidence scope.
+
+
+
+# Get grants facets
+Source: https://docs.scite.ai/api-reference/evidence/get-grants-facets
+
+/openapi.json post /api_partner/evidence/grants/facets
+Return facet counts for research grants without fetching full result records. Requires the dataset's Evidence scope.
+
+
+
+# Get grants schema
+Source: https://docs.scite.ai/api-reference/evidence/get-grants-schema
+
+/openapi.json get /api_partner/evidence/grants/schema
+Returns all queryable and facetable fields for the grants dataset.
+
+
+
+# Get MAUDE facets
+Source: https://docs.scite.ai/api-reference/evidence/get-maude-facets
+
+/openapi.json post /api_partner/evidence/maude/facets
+Return facet counts for FDA MAUDE device adverse-event reports without fetching full result records. Requires the dataset's Evidence scope.
+
+
+
+# Get MAUDE report detail
+Source: https://docs.scite.ai/api-reference/evidence/get-maude-report-detail
+
+/openapi.json get /api_partner/evidence/maude/{report_id}
+Retrieve one FDA MAUDE device adverse-event reports record by its identifier. Requires the dataset's Evidence scope.
+
+
+
+# Get MAUDE schema
+Source: https://docs.scite.ai/api-reference/evidence/get-maude-schema
+
+/openapi.json get /api_partner/evidence/maude/schema
+Return the filterable and sortable field definitions for FDA MAUDE device adverse-event reports. Requires the dataset's Evidence scope.
+
+
+
+# Get MHRA alert detail
+Source: https://docs.scite.ai/api-reference/evidence/get-mhra-alert-detail
+
+/openapi.json get /api_partner/evidence/mhra/{item_id}
+Retrieve one MHRA safety alerts record by its identifier. Requires the dataset's Evidence scope.
+
+
+
+# Get MHRA facets
+Source: https://docs.scite.ai/api-reference/evidence/get-mhra-facets
+
+/openapi.json post /api_partner/evidence/mhra/facets
+Return facet counts for MHRA safety alerts without fetching full result records. Requires the dataset's Evidence scope.
+
+
+
+# Get MHRA schema
+Source: https://docs.scite.ai/api-reference/evidence/get-mhra-schema
+
+/openapi.json get /api_partner/evidence/mhra/schema
+Return the filterable and sortable field definitions for MHRA safety alerts. Requires the dataset's Evidence scope.
+
+
+
+# Get patent detail
+Source: https://docs.scite.ai/api-reference/evidence/get-patent-detail
+
+/openapi.json get /api_partner/evidence/patents/{patent_id}
+Retrieve one patents record by its identifier. Requires the dataset's Evidence scope.
+
+
+
+# Get patent facets
+Source: https://docs.scite.ai/api-reference/evidence/get-patent-facets
+
+/openapi.json post /api_partner/evidence/patents/facets
+Return facet counts for patents without fetching full result records. Requires the dataset's Evidence scope.
+
+
+
+# Get patent schema
+Source: https://docs.scite.ai/api-reference/evidence/get-patent-schema
+
+/openapi.json get /api_partner/evidence/patents/schema
+Returns all queryable and facetable fields for the patents dataset.
+
+
+
+# Search 510(k) summary PDFs
+Source: https://docs.scite.ai/api-reference/evidence/search-510k-summary-pdfs
+
+/openapi.json get /api_partner/evidence/device510k-summaries
+Search FDA 510(k) summary PDFs with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+
+
+
+# Search clinical trials
+Source: https://docs.scite.ai/api-reference/evidence/search-clinical-trials
+
+/openapi.json get /api_partner/evidence/clinical-trials
+Search clinical trials with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+
+
+
+# Search device 510(k) clearances
+Source: https://docs.scite.ai/api-reference/evidence/search-device-510k-clearances
+
+/openapi.json get /api_partner/evidence/device510k
+Search FDA 510(k) device clearances with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+
+
+
+# Search FAERS drug adverse event reports
+Source: https://docs.scite.ai/api-reference/evidence/search-faers-drug-adverse-event-reports
+
+/openapi.json get /api_partner/evidence/faers
+Search FDA FAERS drug adverse-event reports with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+
+
+
+# Search FDA drug labels, Orange Book, and Drugs@FDA
+Source: https://docs.scite.ai/api-reference/evidence/search-fda-drug-labels-orange-book-and-drugs@fda
+
+/openapi.json get /api_partner/evidence/drugs
+Search FDA drug labels, Orange Book, and Drugs@FDA records with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+
+
+
+# Search grants
+Source: https://docs.scite.ai/api-reference/evidence/search-grants
+
+/openapi.json get /api_partner/evidence/grants
+Search research grants with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+
+
+
+# Search MAUDE adverse event reports
+Source: https://docs.scite.ai/api-reference/evidence/search-maude-adverse-event-reports
+
+/openapi.json get /api_partner/evidence/maude
+Search FDA MAUDE device adverse-event reports with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+
+
+
+# Search MHRA alerts
+Source: https://docs.scite.ai/api-reference/evidence/search-mhra-alerts
+
+/openapi.json get /api_partner/evidence/mhra
+Search MHRA safety alerts with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+
+
+
+# Search patents
+Source: https://docs.scite.ai/api-reference/evidence/search-patents
+
+/openapi.json get /api_partner/evidence/patents
+Search patents with a free-text query, resource-specific field filters, sorting, and pagination. Call the corresponding schema endpoint to discover filterable and sortable fields. Requires the dataset's Evidence scope.
+
+
+
+# Get count of publications for a journal dashboard by slug/ISSN
+Source: https://docs.scite.ai/api-reference/journal/get-count-of-publications-for-a-journal-dashboard-by-slugissn
+
+/openapi.json get /dashboards/journal/{slug_or_issn}/article-count
+Get count of publications for Scite journal dashboard by valid ISSN.
+
+
+
+# Get Issn Editorial Notices
+Source: https://docs.scite.ai/api-reference/journal/get-issn-editorial-notices
+
+/openapi.json get /issn-editorial-notices
+Get multiple editorial notice aggregations for multiple ISSNs.
+
+Up to 500 ISSNs can be specified at once.
+
+
+
+# Get Scite journal index for ISSN
+Source: https://docs.scite.ai/api-reference/journal/get-scite-journal-index-for-issn
+
+/openapi.json get /issn-sji
+Read the Scite Journal Index for a single ISSN.
+
+For example: https://api.scite.ai/issn-sji?issn=2232-9935.
+
+
+
+# Get Scite journal index for multiple ISSNs
+Source: https://docs.scite.ai/api-reference/journal/get-scite-journal-index-for-multiple-issns
+
+/openapi.json post /issn-sji-bulk
+Get multiple Scite journal indices for multiple ISSNs.
+
+Up to 500 ISSNs can be specified at once.
+
+
+
+# Get Smart Citation tallies for a journal
+Source: https://docs.scite.ai/api-reference/journal/get-smart-citation-tallies-for-a-journal
+
+/openapi.json get /journal/{issn}/tallies
+Get tally information for a journal given a valid ISSN.
+
+Requires API Key
+
+Response includes a tally of the number of supporting, mentioning,
+    and contrasting citation statements received by publications
+    from this journal.
+
+
+
+# Get yearly Scite index for a journal
+Source: https://docs.scite.ai/api-reference/journal/get-yearly-scite-index-for-a-journal
+
+/openapi.json get /journal/{issn}/yearly-si
+Get Scite index information for a journal given its slug
+    or a valid ISSN, and an optional list of years.
+
+If no year is specified, returns the various Scite index values
+    for all years.
+
+To specify one year in the request, use the following format:
+
+`/journal/{issn}/yearly-si&years={YEAR_ONE}`
+
+To specify multiple years in the request, use the following format:
+
+`/journal/{issn}/yearly-si&years={YEAR_ONE}&years={YEAR_TWO}`
+
+Response includes a list of objects, each one containing the `twoYearSi`,
+`fiveYearSi`, `allYearSi` relative to the corresponding year.
+
+
+
+# Get recommended papers to read given a DOI
+Source: https://docs.scite.ai/api-reference/paper-recommendations/get-recommended-papers-to-read-given-a-doi
+
+/openapi.json get /api_partner/recommend-papers/{doi}
+Return a ranked list of papers related to the supplied DOI. Each item includes publication metadata, a citation tally when available, and a recommendation score.
+
+
+
+# Get multiple papers (bulk, GET with body — prefer POST)
+Source: https://docs.scite.ai/api-reference/papers/get-multiple-papers-bulk-get-with-body-—-prefer-post
+
+/openapi.json get /papers
+Get multiple papers.
+
+Pass in a list of DOIs and receive a paper for each one.
+
+Up to 500 papers can be requested at once.
+
+
+
+# Get multiple papers (bulk, POST)
+Source: https://docs.scite.ai/api-reference/papers/get-multiple-papers-bulk-post
+
+/openapi.json post /papers
+Get multiple papers.
+
+Pass in a list of DOIs and receive a paper for each one.
+
+Up to 500 papers can be requested at once.
+
+
+
+# Get Papers by Target
+Source: https://docs.scite.ai/api-reference/papers/get-papers-by-target
+
+/openapi.json get /papers/sources/{target_doi}
+Get papers citing a given DOI.
+
+
+
+# Get Single Paper
+Source: https://docs.scite.ai/api-reference/papers/get-single-paper
+
+/openapi.json get /papers/{doi}
+Get paper metadata for DOI.
+
+
+
+# Resolve PMID to DOI
+Source: https://docs.scite.ai/api-reference/papers/resolve-pmid-to-doi
+
+/openapi.json get /papers/resolve-pmid/{pmid}
+Resolve a PubMed ID (PMID) to a DOI without requiring
+the paper to exist in the Scite database.
+
+
+
+# Cancel Task
+Source: https://docs.scite.ai/api-reference/reference-check/cancel-task
+
+/openapi.json get /reference_check/tasks/{task_id}/cancel
+Cancel task that is scheduled/in progress.
+
+Once a task is successfully canceled its status will be `CANCELLED`.
+
+
+
+# Get Result
+Source: https://docs.scite.ai/api-reference/reference-check/get-result
+
+/openapi.json get /reference_check/tasks/{task_id}
+Retrieve reference check job status.
+
+This allows both fetching the job result and polling for job completion.
+
+Whilst the job is in progress its status will be either
+`PENDING` or `STARTED`.
+
+Once the job is complete its status will be `SUCCESS` and
+the result can be read under the `result` key of this response.
+
+
+
+# Get Result Url
+Source: https://docs.scite.ai/api-reference/reference-check/get-result-url
+
+/openapi.json get /reference_check/tasks/{task_id}/result_url
+Get URL for task result.
+
+
+
+# Post Reference Check
+Source: https://docs.scite.ai/api-reference/reference-check/post-reference-check
+
+/openapi.json post /reference_check
+Schedule a document for processing.
+
+Can either supply a PDF or docx file directly as a `multipart/form-data`
+upload, or specify a URL where the file can be downloaded.
+
+
+
+# Retrieve distinct references from a publication
+Source: https://docs.scite.ai/api-reference/references/retrieve-distinct-references-from-a-publication
+
+/openapi.json get /api_partner/references/references_from/{doi}
+Gets distinct references from a given DOI.
+
+Can also return relevant paper metadata and tallies for references.
+
+Note that this endpoint requires an API token for usage.
+
+
+
+# Retrieve distinct references to a publication
+Source: https://docs.scite.ai/api-reference/references/retrieve-distinct-references-to-a-publication
+
+/openapi.json get /api_partner/references/references_to/{doi}
+Gets distinct references to a given DOI.
+
+Can also return relevant paper metadata and tallies for reference sources.
+
+Results can be filtered by a list of source_dois to limit output.
+
+Note that this endpoint requires an API token for usage.
+
+
+
+# Get search results from a query
+Source: https://docs.scite.ai/api-reference/search/get-search-results-from-a-query
+
+/openapi.json get /api_partner/search
+Search publication metadata and citation statements with Boolean terms, filters, sorting, pagination, and optional aggregations. Citation snippet text is hidden on self-service keys.
+
+
+
+# Receive citations with the DOI as a source paper
+Source: https://docs.scite.ai/api-reference/smart-citation-graph/receive-citations-with-the-doi-as-a-source-paper
+
+/openapi.json get /api_partner/citations/cited_by/{doi}
+Get citations made from a given DOI.
+
+Note that the citation statements are excluded from the output.
+
+Can also return relevant paper metadata and tallies for citation sources.
+
+This endpoint requires an API token with special access. For
+more information, please contact us at sales@scite.ai
+
+
+
+# Receive citations with the DOI as a target paper
+Source: https://docs.scite.ai/api-reference/smart-citation-graph/receive-citations-with-the-doi-as-a-target-paper
+
+/openapi.json get /api_partner/citations/citing/{doi}
+Get citations made toward a given DOI.
+
+Can also return relevant paper metadata and tallies for citation sources.
+
+Results can be filtered both by a list of source_dois and a list of
+to limit output.
+
+This endpoint requires an API token with special access. For
+more information, please contact us at sales@scite.ai
+
+
+
+# Get Aggregate Tally
+Source: https://docs.scite.ai/api-reference/tallies/get-aggregate-tally
+
+/openapi.json post /tallies/aggregate
+Get the sum of multiple tallies by DOI.
+
+Up to 100 DOIs can be requested.
+
+
+
+# Get multiple tallies (bulk, GET with body — prefer POST)
+Source: https://docs.scite.ai/api-reference/tallies/get-multiple-tallies-bulk-get-with-body-—-prefer-post
+
+/openapi.json get /tallies
+Get multiple smart citation tallies.
+
+Pass in a list of DOIs and receive a tally for each one.
+
+Up to 500 tallies can be requested at once.
+
+
+
+# Get multiple tallies (bulk, POST)
+Source: https://docs.scite.ai/api-reference/tallies/get-multiple-tallies-bulk-post
+
+/openapi.json post /tallies
+Get multiple smart citation tallies.
+
+Pass in a list of DOIs and receive a tally for each one.
+
+Up to 500 tallies can be requested at once.
+
+
+
+# Get Section Tallies
+Source: https://docs.scite.ai/api-reference/tallies/get-section-tallies
+
+/openapi.json post /tallies/cited-by-sections
+Get multiple section tallies.
+
+Pass in a list of DOIs and receive a tally for each one
+    indicating how many times it was cited within
+    various sections -- Intro, Methods, Results, Discussion,
+    or Other.
+
+Up to 500 tallies can be requested at once.
+
+
+
+# Get Section Tally
+Source: https://docs.scite.ai/api-reference/tallies/get-section-tally
+
+/openapi.json get /tallies/cited-by-sections/{doi}
+Get section tally for given DOI
+
+
+
+# Get Tally
+Source: https://docs.scite.ai/api-reference/tallies/get-tally
+
+/openapi.json get /tallies/{doi}
+Get smart citation tally for given DOI.
+
+
+
+# Get API key
+Source: https://docs.scite.ai/authentication
+
+Authenticate with an API key or Enterprise credentials.
+
+Papers and Tallies are public and don't require an API key. All other Scite endpoints require an API key. You must create at least one API key to use Scite through code.
+
+<Note>
+  Looking for SAML, SSO, IP-based access, or OpenAthens? See [Enterprise access and SSO](/enterprise-access-and-sso). This page covers credentials for the Scite API.
+</Note>
+
+## Choose an authentication option
+
+<CardGroup>
+  <Card title="API key" icon="key" href="https://scite.ai/users/me/api">
+    Create a key in the API Console and send it directly with each request. No token exchange is required.
+  </Card>
+
+  <Card title="Enterprise credentials" icon="building" href="https://scite.ai/contact">
+    Exchange a Scite-issued `client_id` and `client_secret` for a short-lived access token.
+  </Card>
+</CardGroup>
+
+| Option                     | Best for                                                                | How it works                                                                         |
+| -------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **API key**                | Individual users and lower-volume integrations                          | Create a key in the API Console and send it directly with each request.              |
+| **Enterprise credentials** | Organizations with high-volume or managed server-to-server integrations | Exchange a Scite-issued `client_id` and `client_secret` for a two-hour access token. |
+
+If you're an individual developer, start with a API key. Enterprise access is intended primarily for organizations that need higher usage limits or managed credentials.
+
+## API keys
+
+Create and manage keys in the [API Console](https://scite.ai/users/me/api). Self-service API keys require a Pro plan.
+
+<Steps>
+  <Step title="Create and copy a key">
+    Choose the scopes your integration needs, then copy the key when it appears. Scite only shows the full key once.
+  </Step>
+
+  <Step title="Send the key">
+    Add the key to the `Authorization` header:
+
+    ```bash theme={null}
+    export SCITE_API_KEY='<YOUR_API_KEY>'
+
+    curl -G 'https://api.scite.ai/api_partner/search' \
+      -H "Authorization: Bearer $SCITE_API_KEY" \
+      --data-urlencode 'term=CRISPR' \
+      --data-urlencode 'limit=1'
+    ```
+  </Step>
+</Steps>
+
+The API Console only shows scopes available to your account. Creating a key does not grant access to additional features. Use the narrowest scopes your integration needs.
+
+## Enterprise credentials
+
+Enterprise authentication is for organizations that need higher usage limits or managed server-to-server credentials. [Contact sales](https://scite.ai/contact) to get a `client_id` and `client_secret`.
+
+<Steps>
+  <Step title="Request an access token">
+    Exchange your credentials at the token endpoint:
+
+    ```bash theme={null}
+    curl -X POST 'https://api.scite.ai/auth_token_users/token' \
+      -H 'Content-Type: application/json' \
+      -d '{
+        "client_id": "<YOUR_CLIENT_ID>",
+        "client_secret": "<YOUR_CLIENT_SECRET>",
+        "grant_type": "client_credentials"
+      }'
+    ```
+
+    The response includes an `access_token`. It expires after two hours.
+  </Step>
+
+  <Step title="Send the access token">
+    Add the token to the same `Authorization` header:
+
+    ```bash theme={null}
+    curl -G 'https://api.scite.ai/api_partner/search' \
+      -H 'Authorization: Bearer <ACCESS_TOKEN>' \
+      --data-urlencode 'term=CRISPR' \
+      --data-urlencode 'limit=1'
+    ```
+  </Step>
+</Steps>
+
+<Warning>
+  Keep API keys and Enterprise credentials out of source control and client-side code. Store them in an environment variable or secret manager.
+</Warning>
+
+## Authentication errors
+
+* `401 Unauthorized` means the credential is missing, invalid, expired, or revoked.
+* `403 User not authorized` means the credential is valid, but the account or key lacks access to that feature.
+
+See [Errors and rate limits](/errors-and-rate-limits) for troubleshooting. For MCP clients, see [Scite MCP authentication](/mcp/overview#authentication).
+
+
+# Changelog
+Source: https://docs.scite.ai/changelog
+
+Notable changes to the Scite API and these docs.
+
+<Update label="2026-08-10" description="Public endpoint and access guidance">
+  Clarified that Papers and Tallies endpoints are public, added a no-key first-request path to the Quickstart, documented self-service scope behavior and common errors, added compact integration guidance for coding agents, and expanded the generated API Reference with operation descriptions and error responses.
+</Update>
+
+<Update label="2026-08-08" description="Self-service API keys">
+  **API keys can now be self-provisioned on the Pro plan.** Previously all tokens required contacting sales. Now you can create, rotate, and revoke your own key instantly from the [API Console](https://scite.ai/users/me/api). Enterprise plans (issued `client_id`/`client_secret`, higher limits, additional scopes) still go through [sales](https://scite.ai/contact). See [Authentication](/authentication) for details.
+</Update>
+
+
+# Citations & Tallies
+Source: https://docs.scite.ai/concepts/citation-model
+
+How Scite models citations: targets, sources, Smart Citations, and tallies.
+
+Scite's data model differs from a plain citation count in a few ways that matter once you start building against the API.
+
+## Target and source
+
+* **Target**: the publication being cited.
+* **Source**: the publication making the citation.
+
+Endpoints are named from this perspective: `citing/{doi}` returns sources that cite the target `{doi}`; `cited_by/{doi}` returns targets cited by the source `{doi}`.
+
+## Smart Citations
+
+A **Smart Citation** is a citation statement classified by how it uses the target publication:
+
+| Classification  | Meaning                                                                                              |
+| --------------- | ---------------------------------------------------------------------------------------------------- |
+| `supporting`    | The citing statement supports the target's findings                                                  |
+| `contradicting` | The citing statement contradicts the target's findings (referred to as "contrasted" in the Scite UI) |
+| `mentioning`    | The citing statement mentions the target without a clear supporting/contradicting stance             |
+| `unclassified`  | Not yet classified                                                                                   |
+
+## Tallies vs. citing publications
+
+This is the distinction that trips people up most:
+
+* **Tally counts** (`total`, `supporting`, `contradicting`, `mentioning`, `unclassified`) count individual **citation statements** that Scite has extracted and classified as Smart Citations.
+* **`citingPublications`** counts distinct **publications** that cite the target, drawn from the broader citation graph rather than only publications with a classified Smart Citation.
+
+These come from different underlying counts, so neither bounds the other. `citingPublications` can exceed `total` (not every citing publication has a classified statement) or fall below it (one publication can make several classified statements toward the same target). Treat them as two different measurements, not a count and a subset.
+
+## References vs. citations
+
+In everyday language "citation" and "reference" are interchangeable. In the Scite API, **references** specifically means the distinct source/target DOI pairs. See the References endpoints (**References** in the API Reference tab) if you need the raw pairs rather than tally counts.
+
+## Related
+
+* [Smart Citations guide](/guides/smart-citations): the endpoints that implement this model
+* [Glossary](/concepts/glossary): quick lookup for other terms (dashboards, DOI resolution, etc.)
+
+
+# Glossary
+Source: https://docs.scite.ai/concepts/glossary
+
+Quick reference for Scite-specific terminology used across the API.
+
+| Term                           | Meaning                                                                                                                                                             |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Target**                     | The publication being cited. See [Citations & Tallies](/concepts/citation-model).                                                                                   |
+| **Source**                     | The publication making the citation.                                                                                                                                |
+| **Tally**                      | Counts of citation statements toward a target: `total`, `supporting`, `contradicting`, `mentioning`, `unclassified`.                                                |
+| **Smart Citation**             | A citation statement classified by how it uses the target (supporting / contradicting / mentioning).                                                                |
+| **Contradicting / Contrasted** | The same concept: the API uses `contradicting`, the Scite UI displays "contrasted."                                                                                 |
+| **Citing publications**        | The count of distinct publications citing a target: not the same as the tally `total` (see [Citations & Tallies](/concepts/citation-model)).                        |
+| **Papers**                     | Publication metadata: DOI, title, publication date, and related fields.                                                                                             |
+| **Collection**                 | A set of papers monitored over time. Created from DOIs or a search query via the API or MCP, or in the Scite UI (which also imports from Zotero, Mendeley, or CSV). |
+| **Dashboard**                  | A report on a collection.                                                                                                                                           |
+| **Reference Check**            | Scite's capability for evaluating and linking the references of a submitted document.                                                                               |
+| **Scite Journal Index (SJI)**  | A journal-level index derived from Scite's citation data, looked up by ISSN.                                                                                        |
+| **Assistant**                  | Scite's Q\&A endpoint that returns answers backed by citation evidence.                                                                                             |
+| **Evidence**                   | Non-citation regulatory and research records searchable alongside citation data: patents, grants, clinical trials, and FDA/MHRA regulatory records.                 |
+
+
+# Enterprise access and SSO
+Source: https://docs.scite.ai/enterprise-access-and-sso
+
+Configure institutional access to Scite with SAML 2.0 SSO, OpenAthens, IP ranges, email domains, or managed user lists.
+
+Scite supports several ways to give an organization access. Most institutions use IP ranges together with an approved email domain. Organizations that need centralized identity management can use SAML 2.0 single sign-on (SSO) or OpenAthens.
+
+[Contact sales](https://scite.ai/contact-sales) to choose an access method or start an SSO configuration.
+
+## Supported access methods
+
+| Method                  | Best for                                                                                    | Setup                                                            |
+| ----------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **IP ranges (CIDR)**    | Access from a campus or corporate network                                                   | Provide the public IP ranges that should receive access.         |
+| **Email domain**        | Users with an organization-managed email address                                            | Approve one or more email domains for the organization.          |
+| **Approved email list** | A defined group that cannot be represented by a domain                                      | Provide the email addresses that should receive access.          |
+| **SAML 2.0 SSO**        | Centralized sign-in, account lifecycle management, and optional password-login restrictions | Configure a connection between your identity provider and Scite. |
+| **OpenAthens (OIDC)**   | Institutions that manage access through OpenAthens                                          | Configure an OpenAthens connection with Scite.                   |
+| **Partner autologin**   | Approved partner or platform integrations                                                   | Contact Scite to discuss an integration.                         |
+
+IP range and email-domain access are the most common combination and can usually be enabled quickly. SSO requires configuration and testing for each institution.
+
+## SAML 2.0 compatibility
+
+Scite is identity-provider agnostic. It works with standards-compliant SAML 2.0 identity providers, including Okta, Microsoft Entra ID, Shibboleth, and other institutional identity platforms. Scite has more than 14 identity-provider configurations in production.
+
+An organization can have more than one identity-provider connection. This is useful for consortia, organizations with separate user populations, and identity-provider migrations.
+
+## Set up SAML SSO
+
+<Steps>
+  <Step title="Send your identity-provider metadata">
+    Send Scite your IdP metadata XML. It normally contains the SSO entry-point URL, issuer or entity ID, and public signing certificate.
+  </Step>
+
+  <Step title="Register Scite with your identity provider">
+    Scite provides the Assertion Consumer Service (ACS) URL and other service-provider details needed to create the application in your IdP.
+  </Step>
+
+  <Step title="Configure the email attribute">
+    Confirm which SAML attribute contains the user's email address. Scite can configure the attribute name for your connection.
+  </Step>
+
+  <Step title="Test before rollout">
+    Complete at least one successful sign-in with a test user. Confirm that the user reaches the correct organization and that any existing Scite account is preserved.
+  </Step>
+
+  <Step title="Share your organization sign-in page">
+    Your branded sign-in page follows `https://scite.ai/enterprise/{org-slug}`. Link to it from your intranet, library portal, or other member resources.
+  </Step>
+</Steps>
+
+## Email attribute requirements
+
+<Warning>
+  Every SAML assertion must resolve to an email address. Sign-in fails if Scite cannot find one; there is no anonymous-account fallback.
+</Warning>
+
+Scite can read the email from a configured SAML attribute. Standard email fields such as `email`, `mail`, or an email-formatted NameID often work, but you should confirm the exact claim your IdP sends before launch.
+
+### Microsoft Entra ID
+
+Microsoft Entra ID configurations vary. An assertion may use a namespaced claim for email, while NameID may contain a user principal name or another identifier. Before go-live, inspect a test assertion and either:
+
+* map the user's email address to a standard email claim; or
+* tell Scite the exact attribute name that contains the email address.
+
+This check prevents one of the most common SAML setup problems.
+
+## Match existing Scite accounts
+
+The email asserted by the IdP should match the email on the user's existing Scite account. Scite treats letter-case differences as the same address, but it cannot automatically link genuinely different addresses.
+
+Before rollout, ask users with personal, legacy, or renamed email addresses to update their Scite account to the address the IdP will send. Otherwise, their first SSO sign-in may create a separate account instead of opening their existing one.
+
+## Require SSO for your organization
+
+Scite can require organization members to use SSO instead of a password. To prevent an organization from locking itself out, enforcement is available only after the SAML connection has completed a successful test sign-in.
+
+Keep at least one tested administrator path available while you change identity-provider settings. Coordinate enforcement changes with Scite.
+
+## Rotate a signing certificate
+
+Scite supports overlapping signing certificates so organizations can rotate a certificate without planned sign-in downtime. Send the replacement certificate to Scite before the current certificate expires, test the new certificate, and remove the old certificate after the rotation is complete.
+
+## Use SSO accounts with MCP
+
+MCP does not authenticate directly with SAML. It uses OAuth for interactive clients or an API key for programmatic access.
+
+When your organization is configured to retain license access on user accounts, a user can sign in to [scite.ai](https://scite.ai) through SSO once and then authorize MCP with the same account. The organization access associated with that account carries into the MCP OAuth flow.
+
+See [Scite MCP authentication](/mcp/overview#authentication) for client setup.
+
+## Get help
+
+[Contact sales](https://scite.ai/contact) to configure institutional access, request SAML or OpenAthens setup, plan a certificate rotation, or discuss a partner autologin integration.
+
+
+# Errors and rate limits
+Source: https://docs.scite.ai/errors-and-rate-limits
+
+Handle authentication failures, missing scopes, invalid requests, and rate limits.
+
+Scite returns JSON error responses with a `detail` field. Use the HTTP status code to decide whether to change the request, update access, or retry.
+
+## Common errors
+
+| Status                    | Meaning                                                                        | What to do                                                                              |
+| ------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| `401 Unauthorized`        | The endpoint requires authentication, but the request has no valid credential. | Add or replace the `Authorization: Bearer <YOUR_API_KEY>` header.                       |
+| `403 User not authorized` | The credential is valid, but the key or account lacks the required scope.      | Check the key's scopes in the API Console. If the scope isn't available, contact sales. |
+| `404`                     | The requested DOI, task, collection, or other resource wasn't found.           | Check the identifier. Don't retry the same value unchanged.                             |
+| `422`                     | A parameter or request body failed validation.                                 | Use the response details to correct the field name, type, or format.                    |
+| `429`                     | The request exceeded a rate limit.                                             | Wait for the indicated reset, then retry with backoff.                                  |
+
+For example, Search without a key returns:
+
+```json theme={null}
+{
+  "detail": "Unauthorized"
+}
+```
+
+A valid key without the required feature scope returns:
+
+```json theme={null}
+{
+  "detail": "User not authorized"
+}
+```
+
+## Rate limit headers
+
+Authenticated responses expose the current short-window limit through `RateLimit-*` headers and the minute limit through `X-RateLimit-*-Minute` headers:
+
+```text theme={null}
+RateLimit-Limit: <short-window-limit>
+RateLimit-Remaining: <short-window-remaining>
+RateLimit-Reset: <seconds-until-reset>
+X-RateLimit-Limit-Minute: <minute-limit>
+X-RateLimit-Remaining-Minute: <minute-remaining>
+```
+
+Limits vary by endpoint and account. Read the headers instead of hard-coding a request rate.
+
+## Retry safely
+
+* Don't retry `401`, `403`, `404`, or `422` responses without changing the credential or request.
+* For `429` and transient `5xx` responses, use exponential backoff with jitter.
+* Honor `Retry-After` when the response includes it. Otherwise wait until the indicated rate-limit reset.
+* Set a maximum retry count and an overall timeout.
+* Avoid retrying write requests unless your application can prevent duplicate changes.
+
+## Polling asynchronous tasks
+
+Assistant and Reference Check return a task ID that you poll for results. Don't poll in a tight loop. Back off between requests, enforce an overall timeout, and preserve the exact task ID returned by the submit request.
+
+See the [Assistant guide](/guides/assistant) and [Reference Check guide](/guides/reference-check) for their task flows.
+
+
+# Assistant
+Source: https://docs.scite.ai/guides/assistant
+
+Ask research questions and get answers backed by citation evidence.
+
+The Assistant API answers research questions using Scite's citation evidence to ground its responses. Like Reference Check, it's a poll-based flow: submit a query, then poll for the result.
+
+<Warning>
+  Both endpoints require a key with the `assistant` scope, it isn't included by default on a self-service Pro key. If you get a `403`, [email sales](mailto:sales@scite.ai) to get the scope added, then generate a new key from the [API Console](https://scite.ai/users/me/api).
+</Warning>
+
+## 1. Start a query
+
+```bash theme={null}
+curl 'https://api.scite.ai/api_partner/assistant/poll' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-raw '{
+    "turns": [{"role": "user", "content": "How does the structure of a protein affect its function?"}],
+    "user_input": "How does the structure of a protein affect its function?",
+    "numReferences": 25,
+    "answerLength": "medium",
+    "citationStyle": "ieee"
+  }'
+```
+
+For a single-turn question, `turns` needs only one object. Multi-turn conversations add more objects to the `turns` array.
+
+The response is `{ "id": task_id }`.
+
+## 2. Poll for the result
+
+```bash theme={null}
+curl 'https://api.scite.ai/api_partner/assistant/tasks/{task_id}' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+Poll until `status` is `SUCCESS`. While pending, the response's `info` field includes the currently generated content, search strategies, and search results so far, useful for streaming a "thinking" state to users.
+
+Back off between polling requests and enforce an overall timeout. See [Errors and rate limits](/errors-and-rate-limits#polling-asynchronous-tasks).
+
+## Useful parameters
+
+| Parameter                                    | Purpose                                                                    |
+| -------------------------------------------- | -------------------------------------------------------------------------- |
+| `alwaysUseReferences` / `neverUseReferences` | Force or suppress citation-backed answers                                  |
+| `abstractsOnly` / `fullTextsOnly`            | Restrict the evidence pool                                                 |
+| `yearFrom` / `yearTo`                        | Limit evidence by publication year                                         |
+| `topics`, `journals`, `publicationTypes`     | Scope the evidence pool                                                    |
+| `useStructuredResponse`                      | Enable **tables mode**: returns structured tabular output instead of prose |
+| `rankBy`                                     | Controls result ranking: see below                                         |
+
+### `rankBy` values
+
+* `all`: a combination of the factors below (default)
+* `relevance`: relevance to the query
+* `date`: most recent first
+* `citations`: by citation count
+* `supporting-citations` / `contrasting-citations`: by supporting or contradicting citation count
+* `journal-rank`: by journal rank/impact
+
+## Related
+
+* [Reference Check guide](/guides/reference-check): the same poll pattern, for evaluating a document's references instead of answering a question
+* [Errors and rate limits](/errors-and-rate-limits): retry and polling guidance
+
+
+# Collections
+Source: https://docs.scite.ai/guides/collections
+
+Create collections of papers and monitor how their citations develop over time.
+
+A **collection** is a set of papers you monitor over time. Collections alert you to new supporting or contradicting citations, flag retractions, and give you a living view of how a research area is developing. Use them to track your own publications, monitor another group's output, or stay on top of a field. A **dashboard** is a report on a collection.
+
+Create collections from a list of DOIs or a search query through this API, via [MCP](/mcp/overview), or in the Scite UI, which also imports from Zotero, Mendeley, or a CSV of DOIs. A collection created anywhere is available everywhere: use it as context in the UI, the API, or MCP.
+
+## Working with collections
+
+```bash theme={null}
+curl -X POST 'https://api.scite.ai/api_partner/collections/create' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  -H 'Content-Type: application/json' \
+  -d '{"name": "My Review", "dois": ["10.1038/nature12373", "10.1126/science.1157784"]}'
+```
+
+If both `dois` and `query` are provided, `query` takes precedence.
+
+| Endpoint                                            | Purpose                                  |
+| --------------------------------------------------- | ---------------------------------------- |
+| `POST /api_partner/collections/create`              | Create a collection from DOIs or a query |
+| `GET /api_partner/collections/{collection_slug}`    | Fetch a collection by slug               |
+| `PUT /api_partner/collections/{collection_slug}`    | Update a collection                      |
+| `DELETE /api_partner/collections/{collection_slug}` | Delete a collection                      |
+
+Collection write operations (create/update/delete) require an API key with **write** scope; see [Authentication](/authentication#pro-api-keys).
+
+<Note>
+  If you get a `403 User not authorized` on a Collections call even with a valid key, your account may not have Collections access enabled. [Email sales](mailto:sales@scite.ai) to check.
+</Note>
+
+## Related
+
+* [Search guide](/guides/search): the `query` you can pass into a collection is the same search syntax
+* [Papers & Authors guide](/guides/papers-and-authors): look up the publications inside a collection by DOI
+* [Errors and rate limits](/errors-and-rate-limits): troubleshoot `401`, `403`, and retryable failures
+
+
+# Adverse Events
+Source: https://docs.scite.ai/guides/evidence/adverse-events
+
+Search FDA MAUDE device and FAERS drug adverse-event reports.
+
+Two datasets cover FDA post-market adverse-event reporting:
+
+* **`maude`**: MAUDE reports for **medical devices** — event type, product problems, device details, patient treatment, and the narrative MDR text.
+* **`faers`**: FAERS reports for **drugs** — the reported reactions (MedDRA terms), seriousness, patient demographics, and the drugs involved with dosage and indication.
+
+<Info>
+  Each dataset requires its own Evidence scope. See the [Evidence overview](/guides/evidence/overview) for how scopes work.
+</Info>
+
+## Search MAUDE (devices)
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/evidence/maude' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'q="insulin pump" AND occlusion' \
+  --data-urlencode 's=date_received'
+```
+
+Each item in `results` includes `mdrReportKey`, `reportNumber`, `eventType`, `adverseEventFlag`, `productProblemFlag`, `productProblems`, a `device` object (`brandName`, `genericName`, `deviceName`, `manufacturerDName`, `modelNumber`, `deviceClass`, `regulationNumber`), a `patient` object, and `mdrText` — the narrative event descriptions. `s` accepts `_relevance` (default), `date_received`, and `date_report`.
+
+## Search FAERS (drugs)
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/evidence/faers' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'q=rhabdomyolysis AND statin'
+```
+
+Each item in `results` includes `safetyreportid`, an `event` object (`serious`, `seriousnessType`, `receiptdate`, patient age/sex/weight fields), a `reaction` array with MedDRA preferred terms (`reactionmeddrapt`) and outcomes, a `drug` array (`medicinalproduct`, `activesubstancename`, `drugindication`, dosage fields, `brandName`, `genericName`), and `primarysource` (reporter qualification and country).
+
+## Single report
+
+`GET /api_partner/evidence/maude/{report_id}` and `GET /api_partner/evidence/faers/{report_id}` return one full report each.
+
+## Common uses
+
+* **Signal monitoring**: facet by reaction term or product problem over time via the `facets` endpoint to spot emerging safety signals.
+* **Due diligence**: pull the adverse-event history for a specific device model or drug substance before a deal, launch, or formulary decision.
+* **Literature triangulation**: FAERS `literaturereference` fields and Scite [Search](/guides/search) let you connect spontaneous reports to published case reports.
+
+<Note>
+  Adverse-event reports are spontaneous and unverified; report counts reflect reporting behavior as much as true incidence. Treat them as signals to investigate, not incidence rates.
+</Note>
+
+
+# Clinical Trials
+Source: https://docs.scite.ai/guides/evidence/clinical-trials
+
+Search registered clinical trials with phase, status, sponsor, and intervention filters.
+
+The clinical trials dataset covers registered trials with their design, status, sponsors, conditions, interventions, eligibility criteria, enrollment, key dates, and reported adverse events. Trials also carry `citations` and `publicationsMetadata`, linking them back to the published literature — so you can move from a trial to its results papers and their [Smart Citations](/guides/smart-citations).
+
+<Info>
+  Requires the `evidence:clinical-trials:api` scope. See the [Evidence overview](/guides/evidence/overview) for how scopes work.
+</Info>
+
+## Search trials
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/evidence/clinical-trials' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'q=semaglutide' \
+  --data-urlencode 'f=trialState.phase:"Phase III" trialState.overallStatus:"Recruiting"'
+```
+
+Each item in `results` includes `title`, `briefDescription`, `description`, `sponsors`, `pi`, `conditions`, `interventions`, `trialState` (phase and overall status), `eligibility`, `enrollment`, `dates`, `registry`, `hasResults`, `reportedEvents`, `citations`, `publicationsMetadata`, and an `externalLink` to the registry entry.
+
+## Useful filters
+
+| Filter                     | Values                                                     |
+| -------------------------- | ---------------------------------------------------------- |
+| `trialState.phase`         | `"Phase I"` through `"Phase IV"`, `"N/A"`                  |
+| `trialState.overallStatus` | `"Recruiting"`, `"Completed"`, and other registry statuses |
+| `conditions`               | Condition name, e.g. `"Type 2 Diabetes"`                   |
+| `interventions.name`       | Drug, device, or procedure name                            |
+| `sponsors.name`            | Sponsor organization                                       |
+| `registry`                 | Source registry                                            |
+| `design.studyType`         | Study type, e.g. interventional vs. observational          |
+
+Filter by date with range suffixes on `dates.startDate`, `dates.completedDate`, or `dates.lastUpdatedDate`: `f=dates.startDategte:"2024-01-01" dates.startDatelt:"2025-01-01"`.
+
+## Sorting
+
+`s` accepts `_relevance` (default), `dates.startDate`, `dates.completedDate`, and `dates.lastUpdatedDate`. Combine with `sortDir=asc|desc`.
+
+## Single trial
+
+`GET /api_partner/evidence/clinical-trials/{trial_id}` returns the full record, including detailed `reportedEvents` (adverse events reported for the trial).
+
+## Common uses
+
+* **Pipeline monitoring**: filter a condition or intervention by phase and status, sort by `dates.lastUpdatedDate` to catch changes.
+* **Site and sponsor analysis**: facet on `sponsors.name` via the `facets` endpoint to see who is active in an indication.
+* **Evidence synthesis**: use `hasResults` and the linked `publicationsMetadata` to connect trials to their published outcomes, then check how those papers are cited with [tallies](/guides/smart-citations).
+
+
+# Device Clearances
+Source: https://docs.scite.ai/guides/evidence/devices
+
+Search FDA 510(k) device clearance decisions and their summary PDFs.
+
+Two datasets cover FDA 510(k) premarket notifications:
+
+* **`device510k`**: the structured clearance records — device name and class, product code, applicant, decision code and date, advisory committee, and regulation number.
+* **`device510k-summaries`**: the 510(k) summary PDFs behind those clearances, with per-page extracted text, so you can search the actual submission content, not just the metadata.
+
+<Info>
+  Each dataset requires its own Evidence scope. See the [Evidence overview](/guides/evidence/overview) for how scopes work.
+</Info>
+
+## Search clearances
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/evidence/device510k' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'q="continuous glucose monitor"' \
+  --data-urlencode 's=decision.decision_date'
+```
+
+Each item in `results` includes `title`, `statementOrSummary`, `summaryText`, `kNumbersMentioned`, a `device` object (`kNumber`, `tradeName`, `deviceName`, `deviceClass`, `productCode`, `clearanceType`, `regulationNumber`, `medicalSpecialtyDescription`), a `decision` object (`decisionCode`, `decisionDescription`, `decisionDate`, `advisoryCommittee`, `expeditedReviewFlag`), and `applicantInformation`.
+
+`s` accepts `_relevance` (default), `device.device_class`, `device.date_received`, and `decision.decision_date`.
+
+## Search summary PDFs
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/evidence/device510k-summaries' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'q="predicate device" AND "insulin pump"'
+```
+
+Results are documents with `filename` and `attachments`; each attachment carries `pages` with extracted text (`content`), page counts, file metadata, and ontology `tags`/`categories`. Use this when the question is about what a submission actually says — predicate device claims, testing summaries, intended use — rather than the clearance metadata.
+
+## Single record
+
+`GET /api_partner/evidence/device510k/{device_id}` and `GET /api_partner/evidence/device510k-summaries/{item_id}` return one full record each.
+
+## Common uses
+
+* **Predicate research**: search summaries for a device type to find the predicate chains competitors cite; `kNumbersMentioned` on clearance records links related submissions.
+* **Regulatory watch**: sort clearances by `decision.decision_date` and filter by product code or advisory committee to monitor a device category.
+* **Full safety picture**: combine with [MAUDE adverse-event reports](/guides/evidence/adverse-events) for post-market signals on the same devices.
+
+
+# Drugs
+Source: https://docs.scite.ai/guides/evidence/drugs
+
+Search FDA drug labels, Orange Book listings, and Drugs@FDA application records.
+
+The drugs dataset (`drugs`) combines FDA drug labels, Orange Book listings, and Drugs\@FDA application records into one searchable resource. Each result ties together the regulatory application (sponsor, products, approval dates, marketing status, therapeutic equivalence codes) and the label metadata (brand/generic names, active ingredients, pharmacologic classes, routes, NDC codes).
+
+<Info>
+  Requires the drugs dataset's Evidence scope. See the [Evidence overview](/guides/evidence/overview) for how scopes work.
+</Info>
+
+## Search drugs
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/evidence/drugs' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'q=semaglutide'
+```
+
+Each item in `results` carries `title`, `tags`, `categories`, an `application` object (`applicationNumber`, `sponsorName`, `products` — each with `approvalDate`, `marketingStatus`, `dosageForm`, `route`, `teCode`, and `activeIngredients` with strengths), and a `labels` object (`brandName`, `genericName`, `manufacturerName`, `substanceName`, pharmacologic class fields like `pharmClassEpc` and `pharmClassMoa`, plus `rxcui`, `unii`, and NDC identifiers).
+
+Call `GET /api_partner/evidence/drugs/schema` for the filterable fields, and use the `facets` endpoint to aggregate, for example, by pharmacologic class or sponsor.
+
+## Single drug
+
+`GET /api_partner/evidence/drugs/{drug_id}` returns the full record for one drug.
+
+## Common uses
+
+* **Regulatory lookup**: resolve a brand or generic name to its application number, sponsor, approval dates, and marketing status in one call.
+* **Formulary and equivalence work**: `teCode` and `referenceDrug` on products support therapeutic-equivalence checks against the Orange Book.
+* **Cross-dataset safety picture**: pair a drug's identifiers with [FAERS adverse-event reports](/guides/evidence/adverse-events) and the published literature via [Search](/guides/search).
+
+
+# Grants
+Source: https://docs.scite.ai/guides/evidence/grants
+
+Search research grant awards from NIH RePORTER, NSF, and other funding sources.
+
+The grants dataset covers research funding awards: title, abstract, awarding agency and branch, recipient organization, principal investigator, award amount, and award dates. Records come from sources such as NIH RePORTER and NSF and are grouped so related awards surface together. Use it to see who funds a research area, track a lab's funding history, or spot emerging topics before they show up in publications.
+
+<Info>
+  Requires the `evidence:grants:api` scope. See the [Evidence overview](/guides/evidence/overview) for how scopes work.
+</Info>
+
+## Search grants
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/evidence/grants' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'q="single cell" AND atlas' \
+  --data-urlencode 'f=agency:"NIH" country:"USA"' \
+  --data-urlencode 's=awardAmount'
+```
+
+Each item in `results` is a grant group: `{ grants, grantsTotal, ... }`, where each grant carries `title`, `abstract`, `organization`, `country`, `state`, `piName`, `awardAmount`, `awardStartDate`, `awardCloseDate`, `awardNoticeDate`, `agency`, `branch`, `researchKeywords`, `dataSource`, `phase`, `program`, and an `externalLink` to the source record.
+
+## Useful filters
+
+| Filter         | Values                                       |
+| -------------- | -------------------------------------------- |
+| `agency`       | Funding agency, e.g. `"NIH"`, `"NSF"`        |
+| `organization` | Recipient institution                        |
+| `piName`       | Principal investigator name                  |
+| `country`      | ISO 3166-1 alpha-3 code, e.g. `"USA"`        |
+| `dataSource`   | `"NIH RePORTER"`, `"NSF"`, and other sources |
+
+Filter by award dates with range suffixes: `f=awardStartDategte:"2023-01-01"`.
+
+## Sorting
+
+`s` accepts `_relevance` (default), `awardStartDate`, `awardCloseDate`, `awardNoticeDate`, `awardAmount`, and `employeeCount`. Combine with `sortDir=asc|desc`.
+
+## Single grant
+
+`GET /api_partner/evidence/grants/{grant_id}` returns the full record for one grant group.
+
+## Common uses
+
+* **Funding landscape**: facet on `agency` or `organization` via the `facets` endpoint to map who funds a topic.
+* **Prospect and partner research**: look up a PI or institution's active awards, sorted by `awardAmount` or `awardStartDate`.
+* **Early signal detection**: grants precede publications; a topic search sorted by `awardNoticeDate` shows where funding is moving now.
+
+
+# Overview
+Source: https://docs.scite.ai/guides/evidence/overview
+
+Search patents, grants, clinical trials, and regulatory records alongside citation data.
+
+The Evidence API searches non-citation research and regulatory records: patents, grants, clinical trials, FDA device/drug records, and adverse-event and safety-alert databases, sourced from Resolute's evidence datasets. Every dataset follows the **same four-endpoint pattern**, so once you've used one, you've used them all.
+
+<Warning>
+  Evidence isn't included in a standard self-service Pro key. Each dataset requires its own scope (`evidence:patents:api`, `evidence:grants:api`, `evidence:clinical-trials:api`, and equivalents for the other datasets). [Email sales](mailto:sales@scite.ai) to get a dataset scope added to your account, then generate a new key from the [API Console](https://scite.ai/users/me/api) so it picks up the scope.
+</Warning>
+
+## The pattern
+
+For a resource `{resource}` (e.g. `patents`):
+
+| Endpoint                                       | Purpose                                                                         |
+| ---------------------------------------------- | ------------------------------------------------------------------------------- |
+| `GET /api_partner/evidence/{resource}`         | Search                                                                          |
+| `GET /api_partner/evidence/{resource}/schema`  | Get the filterable fields and their types for this resource                     |
+| `POST /api_partner/evidence/{resource}/facets` | Get facet counts (e.g. how many results per year) without fetching full results |
+| `GET /api_partner/evidence/{resource}/{id}`    | Get a single record by its ID                                                   |
+
+Search takes two parameters, and they work differently than the [Search API](/guides/search):
+
+* **`q`**: free-text query. Supports `AND`, `OR`, `NOT`, and phrase matching with double quotes: `q=CRISPR`, `q="gene therapy" AND cancer`.
+* **`f`**: field filters, space-delimited, in `field:"value"` format (values must be double-quoted). Call the resource's `schema` endpoint to see which fields are filterable.
+
+```bash theme={null}
+curl 'https://api.scite.ai/api_partner/evidence/patents/schema' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/evidence/patents' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'q=CRISPR' \
+  --data-urlencode 'f=patents.assignees.name:"Acme Corp" patents.filingStatus:"grant"'
+```
+
+Date range filters use `gte`/`lt` suffixes with no space before the suffix: `f=dates.startDategte:"2024-01-01" dates.startDatelt:"2025-01-01"`. ISO dates, epoch milliseconds, and timezone offsets are all accepted; dates without a timezone are treated as UTC.
+
+Sorting uses `s` (default `_relevance`; each dataset page lists its sortable fields) and `sortDir`, not the `sort`/`sort_order` names from Search. Pagination uses `p` (page number), not `limit`/`offset`.
+
+Every search response has the same envelope: `{ totalResults, delay, resultsPerPage, from, results }`. Only the shape of each item in `results` differs per dataset.
+
+<Warning>
+  Some fields in search and detail responses are either a plain string or an object shaped like `{"id": "...", "name": "...", "highlighted": "..."}`, depending on the query. Handle both, e.g. `value.id ?? value.name ?? value`.
+</Warning>
+
+## Datasets
+
+<CardGroup>
+  <Card title="Patents" icon="file-certificate" href="/guides/evidence/patents">
+    Patent filings with family, citation, assignee, and legal-event data.
+  </Card>
+
+  <Card title="Clinical Trials" icon="stethoscope" href="/guides/evidence/clinical-trials">
+    Registered trials with phase, status, sponsors, interventions, and linked publications.
+  </Card>
+
+  <Card title="Grants" icon="hand-holding-dollar" href="/guides/evidence/grants">
+    Research grant awards from NIH RePORTER, NSF, and other funders.
+  </Card>
+
+  <Card title="Drugs" icon="pills" href="/guides/evidence/drugs">
+    FDA drug labels, Orange Book listings, and Drugs\@FDA application records.
+  </Card>
+
+  <Card title="Device Clearances" icon="microchip" href="/guides/evidence/devices">
+    FDA 510(k) clearance decisions and their summary PDFs.
+  </Card>
+
+  <Card title="Adverse Events" icon="triangle-exclamation" href="/guides/evidence/adverse-events">
+    FDA MAUDE (device) and FAERS (drug) adverse-event reports.
+  </Card>
+
+  <Card title="Safety Alerts" icon="bell-exclamation" href="/guides/evidence/safety-alerts">
+    UK MHRA safety alerts, including full alert document content.
+  </Card>
+</CardGroup>
+
+## Related
+
+* [Search guide](/guides/search): the equivalent search over publications, with a different query syntax than Evidence
+* Full parameter reference: see **Evidence** in the API Reference tab; per-resource filters are best discovered via each resource's `/schema` endpoint
+* [Errors and rate limits](/errors-and-rate-limits): troubleshoot missing dataset scopes and retryable failures
+
+
+# Patents
+Source: https://docs.scite.ai/guides/evidence/patents
+
+Search patent filings with family, forward-citation, assignee, and legal-event data.
+
+The patents dataset covers patent filings grouped into **families** (the same invention filed across jurisdictions). Results include inventors, assignees, classifications, filing status, publication references, and legal events, plus family size and forward citation counts for gauging a patent's footprint. Use it to track competitor filings, map the IP landscape around a technology, or connect published research to the patents that cite it.
+
+<Info>
+  Requires the `evidence:patents:api` scope. See the [Evidence overview](/guides/evidence/overview) for how scopes work.
+</Info>
+
+## Search patents
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/evidence/patents' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'q="mRNA vaccine" AND delivery' \
+  --data-urlencode 'f=patents.filingStatus:"grant"' \
+  --data-urlencode 's=forwardCitationCount'
+```
+
+Each item in `results` is a patent family: `{ familyId, familySize, forwardCitationCount, patents, patentsTotal }`, where `patents` holds the individual filings with `title`, `abstract`, `filingStatus`, `classifications`, `inventors`, `assignees`, `applicants`, `appRef` (application reference and filing date), `publications`, `languages`, and `legalEvents`.
+
+## Useful filters
+
+| Filter                   | Values                                 |
+| ------------------------ | -------------------------------------- |
+| `patents.filingStatus`   | `"application"`, `"grant"`             |
+| `patents.assignees.name` | Assignee (company or institution) name |
+| `patents.inventors.name` | Inventor name                          |
+| `patents.languages`      | ISO 639-1 code, e.g. `"en"`            |
+
+Filter by filing or publication date with range suffixes: `f=patents.appRef.filingDategte:"2022-01-01"`. Call `GET /api_partner/evidence/patents/schema` for the full filterable field list.
+
+## Sorting
+
+`s` accepts `_relevance` (default), `forwardCitationCount`, `familySize`, `patents.publications.pubRef.date`, and `patents.appRef.filingDate`. Combine with `sortDir=asc|desc`.
+
+## Single patent
+
+`GET /api_partner/evidence/patents/{patent_id}` returns the full record for one filing, including `familySize` and `forwardCitationCount` alongside the complete `patent` object.
+
+## Common uses
+
+* **Competitive intelligence**: filter by `patents.assignees.name` and sort by filing date to watch a competitor's pipeline.
+* **Technology landscaping**: free-text query for a technique, facet by year or assignee via the `facets` endpoint to see who is filing and when.
+* **Research-to-IP linkage**: search a topic in both [Search](/guides/search) and patents to see how a body of literature translates into filings.
+
+
+# Safety Alerts
+Source: https://docs.scite.ai/guides/evidence/safety-alerts
+
+Search UK MHRA safety alerts, including full alert document content.
+
+The `mhra` dataset covers safety alerts from the UK Medicines and Healthcare products Regulatory Agency: device safety notices, drug alerts, and recalls. Records include the alert headline and description plus the full attached documents with per-page extracted text, so you can search what an alert actually says.
+
+<Info>
+  Requires the MHRA dataset's Evidence scope. See the [Evidence overview](/guides/evidence/overview) for how scopes work.
+</Info>
+
+## Search alerts
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/evidence/mhra' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'q=recall AND "hip implant"'
+```
+
+Each item in `results` includes `filename`, `domain`, `url`, and `attachments`. Attachments carry `extras` (`headLine`, `description`, `contentHtml`), file metadata, ontology `tags`/`categories`, and `pages` with extracted text (`content`) for full-document search.
+
+Call `GET /api_partner/evidence/mhra/schema` for filterable fields, and use the `facets` endpoint to aggregate by category or date.
+
+## Single alert
+
+`GET /api_partner/evidence/mhra/{item_id}` returns one full alert with its attachments.
+
+## Common uses
+
+* **Recall monitoring**: watch for new alerts mentioning a product category or manufacturer.
+* **Cross-jurisdiction safety view**: pair MHRA alerts with FDA [MAUDE and FAERS reports](/guides/evidence/adverse-events) to compare UK and US signals for the same product.
+* **Compliance research**: full-text search of alert documents supports precise queries (model numbers, lot references) that headline-only feeds miss.
+
+
+# Papers & Authors
+Source: https://docs.scite.ai/guides/papers-and-authors
+
+Look up publication metadata by DOI or PMID, and author-level metadata and citation statistics.
+
+These endpoints resolve a DOI or PMID to full metadata: title, abstract, authors with affiliations, journal, retraction status, and editorial notices. Pair with [tallies](/guides/smart-citations) for citation data.
+
+## Get a single paper
+
+```bash theme={null}
+curl 'https://api.scite.ai/papers/10.1038/nature12373' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+## Get multiple papers
+
+```bash theme={null}
+curl -X POST 'https://api.scite.ai/papers' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  -H 'Content-Type: application/json' \
+  -d '{"dois": ["10.1038/nature12373", "10.1126/science.1157784"]}'
+```
+
+Up to 500 DOIs per request. A GET variant also exists for compatibility; prefer POST for larger lists.
+
+## Resolve a PMID to a DOI
+
+```bash theme={null}
+curl 'https://api.scite.ai/papers/resolve-pmid/23851394' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+## Get papers citing a target
+
+```bash theme={null}
+curl 'https://api.scite.ai/papers/sources/10.1038/nature12373' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+## Author metadata
+
+Look up an author's publications and aggregated citation statistics by author slug:
+
+```bash theme={null}
+curl 'https://api.scite.ai/authors/georg-kucsko-mvlovd/papers' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+| Endpoint                            | Purpose                                       |
+| ----------------------------------- | --------------------------------------------- |
+| `GET /authors/{author_slug}/papers` | Author metadata and papers                    |
+| `GET /authors/{author_slug}/stats`  | Aggregated citation statistics for the author |
+
+<Note>
+  `author_slug` isn't something you construct from a name, it's a Scite-generated identifier (name plus a random suffix, e.g. `georg-kucsko-mvlovd`). Get it from the `authorSlug` field on author objects returned by [paper lookups](#get-a-single-paper) or [search](/guides/search) results. An unrecognized slug returns `404 {"detail": "Slug not found"}`.
+</Note>
+
+## Related
+
+* [Smart Citations guide](/guides/smart-citations): get tallies once you have a DOI
+* [Search and recommendations](/guides/search#get-recommended-papers): discover related papers from a DOI
+* [Errors and rate limits](/errors-and-rate-limits): handle missing papers and invalid requests
+
+
+# Reference Check
+Source: https://docs.scite.ai/guides/reference-check
+
+Submit a document and have its references evaluated and linked using Scite's data.
+
+Reference Check takes a document (PDF or DOCX), extracts its references, and evaluates each one against Scite's citation data. It surfaces retractions, contradicting citations, and other flags associated with the cited sources. This is an asynchronous, poll-based flow.
+
+<Warning>
+  Reference Check requires a paid license and isn't included in a standard self-service Pro key. [Email sales](mailto:sales@scite.ai) to get access, then generate a new key from the [API Console](https://scite.ai/users/me/api) once it's enabled on your account.
+</Warning>
+
+## 1. Submit the document
+
+You can either upload the file directly or point to a URL:
+
+```bash theme={null}
+# Upload directly
+curl -X POST 'https://api.scite.ai/reference_check' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  -F 'file=@paper.pdf'
+```
+
+```bash theme={null}
+# Or reference a URL
+curl -X POST 'https://api.scite.ai/reference_check' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  -H 'Content-Type: application/json' \
+  -d '{"url": "https://example.com/paper.pdf"}'
+```
+
+The response contains a task ID:
+
+```json theme={null}
+{ "id": "task_123" }
+```
+
+## 2. Poll for the result
+
+```bash theme={null}
+curl 'https://api.scite.ai/reference_check/tasks/task_123' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+Poll until the task status is no longer pending. The response includes the current state and, once complete, the evaluated references.
+
+Back off between polling requests and enforce an overall timeout. See [Errors and rate limits](/errors-and-rate-limits#polling-asynchronous-tasks).
+
+<Note>
+  An unrecognized or mistyped `task_id` doesn't return a 404, it returns `200 {"status": "PENDING"}` just like a real in-progress task. Hold onto the exact ID from the submit response rather than reconstructing it, or you can end up polling a task that will never complete.
+</Note>
+
+## Other task operations
+
+| Endpoint                                          | Purpose                                                       |
+| ------------------------------------------------- | ------------------------------------------------------------- |
+| `GET /reference_check/tasks/{task_id}/cancel`     | Cancel a running task                                         |
+| `GET /reference_check/tasks/{task_id}/result_url` | Get a direct URL to the result, instead of the inline payload |
+
+## Related
+
+* [Assistant guide](/guides/assistant): a similar poll-based flow for Q\&A instead of reference evaluation
+* [Errors and rate limits](/errors-and-rate-limits): retry and polling guidance
+
+
+# Search
+Source: https://docs.scite.ai/guides/search
+
+Query Scite's publication metadata and citation data with Boolean terms and 25+ filters.
+
+Search covers publication metadata (topic, title, author, journal, date) and the content of citation statements, including where in the citing paper each statement occurs. Filters include retraction status, citation type counts, and 25+ other signals, so it works for screening papers as well as finding them.
+
+## Access and licensing
+
+Commercial or research use of Search requires a separate license agreement, it isn't covered by individual plans. [Email sales](mailto:sales@scite.ai) before relying on Search for anything beyond evaluation.
+
+## Basic search
+
+```bash theme={null}
+curl -G 'https://api.scite.ai/api_partner/search' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  --data-urlencode 'term="machine learning" AND healthcare' \
+  --data-urlencode 'limit=5' \
+  --data-urlencode 'sort=date' \
+  --data-urlencode 'sort_order=desc'
+```
+
+`term` supports Boolean operators (`AND`, `OR`, `NOT`) and phrase search (`"exact phrase"`).
+
+## Filtering results
+
+Beyond `term`, the search endpoint accepts filters across three categories:
+
+<Tabs>
+  <Tab title="Publication metadata">
+    `title`, `abstract`, `author` / `authors`, `journal` / `journals`, `publisher`, `paper_type` / `paper_types`, `affiliation` / `affiliations`, `topic` / `topics`, `date_from`, `date_to`, `doi` / `dois`
+  </Tab>
+
+  <Tab title="Citation signals">
+    `has_tally`, `has_retraction`, `has_concern`, `has_correction`, `has_erratum`, `has_withdrawn`, `citation_types`, `supporting_from` / `supporting_to`, `mentioning_from` / `mentioning_to`, `contrasting_from` / `contrasting_to`, `citing_publications_from` / `citing_publications_to`
+  </Tab>
+
+  <Tab title="Domain-specific">
+    `substances` (PubChem canonical name), `mesh_type` (PubMed MeSH descriptor/qualifier), `section` / `sections` (where in the paper the citation occurs)
+  </Tab>
+</Tabs>
+
+Scope a search to specific publications with `doi` (single) or `dois` (multiple). Combine with `term` to search within those publications only.
+
+## Sorting
+
+Use `sort` to control result order:
+
+| Value       | Behavior                              |
+| ----------- | ------------------------------------- |
+| `relevance` | Default when a `term` is provided     |
+| `date`      | Most recent first (with `sort_order`) |
+| `citations` | By citation count                     |
+
+Combine with `sort_order` (`asc`/`desc`).
+
+## Pagination
+
+Use `limit` (up to 10,000 per request) and `offset` together to page through results.
+
+## Aggregations
+
+Set `compute_aggregations=true` and pass `aggregations` to get facet counts (e.g. by journal or year) alongside your results, useful for building filter UIs without a second round-trip.
+
+<Note>
+  Search snippets are always redacted on self-service (Pro plan) API keys. Full snippet access requires an Enterprise agreement. [Contact sales](https://scite.ai/contact).
+</Note>
+
+## Response shape
+
+Results come back as `{ count, countIsApproximate, aggregations, hits, suggestedTerm, restrictedCites }`. Each item in `hits` is a full paper object, including a `tally` field with the same shape as the [tallies endpoints](/guides/smart-citations) when one has already been computed for that paper (`null` otherwise), so you often don't need a separate tally call for search results you're already displaying.
+
+<Warning>
+  Don't use the top-level `restrictedCites` value to decide whether an individual citation snippet is visible. Check `hits[].citations[].snippetHidden`. When `snippetHidden` is `true`, `snippet` is an empty string. Self-service keys don't include citation snippet text.
+</Warning>
+
+## Get recommended papers
+
+If you already have a DOI, retrieve related papers without constructing a search query:
+
+```bash theme={null}
+curl 'https://api.scite.ai/api_partner/recommend-papers/10.1038/nature12373' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+The response is an array of recommended papers. Each item includes publication metadata, a citation `tally` when available, and a recommendation `score`.
+
+## Related
+
+* Full parameter reference: see **Search** in the API Reference tab for every filter with types and examples
+* Recommendation endpoint reference: see **Paper recommendations** in the API Reference tab
+* [Citations & Tallies](/concepts/citation-model): what `has_tally`, `supporting_from`, etc. actually measure
+* [Errors and rate limits](/errors-and-rate-limits): distinguish invalid credentials from missing scopes
+
+
+# Smart Citations
+Source: https://docs.scite.ai/guides/smart-citations
+
+Get tallies, browse the citation graph, and look up journal-level Smart Citation data.
+
+A citation count says a paper was cited 400 times. A Smart Citation tally says how many of those citations support the finding, contradict it, or mention it. These endpoints return that breakdown for any DOI, the citing papers behind it, and the section where each statement appears. See [Citations & Tallies](/concepts/citation-model) for the difference between a tally count and a citing-publications count.
+
+**Need an API key?** On Pro, create one in the [API Console](https://scite.ai/users/me/api). Creating a key doesn't grant every optional scope; see [Authentication](/authentication) for feature access. For higher limits or managed credentials, [contact sales](https://scite.ai/contact).
+
+## Get a tally for one DOI
+
+```bash theme={null}
+curl 'https://api.scite.ai/tallies/10.1038/nature12373' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+## Get tallies for many DOIs
+
+```bash theme={null}
+curl -X POST 'https://api.scite.ai/tallies' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  -H 'Content-Type: application/json' \
+  -d '{"dois": ["10.1038/nature12373", "10.1126/science.1157784"]}'
+```
+
+Up to 500 DOIs per request. A GET variant of this endpoint also exists for compatibility, but POST is recommended for larger DOI lists.
+
+<Tip>
+  **Want a ready-made display?** The [Scite Badge](https://scite.ai/badge) embeds Citation Type or paper-section tallies for a DOI. It is free for personal use or for works you authored. Organizations should [contact Scite](mailto:customersupport@researchsolutions.com) before using it. Use the Tallies API when you need a custom interface or high-volume integration.
+</Tip>
+
+## Tallies by section
+
+Citations occurring in the Introduction carry different weight than citations in the Discussion. `GET /tallies/cited-by-sections/{doi}` (and the bulk `POST /tallies/cited-by-sections`) breaks the tally down by the section of the citing paper where the statement appears.
+
+## Browsing the citation graph
+
+Rather than a tally, you can retrieve the actual citing/cited publications:
+
+| Endpoint                                            | Returns                                     |
+| --------------------------------------------------- | ------------------------------------------- |
+| `GET /api_partner/citations/citing/{doi}`           | Sources that cite this DOI as a target      |
+| `GET /api_partner/citations/cited_by/{doi}`         | Targets cited by this DOI as a source       |
+| `GET /api_partner/references/references_to/{doi}`   | Distinct references *to* this publication   |
+| `GET /api_partner/references/references_from/{doi}` | Distinct references *from* this publication |
+
+Citation Graph responses contain `metadata` and a `citations` array:
+
+```json theme={null}
+{
+  "metadata": {},
+  "citations": [
+    {
+      "source": "10.1000/source-doi",
+      "target": "10.1000/target-doi",
+      "type": "supporting",
+      "section": "discussion"
+    }
+  ]
+}
+```
+
+<Warning>
+  A highly cited DOI can return thousands of citation records. Use `limit` with `offset` to page through graphs that exceed 3,000 records, and avoid fetching the full graph when a tally is sufficient.
+</Warning>
+
+## Journal-level data
+
+* `GET /journal/{issn}/tallies`: Smart Citation tallies aggregated for an entire journal
+* `GET /journal/{issn}/yearly-si`: the Scite Journal Index (SJI) broken down by year
+* `GET /issn-sji` / `POST /issn-sji-bulk`: look up the Scite Journal Index for one or many ISSNs
+
+<Note>
+  Journal-level tallies use different field names than DOI-level tallies: `totalCites`, `totalSupportingCites`, `totalContrastingCites`, `totalMentioningCites`, and `totalUnclassifiedCites`, rather than `total`, `supporting`, `contradicting`, `mentioning`, and `unclassified`. Don't assume the two shapes match.
+</Note>
+
+## Related
+
+* [Search guide](/guides/search): filter by tally signals like `has_tally` or `supporting_from`
+* [Citations & Tallies](/concepts/citation-model): the underlying data model
+* [Errors and rate limits](/errors-and-rate-limits): authentication, scope, and retry guidance
+
+
+# Scite Zotero plugin
+Source: https://docs.scite.ai/guides/zotero-plugin
+
+Install Scite's free Zotero plugin to see Smart Citation tallies and open Scite Reports from your Zotero library.
+
+The Scite Zotero plugin brings citation context into your Zotero library. It adds sortable columns for supporting, contrasting, and mentioning citations, along with total Smart Citations and distinct citing publications.
+
+No Scite account or API key is required.
+
+<CardGroup>
+  <Card title="Download the latest plugin" icon="download" href="https://github.com/scitedotai/scite-zotero-plugin/releases/latest">
+    Download the `.xpi` file for Zotero 7 and 8.
+  </Card>
+
+  <Card title="View source and releases" icon="github" href="https://github.com/scitedotai/scite-zotero-plugin">
+    Review the source code, release notes, and known issues on GitHub.
+  </Card>
+</CardGroup>
+
+<Note>
+  Version 2 of the plugin supports Zotero 7 and 8. If you still use Zotero 6, install the [legacy v1.11.6 release](https://github.com/scitedotai/scite-zotero-plugin/releases/tag/v1.11.6).
+</Note>
+
+## Install the plugin
+
+<Steps>
+  <Step title="Download the XPI file">
+    Open the [latest release](https://github.com/scitedotai/scite-zotero-plugin/releases/latest). Under **Assets**, download the file whose name ends in `.xpi`.
+
+    If Firefox tries to install the file as a browser extension, right-click the download link and choose **Save Link As…** instead.
+  </Step>
+
+  <Step title="Open the Zotero Plugins Manager">
+    In the Zotero desktop app, select **Tools → Plugins**.
+  </Step>
+
+  <Step title="Install the XPI file">
+    Drag the downloaded `.xpi` file into the Plugins Manager. You can also click the gear icon, choose **Install Plugin From File…**, and select the file.
+  </Step>
+
+  <Step title="Finish installation">
+    Confirm the installation and restart Zotero if prompted. Future plugin releases install automatically through Zotero's plugin updater.
+  </Step>
+</Steps>
+
+Zotero plugins can access your Zotero data and your computer. Only install plugins from developers you trust. See [Zotero's plugin documentation](https://www.zotero.org/support/plugins) for more information.
+
+## Show the Scite columns
+
+The plugin adds five optional columns to the center pane of your Zotero library:
+
+| Column                                 | What it shows                                                                   |
+| -------------------------------------- | ------------------------------------------------------------------------------- |
+| **Supporting**                         | Citation statements that provide supporting evidence for the paper              |
+| **Contrasting**                        | Citation statements that provide contrasting evidence or results                |
+| **Mentioning**                         | Citation statements that mention the paper without supporting or contrasting it |
+| **Total Smart Citations**              | All citation statements Scite has extracted for the paper                       |
+| **Total Distinct Citing Publications** | Unique publications that cite the paper                                         |
+
+To show them, right-click any column header in your library and select the Scite columns you want. You can resize and sort each column like other Zotero columns.
+
+<Tip>
+  Sort by **Supporting** to find papers with supporting evidence, or by **Contrasting** to find results that later research has challenged.
+</Tip>
+
+Smart Citation totals count individual citation statements. A single publication can cite the same paper more than once, so **Total Smart Citations** can be higher than **Total Distinct Citing Publications**. Learn more in [Smart Citations](/guides/smart-citations).
+
+## Open a Scite Report
+
+Select a paper in your Zotero library, then click **View Scite Report** in the item pane. The report opens in your browser and shows the citation statements behind the tallies.
+
+You can also right-click a library item to refresh its Scite citation data.
+
+## Troubleshooting
+
+### The Scite columns are missing
+
+Right-click a column header and make sure the Scite columns are enabled. If they are not listed, open **Tools → Plugins**, confirm that the Scite plugin is enabled, and restart Zotero.
+
+### An item has blank or zero counts
+
+Scite usually matches a Zotero item by its DOI. Check that the parent item—not only its PDF attachment—has a valid DOI in its metadata. A zero can also mean that Scite has not identified any citation statements for that paper.
+
+After correcting the metadata, right-click the item and refresh its citation data.
+
+### Zotero says the plugin is incompatible
+
+Install the release that matches your Zotero version. Version 2 supports Zotero 7 and 8. Zotero 6 requires the [legacy release](https://github.com/scitedotai/scite-zotero-plugin/releases/tag/v1.11.6).
+
+### Firefox says the XPI is corrupt
+
+Firefox may mistake a Zotero `.xpi` for a Firefox extension. Right-click the download link, select **Save Link As…**, and then install the saved file from Zotero.
+
+### Disable or remove the plugin
+
+Open **Tools → Plugins**, find **Scite Zotero Plugin**, and choose **Disable** or **Remove**. Disabling the plugin does not remove items from your Zotero library.
+
+## Related
+
+* [Smart Citations](/guides/smart-citations): understand supporting, contrasting, and mentioning citations
+* [Collections](/guides/collections): import papers from Zotero into a Scite Collection and monitor them over time
+* [Report an issue](https://github.com/scitedotai/scite-zotero-plugin/issues): check known problems or contact the plugin maintainers
+
+
+# Documentation
+Source: https://docs.scite.ai/introduction
+
+Build tools to find, understand, and use scientific research with Scite.
+
+Search papers and get more than titles and abstracts. See where they were cited, what later researchers said about them, and whether those citations support, challenge, or simply mention the work.
+
+<CardGroup>
+  <Card title="Make your first request" icon="bolt" href="/quickstart">
+    Retrieve a paper and its citation tally without an API key, then run an authenticated search.
+  </Card>
+
+  <Card title="Set up an agent" icon="robot" href="/agents">
+    Give an AI agent Scite documentation and connect it through MCP or the REST API.
+  </Card>
+</CardGroup>
+
+## Choose a path
+
+Start with the route that matches what you are building.
+
+<CardGroup>
+  <Card title="Public endpoints" icon="globe" href="/quickstart">
+    Retrieve paper metadata and citation tallies without creating an account or API key.
+  </Card>
+
+  <Card title="REST API" icon="code" href="/authentication">
+    Build applications, batch workflows, and direct integrations with scoped credentials.
+  </Card>
+
+  <Card title="Scite MCP" icon="plug" href="/mcp/overview">
+    Give ChatGPT, Claude, or another MCP-compatible agent tools for working with research, or use the Article Galaxy connector for Microsoft 365 Copilot.
+  </Card>
+</CardGroup>
+
+## Build with evidence
+
+Most scholarly APIs provide metadata and citation counts. Scite adds the text and classification around citations, so you can see how later research has evaluated a publication.
+
+| Capability            | What it adds                                                                                                 | Guide                                            |
+| --------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
+| **Literature search** | Search publication metadata and full-text citation statements with Boolean queries and more than 25 filters. | [Search](/guides/search)                         |
+| **Smart Citations**   | See supporting, contradicting, mentioning, and unclassified citation statements.                             | [Smart Citations](/guides/smart-citations)       |
+| **Paper enrichment**  | Resolve DOIs and add publication, author, retraction, and citation data to a workflow.                       | [Papers and Authors](/guides/papers-and-authors) |
+| **Evidence datasets** | Search patents, grants, clinical trials, drugs, devices, adverse events, and safety alerts.                  | [Evidence datasets](/guides/evidence/overview)   |
+
+## Start in minutes
+
+<Steps>
+  <Step title="Try a public endpoint" icon="bolt">
+    Retrieve a paper or citation tally without an account. [Make your first request →](/quickstart)
+  </Step>
+
+  <Step title="Choose how to authenticate" icon="key">
+    Use an API key for self-service development or managed credentials for an Enterprise integration. [Compare credentials →](/authentication)
+  </Step>
+
+  <Step title="Add Scite to your workflow" icon="rocket">
+    Continue with the REST API, connect an agent through MCP, or [talk to sales](https://scite.ai/contact) about production and organization access.
+  </Step>
+</Steps>
+
+## Explore the documentation
+
+### Build
+
+* [Quickstart](/quickstart): make public and authenticated requests
+* [For agents](/agents): give AI agents documentation and Scite tools
+* **API Reference**: inspect exact endpoints, parameters, and schemas
+
+### Understand
+
+* [Citation model](/concepts/citation-model): understand sources, targets, tallies, and Smart Citation classifications
+* [Glossary](/concepts/glossary): learn Scite terminology used across the API
+* [Pricing and plans](/pricing-and-plans): compare API, MCP, and organization access
+
+### Operate
+
+* [Errors and rate limits](/errors-and-rate-limits): handle authentication, scopes, retries, and polling
+* [Enterprise access and SSO](/enterprise-access-and-sso): configure institutional sign-in and managed access
+* [Changelog](/changelog): follow documentation and API updates
+
+
+# Scite MCP
+Source: https://docs.scite.ai/mcp/overview
+
+Use Scite inside ChatGPT, Claude, Microsoft 365 Copilot, and other AI tools to search the literature and retrieve citation data.
+
+Scite MCP is a hosted [Model Context Protocol](https://modelcontextprotocol.io/) server that lets AI tools search scientific literature and retrieve citation data in conversation. It powers Scite's first-party ChatGPT plugin and Claude connector, and it works with any other MCP-compatible client.
+
+The plugin, connector, and MCP API are not separate data products. They are three ways to reach the same Scite tools.
+
+Research Solutions also offers [Article Galaxy for Copilot](https://marketplace.microsoft.com/en-us/product/WA200011900), a connector for Microsoft 365 Copilot that can retrieve available full text and Scite Smart Citation content.
+
+## Install a ready-made integration
+
+<CardGroup>
+  <Card title="Scite plugin for ChatGPT" icon="messages" href="https://chatgpt.com/plugins/plugin_asdk_app_6952b3a3f1e881918951582d59483c78?q=scite">
+    Open the Scite listing in ChatGPT, select **Install plugin**, and sign in with your Scite account. Use `@Scite` in a prompt to activate it.
+  </Card>
+
+  <Card title="Scite connector for Claude" icon="sparkles" href="https://claude.ai/directory/connectors/scite">
+    Open the Scite listing in Claude's Connectors Directory, select **Connect**, and sign in with your Scite account when prompted.
+  </Card>
+
+  <Card title="Article Galaxy for Copilot" icon="robot" href="https://marketplace.microsoft.com/en-us/product/WA200011900">
+    Add the connector from Microsoft Marketplace to find scientific articles and retrieve available full text and Smart Citation content in Microsoft 365 Copilot. A Research Solutions account is required.
+  </Card>
+</CardGroup>
+
+The ChatGPT and Claude listings configure Scite MCP and use OAuth, so you do not need to copy an MCP URL or create an API key. The Microsoft 365 Copilot connector uses your Research Solutions account and is read-only. Availability may depend on your AI client plan and workspace settings.
+
+## Choose your setup
+
+| You want to…                                                            | Use                                                                                       | Setup                                                                        |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Use Scite in ChatGPT or Claude                                          | The first-party plugin or connector above                                                 | Install, then sign in with Scite                                             |
+| Retrieve literature and Smart Citation content in Microsoft 365 Copilot | [Article Galaxy for Copilot](https://marketplace.microsoft.com/en-us/product/WA200011900) | Add the connector, then sign in with Research Solutions                      |
+| Use Scite in another MCP-compatible AI tool                             | Scite's hosted MCP server                                                                 | Connect the client to `https://api.scite.ai/mcp` and authenticate with OAuth |
+| Build your own script, server, or MCP client                            | The MCP API                                                                               | Call `https://api.scite.ai/mcp` with an `mcp`-scoped API key                 |
+
+See [scite.ai/mcp](https://scite.ai/mcp) for setup instructions for Claude Desktop, Claude Code, Gemini CLI, Copilot Studio, and other clients.
+
+## Authentication
+
+### ChatGPT and Claude (OAuth)
+
+Install Scite from the [ChatGPT Plugin Directory](https://chatgpt.com/plugins/plugin_asdk_app_6952b3a3f1e881918951582d59483c78?q=scite) or [Claude Connectors Directory](https://claude.ai/directory/connectors/scite). The listing configures the connection; sign in with your Scite account when prompted. A Scite premium subscription is required.
+
+### Microsoft 365 Copilot
+
+Install [Article Galaxy for Copilot](https://marketplace.microsoft.com/en-us/product/WA200011900) from Microsoft Marketplace and sign in with your Research Solutions account. The connector is read-only: it can retrieve content and check existing orders, but it does not place orders, complete purchases, or charge users.
+
+### Other MCP clients (OAuth)
+
+Other interactive MCP clients use the standard OAuth 2.1 authorization-code flow with PKCE. Most discover Scite's authorization and registration endpoints automatically after you provide `https://api.scite.ai/mcp`.
+
+<Accordion title="OAuth client requirements and troubleshooting">
+  Every request to `/mcp/oauth/authorize` must include `client_id`, `code_challenge`, and `code_challenge_method=S256`. A `client_id` is obtained via Dynamic Client Registration (DCR); clients discover the registration endpoint from `/.well-known/oauth-authorization-server`.
+
+  Some platforms, including Microsoft Copilot Studio, default to PKCE and DCR turned **off**. With those disabled, the authorize request omits required parameters and the server returns `invalid_request`. Enable **PKCE** and **DCR-with-discovery**, or supply a registered `client_id`.
+</Accordion>
+
+### MCP API (programmatic API key)
+
+**Need an API key?** On Pro, create one in the [API Console](https://scite.ai/users/me/api). Creating a key doesn't grant every optional scope; see [Authentication](/authentication) for feature access. For higher limits or managed credentials, [contact sales](https://scite.ai/contact).
+
+For scripts, servers, or your own MCP client: create an API key on Pro from the [API Console](https://scite.ai/users/me/api), grant it the `mcp` scope, and send it as a bearer token to `/mcp`. No token exchange is needed. It shares your account's MCP quota and billing.
+
+Enterprise customers can alternatively use issued `client_id`/`client_secret` credentials; see [Authentication](/authentication#enterprise-credentials).
+
+If you access Scite through your organization's SAML SSO, sign in to Scite through SSO before authorizing an interactive MCP client. See [Use SSO accounts with MCP](/enterprise-access-and-sso#use-sso-accounts-with-mcp).
+
+## What's available
+
+<CardGroup>
+  <Card title="Tool reference" icon="wrench" href="/mcp/tools/overview">
+    25 tools across literature, evidence datasets, and collections.
+  </Card>
+
+  <Card title="Prompts" icon="list-check" href="/mcp/prompts">
+    Four prebuilt research workflows, from literature review to fact-checking.
+  </Card>
+</CardGroup>
+
+## Endpoints
+
+| Method | Path          | Description                          |
+| ------ | ------------- | ------------------------------------ |
+| GET    | `/mcp/info`   | Server info and capabilities         |
+| POST   | `/mcp`        | JSON-RPC 2.0 endpoint for tool calls |
+| GET    | `/mcp/health` | Health check                         |
+
+`GET /mcp` returns `405`. The server doesn't support server-initiated SSE streams, so all traffic goes over `POST`.
+
+## Methods
+
+| Method             | Description                                                     |
+| ------------------ | --------------------------------------------------------------- |
+| `initialize`       | Negotiates the protocol version and returns server capabilities |
+| `tools/list`       | Lists available tools and their input schemas                   |
+| `tools/call`       | Executes a tool (e.g. `search_literature`)                      |
+| `prompts/list`     | Lists the [prebuilt prompts](/mcp/prompts) and their arguments  |
+| `prompts/get`      | Renders one prompt with your arguments substituted              |
+| `resources/list`   | Returns an empty list — the server exposes no resources         |
+| `logging/setLevel` | Sets the log level for the session                              |
+| `ping`             | Heartbeat check                                                 |
+| `notifications/*`  | Acknowledged and discarded                                      |
+
+A `POST` body may be a single JSON-RPC message or an array of them for batching.
+
+## Protocol version
+
+The server supports `2024-11-05`, `2025-03-26`, `2025-06-18`, and `2025-11-25`. It echoes back whichever version you request in `initialize` if it's supported, and otherwise negotiates down to `2025-06-18`.
+
+## Sessions
+
+Every response carries an `Mcp-Session-Id` header. The server generates one if your `initialize` request doesn't supply it. Send it back on subsequent requests so tool-call analytics and client capability detection stay tied to your session.
+
+Sessions are optional — the endpoint is stateless and works without the header — but passing it through gives better behavior in clients that support elicitation.
+
+## Example: search literature
+
+```bash theme={null}
+curl -X POST 'https://api.scite.ai/mcp' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": "1",
+    "method": "tools/call",
+    "params": {
+      "name": "search_literature",
+      "arguments": {
+        "term": "\"machine learning\" AND healthcare",
+        "limit": 5,
+        "sort": "date",
+        "sort_order": "desc"
+      }
+    }
+  }'
+```
+
+`search_literature` supports Boolean operators, phrase search, and the same 25+ filters as the [Search API](/guides/search). See [Literature tools](/mcp/tools/literature) for the full parameter reference, or call `tools/list` for the live input schema.
+
+## Errors
+
+Transport-level failures use HTTP status codes; everything inside a successful JSON-RPC exchange uses an `error` object.
+
+| Code     | Meaning                                                       | What to do                                                         |
+| -------- | ------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `-32700` | Parse error — the body isn't valid JSON                       | Fix the request body                                               |
+| `-32600` | Invalid request — malformed or empty batch                    | Send a JSON object, or a non-empty array of them                   |
+| `-32601` | Method not found                                              | Use one of the methods listed above                                |
+| `-32602` | Invalid params — including a missing required prompt argument | Check the tool's input schema or the prompt's arguments            |
+| `-32001` | Usage limit reached                                           | Sign in, or wait for the monthly reset                             |
+| `-32003` | Plan, scope, or entitlement required                          | See [access requirements](/mcp/tools/overview#access-requirements) |
+| `-32042` | Upgrade required, returned as a URL elicitation               | Open the URL in the payload to upgrade                             |
+
+## Usage limits
+
+MCP tool calls draw on a monthly allowance tied to your plan. Organization licenses can be configured per seat, as a shared pool, or without a cap. A self-serve API key shares its owner's allowance rather than getting its own.
+
+Exceeding the allowance returns `-32001`. The counter resets at the start of each calendar month.
+
+## Troubleshooting
+
+* `401 Unauthorized`: the API key is missing, invalid, or revoked.
+* `403 User not authorized`: the key or account doesn't have the `mcp` scope.
+* `invalid_request` during browser authorization: confirm that the client enables PKCE and Dynamic Client Registration.
+* A tool is missing from `tools/list`: your credential lacks the `mcp` scope. Access to individual tools is enforced on `tools/call`, not by hiding them from the list.
+* A tool call returns `-32003` right after you upgraded: entitlements can take up to 15 minutes to propagate. Disconnect and reconnect the server to apply them immediately.
+
+See [Errors and rate limits](/errors-and-rate-limits) for retry guidance.
+
+
+# Prompts
+Source: https://docs.scite.ai/mcp/prompts
+
+Prebuilt research workflows the Scite MCP server ships, ready to invoke from any MCP client.
+
+Alongside its tools, the Scite MCP server exposes four prompts — prebuilt, parameterized workflows that walk a model through a research task using the Scite tools. Clients that support MCP prompts surface them as slash commands, templates, or a picker.
+
+Prompts are workflows, not tools. Retrieving one returns instructions for the model to follow; it doesn't call anything by itself. The steps inside then use [`search_literature`](/mcp/tools/literature).
+
+## The prompts
+
+| Name                       | Arguments                                            | What it does                                                 |
+| -------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| `literature-review`        | `topic` (required), `focus`                          | Runs a structured, cited literature review on a topic        |
+| `fact-check-claim`         | `claim` (required)                                   | Verifies a scientific claim and flags unsupported statements |
+| `systematic-review-screen` | `research_question` (required), `inclusion_criteria` | Screens the literature against inclusion criteria            |
+| `verify-bibliography`      | `reference` (required)                               | Confirms a reference's metadata against Scite                |
+
+Optional arguments may be left blank. Omitting a required argument returns JSON-RPC error `-32602`.
+
+### literature-review
+
+Plans several `search_literature` queries using domain vocabulary and Boolean operators, reads the most relevant papers section by section with targeted `term` queries, checks editorial notices before citing anything, synthesizes themes and contradictions across the set, and closes with an APA reference list.
+
+Pass `focus` to emphasize an angle — `clinical outcomes`, `methods`, and so on.
+
+### fact-check-claim
+
+Breaks a claim into its key assertions, searches for each, reads Smart Citation snippets and full-text excerpts, compares what the papers actually report against the claim, and returns a verdict of supported, partially supported, unsupported, or contradicted, with references.
+
+### systematic-review-screen
+
+Builds a comprehensive query set covering synonyms and Boolean variants, assesses each candidate paper against your criteria, and records an include or exclude decision per paper with a one-line rationale.
+
+Pass `inclusion_criteria` to specify population, study type, date bounds, or anything else that governs the screen.
+
+### verify-bibliography
+
+Parses a reference into its fields, looks it up — preferring `dois`, then `titles`, then a `term` query built from title and first author — and reports matches and discrepancies: wrong year, omitted authors, misattributed journal, incorrect or missing DOI. It also checks for retractions, since a citation can be accurate and still point to a withdrawn paper. If no record matches, it says so rather than guessing.
+
+## Using prompts
+
+**Need an API key?** On Pro, create one in the [API Console](https://scite.ai/users/me/api). Creating a key doesn't grant every optional scope; see [Authentication](/authentication) for feature access. For higher limits or managed credentials, [contact sales](https://scite.ai/contact).
+
+### Discover them
+
+```bash theme={null}
+curl -X POST 'https://api.scite.ai/mcp' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": "1",
+    "method": "prompts/list"
+  }'
+```
+
+Each entry returns `name`, `title`, `description`, and `arguments`.
+
+### Retrieve one
+
+```bash theme={null}
+curl -X POST 'https://api.scite.ai/mcp' \
+  -H 'Authorization: Bearer <YOUR_API_KEY>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": "2",
+    "method": "prompts/get",
+    "params": {
+      "name": "fact-check-claim",
+      "arguments": {
+        "claim": "Vitamin D supplementation reduces the risk of respiratory infection."
+      }
+    }
+  }'
+```
+
+The response is the rendered prompt, with your arguments substituted, ready to send to a model.
+
+## A shared discipline
+
+All four prompts enforce the same rules, which are worth applying to any Scite MCP workflow you write yourself:
+
+* Cite only papers actually retrieved through the tools — never from model memory.
+* Quote full-text excerpts and Smart Citation snippets as evidence rather than paraphrasing them away.
+* Check `editorialNotices` for retractions and corrections before citing any paper.
+* Read papers incrementally with `dois` plus targeted `term` queries instead of pulling large result sets.
+* End with an APA reference list.
+
+## Related
+
+* [Literature tools](/mcp/tools/literature): the tool every prompt is built on
+* [Scite MCP](/mcp/overview): setup, authentication, and protocol
+* [Smart Citations guide](/guides/smart-citations): how the evidence these prompts quote is classified
+
+
+# Collection tools
+Source: https://docs.scite.ai/mcp/tools/collections
+
+Create, read, and maintain saved sets of papers through MCP.
+
+A collection is a saved, named set of papers. Seven MCP tools let an assistant build and maintain one during a conversation — group DOIs it just found, add to an existing set, or search within one.
+
+Requires a signed-in Scite account on a premium subscription. Anonymous sessions can't use these tools, because a collection needs an owner.
+
+## Two kinds of collection
+
+| Kind         | Created by               | Membership                                            |
+| ------------ | ------------------------ | ----------------------------------------------------- |
+| DOI-list     | MCP or the Scite web app | An explicit list of DOIs                              |
+| Saved-search | The Scite web app only   | A stored query, plus manual include and exclude lists |
+
+MCP creates DOI-list collections. `add_dois_to_collection` and `remove_dois_from_collection` work on both kinds; `create_collection` and `update_collection` handle DOI-list collections only.
+
+For a saved-search collection, adding a DOI force-includes it so it appears even when the query wouldn't return it, and removing a DOI excludes it so it doesn't appear even when the query would.
+
+<Note>
+  A collection is a set of papers. A dashboard is a report on a collection. They aren't the same thing — see the [glossary](/concepts/glossary).
+</Note>
+
+## Access levels
+
+Every collection tool checks the caller's access level.
+
+| Level  | Can                                     |
+| ------ | --------------------------------------- |
+| VIEWER | Read the collection                     |
+| EDITOR | Read, update, and change DOI membership |
+| ADMIN  | Everything, including delete            |
+
+The creator becomes ADMIN. You reach VIEWER by owning the collection, being shared on it, being in an organization it's shared with, or — if `is_public` is set — holding the slug.
+
+## The slug
+
+Every tool except `create_collection` and `search_collections` identifies a collection by its `slug`. You get one from `create_collection` or `search_collections`; there's no way to look one up by name directly.
+
+## Create
+
+`create_collection` takes a `name` (required), and optionally a `description`, a `dois` list to seed it, and `is_public`.
+
+```json theme={null}
+{
+  "name": "create_collection",
+  "arguments": {
+    "name": "CRISPR off-target effects",
+    "description": "Papers gathered for the Q3 review",
+    "dois": ["10.1038/s41586-020-2649-2", "10.1126/science.1225829"],
+    "is_public": false
+  }
+}
+```
+
+Seeded DOIs are validated and resolved against Scite. Unknown DOIs are dropped, not rejected — the response reports how many via `unmatchedDoiCount`, so check it rather than assuming every DOI landed. An empty `dois` list creates an empty collection.
+
+`is_public` defaults to `false`. When true, anyone holding the slug can view the collection.
+
+The response carries `id`, `slug`, `name`, `description`, `isPublic`, `doiQueryType`, `accessType`, and DOI counts.
+
+## Read
+
+`get_collection` takes a `slug` and returns the collection's identity, sharing, access level, and DOI counts. Requires VIEWER.
+
+`search_collections` lists the collections you can access, with an optional `q` to filter by a case-insensitive substring of the name. It returns `{collections: [...], total: N}`.
+
+<Warning>
+  `search_collections` filters your own collections by name. It is not a full-text search across all collections, and it doesn't search paper contents. To search the papers *inside* a collection, pass its slug to `search_literature` as `collection_slug`.
+</Warning>
+
+## Update
+
+`update_collection` takes a `slug` plus any of `name`, `description`, `dois`, and `is_public`. Requires EDITOR or ADMIN.
+
+It's a partial update, but the `dois` field behaves differently from the rest:
+
+* Omit `dois` and the DOI list is left alone.
+* Supply `dois` and it **replaces** the entire list.
+
+To add or remove a few DOIs without rebuilding the list, use the membership tools below instead.
+
+```json theme={null}
+{
+  "name": "update_collection",
+  "arguments": {
+    "slug": "crispr-off-target-effects",
+    "description": "Updated after the September screen",
+    "is_public": true
+  }
+}
+```
+
+## Change membership
+
+`add_dois_to_collection` and `remove_dois_from_collection` both take a `slug` and a non-empty `dois` array. Both require EDITOR or ADMIN, and both are idempotent — adding a DOI already present is ignored, as is removing one that isn't there.
+
+```json theme={null}
+{
+  "name": "add_dois_to_collection",
+  "arguments": {
+    "slug": "crispr-off-target-effects",
+    "dois": ["10.1016/j.cell.2014.05.010"]
+  }
+}
+```
+
+Removing DOIs takes papers out of the collection. It does not delete the collection.
+
+## Delete
+
+`delete_collection` takes a `slug` and requires ADMIN. It returns `{deleted: true, slug: "..."}`.
+
+<Warning>
+  Deletion is permanent. The collection and its DOI membership are removed and cannot be recovered. The tool carries the MCP `destructiveHint` annotation, so a well-behaved client will ask you to confirm before calling it.
+</Warning>
+
+## Searching within a collection
+
+Once a collection exists, `search_literature` can search inside it. Pass the slug as `collection_slug` and combine it with `term` and any other filter.
+
+```json theme={null}
+{
+  "name": "search_literature",
+  "arguments": {
+    "collection_slug": "crispr-off-target-effects",
+    "term": "mismatch tolerance",
+    "limit": 10
+  }
+}
+```
+
+## Related
+
+* [Collections guide](/guides/collections): the same operations over HTTP
+* [Literature tools](/mcp/tools/literature): `search_literature` and its `collection_slug` filter
+* [Glossary](/concepts/glossary): collection, dashboard, and access terminology
+
+
+# Evidence tools
+Source: https://docs.scite.ai/mcp/tools/evidence
+
+Search patents, clinical trials, grants, FDA device and drug records, adverse events, and safety alerts through MCP.
+
+Seventeen MCP tools cover Scite's evidence datasets — the same records as the [Evidence API](/guides/evidence/overview), reachable from a conversation.
+
+Requires Pro, or the dataset's `evidence:<dataset>:mcp` scope. Accounts on an organization license need the explicit entitlement even at Pro; [email sales](mailto:sales@scite.ai) to add one.
+
+## The shared pattern
+
+Every dataset follows the same two-tool shape: a `search_*` tool that returns slim results, and a `get_*` tool that returns the full record for one id.
+
+Search results are deliberately trimmed to save model context. Call the `get_*` tool only when you need a field the search result doesn't already carry — the per-dataset sections below say what each one adds.
+
+All search tools share the same parameters:
+
+| Parameter | Type    | Description                                                        |
+| --------- | ------- | ------------------------------------------------------------------ |
+| `q`       | string  | Free-text query. Supports `AND`, `OR`, `NOT`, and `"exact phrase"` |
+| `f`       | string  | Space-delimited field filters in `field:"value"` format            |
+| `p`       | integer | Page number. Default `1`                                           |
+| `s`       | string  | Sort field. Default `_relevance`                                   |
+| `sortDir` | string  | `asc` or `desc`. Default `desc`; ignored when `s` is `_relevance`  |
+
+<Note>
+  This is the Evidence query syntax, not the Search syntax. `search_literature` uses named parameters and `limit`/`offset`; Evidence tools use `q`/`f` and page numbers. See [Evidence overview](/guides/evidence/overview).
+</Note>
+
+Four tools — `search_510k_summaries`, `search_mhra`, `search_faers`, and `search_drugs` — sort by relevance only and accept no `s` or `sortDir`.
+
+### Date range filters
+
+Datasets with date fields accept two equivalent notations. Note there is no space before the `gte`/`lt` suffix.
+
+```text theme={null}
+date_receivedgte:"2024-01-01" date_receivedlt:"2024-07-01"
+date_received:"2024-01-01,2024-07-01"
+```
+
+Accepted formats are `YYYY-MM-DD`, ISO datetimes, and epoch milliseconds.
+
+## Patents
+
+`search_patents` returns patent families with titles, abstracts, inventors, assignees, classifications, filing status, and citation counts.
+
+Sort fields: `_relevance`, `forwardCitationCount`, `familySize`, `patents.publications.pubRef.date`, `patents.appRef.filingDate`.
+
+```json theme={null}
+{
+  "name": "search_patents",
+  "arguments": {
+    "q": "CRISPR gene editing",
+    "f": "assignee:Pfizer filing_status:granted",
+    "s": "forwardCitationCount"
+  }
+}
+```
+
+There's no `get_patent` tool — search returns the full family record.
+
+## Clinical trials
+
+`search_clinical_trials` covers ClinicalTrials.gov. Results carry `nctId`, `title`, `briefDescription`, `phase`, `sponsors`, `facilities`, `conditions`, `interventions`, `tags`, `startDate`, `completedDate`, and `publicationCount`. Matched fields come back wrapped in `<strong>` tags.
+
+Sort fields: `_relevance`, `dates.startDate`, `dates.completedDate`, `dates.lastUpdatedDate`.
+
+```json theme={null}
+{
+  "name": "search_clinical_trials",
+  "arguments": {
+    "q": "pancreatic cancer",
+    "f": "conditions:\"Cancer\" trialState.phase:\"Phase III\""
+  }
+}
+```
+
+`get_clinical_trial` takes an NCT id such as `NCT02986230` and adds the full `description`, study `design`, `enrollment`, primary and secondary `outcomes`, complete `eligibility` criteria, `reportedEvents` (posted adverse events), principal investigator, `contacts`, `citations`, and `resultsUrl`. Use it for deeper analysis or patient-trial matching.
+
+## Grants
+
+`search_grants` spans NIH RePORTER, NSF, SBIR/STTR, Wellcome, EU funders, and more. Results carry `id`, `title`, an abstract preview, `agency`, `organization`, `piName`, `country`, award dates, `awardAmount`, `tags`, `groupSlug`, and `grantsInGroup`.
+
+Sort fields: `_relevance`, `awardStartDate`, `awardCloseDate`, `awardNoticeDate`, `awardAmount`, `employeeCount`.
+
+<Warning>
+  Related grants are grouped — NIH subprojects of one center grant, or renewals of the same award. Search returns **one representative grant per group**. `grantsInGroup` gives the group size and `siblingGrantIds` lists the others. To pull a sibling, call `get_grant` with its id rather than searching again.
+</Warning>
+
+`get_grant` takes an id such as `5201339`, `nsf.0646294`, or `wellcome.214402.Z.18.Z`. Call it for two things only:
+
+* The full `abstract`. Search returns a \~300-character highlighted preview; the full text usually runs 1–3 KB.
+* Source-specific identifiers absent from search: `awardYear`, `agencyTrackingNumber`, `contract`, `nihProgramCode`, `nihrApplicationId`.
+
+Everything else is already in the search result.
+
+## Device clearances
+
+The 510(k) dataset splits across two pairs of tools, and the distinction matters.
+
+| Question                                            | Tool                    |
+| --------------------------------------------------- | ----------------------- |
+| Which devices were cleared, by whom, in what class? | `search_device510k`     |
+| What did the submission actually say?               | `search_510k_summaries` |
+
+`search_device510k` returns structured clearance metadata: `kNumber`, `title`, `summaryText`, device info (name, class, product code, clearance type, regulation number), decision info (code, description, date, committee), applicant details, and tags.
+
+Sort fields: `_relevance`, `device.device_class`, `device.date_received`, `decision.decision_date`.
+
+`get_device510k` takes a K number such as `K210674` and adds the complete `summaryText`, full applicant details (address, contact, country), `registration` info (FEI and registration numbers), and the full `decision` object.
+
+`search_510k_summaries` searches OCR'd full text from 510(k) summary PDFs and returns page-level snippets. Reach for it when the question is about submission *content*: test results, performance data, biocompatibility, substantial equivalence reasoning, indications for use, predicate comparisons, sterilization methods, software descriptions, or bench testing.
+
+`get_510k_summary` takes a document id — also a K number, e.g. `K192757` — and returns the full extracted text organized by page.
+
+## Adverse events
+
+Two separate FDA systems: MAUDE for devices, FAERS for drugs.
+
+### MAUDE (devices)
+
+`search_maude` returns device adverse-event reports with `id`, `title`, `reportNumber`, `eventType`, `adverseEventFlag`, `productProblems`, device info, `patientProblems`, dates, and narrative snippets.
+
+Facet fields for `f`: `event_type`, `device.device_class`, `device.manufacturer_d_name`, `device.device_report_product_code`, `device.regulation_number`, `report_source_code`, `product_problems`, `patient.problems`. Date fields: `date_received`, `date_report`.
+
+Sort fields: `_relevance`, `date_received`, `date_report`.
+
+```json theme={null}
+{
+  "name": "search_maude",
+  "arguments": {
+    "q": "infusion pump",
+    "f": "event_type:\"Death\" device.manufacturer_d_name:\"Medtronic\" date_receivedgte:\"2024-01-01\"",
+    "s": "date_received"
+  }
+}
+```
+
+`get_maude_report` takes a report id such as `17343805` and returns the full MDR narrative entries with their text type codes, reporter occupation, health professional flag, device medical specialty and availability, and patient treatment. Search truncates these narratives; the detail tool doesn't.
+
+### FAERS (drugs)
+
+`search_faers` returns drug adverse-event and medication-error reports. Each links suspect and concomitant drugs to observed patient reactions as MedDRA preferred terms. Results carry `safetyReportId`, `title`, `reportType`, `serious`, `seriousnessType`, `receiveDate`, `occurCountry`, `reactions`, and `drugs`.
+
+Facet fields for `f`: `drug.medicinalproduct`, `drug.brand_name`, `drug.generic_name`, `drug.substance_name`, `drug.manufacturer_name`, `drug.drugindication`, `drug.pharm_class_epc`, `drug.pharm_class_moa`, `reaction.reactionmeddrapt`, `reaction.reactionoutcome`, `event.reporttype`, `event.seriousness_type`, `event.occurcountry`, `event.patientsex`, `primarysource.qualification`, `primarysource.reportercountry`. Date fields: `event.receivedate`, `event.receiptdate`, `drug.drugstartdate`, `drug.drugenddate`.
+
+FAERS sorts by relevance only.
+
+`get_faers_report` takes a safety report id such as `26185565` and adds patient demographics (sex, age group, onset age, weight, death date), report dates, the expedited flag, `primarySource` (reporter qualification and country), `reportDuplicates`, and enriched drug records with dosage text, start and end dates, NDC, application number, and pharmacologic class.
+
+## Drugs
+
+`search_drugs` covers FDA Structured Product Labels, the Orange Book, and Drugs\@FDA. Each result bundles an FDA application — approved products, applicant, approval dates, marketing status — with its Structured Product Label.
+
+Facet fields for `f` include `labels.brand_name`, `labels.generic_name`, `labels.substance_name`, `labels.manufacturer_name`, `labels.product_type`, `labels.route`, `labels.pharm_class_epc`, `labels.pharm_class_moa`, `labels.pharm_class_cs`, `labels.rxcui`, `labels.unii`, `labels.product_ndc`, `labels.package_ndc`, `application.application_number`, `application.sponsor_name`, `application.products.marketing_status`, `application.products.dosage_form`, `application.products.route`, `application.products.te_code`, `tags`, and `categories`. Date fields: `labels.effective_time`, `application.products.approval_date`.
+
+Sorted by relevance only.
+
+`get_drug` takes the record UUID from search results, e.g. `4dd865ec-8889-49ac-8c8f-4438875937ac`. It adds every approved product (product number, applicant, approval date, dosage form, route, active ingredients, TE code) and the main label sections: indications and usage, dosage and administration, contraindications, boxed warning, warnings and cautions, adverse reactions, drug interactions, use in specific populations, pharmacology, clinical studies, how supplied, overdosage, and description.
+
+## Safety alerts
+
+`search_mhra` covers UK MHRA drug safety alerts, medical device alerts, field safety notices, and regulatory publications, searching headlines, descriptions, and page-level document content. Results carry `id`, `headline`, `description`, `tags`, `categories`, `date`, and matching content snippets.
+
+Facet fields for `f`: `ontology.tags`, `ontology.categories`, `domain`. Date fields: `attachments.file.createdAt`, `attachments.file.modifiedAt`. Sorted by relevance only.
+
+```json theme={null}
+{
+  "name": "search_mhra",
+  "arguments": {
+    "q": "immunosuppressant",
+    "f": "attachments.file.createdAtgte:\"2025-10-01\" attachments.file.createdAtlt:\"2026-01-01\""
+  }
+}
+```
+
+`get_mhra_alert` takes a document id from search results and returns the complete alert: headline, description, the full article body (`contentHtml`), tags, and per-page content.
+
+## Related
+
+* [Evidence API guides](/guides/evidence/overview): the same datasets over HTTP, with per-dataset filter references
+* [Tool reference](/mcp/tools/overview): the full catalog and access requirements
+* [Errors and rate limits](/errors-and-rate-limits): retry guidance
+
+
+# Literature tools
+Source: https://docs.scite.ai/mcp/tools/literature
+
+Search the scientific literature, read full-text excerpts, and retrieve Smart Citations through MCP.
+
+`search_literature` is the core Scite MCP tool. One tool covers three jobs: finding papers, reading inside them, and pulling the Smart Citation statements that cite them.
+
+Requires a Scite premium subscription.
+
+## What it returns
+
+Every hit carries the paper's identity plus the evidence attached to it.
+
+| Field                                                                               | Contents                                                                                                  |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `doi`, `title`, `authors`, `abstract`, `journal`, `year`, `volume`, `issue`, `page` | Paper metadata; `authors` returns the first three                                                         |
+| `fulltextExcerpts`                                                                  | Up to 5 passages (\~500 characters each) from the paper matching your query, open access only             |
+| `citations`                                                                         | Smart Citation statements, each with `snippet`, `type`, `section`, `sourceDoi`, `targetDoi`               |
+| `tally`                                                                             | Citation metrics: `total`, `supporting`, `contrasting`, `mentioning`, `citingPublications`                |
+| `editorialNotices`                                                                  | Retractions, corrections, concerns, and errata, each with `status`, `noticeDoi`, `date`                   |
+| `access`                                                                            | Resolved access link with `url`, `accessType` (open, institutional, purchase), `contentType`, and pricing |
+| `isOa`, `oaStatus`, `license`                                                       | Open access status                                                                                        |
+
+A `type` of `unclassified` means the citation statement exists but the classifier hasn't assigned it a category. It isn't a fourth citation category — see [Citation model](/concepts/citation-model).
+
+## Three ways to call it
+
+### Search for papers
+
+Pass `term` with domain-specific vocabulary. The index spans every academic field, so broad phrases return noise.
+
+```json theme={null}
+{
+  "name": "search_literature",
+  "arguments": {
+    "term": "\"PAC learning\" AND \"generalization bounds\"",
+    "limit": 10,
+    "supporting_from": 5
+  }
+}
+```
+
+### Fetch metadata for known papers
+
+Pass `dois` (preferred) or `titles` **without** a `term`. No search runs; you get the records back.
+
+```json theme={null}
+{
+  "name": "search_literature",
+  "arguments": {
+    "dois": ["10.1038/s41586-020-2649-2"]
+  }
+}
+```
+
+### Read inside a specific paper
+
+Pass `dois` **with** a `term`. Each call returns up to 5 matching excerpts, so vary the term across calls to walk through a paper section by section.
+
+```json theme={null}
+{
+  "name": "search_literature",
+  "arguments": {
+    "dois": ["10.1038/s41586-020-2649-2"],
+    "term": "limitations OR confounding"
+  }
+}
+```
+
+If `fulltextExcerpts` comes back empty, the full text either isn't indexed or your terms didn't match. Use the `access` field to reach the PDF instead.
+
+## Query syntax
+
+`term` searches across title, abstract, and full text, and supports:
+
+* Boolean operators: `AND`, `OR`, `NOT`
+* Phrase search: `"exact phrase"`
+* Proximity: `"term1 term2"~5`
+
+## Parameters
+
+Calling `search_literature` with no arguments browses the whole corpus, relevance-sorted. That's allowed but rarely useful — pass at least a `term`, `dois`, or `titles`.
+
+### Query and pagination
+
+| Parameter | Type      | Description                                                              |
+| --------- | --------- | ------------------------------------------------------------------------ |
+| `term`    | string    | Cross-field query. Optional when `dois` or `titles` is given             |
+| `dois`    | string\[] | Restrict to specific DOIs. Exact match, so prefer this over `titles`     |
+| `titles`  | string\[] | Restrict to papers matching these titles. Use when DOIs aren't available |
+| `limit`   | integer   | Results per call. Default `10`, maximum `1000`                           |
+| `offset`  | integer   | Pagination offset. Default `0`                                           |
+
+<Warning>
+  Keep `limit` small. Every hit can carry excerpts and citation statements, so large limits produce payloads that consume a lot of model context. Use `10`–`50` with `offset` to page.
+</Warning>
+
+### Metadata filters
+
+| Parameter         | Type    | Description                                                              |
+| ----------------- | ------- | ------------------------------------------------------------------------ |
+| `title`           | string  | Text in the publication title                                            |
+| `abstract`        | string  | Text in the abstract                                                     |
+| `author`          | string  | Author name; partial names work                                          |
+| `affiliation`     | string  | Author institutional affiliation                                         |
+| `journal`         | string  | Journal name                                                             |
+| `publisher`       | string  | Publisher name                                                           |
+| `topic`           | string  | Research topic or subject area                                           |
+| `paper_type`      | string  | Publication type, e.g. `Article`, `Review`, `Meta-Analysis`              |
+| `year`            | integer | Exact publication year. Can't be combined with `date_from`/`date_to`     |
+| `date_from`       | string  | Published on or after. `YYYY` or `YYYY-MM-DD`                            |
+| `date_to`         | string  | Published on or before. `YYYY` or `YYYY-MM-DD`                           |
+| `collection_slug` | string  | Restrict the search to one of your [Collections](/mcp/tools/collections) |
+
+### Citation filters
+
+Each filter is a range bound. `tally` counts citation *statements*; `citingPublications` counts distinct *publications*.
+
+| Parameter                                             | Type    | Description                                  |
+| ----------------------------------------------------- | ------- | -------------------------------------------- |
+| `supporting_from` / `supporting_to`                   | integer | Bounds on supporting Smart Citations         |
+| `contrasting_from` / `contrasting_to`                 | integer | Bounds on contradicting Smart Citations      |
+| `mentioning_from` / `mentioning_to`                   | integer | Bounds on mentioning Smart Citations         |
+| `citing_publications_from` / `citing_publications_to` | integer | Bounds on total citing publications          |
+| `has_tally`                                           | boolean | Only papers with at least one Smart Citation |
+
+<Note>
+  The API field is `contrasting`, matching the parameter names above. Scite's interface labels the same category "contrasted." Both refer to contradicting citation statements.
+</Note>
+
+### Editorial filters
+
+| Parameter        | Type    | Description                            |
+| ---------------- | ------- | -------------------------------------- |
+| `has_retraction` | boolean | Only retracted papers                  |
+| `has_concern`    | boolean | Only papers with editorial concerns    |
+| `has_correction` | boolean | Only papers with published corrections |
+| `has_erratum`    | boolean | Only papers with published errata      |
+
+Check `editorialNotices` on every paper before citing it, even when you haven't filtered on these. A paper can be accurate and still be withdrawn.
+
+## Reading a paper efficiently
+
+The token-efficient pattern is search once, then read incrementally.
+
+<Steps>
+  <Step title="Find the paper">
+    Search with a narrow `term` and a small `limit` to get candidate DOIs.
+  </Step>
+
+  <Step title="Confirm it">
+    Call again with `dois` and no `term` to pull metadata, `tally`, and `editorialNotices`.
+  </Step>
+
+  <Step title="Read sections">
+    Call repeatedly with the same `dois` and different `term` values — methods, results, limitations — collecting 5 excerpts per call.
+  </Step>
+
+  <Step title="Follow the citations">
+    Read the `citations` array for what other papers say about it, quoting `snippet` text as evidence.
+  </Step>
+</Steps>
+
+## Related
+
+* [Search guide](/guides/search): the same corpus and filters over HTTP
+* [Smart Citations guide](/guides/smart-citations): how citation statements are classified
+* [Prompts](/mcp/prompts): prebuilt literature review, fact-check, and screening workflows
+
+
+# Tool reference
+Source: https://docs.scite.ai/mcp/tools/overview
+
+The full Scite MCP tool catalog, grouped by task, with the access each tool requires.
+
+The Scite MCP server exposes 25 tools across three groups. Call `tools/list` to get the live catalog with full input schemas; this page is the narrative index.
+
+<CardGroup>
+  <Card title="Literature" icon="book-open" href="/mcp/tools/literature">
+    Search papers, read full-text excerpts, and pull Smart Citations.
+  </Card>
+
+  <Card title="Evidence" icon="flask" href="/mcp/tools/evidence">
+    Patents, trials, grants, FDA device and drug records, adverse events, and safety alerts.
+  </Card>
+
+  <Card title="Collections" icon="folder-open" href="/mcp/tools/collections">
+    Create and maintain saved sets of papers.
+  </Card>
+</CardGroup>
+
+## The catalog
+
+| Tool                          | Group       | What it does                                                                               |
+| ----------------------------- | ----------- | ------------------------------------------------------------------------------------------ |
+| `search_literature`           | Literature  | Search the scientific literature; return metadata, full-text excerpts, and Smart Citations |
+| `search_patents`              | Evidence    | Search patent families                                                                     |
+| `search_clinical_trials`      | Evidence    | Search ClinicalTrials.gov records                                                          |
+| `get_clinical_trial`          | Evidence    | Fetch one trial by NCT id                                                                  |
+| `search_grants`               | Evidence    | Search NIH, NSF, SBIR/STTR, Wellcome, EU, and other funders                                |
+| `get_grant`                   | Evidence    | Fetch one grant by id                                                                      |
+| `search_device510k`           | Evidence    | Search FDA 510(k) clearance metadata                                                       |
+| `get_device510k`              | Evidence    | Fetch one clearance by K number                                                            |
+| `search_510k_summaries`       | Evidence    | Search the full text of 510(k) summary PDFs                                                |
+| `get_510k_summary`            | Evidence    | Fetch one 510(k) summary document                                                          |
+| `search_mhra`                 | Evidence    | Search UK MHRA safety alerts and publications                                              |
+| `get_mhra_alert`              | Evidence    | Fetch one MHRA alert                                                                       |
+| `search_maude`                | Evidence    | Search FDA MAUDE device adverse-event reports                                              |
+| `get_maude_report`            | Evidence    | Fetch one MAUDE report                                                                     |
+| `search_faers`                | Evidence    | Search FDA FAERS drug adverse-event reports                                                |
+| `get_faers_report`            | Evidence    | Fetch one FAERS report                                                                     |
+| `search_drugs`                | Evidence    | Search FDA labels, Orange Book, and Drugs\@FDA                                             |
+| `get_drug`                    | Evidence    | Fetch one drug record                                                                      |
+| `create_collection`           | Collections | Create a Collection from a DOI list                                                        |
+| `get_collection`              | Collections | Fetch a Collection by slug                                                                 |
+| `search_collections`          | Collections | List the Collections you can access                                                        |
+| `update_collection`           | Collections | Change a Collection's name, description, DOIs, or visibility                               |
+| `delete_collection`           | Collections | Permanently delete a Collection                                                            |
+| `add_dois_to_collection`      | Collections | Add DOIs to a Collection                                                                   |
+| `remove_dois_from_collection` | Collections | Remove DOIs from a Collection                                                              |
+
+## Access requirements
+
+Every tool above is visible in `tools/list` when your credential carries the `mcp` scope. Access is enforced when you call the tool, not when you list it, so a tool can appear in the catalog and still return an error on `tools/call`.
+
+| Group       | Requirement                                              |
+| ----------- | -------------------------------------------------------- |
+| Literature  | A Scite premium subscription                             |
+| Evidence    | Pro, **or** the dataset's `evidence:<dataset>:mcp` scope |
+| Collections | A signed-in Scite account on a premium subscription      |
+
+Organization licenses work differently from individual accounts on Evidence tools. If your account is on an organization license, reaching the Pro tier does not unlock Evidence — your license needs the explicit `evidence:<dataset>:mcp` entitlement. [Email sales](mailto:sales@scite.ai) to have one added.
+
+When a tool call fails an access check, the server returns JSON-RPC error `-32003` with the required plan or scope in the error payload:
+
+```json theme={null}
+{
+  "jsonrpc": "2.0",
+  "id": "1",
+  "error": {
+    "code": -32003,
+    "message": "A scite pro subscription is required to use this tool. Upgrade at https://scite.ai/pricing.",
+    "data": {
+      "required_plan": "pro",
+      "upgrade_url": "https://scite.ai/pricing"
+    }
+  }
+}
+```
+
+<Note>
+  After an upgrade, new entitlements can take up to 15 minutes to reach an active MCP session. To apply them immediately, disconnect and reconnect the Scite MCP server in your client.
+</Note>
+
+## Tool annotations
+
+Each tool carries MCP annotations that describe its behavior. Clients use these to decide what needs confirmation.
+
+| Annotation              | Tools                                                                             |
+| ----------------------- | --------------------------------------------------------------------------------- |
+| `readOnlyHint: true`    | All Literature and Evidence tools, plus `get_collection` and `search_collections` |
+| `destructiveHint: true` | `delete_collection`, `remove_dois_from_collection`                                |
+| `openWorldHint: false`  | Every tool — results come from Scite's own datasets                               |
+
+## Conventions
+
+Two query conventions run through the catalog, and they are not the same one.
+
+* **`search_literature`** uses named parameters: `term`, `dois`, `limit`, `offset`, and 25+ typed filters. This matches the [Search API](/guides/search).
+* **Every Evidence tool** uses the compact `q` / `f` / `p` / `s` / `sortDir` form. This matches the [Evidence API](/guides/evidence/overview).
+
+Search-then-fetch is the intended pattern for Evidence. Search results are deliberately slim to save context; call the matching `get_*` tool only when you need fields the search result doesn't already carry.
+
+## Related
+
+* [Scite MCP](/mcp/overview): setup, authentication, and the JSON-RPC protocol
+* [Prompts](/mcp/prompts): the prebuilt workflows the server ships
+* [Glossary](/concepts/glossary): Smart Citation terminology used across tool responses
+
+
+# Pricing and plans
+Source: https://docs.scite.ai/pricing-and-plans
+
+Compare Scite plans, API access, MCP credits, usage limits, and options for organizations.
+
+Scite offers individual, team, and organization plans. The right plan depends on whether you use Scite directly, connect it to an AI client through MCP, or build with the REST API.
+
+<Note>
+  Prices below are in USD and exclude taxes, discounts, and promotions. See the [Scite pricing page](https://scite.ai/pricing) for current checkout pricing.
+</Note>
+
+## Individual and team plans
+
+| Plan      |                                          Price | Best for                                                   | Developer access                                                                    |
+| --------- | ---------------------------------------------: | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **Free**  |                                            \$0 | Trying Scite and using public data                         | Public Papers and Tallies endpoints don't require an API key.                       |
+| **Basic** |                   $20 monthly or $144 annually | Individual researchers using Scite and its AI integrations | Includes 250 MCP credits per month. It doesn't include a self-service REST API key. |
+| **Pro**   |                   $50 monthly or $480 annually | Advanced research and API evaluation                       | Includes 2,500 MCP credits per month and self-service API key access.               |
+| **Team**  | $50 per user monthly or $480 per user annually | Teams that want Pro access under one subscription          | Includes Pro access and 2,500 MCP credits per user per month.                       |
+
+Annual prices are billed once per year. The annual equivalents are $12 per month for Basic and $40 per month for Pro or Team.
+
+<CardGroup>
+  <Card title="Compare plans" icon="tags" href="https://scite.ai/pricing">
+    Review current features, promotions, and billing options.
+  </Card>
+
+  <Card title="Create an API key" icon="key" href="https://scite.ai/users/me/api">
+    Pro users can create, rotate, and revoke self-service keys in the API Console.
+  </Card>
+</CardGroup>
+
+## API access and licensing
+
+A Pro subscription provides a self-service API key for evaluation. It doesn't grant unrestricted commercial, production, or research use of every endpoint or dataset.
+
+* Commercial or research use of Search requires a separate license agreement.
+* Search snippets are redacted when you use a self-service Pro key.
+* Evidence datasets such as patents, grants, clinical trials, drugs, devices, and safety records require dataset-specific scopes.
+* Rate limits and available scopes depend on your account and agreement.
+
+See [Authentication](/authentication) to compare credential types. See [Errors and rate limits](/errors-and-rate-limits) to handle missing scopes and usage limits.
+
+## Organization and Enterprise plans
+
+Organization and Enterprise plans use custom pricing. They can include higher limits, managed `client_id` and `client_secret` credentials, additional API or Evidence scopes, pooled usage, SSO, and organization-wide access.
+
+[Contact sales](https://scite.ai/contact-sales) to discuss commercial use, production integrations, custom datasets, or an organization license.
+
+## Common questions
+
+### Is API access included with Basic?
+
+No. Basic includes MCP credits for supported AI integrations, but self-service REST API keys require Pro.
+
+### Do API requests have a public per-call price?
+
+Scite doesn't publish a separate pay-as-you-go API rate. Self-service evaluation access is tied to Pro. Commercial terms, higher limits, and expanded scopes are quoted based on the integration.
+
+### Are MCP credits and API limits the same?
+
+No. MCP credits apply to Scite tools used through MCP clients. REST API limits are enforced separately and vary by endpoint and account. A self-service API key shares its owner's plan allowance.
+
+### Which plan do I need for Evidence datasets?
+
+Access through the Scite product and access through the REST API are licensed separately. REST API access to Evidence datasets requires the corresponding dataset scope. [Contact sales](https://scite.ai/contact) to add one to your account.
+
+
+# Quickstart
+Source: https://docs.scite.ai/quickstart
+
+Retrieve a paper, check its citation tally, and run your first authenticated search.
+
+You can complete the first two steps without an account. Start with two public endpoints, then use an API key for Search.
+
+<Steps>
+  <Step title="Retrieve a paper">
+    Look up publication metadata by DOI. Papers endpoints are public, so this request doesn't need an API key.
+
+    ```bash theme={null}
+    curl 'https://api.scite.ai/papers/10.1038/nature12373'
+    ```
+
+    The response includes the title, abstract, authors, journal, publication year, retraction status, and related identifiers.
+  </Step>
+
+  <Step title="Check its citation tally">
+    Tallies endpoints are also public:
+
+    ```bash theme={null}
+    curl 'https://api.scite.ai/tallies/10.1038/nature12373'
+    ```
+
+    ```json theme={null}
+    {
+      "doi": "10.1038/nature12373",
+      "total": 42,
+      "supporting": 30,
+      "contradicting": 2,
+      "mentioning": 10,
+      "unclassified": 0,
+      "citingPublications": 38
+    }
+    ```
+
+    `total` counts citation statements. `citingPublications` counts distinct papers, so the values can differ. See [Citations & Tallies](/concepts/citation-model).
+
+    <Note>
+      Tally values change as Scite indexes new citation statements. Treat the numbers above as an example response shape.
+    </Note>
+  </Step>
+
+  <Step title="Run an authenticated search">
+    **Need an API key?** On Pro, create one in the [API Console](https://scite.ai/users/me/api). Creating a key doesn't grant every optional scope; see [Authentication](/authentication) for feature access. For higher limits or managed credentials, [contact sales](https://scite.ai/contact).
+
+    `term` supports `AND`, `OR`, `NOT`, and quoted phrases.
+
+    ```bash theme={null}
+    curl -G 'https://api.scite.ai/api_partner/search' \
+      -H 'Authorization: Bearer <YOUR_API_KEY>' \
+      --data-urlencode 'term="machine learning" AND healthcare' \
+      --data-urlencode 'limit=5' \
+      --data-urlencode 'sort=date' \
+      --data-urlencode 'sort_order=desc'
+    ```
+
+    The response includes a total `count` and a `hits` array. Each hit carries DOI, title, authors, journal, abstract, and citation tally where available. The [Search guide](/guides/search) covers the 25+ filters.
+
+    <Note>
+      Pro keys support Search for evaluation. Commercial or research use requires a separate license agreement. See the [Search guide](/guides/search#access-and-licensing).
+    </Note>
+  </Step>
+
+  <Step title="Go further">
+    * Install Scite in ChatGPT or Claude, use [Article Galaxy for Copilot](https://marketplace.microsoft.com/en-us/product/WA200011900), or connect another MCP client: [Scite MCP](/mcp/overview)
+    * Full paper metadata for any DOI: [Papers & Authors](/guides/papers-and-authors)
+    * Tallies for up to 500 DOIs at once: [Smart Citations](/guides/smart-citations)
+    * Screen a manuscript's reference list: [Reference Check](/guides/reference-check)
+  </Step>
+</Steps>
+
+

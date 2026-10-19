@@ -1,0 +1,121 @@
+# Crawl
+Source: https://docs.search1api.com/api-reference/endpoint/crawl
+
+api-reference/openapi/crawl.json post /crawl
+Crawls a webpage
+
+
+
+# Models
+Source: https://docs.search1api.com/api-reference/endpoint/models
+
+api-reference/openapi/models.json get /v1/models
+List all available models
+
+
+
+# News
+Source: https://docs.search1api.com/api-reference/endpoint/news
+
+api-reference/openapi/news.json post /news
+Performs a news search
+
+
+
+# Reasoning
+Source: https://docs.search1api.com/api-reference/endpoint/reasoning
+
+api-reference/openapi/reasoning.json post /v1/chat/completions
+Create a chat completion
+
+
+
+# Search
+Source: https://docs.search1api.com/api-reference/endpoint/search
+
+api-reference/openapi/search.json post /search
+Performs a search
+
+
+
+# Sitemap
+Source: https://docs.search1api.com/api-reference/endpoint/sitemap
+
+api-reference/openapi/sitemap.json post /sitemap
+Get sitemap links from a website
+
+
+
+# Trending
+Source: https://docs.search1api.com/api-reference/endpoint/trending
+
+api-reference/openapi/trending.json post /trending
+Get trending topics from popular platforms
+
+
+
+# Usage
+Source: https://docs.search1api.com/api-reference/endpoint/usage
+
+api-reference/openapi/usage.json get /usage
+Get usage
+
+
+
+# Introduction
+Source: https://docs.search1api.com/introduction
+
+Welcome to search1api documentation
+
+<img alt="Hero Light" />
+
+<img alt="Hero Dark" />
+
+## Setting up
+
+Search1API is a versatile search aggregation service that enables you to perform searches across multiple platforms including Google, Bing, DuckDuckGo, Yahoo, YouTube, X(Twitter), Reddit, GitHub, arXiv, WeChat, Bilibili, IMDB, Wikipedia and various news services. To acquire your API key, simply visit [https://www.search1api.com](https://www.search1api.com).
+
+## Deep Search
+
+We have introduced a new feature called "Deep Search" that enhances the search capabilities of Search1API. This mode is controlled by the `crawl_results` parameter and offers the following benefits:
+
+* In addition to providing search summaries, Deep Search can now crawl and return the full text content of the search results.
+* While the Deep Search mode may be slower compared to regular searches, it is particularly useful for in-depth searches where more comprehensive information is required.
+* Each successful crawl will consume one additional credit. For example:
+  Regular search: 1 credit
+  Deep Search with 3 results: 1 credit (search) + up to 3 credits (successful crawls)
+  If crawl fails for some results, those credits won't be consumed
+
+## Batch Processing
+
+* Support passing multiple search requests in the form of arrays for parallel batch processing, which is faster!
+
+## Reasoning (Beta)
+
+We're excited to introduce our new Reasoning feature, which brings advanced AI capabilities to Search1API. This feature combines large language models with automatic web search functionality to provide intelligent, context-aware responses.
+
+### Key Features
+
+* **OpenAI Compatible**: Our API is fully compatible with OpenAI's chat completion format, making it easy to integrate into existing applications
+* **Autonomous Web Search**: Models can intelligently decide when to search the internet and incorporate real-time information into responses
+* **Streaming Support**: Get responses in real-time with our streaming API
+* **Multiple Models**: Choose from various models to balance between speed and capability
+
+### Available Models and Pricing
+
+Each successful API call consumes points based on the model used:
+
+| Model                       | Credits per Call | Description                            |
+| --------------------------- | ---------------- | -------------------------------------- |
+| deepseek-r1-70b-online      | 5                | Standard model with 70B parameters     |
+| deepseek-r1-online          | 10               | Premium model with 671B parameters     |
+| deepseek-r1-70b-fast-online | 20               | Fast version of 70B model              |
+| deepseek-r1-fast-online     | 80               | Fast version of our premium 671B model |
+
+<Note>
+  During the beta testing phase, pricing and service availability may be subject to change. We appreciate your understanding as we work to optimize and stabilize our services.
+</Note>
+
+Get started with Search1API today and experience the power of seamless search aggregation across multiple search engines and the ability to retrieve clear content from URLs. Visit [https://www.search1api.com](https://www.search1api.com) to obtain your API key and begin integrating Search1API into your applications.
+
+

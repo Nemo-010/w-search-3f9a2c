@@ -1,0 +1,175 @@
+Free WebAccess for agents: free web search and page reads for agents | treg.to 
+ × treg / Web access 
+ Web Arena Open source 
+ Set up treg 
+ Free WebAccess for 
+ Your agent searches the web and reads any page for $0 . When the free call comes back empty or blocked, treg tries the next vendor, so your agent still gets pages, sites, social posts, store listings and reviews , all through one API. Open source, no plan. 
+ Set up treg 
+ How the fallback works 
+ + WebAccess 
+ 0 calls $0 
+ Paid web APIs 
+ 0 calls $0 
+ VS 
+ 10,000 calls = 5,000 searches + 5,000 page reads, at each vendor's current price on treg 
+ When free fails, the next vendor answers. 
+ Your agent asks for a job, not a vendor. treg tries the vendors behind that job in order of hit rate, price and speed, and stops at the first real answer. A vendor that bills per success costs nothing when it misses. 
+ Your agent asks treg Vendors, tried in order You get 
+ treg 
+ › Stripe's Crunchbase page 
+ TinyFish empty page · $0 ✕ 
+ Crawl4AI 403 blocked · $0 ✕ 
+ AnyAPI ✓ $0.0007 ✓ 
+ Stripe company profile, as markdown 
+ › wireless earbuds on Amazon 
+ JustOneAPI ✓ $0.0148 ✓ 
+ SerpAPI standby 
+ AirPods Pro 3 $199.00 · ★ 4.4 
+ › top posts in r/LocalLLaMA 
+ ScrapeCreators ✓ answered ✓ 
+ TikHub standby 
+ It's been 2 months ▲ 439 · 89 comments 
+ › comments on a YouTube video 
+ Crawl4AI ✓ $0.0009 ✓ 
+ ScrapeCreators standby 
+ TikHub standby 
+ "Let's put the meme aside…" 👍 219K likes 
+ real treg calls · standby = the next vendors in line, not called 
+ The trace comes back with the answer 
+ Every routed call says who answered, who was tried first and what each one cost. 
+ // treg call treg.web.extract --data '{"url":"crunchbase.com/organization/stripe"}' 
+ "_treg" : {
+ "served_by" : "anyapi.web.scrape" ,
+ "tried" : [
+ { "provider" : "tinyfish" , "outcome" : "miss" , "charged_micro" : 0 },
+ { "provider" : "crawl4ai" , "outcome" : "error" , "status" : 403, "charged_micro" : 0 },
+ { "provider" : "anyapi" , "outcome" : "hit" , "charged_micro" : 700 }
+ ],
+ "charged_micro" : 700
+} 
+ Steer it with four headers 
+ Options ride as headers, never in the body, so the call stays the vendor's own request. 
+ X-Treg-Route-Prefer Try a vendor first, like free TinyFish. 
+ X-Treg-Route-Exclude Skip a vendor that gave you bad answers. 
+ X-Treg-Route-Max-Cost Cap one call. Without it, a miss can walk up to $1 of vendors. 
+ X-Treg-Route-Waterfall Set to 0 to stop at the first miss. 
+ One API. Any web data. 
+ Platform data comes back as fields, not a page of HTML: fewer tokens for your agent, and nothing to fix when the site is redesigned. 
+ Read a page 
+ Map a site 
+ Any social 
+ Any store 
+ App reviews 
+ stripe.com/pricing 
+ stripe 
+ Pricing built for businesses of all sizes 
+ Standard 2.9% + 30¢ Custom Contact sales 
+ page.md treg.web.extract 
+ # Standard 
+Access a complete payments platform with
+simple, pay-as-you-go pricing.
+ ## 2.9% + 30¢ 
+per successful transaction for domestic cards
+ # Custom 
+IC+ pricing · Volume discounts
+* 100+ payment methods
+* Radar Lite fraud protection 
+ via TinyFish · next in line $0 
+ tailwindcss.com 
+ tailwindcss.com/ 
+ ├─ /docs/installation 
+ ├─ /docs/styling-with-utility-classes 
+ ├─ /docs/hover-focus-and-other-states 
+ ├─ /docs/responsive-design 
+ ├─ /docs/dark-mode 
+ ├─ /docs/theme 
+ ├─ /docs/colors 
+ ├─ /blog 
+ └─ /plus 
+ urls.json treg.web.map 
+ { "links" : [
+ "https://tailwindcss.com/docs/installation" ,
+ "https://tailwindcss.com/docs/styling-with-utility-classes" ,
+ "https://tailwindcss.com/docs/hover-focus-and-other-states" ,
+ "https://tailwindcss.com/docs/responsive-design" ,
+ "https://tailwindcss.com/docs/dark-mode" ,
+ …
+] }
+ // add "q": "dark mode" to rank the URLs for a topic,
+// then read only the pages that matter 
+ via AnyAPI · next in line 
+ Brij Pandey @LearnWithBrij 
+ Google just dropped a 1-hour course on agentic engineering from scratch… 1.3K likes · 310K views 
+ Stripe 1,763,678 followers 
+ We're welcoming Parafin to Stripe. Together, we'll expand revenue opportunities for platforms… 1,073 reactions · 55 comments 
+ r/LocalLLaMA subreddit 
+ Qwen released QwenGyre , an RL framework for training AI agents on extremely long, complex tasks ▲ 409 upvotes · 37 comments 
+ posts.json x · linkedin · reddit 
+ [
+ { "author" : "Brij Pandey" ,
+ "likes" : 1302 , "views" : 310178 },
+ { "company" : "Stripe" ,
+ "reactions" : 1073 , "comments" : 55 },
+ { "subreddit" : "LocalLLaMA" ,
+ "score" : 409 , "num_comments" : 37 }
+] 
+ via and more, per platform 
+ Amazon Apple AirPods Pro 3 Wireless Earbuds with Active Noise Cancellation $199.00 ★★★★☆ 4.4 · 16,356 
+ Walmart Apple AirPods Pro 3 $199.00 ★★★★☆ 4.4 · 18,279 
+ eBay Apple AirPods Pro 3rd Wireless Active Noise Cancelling Earbuds $169.99 open box · ★ 5.0 · 9 
+ products.json treg.amazon.search.products 
+ [
+ { "store" : "Amazon" , "price" : "$199.00" ,
+ "rating" : 4.4 , "reviews" : 16356 },
+ { "store" : "Walmart" , "price" : "$199.00" ,
+ "rating" : 4.4 , "reviews" : 18279 },
+ { "store" : "eBay" , "price" : "$169.99" ,
+ "condition" : "Open Box" }
+] 
+ via JustOneAPI $0.0148 · SerpAPI $0.015 each 
+ ChatGPT App Store · iOS, US 4.83 ★★★★★ 11.2M ratings 
+ ChatGPT Google Play · 1B+ installs 4.78 ★★★★★ 64.2M reviews 
+ Notion Trustpilot · "My most used tool in building my business." 2.2 ★★☆☆☆ 438 reviews 
+ reviews.json app store · google play · trustpilot 
+ [
+ { "source" : "App Store" ,
+ "rating" : 4.83 , "count" : 11212013 },
+ { "source" : "Google Play" ,
+ "rating" : 4.78 , "count" : 64240563 },
+ { "source" : "Trustpilot" ,
+ "rating" : 2.2 , "count" : 438 }
+] 
+ via Crawl4AI $0.00015 a page 
+ search the catalog in plain words: "tiktok video comments", "glassdoor reviews", "google maps search"… 
+ X LinkedIn Reddit TikTok Instagram YouTube Threads Facebook Amazon Walmart eBay Shopify Etsy App Store Google Play Trustpilot Maps 
+ Give your agent the web, free first. 
+ $ 
+ set up treg — treg.to/llms.txt 
+ copy 
+ $ 
+ npx skills add superdesigndev/treg --skill web-access 
+ copy 
+ Get started 
+ Open source on GitHub 
+ Related 
+ Web Arena Race web search and scrape vendors on your own query 
+ The web-access skill When your agent should search, read, map or call a platform job 
+ Leads signals Buyer signals from LinkedIn, Reddit and X on a schedule 
+ Catalog Every tool your agent can call with one treg key 
+ treg 
+ 100% open source 
+ Explore 
+ Catalog Use cases Workflows Showcase GTM engineering Agents Blog 
+ Build 
+ Docs API llms.txt GitHub ↗ 
+ Company 
+ Resources Support Terms Privacy 
+ © 2026 treg — OpenRouter for agent tools 
+ ✕ 
+ Sign in to treg 
+ first sign-in creates your account 
+ Continue with GitHub 
+ Continue with Google 
+ or email a code 
+ Email me a sign-in code 
+ Sign in

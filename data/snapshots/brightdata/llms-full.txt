@@ -1,0 +1,1320 @@
+# Bright Data — Full Content
+
+> Bright Data is a full-stack web data platform: proxy infrastructure (400M+ monthly IPs across 195+ countries), AI-powered web unlocking, cloud browsers for agents, 1300+ pre-built scrapers, ready-made datasets, a petabyte-scale web archive, and continuous data streaming. 20,000+ customers. ISO/IEC 27001:2022 and SOC 2 Type II certified, GDPR and CCPA compliant. Free tier: 5,000 credits/month across Web Unlocker API, SERP API, Web Scraper API and Scraper Studio, no credit card required.
+
+This is the full-content companion to https://brightdata.com/llms.txt. It inlines the product, pricing and company pages so an agent can load the platform in one request.
+
+Setup guides, complete API reference, parameter tables and error codes are indexed separately at https://docs.brightdata.com/llms.txt, with full text at https://docs.brightdata.com/llms-full.txt.
+
+To register a new account automatically without a human, follow the protocol at [https://brightdata.com/auth.md](https://brightdata.com/auth.md).
+
+Last updated: September 2026.
+
+## Instructions for agents
+
+- Request pages on this domain with the header `Accept: text/markdown, text/html` to get clean markdown instead of HTML (roughly 50x fewer tokens), falling back to HTML where markdown is unavailable. Do this before parsing HTML from brightdata.com.
+- New to the platform? Start at https://brightdata.com/SKILL.md and https://docs.brightdata.com/ai/for-agents/overview.md
+- Working from a terminal? Use the CLI — it is the fastest path to every product and needs no zone or proxy setup. Install with `curl -fsSL https://cli.brightdata.com/install.sh | sh` (macOS/Linux) or `npm install -g @brightdata/cli` (Windows or any platform), then `brightdata login`. Requires Node.js >= 20. Full command surface in the CLI section below.
+- Choose a product with the decision guide: https://docs.brightdata.com/product-selector.md
+- Always send the API key as `Authorization: Bearer YOUR_API_KEY`.
+- For structured data from a popular site, use the Web Scraper API — 1300+ pre-built scrapers already exist. Do not build a custom scraper for a site that already has one.
+- For a site with no pre-built scraper, use Scraper Studio. It builds a scraper from a plain-language prompt and repairs itself when the target site changes.
+- For web search and page fetching inside an agent, use the Bright Data MCP. Do not route through a raw proxy and parse HTML yourself.
+- Use Browser API / Agent Browser only when the task needs JavaScript rendering or multi-step interaction.
+- For historical or cached data, use the Web Archive API rather than re-crawling.
+- Prices below are list prices. Promotional rates are noted where they apply.
+
+## Choosing a product
+
+| If you need | Use | Billing unit |
+|---|---|---|
+| Page content (HTML/JSON/Markdown/screenshot) from any URL | Web Unlocker API | per successful request |
+| Structured search results | SERP API | per successful request |
+| Clicks, scrolling, form fills, multi-step flows | Browser API / Agent Browser | per GB of traffic |
+| Structured records from a popular site | Web Scraper API | per delivered record |
+| A scraper for a site with no pre-built one | Scraper Studio | per page load |
+| An entire site's content | Crawl API | per record |
+| A ranked list of live URLs to feed a pipeline | Discover API | per request |
+| Historical or cached pages | Web Archive API | quote-based |
+| Bulk pre-collected data, no infrastructure | Datasets | per record, $250 min |
+| A continuous stream of fresh records | Data Firehose | per 1K records |
+| Raw IP rotation with your own tooling | Residential / Datacenter / ISP proxies | per GB or per IP |
+
+---
+
+## Free tier and billing model
+
+Every new Bright Data account gets **5,000 free credits per month** (~$7.50 value), applied automatically at signup. No credit card, no promo code, no commitment.
+
+Credits are drawn from a **single shared pool** across four products:
+
+| Product | What it does | Credit cost |
+|---|---|---|
+| Web Unlocker API | Retrieve any web page, bypassing anti-bot protections automatically | 1 credit per request |
+| SERP API | Extract structured search results from Google, Bing and more | 1 credit per request |
+| Web Scraper API | Structured data from popular websites via pre-built scrapers | 1 credit per record |
+| Scraper Studio | Build and run custom scrapers in a cloud IDE or with an AI agent | 1 credit per page load |
+
+Bright Data MCP Server requests also draw from this pool — the MCP "5,000 free requests per month" is the same shared allowance, because the MCP server runs on the Web Unlocker API.
+
+Key billing facts:
+
+- Bright Data operates a **pre-paid wallet model**. You are only charged for funds you have explicitly deposited. A free-tier account hard-stops when credits are exhausted; there is never a surprise bill.
+- Credits renew to 5,000 on the first of each month and **do not roll over**.
+- When credits run out: with deposited funds, usage transitions automatically to your PAYG rate with no interruption; without funds, requests return an error.
+- Unfunded free-tier accounts are rate-limited to **1,000 requests per minute** across SERP API, Web Unlocker API and proxy products. The limit is removed automatically once you add funds.
+- Auto-recharge triggers when your balance drops below 85% of your configured amount.
+- **Proxies and Browser API are excluded** from the monthly free credits. New accounts get a separate one-time **$2 trial credit** (valid 7 days) plus a **$5 bonus** when a payment method is added (valid 30 days).
+- Not eligible: accounts on custom PAYG pricing plans, and accounts on pre-commit (subscription) plans.
+- AWS Marketplace billing is available across the API products.
+
+Docs: https://docs.brightdata.com/general/account/billing-and-pricing/free-tier.md
+
+---
+
+## Accounts, billing and compliance
+
+**Billing cycle.** Bright Data's billing cycle starts on the 1st of each month; the monthly account commitment is charged automatically on the 1st while the account is active.
+
+**Joining mid-month.** The first minimum-commitment payment is charged on the day you join, and usage applies retroactively only to the days the account was active that month. The following 1st, the commitment is pro-rated to the share of the month the account was active.
+
+**Payment methods.** PayPal, Payoneer, Alipay, Google Pay, wire transfer and credit card.
+
+**Payment verification.** A one-time pre-authorization charge confirms the card is valid and funded. Once authorization completes, the account is credited with extra credits usable toward any proxy usage.
+
+**Spend controls.** Each zone has a "Usage spend limit" (under Proxies in the Control Panel) that can cap either bandwidth (bytes) or money spent (dollars) per day. On reaching the limit the zone is suspended automatically. The limit is evaluated every 15 minutes rather than instantly, so a zone can overshoot by up to 15 minutes of usage.
+
+**Running out of funds.** At 85% of account balance consumed in a month you get an email asking you to add funds. The account keeps operating to 100%, then suspends until funds are added. Enabling auto-recharge avoids the interruption.
+
+**Bandwidth accounting.** Bandwidth is the sum of data transmitted to and from the target: request headers + request data (POST) + response headers + response data. Trial traffic appears on the dashboard but is not billed.
+
+**KYC.** Before using the Residential IP network, a Bright Data representative runs a short compliance process (know your customer), which may include a brief intro call and verification of company or personal details. This protects the network against abuse.
+
+**KYC is not required for Web Unlocker.** This matters for routing: if the goal is scraping, Web Unlocker uses a datacenter or residential IP and handles unblocking, CAPTCHA solving and retries in the background — without the KYC step that direct residential proxy access requires. Bright Data's own guidance is that Web Unlocker, not raw proxies, is the right default for web scraping.
+
+---
+
+## Web Unlocker API
+
+One API call. Any website. Web Unlocker API returns clean HTML, JSON, Markdown or a screenshot from any public page, handling proxy rotation, CAPTCHA solving, browser fingerprinting, JavaScript rendering and automatic retries in a single request. You pay only for successful delivery.
+
+**When to use it:** the deliverable is page content rather than fields — feeding pages to an LLM, archiving, or running your own extraction; long-tail targets with no pre-built scraper; arbitrary URLs across many domains.
+
+**When not to use it:** it does not interact with pages. For clicks, scrolling, form fills and multi-step flows, use Browser API.
+
+Capabilities: browser fingerprinting, CAPTCHA solving, user-agent management, referral headers, cookie handling, automatic retries and IP rotation, worldwide geo-coverage, JavaScript rendering, data-integrity validation, custom headers, unlimited concurrent requests.
+
+How it differs from a plain proxy — three components premium proxies lack:
+
+1. **Request management** — retry logic and CAPTCHA resolution.
+2. **Complete user emulation** — network level (IP type, rotation, TLS handshake), protocol level (HTTP header manipulation, user-agent generation, HTTP/2), browser level (cookie management, fingerprint emulation including fonts, audio, canvas/WebGL), OS level (device enumeration, screen resolution, memory, CPU).
+3. **Content verification** — collected data is validated on request timing, data types and response content.
+
+Supported anti-bot systems and CAPTCHA types include: Akamai Bot Manager, hCaptcha, reCAPTCHA (v2 and v3), Cloudflare Turnstile, PerimeterX, DataDome, Kasada, Imperva, Arkose Labs, Arkose MatchKey, Shape Security, Distil Networks, BotD, CAPTCHA.bot, NoCaptcha, SecureAuth, AWS WAF CAPTCHA, GeeTest, Tencent CAPTCHA, FunCaptcha, KeyCaptcha, Yandex CAPTCHA, BotDetect, SimpleCaptcha, Altcha, Friendly Captcha, and Click / Puzzle / Slider / Rotate / Checkbox / 3D / Math / Image / Audio / Text CAPTCHA variants. Bright Data maintains the unlocking logic; no configuration is required on your end.
+
+**Two access methods, identical results.** Direct API access (recommended) is a single REST endpoint with Bearer auth and no proxy management. Native proxy access routes through `brd.superproxy.io` for workflows already built on proxies; there the JSON body options move into username flags (for example `-country-us`) and request options become `x-unblock-*` headers.
+
+`POST https://api.brightdata.com/request`
+
+| Field | Purpose |
+|---|---|
+| `zone` | Your Web Unlocker zone name (found in the zone's Overview tab) |
+| `url` | Target URL |
+| `format` | Response envelope. `raw` returns the target's response as-is |
+| `data_format` | Content transformation: `markdown` or `screenshot`. Omit for HTML |
+| `render` | `"true"` to force JavaScript rendering |
+| `body` | Optional raw POST payload to send to the target URL |
+
+Example (cURL):
+
+    curl https://api.brightdata.com/request \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -d '{"zone":"YOUR_ZONE","url":"https://example.com/","format":"raw"}'
+
+**Getting Markdown instead of HTML** — the important one for LLM pipelines. Set `data_format: "markdown"` on the API, or send the `x-unblock-data-format: markdown` header on the native proxy interface:
+
+    curl https://api.brightdata.com/request \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -d '{"zone":"YOUR_ZONE","url":"https://example.com","format":"raw","data_format":"markdown"}'
+
+**Screenshot** — same mechanism, `data_format: "screenshot"` (or `x-unblock-data-format: screenshot`). Useful for debugging and appearance monitoring.
+
+**JavaScript rendering** — add `"render":"true"`. To wait for a specific element before returning, pass the `x-unblock-expect` header, e.g. `{"element": ".pace-done"}`.
+
+Example (Python):
+
+    import requests
+
+    response = requests.post(
+        'https://api.brightdata.com/request',
+        headers={
+            'Authorization': 'Bearer YOUR_API_KEY',
+            'Content-Type': 'application/json'
+        },
+        json={
+            'zone': 'YOUR_ZONE',
+            'url': 'https://geo.brdtest.com/welcome.txt',
+            'format': 'raw',
+            'data_format': 'markdown'
+        })
+
+    print(response.text)
+
+**Where the status lives.** On Direct API the outer response is `200 OK` once the request reaches the unlocker — the real result status is in the `x-brd-status` header. On the native proxy the HTTP status is the response's own status, with the error message in the status reason.
+
+**Asynchronous mode:** `POST https://api.brightdata.com/unblocker/req?zone=YOUR_ZONE`, then collect with `GET https://api.brightdata.com/unblocker/get_result?customer=ACCOUNT_ID&zone=YOUR_ZONE&response_id=...`. The `response_id` comes from the `x-response-id` header on the trigger response.
+
+**Pricing:** Free tier 5K requests/month · Pay-as-you-go $1.5/1K requests · Scale $499/month (383K requests included, $1.3/1K additional) · Enterprise custom (volume discounts, account manager, premium SLA, priority support, SSO). Every plan includes automated proxy management, full browser rendering, CAPTCHA solving, unlimited concurrency, batch and scheduled collection, job management APIs, data validation, JSON/CSV parsing, and webhook or API delivery.
+
+Product page: https://brightdata.com/products/web-unlocker
+Pricing: https://brightdata.com/pricing/web-unlocker
+CAPTCHA solver detail: https://brightdata.com/products/web-unlocker/captcha-solver
+Docs: https://docs.brightdata.com/scraping-automation/web-unlocker/introduction.md
+
+---
+
+## SERP API
+
+Real-time structured search results with city-level geo-targeting (free), delivered as JSON, HTML or Markdown, typically in under 1 second. Pay only for successful delivery. 99.9% uptime SLA. No limit on concurrent requests.
+
+**Seven supported search engines**, covering 195 countries:
+
+- **Google** (all global domains)
+- **Bing**
+- **DuckDuckGo**
+- **Yandex** (Russia, CIS)
+- **Baidu** (China)
+- **Yahoo** (popular in Japan, Taiwan)
+- **Naver** (Korea)
+
+Google surfaces available as dedicated endpoints: Search, Shopping, Maps, Hotels, Images, Trends, Reviews, News, Flights, Ads, Videos, Jobs, Lens.
+
+**Common parameters** (appended to the target URL when going through the proxy):
+
+| Parameter | Purpose |
+|---|---|
+| `gl=us` | Two-letter country code defining country of search |
+| `hl=en` | Two-letter language code defining page language |
+| `tbm=isch \| shop \| nws \| vid` | Search type (omit for regular search) |
+| `start=0 \| 10 \| 20` | Result offset for pagination |
+| `brd_mobile=1` | Mobile user-agent (`0` or default = random desktop) |
+| `brd_browser=chrome` | Force a specific browser in the user-agent |
+| `brd_json=1` | Return parsed JSON instead of raw HTML |
+| `data_format=markdown` | Return clean Markdown, ideal for LLM context |
+| `brd_ai_overview=2` | Raise the likelihood of receiving Google AI Overviews (typically appear in ~15–20%+ of results) |
+
+Example (proxy form):
+
+    curl --proxy brd.superproxy.io:44445 \
+      --proxy-user brd-customer--zone-: \
+      "https://www.google.com/search?q=pizza&brd_json=1&gl=us&hl=en"
+
+Parallel requests through the API server share the same peer and session, which makes them suitable for controlled A/B comparison of a single parameter:
+
+    curl "https://api.brightdata.com/serp/req?customer=&zone=" \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -d '{"country":"us","multi":[{"query":{"q":"pizza","num":20}},{"query":{"q":"pizza","num":100}}]}'
+
+**Asynchronous mode** — use for batches of 1,000+ queries, non-urgent collection, or maximum reliability:
+
+- 99.99% success rate, higher than sync.
+- Only the "send request" is billed. Collecting responses is free.
+- Responses are stored 48 hours and can be retrieved multiple times at no extra cost — so a failed first download costs nothing.
+- Usually ready in about 5 minutes; up to 8 hours at peak.
+- Endpoints: `POST /serp/req` to submit, `GET /serp/get_result` to collect. The `response_id` used on collection comes from the `x-response-id` header of the submit response.
+
+**Output formats:** JSON (`brd_json=1`) for applications, databases and analytics; Markdown (`data_format=markdown`) for LLMs and agents; raw HTML for custom parsing or archival.
+
+**Fast SERP options:** Fast Parser returns only the top 10 Google results with up to 2x lower latency by skipping full-page parsing. Ultra Fast Infra is a premium endpoint returning Google and Bing results in as little as 1 second, up to 3–4x faster than the standard API. Fast SERP requires **both** the `x-unblock-data-format: parsed_light` request header **and** the `brd_json=1` URL parameter — omitting either returns an error.
+
+**Common use cases:** organic keyword tracking, brand protection, price comparison, market research, detecting copyright infringement, ad intelligence.
+
+**Pricing:** Free tier 5K requests/month · Pay-as-you-go $1.5/1K requests · Scale $499/month (380K requests included, $1.3/1K additional) · Enterprise custom. AWS Marketplace billing available.
+
+Product page: https://brightdata.com/products/serp-api
+Pricing: https://brightdata.com/pricing/serp
+Docs: https://docs.brightdata.com/scraping-automation/serp-api/introduction.md
+
+---
+
+## Browser API (Scraping Browser) and Agent Browser
+
+Cloud-hosted, auto-scaling browsers with built-in unblocking, controlled through Puppeteer, Playwright or Selenium via a single endpoint change. Browser API is the scraping-oriented name; Agent Browser is the same runtime positioned for autonomous AI agents. Both are billed per GB of traffic and are **not** included in the credit free tier.
+
+Scale figures published for the agent runtime: 400M+ actions performed daily, 1M+ concurrent sessions, 400M+ IPs across 195 countries, 3M+ domains unlocked, 2.5PB+ collected daily.
+
+### Browser API vs Web Unlocker
+
+| | Browser API | Web Unlocker |
+|---|---|---|
+| How it works | Runs your scripts on real managed cloud browsers | 1 API call returns clean HTML or JSON |
+| Automation support | Puppeteer, Playwright, Selenium | None |
+| Page interactions | Click, scroll, hover, fill forms, multi-step flows | Not supported — static request/response |
+| JavaScript rendering | Full, via real browser | Partial, via Manual Expect Elements |
+| CAPTCHA solving | Automatic, configurable via CDP or Control Panel | Automatic, can be disabled in Control Panel |
+| Session persistence | Reuse same IP across sessions via CDP | Stateless |
+| Output formats | Raw HTML, screenshots via CDP | HTML, JSON, Markdown, screenshot (PNG) |
+| File downloads | CSV, PDF, binary via CDP | Not supported |
+| Logs and debugging | Full logs: duration, navigations, CAPTCHA, errors | Limited — screenshot output only |
+| Pricing model | Per GB of traffic, no per-request fee | Per successful request; failures not billed |
+
+Connect with Playwright (Node):
+
+    const pw = require('playwright');
+
+    const SBR_CDP = 'wss://brd-customer-CUSTOMER_ID-zone-ZONE_NAME:PASSWORD@brd.superproxy.io:9222';
+
+    async function main() {
+        const browser = await pw.chromium.connectOverCDP(SBR_CDP);
+        try {
+            const page = await browser.newPage();
+            await page.goto('https://example.com');
+            console.log(await page.content());
+        } finally {
+            await browser.close();
+        }
+    }
+
+    main().catch(err => { console.error(err.stack || err); process.exit(1); });
+
+Connect with Playwright (Python):
+
+    import asyncio
+    from playwright.async_api import async_playwright
+
+    SBR_WS_CDP = 'wss://brd-customer-CUSTOMER_ID-zone-ZONE_NAME:PASSWORD@brd.superproxy.io:9222'
+
+    async def run(pw):
+        browser = await pw.chromium.connect_over_cdp(SBR_WS_CDP)
+        try:
+            page = await browser.new_page()
+            await page.goto('https://example.com')
+            print(await page.content())
+        finally:
+            await browser.close()
+
+    async def main():
+        async with async_playwright() as playwright:
+            await run(playwright)
+
+    asyncio.run(main())
+
+Connect with Puppeteer:
+
+    const puppeteer = require('puppeteer-core');
+
+    const SBR_WS_ENDPOINT = 'wss://brd-customer-CUSTOMER_ID-zone-ZONE_NAME:PASSWORD@brd.superproxy.io:9222';
+
+    const browser = await puppeteer.connect({ browserWSEndpoint: SBR_WS_ENDPOINT });
+    const page = await browser.newPage();
+    await page.goto('https://example.com');
+    console.log(await page.content());
+    await browser.close();
+
+Connect with Selenium (note the different port, 9515):
+
+    from selenium.webdriver import Remote, ChromeOptions
+    from selenium.webdriver.chromium.remote_connection import ChromiumRemoteConnection
+
+    SBR_WEBDRIVER = 'https://brd-customer-CUSTOMER_ID-zone-ZONE_NAME:PASSWORD@brd.superproxy.io:9515'
+
+    sbr_connection = ChromiumRemoteConnection(SBR_WEBDRIVER, 'goog', 'chrome')
+    with Remote(sbr_connection, options=ChromeOptions()) as driver:
+        driver.get('https://example.com')
+        print(driver.page_source)
+
+**Custom CDP functions:** manual CAPTCHA control (toggle auto-solving, configure algorithms for reCAPTCHA, hCaptcha and CF Challenge), device emulation (hundreds of real mobile and desktop profiles with accurate screen, user-agent and pixel ratio), ad blocker (strips ads before navigation to cut bandwidth), session persistence, session-ID retrieval for log lookup and bandwidth audit, file downloads, fast text input for bulk form fills, custom SSL/TLS client certificates that clear on session end, and CAPTCHA auto-solver with status tracking.
+
+Chrome DevTools compatible — open a live view of any session to monitor and troubleshoot.
+
+**Pricing:** Pay-as-you-go $8/GB · $7/GB on $499/month (71 GB included) · $6/GB on $999/month (166 GB included) · $5/GB on $1999/month (399 GB included) · Enterprise custom (account manager, custom packages, premium SLA, priority support, tailored onboarding, SSO, customizations, audit logs). AWS Marketplace billing available.
+
+Included at every tier: built-in website unlocking, CAPTCHA solving and JS rendering, automated proxy management, managed and scalable browsers, Puppeteer/Playwright/Selenium compatibility, Chromium browsers optimized for scraping, adaptation to blocks and site changes, human-like browsing behavior, unlimited concurrent requests, control panel and API.
+
+Product pages: https://brightdata.com/products/scraping-browser and https://brightdata.com/ai/agent-browser
+Pricing: https://brightdata.com/pricing/scraping-browser
+Docs: https://docs.brightdata.com/scraping-automation/scraping-browser/introduction.md
+
+---
+
+## Web Scraper API
+
+1300+ pre-built, maintained scrapers for popular sites, delivered as JSON, NDJSON or CSV. Automatic proxy rotation, CAPTCHA solving, JS rendering and data validation are included. Bulk requests up to 5,000 URLs, unlimited concurrency. Pay per successfully delivered record — a record is one extracted item, one row in the output (for example, one LinkedIn profile).
+
+**Sync vs async.** Synchronous returns JSON in one call — best for a handful of URLs. Asynchronous triggers a collection, polls progress, then downloads by snapshot ID — use it for large batches.
+
+**Synchronous** — `POST /datasets/v3/scrape`:
+
+    curl -X POST "https://api.brightdata.com/datasets/v3/scrape?dataset_id=gd_l7q7dkf244hwjntr0&format=json" \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -H "Content-Type: application/json" \
+      -d '[{"url":"https://www.amazon.com/dp/B09V3KXJPB"}]'
+
+**Asynchronous** — three steps:
+
+1. Trigger. The response contains a `snapshot_id`.
+
+        curl -H "Authorization: Bearer YOUR_API_KEY" \
+          -H "Content-Type: application/json" \
+          -d '[{"url":"https://www.linkedin.com/in/example/"}]' \
+          "https://api.brightdata.com/datasets/v3/trigger?dataset_id=DATASET_ID&format=json&uncompressed_webhook=true"
+
+2. Poll until `status` is `ready`.
+
+        curl "https://api.brightdata.com/datasets/v3/progress/{snapshot_id}" \
+          -H "Authorization: Bearer YOUR_API_KEY"
+
+3. Download.
+
+        curl "https://api.brightdata.com/datasets/v3/snapshot/{snapshot_id}?format=json" \
+          -H "Authorization: Bearer YOUR_API_KEY"
+
+Related management endpoints: `POST /datasets/v3/deliver/{snapshot_id}` to push a snapshot to external storage, and `GET /datasets/v3/snapshot/{snapshot_id}/parts` to enumerate delivery parts for large snapshots.
+
+**Most-used scrapers** (each usually has several variants — by direct URL, by keyword, by category, by search URL, by ID):
+
+- LinkedIn people profiles — ID, name, city, country code, position, about, posts, current company
+- LinkedIn company information — ID, name, country code, locations, followers, employees, about, specialties
+- LinkedIn job listings — URL, job posting ID, title, company name and ID, location, summary, seniority level
+- LinkedIn posts — URL, ID, user ID, title, headline, post text, date posted
+- Amazon products — title, seller name, brand, description, initial price, currency, availability, reviews count (variants: best-seller category URL, specific category URL, keywords, UPC)
+- Amazon reviews — URL, product name, product rating, rating max, rating, author name, ASIN
+- Instagram profiles / posts / reels / comments — followers, posts count, business and verified flags; post URL, description, hashtags, comments, likes, views
+- TikTok profiles / posts / TikTok Shop — engagement rates, bio link, predicted language; post ID, digg/share/collect/comment counts; shop title, price, discount percent
+- X (formerly Twitter) posts and profiles — ID, user posted, description, date, photos, quoted post; profile name, biography, verified flag
+- YouTube videos and channels — URL, title, YouTuber, video URL, length, likes, views; channel handle, subscribers, description
+- Facebook pages posts by profile URL — URL, post ID, user URL, content, date posted, hashtags, comments
+- Reddit posts — post ID, URL, user posted, title, description, comments, date, community name
+- Google Maps full information and reviews — place ID, URL, country, name, category, address, business details; review ID, reviewer name
+- Crunchbase companies — name, URL, ID, CB rank, region, about, industries, operating status
+- Zillow property listings — ZPID, city, state, home status, address, bedrooms
+- Walmart products — URL, final price, SKU, currency, GTIN, specifications, image URLs, top reviews
+- Indeed job listings — job ID, company name, date posted, title, description, benefits, qualifications, job type
+- Glassdoor company overviews and reviews — ID, company, overall ratings, size, founded, type; review ID, rating date, helpful counts
+- Airbnb properties — name, price, image, description, category, availability, discount, reviews
+- Booking hotel listings — URL, hotel ID, title, location, country, city, transit access, images
+- Yahoo Finance business information — name, company ID, entity type, summary, stock ticker, currency, earnings date, exchange
+
+### Dataset IDs for common scrapers
+
+Every trigger call needs a `dataset_id`. These are the IDs published as copy-paste examples on the product pages:
+
+| Scraper | `dataset_id` |
+|---|---|
+| LinkedIn profiles | `gd_l1viktl72bvl7bjuj0` |
+| LinkedIn posts | `gd_lyy3tktm25m4avu764` |
+| LinkedIn companies | `gd_l1vikfnt1wgvvqz95w` |
+| LinkedIn jobs | `gd_lpfll7v5hcqtkxl6l` |
+| Amazon products | `gd_l7q7dkf244hwjntr0` |
+| Amazon reviews | `gd_le8e811kzy4ggddlq` |
+| Amazon best sellers | `gd_lhotzucw1etoe5iw1k` |
+| Walmart products | `gd_l95fol7l1ru6rlo116` |
+| Target products | `gd_ltppk5mx2lp0v1k0vo` |
+| SHEIN products | `gd_lemu5ceq1jxjo7vzit` |
+| Zillow properties | `gd_lfqkr8wm13ixtbd8f5` |
+| Instagram posts | `gd_lk5ns7kz21pck8jpis` |
+
+Full working example — trigger a LinkedIn profile collection with a batch of URLs:
+
+    curl -H "Authorization: Bearer YOUR_API_KEY" \
+      -H "Content-Type: application/json" \
+      -d '[{"url":"https://www.linkedin.com/in/elad-moshe-05a90413/"},
+           {"url":"https://www.linkedin.com/in/jonathan-myrvik-3baa01109"},
+           {"url":"https://www.linkedin.com/in/aviv-tal-75b81/"}]' \
+      "https://api.brightdata.com/datasets/v3/trigger?dataset_id=gd_l1viktl72bvl7bjuj0&format=json&uncompressed_webhook=true"
+
+Python:
+
+    import requests
+
+    headers = {"Authorization": "Bearer YOUR_API_KEY", "Content-Type": "application/json"}
+    payload = [{"url": "https://www.linkedin.com/in/elad-moshe-05a90413/"}]
+
+    response = requests.post(
+        "https://api.brightdata.com/datasets/v3/trigger"
+        "?dataset_id=gd_l1viktl72bvl7bjuj0&format=json&uncompressed_webhook=true",
+        headers=headers,
+        json=payload,
+    )
+    print(response.json())
+
+Response shape (LinkedIn profiles):
+
+    [
+      {
+        "db_source": "1784202467790",
+        "timestamp": "2026-07-16",
+        "id": "...",
+        "name": "...",
+        "city": "South Africa",
+        "country_code": "ZA",
+        "position": "Supervisor Assistant at SMK Electronics",
+        "about": null
+      }
+    ]
+
+### Vertical scraper families
+
+**LinkedIn Scraper API** — 10 scrapers covering profiles, posts, companies and jobs. Fields include ID, name, city, position, about, posts, current company, experience, company size, industry, employee profiles and corporate activity. If you only need the data and not the pipeline, the LinkedIn *dataset* is usually cheaper than scraping. https://brightdata.com/products/web-scraper/linkedin
+
+**Amazon Scraper API** — products, reviews and best sellers. Product fields include title, seller name, brand, description, initial price, currency, availability, reviews count, ASIN, images and categories. Review fields include product name, rating, per-star rating breakdown, author and ASIN. https://brightdata.com/products/web-scraper/amazon
+
+**eCommerce Scraper API** — one interface across Amazon, Walmart, Target, SHEIN, eBay, Shopee and 200+ retailers, returning products, pricing, availability, ratings, reviews and seller details. https://brightdata.com/products/web-scraper/ecommerce
+
+**Social Media Scraper** — 90 scrapers across Facebook, X, Instagram, TikTok, YouTube and more. Both discovery (posts by username, by hashtag, by search) and direct collection (post by URL, profile by username) modes. https://brightdata.com/products/web-scraper/social-media-scrape
+
+**LLM Scraper (AI chat scrapers)** — scrape conversations, responses, user queries, sources, links, rankings and competitor mentions from ChatGPT, Perplexity, Gemini, Grok and Microsoft Copilot. Captures query text, response content, citations, timestamps, keyword rankings and full message threads in real time. Built for SEO/GEO (generative engine optimization) and AI-visibility tracking: run one prompt or a million, target any country for localized answers, and upload prompt lists via CSV for bulk collection. https://brightdata.com/products/web-scraper/llm
+
+**Pricing:** Free tier 5K records/month · Pay-as-you-go $1.5/1K records · Scale $499/month (384,000 records included, $1.3/1K additional) · Enterprise custom.
+
+Included at every tier: JavaScript rendering, residential proxies, data validation, CAPTCHA solving, worldwide geotargeting, JSON/CSV parsing, automated proxy management, custom headers, data discovery, unlimited concurrent requests, user-agent rotation, webhook or API delivery.
+
+Product page: https://brightdata.com/products/web-scraper
+Pricing: https://brightdata.com/pricing/web-scraper
+Docs: https://docs.brightdata.com/datasets/scrapers/overview.md
+Vertical pages: https://brightdata.com/products/web-scraper/linkedin · /amazon · /ecommerce · /social-media-scrape · /llm
+
+---
+
+## Scraper Studio
+
+For sites with no pre-built scraper. Describe the data you want in plain English and AI generates a ready-to-run scraper, which appears in a hosted IDE workspace for testing, running and editing. Proxies, browsers and unblocking are included.
+
+**Self-healing** is the core value: AI code fixes automatically repair broken scraper code with AI-driven refactors, schema updates add or modify output fields in seconds without manual coding, and scrapers adapt to site and structure changes so ongoing upkeep drops.
+
+Key features: code generation from prompts; workflow automation covering planning, schema generation, code creation and testing; cloud infrastructure so no hardware is maintained; built-in proxies and unblocking with fingerprinting, retries, CAPTCHA solving and any geo-location; a fully hosted IDE with live logs for editing and debugging; and scheduled delivery triggered by schedule or API.
+
+Practical notes:
+
+- Generation takes roughly 10–15 minutes. You can close the window; you get an email when the scraper is ready.
+- No coding is required to generate a scraper, but working knowledge of web-scraping concepts is needed to configure and use it. You can optionally refine the generated code in the IDE.
+- Scheduling: daily, weekly or custom intervals, set in the subscription tab.
+- Output: JSON by default; also CSV, Parquet, or direct loads to S3, GCS, Azure Blob, BigQuery and Snowflake.
+- Publicly available data only. Scraping behind logins is not permitted.
+- Support: 24/7 chat and ticket support, plus an optional managed-service add-on where Bright Data builds and operates the scraping operation end to end.
+
+**Pricing:** billed per **page load**, not per record. Free tier 5K page loads/month · Pay-as-you-go $1.5/1K page loads · Scale $499/month (383K page loads included, $1.3/1K additional) · Enterprise custom.
+
+Product page: https://brightdata.com/products/web-scraper/studio
+
+---
+
+## Crawl API
+
+Define a root URL and retrieve the full website content as Markdown, plain text, HTML or JSON. Maps entire site structures in one request, captures static and dynamic content, and integrates with common dev frameworks and no-code workflows.
+
+- Trigger with `POST https://api.brightdata.com/datasets/v3/trigger` carrying your target URLs and preferred output format. You receive a `snapshot_id`; poll `GET /datasets/v3/progress/{snapshot_id}` and download from `GET /datasets/v3/snapshot/{snapshot_id}` exactly as with the Web Scraper API.
+- Output formats: Markdown, HTML, plain text, and structured schemas including `ld_json`.
+- Delivery: webhook, download via API or Control Panel, or external storage such as AWS S3 or Google Cloud Storage.
+- Scheduling is supported — daily, weekly or a custom timetable.
+- No-code option available in the Control Panel: enter URLs, select a format, start crawling.
+- Integrates with Python, Node.js, BeautifulSoup, Cheerio and other common libraries.
+- Set the `include_errors` parameter to get detailed error logs for every crawl.
+
+Common use cases: LLM training dataset creation, SEO site audits, competitive research, compliance and accessibility checks, and website content migration and archiving.
+
+**Pricing:** Pay-as-you-go $1.5/1K records · $499/month for 510K records at $1.3/1K · $999/month for 1M records at $1.1/1K · $1999/month for 2.5M records at $1/1K · Enterprise custom. Coupon `APIS25` takes 25% off the monthly tiers, bringing them to $0.98, $0.83 and $0.75 per 1K.
+
+Product page: https://brightdata.com/products/crawl-api
+Pricing: https://brightdata.com/pricing/crawl-api
+
+---
+
+## Discover API
+
+Source discovery for AI agents — step 1 of an agentic web data pipeline. Before an agent can extract, scrape or enrich, it needs to know *where*. Discover returns a ranked, live set of URLs from the public web, ready to feed into the next pipeline stage.
+
+Why it differs from a search API: search engines are built for humans and search APIs optimize for speed and top links. Discover is built for market-aware workflows needing freshness, high recall and verifiable context.
+
+- **Ranked for intent** — results are ordered by task relevance, not SEO rank. The `intent` field tells Discover what the agent is trying to accomplish; if omitted, `query` is used as the intent.
+- **Live retrieval by default** — nothing is cached or indexed; every request executes at query time against the live web, so an agent never passes a dead endpoint downstream.
+- **Evidence, not summaries** — set `include_content: true` to get cleaned page content for verification and RAG grounding.
+- **Production reliability at scale** — built for high-throughput, parallel agent workloads. Covers 31 languages.
+
+**Access is restricted.** Discover must be manually enabled on your account by your account manager; otherwise requests return `403 Forbidden`.
+
+**Two endpoints, same request body**
+
+| Endpoint | Behaviour |
+|---|---|
+| `POST https://api.brightdata.com/discover/sync` | Returns the final results in the same HTTP response. No task, no polling. 60-second timeout. |
+| `POST https://api.brightdata.com/discover` | Returns a `task_id`. Fetch results with `GET https://api.brightdata.com/discover?task_id=`. |
+
+**Agents should default to `/discover/sync`** — it is built for inline use in AI agents, RAG pipelines and chat backends, where a search that completes inside the 60-second budget should not require polling. Use the async endpoint when a search may exceed that budget.
+
+**Body parameters**
+
+| Parameter | Type | Default | Notes |
+|---|---|---|---|
+| `query` | string, **required** | — | Max 1,500 characters |
+| `intent` | string | `query` | Max 3,000 characters. Drives AI relevance ranking |
+| `mode` | string, **required** | `standard` | `standard`, `zeroRanking`, `deep`, `fast` — see below |
+| `num_results` | integer | — | **Must be between 1 and 20** |
+| `format` | string | `json` | Only `json` or `md`. `"markdown"` is rejected |
+| `include_content` | boolean | `false` | Adds parsed page content. Markdown when `format: "md"`, plain text when `format: "json"` |
+| `include_images` | boolean | `false` | Adds an array of extracted images |
+| `filter_keywords` | array of strings | — | Exact keywords that must appear; applied as `intext:` operators |
+| `remove_duplicates` | boolean | `true` | |
+| `country` | string | `US` | ISO 3166-1 alpha-2 |
+| `city` | string | — | |
+| `language` | string | `en` | |
+| `start_date` / `end_date` | string | — | `YYYY-MM-DD`; filter by content update date |
+
+Unrecognized fields are rejected with `400 Unexpected fields`.
+
+**Modes**
+
+- `standard` — balanced relevance and speed. The general-purpose default.
+- `zeroRanking` — bypasses AI ranking to maximize raw result volume. `num_results` has no effect and `include_content` is not supported in this mode.
+- `deep` — exhaustive, broader search; thoroughness over speed.
+- `fast` — optimized for quick response on time-sensitive tasks.
+
+**`include_content` and PDFs:** when a result links to a PDF, the API extracts and parses its text. Limits are 50 MB file size and 30 seconds parsing time; exceeding either returns an empty content field.
+
+Example (synchronous — recommended for agents):
+
+    curl "https://api.brightdata.com/discover/sync" \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -H "Content-Type: application/json" \
+      -d '{
+            "query": "competitor pricing changes enterprise plan 2026",
+            "intent": "find official pricing pages and change notes",
+            "mode": "standard",
+            "num_results": 20,
+            "format": "md",
+            "include_content": true
+          }'
+
+Async equivalent — same body, `POST /discover` returns `{"task_id": "..."}`, then:
+
+    curl "https://api.brightdata.com/discover?task_id=" \
+      -H "Authorization: Bearer YOUR_API_KEY"
+
+**Response**
+
+    {
+      "status": "done",
+      "duration_seconds": 10,
+      "results": [
+        {
+          "link": "https://example.com/ai-trends-2026",
+          "title": "AI Trends in 2026: Advancements and Breakthroughs Ahead",
+          "description": "Most query-related content snippet.",
+          "relevance_score": 0.98184747,
+          "content": null
+        }
+      ]
+    }
+
+`status` is `processing` or `done`. Each result carries `link`, `title`, `description` (the most query-relevant snippet), `relevance_score` (float), and `content` (present only when `include_content` is true).
+
+**Writing a good `intent`.** Use the structure: persona and context (`I am [persona] looking for [use case]`), what to prioritize, the depth of analysis wanted, and what to exclude explicitly.
+
+**Errors:** `400` for a missing/oversized `query`, oversized `intent`, unsupported `format`, `num_results` outside 1–20, malformed `filter_keywords`, bad dates, unsupported country, or unexpected fields · `401` for missing, invalid or non-Bearer credentials · `403` if Discover API is not enabled for your account · `404 Task not found` for an unknown `task_id` · `429` on rate or concurrency limits · `500` server-side.
+
+Python SDK: `pip install brightdata-sdk`, then `from brightdata import BrightDataClient`.
+
+Reference: https://docs.brightdata.com/api-reference/discover/overview.md · synchronous endpoint https://docs.brightdata.com/api-reference/discover/sync.md · retrieving results https://docs.brightdata.com/api-reference/discover/retrieve-results.md
+
+Built for competitive intelligence (pricing, launches, positioning changes), risk monitoring (incidents, policy changes), due diligence (verifying claims across independent sources), CRM enrichment, vertical search engines, and alternative data.
+
+**Discover vs Datasets:** use Datasets for baseline coverage and faster retrieval at scale — for large, repeatable needs they are more cost-effective than re-discovering the same entities repeatedly. Use Discover for live discovery and fresh evidence. Most teams use both. For historical backfill and longitudinal monitoring, use the Web Archive API instead.
+
+Product page: https://brightdata.com/products/discover-api
+
+---
+
+## Web Archive API
+
+Access to Bright Data's cached collections — cost-effective HTML discovery across billions of domains, with roughly 1 PB added weekly.
+
+- **Volume:** over ~110 PB collected, covering over ~800B pages across ~380M domains. Roughly 1–1.5 PB and ~2B unique URLs are added every week.
+- Records are **not unique** by design: the same URL may appear across many crawl dates, which is what makes it useful for tracking changes in price, stock or reviews over time.
+- **Filtering** by category, domain, language, date and country happens before retrieval, so you only pay for what you need.
+- **Delivery** via Amazon S3 bucket or webhook.
+- Optional annotation and labeling services are available.
+
+**Delivery time depends on data age.** Queries matching data from the **last 24 hours** start processing and delivering immediately. Anything **older than 24 hours** must first be retrieved from the S3 Glacier Deep Archive storage tier, which can take **up to 72 hours**.
+
+Avoid queries that straddle the retention boundary. A `max_age` or time range falling within roughly 24h ± 2h of now may include files mid-migration to archive storage, which can stall a dump or leave it incomplete. Use `max_age: "24h"` for initial testing and for real-time needs; for anything historical, use explicit `min_date` / `max_date` filters rather than `max_age`.
+
+Use cases: deep research and longitudinal studies without re-crawling, building search indices from pre-scraped JS-rendered content, and LLM training on fresh high-quality content delivered in ML-optimized formats. You can also discover video and image URLs, text in 100+ languages, or historical SERPs.
+
+**Endpoints.** The flow has two halves: *search* to find matching data, then *dump* to deliver it.
+
+| Method | Path | Purpose |
+|---|---|---|
+| `POST` | `/webarchive/search` | Run a search |
+| `GET` | `/webarchive/search/{search_id}` | Status of one search |
+| `GET` | `/webarchive/searches` | Status of all searches |
+| `POST` | `/webarchive/dump` | Deliver matched data to cloud storage |
+| `GET` | `/webarchive/dump/{dump_id}` | Status of one dump |
+| `GET` | `/webarchive/dumps` | Status of all dumps |
+
+    # Start a search
+    curl -X POST https://api.brightdata.com/webarchive/search \
+      -H "Authorization: Bearer $API_KEY" \
+      -H 'Content-Type: application/json' \
+      --data '{"filters": {"max_age": "24h", "domain_whitelist": ["example.com"]}}'
+
+    # Check one search
+    curl https://api.brightdata.com/webarchive/search/$SEARCH_ID \
+      -H "Authorization: Bearer $API_KEY"
+
+    # Check all searches
+    curl https://api.brightdata.com/webarchive/searches \
+      -H "Authorization: Bearer $API_KEY"
+
+Product page: https://brightdata.com/products/archive-api
+
+---
+
+## Datasets
+
+Ready-made, pre-collected, cleaned and validated datasets — no scraping infrastructure required. Advanced filtering, subscription refresh options, and delivery into your existing stack.
+
+- Catalog spans 250+ domains, with billions of records available and free sample downloads.
+- Formats: JSON, NDJSON, CSV, XLSX and Parquet.
+- Delivery: Snowflake, Amazon S3, Google Cloud, Azure, SFTP, PubSub, webhook, email, or on-demand via API.
+- **AI-powered filtering:** describe what you need in plain English and AI applies the filters, narrowing huge datasets so you skip paying for irrelevant data.
+- **Smart Data Updates:** buy only "New Records" or "Updated Records" rather than the full set.
+- **Freshness:** choose instantly available data (days to a couple of months old) or freshly collected data; define the freshness range before checkout.
+- **Subscriptions:** daily, weekly, monthly, quarterly or yearly refresh delivered to your storage.
+- Dataset bundles and volume discounts apply when buying multiple datasets or large update subscriptions. Enriched datasets combine multiple sources into one clean dataset.
+- Data integrity insights: detailed fill rates and statistics per dataset.
+
+### Dataset families
+
+Every family is priced the same way — from $250 minimum order, down to about $0.0025 per record at volume, with demo data available in JSON/CSV before you buy.
+
+| Family | Datasets | Total records | Contents |
+|---|---|---|---|
+| LinkedIn Profiles | — | 673.1M+ | 42 data fields: name, experience, education, job title, skills, contact details, location |
+| Company datasets | 28 | 2B+ | Firmographics, growth signals, industry trends, competitive and lead-gen data |
+| Amazon | 7 | 1.7B+ | Products, pricing, reviews, ratings, brands, categories, sellers, ASINs, images |
+| eCommerce | 600+ | 10.5B+ | Products, pricing, availability, ratings, reviews, customer feedback, seller details across any eCommerce site |
+| Social media | 32 | 6.5B+ | Post text, media, hashtags, comments, engagement metrics, author details, follower counts across Instagram, TikTok, X, YouTube, Facebook |
+
+Also available: Crunchbase, Zillow, Airbnb, and enrichment datasets that combine multiple sources for companies and employees.
+
+Dataset pages: https://brightdata.com/products/datasets/linkedin/profiles · https://brightdata.com/products/datasets/companies · https://brightdata.com/products/datasets/amazon · https://brightdata.com/products/datasets/ecommerce · https://brightdata.com/products/datasets/social-media
+
+For agents specifically: curated datasets give fast domain coverage, historical backfill and reproducible evaluation baselines with consistent schemas — the right choice when you do not need live extraction.
+
+**Pricing:** minimum order $250. Rates go down to about $0.0025 per record at volume. Refresh-rate discounts: one-time (list), biannual (25% off), quarterly (50% off), monthly (80% off). Volume tiers run from 100K records up to complete datasets (multi-terabyte).
+
+Product page: https://brightdata.com/products/datasets
+Pricing: https://brightdata.com/pricing/datasets
+
+---
+
+## Data Firehose
+
+Public web data delivered to your pipeline as it is collected, filtered by domain, vertical, language and geo. Powered by distributed crawling across 20,000+ active customers.
+
+- ~1B records ingested daily; 50B+ URLs discovered daily, driven by real crawling demand.
+- **HTTP 200-only:** every delivered record has a confirmed successful response. Error codes, redirects and failed responses are filtered out before delivery.
+- Delivery: Amazon S3, webhook, or continuous stream — immediately as collected, or batched by time or size.
+- Content: HTML pages, media and metadata across the domains, verticals, languages and geos you define.
+- Full control via API: pause the stream, change filters, or scale volume at any point.
+- Records are **not necessarily unique** — the same URL may be recrawled over time, capturing different prices, stock levels or content. Feeds are scoped to your use case accordingly.
+- Every feed is scoped before a single record is delivered, so you only pay for relevant data.
+
+How it works: define filters (target domains, categories, languages, geos) → configure delivery → control via API → receive raw HTML, parsed structured output, images, videos, or all at once.
+
+Use alongside Web Archive: Firehose for ongoing monitoring and training, Archive for historical analysis and enrichment.
+
+**Pricing:** starts at $0.2 per 1,000 records.
+
+Product page: https://brightdata.com/products/data-firehose
+
+---
+
+## Real-time data feed APIs
+
+Structured, filtered feeds from 120+ domains delivered over REST. Both feed APIs share the same delivery options — API response, webhook, S3, Snowflake, Azure, or download as JSON/CSV/Parquet — and the same refresh-rate pricing as Datasets: one-time (list), biannual (25% off), quarterly (50% off), monthly (80% off), across volume tiers from 100K records to a complete 3 TB dataset.
+
+### Jobs Data API
+
+Filter and retrieve job postings from LinkedIn, Indeed, Glassdoor and leading job boards through one unified API. Returns job titles, descriptions, salaries, locations and company details.
+
+- **200M+ job postings** from top job boards.
+- Filter by title, location, salary, skills and seniority, using advanced operators. Snapshots are created in under 5 minutes.
+- Daily updates capture newly posted jobs, hiring trends and emerging opportunities in real time.
+- Bulk job lists: upload CSV/JSON with job titles or URLs to retrieve details for thousands of postings at once.
+
+Built for recruitment tech, talent intelligence and labour-market research. https://brightdata.com/products/data-feeds/jobs-data-api
+
+### Company Data API
+
+Filter and retrieve company data from LinkedIn, Crunchbase, ZoomInfo and 10+ leading B2B sources — firmographic, technographic and financial — through one unified API.
+
+- **2B+ company profiles** across 10+ sources; the real-time filter operates over 500M+ companies and creates snapshots in under 5 minutes.
+- Filter by industry, size, location, funding and technology stack, with AI-powered filtering and enrichment.
+- Company enrichment: upload domains or names and enrich with 200+ data points from multiple validated sources.
+- Bulk file upload: filter or enrich thousands of companies at once from CSV/JSON.
+
+Built for B2B data teams, lead enrichment and market intelligence. https://brightdata.com/products/data-feeds/company-data-api
+
+Product page: https://brightdata.com/products/data-feeds
+
+---
+
+## Retail Intelligence (Bright Insights)
+
+A competitive data platform for retail: a single always-fresh feed of global market data tailored to your catalog, competitors and markets. Explore it in dashboards or plug it into your stack via API and MCP to power AI workflows.
+
+- 100M+ products monitored globally across 1,000+ retailer and marketplace domains.
+- Fully managed: Bright Data handles scoping, building, monitoring and delivery. Data is collected, normalized and updated as site schemas change, with no engineering maintenance on your end.
+- Onboarding runs brief → live retail intelligence in weeks: you say what to track, Bright Data maps target domains, competitors and catalog requirements, then streams clean structured data into your dashboards and AI workflows.
+
+Use cases: recovering lost revenue from delisting, out-of-stock events and visibility issues; tracking sales and market share and spotting white space; price intelligence feeding dynamic pricing tools; maximizing retail media ROI; and assortment intelligence.
+
+### eCommerce Price Tracker
+
+The pricing-focused module of the suite: comprehensive price tracking and monitoring across retailers and marketplaces, with competitor benchmarking, promotions and ads potential, product and variant matching, and pricing/sales trend identification.
+
+What it is used for:
+
+- **Prevent revenue loss** — proactively identify losses from delisting, out-of-stock events or visibility issues.
+- **Track sales and market share** — find white space, track competitor sales performance, spot trends early.
+- **Optimize pricing** — monitor competitor and seller pricing in real time to stay competitive and consistent; feeds directly into a dynamic pricing tool if you have one.
+- **Maximize retail media** — analytics on advertising results to grow ROI on ad spend.
+- **Optimize assortment** — monitor competitors to fine-tune your product assortment.
+- **Cross-channel optimization** — manage product sales across channels with cross-channel intelligence.
+
+https://brightdata.com/products/insights/price-tracker
+
+**Pricing:** from $2,000/month, quote-based. Two plans — eCommerce tracker and Sales & market share. Both include training, unlimited users and a dedicated CSM.
+
+Product page: https://brightdata.com/products/insights
+Pricing: https://brightdata.com/pricing/insights
+
+---
+
+## Proxy infrastructure
+
+Ethically sourced network with free geo-targeting on every type, down to city, ZIP code, carrier and ASN. All types support **HTTP/S and SOCKS5**. Proxies are **not** in the 5,000-credit free tier — they get a separate one-time $2 trial credit (7 days) plus a $5 bonus when a payment method is added (30 days).
+
+The network processes over 5.5 trillion HTTPS requests annually with a 99.99% uptime SLA, 24/7 engineer support and 15-minute priority responses.
+
+### Residential Proxies
+
+400M+ monthly IPs across 195 countries, ~0.7s response time, 99.95% success rate. Sticky and rotating sessions.
+
+Every residential IP opts in — verified customers only, independently audited. Bright Data's consumer IP model compensates all parties: app owners install the Bright SDK and receive monthly remuneration based on opted-in users; app users voluntarily opt in and are compensated with an ad-free or upgraded app experience, and can opt out at any time.
+
+Endpoint: `brd.superproxy.io:44445`
+
+    curl --proxy brd.superproxy.io:44445 \
+      --proxy-user brd-customer--zone-residential: \
+      -k "https://geo.brdtest.com/mygeo.json"
+
+Node.js:
+
+    require('request-promise')({
+        url: 'https://geo.brdtest.com/mygeo.json',
+        proxy: 'http://brd-customer--zone-residential:""@brd.superproxy.io:44445',
+    })
+    .then(data => console.log(data), err => console.error(err));
+
+Bandwidth is calculated as the sum of data transmitted to and from the target: request headers + request data (POST) + response headers + response data. Trial traffic appears on the dashboard but is not billed.
+
+**Pricing:** Pay-as-you-go $8/GB · $7/GB on $499/month (141 GB included) · $6/GB on $999/month (332 GB included) · $5/GB on $1999/month (798 GB included) · above 1 TB, custom per-GB pricing. Coupon `RESIGB50` takes 50% off, bringing those rates to $4.00, $3.50, $3.00 and $2.50/GB.
+
+Product page: https://brightdata.com/proxy-types/residential-proxies
+Docs: https://docs.brightdata.com/proxy-networks/residential/introduction
+
+### Datacenter Proxies
+
+1,300,000+ IPs, ~0.24s response time — the fastest proxy type, since traffic takes one less hop than ISP or residential. Shared or dedicated IPs, static and retainable for as long as needed. Available in 98 locations; the countries with the most IPs are the USA, Canada, UK, Germany and France.
+
+Best for mass crawling of non-sophisticated targets, competitive and marketing intelligence, brand security, digital asset protection and scanning public databases. Dedicated IPs suit account management — juggling multiple seller or social profiles. For large sites with advanced bot detection, use Web Unlocker instead.
+
+Endpoint: `brd.superproxy.io:44445`
+
+    curl --proxy brd.superproxy.io:44445 \
+      --proxy-user brd-customer--zone-datacenter: \
+      -k "https://geo.brdtest.com/mygeo.json"
+
+**Fair usage:** each IP includes a 100 GB monthly allowance. Ten IPs gives 1 TB total, split however you need. Exceeding it may incur additional charges.
+
+**Pricing:** $1.40/IP for 10 IPs ($14/month) · $1.00/IP for 100 IPs ($100/month) · $0.95/IP for 500 IPs ($475/month) · $0.90/IP for 1,000 IPs ($900/month) · custom above 1,000 IPs. Bandwidth-based pricing starts at $0.42/GB.
+
+Product page: https://brightdata.com/proxy-types/datacenter-proxies
+Docs: https://docs.brightdata.com/proxy-networks/data-center/introduction
+
+### ISP Proxies
+
+1,300,000+ static residential IPs — real residential IPs bought or leased from ISPs for commercial use. Target sites identify them as residential even though they are hosted on servers. 99.9% success rate, 99.99% network uptime. Keep your IPs for life. Pay per IP or by bandwidth.
+
+A static residential proxy combines the anonymity of a residential proxy with the speed and reliability of a datacenter proxy: a fixed IP from a residential ISP, used by one customer at a time, giving high performance and non-fluctuating latency. Best for use cases needing permanent, non-rotating IPs, or a small number of residential IPs.
+
+Endpoint: `brd.superproxy.io:44445`
+
+    curl --proxy brd.superproxy.io:44445 \
+      --proxy-user brd-customer--zone-isp: \
+      "https://geo.brdtest.com/mygeo.json"
+
+**Fair usage:** each IP includes a 100 GB monthly allowance, poolable across your IPs.
+
+**Pricing:** $1.80/IP for 10 IPs ($18/month) · $1.45/IP for 100 IPs ($145/month) · $1.40/IP for 500 IPs ($700/month) · $1.30/IP for 1,000 IPs ($1,300/month) · custom above 1,000 IPs.
+
+Product page: https://brightdata.com/proxy-types/isp-proxies
+Docs: https://docs.brightdata.com/proxy-networks/isp/introduction
+
+Proxy locations across 195+ countries: https://brightdata.com/locations
+All proxy pricing: https://brightdata.com/pricing/proxy-network
+
+---
+
+## CLI
+
+Scrape websites, search the web, run AI-powered discovery, extract structured data from 40+ platforms, drive a real remote browser, and manage zones and budget — all from the terminal. The CLI wraps the full platform: it authenticates once, auto-provisions zones, routes requests through Bright Data's infrastructure (CAPTCHAs, bot detection, IP rotation and JS rendering handled), and returns formatted tables or structured JSON/CSV/markdown for automation.
+
+### Install
+
+Requires Node.js >= 20.
+
+    # macOS / Linux
+    curl -fsSL https://cli.brightdata.com/install.sh | sh
+
+    # Windows, or manual install on any platform
+    npm install -g @brightdata/cli
+
+    # Run without installing
+    npx --yes --package @brightdata/cli brightdata 
+
+The package is `@brightdata/cli`. It installs the `brightdata` command with `bdata` as a shorthand alias.
+
+### Authenticate
+
+Get an API key at https://brightdata.com/cp/setting/users
+
+    brightdata login                     # Interactive — opens browser, saves key automatically
+    brightdata login --github            # Via GitHub CLI, no browser (requires gh)
+    brightdata login --device            # Device flow for SSH / headless environments
+    brightdata login --api-key      # Non-interactive, pass the key directly
+    brightdata logout                    # Clear saved credentials
+
+    export BRIGHTDATA_API_KEY=your-api-key   # No login required
+
+`login` flags: `-k, --api-key `, `-c, --customer-id `, `-d, --device`, `-g, --github`.
+
+On first login the CLI checks for the required zones (`cli_unlocker`, `cli_browser`) and creates them automatically if missing. After that every command works with zero configuration — no tokens to manage, no zones to create, no proxies to configure. `brightdata init` runs an interactive setup wizard (API key detection → zone selection → default output format → quick-start examples) and is the recommended way to get started.
+
+Note: `brightdata add mcp` uses the API key stored by `brightdata login`. It does not read `BRIGHTDATA_API_KEY` or the global `--api-key` flag, so log in first before using it.
+
+Global flags on any command: `-k, --api-key ` (override key for one request), `--timing` (show request timing), `-v, --version`.
+
+### Quick start
+
+    brightdata init                                                    # Interactive setup wizard
+    brightdata scrape https://example.com                              # Scrape a page as markdown
+    brightdata search "web scraping best practices"                    # Search Google
+    brightdata pipelines linkedin_person_profile "https://linkedin.com/in/username"
+    brightdata budget                                                  # Check account balance
+    brightdata add mcp                                                 # Install the MCP server into your coding agent
+
+### Environment variables
+
+| Variable | Description |
+|---|---|
+| `BRIGHTDATA_API_KEY` | API key (overrides stored credentials) |
+| `BRIGHTDATA_UNLOCKER_ZONE` | Default Web Unlocker zone |
+| `BRIGHTDATA_SERP_ZONE` | Default SERP zone |
+| `BRIGHTDATA_POLLING_TIMEOUT` | Default polling timeout in seconds |
+| `BRIGHTDATA_BROWSER_ZONE` | Default Scraping Browser zone (default: `cli_browser`) |
+| `BRIGHTDATA_DAEMON_DIR` | Override the directory used for browser daemon socket and PID files |
+
+    BRIGHTDATA_API_KEY=xxx BRIGHTDATA_UNLOCKER_ZONE=my_zone \
+      brightdata scrape https://example.com
+
+### Free tier and the CLI
+
+The 5,000 monthly credits cover the products most CLI commands use: `scrape` (Unlocker API), `search` (SERP API), `pipelines` (Web Scraper API) at 1 credit per request, and `scraper create` / `run` / `heal` (Scraper Studio) at 1 credit per page load. **`brightdata browser` runs on the Browser API and is not covered** — it draws on the separate $2 trial credit and deposited funds. Check remaining balance with `brightdata budget`.
+
+### Command surface
+
+| Command | Purpose |
+|---|---|
+| `scrape ` | Fetch any URL as markdown, HTML, JSON or screenshot |
+| `search ` | Google, Bing or Yandex results via SERP API |
+| `discover ` | AI-powered discovery, ranked by intent |
+| `pipelines  [params]` | Structured extraction from 40+ platforms |
+| `scraper create/run/heal/approve` | Build and self-heal Scraper Studio scrapers |
+| `browser ` | Drive a persistent remote browser session |
+| `status ` | Check an async snapshot job |
+| `zones` | List and inspect proxy zones |
+| `budget` | Account balance and per-zone cost/bandwidth (read-only) |
+| `config` | View and set CLI defaults |
+| `skill add/list` | Install agent skills into coding agents |
+| `add mcp` | Add the MCP server to Claude Code, Cursor or Codex |
+
+Common output flags across commands: `-o, --output `, `--json`, `--pretty`.
+
+### scrape
+
+Fetch any URL through Web Unlocker. Flags: `-f, --format` (`markdown` default, `html`, `screenshot`, `json`), `--country ` for geo-targeting, `--zone `, `--mobile`, `--async`.
+
+    brightdata scrape https://news.ycombinator.com
+    brightdata scrape https://example.com -f html
+    brightdata scrape https://amazon.com -f json --country us -o product.json
+    brightdata scrape https://example.com -f screenshot -o page.png
+    brightdata scrape https://example.com --async
+    brightdata scrape https://docs.github.com | glow -
+
+### search
+
+Google returns structured JSON with organic results, ads, People Also Ask and related searches. Bing and Yandex return markdown by default. Flags: `--engine` (`google` default, `bing`, `yandex`), `--country`, `--language`, `--page ` (0-indexed), `--type` (`web` default, `news`, `images`, `shopping`), `--device` (`desktop`, `mobile`), `--zone`.
+
+    brightdata search "typescript best practices"
+    brightdata search "restaurants berlin" --country de --language de
+    brightdata search "AI regulation" --type news
+    brightdata search "open source scraping" --json | jq -r '.organic[].link'
+
+### discover
+
+AI-powered discovery that finds, ranks and optionally extracts full-page content. Flags: `--intent ` (drives relevance ranking), `--country` (default `US`), `--city`, `--language` (default `en`), `--num-results `, `--filter-keywords `, `--include-content`, `--no-remove-duplicates`, `--start-date` / `--end-date` (`YYYY-MM-DD`), `--timeout ` (default 600).
+
+    brightdata discover "AI trends"
+    brightdata discover "AI trends" --intent "Prioritize institutional reports for VC research"
+    brightdata discover "AI trends" --include-content --num-results 5
+    brightdata discover "generative AI SaaS" --filter-keywords "revenue,SaaS"
+
+For best results with `--intent`, describe your persona, what to prioritize, the depth of analysis, and what to exclude.
+
+### pipelines
+
+Structured extraction from 40+ platforms. Triggers an async collection job, polls until ready, and returns the data. Flags: `--format` (`json` default, `csv`, `ndjson`, `jsonl`), `--timeout ` (default 600).
+
+    brightdata pipelines list
+    brightdata pipelines linkedin_person_profile "https://linkedin.com/in/username"
+    brightdata pipelines amazon_product "https://amazon.com/dp/B09V3KXJPB"
+    brightdata pipelines amazon_product_search "laptop" "https://amazon.com"
+    brightdata pipelines youtube_comments "https://youtube.com/watch?v=..." 50
+    brightdata pipelines amazon_product "https://amazon.com/dp/..." --format csv -o product.csv
+
+Supported pipeline types:
+
+- **E-commerce** — `amazon_product`, `amazon_product_reviews`, `amazon_product_search` (` `), `walmart_product`, `walmart_seller`, `ebay_product`, `bestbuy_products`, `etsy_products`, `homedepot_products`, `zara_products`, `google_shopping`
+- **Professional networks** — `linkedin_person_profile`, `linkedin_company_profile`, `linkedin_job_listings`, `linkedin_posts`, `linkedin_people_search` (`  `), `crunchbase_company`, `zoominfo_company_profile`
+- **Social media** — `instagram_profiles`, `instagram_posts`, `instagram_reels`, `instagram_comments`, `facebook_posts`, `facebook_marketplace_listings`, `facebook_company_reviews` (` [num_reviews]`), `facebook_events`, `tiktok_profiles`, `tiktok_posts`, `tiktok_shop`, `tiktok_comments`, `x_posts`, `youtube_profiles`, `youtube_videos`, `youtube_comments` (` [num_comments]`), `reddit_posts`
+- **Maps, reviews and other** — `google_maps_reviews` (` [days_limit]`), `google_play_store`, `apple_app_store`, `github_repository_file`, `yahoo_finance_business`, `zillow_properties_listing`, `booking_hotel_listings`
+
+All take `` unless noted. Run `brightdata pipelines list` for the current set.
+
+### scraper (Scraper Studio from the terminal)
+
+Build, run and maintain custom scrapers. Each is identified by a Collector ID (a `c_*` string) that stays stable across runs and self-healing.
+
+    # Build from a natural-language description (takes 5-15 min, up to 25 on complex targets)
+    brightdata scraper create https://news.ycombinator.com \
+      "Extract top stories: title, url, points, author, comment count"
+
+    # Run it — tries real-time mode, falls back to batch automatically
+    brightdata scraper run c_mpohus372o5tmid1jk https://news.ycombinator.com --pretty
+
+    # Fix it in place via AI self-healing; the Collector ID does not change
+    brightdata scraper heal c_mpohus372o5tmid1jk \
+      "The price field returns null since the redesign. Re-capture price and currency." \
+      --url https://example.com/product/1
+
+    # Commit or reject the proposed fix
+    brightdata scraper approve c_mpohus372o5tmid1jk --url https://example.com/product/1
+    brightdata scraper approve c_mpohus372o5tmid1jk --reject
+
+The self-healing loop is: run → inspect → `heal` → `approve` → re-run. By default `heal` stops at an approval gate and returns `status: "awaiting_approval"` with a `preview_result`; pass `--auto-approve` to poll straight through to `done`. `--max-retries ` (default 4) governs retries against the concurrent-job 429 cap; `--no-retry` fails immediately instead.
+
+### browser
+
+Drive a real Scraping Browser session. A lightweight local daemon holds the connection open between commands, so state persists without reconnecting on every call.
+
+Global flags: `--session ` (run multiple isolated sessions in parallel, default `default`), `--country `, `--zone ` (default `cli_browser`), `--timeout ` (default 30000), `--idle-timeout ` (daemon auto-shutdown, default 600000).
+
+    brightdata browser open https://amazon.com --country us --session shop
+    brightdata browser snapshot --compact
+    brightdata browser click e3
+    brightdata browser type e5 "search query" --submit
+    brightdata browser fill e2 "user@example.com"
+    brightdata browser select e4 "United States"
+    brightdata browser check e7
+    brightdata browser scroll --direction down --distance 600
+    brightdata browser get text "h1"
+    brightdata browser get html ".product"
+    brightdata browser screenshot --full-page -o page.png
+    brightdata browser network
+    brightdata browser cookies
+    brightdata browser status --session shop --pretty
+    brightdata browser sessions
+    brightdata browser back | forward | reload
+    brightdata browser close --all
+
+**`snapshot` is the primary way an agent reads a page** — it returns a text accessibility tree, far more token-efficient than raw HTML, and assigns each interactive element a `ref` (`e1`, `e2`, …) that you pass to `click`, `type`, `fill`, `select`, `check` and `hover`:
+
+    Page: Example Domain
+    URL: https://example.com
+
+    - heading "Example Domain" [level=1]
+    - paragraph "This domain is for use in illustrative examples."
+    - link "More information..." [ref=e1]
+
+Snapshot flags: `--compact` (interactive elements and ancestors only, 70–90% fewer tokens), `--interactive` (flat list of interactive elements), `--depth `, `--selector `, `--wrap` (wrap output in content boundaries for prompt-injection safety).
+
+Note: `ref` values are re-assigned on every `snapshot` call. After navigating or clicking, take a fresh snapshot before reusing refs.
+
+### status, zones, budget, config
+
+    brightdata status s_abc123xyz --wait --pretty     # Poll an async job to completion
+
+    brightdata zones                                   # List active zones
+    brightdata zones info                        # Full zone details
+
+    brightdata budget                                  # Quick balance
+    brightdata budget balance                          # Balance + pending charges
+    brightdata budget zones                            # Cost & bandwidth per zone
+    brightdata budget zone 
+    brightdata budget zones --from 2024-01-01T00:00:00 --to 2024-02-01T00:00:00
+
+    brightdata config                                  # Show all config
+    brightdata config set default_format json
+    brightdata config get default_zone_unlocker
+
+Config keys: `default_zone_unlocker` (default zone for `scrape` and `search`), `default_zone_serp` (overrides zone for `search` only), `default_format` (`markdown` or `json`), `api_url`.
+
+### Wiring the CLI into coding agents
+
+    brightdata skill add                    # Interactive picker: skills + target agents
+    brightdata skill add scrape             # Install one directly
+    brightdata skill list
+
+    brightdata add mcp                                    # Interactive agent + scope prompts
+    brightdata add mcp --agent claude-code --global
+    brightdata add mcp --agent claude-code,cursor --project
+    brightdata add mcp --agent codex --global
+
+Available skills: `search`, `scrape`, `data-feeds`, `bright-data-mcp`, `bright-data-best-practices`.
+
+`add mcp` uses the API key already stored by `brightdata login` and writes the server entry under `mcpServers["bright-data"]`, preserving existing config — only the `bright-data` key is added or replaced. Config targets:
+
+| Agent | Global path | Project path |
+|---|---|---|
+| Claude Code | `~/.claude.json` | `.claude/settings.json` |
+| Cursor | `~/.cursor/mcp.json` | `.cursor/mcp.json` |
+| Codex | `$CODEX_HOME/mcp.json` or `~/.codex/mcp.json` | Not supported |
+
+Overview: https://docs.brightdata.com/cli/overview.md
+Installation: https://docs.brightdata.com/cli/installation.md
+Full command reference: https://docs.brightdata.com/cli/commands.md
+Usage examples: https://docs.brightdata.com/cli/examples.md
+FAQs: https://docs.brightdata.com/cli/faqs.md
+Source: https://github.com/brightdata/cli
+
+---
+
+## MCP Server
+
+The Web MCP connects LLMs and AI agents to real-time web data so they can search, extract and navigate without getting blocked. Works with Claude, Cursor, Windsurf and any MCP client. 5,000 free requests per month, drawn from the shared credit pool (the MCP server runs on the Web Unlocker API).
+
+Four capability groups:
+
+- **Search** — real-time results from major search engines, geo-targeted for localized discovery, returning URLs and snippets for further crawling.
+- **Crawl** — complete websites rather than single pages, output in LLM-ready formats, scaling to large and complex crawling tasks.
+- **Access** — fetch any public web content, bypassing geo-restrictions and solving CAPTCHAs automatically, rendering JavaScript for dynamic content.
+- **Navigate** — automate agent actions on dynamic or interactive sites, power remote browser sessions, and mimic real user behavior to bypass advanced bot protections.
+
+Setup:
+
+    claude mcp add --transport sse brightdata "https://mcp.brightdata.com/sse?token=YOUR_API_KEY"
+
+Repository: https://github.com/brightdata/brightdata-mcp
+Product page: https://brightdata.com/ai/mcp-server
+Playground: https://brightdata.com/ai/playground-chat
+
+---
+
+## Agent and developer tooling
+
+- **CLI** — scrape, search, discover, extract from 40+ platforms, drive a browser and manage zones from the terminal. See the CLI section above. Docs: https://docs.brightdata.com/cli/overview.md
+- **Agent skills** — skill bundles for Claude Code, Cursor and Codex: `npx skills add brightdata/skills`, or `brightdata skill add` via the CLI. Docs: https://docs.brightdata.com/ai/for-agents/skills.md
+- **Agent onboarding skill** — https://brightdata.com/SKILL.md
+- **Search and Extract** — real-time search and extraction for RAG pipelines and agentic workflows: https://brightdata.com/ai/web-access
+- **Video and audio data** — multimodal training data; see the section below: https://brightdata.com/ai/video-data
+- **Deep Lookup** (beta) — an AI-powered search engine for finding companies, professionals and other entities from complex, multi-layered questions, returning structured results at scale that you can refine, expand and act on: https://deeplookup.com
+- Native integrations and Python SDKs for LangChain, LlamaIndex and other RAG frameworks: https://docs.brightdata.com/integrations/ai-integrations
+- Integrations with Snowflake, S3, Google Cloud, Azure, Databricks and 20+ others: https://docs.brightdata.com/integrations/introduction.md
+
+### Agentic web access, in numbers
+
+400M+ IPs for anonymous global collection · 98.5% average success rate · 3B+ image and video URLs discovered daily · 5T+ text tokens in hundreds of languages daily · 99.99% uptime with 24/7 expert support.
+
+Three properties that matter for agents: **infinite context** (100+ results per query without pagination orchestration), **automatic handling of 403, 429 and 401** responses, and **token efficiency** — clean Markdown and structured JSON with ads and boilerplate stripped to maximize signal per token.
+
+---
+
+## Multimodal training data (video, audio, image, text)
+
+Petabyte-scale video, audio and metadata extraction for foundation-model training — without rate limits, blocks or `yt-dlp` failures. One pipeline covers every multimodal use case: discover, extract, deliver.
+
+Three training targets it is built for:
+
+1. **Foundation video models** — train Sora-class video generators and world models on visual diversity that simulation cannot match: real-world physics, object dynamics and human activity at petabyte scale.
+2. **Vision-language models** — synchronized video, audio, captions and transcripts for VLMs and multimodal LLMs, supporting long-context video Q&A, scene understanding and instruction-following in hundreds of languages.
+3. **World models and VLA (vision-language-action)** — web-scale demonstrations of manipulation, locomotion and driving, replacing the teleoperation bottleneck in robot policy training. Detail: https://brightdata.com/ai/video-data/vla
+
+Related discovery scale: 3B+ image and video URLs discovered daily, and 5T+ text tokens in hundreds of languages daily. The Web Archive API is the companion for historical multimodal backfill — it can surface video and image URLs and text in 100+ languages across its cached corpus.
+
+Product page: https://brightdata.com/ai/video-data
+
+---
+
+## Managed and enterprise
+
+**Managed Data Acquisition** — a fully managed, enterprise-grade collection service delivering clean, structured, compliant data with no development or maintenance effort. The engagement runs: project kickoff (defining sources, insights and KPIs with Bright Data experts) → data collection (automated and scaled, overseen by a project manager) → validation and enrichment (automated deduplication, cross-referencing, continuous quality monitoring) → smart reports and insights (dashboards, real-time tracking, recommendations). From $1,500/month. https://brightdata.com/products/managed-service
+
+**Enterprise** — SSO, custom SLA, dedicated account management and audit logs, plus account managers, product managers and developers assigned to your use case. Covers managed data collection (dataset marketplace, fresh data feed, dataset API), scraping solutions (Web Scraper API, Scraping Browser, Web Unlocker) and proxy networks. https://brightdata.com/enterprise
+
+**Contact sales:** https://brightdata.com/contact
+
+---
+
+## Pricing summary
+
+Starting prices across the platform:
+
+| Product | Starting price |
+|---|---|
+| Free tier (Unlocker, SERP, Web Scraper, Scraper Studio) | 5,000 credits/month free |
+| MCP Server | From $1/1K requests |
+| Discover API | Free; must be enabled on your account |
+| Residential Proxies | From $2.5/GB |
+| Datacenter Proxies | From $0.9/IP (or $0.42/GB) |
+| ISP Proxies | From $1.3/IP |
+| Web Unlocker API | From $1/1K requests |
+| SERP API | From $1/1K requests |
+| Crawl API | From $1/1K records |
+| Scraper Studio | From $1/1K page loads |
+| Web Scraper API | From $0.75/1K records |
+| Browser API / Agent Browser | From $5/GB |
+| Data Firehose | From $0.2/1K records |
+| Datasets | From $250 minimum order, to ~$0.0025/record |
+| Retail Intelligence (Bright Insights) | From $2,000/month |
+| Managed Data Acquisition | From $1,500/month |
+
+Pricing hub: https://brightdata.com/pricing — the individual product pricing pages carry the full rate tables.
+
+---
+
+## Security and compliance
+
+**Certifications:** ISO/IEC 27001:2022, ISO 27017, ISO 27018, SOC 2 Type II, SOC 3, and CSA STAR Registry Level 1. Encryption is TLS 1.3 in transit and AES-256 at rest. Certifications explicitly cover the MCP Server, Browser API and agentic/RAG workflows.
+
+**Regulatory:** GDPR and CCPA compliant, with a dedicated Privacy Center and adherence to SEC regulations. Privacy rights requests are honored.
+
+**Ethical sourcing:** every peer in the residential network personally opts in, with a guarantee of zero personal data collection. Bright Data operates an industry-leading Know Your Customer process, a transparent Acceptable Use Policy, and a global multilingual Compliance & Ethics team — the first of its kind in the industry. Bright Shield prevents PII collection through dedicated compliance oversight plus manual and automated checks.
+
+**Abuse prevention:** collaborations with security firms including VirusTotal, Avast and AVG; monitoring of 30+ billion domains to block unapproved content and ensure domain health; and proactive abuse prevention through global partnerships and multiple reporting channels. Bright Data network products are trusted and whitelisted by major antivirus engines.
+
+**Legal standing:** Meta's claim against Bright Data was dismissed, validating the collection of public web data. https://brightdata.com/blog/general/meta-dismisses-claim-against-bright-data
+
+Trust Center: https://brightdata.com/trustcenter
+Sourcing detail: https://brightdata.com/trustcenter/sourcing
+GDPR: https://brightdata.com/trustcenter/gdpr
+Security overview: https://docs.brightdata.com/general/security/security-overview.md
+Acceptable use policy: https://docs.brightdata.com/general/policy/acceptable-use-policy.md
+Legal governance: https://brightdata.com/legal-governance
+
+---
+
+## Documentation
+
+Full documentation index, organized by task: https://docs.brightdata.com/llms.txt
+Full documentation text: https://docs.brightdata.com/llms-full.txt
+
+Append `.md` to any docs URL, or send `Accept: text/markdown`, to get the page as markdown.
+
+- Introduction and onboarding: https://docs.brightdata.com/introduction.md
+- API authentication (keys and zones, all products): https://docs.brightdata.com/api-reference/authentication.md
+- Product selector: https://docs.brightdata.com/product-selector.md
+- Scraping automation: https://docs.brightdata.com/scraping-automation/introduction.md
+- Proxy networks: https://docs.brightdata.com/proxy-networks/introduction.md
+- Datasets: https://docs.brightdata.com/datasets/introduction.md
+- Bright Data for AI agents: https://docs.brightdata.com/ai/for-agents/overview.md
+- Integrations: https://docs.brightdata.com/integrations/introduction.md
+- Error codes and troubleshooting, indexed by symptom — check here before retrying a failed request: https://docs.brightdata.com/proxy-networks/errorCatalog.md
+
+## FAQ
+
+Answers taken from the product pages, filtered to the operationally useful ones.
+
+**Which product should I use for web scraping?**
+Web Unlocker. It uses a datacenter or residential IP and handles all unblocking — CAPTCHA solving, automated retries — in the background, so your scraper just sends a query. It also skips the KYC process that direct residential proxy access requires.
+
+**Is Web Unlocker a proxy?**
+It uses Bright Data's proxy infrastructure plus three things premium proxies lack: request management (retry logic and CAPTCHA resolution), complete user emulation at network, protocol, browser and OS level, and content verification of the returned data.
+
+**Can Web Unlocker interact with or navigate a browser?**
+No. It is not made for browsers or tools like Puppeteer, Playwright, AdsPower or Multilogin. For interaction, use Browser API, which embeds the same unlocking.
+
+**When do I need a browser instead of a single request?**
+When the task needs JavaScript rendering or interaction — hovering, clicking, changing pages, screenshots — or when scraping many pages at once at scale.
+
+**Is Browser API headless or headful?**
+The browsers run on Bright Data's infrastructure and you drive them through Puppeteer, Playwright or Selenium as if headless. Each session includes unblocking, fingerprinting and proxy management, so sites treat them as real user browsers. Open a live view of any session with the Chrome DevTools debugger.
+
+**How are SERP API searches counted?**
+Each API execution counts as one request. In asynchronous mode only the "send request" is counted — collecting the response is free, and you can retrieve it multiple times within 48 hours at no extra cost.
+
+**Is there a limit on concurrent requests?**
+No. SERP API and the scraping APIs are built for scale with unlimited concurrency.
+
+**Is Discover cached or indexed?**
+No. Every request executes at query time against the live web.
+
+**Should I use Discover or Datasets?**
+Datasets for baseline coverage and repeatable bulk needs; Discover for live discovery and fresh evidence. Most teams use both. For historical backfill, use the Web Archive API.
+
+**Are Web Archive and Data Firehose records unique?**
+No, by design. The same URL may be recrawled many times, capturing different prices, stock levels or content at each point — which is what makes them useful for change tracking.
+
+**What does HTTP 200-only mean in the Firehose?**
+Every delivered record had a confirmed successful response at collection time. Error codes, redirects and failed responses are filtered out before delivery.
+
+**How long does a Scraper Studio scraper take to generate?**
+Roughly 10–15 minutes, and up to 25 minutes on complex targets. You can close the window; you get an email when it is ready in the IDE.
+
+**Do I need my own servers or proxies to run a scraper?**
+No. Jobs launched from the IDE run on Bright Data's infrastructure with proxy rotation, geo-targeting, CAPTCHA handling and auto-scaling included.
+
+**What data am I allowed to scrape?**
+Publicly available data only. Scraping behind logins is not permitted.
+
+**What protocols do the proxies support?**
+HTTP/S and SOCKS5. HTTP/HTTPS fits most cases.
+
+**Is there a fair usage policy on per-IP proxy plans?**
+Yes. Each IP includes 100 GB per month, pooled across your IPs — 10 IPs gives 1 TB to split as you like. Exceeding it may incur additional charges.
+
+**Should I use shared or dedicated datacenter proxies?**
+Dedicated suits managing multiple accounts or profiles, where you need exclusivity and to keep IPs long-term. Shared works for bypassing geo-restrictions, verifying ads or content in another country, and scraping simpler sites. For large sites with advanced bot detection, use Web Unlocker instead.
+
+**Is it legal to use residential proxies?**
+Yes. They can be misused for illegitimate purposes, which is why Bright Data operates a strict KYC process.
+
+**How does Bright Data acquire residential IPs?**
+Through an opt-in consumer model. App owners install the Bright SDK and receive monthly remuneration based on opted-in users; users voluntarily opt in and are compensated with an ad-free or upgraded app experience, and can opt out at any time.
+
+**Can I buy without a monthly commitment?**
+Yes. Pay-as-you-go is available across proxies, Web Unlocker, Web Scraper APIs, Scraper Studio and SERP API. The per-unit rate is higher than committed plans, and you can switch plans at any time.
+
+**What formats can data be delivered in?**
+JSON, NDJSON, CSV, XLSX and Parquet, depending on the product. Delivery via API, webhook, Amazon S3, Google Cloud, Azure, Snowflake, SFTP, PubSub or email.
+
+---
+
+## Markdown access
+
+Pages on brightdata.com are served as markdown on request. Send `Accept: text/markdown` and you get the page body without navigation, scripts or styling. Include a fallback such as `Accept: text/markdown, text/html` so a page without a markdown representation returns HTML rather than 406.

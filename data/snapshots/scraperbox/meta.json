@@ -1,0 +1,69 @@
+{
+ "slug": "scraperbox",
+ "name": "ScraperBox",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:14+00:00",
+ "sources": {
+  "pricing-err-62f4a6": {
+   "url": "https://scraperbox.com/pricing",
+   "status": 404,
+   "final_url": "https://scraperbox.com/pricing",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 628,
+   "truncated": false,
+   "sha256": "c799ef056ba7ee9d79e1ab9b19ff627997a5dfafcb4e0b68dcef9558ddb89bb6",
+   "fetched_at": "2026-10-19T05:54:14+00:00"
+  },
+  "home": {
+   "url": "https://scraperbox.com/",
+   "status": 200,
+   "final_url": "https://scraperbox.com/",
+   "content_type": "text/html",
+   "bytes": 17307,
+   "truncated": false,
+   "sha256": "6b2d624d847b178a985c70995ba02798f67400c6a273c9d6611e0e943fa91530",
+   "fetched_at": "2026-10-19T05:54:15+00:00",
+   "text_bytes": 458
+  },
+  "llms-err-097a23": {
+   "url": "https://scraperbox.com/llms.txt",
+   "status": 404,
+   "final_url": "https://scraperbox.com/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 628,
+   "truncated": false,
+   "sha256": "c799ef056ba7ee9d79e1ab9b19ff627997a5dfafcb4e0b68dcef9558ddb89bb6",
+   "fetched_at": "2026-10-19T05:54:17+00:00"
+  },
+  "llms-err-15888e": {
+   "url": "https://scraperbox.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://scraperbox.com/docs/llms.txt",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 628,
+   "truncated": false,
+   "sha256": "c799ef056ba7ee9d79e1ab9b19ff627997a5dfafcb4e0b68dcef9558ddb89bb6",
+   "fetched_at": "2026-10-19T05:54:18+00:00"
+  },
+  "llms-err-ef5ed3": {
+   "url": "https://docs.scraperbox.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.scraperbox.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:18+00:00"
+  },
+  "pricing": {
+   "url": "https://scraperbox.com/pricing",
+   "status": 404,
+   "final_url": "https://scraperbox.com/pricing",
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 628,
+   "truncated": false,
+   "sha256": "c799ef056ba7ee9d79e1ab9b19ff627997a5dfafcb4e0b68dcef9558ddb89bb6",
+   "fetched_at": "2026-10-19T05:59:43+00:00"
+  }
+ }
+}

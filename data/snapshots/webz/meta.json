@@ -1,0 +1,72 @@
+{
+ "slug": "webz",
+ "name": "Webz.io",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:40+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://webz.io/pricing",
+   "status": 200,
+   "final_url": "https://webz.io/pricing/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 641653,
+   "truncated": false,
+   "sha256": "b905123ab1e32a3e12cc2eb61fd9f821f977f60767127ecd5296eb86b67dc84a",
+   "fetched_at": "2026-10-19T05:54:40+00:00",
+   "text_bytes": 6246
+  },
+  "docs": {
+   "url": "https://docs.webz.io/",
+   "status": 200,
+   "final_url": "https://docs.webz.io/docs/webz",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 262753,
+   "truncated": false,
+   "sha256": "f7279c898e0bee01749484df5ea3be91e2643f2067eeeecf6436f12b8b483e35",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 1822
+  },
+  "home": {
+   "url": "https://webz.io/",
+   "status": 200,
+   "final_url": "https://webz.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 616724,
+   "truncated": false,
+   "sha256": "c29542c336a6a6f9437c176d6a0635988e456ff32b63c8fa65d4de705457cfb8",
+   "fetched_at": "2026-10-19T05:54:46+00:00",
+   "text_bytes": 6211
+  },
+  "llms": {
+   "url": "https://docs.webz.io/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.webz.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 26694,
+   "truncated": false,
+   "sha256": "e62aa9454e65a2ba9bed1839b70c2d61c03e36c24090163be9ebaa3cf7f3f843",
+   "fetched_at": "2026-10-19T05:54:47+00:00",
+   "text_bytes": 26358
+  },
+  "llms-err-13d926": {
+   "url": "https://webz.io/llms.txt",
+   "status": 404,
+   "final_url": "https://webz.io/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 503140,
+   "truncated": false,
+   "sha256": "1c5019d9e4202fd78be30ba16146cb49f621daed7891a5b58dbf3d125568ef38",
+   "fetched_at": "2026-10-19T05:54:51+00:00"
+  },
+  "llms-err-e1b4fa": {
+   "url": "https://webz.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://webz.io/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 503140,
+   "truncated": false,
+   "sha256": "1c5019d9e4202fd78be30ba16146cb49f621daed7891a5b58dbf3d125568ef38",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  }
+ }
+}

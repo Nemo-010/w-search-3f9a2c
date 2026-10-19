@@ -1,0 +1,45 @@
+# urlscan Docs
+
+> urlscan is a web-based platform to investigate malicious websites and domains.
+
+[urlscan.io APIs](https://docs.urlscan.io/apis/urlscan-openapi.md): API endpoints for urlscan.io and urlscan Pro.
+
+## Table of contents
+
+ - [urlscan.io - A sandbox for the web](https://docs.urlscan.io/about.md)
+ - [API Changelog](https://docs.urlscan.io/changelog.md)
+ - [API Use Best Practices](https://docs.urlscan.io/pages/api-best-practices.md)
+ - [APIs - Introduction](https://docs.urlscan.io/pages/api-intro.md)
+ - [Brand Detection](https://docs.urlscan.io/pages/brand-detection.md)
+ - [Certificate Search](https://docs.urlscan.io/pages/certificates-search.md)
+ - [API Error Codes](https://docs.urlscan.io/pages/error-codes.md)
+ - [Hostname History API](https://docs.urlscan.io/pages/hostname-history.md)
+ - [Hostname Search](https://docs.urlscan.io/pages/hostname-search.md)
+ - [Incidents Search](https://docs.urlscan.io/pages/incidents-search.md)
+ - [System Labels](https://docs.urlscan.io/pages/labels.md)
+ - [Quickstart Guide](https://docs.urlscan.io/guides/quickstart.md)
+ - [API Integrations](https://docs.urlscan.io/pages/api-integrations.md)
+ - [API Rate Limits](https://docs.urlscan.io/pages/api-rate-limits.md)
+ - [urlscan Pro](https://docs.urlscan.io/index.html.md)
+ - [CLI - Introduction](https://docs.urlscan.io/pages/cli-intro.md)
+ - [Live Scanning](https://docs.urlscan.io/pages/livescanning.md)
+ - [Frequently Asked Questions](https://docs.urlscan.io/pages/faq.md)
+ - [Files Search](https://docs.urlscan.io/pages/files-search.md)
+ - [Notifications Search](https://docs.urlscan.io/pages/notifications-search.md)
+ - [urlscan Pro - Use Cases](https://docs.urlscan.io/pages/pro-use-cases.md)
+ - [urlscan.io Result API Reference](https://docs.urlscan.io/pages/result-api-reference.md)
+ - [Saved Searches](https://docs.urlscan.io/pages/saved-searches.md)
+ - [Website Scans Search Reference](https://docs.urlscan.io/pages/search-api-reference.md)
+ - [General Instructions](https://docs.urlscan.io/pages/search-general.md)
+ - [File Downloads](https://docs.urlscan.io/pages/source-files.md)
+ - [TLS Certificates](https://docs.urlscan.io/pages/source-certificates.md)
+ - [Hostnames](https://docs.urlscan.io/pages/source-hostnames.md)
+ - [Website Scans](https://docs.urlscan.io/pages/source-scans.md)
+ - [Structure Search](https://docs.urlscan.io/pages/structure-search.md)
+ - [Subscriptions](https://docs.urlscan.io/pages/subscriptions.md)
+ - [urlscan Observe](https://docs.urlscan.io/pages/urlscan-observe.md)
+ - [urlscan Pro](https://docs.urlscan.io/pages/urlscan-pro.md)
+ - [User Account Help](https://docs.urlscan.io/pages/user-accounts.md)
+ - [Scan Visibility Levels](https://docs.urlscan.io/pages/visibility.md)
+ - [Visual Search](https://docs.urlscan.io/pages/visual-search.md)
+

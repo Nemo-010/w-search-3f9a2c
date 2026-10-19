@@ -1,0 +1,57 @@
+# Valyu
+
+> knowledge work.
+
+One API to search specialist, proprietary and web sources, and run multi-step research with cited, structured outputs — across Finance and Science & R&D.
+
+## Set up Valyu
+
+- [Agent onboarding runbook](https://www.valyu.ai/agents.md): Install, authenticate, and verify the Valyu CLI, MCP server, or SDK. Fetch and follow this to set Valyu up end to end.
+- [Setup guides](https://www.valyu.ai/agents): Human-readable version, with deep links for Claude Code, Codex, and Cursor.
+- [Integration reference](https://docs.valyu.ai/AGENTS.md): Endpoint choice, source presets, and how to query well.
+
+## Documentation
+
+- [Full Documentation](https://www.valyu.ai/llms-full.txt)
+
+## Products
+
+- [Answer & Deep Research APIs for AI Agents](https://www.valyu.ai/product-agents): From instant, cited answers to multi-step investigations that deliver reports, sheets and structured data
+- [API](https://www.valyu.ai/product-apis): Search + content extraction in one platform
+
+## Company
+
+- [Sciences coverage](https://www.valyu.ai/coverage)
+- [Academia & Research](https://www.valyu.ai/academia-research)
+- [Physics & Engineering](https://www.valyu.ai/physics)
+- [Chemistry & Materials](https://www.valyu.ai/chemistry)
+- [Medtech & Diagnostics](https://www.valyu.ai/medtech)
+- [Medical affairs & post-market](https://www.valyu.ai/medical-affairs)
+- [Regulatory & market access](https://www.valyu.ai/regulatory-affairs)
+- [Clinical development](https://www.valyu.ai/clinical-development)
+- [Lead optimisation & preclinical](https://www.valyu.ai/preclinical)
+- [Target discovery & validation](https://www.valyu.ai/target-discovery)
+- [Biotech & Pharma](https://www.valyu.ai/biotech-pharma)
+- [Quant and systematic](https://www.valyu.ai/quant)
+- [Private equity](https://www.valyu.ai/private-equity)
+- [Research desks](https://www.valyu.ai/research-desks)
+- [Pricing](https://www.valyu.ai/pricing)
+- [Sciences](https://www.valyu.ai/sciences)
+- [AI-Powered Financial Data API | Real-Time Markets & Filings](https://www.valyu.ai/finance)
+- [Contact](https://www.valyu.ai/contact)
+- [AI Enrichment](https://www.valyu.ai/ai-enrichment)
+- [AI Distribution | Valyu](https://www.valyu.ai/ai-distribution)
+- [Company](https://www.valyu.ai/company)
+
+## Legal
+
+- [VALYU ACCEPTABLE USE POLICY](https://www.valyu.ai/valyu-acceptable-use-policy)
+- [VALYU PLATFORM SERVICE AGREEMENT](https://www.valyu.ai/valyu-platform-service-agreement)
+- [Terms & Conditions](https://www.valyu.ai/terms)
+- [Privacy Policy](https://www.valyu.ai/privacy-policy)
+
+## Links
+
+- Website: https://www.valyu.ai
+- Platform: https://platform.valyu.ai
+- Documentation: https://docs.valyu.ai

@@ -1,0 +1,70 @@
+{
+ "slug": "marginalia",
+ "name": "Marginalia",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:29+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://api.marginalia.nu/",
+   "status": 200,
+   "final_url": "https://about.marginalia-search.com/article/api/",
+   "content_type": "text/html",
+   "bytes": 23081,
+   "truncated": false,
+   "sha256": "442cf37b807973296a8d3bc8af83ab9010f03df969aca29a0d9744b343f5b370",
+   "fetched_at": "2026-10-19T05:54:29+00:00",
+   "text_bytes": 5481
+  },
+  "home": {
+   "url": "https://marginalia-search.com/",
+   "status": 200,
+   "final_url": "https://marginalia-search.com/",
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 10319,
+   "truncated": false,
+   "sha256": "4b1bcc4c78cd45dbfa0579bb27aee682ede193e8d37a33c2adc81c456cf40c49",
+   "fetched_at": "2026-10-19T05:54:31+00:00",
+   "text_bytes": 1286
+  },
+  "llms-err-9946f5": {
+   "url": "https://api.marginalia.nu/llms.txt",
+   "status": 401,
+   "final_url": "https://api.marginalia.nu/llms.txt",
+   "content_type": "text/plain;charset=utf-8",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-19T05:54:31+00:00"
+  },
+  "llms-err-5f19fd": {
+   "url": "https://marginalia-search.com/llms.txt",
+   "status": 404,
+   "final_url": "https://marginalia-search.com/llms.txt",
+   "content_type": "text/plain;charset=utf-8",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-19T05:54:32+00:00"
+  },
+  "llms-err-ea8e04": {
+   "url": "https://marginalia-search.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://marginalia-search.com/docs/llms.txt",
+   "content_type": "text/plain;charset=utf-8",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-19T05:54:33+00:00"
+  },
+  "llms-err-74b2b0": {
+   "url": "https://docs.marginalia-search.com/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.marginalia-search.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 153,
+   "truncated": false,
+   "sha256": "8bf1b0813f4fb6b039752427dc2c097d0723304d4e1f92a77270a362fca4e8ee",
+   "fetched_at": "2026-10-19T05:54:33+00:00"
+  }
+ }
+}

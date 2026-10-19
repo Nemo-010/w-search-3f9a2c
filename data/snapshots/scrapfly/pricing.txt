@@ -1,0 +1,562 @@
+Scrapfly Pricing - Web Scraping API, Cloud Browser, Screenshot. One Key, Every Product. 
+ Products
+ ▼ 
+ Core APIs 
+ Platform & Tools 
+ SDKs & Integrations 
+ New to Scrapfly? 
+ Start with the Web Scraping API 
+ Web Scraping API Web data at scale 
+ Cloud Browser API Remote browser sessions 
+ Crawler API Full-site crawls 
+ Data Extraction API Structured data from public pages 
+ Screenshot API Full-page captures 
+ Pricing 
+ Developer Docs 
+ Status 
+ Web Scraping API 
+ One HTTP call returns public pages rendered, structured, complete. 
+ Production-grade reliability consistent results on demanding public pages. 
+ 190+ countries with residential and datacenter proxies. 
+ AI extraction and JS rendering on every request. 
+ Explore 
+ Cloud Browser API 
+ Remote managed Chromium you drive over CDP. 
+ Playwright and Puppeteer over WebSocket CDP. 
+ Persistent sessions with cookies and auth state across calls. 
+ Production-ready by default no browser configuration to manage. 
+ Explore 
+ Crawler API 
+ Crawl an entire site with one job. 
+ BFS / DFS depth control with include / exclude path filters. 
+ Per-page reliability every URL inherits the WSA pipeline. 
+ Webhook streaming with 8 event types for live results. 
+ Explore 
+ Data Extraction API 
+ Turn raw HTML into structured JSON. 
+ Pre-trained models for products, articles, reviews, jobs. 
+ CSS / XPath templates for fully custom rules. 
+ LLM prompts for freeform extraction in natural language. 
+ Explore 
+ Screenshot API 
+ Pixel-perfect captures of public pages. 
+ Full-page or viewport PNG, JPEG, WebP, with auto-scroll. 
+ Reliable rendering on every shot. 
+ Scheduled captures delivered to your webhook. 
+ Explore 
+ AI Browser Agent NEW Browser automation with AI 
+ MCP Server AI agents connected to the web 
+ Scrapfly CLI Agentic command line 
+ Proxy Saver Smart proxy reuse 
+ Pricing 
+ Developer Docs 
+ Status 
+ AI Browser Agent 
+ Describe a goal in natural language. The agent does it. 
+ Browser Use, Stagehand, Vibium bring your own agent loop. 
+ Managed Chromium production-ready out of the box. 
+ Tool-call interface for any LLM orchestrator. 
+ Explore 
+ MCP Server 
+ Hosted MCP. One URL, every agent stack. 
+ Claude, Cursor, Cline, Windsurf and any other MCP client. 
+ 5 tools covering scrape, screenshot, extract, crawl, account. 
+ Zero local setup add the URL, ship. 
+ Explore 
+ Scrapfly CLI 
+ Agentic scraping from your terminal. 
+ Scrape, screenshot, extract, crawl from any shell or CI pipeline. 
+ Pipe-friendly JSON output ready for jq / shell scripts. 
+ LLM tool-use ready for AI agents that shell out. 
+ Explore 
+ Proxy Saver 
+ Wrap your proxy bill, save bandwidth. 
+ Bright Data, Oxylabs, Webshare or any HTTP proxy provider. 
+ Bandwidth optimization with image and CSS stubbing. 
+ Bandwidth savings on every request. 
+ Explore 
+ SDKs
+ Python SDK 
+ TypeScript SDK 
+ Golang SDK 
+ Rust SDK 
+ Scrapy SDK 
+ Scrapfly CLI 
+ No-Code Platforms
+ Zapier 
+ Make 
+ n8n 
+ LLM & RAG Apps
+ LlamaIndex 
+ LangChain 
+ CrewAI 
+ All integrations 
+ Pricing 
+ Developer Docs 
+ Status 
+ Solutions
+ ▼ 
+ By Challenge 
+ By Target 
+ By Industry 
+ Technical Challenges 
+ Solve the hardest technical challenges in web scraping 
+ View All Protection Systems 
+ Manage Proxies 
+ JS Rendering 
+ Popular Targets 
+ Pre-built solutions for scraping major platforms and websites 
+ Real Estate
+ Idealista 
+ Immoscout24 
+ Realtor 
+ Redfin 
+ Zillow 
+ Zoopla 
+ eCommerce
+ Aliexpress 
+ Amazon 
+ eBay 
+ Etsy 
+ Leboncoin 
+ Walmart 
+ Social Media
+ Instagram 
+ Reddit 
+ TikTok 
+ Twitter 
+ YouTube 
+ Company & Reviews
+ Crunchbase 
+ G2 
+ YellowPages 
+ Yelp 
+ Zoominfo 
+ Jobs
+ Glassdoor 
+ Indeed 
+ LinkedIn 
+ Search & SEO
+ Bing 
+ Google Search 
+ Similarweb 
+ Fashion
+ Nordstrom 
+ StockX 
+ Travel & Hotels
+ Booking 
+ Tripadvisor 
+ Industry Solutions 
+ Tailored web scraping solutions for specific business verticals and use cases 
+ AI Training 
+ Images, videos & user generated content 
+ eCommerce 
+ Products, reviews & brand awareness 
+ Fraud Detection 
+ Detect fraud & counterfeit activity 
+ Lead Generation 
+ Profiles & contact details 
+ News & Media 
+ Articles, headlines & news feeds 
+ SERP & SEO 
+ Search results & keywords 
+ Travel 
+ Hotels, reviews & prices 
+ Compliance 
+ Validate compliance and security 
+ Financial Services 
+ Stock, shipping & financial data 
+ Jobs Data 
+ Job listings, salaries & career data 
+ Logistics 
+ Shipping, tracking & container prices 
+ Real Estate 
+ Property listings & market data 
+ Social Media 
+ Profiles, posts & engagement 
+ Resources
+ ▼ 
+ Developer Resources 
+ API Documentation 
+ Complete API reference 
+ Proxy Documentation 
+ Datacenter & residential proxies 
+ ScrapFly Scrapers 
+ Production-ready scrapers on GitHub 
+ Free Tools 
+ JA3, CSS, XPath tools 
+ Learn
+ Free 
+ Blog 
+ Latest guides and insights 
+ Web Scraping Academy 
+ Learn from scratch 
+ Knowledge Base 
+ FAQ and answers 
+ Why Us? 
+ Pricing 
+ Sign up
+ Login 
+ PRICING 
+ From prototype to production agentic workloads. 
+ Usage-based. One API key across every Scrapfly product. 1,000 free credits, no credit card.
+ 4.9/5 on Capterra · 236 reviews 
+ FREE 
+ 1,000 credits on signup. 
+ Every product, no credit card, no time limit. Use it forever for prototypes and smoke tests. 
+ Get Free Key
+ // DISCOVERY 
+ $30 
+ /mo 
+ $0.15 
+ per 1k credits, prepaid 
+ 200,000 
+ API credits / month 
+ 5 concurrent requests
+ 1 week log retention
+ No pay-as-you-go 
+ Solo account 
+ Basic Support
+ Start Free
+ // PRO 
+ $100 
+ /mo 
+ $0.10 
+ per 1k credits, prepaid 
+ 1,000,000 
+ API credits / month 
+ 20 concurrent requests
+ 2 weeks log retention
+ Extra at $3.50 / 10k
+ Solo account 
+ Standard Support
+ Start Free
+ MOST POPULAR 
+ // STARTUP 
+ $250 
+ /mo 
+ $0.10 
+ per 1k credits, prepaid 
+ 2,500,000 
+ API credits / month 
+ 50 concurrent requests
+ 3 weeks log retention
+ Extra at $2.00 / 10k
+ Team management
+ Standard Support
+ Start Free
+ // ENTERPRISE 
+ $500 
+ /mo 
+ $0.09 
+ per 1k credits, prepaid 
+ 5,500,000 
+ API credits / month 
+ 100 concurrent requests
+ 4 weeks log retention
+ Extra at $1.20 / 10k
+ Team management
+ Premium Support
+ Start Free
+ // CUSTOM 
+ Custom 
+ Negotiated 
+ volume contract 
+ Unlimited 
+ credits negotiated 
+ Committed concurrency 
+ Custom log retention 
+ MSA, DPA, BAA, HIPAA 
+ Dedicated residential pools 
+ Premium 24/7 support 
+ Talk to Sales
+ 1,000 free credits on signup 
+ 190+ proxy countries 
+ SOC 2 Type II, ISO 27001, HIPAA, GDPR 
+ 15B+ requests / month 
+ COVERAGE 
+ Every product, every plan. 
+ Volume scales. Feature access never gates. Pay for credits consumed, not seats or products. 
+ One Key. Every Scrapfly API. 
+ Same credit pool spans five APIs. Pick the tool per request, a simple HTTP scrape costs 1 credit, a full managed browser session costs more. No contracts to switch products. 
+ 5 APIs in one key 
+ unblocker=True one flag automates browsers, proxies, retries 
+ 1,000 free credits to evaluate 
+ 0 charges on failed requests 
+ What a Credit Buys 
+ Credits scale with request cost. Simple HTTP on a datacenter IP is 1 credit; adding browser rendering, residential IPs, or screenshot capture increases the multiplier. See the full matrix in the docs . 
+ 1 credit HTTP scrape on datacenter IP 
+ 5 credits + JS rendering or Unblocker 
+ 25 credits + residential proxies 
+ 60 credits screenshot capture (full-page) 
+ Failed request $0, never charged on error 
+ Predictable Billing 
+ Discovery caps on quota, your bill is fixed. Pro, Startup, and Enterprise add pay-as-you-go overflow at the plan's per-10k rate, so production integrations never stall. 
+ Pay-as-you-go from Pro up 
+ auto-activated on quota exhaustion, same SLA 
+ Zero-cost failures 
+ upstream 4xx/5xx and failed scrapes are free 
+ Downgrade, cancel anytime 
+ changes apply at end of billing period 
+ Free Tier 
+ 1,000 credits on signup. No credit card, no time limit. Every product usable, prototype and smoke-test forever. 
+ Get free key → 
+ Every Plan Includes 
+ Volume is the only thing that scales across plans. Feature access is flat. 
+ All 5 APIs 
+ Unblocker (formerly ASP) 
+ 190+ countries 
+ JS rendering 
+ Residential proxies 
+ SDK: Py / TS / Go / Rust 
+ Enterprise Extras 
+ MSA, DPA, BAA, HIPAA, dedicated residential pools, committed concurrency, premium 24/7 support. SOC 2 Type II, ISO 27001, GDPR. 
+ Talk to sales → 
+ Which Plan Fits 
+ The grid tracks four usage envelopes. Pick by monthly credit consumption, not feature access. 
+ Under 200k credits / mo Discovery, prototypes, internal tools 
+ 200k – 1M credits / mo Pro, production jobs, small teams 
+ 1M – 5M credits / mo Startup, agentic systems, serious traffic 
+ Over 5M credits / mo Enterprise, MSA, DPA, BAA, HIPAA, dedicated pools 
+ Spiky / unpredictable Pro or above (pay-as-you-go overflow) 
+ Audited, Certified, Contractable 
+ Every plan runs on the same audited infrastructure. AI training pipelines, LLM grounding, SERP-at-scale, and enterprise workloads all share one control plane. 
+ ESTIMATOR 
+ Price your workload. 
+ Drag the slider to your expected monthly credit consumption. The plan card on the right updates live. 
+ // API credits per month 
+ 200 
+ 40k 
+ 500k 
+ 2.5M 
+ 5M 
+ 6M+ 
+ // credits per scrape · click to adjust 
+ 1 
+ HTTP · datacenter 
+ 5 
+ + Unblocker / browser 
+ 25 
+ + residential 
+ 60 
+ screenshot 
+ // CUSTOM · 6M+ CREDITS / MO 
+ You're past the self-serve ceiling. 
+ At this volume the effective per-credit rate keeps dropping. Custom contracts at Scrapfly start at $1.2k/mo and scale to $30k+/mo — same API, same compliance, dedicated infrastructure.
+ Committed concurrency — reserved capacity on dedicated workers, no shared throttle. 
+ Dedicated residential pools — isolated IP space, sized to your geography mix. 
+ MSA, DPA, BAA & HIPAA — SOC 2 Type II + ISO 27001 + GDPR, ready for procurement. 
+ Premium 24/7 support — named engineer, Slack channel, SLA on response. 
+ Talk to Sales
+ Typical first-contract close in under 7 days. No annual lock-in required.
+ On Pro and up, overflow auto-switches to pay-as-you-go and the integration never stalls. Discovery caps on quota.
+ SETUP 
+ From signup to first scrape in under a minute. 
+ Four steps. No credit card. 
+ // STEP 1 
+ Sign up 
+ Free key, 1,000 credits, no card required. 
+ // STEP 2 
+ Install an SDK 
+ Python, TypeScript, Go, or Rust. Or call HTTP directly. 
+ // STEP 3 
+ Scrape 
+ Three lines of code, unblocker=True handles the rest. 
+ // STEP 4 
+ Upgrade when ready 
+ One click from the dashboard. No migration, same key. 
+ PROOF 
+ One API key, five products, four SDKs. 
+ The credit you pay for on any plan runs the same code. Switch languages in the terminal below, same endpoint, same unblocker=True flag, same response envelope. 
+ One flag — browsers, proxies, and retries managed automatically. See the full Unblocker coverage catalog . 
+ Python 
+ TypeScript 
+ Go 
+ Rust 
+ from scrapfly import ScrapeConfig, ScrapflyClient, ScrapeApiResponse
+client = ScrapflyClient(key="API KEY")
+api_response: ScrapeApiResponse = client.scrape(
+ ScrapeConfig(
+ url='https://httpbin.dev/html',
+ # enable the Scrapfly Unblocker
+ unblocker=True
+ )
+)
+print(api_response.result) 
+ import { 
+ ScrapflyClient, ScrapeConfig 
+} from 'jsr:@scrapfly/scrapfly-sdk';
+const client = new ScrapflyClient({ key: "API KEY" });
+let api_result = await client.scrape(
+ new ScrapeConfig({
+ url: 'https://httpbin.dev/html',
+ // enable the Scrapfly Unblocker
+ unblocker: true,
+ })
+);
+console.log(api_result.result); 
+ package main
+import (
+ "fmt"
+ "github.com/scrapfly/go-scrapfly"
+)
+func main() {
+ client, _ := scrapfly.New("API KEY")
+ result, _ := client.Scrape(&scrapfly.ScrapeConfig{
+ URL: "https://httpbin.dev/html",
+ // enable the Scrapfly Unblocker
+ Unblocker: scrapfly.BoolPtr(true),
+ })
+ fmt.Println(result.Result.Content)
+} 
+ use scrapfly_sdk::{Client, ScrapeConfig};
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+ let client = Client::builder().api_key("API KEY").build()?;
+ let cfg = ScrapeConfig::builder("https://httpbin.dev/html")
+ // enable the Scrapfly Unblocker
+ .unblocker(true)
+ .build()?;
+ let result = client.scrape(&cfg).await?;
+ println!("{}", result.result.content);
+ Ok(())
+} 
+ // RESPONSE 
+ json 
+ {
+ "result": {
+ "status_code": 200,
+ "success": true,
+ "url": "https://httpbin.dev/html",
+ "content": "<!DOCTYPE html><html>...</html>",
+ "content_format": "raw",
+ "content_type": "text/html; charset=utf-8",
+ "response_headers": {
+ "content-type": "text/html; charset=utf-8",
+ "server": "nginx"
+ },
+ "cookies": [],
+ "duration": 1842,
+ "log_url": "https://scrapfly.io/dashboard/monitoring/log/01J...",
+ "asp_cost": 30
+ },
+ "context": {
+ "asp": true,
+ "proxy": {
+ "country": "us",
+ "type": "datacenter"
+ }
+ }
+} 
+ Python SDK docs →
+ TypeScript SDK docs →
+ Go SDK docs →
+ Rust SDK docs →
+ Get Free API Key
+ See the Unblocker coverage catalog
+ // INTEGRATIONS 
+ Works with what you already use 
+ Same pricing, every integration. No per-platform surcharge, no seat fees, same credit pool across all of them. 
+ No-code automation 
+ Zapier 
+ Make 
+ n8n 
+ Agent skills 
+ OpenClaw 
+ LLM & RAG frameworks 
+ LlamaIndex 
+ LangChain 
+ CrewAI 
+ First-class SDKs 
+ Python 
+ pip install scrapfly-sdk 
+ TypeScript 
+ Node, Deno, Bun 
+ Go 
+ go get github.com/scrapfly/go-scrapfly 
+ Rust 
+ cargo add scrapfly-sdk 
+ Scrapy 
+ Full-feature extension 
+ See all integrations 
+ FAQ 
+ Frequently Asked Questions 
+ What is an API credit? 
+ One scrape costs a variable number of credits depending on the configuration. HTTP scrape on a datacenter IP is 1 credit; adding browser rendering or residential proxies increases the cost. See the credit-cost table above, or the full matrix in the docs . 
+ What happens when I hit my monthly quota? 
+ From Pro and up, you switch to pay-as-you-go at the per-10k-credit rate on your plan, your integration never stalls. Discovery caps on quota for a predictable bill; upgrade to Pro from the dashboard if you need overflow. If pay-as-you-go consistently makes the next plan up cheaper, upgrade in one click. 
+ Can I change or cancel my subscription? 
+ Yes. Upgrade, downgrade, or cancel any time from the dashboard. Downgrade and cancel take effect at the end of the current billing period, so you get every credit you paid for. 
+ Do unused credits roll over? 
+ No. Quotas reset at renewal. If you consistently end the month with leftovers, downgrade to a smaller plan and use pay-as-you-go for the occasional overflow. You end up paying less. 
+ Is the free tier time-limited? 
+ No. 1,000 credits on signup, no card required, every product usable. Keep the free key forever for smoke tests and prototypes. 
+ Do you offer custom or enterprise plans? 
+ Yes, above 5.5M credits per month. Custom plans include volume discounts, dedicated proxy pools, committed concurrency, premium support, and a signed DPA. Contact sales . 
+ // GET STARTED 
+ From 1,000 free credits to $30k+ enterprise contracts . 
+ Same API, same Unblocker engine, same compliance stack. Prototype on the free tier, scale to production agentic workloads, sign an MSA when procurement asks. 
+ Billing docs 
+ Unblocker catalog 
+ SDK: Python 
+ SDK: TypeScript 
+ Trust center 
+ Talk to sales 
+ Get Free API Key 
+ Talk to Sales 
+ [ COMPLIANCE ] 
+ Data collection APIs for developers. Scrape, capture, and extract public web data with battle-tested tools that scale.
+ // COMPANY 
+ Products
+ About Us
+ Careers
+ Why Scrapfly?
+ Pricing
+ Status
+ // RESOURCES 
+ API Docs
+ Academy
+ Blog
+ Glossary
+ Topics
+ Tools
+ Scrapers
+ FAQ
+ Alternatives
+ // LEGAL 
+ Terms of Service
+ Privacy Policy
+ DPA
+ KYC
+ Compliance
+ // INTEGRATIONS 
+ Zapier 
+ Make 
+ N8n 
+ LlamaIndex 
+ LangChain 
+ CrewAI 
+ // LEARN WEB SCRAPING 
+ Python 
+ NodeJS 
+ PHP 
+ Ruby 
+ Scrapy 
+ Puppeteer 
+ // USE CASES 
+ AI Training 
+ eCommerce 
+ Real Estate 
+ Finance 
+ SERP & SEO 
+ Travel 
+ // POPULAR TOOLS 
+ cURL to Python 
+ JA3 Fingerprint 
+ HTTP2 Fingerprint 
+ Selector Tester 
+ // © 2026 Scrapfly. The Web Scraping API For Developers.
+ Is Web Scraping Legal? 
+ • 
+ Open Source Scrapers 
+ ×

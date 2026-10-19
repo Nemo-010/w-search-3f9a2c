@@ -1,0 +1,24 @@
+# ScrapeCreators (scrapecreators) category=ai-search
+home=https://www.scrapecreators.com/ pricing=None docs=https://docs.scrapecreators.com/ llms=None
+sources_ok: docs:https://docs.scrapecreators.com/, home:https://www.scrapecreators.com/, llms:https://docs.scrapecreators.com/llms.txt, llms-full:https://docs.scrapecreators.com/llms-full.txt, llms-https://www.scrapecreators.com/llms.txt:https://www.scrapecreators.com/llms.txt
+--- ranked fact lines ---
+[home] • Using ScrapeCreators skill · calling instagram/reels Read the docs → No wrapper code Official & maintained Free to install Browse all integrations → Use cases What people actually build on top of our API. 0 1 Clipper payouts Clipping platforms use us to pull views, likes, and shares across every clipper's video — then automate payouts. One of our most popular patterns. views creators payouts 0 2
+[home] → fetched 1 profile · 23ms · 1 credit used Read the docs → Skill AI agent skill A drop-in skill for Claude Code, Cursor, Codex, and other AI agents. It teaches them the API endpoints, params, and response shapes. claude chat > get the last 30 days of reels from @mrbeast,
+--- llms/readme head ---
+# Scrape Creators
+> Scrape Creators provides APIs for scraping public creator and social media data from TikTok, Instagram, YouTube, Twitter/X, Facebook, Reddit, LinkedIn, and other platforms.
+This file is a compact product-level guide for AI tools. For endpoint-level API details, use the docs LLM files below.
+## Main Links
+- [Scrape Creators API docs](https://docs.scrapecreators.com): API documentation and interactive endpoint pages.
+- [Docs llms.txt](https://docs.scrapecreators.com/llms.txt): Compact AI-readable endpoint index.
+- [Docs llms-full.txt](https://docs.scrapecreators.com/llms-full.txt): Full AI-readable API reference with endpoint parameters and sample responses.
+- [OpenAPI spec](https://docs.scrapecreators.com/openapi.json): Machine-readable API schema.
+- [Pricing](https://scrapecreators.com/#pricing): Plans and pricing.
+- [Enterprise](https://scrapecreators.com/enterprise): High-volume workloads, custom pricing, technical onboarding, and enterprise evaluation details.
+- [No rate limits](https://scrapecreators.com/no-rate-limits): Account-level concurrency policy and production guidance.
+- [Changelog](https://scrapecreators.com/changelog): Recent API and product updates.
+- [Status](https://scrapecreators.com/status): Current API status and incident history.
+## API Basics
+Base API URL: `https://api.scrapecreators.com`
+Authentication: pass your API key in the `x-api-key` header.
+Use the docs links above before writing integration code. The docs `llms-full.txt` file is the best source for AI coding tools because it includes endpoint paths, params, and sample responses in one Markdown file.

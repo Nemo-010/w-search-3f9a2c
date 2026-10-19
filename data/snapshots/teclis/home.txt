@@ -1,0 +1,40 @@
+Teclis - Non-commercial Web Search 
+ About 
+ Teclis is an
+ attempt to surface the less known web, the web of creativity and
+ self expression, the more humane web. Teclis includes its
+ own crawl as well as results from Kagi Small Web 
+ index and results with permission from Marginalia
+ Search . Teclis works best with broad queries such as
+ 'machine learning', 'vegan diet', 'religion' etc.. If you get
+ "Captcha verification failed' message, reload the home page, and
+ patiently type your query again (this is antibot protection). 
+ Technical Implementation 
+ The
+ crawler is hybrid, using async python requests and puppeteer with uBlock Origin . The way
+ detection works is we count the
+ number of uBO blocked requests on the page, and if too many (threshold is set
+ to 5), we kick it out, leaving only "clean" pages
+ in the index. Crawler
+ is also unique in a sense that it will follow an interesting dead link to its internet
+ archive page, trying its best to preserve the page in our
+ index (you will see those results under "Internet Archive" section).
+ Content and semantic metadata is
+ extracted using trafilatura and readability.js ,
+ while
+ page language is detected using fastText . 
+ To produce search results, triple rankings with full-text search (via Elasticsearch / Typesense ) and NLP-based
+ semantic search (using sentence
+ transformers to produce embeddings and SCANN 
+ to search through vector space) are combined to produce final
+ ranking of results. Responses are served using FastAPI . 
+ "Interesting Recently" section is provided by TinyGem , a content recommendation
+ and bookmarking tool built using similar stack. 
+ Teclis also uses results with permission from Marginalia
+ Search (another noncommercial search engine).
+ about 
+ Teclis was built by Vladimir
+ Prelovac , founder of Kagi Search . 
+ ©
+ 2019 - 2024 
+ Teclis - Humanize the Web.    Terms

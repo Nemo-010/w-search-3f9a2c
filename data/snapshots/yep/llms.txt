@@ -1,0 +1,55 @@
+# Yep developer documentation
+
+> Search API and MCP integration documentation generated from the public contracts.
+
+## Getting started
+
+- [Build with Yep](https://yep.com/en/docs.md): Send a search request or connect an MCP client in a few minutes.
+- [Authentication](https://yep.com/en/docs/authentication.md): Create, store, rotate, and send Yep API credentials safely.
+- [Service accounts](https://yep.com/en/docs/service-accounts.md): Create service accounts for automated workloads and manage their credentials.
+
+## Search API
+
+- [HTTP integration](https://yep.com/en/docs/integrations/http.md): Integrate the Search API with stable request, response, and retry handling.
+- [Search for domains](https://yep.com/en/docs/search/domains.md): Find ranked domains when a page-level result set is too narrow.
+- [Errors, limits, and billing](https://yep.com/en/docs/errors-and-limits.md): Handle API failures, request limits, retries, and completed-request billing.
+
+## Agent API
+
+- [Choose the Search API or Agent API](https://yep.com/en/docs/agent/choose.md): Choose ranked results or a model-written report for each workload.
+- [Use your own model provider key](https://yep.com/en/docs/agent/byok.md): Connect a model provider key and select an allowlisted model for Agent API and MCP calls.
+
+## MCP
+
+- [Connect an MCP client](https://yep.com/en/docs/mcp.md): Choose a client and connect it to the Yep search tool with OAuth.
+- [MCP search tool](https://yep.com/en/docs/mcp/tools/search.md): Input, output, and behavior generated from the advertised MCP tool contract.
+- [MCP domain search tool](https://yep.com/en/docs/mcp/tools/search-domains.md): Input, output, and behavior generated from the advertised MCP tool contract.
+- [MCP query builder tool](https://yep.com/en/docs/mcp/tools/build-search-request.md): Build a typed search request with a stored BYOK model.
+- [MCP model catalog tool](https://yep.com/en/docs/mcp/tools/list-models.md): Discover BYOK providers, models, capabilities, pricing, and setup links.
+- [MCP run agent tool](https://yep.com/en/docs/mcp/tools/run-agent.md): Run a light or deep agent with an allowlisted model and stored BYOK key.
+- [MCP agent status tool](https://yep.com/en/docs/mcp/tools/get-agent-run.md): Poll a background agent run with its response-only session proof.
+
+## Updates
+
+- [Changelog](https://yep.com/en/docs/changelog.md): Material changes to Yep developer APIs, MCP, and documentation.
+
+## API reference
+
+- [API reference](https://yep.com/en/docs/reference.md): Base URL, authentication, and every public API operation.
+- [Search](https://yep.com/en/docs/reference/search.md): The public Yep search API
+- [Agent](https://yep.com/en/docs/reference/agent.md): Billed light and deep agent runs
+- [Query builder](https://yep.com/en/docs/reference/query-builder.md): Natural-language search request construction
+- [Models](https://yep.com/en/docs/reference/models.md): Public BYOK provider and model discovery
+- [Management](https://yep.com/en/docs/reference/management.md): Public credential management
+- [Run an agent](https://yep.com/en/docs/reference/agent/run-agent.md): Runs the light or deep agent with the customer's configured provider key. Set background to return polling credentials immediately.
+- [Get an agent run](https://yep.com/en/docs/reference/agent/get-agent-run.md): Reads the current or terminal status of one authenticated background run.
+- [Build a typed search request from natural language](https://yep.com/en/docs/reference/query-builder/build-search-request.md): Uses the selected allowlisted model and stored BYOK provider key. A successful validated build is billed as one Agent API run and does not execute search.
+- [List models available to BYOK operations](https://yep.com/en/docs/reference/models/list-models.md): Returns the Git-owned provider/model allowlist, verified provider pricing, capabilities, and setup links. Stored-key metadata is never returned.
+- [Create an API key](https://yep.com/en/docs/reference/api-keys/create-api-key.md): Creates a scoped credential and returns its secret once.
+- [Revoke an API key](https://yep.com/en/docs/reference/api-keys/revoke-api-key.md): Permanently revokes one credential owned by the authenticated identity.
+- [Search the web index](https://yep.com/en/docs/reference/search/get-search.md): Returns ranked web results in the same envelope as `POST /api/v1/search`, projected to url, title, description, and language. The result cap is 50 and the API does not paginate.
+- [Search with typed filters and result projection](https://yep.com/en/docs/reference/search/post-search.md): Returns ranked web results using the shared typed filter and projection contract.
+- [Search from a natural-language question](https://yep.com/en/docs/reference/search/post-search-ask.md): Builds a typed search request with an optional allowlisted BYOK model or the catalog default, then executes it through the standard search path. A successful build and search are billed as one Agent API run and one Search API request.
+- [Find domains with typed filters and result projection](https://yep.com/en/docs/reference/search/post-search-domains.md): Returns ranked domains using the same filter and projection language as page search.
+
+- [OpenAPI specification](https://yep.com/openapi.json)

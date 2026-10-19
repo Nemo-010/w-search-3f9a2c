@@ -1,0 +1,70 @@
+{
+ "slug": "ip-api",
+ "name": "ip-api",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:48+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://ip-api.com/docs/api:json",
+   "status": 200,
+   "final_url": "https://ip-api.com/docs/api:json",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 28938,
+   "truncated": false,
+   "sha256": "55a922da519ca0637f79c9c426b09eec3a245377ed8671cb4bb7fe46d051f380",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 6882
+  },
+  "home": {
+   "url": "https://ip-api.com/",
+   "status": 200,
+   "final_url": "https://ip-api.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 11848,
+   "truncated": false,
+   "sha256": "61dc7c95fb5fb72ff523c69063a4d510d6724697560b5db4efe9e78592bf9846",
+   "fetched_at": "2026-10-19T05:54:49+00:00",
+   "text_bytes": 2408
+  },
+  "llms-err-fc25d2": {
+   "url": "https://ip-api.com/docs/api:json/llms.txt",
+   "status": 0,
+   "final_url": "https://ip-api.com/docs/api:json/llms.txt",
+   "content_type": "",
+   "bytes": 44,
+   "truncated": false,
+   "sha256": "eb7deb0c37bb189b9c126115ecdbcdd8e81950774f8d0cad615f83f41d2201c1",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  },
+  "llms-err-613d97": {
+   "url": "https://ip-api.com/llms.txt",
+   "status": 0,
+   "final_url": "https://ip-api.com/llms.txt",
+   "content_type": "",
+   "bytes": 44,
+   "truncated": false,
+   "sha256": "eb7deb0c37bb189b9c126115ecdbcdd8e81950774f8d0cad615f83f41d2201c1",
+   "fetched_at": "2026-10-19T05:54:50+00:00"
+  },
+  "llms-err-492c8a": {
+   "url": "https://ip-api.com/docs/llms.txt",
+   "status": 0,
+   "final_url": "https://ip-api.com/docs/llms.txt",
+   "content_type": "",
+   "bytes": 44,
+   "truncated": false,
+   "sha256": "eb7deb0c37bb189b9c126115ecdbcdd8e81950774f8d0cad615f83f41d2201c1",
+   "fetched_at": "2026-10-19T05:54:50+00:00"
+  },
+  "llms-err-f3ac8a": {
+   "url": "https://docs.ip-api.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.ip-api.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:50+00:00"
+  }
+ }
+}

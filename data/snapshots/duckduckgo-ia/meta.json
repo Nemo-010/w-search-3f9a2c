@@ -1,0 +1,62 @@
+{
+ "slug": "duckduckgo-ia",
+ "name": "DuckDuckGo Instant Answer",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:33+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://duckduckgo.com/api",
+   "status": 200,
+   "final_url": "https://duckduckgo.com/?q=api&&rpl=1",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 25145,
+   "truncated": false,
+   "sha256": "c64e3690c32c70a8bfbf279d6c539bb29a2ff6ca1037ab390d6e71ca41d6beb4",
+   "fetched_at": "2026-10-19T05:54:33+00:00",
+   "text_bytes": 30
+  },
+  "llms": {
+   "url": "https://duckduckgo.com/api/llms.txt",
+   "status": 200,
+   "final_url": "https://duckduckgo.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 235420,
+   "truncated": false,
+   "sha256": "a2c3b447117b86d6a425439e336714c4d0dfe74984591651fca5743586453ef4",
+   "fetched_at": "2026-10-19T05:54:34+00:00",
+   "text_bytes": 487
+  },
+  "llms-full": {
+   "url": "https://duckduckgo.com/api/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://duckduckgo.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 235420,
+   "truncated": false,
+   "sha256": "a2c3b447117b86d6a425439e336714c4d0dfe74984591651fca5743586453ef4",
+   "fetched_at": "2026-10-19T05:54:40+00:00",
+   "text_bytes": 487
+  },
+  "llms-https://duckduckgo.com/api/docs/llms.txt": {
+   "url": "https://duckduckgo.com/api/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://duckduckgo.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 235420,
+   "truncated": false,
+   "sha256": "a2c3b447117b86d6a425439e336714c4d0dfe74984591651fca5743586453ef4",
+   "fetched_at": "2026-10-19T05:54:38+00:00",
+   "text_bytes": 487
+  },
+  "llms-err-167852": {
+   "url": "https://docs.duckduckgo.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.duckduckgo.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:42+00:00"
+  }
+ }
+}

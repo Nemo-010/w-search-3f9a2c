@@ -1,0 +1,74 @@
+# Crawl4AI (OSS) (crawl4ai) category=oss
+home=https://github.com/unclecode/crawl4ai pricing=https://crawl4ai.com/ docs=https://docs.crawl4ai.com/ llms=https://crawl4ai.com/llms.txt
+github stars=85801 forks=8921 created=2024-05-09 pushed=2026-10-19 archived=False desc=Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key.
+sources_ok: readme:https://raw.githubusercontent.com/unclecode/crawl4ai/HEAD/README.md, llms:https://crawl4ai.com/llms.txt, pricing:https://crawl4ai.com/, docs:https://docs.crawl4ai.com/
+--- ranked fact lines ---
+[readme] | **Price** | free, forever | free (your hosting) | 1,000 free credits every month; plans from $10 a month |
+[pricing] One key: /scrape a page to Markdown, /extract it to JSON, /search the web, /serp for Google's results page as data, /answer a question with sources. Free: 10 a minute, 2 at a time, 1,000 credits every month. Plans: 120 a minute, 10 at a time, from $ 10 a month.
+[pricing] Free $0 · no card Prototypes and side projects. 1,000 credits every month, 10 a minute, 2 at a time. Get a key
+[docs] 1,000 free credits every month; plans from $10 a month
+[llms] > credits every month. Plans from $10 a month (Starter: 10,000 credits, 120 a minute, 10 at a time), then
+[pricing] Starter $ 10 a month 10,000 credits a month, 120 a minute, 10 at a time. Extra credits at $ 1 per 1,000. Start
+[pricing] Builder $ 99 a month 125,000 credits a month, 600 a minute, 20 at a time. Extra credits at $ 0.79 per 1,000. Start
+[pricing] Scale $ 499 a month 750,000 credits a month, 1,500 a minute, 50 at a time. Extra credits at $ 0.67 per 1,000. Start
+[readme] <img alt="Crawl4AI Cloud is live. Soft launch: free credits every month, no card. Get your key." src="https://raw.githubusercontent.com/unclecode/crawl4ai/main/docs/assets/cloud-launch-banner-light.svg" width="960">
+[readme] Verify your email and 1,000 free credits are yours every month. No card. Soft launch: prices can change, what you buy stays yours.
+[readme] In 2023, I needed web-to-Markdown. The “open source” option wanted an account, API token, and $16, and still under-delivered. I went turbo anger mode, built Crawl4AI in days, and it went viral. Now it’s the most-starred crawler on GitHub.
+[llms] > Builder $99 and Scale $499; extra credits on a plan never expire. The live table: `GET /v1/prices`.
+[pricing] Try it now: 20 free credits , no signup. Verify your email for 1,000 free credits every month .
+[pricing] 1 credit = $0.001 · page 0.5 · search 1 · from our archive 0.25 · real browser 1 · hard site 2 *
+[readme] Crawl4AI turns any website into clean, LLM-ready Markdown for RAG, AI agents and data pipelines. Run the open-source web crawler and scraper yourself, free forever, or use it hosted with one key: `/scrape` a page to Markdown, `/extract` it to JSON, `/search` the web, `/serp` for Google's results page as data, `/answer` a question with sources; MCP for your agent. Free: 10 a minute, 2 at a time, 1,
+[llms] Per-plan rate limits return `429` with `X-RateLimit-*` headers and a `message` you can show as it is (on the free plan: "You reached the free plan's limit: 10 requests a minute. You still have 1,774 credits; the free plan only limits the pace. A monthly plan lifts it: Starter, $10 a month: 10,000 credits a month, 120 requests a minute, 10 at a time."; the `actions` block carries `subscribe`, the o
+[llms] Every request costs credits (1 credit = $0.001; a result already in our archive costs half; the effort a page needed sets the price; the live price table, the grants, the plans (`plans[]`: price, credits a month, speed, `extra_usd_per_1k`) and each plan's limits: `GET /v1/prices`; soft launch: the prices and the free credit can change, extra credits bought never expire). The response carries `x-c4
+[llms] - Fair use: each plan has request/concurrency limits (see the dashboard); over-limit calls get `429` with a `message` (a monthly plan lifts the free plan's limits); out of credit gets `402 no_credit` (start a plan, or buy extra credits on a plan, on the dashboard's Billing tab).
+[pricing] Crawl4AI Starter $ 10 a month $ 0.50 browser $ 1.00 · hard site $ 2.00 $ 1.00 $ 1.00
+[pricing] Firecrawl Hobby $19 a month $3.80 $7.60 not offered
+[pricing] Tavily Project $30 a month $1.50 $7.50 not offered
+[pricing] SerpApi Starter $25 a month not offered not offered $25.00
+[pricing] $ 10 here buys 20,000 pages a month; Firecrawl's $19 Hobby plan buys 5,000. Their prices are from their own pricing pages on 14 October 2026 and can change; ours are live at /v1/prices .
+[docs] Get a key, free credits every month →
+[docs] Crawl4AI Cloud is live — the same crawler, hosted. Get a key with free credits every month and paste one line into your agent.
+[docs] Crawl4AI turns any website into clean, LLM-ready Markdown for RAG, AI agents and data pipelines. Run the open-source web crawler and scraper yourself, free forever, or use it hosted with one key: /scrape a page to Markdown, /extract it to JSON, /search the web, /serp for Google's results page as data, /answer a question with sources; MCP for your agent. Free: 10 a minute, 2 at a time, 1,000 credit
+[llms] - Get a free key: visit https://api.crawl4ai.com/ and click "Get a key" (a 7-day pass key is
+[llms] issued instantly; verify your email for a permanent key and the monthly free credit (verifying revokes the pass key and issues a new one); the live grants: `GET /v1/prices` -> `credit`). Manage keys at https://api.crawl4ai.com/dashboard/
+[llms] and `jobs_results` (50 per call, paged with `offset`). For more than 500 URLs, call the HTTP jobs API
+[pricing] The same money elsewhere per 1,000 calls, at each seller's cheapest paid plan
+[pricing] * Soft launch Prices and the free credit can change while we learn; the live table is /v1/prices . Extra credits you buy stay yours and never expire.
+[docs] No browsers to run, no proxies to buy, no cookies to babysit. One key with free credits every month , and your AI agent can scrape, extract, search, read Google's results page (SERP) and answer questions through the same engine you already use. Free: 10 a minute, 2 at a time, 1,000 credits every month. Plans: 120 a minute, 10 at a time, from $10 a month.
+[docs] no card free credit to start · soft launch: prices can change, what you buy stays yours EU · Singapore · US MCP built in
+[llms] > at `https://api.crawl4ai.com`, routed to the nearest one. Free: 10 a minute, 2 at a time, 1,000
+[llms] Each plan has a monthly credit allowance that covers the plan's credits and any extra credits (calendar month; `limits.<plan>.allowance_per_month` in GET /v1/prices). Over it the gate answers `402 {"error":"plan_cap"}` with a `message` you can show as it is; a bigger plan lifts it.
+[llms] 404, reaches you as the site gave it); a 503 "busy" means no browser was free for a moment: send
+[llms] `recharge` (on, pack_usd, month_limit_usd: dollars a month, 0 = no limit, both the user's own numbers; fires when the plan's credits are used and the extra credits fall under 1,000) · `report_issue` (title, what_happened).
+[pricing] Yearly · 2 months free Monthly
+[readme] - 🔍 **Web search API**: `GET /search`, browser-free, ranked and cleaned. [Docs →](https://crawl4ai.com/docs?ref=readme#search)
+[readme] # any provider LiteLLM supports, e.g. "ollama/llama3.3" with api_token="no-token"
+[llms] Crawl4AI MCP server to YOUR OWN config with that key, then call the free `balance` tool to check it works.
+[llms] Browser-free, multi-engine, results ranked and cleaned.
+[llms] Price: 1 credit for an answer found directly; 3 credits when our model wrote it, whatever its
+[llms] Price: 1 credit per Google page fetched live; a page from our cache costs half. `num=100` is up to
+[llms] 10 credits. A failed answer (a 5xx) costs nothing.
+[llms] `balance` · `plans` (the monthly plans and where to start one) · `estimate` (endpoint, url?, urls?) · `topup` (amount: dollars, 10 to 1000, extra credits on a plan; ask the user first) · `spend_cap` (credits) ·
+[pricing] It's Apache-2.0. pip install crawl4ai , point it at your own boxes and proxies. No gate, no token. It's yours.
+[docs] Always open source, forever. The library stays here and stays free. The cloud is for the days you want to build fast and let us run the infrastructure.
+[docs] LLM-Free Strategies
+[docs] free, forever
+--- llms/readme head ---
+# Crawl4AI Cloud API
+> Crawl4AI turns any web page into clean, LLM-ready data. One key: `/scrape` a page to Markdown,
+> `/extract` it to JSON, `/search` the web, `/serp` for Google's results page as data, `/answer` a
+> question with sources, and batches of many URLs — served from three regions (EU, Singapore, US)
+> at `https://api.crawl4ai.com`, routed to the nearest one. Free: 10 a minute, 2 at a time, 1,000
+> credits every month. Plans from $10 a month (Starter: 10,000 credits, 120 a minute, 10 at a time), then
+> Builder $99 and Scale $499; extra credits on a plan never expire. The live table: `GET /v1/prices`.
+> Built on the open-source crawl4ai (https://github.com/unclecode/crawl4ai).
+Full docs: https://api.crawl4ai.com/docs
+Migrating from the legacy API, now api-old.crawl4ai.com (v1 sessions, scan, site, enrich, context): https://crawl4ai.com/migrate.txt
+## Set up (for coding agents)
+When the user sends "set up crawl4ai - https://crawl4ai.com/llms.txt with key: sk_live_...", add the
+Crawl4AI MCP server to YOUR OWN config with that key, then call the free `balance` tool to check it works.
+Put the key in the user-level config, never in a file inside the user's repository.
+This file shows only what is open to everyone. **With your key it shows everything open to your account:**
+`curl -H "Authorization: Bearer <key>" https://crawl4ai.com/llms.txt`. The server is
+`https://api.crawl4ai.com/mcp` (streamable HTTP), the header is `Authorization: Bearer <key>`.
+- Claude Code: `claude mcp add --transport http --scope user crawl4ai https://api.crawl4ai.com/mcp --header "Authorization: Bearer <key>"`

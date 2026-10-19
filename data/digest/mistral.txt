@@ -1,0 +1,40 @@
+# Mistral (mistral) category=llm-search
+home=https://docs.mistral.ai/ pricing=https://mistral.ai/pricing docs=https://docs.mistral.ai/ llms=None
+sources_ok: pricing:https://mistral.ai/pricing, docs:https://docs.mistral.ai/, llms:https://docs.mistral.ai/llms.txt, llms-full:https://docs.mistral.ai/llms-full.txt
+--- ranked fact lines ---
+[pricing] $25.5 /mo in API credits.
+[pricing] $15 /mo in API credits.
+[pricing] Pro Education plan Full access to Vibe for all-day coding and long-running tasks. $14.99 /mo Excluding taxes Including taxes
+[pricing] Verified students can get Mistral Pro for $5.99 / month (normally $14.99). Do you offer enterprise solutions and support?
+[pricing] Team Secure, collaborative workspace for teams building with AI. $24.99 /user/mo Excluding taxes Including taxes
+[pricing] Data export. $50 /mo Users
+[pricing] Pro has higher ceilings compared to Free (e.g. up to 40x more image generations). Team and Enterprise plans have even higher allowances on certain features. For example, Flash answers: 200 / day on Team vs. 150 / day on Pro. Can I self-host Mistral’s models?
+[pricing] Austria Belgium Bulgaria Croatia Cyprus Czech Republic Denmark Estonia Finland France Germany Greece Hungary Ireland Italy Latvia Lithuania Luxembourg Malta Netherlands Poland Portugal Romania Slovakia Slovenia Spain Sweden United Kingdom Free Your personal AI agent for everyday tasks.
+[pricing] Up to 6x free Up to 6x free
+[pricing] Up to 5x free Up to 5x free
+[pricing] Up to 40x free Up to 40x free
+[pricing] Frequently asked questions. Does Mistral have a free plan?
+[pricing] Yes, Mistral’s Free plan provides limited access to Vibe , including our latest models, chat, search, creation, and Vibe for code for agentic coding in your terminal. On the Free plan, you also get access to Mistral Studio . Which model should I use?
+[pricing] The Mistral Studio dashboard offers detailed tracking of API usage, including metrics for calls, endpoints, and user activity. It breaks down costs for services like completion, OCR, and fine-tuning, helping you monitor and optimize API consumption efficiently. What’s the difference between Mistral Free and Pro plans?
+[pricing] The Free plan is ideal for getting started with the Vibe or Studio. Mistral Pro offers higher limits across chat plus full access to coding with Mistral Vibe. You get more messages and web searches, more extended thinking and deep research reports, expanded Mistral Vibe capacity, and chat and email support. Does Mistral Vibe have any usage limits?
+[llms] - [Z.ai GLM 5.3](https://docs.mistral.ai/models/zai-glm-5-3.md): A third-party open weight text model from Z.ai with a 1M-token context window.
+[llms] - [Z.ai GLM 5.2](https://docs.mistral.ai/models/zai-glm-5-2.md): A third-party open weight text model from Z.ai with a 1M-token context window.
+--- llms/readme head ---
+# Mistral AI
+> Developer documentation for the Mistral AI platform: API references, product guides, and quickstarts for Le Chat, Vibe, Mistral AI Studio, and the Mistral API.
+Every link points to the markdown version of a page (same URL with a `.md` extension), served for LLM consumption. Fetch the page URL without the extension for the rendered HTML version.
+## Admin
+- [API reference](https://docs.mistral.ai/admin/admin-api/api-reference.md): Admin API endpoint reference generated from the OpenAPI specification.
+- [Authentication](https://docs.mistral.ai/admin/admin-api/authentication.md): How Admin API keys work, where to create them, and how to authenticate requests.
+- [Manage groups and roles](https://docs.mistral.ai/admin/admin-api/manage-groups-roles.md): Create user groups, manage membership and Workspace assignments, and list roles with the Admin API.
+- [Manage users](https://docs.mistral.ai/admin/admin-api/manage-users.md): List, create, update, invite, and remove Organization users with the Admin API.
+- [Manage Workspaces](https://docs.mistral.ai/admin/admin-api/manage-workspaces.md): List, create, update, and delete Workspaces and manage their members with the Admin API.
+- [Overview](https://docs.mistral.ai/admin/admin-api/overview.md): Manage your Organization programmatically: users, groups, Workspaces, API keys, limits, usage, and audit logs.
+- [Usage metrics](https://docs.mistral.ai/admin/admin-api/usage-metrics.md): Retrieve billing usage, spending and rate limits, le Chat activity, and Vibe Code analytics with the Admin API.
+- [User provisioning](https://docs.mistral.ai/admin/admin-api/user-provisioning.md): Bulk-create or invite users, organize them into a user group, and grant them access to a Workspace with the Admin API.
+- [Billing](https://docs.mistral.ai/admin/billing-usage/billing.md): Use Billing to manage how your Organization pays for Mistral services.
+- [Invoices](https://docs.mistral.ai/admin/billing-usage/invoices.md): Find and download your invoices.
+- [Subscriptions](https://docs.mistral.ai/admin/billing-usage/subscriptions.md): Use Subscription to review the Mistral plan, seats, included monthly usage, and pay-as-you-go settings active on your Organization.
+- [Usage and limits](https://docs.mistral.ai/admin/billing-usage/usage-limits.md): Monitor Organization usage, understand limits, and decide where to adjust caps.
+- [API keys](https://docs.mistral.ai/admin/identity-access/api-keys.md): API keys authenticate requests to the Mistral API and other Mistral tools.
+- [Connectors](https://docs.mistral.ai/admin/identity-access/connectors.md): Manage organization app connections and Connector tool access from Admin.

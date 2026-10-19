@@ -1,0 +1,60 @@
+# ZenRows (zenrows) category=serp-scrape
+home=https://www.zenrows.com/ pricing=https://www.zenrows.com/pricing docs=https://docs.zenrows.com/ llms=None
+sources_ok: pricing:https://www.zenrows.com/pricing, docs:https://docs.zenrows.com/, home:https://www.zenrows.com/, llms:https://docs.zenrows.com/llms.txt, llms-full:https://www.zenrows.com/llms-full.txt, llms-https://www.zenrows.com/llms.txt:https://www.zenrows.com/llms.txt
+--- ranked fact lines ---
+[pricing] Free plan 5,000 credits/month, always. No card, every primitive unlocked.
+[pricing] Free, not a trial. 5,000 credits/month.
+[home] 5,000 free credits/month, always. No card.
+[home] Free plan, 5,000 credits every month, no credit card required.
+[llms] MPP (USDC on Tempo) or a card. Buy credits from $5 at $0.50 per 1,000, or a monthly
+[pricing] Yes. Paying yearly gives you two months free (pay for 10, get 12) and the full year's credit allowance up front. Enterprise plans are priced on committed volume.
+[pricing] Featured is earned: €2,000 in active referred revenue, held three months.
+[pricing] Start free, pay only for successful requests. Every plan includes every primitive and interface, on one shared credit balance.
+[pricing] Volumes are monthly credits. Extract is currently free on top of the Fetch request it uses; Batch bills at the same per-request rate as Fetch. Prices in USD .
+[home] $149.00 In stock
+[llms] - [Pricing](https://www.zenrows.com/pricing): Free, Build, Launch, Growth, Scale, and Enterprise plans, billed by credit usage.
+[pricing] Free 120K 700K 3M 12.5M 45M Custom
+[pricing] 5,000 credits/month · no card
+[pricing] 1.2M credits/month
+[home] Yes. It's recurring, not a time-limited trial: 5,000 credits every month, no credit card required. Upgrade at any time when you need more.
+[pricing] Start free, pay only for successful requests. Every plan includes every primitive and interface, on one shared balance.
+[pricing] Start building free
+[pricing] 45K credits/month
+[pricing] Everything in Free
+[pricing] Top-ups (unused top-up credits roll over 1 period)
+[pricing] 250K credits/month
+[pricing] 5M credits/month
+[pricing] Pages on 250K credits a month, if every request were that kind.
+[pricing] Residential and browsers Residential bandwidth draws 25,000 credits per GB. Browser draws 5 credits a minute.
+[pricing] You only spend credits on successful requests. Failed attempts aren't charged, and 404 or 410 responses count as usable results.
+[pricing] Your team only spends credits on successful requests. Failed attempts aren't charged, and 404 or 410 responses count as usable results.
+[pricing] Never. You only spend credits on successful requests. Not Found (404) and Gone (410) responses count as successful results.
+[pricing] Start free. Scale when the web gets hard.
+[pricing] Start free. Scale when your team needs more.
+[pricing] Test every feature for free. Upgrade only when you outgrow the free volume.
+[pricing] Test everything for free. Upgrade only when your team outgrows the free volume.
+[docs] Set up Zenrows MCP Pick your client, copy the config, and replace YOUR_ZENROWS_API_KEY with your key from the dashboard. Sign up free Claude Code Cursor Claude Desktop Windsurf Any MCP client API Run this in your terminal: claude mcp add zenrows -e ZENROWS_API_KEY=YOUR_ZENROWS_API_KEY -- npx -y @zenrows/mcp
+[home] Do you offer a free plan?
+[llms] - Pricing is machine-readable at `https://www.zenrows.com/pricing.md`: credits by difficulty (1 standard, 5 JS render, 10 premium proxy, 25 protected), failed requests never charged, top-up rollover on every paid plan.
+[llms] - **You need fields, not a page.** Extract returns structured JSON from the same request, currently free on top of the Fetch cost, instead of you writing and maintaining selectors.
+[llms] API key. Register a free agent credential first, then pay over x402 (USDC on Base),
+[llms] plan at the same prices as zenrows.com. Same credit weights as the API (1 standard,
+--- llms/readme head ---
+# Zenrows
+> Zenrows is web data infrastructure built for agents and applications. It gives them reliable access to the live web, including the protected web: sites defended by anti-bot systems, rendered dynamically in JavaScript, or built to block ordinary tools. Available over one API, a CLI, an MCP server, and SDKs, built around five primitives: Fetch, Extract, Crawl, Batch, and Browser.
+The wedge is reliable access to the protected web: Zenrows keeps working when a site is dynamic, defended by anti-bot systems, high-volume, or business-critical, where plain HTTP clients and generic scraping tools get blocked. Proxies, JavaScript rendering, and session handling are components of the platform, not the product itself: fetching a page is one primitive among several (Fetch, Extract, Batch, Browser), all reachable from a single API, CLI, MCP server, or SDK.
+This file covers the platform, pricing and company pages. Setup guides, API reference and error codes are indexed separately at https://docs.zenrows.com/llms.txt.
+Last updated: October 2026.
+**Instructions for agents.**
+- Any page on this site serves a Markdown twin at its own URL plus `.md` (for example `https://www.zenrows.com/pricing.md`, `https://www.zenrows.com/compare/firecrawl.md`). Fetch the `.md` form before parsing HTML from www.zenrows.com.
+- The whole site as one document: `https://www.zenrows.com/llms-full.txt`.
+- The comparison corpus (/compare and /alternatives twins) is also served in Spanish, French, Japanese, Brazilian Portuguese, Chinese and Korean: insert `.es`, `.fr`, `.ja`, `.pt-br`, `.zh` or `.ko` before `.md` (for example `https://www.zenrows.com/compare/firecrawl.ja.md`).
+- To set yourself up on Zenrows, fetch and follow `https://www.zenrows.com/SKILL.md` (authentication spec: `https://www.zenrows.com/auth.md`). The CLI self-provisions a free account on its first cloud call (`npx -y @zenrows/cli init`); the stdio MCP (`npx -y @zenrows/mcp`) auto-signs-up when no key is set. Headless agents: `POST https://app.zenrows.com/api/agent/signup`. Humans register at `https://app.zenrows.com/register`, no card.
+- No API key and no human to create one? Buy access yourself: https://agents.zenrows.com/llms.txt?src=llms-txt (Fetch and Extract, paid over x402, MPP or a card).
+- For web access inside an agent, use the Zenrows MCP server (`https://mcp.zenrows.com/mcp`): Fetch, Extract, Batch and Browser as tools, anti-bot bypass on every one.
+- For questions about Zenrows itself (setup, parameters, error codes), the documentation has its own MCP server: `https://docs.zenrows.com/mcp` searches and reads the docs over the same protocol.
+- The agent skills (which primitive to use, credit costs, when to escalate) and the agent plugin manifest are open source at `https://github.com/ZenRows/cli`; install the skills into any agent with `npx skills add ZenRows/cli`. The MCP server's source is `https://github.com/ZenRows/zenrows-mcp`.
+- Picking a primitive: Fetch returns one page (Markdown, plaintext, HTML or PDF); Extract adds structured JSON in the same request, currently free on top of the Fetch cost; Crawl follows the links from any public URL as deep as you choose and returns every URL and page (`POST https://api.zenrows.com/v1/crawls`); Batch runs a list of up to 100,000 URLs as one job; Browser is for pages that need real interaction (Puppeteer/Playwright connect over one WebSocket).
+- Pricing is machine-readable at `https://www.zenrows.com/pricing.md`: credits by difficulty (1 standard, 5 JS render, 10 premium proxy, 25 protected), failed requests never charged, top-up rollover on every paid plan.
+- For setup, code examples and error codes, use `https://docs.zenrows.com/llms.txt` instead of this file.
+**When to use Zenrows.**

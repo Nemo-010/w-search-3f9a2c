@@ -1,0 +1,73 @@
+{
+ "slug": "screenshotapi",
+ "name": "ScreenshotAPI.net",
+ "category": "reader",
+ "fetched_at": "2026-10-19T05:54:35+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://screenshotapi.net/pricing",
+   "status": 200,
+   "final_url": "https://www.screenshotapi.net/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 101133,
+   "truncated": false,
+   "sha256": "dac9ead027f911f976ba9a226d93841080ea2102c51781f7f17fc1e6cdcdc9cb",
+   "fetched_at": "2026-10-19T05:54:35+00:00",
+   "text_bytes": 3296
+  },
+  "home": {
+   "url": "https://screenshotapi.net/",
+   "status": 200,
+   "final_url": "https://www.screenshotapi.net/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 572427,
+   "truncated": false,
+   "sha256": "86430aeb39c1763f8a097730aa86bc580c9c683bc5267185257bd245341f9fbd",
+   "fetched_at": "2026-10-19T05:54:36+00:00",
+   "text_bytes": 22321
+  },
+  "llms": {
+   "url": "https://screenshotapi.net/llms.txt",
+   "status": 200,
+   "final_url": "https://www.screenshotapi.net/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 4663,
+   "truncated": false,
+   "sha256": "e80aa5caa0b808874ffca972f93ac587f219658ff1527696d490f392b74dbcba",
+   "fetched_at": "2026-10-19T05:54:38+00:00",
+   "text_bytes": 4663
+  },
+  "llms-err-1f2844": {
+   "url": "https://screenshotapi.net/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://screenshotapi.net/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 16295,
+   "truncated": false,
+   "sha256": "f95b6007f8878921ea788ed06aaf8c7e8540d1cd8495febaabea92f370a9bead",
+   "fetched_at": "2026-10-19T05:54:39+00:00"
+  },
+  "llms-https://docs.screenshotapi.net/llms.txt": {
+   "url": "https://docs.screenshotapi.net/llms.txt",
+   "status": 200,
+   "final_url": "https://www.screenshotapi.net/docs/getStarted",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 84998,
+   "truncated": false,
+   "sha256": "085d5c6736e8a275e0302cf211acd595fe86232b1ebaf82d3bf756efb3a2caab",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 10201
+  },
+  "llms-full": {
+   "url": "https://docs.screenshotapi.net/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.screenshotapi.net/docs/getStarted",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 84998,
+   "truncated": false,
+   "sha256": "3605110d0e169e3459cf3b664f27d2ec19dd344f6c5e59e992b8b1993dd79a16",
+   "fetched_at": "2026-10-19T05:54:40+00:00",
+   "text_bytes": 10201
+  }
+ }
+}

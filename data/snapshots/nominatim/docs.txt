@@ -1,0 +1,83 @@
+Overview - Nominatim 5.3.3 Manual 
+ Nominatim 5.3.3 Manual
+ Overview
+ Initializing search
+ GitHub
+ Introduction
+ API Reference
+ Administration Guide
+ Customization Guide
+ Library Guide
+ Developers Guide
+ Nominatim 5.3.3 Manual
+ GitHub
+ Introduction
+ API Reference
+ API Reference
+ Overview
+ Search
+ Reverse
+ Address Lookup
+ Details
+ Status
+ Place Output Formats
+ FAQ
+ Administration Guide
+ Administration Guide
+ Basic Installation
+ Import
+ Update
+ Deploy
+ Nominatim UI
+ Advanced Installations
+ Maintenance
+ Migration from older Versions
+ Troubleshooting
+ Installation on Ubuntu 22
+ Installation on Ubuntu 24
+ Customization Guide
+ Customization Guide
+ Overview
+ Import Styles
+ Configuration Settings
+ API Result Formatting
+ Per-Country Data
+ Place Ranking
+ Importance
+ Tokenizers
+ Special Phrases
+ External data: US housenumbers from TIGER
+ External data: Postcodes
+ Conversion to SQLite
+ Library Guide
+ Library Guide
+ Getting Started
+ Nominatim API class
+ Configuration
+ Input Parameter Types
+ Result Handling
+ Low-level DB Access
+ Developers Guide
+ Developers Guide
+ Architecture Overview
+ Database Layout
+ Indexing
+ Tokenizers
+ Custom modules for ICU tokenizer
+ Setup for Development
+ Testing
+ External Data Sources
+ Overview 
+ This section describes the API V1 of the Nominatim web service. The
+service offers the following endpoints: 
+ /search - search OSM objects by name or type 
+ /reverse - search OSM object by their location 
+ /lookup - look up address details for OSM objects by their ID 
+ /status - query the status of the server 
+ /deletable - list objects that have been deleted in OSM but are held
+ back in Nominatim in case the deletion was accidental 
+ /polygons - list of broken polygons detected by Nominatim 
+ /details - show internal details for an object (for debugging only) 
+ Copyright © Nominatim developer community
+ Made with
+ Material for MkDocs

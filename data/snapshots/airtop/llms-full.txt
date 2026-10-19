@@ -1,0 +1,962 @@
+# Get Invocation Result
+Source: https://www.airtop.ai/help/api-reference/get-invocation-result
+
+/openapi.json get /api/hooks/agents/{agentId}/invocations/{invocationId}/result
+Retrieves the status and result of a specific agent invocation.
+
+
+
+# Trigger Agent Webhook
+Source: https://www.airtop.ai/help/api-reference/trigger-agent-webhook
+
+/openapi.json post /api/hooks/agents/{agentId}/webhooks/{webhookId}
+Triggers an agent execution via webhook. You can optionally provide configuration variables and a callback URL.
+
+
+
+# Billing & Credits
+Source: https://www.airtop.ai/help/billing/billing
+
+This guide explains how Airtop billing works, how credits are renewed, and how you can manage your subscription. Whether you’re on the Free plan or a paid plan, the basics are the same.
+
+## How Credits Work
+
+Airtop uses **credits** to power usage across the platform. Each subscription plan includes a monthly credit allowance that refreshes automatically.
+
+### When do credits renew?
+
+* Credits renew **every month** on **all plans**, including the Free plan.
+* Your renewal date is:
+  * The day you subscribed to a paid plan, or
+  * The day you created your account if you’re on the Free plan.
+* At each renewal, your balance **resets to your plan’s monthly credit allowance** (plus any credits granted to you by Airtop). Unused monthly credits **do not carry over** to the next billing cycle.
+
+## Free Plan Credits
+
+* The **Free plan includes 1,000 credits every month**.
+* New accounts also receive a **one-time signup grant of 30,000 credits**, so you start with **31,000 credits**.
+* The signup grant is available for your **first billing cycle only** — at your first renewal, your balance resets to the plan’s 1,000 monthly credits.
+* Monthly credits **automatically renew**, so you always start each month with a fresh allowance.
+
+## What If I Need More Credits?
+
+If you run out of credits, you can move to a plan with a higher allowance.
+
+* Airtop does not offer one-off credit purchases.
+* **Upgrades are prorated**, meaning:
+  * You only pay for the remaining time in your current billing cycle.
+  * You’ll receive **credits based on the time left** in that cycle.
+
+This makes it easy to scale up without paying for unused time.
+
+## Changing Your Subscription Plan
+
+You can upgrade or downgrade your plan at any time.
+
+1. Go to **Organization Settings → Plans**, or visit:\
+   [https://portal.airtop.ai/settings/organization/plans](https://portal.airtop.ai/settings/organization/plans)
+2. Choose the plan that best fits your needs.
+
+Plan changes take effect immediately and are reflected in your billing.
+
+## Refunds
+
+If Airtop doesn’t work for your use case, you may be eligible for a refund.
+
+You can request a refund for your **most recent subscription charge** if:
+
+* The charge was made **within the last 5 business days**, and
+* **No credits were used** during the current billing period.
+
+To request a refund, email **[support@airtop.ai](mailto:support@airtop.ai)** from the email address associated with your Airtop account.
+
+> Please note: Airtop’s refund policy may change over time.
+
+## Viewing Your Credit Balance
+
+You can always check how many credits you have left from your dashboard.
+
+* Visit the **Billing page** directly:\
+  [https://portal.airtop.ai/settings/organization/billing](https://portal.airtop.ai/settings/organization/billing)
+
+Or navigate there manually:
+
+1. Click your **organization name** in the bottom-left corner
+2. Select **Organization Settings**
+3. Open **Billing**
+
+If you have questions or need help choosing the right plan, feel free to reach out to **[support@airtop.ai](mailto:support@airtop.ai)**. We’re happy to help!
+
+
+# Changelog
+Source: https://www.airtop.ai/help/changelog
+
+New Airtop features, improvements, and fixes.
+
+<Update label="August 5, 2026">
+  ## Self-healing
+
+  Self-healing helps keep your deployed agents running when the websites and services they use change. When an eligible automated run fails, Airtop investigates the problem and prepares a tested repair draft for you to review. Your live agent remains unchanged until you choose to deploy the repair.
+
+  If an agent continues to fail, Airtop can automatically pause it to prevent repeated unattended failures. Automatic repair is enabled by default, and you can configure each agent's failure threshold in its self-healing settings.
+
+  Learn more about [self-healing](/help/guides/self-healing).
+</Update>
+
+
+# Connect Airtop with Make
+Source: https://www.airtop.ai/help/connections/make
+
+Connect Airtop Agents with Make to create code-free automations and integrate with hundreds of apps and services.
+
+## Overview
+
+[Make](https://www.make.com) is a visual platform that allows you to design, build, and automate workflows without writing code. After you **deploy** your Agent, you can trigger it directly from Make and process the results within your scenarios.
+
+<iframe title="YouTube video player" />
+
+## Run your deployed Agent from Make
+
+<Steps>
+  <Step title="Open connection settings">
+    Navigate to your Agent's build page and click **Connect**.
+
+    <Frame>
+      <img alt="Open connection settings for Make" />
+    </Frame>
+  </Step>
+
+  <Step title="Add the Airtop module">
+    In your Make scenario, add the Airtop **Run Agent** module.
+
+    <Frame>
+      <img alt="Add Run Agent module in Make" />
+    </Frame>
+  </Step>
+
+  <Step title="Set Agent parameters">
+    Select your agent from the dropdown and configure the parameters as needed.
+
+    <Frame>
+      <img alt="Make module configuration" />
+    </Frame>
+  </Step>
+
+  <Step title="Run the scenario">
+    Save your changes and run the scenario to test the integration.
+  </Step>
+</Steps>
+
+
+# Connect Airtop with n8n
+Source: https://www.airtop.ai/help/connections/n8n
+
+Connect Airtop Agents with n8n to build workflow automations and integrate with various apps and services.
+
+## Overview
+
+[n8n](https://n8n.io) is a workflow automation tool that enables you to connect apps and automate tasks. After you **deploy** your Agent, you can trigger it directly from n8n and process the results within your workflows.
+
+<iframe title="YouTube video player" />
+
+## Run your deployed Agent from n8n
+
+**Note:** Make sure your n8n instance is in [version 2.6.0](https://github.com/n8n-io/n8n/releases/tag/n8n%402.6.0) or above to use the latest features of Airtop Agents. Visit *[How to update n8n](https://docs.n8n.io/release-notes/#how-to-update-n8n)* for more details.
+
+<Steps>
+  <Step title="Add the Airtop node">
+    In your n8n workflow, add the Airtop **Run Agent** node.
+
+    <Frame>
+      <img alt="Add Run Agent node in n8n" />
+    </Frame>
+  </Step>
+
+  <Step title="Select your agent">
+    Choose your agent from the list. Type the agent name to filer out the results.
+
+    <Frame>
+      <img alt="Select agent from the n8 node" />
+    </Frame>
+  </Step>
+
+  <Step title="Set Agent parameters">
+    Fill the agent's input parameters in the section "Values to Send".
+
+    <Frame>
+      <img alt="Set agent parameters" />
+    </Frame>
+  </Step>
+
+  <Step title="Run the workflow">
+    Save your changes and execute the workflow to test the integration.
+  </Step>
+</Steps>
+
+
+# Connect Airtop with Zapier
+Source: https://www.airtop.ai/help/connections/zapier
+
+Connect Airtop Agents with Zapier to automate workflows and integrate with thousands of apps.
+
+## Overview
+
+[Zapier](https://zapier.com) is a no-code automation tool that connects your favorite apps into automated workflows. After you **deploy** your Agent, you can trigger it directly from Zapier and use the results in your Zaps.
+
+<iframe title="YouTube video player" />
+
+## Run your deployed Agent from Zapier
+
+<Steps>
+  <Step title="Open connection settings">
+    Navigate to your Agent's build page and click **Connect**, then select **Zapier** from the dropdown.
+  </Step>
+
+  <Step title="Add the Airtop action">
+    In your Zapier recipe (Zap), add the action **Run an Airtop agent** from the Airtop integration.
+
+    <Frame>
+      <img alt="Add Airtop action in Zapier" />
+    </Frame>
+  </Step>
+
+  <Step title="Select your agent">
+    In the **Agent** dropdown, select the agent you want to use. If you don't see an agent listed, check the Airtop portal to ensure it is enabled.
+  </Step>
+
+  <Step title="Set Agent parameters">
+    After selecting the agent, the necessary paratemers will be loaded and displayed automatically. Configure the values accordingly. *Remember to check the field's tooltips for things like field constraints and formats*.
+
+    <Frame>
+      <img alt="Set Agent parameters" />
+    </Frame>
+  </Step>
+
+  <Step title="Test the step and save">
+    Test the step to ensure the connection works, then save your Zap.
+  </Step>
+</Steps>
+
+
+# FAQ
+Source: https://www.airtop.ai/help/guides/FAQ
+
+Frequently Asked Questions about Airtop Agents.
+
+## Getting Started with Airtop Agents
+
+<AccordionGroup>
+  <Accordion title="What should I automate with Airtop Agents?">
+    Airtop Agents are best for automating **repetitive**  tasks on the web. Airtop Agents can click, scroll, scrape, login, and interact with dynamic websites. If you have tasks which you find yourself doing on a regular basis that involve using the web (like logging into portals, filling out forms, or scraping data), Airtop is a good tool for automating these tasks.
+  </Accordion>
+
+  <Accordion title="What are Airtop Agent Templates?">
+    Airtop [Templates](https://www.airtop.ai/templates) are pre-built, customizable AI Agents that have been tested and approved by the Airtop team. The automation code has already been written, so starting with an Airtop Template uses fewer credits than building an Agent from scratch. To customize a template, simply click **Try Agent**  and chat with the Agent Builder to customize it to your needs. 
+  </Accordion>
+
+  <Accordion title="Are Airtop Agent Templates customizable?">
+    Yes! You can customize any Agent Template by clicking **Try Agent**, then chatting with the Agent Builder to adjust the template to your needs. If you need your automation to do something very different from any available template, we recommend creating a new Agent and starting from scratch.
+  </Accordion>
+
+  <Accordion title="Can I make changes to my Airtop Agent after it’s already deployed?">
+    Yes. Simply go to the Agent page and describe what you want to change in the "Make changes to your agent..." field. You can then work with the Agent Builder to refine and update your Agent's behavior.
+  </Accordion>
+
+  <Accordion title="How do I trigger my Airtop Agent from external tools?">
+    To trigger an Agent when an event happens in an external tool (like Slack, Gmail, GitHub, HubSpot, or Airtable), use the **Connect** panel on the Agent page.
+
+    * **Webhooks:** Select "Other" to generate a webhook endpoint URL. Then embed this webhook url in the tool or website of your choice.
+    * **Automation Platforms:** You can run Airtop Agents directly inside an [n8n](https://n8n.io), Zapier, or [Make.com](https://www.make.com/en/integrations/airtop) workflow. This allows you to trigger your agents with Slack, Google Forms, and thousands of other external apps and tools.
+  </Accordion>
+
+  <Accordion title="What is &#x22;Cloud Browsing&#x22;?">
+    **Cloud Browsing** runs web browser sessions on secure remote servers instead of your local device. In the context of Airtop, this means we provide a managed infrastructure where your AI Agents can navigate the live web, interact with applications, and extract data at scale. This eliminates the need for you to manage complex server infrastructure, handle anti-bot detection, or worry about browser scalability. You can run many Airtop Agents simultaneously thanks to Cloud Browsing.
+
+    Cloud Browsing is contrasted with **Client-side Browsing**, which runs directly on your local device (like your laptop). Client-side browsing uses your personal CPU, memory, and internet connection. While this is standard for personal use, it is difficult to scale for automation because it relies on your specific hardware limitations and local IP address, making it easier for websites to block.
+  </Accordion>
+
+  <Accordion title="Can I leave my Agent Builder session and come back to it?">
+    Yes! Your Agent Builder progress is automatically saved, so you can leave the session whenever you want. When you return, you can pick up where you left off with the Agent Builder.
+  </Accordion>
+</AccordionGroup>
+
+## Technical & Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="How do Airtop Agents handle 2FA/MFA?">
+    Airtop manages Multi-Factor Authentication (2FA) by preserving your authenticated state. You can use a **Live Browser View** to log in to the target website manually and complete the 2FA challenge. Airtop then saves this session as a **Profile** (storing cookies and browsing artifacts), which allows your automated Agents to run subsequently without being prompted for 2FA again.
+  </Accordion>
+
+  <Accordion title="I am encountering too many CAPTCHAs when using the Agent Browser. How do I fix this?">
+    You can make Agent logins more reliable by using the **Proxy** setting. A proxy routes your agent traffic through a residential IP, closely mimicking human behavior. This prevents CAPTCHA loops when trying to login using the Agent Browser Window.
+
+    4. Click the gear icon on the top right of the Agent Builder or Portal.
+    5. Select **Proxy** -> **Integrated**.
+    6. Choose your desired country (we recommend **United States** for most uses).
+  </Accordion>
+
+  <Accordion title="Does Airtop store my login credentials?">
+    No. Airtop **does not** store your actual login credentials (username/password) when you sign in using the Airtop browser. When you create a Profile to maintain your authentication state, Airtop only stores the encrypted cookies and browsing artifacts required to tell websites you are signed in.
+  </Accordion>
+</AccordionGroup>
+
+## Billing & Credits
+
+<AccordionGroup>
+  <Accordion title="When do credits renew?">
+    Credits renew monthly on all subscription plans, including the Free plan. Your renewal date is the specific day of the month you subscribed to your plan. For Free plans, it is the day of the month you originally created your account.
+  </Accordion>
+
+  <Accordion title="Do credits in the Free plan renew?">
+    Yes, credits in the Free plan renew monthly. You receive **1,000 credits** each month with the Free plan to build and test your agents.
+  </Accordion>
+
+  <Accordion title="How can I check my credit balance?">
+    You can check your current balance in the Airtop Portal:
+
+    1. Click on your organization name (bottom left corner).
+    2. Select **Organization Settings**.
+    3. Select **Billing**.
+  </Accordion>
+
+  <Accordion title="Can I buy more credits if I run out?">
+    If you run out of credits, you can upgrade to a subscription with a higher credit allowance. The upgrade is **prorated**, meaning you will only pay for the days remaining until your next billing cycle, and you will receive credits proportional to that remaining period.
+  </Accordion>
+
+  <Accordion title="How can I upgrade or downgrade my subscription?">
+    To change your subscription plan, visit the **Plans** page in your Organization Settings: [https://portal.airtop.ai/settings/organization/plans](https://portal.airtop.ai/settings/organization/plans)
+  </Accordion>
+
+  <Accordion title="What is the refund policy?">
+    You can request a refund of your last subscription charge if the following criteria are met:
+
+    * The charge occurred within the last **5 business days**.
+    * No credits were used in the last billing period.
+
+    To request a refund, please email [support@airtop.ai](mailto:support@airtop.ai) from the email account linked to your Airtop account.
+  </Accordion>
+</AccordionGroup>
+
+
+# What you can do with the Agent Builder
+Source: https://www.airtop.ai/help/guides/agent-builder
+
+Supported features within the Agent Builder
+
+**Build with words.** Describe what you want your agent to do in plain English. Agent Builder lets you combine browser automation, AI that understands pages, connected apps, and downloaded files in one agent.
+
+Your agent uses those descriptions to find the right buttons, fields, and information. You don't need to write browser-control code or CSS selectors.
+
+## Browse websites
+
+Give your agent the steps you'd take in a browser:
+
+* Open a website.
+* Open another browser window when the task needs more than one page.
+* Go back or forward through browser history.
+* Wait for a page to load before taking the next step.
+* Check basic details about the current browser window.
+
+## Interact with pages
+
+Tell your agent what to click, type, or look for:
+
+* Click a button, link, or other page element by describing it, like "the Search button."
+* Type into a field or fill out an entire form.
+* Hover over an element to reveal a menu, tooltip, or other content.
+* Scroll through the page.
+* Wait for a change you describe, like "the results table appears."
+
+## Get information from pages
+
+Turn what your agent reads into information it can use:
+
+* Ask a question about the current page and use the answer in the next steps.
+* Use AI to make sense of information across the pages in a browser session.
+* Collect names, prices, links, or table rows in a structured format you can use in later steps.
+
+## Work with integrations
+
+Connect your browser tasks to the apps you use:
+
+* Ask a connected app to take an action or get information, using plain English.
+* Pass information between a website and a connected app as part of the same agent's run.
+
+<Info>
+  Available apps and actions depend on the services you've connected. Visit [integrations](/help/integrations/overview) for the full list of services you can connect with Airtop.
+</Info>
+
+## Use downloaded files
+
+* Wait for a file download to complete.
+* Retrieve the file so your agent can use it in later steps.
+
+## Put it together
+
+Combine these capabilities to build an agent that:
+
+* Visits a website, collects the information you need, and sends it to a connected app.
+* Fills out an online form with information you provide.
+* Watches a page for a change and takes the next step when it happens.
+* Starts a download and processes the file once it's ready.
+
+
+# Authentication
+Source: https://www.airtop.ai/help/guides/authentication
+
+Learn how to authenticate to services with Airtop
+
+## Overview
+
+When you build an agent with Airtop, it might interact with services via APIs, or via a web browser. Airtop supports a [few direct API integrations](https://portal.airtop.ai/integrations), but uses a web browser for anything else. Airtop lets you authenticate with both types of services, in a way that is easy to manage, secure, and allows your agent to access those services in the background.
+
+## Integrations
+
+Airtop supports a few [API Integrations](https://portal.airtop.ai/integrations). If you ask Airtop to use one of these services, the assistant will prompt you to authenticate.
+
+First, you'll be prompted to authenticate with the service.
+
+<Frame>
+  <img alt="Airtop API integration authentication prompt" />
+</Frame>
+
+Once you click the "Authorize API Access" button, you'll be redirected to the service's authentication page.
+
+<Frame>
+  <img alt="Airtop web profile authentication setup" />
+</Frame>
+
+Finally, once you've successfully authenticated, you'll see a confirmation message that Airtop can now access the service.
+
+<Frame>
+  <img alt="Airtop web profile confirmation" />
+</Frame>
+
+You'll see that Airtop can now access the service on your behalf while you're building your agent, and once deployed, it will continue to access the service in the background.
+
+## Web Profiles
+
+For services that don't have direct API integrations, Airtop uses web browser profiles to authenticate and interact with websites. These profiles are created and managed by Airtop, so you don't have to worry about managing them.
+
+Each agent has its own profile. When the Assistant detects that you need to be logged into a site to access it, it will prompt you to authenticate. You can log into the site directly in the embedded browser and let the assistant know when you're done.
+
+<Frame>
+  <img alt="Airtop web profile authentication prompt" />
+</Frame>
+
+Once you've logged in, the profile will store all necessary cookies and reuse them when the agent runs in the background, so you don't have to log in every time.
+
+### Expiring Credentials
+
+Although Airtop will store your credentials for you, some sites periodically expire cookies, requiring you to log in again. If that happens, your agent will email you and let you know that it cannot log in to the target site. You can create a new version of your agent and let the Assistant know you need to re-authenticate, and it will guide you through the process.
+
+### Clearing a Web Profile
+
+If you need to clear the profile, for any reason, you can do so by clicking the "Clear" button in the Browser Profile settings page.
+
+<Frame>
+  <img alt="Airtop web profile clear" />
+</Frame>
+
+### Security
+
+Web profiles are secure and encrypted at several layers. First, the profile is encrypted at rest while on our servers using AES-256 encryption. Second, once loaded into the browser, the profile is encrypted in memory using the same rock solid encryption that your Chrome browser uses for your local cookies. And third, every web browser runs on its own separate virtual machine so there is no risk of cross-contamination between browsers. We take security very seriously and are regularly audited by third-party security experts, and are SOC 2, and HIPAA compliant. You can learn more about our security practices in our [Trust Center](https://trust.airtop.ai).
+
+
+# Bot Detection Avoidance
+Source: https://www.airtop.ai/help/guides/bot-detection
+
+Understanding and configuring bot detection avoidance strategies
+
+## Overview
+
+Airtop is designed to avoid bot detection as much as possible. We use a variety of techniques to do this, including:
+
+* Running a real browser in the cloud, not a headless browser
+* Advanced fingerprinting techniques
+* Residential proxy network integration
+* Automated captcha solving
+* And much more...
+
+For the most part, you don't have to worry about bot detection and configuration; Airtop takes care of it for you. However, there are a few things you can do to help if you run into issues. We'll cover some of these in this guide.
+
+## Configuring Residential Proxies
+
+By default, Airtop issues traffic from within a cloud data center. However, some sites will block traffic coming from the cloud. To avoid this, you can configure Airtop to use a residential proxy network.
+
+If you notice that your agent is being blocked or presented with a CAPTCHA, you can try enabling the integrated proxy network by going to the Agent's Settings page and enabling the Integrated proxy.
+
+<Frame>
+  <img alt="Airtop enable proxy" />
+</Frame>
+
+This will route traffic through a residential proxy network, which is less likely to be blocked by sites. Your agents may run slightly slower with this option enabled, but it's a good way to avoid being blocked. You can specify the proxy country you want to use.
+
+### Using Your Own Proxy Server
+
+The integrated proxy service has a few domains that it cannot access. If you try to access one of these domains, you'll see a failure to load the site. These domains are:
+
+* Some streaming services (e.g., Netflix)
+* Some banking and other financial institutions
+* Ticketing sites like Ticketmaster
+
+If you need to access one of these domains, you can use a custom proxy instead, which may have fewer restrictions. In this model, you pay the proxy provider directly and simply give us the configuration options to be used by your agents.
+
+Here are some providers that we've tested and have reasonable quality:
+
+1. [Oxylabs](https://oxylabs.io)
+2. [Smartproxy](https://smartproxy.com)
+3. [IPRoyal](https://iproyal.com)
+
+## Constraining Your Agent's Behavior
+
+In some cases, it's not the source of traffic that is being blocked, but rather the behavior of the agent itself that may be detected as bot-like. To help avoid this, you can configure your agent to behave more like a human.
+
+For example, slow down your agent's actions or restrict the number of actions per session. Say you're extracting content from a website and navigating to 1000 pages as quickly as possible. That may be detected as bot-like behavior, whereas going to 10 pages within a few minutes may not be. You can ask the Assistant to slow down the agent's actions, or restrict the number of actions per session.
+
+If you are getting blocked, not upon loading a site, but after a few seconds or minutes of activity, think about what you're doing that appears non-human, and ask the Assistant to adjust your agent's behavior.
+
+
+# Introduction
+Source: https://www.airtop.ai/help/guides/introduction
+
+Get a quick overview of Airtop
+
+## What is Airtop?
+
+Airtop is a platform for building and deploying AI agents that can perform repetitive tasks on your behalf, all running in the cloud, doing work for you while you sleep.
+
+<iframe title="Airtop Overview Video" />
+
+Airtop is designed for highly repetitive tasks where you need a high degree of accuracy and reliability. It's perfect for tasks like:
+
+* Monitoring competitor pricing and adjusting your own accordingly
+* Triaging incoming sales leads, researching companies, and assigning lead scores
+* Monitoring social media accounts and engaging with followers
+* Any other regular task you want to automate
+
+Airtop uses APIs for some services, but uses a web browser for anything else. If you can open it in a browser, Airtop can automate it.
+
+<Card title="Start here" icon="rocket" href="/help/guides/quick-start">
+  Follow our quick start guide for an example of how to get started.
+</Card>
+
+## Where to go from here
+
+Here are a few resources to help you get started with Airtop.
+
+<Columns>
+  <Card title="Agent Templates" icon="file-lines" href="https://www.airtop.ai/templates">
+    We've already built a few agent templates for you to get started with. You can use them as is, or as a starting point for your own agents.
+  </Card>
+
+  <Card title="Start an agent right now" icon="pen" href="https://portal.airtop.ai/agents/new">
+    Start an agent right now and see it in action.
+  </Card>
+</Columns>
+
+
+# Meet Mark: Your go-to-market AI agent
+Source: https://www.airtop.ai/help/guides/mark
+
+Use Mark to turn your go-to-market goals into repeatable, scalable agent workflows.
+
+Mark is an AI marketing agent that turns your go-to-market goals into repeatable, scalable workflows. Mark helps you identify opportunities, prioritize actions, and build the agents you need to reach your marketing goals.
+
+To get started, open [Mark in the Airtop Portal](https://portal.airtop.ai/gtm-engineer) and tell Mark about your company and goals.
+
+<Frame>
+  <img alt="Conversation with Mark about a company's go-to-market goals" />
+</Frame>
+
+## What Mark can do
+
+### Built-in marketing expertise
+
+Mark comes with specialized marketing knowledge. Ask Mark a marketing question, and it provides an answer tailored to your company's context by combining your business information with marketing best practices.
+
+<Frame>
+  <img alt="Mark answering a marketing question with recommendations tailored to a company" />
+</Frame>
+
+### Knowledge Base
+
+Mark keeps your business context in the [Knowledge Base](https://portal.airtop.ai/knowledge-base). The Knowledge Base is the shared source of truth for you, your team, and every agent you build.
+
+Keep your documents current so Mark has the information it needs to run your go-to-market automations. Accurate source material helps your agents deliver better results.
+
+<Frame>
+  <img alt="Airtop Knowledge Base containing company documents for Mark" />
+</Frame>
+
+### Repeatable agent automations
+
+Mark transforms recurring marketing tasks into repeatable agents. You can use Mark to find and enrich leads, send personalized outreach, analyze Google Ads campaigns, and automate other go-to-market workflows.
+
+After you provide the necessary context, Mark starts one or more background agents to build the automation and customize its parameters for your company.
+
+<Frame>
+  <img alt="Mark building a repeatable marketing agent automation" />
+</Frame>
+
+### Service integrations
+
+Mark can use your [connected integrations](/help/integrations/overview) to gather context for research and one-time automations. For example, you can ask Mark to extract a company list from a spreadsheet, enrich each company's business profile, and validate lead email addresses.
+
+If an automation needs access to an external service, Mark prompts you to connect it. You can disable an active integration at any time from the [Integrations page in the Airtop Portal](https://portal.airtop.ai/integrations).
+
+<Frame>
+  <img alt="Service integrations available for Mark in the Airtop Portal" />
+</Frame>
+
+## Plans and pricing
+
+* **Trial:** Try Mark free for 7 days or until you use your initial credits.
+* **Availability:** Mark is included with the Professional plan and above. See the [Airtop pricing page](https://www.airtop.ai/pricing) for a complete comparison of plans and features.
+
+
+# Quick Start
+Source: https://www.airtop.ai/help/guides/quick-start
+
+Start building awesome agents in minutes
+
+There are two ways to get started with Airtop. You can either start an agent from scratch or use one of our pre-built agent templates.
+
+## What Should I Automate?
+
+Airtop is best at automating repetitive tasks that require interacting with the web. If you have a task that needs to be completed daily, weekly, or monthly, and it involves interacting with the web, including navigating to websites, logging in to services, or filling out web forms, then Airtop is the right choice.
+
+Some good use-cases for Airtop are:
+
+* Filling out web forms
+* Collecting data from web pages
+* Lead generation
+* Monitoring social media
+* Engaging with social media posts
+* Really anything you can think of...
+
+Any web-based task that needs to be completed on a consistent basis is a good candidate for automation with Airtop.
+
+## Use a Template
+
+Templates are the fastest way to start automating the web with Airtop.
+
+Airtop templates are pre-built, customizable automations built by Airtop and our community. These templates have been tested and approved by Airtop.
+
+Remixing a template takes substantially less time than building a custom agent. They also require fewer credits to build with than starting from scratch, as much of the automation legwork has already been completed.
+
+To remix a template, go to [Templates](https://www.airtop.ai/templates), select a template that fits your needs, and click "Try Agent." Then simply tell the Assistant how you'd like to change the template. If the template is already very similar to what you need, then you will just need to connect the necessary integrations and adjust any desired parameters. The Assistant will guide you through this process step-by-step.
+
+<Frame>
+  <img alt="Airtop templates list" />
+</Frame>
+
+<br />
+
+<Frame>
+  <img alt="Airtop template details" />
+</Frame>
+
+If you need to radically change a template to fit your needs – for instance, if the template has little to do with your intended use-case – then it will be faster to start from scratch.
+
+## Start from Scratch
+
+If there are no templates that fit your automation needs, then you can build an agent from scratch.
+
+Navigate to: [Agents](https://portal.airtop.ai/agents)
+
+Sign in or create an account if needed.
+
+**Creating a New Agent**
+
+Click "+ Create New Agent" in the top righthand corner of the Airtop Portal.
+
+Then describe what you want to automate. Be clear and concise with your prompt.
+
+<Frame>
+  <img alt="Airtop new agent" />
+</Frame>
+
+Start with a simple prompt, then work with the Assistant to expand and fine-tune your automation.
+
+**Working with the Assistant**
+
+The Assistant will work with you to connect any integrations you'll need (like Slack), specify which Slack channel or channels to monitor, and what kind of summary to create. There is no need to specify all of this information in the initial prompt.
+
+If you see that the Assistant is doing something you don't want it to do, you can correct it at any time in the chat box. Don't hesitate to interrupt it!
+
+Agent sessions are **saved automatically**. If you need to leave the Assistant, or your session times out, you can return to the same project and pick up where you left off.
+
+The Assistant will write the automation code for you, test it, and fix any problems that it encounters along the way. The Assistant will ping you if it needs approval or clarification. Make sure to turn on desktop notifications!
+
+**Deploying and Scheduling an Agent**
+
+Once you are satisfied with your agent, it's time to deploy! Click "Deploy" in the chat or top-right corner. This will finalize your agent and make it available for scheduling and triggering.
+
+<Frame>
+  <img alt="Airtop deploy agent" />
+</Frame>
+
+On the Deploy popup, you can configure the agent's schedule and trigger options. You can either schedule the agent to run automatically, or leave it without a schedule to trigger manually or via a webhook or external service.
+
+<Frame>
+  <img alt="Airtop deploy modal" />
+</Frame>
+
+**Sharing an Agent as a Template**
+
+If you want to share your agent with others, or submit your agent to the Airtop community, click "Share."
+
+This will automatically anonymize any sensitive data in your Agent (API keys, login information, etc) and create a template description page. You can edit the template description page or leave it as-is, and submit your template to the Airtop team for review, or send a private link to anyone.
+
+<Frame>
+  <img alt="Airtop share button" />
+</Frame>
+
+We appreciate your contribution to the community!
+
+
+# Self-Healing
+Source: https://www.airtop.ai/help/guides/self-healing
+
+Keep your deployed agents running without constant supervision
+
+Self-Healing is a new capability added to Airtop's Agent Builder. Agent Builder compiles automations into reusable code — resulting in fast, highly efficient agents. With self-healing, Airtop agents will automatically initiate a repair.
+
+## What is self-healing?
+
+An agent that fails several runs in a row is usually genuinely broken — and a broken agent that keeps running unattended can cause real problems, like sending incorrect details over email or Slack, or filling a spreadsheet with bad data.
+
+Self-healing helps keep your deployed agents running smoothly. It consists of two independent parts:
+
+* **Automatic repair** — when a deployed agent fails during an automated run, Airtop investigates the failure and prepares a fixed version for you to review.
+* **Automatic disabling** — if an agent keeps failing run after run, Airtop pauses it so it doesn't continue to fail unattended.
+
+Airtop never changes your live agent on its own. Automatic repairs are always prepared as a **draft**, and only you can decide to deploy it.
+
+## Why agents need self-healing
+
+Agents interact with real websites and services, and those change over time: a page gets redesigned, a button moves, or a service updates how it responds. An agent that worked perfectly last week can suddenly start failing through no fault of your own — often at night or on a weekend, when it's running on a schedule and nobody is watching.
+
+Self-healing acts as a safety net for exactly these situations. Instead of discovering a broken agent days later, Airtop notices the failure right away and starts working on a fix.
+
+## How automatic repair works
+
+When one of your deployed agent's automated runs fails, Airtop steps through the following process:
+
+1. **A run fails.** The failed run is recorded and a notification is sent. If a repair is starting, Airtop will notify you that we're attempting to prepare an automatic repair draft.
+2. **Airtop investigates and repairs.** Behind the scenes, Airtop opens an Agent Builder session, diagnoses what went wrong, updates the draft, and tests the fix.
+3. **You review the result.** When the repair passes its test, you're notified it's ready for review. You can inspect the changes in Agent Builder and deploy when satisfied.
+
+<Frame>
+  <img alt="Airtop self-healing banner" />
+</Frame>
+
+## Which failed runs start a repair
+
+### Repairable triggers
+
+Automatic repair focuses on runs that happen automatically. A repair can start when a failure occurs during a run started by:
+
+* A **Schedule**
+* A connected app trigger — **Gmail**, **Slack**, or **HubSpot**
+* An integration or webhook — **Zapier**, **Make**, **n8n**, or a custom **Webhook**
+
+### Exclusions
+
+Some failures don’t start a repair, because there’s nothing for a repair to fix:
+
+* **Runs you start yourself** — from the Run button, since you’re already there to see what happened.
+* **Failures that need something from you** — for example, the agent needs you to sign into a website, or a required integration isn’t connected to your account. Airtop can’t do these on your behalf, so it notifies you instead.
+* **Account limits** — Issues like credit exhaustion or exceeding session caps are not agent-specific and do not trigger repairs.
+* **Aborted runs** — Runs that are canceled before completion.
+* **Problems on Airtop’s side** — A transient Airtop service interruption does not indicate a flaw in your agent's logic, so no repair copy is generated.
+* **Test runs inside Agent Builder** — while you’re building, you’re the one in charge of fixes.
+
+Airtop is also careful never to get in the way of your own work:
+
+* If your agent **already has a draft in progress**, or someone is **actively working on it in Agent Builder**, no repair starts. Airtop never replaces or edits your draft.
+* Only **one repair at a time** runs per agent. If a repair is already underway, additional failures won’t start another one.
+
+## Automatic disabling after repeated failures
+
+Separately from repairs, Airtop protects you from an agent that keeps failing over and over. If an agent's automated runs — the same scheduled, triggered, and webhook-started runs listed above — fail several times **in a row**, Airtop disables the agent and notifies you.
+
+* The default is **3 consecutive failures**, and you can adjust this per agent.
+* A **successful run resets the count** — the streak only grows while every run is failing.
+* Failures that need something from you, cancelled runs, and Airtop platform issues **don't count** toward the streak.
+* Sometimes an agent fails before its run can even begin (for example, a scheduled run that couldn't start). These count toward the streak too, and because no run took place, they won't appear in Run History — the agent's banner will point this out when it applies.
+
+When an agent is disabled this way, its page shows exactly what happened. Re-enabling the agent resets its failure count and starts fresh.
+
+Automatic disabling and automatic repair work well together: a failing agent gets paused so it stops failing, while a repair — if one was started — gets your agent ready to be fixed and re-enabled.
+
+## Self-healing settings
+
+Each agent has its own self-healing settings found in the **Self-healing** tab under **Settings:**
+
+<Frame>
+  <img alt="Airtop self-healing settings" />
+</Frame>
+
+* **Automatic repair:** On by default. Turn this off if you'd rather handle failures yourself. Repair sessions use credits, just like a session you'd run yourself in Agent Builder, so this is the switch to use if you don't want credits spent on automatic repairs.
+* **Disable after failures:** Default is 3. Adjust how many automated runs must fail in a row before the agent is paused.
+
+*Note: Self-healing settings are independent; turning off repair does not turn off automatic disabling.*
+
+## Frequently asked questions
+
+**Will Airtop ever change my live agent without asking?**\
+No. Repairs only touch a draft copy. Your deployed version runs unchanged until you deploy the repaired draft.
+
+**I was in the middle of editing — will a repair overwrite my work?**\
+No. If a draft already exists, Airtop skips the repair entirely to avoid touching your work.
+
+**What if I don't like the repair?**\
+Simply discard the draft. Nothing about your deployed agent will have changed.
+
+**Who handles repairs for a shared agent?**\
+The agent's owner. Teammates whose runs fail are told a repair is starting, but reviewing and deploying it is up to the owner.
+
+**How do I make sure my agents will self-heal?**\
+Self-healing is enabled for all agents by default.
+
+
+# Connect to Google Ads
+Source: https://www.airtop.ai/help/integrations/google-ads
+
+The Google Ads integration lets Mark connect to a Google Ads advertiser account to audit performance, research keywords, plan campaigns, and make changes. All changes that can affect spend require your explicit approval before they are applied.
+
+## Prerequisites
+
+* A subscription plan with [Mark](https://www.airtop.ai/mark) included
+* A Google account with access to at least one Google Ads advertiser account
+* If your accounts are managed under a manager account (MCC), that's supported — you'll select the specific advertiser account to work with during setup
+* Your Google Ads user role determines what the integration can do; if your role is read-only, then only these actions will work inside Airtop
+
+## Connecting your Google Ads account
+
+1. Connect via Google sign-in. You'll be asked to grant the Google Ads permission ([https://www.googleapis.com/auth/adwords](https://www.googleapis.com/auth/adwords)) — this is the only scope requested. Google describes it as "See, edit, create, and delete your Google Ads accounts and data."
+2. Select the advertiser account you want [Mark](https://www.airtop.ai/mark) to manage. All tools operate only on this selected account. You can change the account at any time via Integration settings.
+
+## What Mark can do
+
+#### Reading and reporting (no approval needed — read-only)
+
+* Account overview — view the connected account's setup state and recent account-level performance
+* Campaign reports — list campaigns and inspect their structure (ad groups, keywords, ads), status, and budgets
+* Audits — review conversion goals, geo targeting, device performance, bidding and budgets, keyword hygiene, brand assets, and Quality Score
+* Search Terms report — see which queries trigger your ads; raw search terms are masked by default to protect end-user privacy
+* Wasted spend estimate — estimate budget leakage across common waste categories
+
+#### Keyword research and planning (read-only)
+
+* Keyword ideas — generate Google Keyword Planner suggestions for your account
+* Historical metrics — get search volume, competition, and bid ranges for keywords you supply
+* Budget estimation — estimate a minimum viable budget from your goals and CPC data
+
+#### Drafting (nothing is written to your account)
+
+* Draft campaign builds with structured ad groups, keyword grouping, and starter negative keywords
+* Draft responsive search ad copy, including Dynamic Keyword Insertion
+* Generate negative keyword proposals, landing page URL recommendations, and prioritized remediation plans from audit findings
+
+#### Changes (each one requires your approval before it's applied)
+
+* Create campaigns and ad groups — create paused Search campaigns and ad groups, complete with keywords and responsive search ads
+* Budgets and bidding — adjust campaign budget amounts and bidding strategies
+* Targeting — set presence-only location targeting, add location targets and exclusions, opt out of mobile traffic, adjust tablet bids, and control search partner network settings
+* Keywords — add keywords, pause or enable them, and change bids or match types
+* Negative keywords — add campaign, ad group, or shared negative keyword lists
+* Ads — replace responsive search ad headlines and descriptions (note: editing an ad resets its performance history)
+* Assets — link or unlink sitelinks
+* Conversion goals — change biddability and primary-goal settings
+* Status and renames — enable or pause campaigns, ad groups, and ads; rename campaigns and ad groups. Enabling a campaign starts spend.
+* URL tracking — set an account-level final URL suffix (e.g., UTM parameters)
+
+## How approvals work
+
+When [Mark](https://www.airtop.ai/mark) wants to make a change, it submits a change request and you're prompted to approve or reject it. Nothing is written to your Google Ads account until you approve. Mark reports a change as applied only after the platform confirms it succeeded.
+
+## Limitations
+
+* API rate limits apply
+* Operates only on the advertiser account selected during setup
+* Does not automate Google Tag Manager, GA4, CRM sync, Customer Match uploads, landing page creation or CMS edits, or cross-platform attribution
+* Keyword Planner, reports, and changes may be limited by your Google Ads account permissions, eligibility, access tier, or Google Policy
+
+
+# List of Integrations
+Source: https://www.airtop.ai/help/integrations/overview
+
+Connect Airtop to the tools you already use. Browse the full list of available integrations and what each one does.
+
+## Overview
+
+Airtop integrates with popular tools so your agent can read and act on the data you already work with. Connect an integration from the [Airtop Portal](https://portal.airtop.ai/integrations), and your agent can use it right away. Some capabilities are always available to your agent and require no setup.
+
+## Available integrations
+
+<CardGroup>
+  <Card title="Airtable">
+    Connect to Airtable for database management.
+  </Card>
+
+  <Card title="Google Calendar">
+    Connect to Google Calendar for calendar management.
+  </Card>
+
+  <Card title="Google Docs">
+    Connect to Google Docs for document management.
+  </Card>
+
+  <Card title="Google Mail">
+    Connect to Google Mail (Gmail) for email management.
+  </Card>
+
+  <Card title="Google Sheets">
+    Connect to Google Sheets for spreadsheet management.
+  </Card>
+
+  <Card title="Google Drive">
+    Access and manage files in Google Drive.
+  </Card>
+
+  <Card title="Google Ads">
+    Create, audit, and optimize Google Ads campaigns from a selected advertiser account.
+  </Card>
+
+  <Card title="HubSpot">
+    Connect to HubSpot for CRM management.
+  </Card>
+
+  <Card title="Slack">
+    Connect to Slack workspaces, channels, and messages.
+  </Card>
+
+  <Card title="Email Verification">
+    Verify email addresses to check if they will bounce before sending. Supports single and bulk verification.
+  </Card>
+
+  <Card title="Web Search">
+    Enable agents to search the web in real time.
+  </Card>
+
+  <Card title="Image Gen">
+    Generate images from text prompts and optional visual references.
+  </Card>
+
+  <Card title="B2B Enrichment">
+    Enrich and search B2B contacts and companies. Find verified emails, phone numbers, and detailed firmographic data across 200M+ professionals and 30M+ companies.
+  </Card>
+
+  <Card title="LinkedIn">
+    Access public LinkedIn data including profiles, companies, jobs, and activity feeds. Extract posts, comments, reactions, and reposts from both people and company pages.
+  </Card>
+</CardGroup>
+
+## Don't see your tool?
+
+If the tool you need isn't listed, you can request it via [support@airtop.ai](mailto:support@airtop.ai) and our customer suupport team will review your request.
+
+

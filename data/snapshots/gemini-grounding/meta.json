@@ -1,0 +1,60 @@
+{
+ "slug": "gemini-grounding",
+ "name": "Google Gemini Grounding",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:51+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://ai.google.dev/gemini-api/docs/pricing",
+   "status": 200,
+   "final_url": "https://ai.google.dev/gemini-api/docs/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 257343,
+   "truncated": false,
+   "sha256": "77426ba1fc465f587167a43a982e78ca598bcc89311d0a4a7d9940b637c60161",
+   "fetched_at": "2026-10-19T05:54:51+00:00",
+   "text_bytes": 68007
+  },
+  "docs": {
+   "url": "https://ai.google.dev/gemini-api/docs/grounding",
+   "status": 200,
+   "final_url": "https://ai.google.dev/gemini-api/docs/google-search",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 184729,
+   "truncated": false,
+   "sha256": "33adac3944393a610ac4282daaf12a27ed025e5aecda28360483e5014184cd26",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 18983
+  },
+  "llms-err-8c794d": {
+   "url": "https://ai.google.dev/gemini-api/docs/grounding/llms.txt",
+   "status": 404,
+   "final_url": "https://ai.google.dev/gemini-api/docs/grounding/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 83929,
+   "truncated": false,
+   "sha256": "cf56f889a0fe5d03f69b0a85c12f8bd705f0c8d0e1b63baeed8f84db369830a7",
+   "fetched_at": "2026-10-19T05:54:54+00:00"
+  },
+  "llms-err-bca045": {
+   "url": "https://ai.google.dev/gemini-api/docs/grounding/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://ai.google.dev/gemini-api/docs/grounding/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 83930,
+   "truncated": false,
+   "sha256": "78fcbb43826722b4fbb51281055aaacec8ff37733d57e0d47392b1da567266ad",
+   "fetched_at": "2026-10-19T05:54:55+00:00"
+  },
+  "llms-err-451eaf": {
+   "url": "https://docs.ai.google.dev/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.ai.google.dev/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:55+00:00"
+  }
+ }
+}

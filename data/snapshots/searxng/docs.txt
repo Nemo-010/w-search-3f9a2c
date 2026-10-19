@@ -1,0 +1,281 @@
+SearXNG Documentation (2026.10.17+1c10abe2d) 
+ Menu 
+ Expand 
+ Light mode 
+ Dark mode 
+ Auto light/dark, in light mode 
+ Auto light/dark, in dark mode 
+ Skip to content 
+ SearXNG Documentation (2026.10.17+1c10abe2d) 
+ SearXNG Documentation (2026.10.17+1c10abe2d) 
+ User information 
+ Search syntax 
+ Configured Engines 
+ About SearXNG 
+ Why use a private instance? 
+ Administrator documentation 
+ Settings 
+ settings.yml 
+ engines: 
+ brand: 
+ general: 
+ search: 
+ server: 
+ ui: 
+ preferences: 
+ redis: 
+ valkey: 
+ outgoing: 
+ categories_as_tabs: 
+ plugins: 
+ Installation 
+ Installation container 
+ Installation Script 
+ Step by step installation 
+ Granian 
+ uWSGI 
+ NGINX 
+ Apache 
+ SearXNG maintenance 
+ Answer CAPTCHA from server’s IP 
+ Favicons 
+ Limiter 
+ Administration API 
+ Architecture 
+ List of plugins 
+ Buildhosts 
+ Developer documentation 
+ Development Quickstart 
+ Git Commits & Change Management 
+ How to contribute 
+ Extended Types 
+ Engine Implementations 
+ Engine Library 
+ SearXNG’s engines loader 
+ Engine Overview 
+ Demo Online Engine 
+ XPath Engine 
+ MediaWiki Engine 
+ JSON Engine 
+ 500px 
+ Alpine Linux Packages 
+ Anna’s Archive 
+ Arch Linux 
+ arXiv 
+ Astrophysics Data System (ADS) 
+ Azure Resources 
+ Bing Engines 
+ Bpb 
+ Brave Engines 
+ BT4G 
+ ChinaSo 
+ CORE 
+ Crossref 
+ Dailymotion 
+ Discourse Forums 
+ DuckDuckGo Engines 
+ Europe PMC 
+ Exa API Engine 
+ Geizhals 
+ Gitea 
+ Github Code 
+ GitLab 
+ Google Engines 
+ Hugging Face 
+ Jina Engine 
+ Kagi Engines 
+ Lemmy 
+ Marginalia Search 
+ Mastodon 
+ Moviepilot 
+ Matrix Rooms Search (MRS) 
+ Mwmbl Engine 
+ Odysee 
+ OpenAlex 
+ Open Library 
+ Peertube Engines 
+ Piped 
+ PubMed 
+ Qwant 
+ RadioBrowser 
+ Recoll Engine 
+ Repology 
+ Reuters 
+ Semantic Scholar 
+ Soundcloud 
+ Sourcehut 
+ Springer Nature 
+ Startpage Engines 
+ Tagesschau API 
+ Torznab WebAPI 
+ Tube Archivist 
+ Void Linux binary packages 
+ Wallhaven 
+ Wikimedia 
+ Yacy 
+ Yahoo Engine 
+ Yandex Search API 
+ Z-Library 
+ Offline Concept 
+ Demo Offline Engine 
+ Command Line Engines 
+ NoSQL databases 
+ Local Search APIs 
+ SQL Engines 
+ Tineye 
+ Result Types 
+ Result 
+ Main Search Results 
+ Main Results 
+ Key-Value Results 
+ Code Results 
+ Paper Results 
+ File Results 
+ Image Results 
+ Video Results 
+ Answer Results 
+ Correction Results 
+ Suggestion Results 
+ Infobox Results 
+ Simple Theme Templates 
+ Search API 
+ Plugins 
+ Plugin Development 
+ Built-in Plugins 
+ Calculator 
+ Hash Values 
+ Hostnames 
+ Infinite scroll 
+ Self-Info 
+ Tor check 
+ Unit Converter 
+ Time Zone 
+ Answerers 
+ Answerer Development 
+ Built-in Answerers 
+ Random 
+ Statistics 
+ Translation 
+ Makefile & ./manage 
+ reST primer 
+ Tooling box searxng_extra 
+ searxng_extra/update/ 
+ DevOps tooling box 
+ utils/searxng.sh 
+ Source-Code 
+ Custom message extractor (i18n) 
+ Bot Detection 
+ Caches 
+ SearXNG Exceptions 
+ Favicons (source) 
+ Online /info 
+ Locales 
+ Search 
+ Search processors 
+ Settings Loader 
+ SQLite DB 
+ Utility functions for the engines 
+ Valkey DB 
+ Valkey Library 
+ Weather 
+ Back to top 
+ View this page 
+ Edit this page 
+ Welcome to SearXNG ¶ 
+ Search without being tracked. 
+ SearXNG is a free internet metasearch engine which aggregates results from up
+to 264 search services . Users
+are neither tracked nor profiled. Additionally, SearXNG can be used over Tor
+for online anonymity. 
+ Get started with SearXNG by using one of the instances listed at searx.space .
+If you don’t trust anyone, you can set up your own, see Installation . 
+ features 
+ self hosted 
+ no user tracking / no profiling 
+ javascript & cookies are optional 
+ 264 search engines 
+ 58 translations 
+ about 70 well maintained instances on searx.space 
+ easy integration of search engines 
+ be a part 
+ SearXNG is driven by an open community, come join us! Don’t hesitate, no
+need to be an expert , everyone can contribute: 
+ help to improve translations 
+ discuss with the community 
+ report bugs & suggestions 
+ … 
+ the origin 
+ SearXNG development has been started in the middle of 2021 as a fork of the
+searx project. 
+ User information 
+ Search syntax 
+ Configured Engines 
+ About SearXNG 
+ Why use a private instance? 
+ How does SearXNG protect privacy? 
+ Conclusion 
+ Administrator documentation 
+ Settings 
+ Installation 
+ Installation container 
+ Installation Script 
+ Step by step installation 
+ Granian 
+ uWSGI 
+ NGINX 
+ Apache 
+ SearXNG maintenance 
+ Answer CAPTCHA from server’s IP 
+ Favicons 
+ Limiter 
+ Administration API 
+ Architecture 
+ List of plugins 
+ Buildhosts 
+ Developer documentation 
+ Development Quickstart 
+ Git Commits & Change Management 
+ How to contribute 
+ Extended Types 
+ Engine Implementations 
+ Result Types 
+ Simple Theme Templates 
+ Search API 
+ Plugins 
+ Answerers 
+ Translation 
+ Makefile & ./manage 
+ reST primer 
+ Tooling box searxng_extra 
+ DevOps tooling box 
+ utils/searxng.sh 
+ Common command environments 
+ Source-Code 
+ Custom message extractor (i18n) 
+ Bot Detection 
+ Caches 
+ SearXNG Exceptions 
+ Favicons (source) 
+ Online /info 
+ Locales 
+ Search 
+ Search processors 
+ Settings Loader 
+ SQLite DB 
+ Utility functions for the engines 
+ Valkey DB 
+ Valkey Library 
+ Weather 
+ Acknowledgements ¶ 
+ The following organizations have provided SearXNG access to their paid plans at
+no cost: 
+ Next 
+ User information 
+ Copyright © SearXNG team
+ Made with 
+ Furo 
+ 💾 
+ 🌐 
+ On this page
+ Welcome to SearXNG 
+ Acknowledgements

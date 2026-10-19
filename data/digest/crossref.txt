@@ -1,0 +1,4 @@
+# Crossref REST API (crossref) category=academic
+home=https://www.crossref.org/documentation/retrieve-metadata/rest-api/ pricing=None docs=https://www.crossref.org/documentation/retrieve-metadata/rest-api/ llms=None
+sources_ok: docs:https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+--- ranked fact lines ---

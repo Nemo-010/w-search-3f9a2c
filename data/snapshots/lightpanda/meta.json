@@ -1,0 +1,61 @@
+{
+ "slug": "lightpanda",
+ "name": "Lightpanda (OSS)",
+ "category": "oss",
+ "fetched_at": "2026-10-19T05:55:00+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://lightpanda.io/",
+   "status": 200,
+   "final_url": "https://lightpanda.io/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 199445,
+   "truncated": false,
+   "sha256": "7c6f8dae1db2a0c1449746ba79ed876b6ef8218fadc5c2e20b0a7a804e4bba77",
+   "fetched_at": "2026-10-19T05:55:00+00:00",
+   "text_bytes": 5343
+  },
+  "llms": {
+   "url": "https://lightpanda.io/llms.txt",
+   "status": 200,
+   "final_url": "https://lightpanda.io/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 9926,
+   "truncated": false,
+   "sha256": "bc146169b6e7bc1b2dbf2755f201db28d295a717b1811c816d97c56b429c8a67",
+   "fetched_at": "2026-10-19T05:55:00+00:00",
+   "text_bytes": 9842
+  },
+  "llms-full": {
+   "url": "https://lightpanda.io/llms-full.txt",
+   "status": 200,
+   "final_url": "https://lightpanda.io/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 10291,
+   "truncated": false,
+   "sha256": "33197b64c12d0a8b4b0ce8b68e74df357c1fda8b2d5766c4f70d97d7a2621a52",
+   "fetched_at": "2026-10-19T05:55:00+00:00",
+   "text_bytes": 10205
+  },
+  "llms-err-5a740a": {
+   "url": "https://lightpanda.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://lightpanda.io/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 80117,
+   "truncated": false,
+   "sha256": "ed9b2cf6413ca96e54ca4fe10661ac3b8e65c36a1da6975fdbfcf0ef39114b4c",
+   "fetched_at": "2026-10-19T05:55:01+00:00"
+  },
+  "llms-err-5c7183": {
+   "url": "https://docs.lightpanda.io/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.lightpanda.io/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:55:01+00:00"
+  }
+ }
+}

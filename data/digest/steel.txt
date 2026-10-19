@@ -1,0 +1,25 @@
+# Steel.dev (steel) category=browser
+home=https://steel.dev/ pricing=https://steel.dev/pricing docs=https://docs.steel.dev/ llms=None
+sources_ok: pricing:https://steel.dev/pricing, docs:https://docs.steel.dev/, home:https://steel.dev/, llms:https://docs.steel.dev/llms.txt, llms-full:https://steel.dev/docs/llms-full.txt, llms-https://steel.dev/llms.txt:https://steel.dev/llms.txt, llms-https://steel.dev/docs/llms.txt:https://steel.dev/docs/llms.txt
+--- ranked fact lines ---
+[llms] - [Pricing/Limits](https://docs.steel.dev/overview/pricinglimits): Steel pricing: start free with $30 in usage credits (about 300 browser hours). Browser hours from $0.08/hour, CAPTCHA solves from $1/1k, proxies from $6/GB across Launch, Scale, and Enterprise plans.
+[llms] - [Typed output](https://docs.steel.dev/cookbook/topics/typed-output): Agents that return structured, schema-validated results instead of free-form text.
+--- llms/readme head ---
+# Steel Documentation
+> Steel is the open-source browser API for AI agents — managed cloud browsers with stealth,
+> residential proxies, CAPTCHA solving, persistent profiles, session replays, and agent observability.
+> Use Steel to launch cloud browsers, scrape content, and automate web tasks.
+## Quick Reference
+- Install: `npm install steel-sdk` (Node.js) or `pip install steel-sdk` (Python)
+- CLI: `curl -sSf https://setup.steel.dev | sh`
+- Auth header: `steel-api-key: <your-key>`
+- Auth env var: `STEEL_API_KEY`
+- API base URL: `https://api.steel.dev`
+- WebSocket: `wss://connect.steel.dev?apiKey=<key>&sessionId=<id>`
+- API reference: https://steel.apidocumentation.com/api-reference
+- Brand design language (DESIGN.md): https://docs.steel.dev/DESIGN.md
+## Agent Instructions
+- For the simplest one-liner scrape, use the CLI:
+```bash
+steel scrape https://example.com
+```

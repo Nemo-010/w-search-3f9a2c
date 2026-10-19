@@ -1,0 +1,69 @@
+{
+ "slug": "bing-api",
+ "name": "Bing Web Search API",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:26+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview",
+   "status": 200,
+   "final_url": "https://learn.microsoft.com/en-us/previous-versions/bing/search-apis/bing-web-search/overview",
+   "content_type": "text/html",
+   "bytes": 38903,
+   "truncated": false,
+   "sha256": "3509cbd2dc717c63706ddfaa83e26d5e3b1928df8fbb7626d853de91d7ffdb91",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 3690
+  },
+  "home-err-1c8be9": {
+   "url": "https://www.microsoft.com/en-us/bing/apis/bing-web-search-api",
+   "status": 404,
+   "final_url": "https://www.microsoft.com/en-us/bing/apis/bing-web-search-api",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 75115,
+   "truncated": false,
+   "sha256": "5a1b74a38a4a419e949a7d1276544d8f0bd00601ed6fa5d47fed659748336345",
+   "fetched_at": "2026-10-19T05:54:28+00:00"
+  },
+  "llms-err-a2ceee": {
+   "url": "https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview/llms.txt",
+   "status": 404,
+   "final_url": "https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview/llms.txt",
+   "content_type": "text/html",
+   "bytes": 17593,
+   "truncated": false,
+   "sha256": "c82cf6a9e6f28ec7a5fd9654c0ae901af7df9e4d7c5ba5a7ad774c41e40e1752",
+   "fetched_at": "2026-10-19T05:54:30+00:00"
+  },
+  "llms-err-c541b1": {
+   "url": "https://www.microsoft.com/en-us/bing/apis/bing-web-search-api/llms.txt",
+   "status": 404,
+   "final_url": "https://www.microsoft.com/en-us/bing/apis/bing-web-search-api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 75120,
+   "truncated": false,
+   "sha256": "e068b01a9b8930338e1a475344a9ed2bf69dd813586c837b87eac3500ce2491c",
+   "fetched_at": "2026-10-19T05:54:30+00:00"
+  },
+  "llms-err-da68a8": {
+   "url": "https://www.microsoft.com/en-us/bing/apis/bing-web-search-api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.microsoft.com/en-us/bing/apis/bing-web-search-api/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 75115,
+   "truncated": false,
+   "sha256": "872f80da3f18a9abb2e0c1c81558af0a4184b377ef2a683e19140421d5c25846",
+   "fetched_at": "2026-10-19T05:54:31+00:00"
+  },
+  "llms-err-459ed4": {
+   "url": "https://docs.learn.microsoft.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.learn.microsoft.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:33+00:00"
+  }
+ }
+}

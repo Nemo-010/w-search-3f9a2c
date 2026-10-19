@@ -1,0 +1,84 @@
+{
+ "slug": "openalex-base",
+ "name": "BASE",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:44+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.base-search.net/about/en/",
+   "status": 200,
+   "final_url": "https://www.base-search.net/about/en/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7833,
+   "truncated": false,
+   "sha256": "ad5052bfcd9dfab5fa7760529c61ec43b7cb6311f3f614e9a9ca46b756fbe862",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 1504
+  },
+  "docs": {
+   "url": "https://api.base-search.net/",
+   "status": 200,
+   "final_url": "https://api.base-search.net/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5189,
+   "truncated": false,
+   "sha256": "0bb8f6067ba62cd4355941ac4461f50017b5732a31a07cecdc3dc76987dc5384",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 1179
+  },
+  "home": {
+   "url": "https://www.base-search.net/",
+   "status": 200,
+   "final_url": "https://www.base-search.net/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7833,
+   "truncated": false,
+   "sha256": "512dfe88200d26a8e8cc640868be5d9f7f8ab1b6a1ca744db86942a3d7b379e1",
+   "fetched_at": "2026-10-19T05:54:47+00:00",
+   "text_bytes": 1504
+  },
+  "llms-err-02767d": {
+   "url": "https://api.base-search.net/llms.txt",
+   "status": 404,
+   "final_url": "https://api.base-search.net/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 999,
+   "truncated": false,
+   "sha256": "d9763a7e708367d60ee3db8d473d390adb4237a90cb52bef09cafeae001a1338",
+   "fetched_at": "2026-10-19T05:54:48+00:00"
+  },
+  "llms": {
+   "url": "https://www.base-search.net/llms.txt",
+   "status": 200,
+   "final_url": "https://www.base-search.net/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7833,
+   "truncated": false,
+   "sha256": "d4f159e5fe1074adab8f97369136dfc398054dcddd7be5603096595385904f41",
+   "fetched_at": "2026-10-19T05:54:49+00:00",
+   "text_bytes": 1504
+  },
+  "llms-full": {
+   "url": "https://www.base-search.net/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://www.base-search.net/docs/llms-full.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7833,
+   "truncated": false,
+   "sha256": "59b7881e1c86cac104fc5f9fbb950bb93582bbbc91856685472d649efcf1098a",
+   "fetched_at": "2026-10-19T05:54:51+00:00",
+   "text_bytes": 1504
+  },
+  "llms-https://www.base-search.net/docs/llms.txt": {
+   "url": "https://www.base-search.net/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://www.base-search.net/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7833,
+   "truncated": false,
+   "sha256": "60f73b1422720086b1e424d73a1e4e15a0a486764e1feeb50b8101a7225b291b",
+   "fetched_at": "2026-10-19T05:54:50+00:00",
+   "text_bytes": 1504
+  }
+ }
+}

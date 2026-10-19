@@ -1,0 +1,131 @@
+# Scrape.do Documentation
+
+> Scrape.do documentation.
+
+- [Full Technical Documentation](https://scrape.do/llms-docs.txt): every documentation page, in full, as plain text.
+
+- [Getting Started](https://scrape.do/documentation.md): Scrape.do documentation.
+- [Request Costs](https://scrape.do/documentation/request-costs.md): Scrape.do credit pricing per request type and per domain. Costs vary by proxy type (datacenter vs residential), headless browser rendering, and domain-specific defaults where Scrape.do applies super or render automatically.
+
+## Proxy Settings
+
+- [Proxy Settings](https://scrape.do/documentation/proxies.md): Configure datacenter, residential, and mobile proxies with geo-targeting for Scrape.do web scraping requests.
+- [Super (Residential & Mobile)](https://scrape.do/documentation/proxies/super.md): Access 95M+ residential and mobile proxies with Scrape.do super parameter to bypass anti-bot detection and improve success rates.
+- [Geo Targeting](https://scrape.do/documentation/proxies/geo-code.md): Target specific countries with Scrape.do geo-targeting to access location-restricted content and avoid regional IP blocking.
+- [Regional Geo Targeting](https://scrape.do/documentation/proxies/regional-geo-code.md): Use Scrape.do regional geo-targeting to route requests through continents like Europe, Asia, or North America for improved success.
+- [Postal Code (ZIP Code) Targeting](https://scrape.do/documentation/proxies/postal-code.md): Target specific postal codes and ZIP codes with Scrape.do for hyper-local geo-targeting. Combine with country-level geoCode for precise location-based scraping.
+
+## API & Response
+
+- [API & Response](https://scrape.do/documentation/api-response.md): Configure API requests, manage timeouts, retries, sessions, and customize response handling for Scrape.do web scraping.
+- [POST/PUT Request](https://scrape.do/documentation/api-response/post-put-request.md): Send POST, PUT, PATCH, and DELETE HTTP requests through Scrape.do API to scrape data from form submissions and APIs.
+- [Timeout](https://scrape.do/documentation/api-response/timeout.md): Configure request timeout limits between 5 and 120 seconds for Scrape.do API requests to control scraping duration.
+- [Retry Settings](https://scrape.do/documentation/api-response/retry-settings.md): Configure automatic retry mechanism and timeout limits in Scrape.do to maximize success rates for web scraping requests.
+- [Disable Redirection](https://scrape.do/documentation/api-response/disable-redirection.md): Control HTTP redirect behavior in Scrape.do with disableRedirection parameter to capture redirect responses and locations.
+- [Device](https://scrape.do/documentation/api-response/device.md): Emulate desktop, mobile, and tablet devices in Scrape.do to scrape device-specific content and optimize data extraction.
+- [Sticky Sessions](https://scrape.do/documentation/api-response/session-id.md): Use sticky sessions in Scrape.do to maintain the same proxy IP address across multiple requests for consistent web scraping.
+- [Output & Response](https://scrape.do/documentation/api-response/response-output.md): Customize Scrape.do response output with markdown format, transparent responses, cookie handling, and response headers.
+- [How to Solve Blocking Issues](https://scrape.do/documentation/api-response/unblock.md): Troubleshoot web scraping blocks with residential proxies, geo-targeting, headless browsers, and advanced anti-bot bypass techniques.
+- [Status Codes](https://scrape.do/documentation/api-response/status-codes.md): Learn about Scrape.do API status codes, HTTP response codes, credit consumption, and error handling for successful web scraping.
+- [Usage Statistics](https://scrape.do/documentation/api-response/usage-stats.md): Monitor your Scrape.do account usage statistics including API credits, concurrent requests, and monthly request limits.
+
+## Headers & Cookies
+
+- [Headers & Cookies](https://scrape.do/documentation/headers-cookies.md): Configure custom HTTP headers, forward headers, set cookies, and manage authentication for Scrape.do web scraping requests.
+- [Custom Headers](https://scrape.do/documentation/headers-cookies/custom-headers.md): Take full control of HTTP request headers in Scrape.do with customHeaders parameter to replicate specific browser behavior.
+- [Extra Headers](https://scrape.do/documentation/headers-cookies/extra-headers.md): Add custom HTTP headers to Scrape.do requests without replacing auto-generated headers using the extraHeaders parameter.
+- [Forward Headers](https://scrape.do/documentation/headers-cookies/forward-headers.md): Forward only your own HTTP headers to target websites with Scrape.do forwardHeaders parameter without auto-generated headers.
+- [Set Cookies](https://scrape.do/documentation/headers-cookies/set-cookies.md): Set HTTP cookies in Scrape.do requests with setCookies parameter to maintain session state and authentication across requests.
+
+## Headless Browser
+
+- [Headless Browser](https://scrape.do/documentation/headless-browser.md): Render JavaScript-heavy websites with Scrape.do managed headless browsers to scrape dynamic content from React, Angular, and Vue apps.
+- [Wait](https://scrape.do/documentation/headless-browser/wait.md): Configure headless browser wait times with waitUntil, customWait, and waitSelector parameters for dynamic content loading.
+- [Block Resources](https://scrape.do/documentation/headless-browser/block-resources.md): Optimize Scrape.do headless browser performance by blocking CSS, images, and fonts with blockResources parameter.
+- [Viewport](https://scrape.do/documentation/headless-browser/viewport.md): Configure browser viewport width and height in Scrape.do to scrape responsive and device-specific web content.
+- [ReturnJSON](https://scrape.do/documentation/headless-browser/returnjson.md): Capture network requests, iframes, and websocket data with Scrape.do returnJSON parameter for comprehensive data extraction.
+- [Screenshot](https://scrape.do/documentation/headless-browser/screenshot.md): Capture full page, viewport, or element-specific screenshots with Scrape.do headless browser for visual web page monitoring.
+- [Browser Interactions](https://scrape.do/documentation/headless-browser/browser-interactions.md): Automate browser interactions in Scrape.do with clicks, scrolls, form fills, and JavaScript execution using playWithBrowser parameter.
+
+## Integrations
+
+- [Integrations](https://scrape.do/documentation/integrations.md): Integrate Scrape.do with no-code automation platforms
+- [n8n - Scrape.do Integration](https://scrape.do/documentation/integrations/n8n.md): Step-by-step guide to integrate Scrape.do with n8n for automated web scraping workflows
+- [Zapier - Scrape.do Integration](https://scrape.do/documentation/integrations/zapier.md): Step-by-step guide to integrate Scrape.do with Zapier for automated web scraping workflows
+
+## Amazon Scraper API
+
+- [Amazon Scraper API](https://scrape.do/documentation/amazon-scraper-api.md): Scrape Amazon product pages, offers, search results, and raw HTML with location targeting. Structured JSON responses with no blocks or CAPTCHAs.
+- [Product Pages (PDP)](https://scrape.do/documentation/amazon-scraper-api/pdp.md): Extract structured product data from Amazon product detail pages
+- [All Offers](https://scrape.do/documentation/amazon-scraper-api/offer-listing.md): Get all seller offers for any Amazon product
+- [Search Results & Categories](https://scrape.do/documentation/amazon-scraper-api/search.md): Search Amazon and scrape category pages with structured results
+- [Deals](https://scrape.do/documentation/amazon-scraper-api/deals.md): Scrape Amazon's discounted products as a paginated, filterable deals grid
+- [Best Sellers](https://scrape.do/documentation/amazon-scraper-api/bestsellers.md): Scrape Amazon's Best Sellers and New Releases charts with ranks, prices, and ratings
+- [Seller Profile](https://scrape.do/documentation/amazon-scraper-api/seller.md): Get the profile of any Amazon seller — display name, business details, and feedback percentage
+- [Raw HTML with Geo-Targeting](https://scrape.do/documentation/amazon-scraper-api/raw-html.md): Get raw HTML from any Amazon page with location targeting
+
+## Google Scraper API
+
+- [Google Scraper API](https://scrape.do/documentation/google-scraper-api.md): One Google scraping suite for everything Google. Structured JSON for Search, Maps, Shopping, Flights, Hotels, Play Store, News, Trends, and Gemini. Worldwide coverage, 150+ languages, no blocks or CAPTCHAs.
+
+### Google Search API
+
+- [Google Search API](https://scrape.do/documentation/google-scraper-api/search.md): Scrape Google search results and extract organic listings, ads, knowledge graphs, local results, and more as structured JSON. No blocks, no CAPTCHAs.
+- [SERP API](https://scrape.do/documentation/google-scraper-api/search/search.md): Search Google and get structured SERP data as JSON
+- [AI Mode](https://scrape.do/documentation/google-scraper-api/search/ai-mode.md): Get AI-generated answers with references and shopping results from Google AI Mode
+
+### Google Maps API
+
+- [Google Maps API](https://scrape.do/documentation/google-scraper-api/maps.md): Scrape Google Maps business listings and place details with ratings, addresses, hours, contact info, menus, and more. Structured JSON, no blocks.
+- [Search Places](https://scrape.do/documentation/google-scraper-api/maps/search.md): Search Google Maps and get a structured list of places as JSON
+- [Place Details](https://scrape.do/documentation/google-scraper-api/maps/place.md): Fetch enriched place details from Google Maps as structured JSON
+- [Maps Reviews](https://scrape.do/documentation/google-scraper-api/maps/reviews.md): Fetch paginated Google Maps reviews as structured JSON, with sort, topic filtering, keyword search, and guided review details
+
+### Google Shopping API
+
+- [Google Shopping API](https://scrape.do/documentation/google-scraper-api/shopping.md): Scrape Google Shopping as structured JSON. Search product listings with prices, retailers, and filters, then fetch full product pages with every seller offer, variants, specs, and reviews. No blocks, worldwide coverage.
+- [Google Shopping Search API](https://scrape.do/documentation/google-scraper-api/shopping/search.md): Scrape Google Shopping product listings and sponsored ads with prices, retailers, ratings, delivery info, filters, and categorized results. Structured JSON, no blocks, worldwide coverage.
+- [Google Shopping Product API](https://scrape.do/documentation/google-scraper-api/shopping/product.md): Scrape Google Shopping product details — sellers with prices, shipping, taxes and totals, variants, specs, reviews, videos, and forums. Companion endpoint to the Google Shopping search API.
+- [Google Flights API](https://scrape.do/documentation/google-scraper-api/flights.md): Scrape Google Flights with prices, durations, layovers, airlines, carbon emissions, and price insights. Structured JSON, 200+ countries and currencies, no JavaScript rendering.
+- [Google Hotels API](https://scrape.do/documentation/google-scraper-api/hotels.md): Scrape Google Hotels listings with names, ratings, star classes, amenities, coordinates, images, prices, and per-vendor booking sources. Filters for price, rating, hotel class, eco-certification, and free cancellation. Worldwide currency support.
+- [Google Food API](https://scrape.do/documentation/google-scraper-api/food.md): Scrape Google Food order-online provider lists for restaurants. Returns pickup and delivery ordering providers, deep links, ETAs, fees, logos, and preferred-by-business flags from a Google entity ID.
+- [Google Play Store API](https://scrape.do/documentation/google-scraper-api/play-store.md): Scrape Google Play Store for Android apps, app details, and user reviews. Returns titles, package IDs, ratings, developers, prices, screenshots, downloads, versions, release notes, and paginated reviews with developer responses. Category, chart, and device-type filters supported.
+- [YouTube Video API](https://scrape.do/documentation/google-scraper-api/youtube-video.md): Scrape a YouTube video for structured metadata, including exact view and like counts, stable channel IDs, UTC publication timestamps, comments, chapters, related videos, and continuation tokens.
+- [Google News API](https://scrape.do/documentation/google-scraper-api/news.md): Scrape Google News articles with bylines, ISO dates, thumbnails, and direct publisher URLs. Navigate by keyword, topic, story cluster, publication, or Knowledge Graph entity. No redirect chains, no pagination quirks.
+
+### Google Trends API
+
+- [Google Trends API](https://scrape.do/documentation/google-scraper-api/trends.md): Scrape Google Trends data including interest over time, regional interest, related queries, related topics, and real-time trending searches. Structured JSON, no blocks.
+- [Trends Data](https://scrape.do/documentation/google-scraper-api/trends/trends.md): Scrape Google Trends interest over time, regional interest breakdown, related queries, and related topics as structured JSON with the Scrape.do Google Trends API.
+- [Trending Now](https://scrape.do/documentation/google-scraper-api/trends/trending.md): Scrape real-time trending search topics from Google Trends by country, category, and time window. Structured JSON with search volume, growth, and related queries.
+- [Gemini Scraper API](https://scrape.do/documentation/google-scraper-api/gemini.md): Send a single prompt to Google Gemini and get the assistant's reply as structured JSON. One GET request, no account, no cookies, no browser automation. Returns clean Markdown text, grounding source links, and the model label.
+- [Localization](https://scrape.do/documentation/google-scraper-api/localization.md): Master reference for hl, gl, google_domain, lr, cr, location, uule, ll, device, and time_period across every Google Scraper sub-API
+- [Currency](https://scrape.do/documentation/google-scraper-api/currency.md): Currency parameter accepted by Flights, Hotels, and Shopping. Independent of gl, useful for multi-region price comparison
+- [Transient Errors & Retry Guidance](https://scrape.do/documentation/google-scraper-api/transient-errors.md): Why 502 no-results and empty-array responses happen, when to retry, and the retry-once pattern
+
+## Walmart Scraper API
+
+- [Walmart Scraper API](https://scrape.do/documentation/walmart-scraper-api.md): Scrape Walmart search results, product details, and Walmart US or Canada pages scoped to a specific store. Structured JSON with store-accurate pricing and availability.
+- [Search Results](https://scrape.do/documentation/walmart-scraper-api/search.md): Search a specific Walmart store's shelf and get structured results
+- [Product Details](https://scrape.do/documentation/walmart-scraper-api/product.md): Get one Walmart item's price, stock, and specifications at a specific store
+- [Store-Scoped Page Fetch](https://scrape.do/documentation/walmart-scraper-api/store.md): Fetch Walmart US or Canada URLs through a session warmed for a specific store
+- [Lowes Scraper API](https://scrape.do/documentation/lowes-api.md): Scrape Lowes with store-level pricing and availability. Pass a store ID and zip code to get product pages, search results, and category listings exactly as that store serves them.
+- [Home Depot Scraper API](https://scrape.do/documentation/homedepot-api.md): Scrape Home Depot product pages with store-level pricing and availability. Pass a store ID and zip code to get the page exactly as that store serves it, or search stores by zip code or lat/lng coordinates.
+- [YouTube Scraper API](https://scrape.do/documentation/youtube-api.md): Scrape YouTube search results with videos, channels, playlists, Shorts shelves, ads, and related searches. Up to 30 videos per request with the num parameter, structured JSON, no JavaScript rendering, full localization, sp filters for sort/type/duration/features/upload date.
+- [ChatGPT Scraper API](https://scrape.do/documentation/chatgpt-api.md): Send a single prompt to ChatGPT and get the assistant's reply as structured JSON. One GET request. Handles the chatgpt.com protocol end-to-end and returns clean assistant text, rendered Markdown and HTML, citations, tool data, model, and finish reason.
+
+## Asynchronous API
+
+- [Asynchronous API](https://scrape.do/documentation/async-api.md): Process large-scale web scraping jobs asynchronously with Scrape.do Async API for batch operations and parallel request handling.
+- [Create a new scraping job](https://scrape.do/documentation/async-api/create-job.md)
+- [Get job details](https://scrape.do/documentation/async-api/get-job.md)
+- [Get task details](https://scrape.do/documentation/async-api/get-task.md)
+- [List all jobs](https://scrape.do/documentation/async-api/list-jobs.md): Get a paginated list of jobs with filtering and sorting support
+- [Cancel a job](https://scrape.do/documentation/async-api/cancel-job.md)
+- [Get user information](https://scrape.do/documentation/async-api/get-me.md)
+- [Plugins](https://scrape.do/documentation/async-api/plugins.md): Submit structured scraping batches through Scrape.do's Async API plugins — Amazon, Google, Walmart, Lowes, ChatGPT — up to 1000 tasks per job.
+- [Proxy Mode](https://scrape.do/documentation/proxy-mode.md): Use Scrape.do as an HTTP/HTTPS proxy server for seamless integration with existing scraping tools and libraries.
+- [Libraries](https://scrape.do/documentation/libraries.md): Use Scrape.do with popular web scraping libraries and frameworks
+- [Frequently Asked Questions](https://scrape.do/documentation/faq.md): Find answers to common questions about Scrape.do web scraping API including troubleshooting, performance optimization, and best practices.
+- [Contact Us](https://scrape.do/documentation/contact.md): Contact Scrape.do for technical support, sales inquiries, partnerships, and more. Reach our team via email or schedule a meeting.
+- [Changelog](https://scrape.do/documentation/changelog.md)

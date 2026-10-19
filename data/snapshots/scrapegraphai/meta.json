@@ -1,0 +1,84 @@
+{
+ "slug": "scrapegraphai",
+ "name": "ScrapeGraphAI",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:05+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://scrapegraphai.com/pricing",
+   "status": 200,
+   "final_url": "https://scrapegraphai.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 129124,
+   "truncated": false,
+   "sha256": "05d5dea79fa508315b46cb1b16073fa3e7a8bcf411207f5238bc8d2e8599e6d1",
+   "fetched_at": "2026-10-19T05:54:05+00:00",
+   "text_bytes": 4610
+  },
+  "docs": {
+   "url": "https://docs.scrapegraphai.com/",
+   "status": 200,
+   "final_url": "https://docs.scrapegraphai.com/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 348014,
+   "truncated": false,
+   "sha256": "bb5032d05e17ae6017218a9b3ea15c72bda35c7e5ec8c1e1cc7ffb0cd29691d8",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 3750
+  },
+  "home": {
+   "url": "https://scrapegraphai.com/",
+   "status": 200,
+   "final_url": "https://scrapegraphai.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 793764,
+   "truncated": false,
+   "sha256": "f3581abe72ef42050be23e3e7f371e98d545f520401fb38b419bbb6e4d6358b0",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 109523
+  },
+  "llms": {
+   "url": "https://docs.scrapegraphai.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.scrapegraphai.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14351,
+   "truncated": false,
+   "sha256": "6612df0a6e87b431c4057d0a2fb6bf14d0ceef308e6047fa7fd977321cc245ed",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 14328
+  },
+  "llms-full": {
+   "url": "https://scrapegraphai.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.scrapegraphai.com/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 588157,
+   "truncated": false,
+   "sha256": "9c5c883047b57af0ca20356e46d1d3c333557861083080495cd8553567454e62",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 586752
+  },
+  "llms-https://scrapegraphai.com/llms.txt": {
+   "url": "https://scrapegraphai.com/llms.txt",
+   "status": 200,
+   "final_url": "https://scrapegraphai.com/llms.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 21154,
+   "truncated": false,
+   "sha256": "17701713f70034d4247fe78afb61d6f9e3b446befed17f239c29461947b71bc1",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 21152
+  },
+  "llms-err-f17792": {
+   "url": "https://scrapegraphai.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://scrapegraphai.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 20051,
+   "truncated": false,
+   "sha256": "03bc204d288794e6eb381c8674fd83bb34dbc69e479e9b242c4ce85632d6e1b1",
+   "fetched_at": "2026-10-19T05:54:11+00:00"
+  }
+ }
+}

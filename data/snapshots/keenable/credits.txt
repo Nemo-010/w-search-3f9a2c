@@ -1,0 +1,59 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.keenable.ai/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Credits
+
+> The free allowance of 100,000 requests a month, how authenticated usage is metered against it, and what happens when it runs out.
+
+[Rate limits](/rate-limits) cap how *fast* you can call the API. Credits cap how *much*: authenticated usage is metered in credits, and every organization gets an allowance of them at no cost.
+
+## Monthly allowance
+
+**100,000 requests a month, free.** The allowance resets each month, so it is a recurring budget rather than a one-off trial. To keep going once it is spent, buy a credit package in the [console](https://app.keenable.ai/console) — that is also where your current allowance and remaining balance are shown.
+
+Quoting it in requests works because a credit *is* a request for the two operations that matter here: search and fetch each cost one. Anything priced differently draws more than one credit per call, which is why the rule below still holds — read what a call cost from the response rather than counting calls.
+
+Unauthenticated requests are not metered at all. They are capped by the [request limits](/rate-limits) instead, so evaluating without a key does not draw on the allowance. [Pay-per-request](/pay-per-request) calls do not touch it either: each one is paid for in USDC as it is made.
+
+## What a call costs
+
+Each billed operation has its own credit price, keyed by SKU:
+
+| SKU | Operation |
+| - | - |
+| `search.realtime` | A search served in `realtime` mode |
+| `search.pro` | A search served in `pro` mode |
+| `fetch` | A fetch of Keenable's indexed copy of a page |
+| `fetch.live` | A fetch made live from the source ([`live=true`](/api-reference/fetch)) |
+
+Two things to keep in mind when you budget against these:
+
+* **Prices are per-organization.** Read what a call actually cost from the response rather than assuming a flat rate.
+* **Search mode picks the SKU.** Over HTTP, pass [`mode`](/api-reference/search#request) on `/v1/search`; over MCP an integrator can pin it with [`_meta["keenable/overrides"]`](/mcp-server#operator-overrides-request-meta). When neither is set the search runs in `pro` mode, unless your organization has a different default. The response echoes the mode that served the call.
+
+## Reading usage per call
+
+Over MCP, every authenticated tool call reports its cost under `_meta["keenable/usage"]`, alongside the result rather than inside the model-visible `content`:
+
+```json theme={"system"}
+{
+  "content": [{ "type": "text", "text": "..." }],
+  "_meta": {
+    "keenable/usage": { "sku": "search.realtime", "amount": 1, "credits": 1, "paid": true }
+  }
+}
+```
+
+`credits` is what the call cost, and `paid` tells you which bucket it came from — `false` for the free monthly allowance, `true` for purchased credits. This is what to attribute cost against per call; see [Metadata for integrators](/mcp-server#metadata-for-integrators) for the full field list.
+
+Unauthenticated calls are unbilled and omit the block entirely.
+
+## When credits run out
+
+With the allowance spent and no purchased credits remaining, `/v1/search` and `/v1/fetch` return [`402`](/authentication#error-responses). Buy a package in the [console](https://app.keenable.ai/console) to resume, or wait for the allowance to reset.
+
+To keep it from getting that far, turn on [auto top-up](/auto-top-up): it buys more credits whenever your purchased balance runs low.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

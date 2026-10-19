@@ -1,0 +1,71 @@
+{
+ "slug": "crawlee",
+ "name": "Crawlee (OSS)",
+ "category": "oss",
+ "fetched_at": "2026-10-19T05:54:58+00:00",
+ "sources": {
+  "docs-err-0c0f91": {
+   "url": "https://crawlee.dev/docs/",
+   "status": 404,
+   "final_url": "https://crawlee.dev/docs/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 17842,
+   "truncated": false,
+   "sha256": "1c1770921e7e43da7c94d8b13ab3757bba55dbe8614eba77fc90aa19ddd2cfe8",
+   "fetched_at": "2026-10-19T05:54:58+00:00"
+  },
+  "home": {
+   "url": "https://crawlee.dev/",
+   "status": 200,
+   "final_url": "https://crawlee.dev/",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 30822,
+   "truncated": false,
+   "sha256": "6a7f477de0e998502263f632916fbc1b41ce2a843992192b7804241dac888fb6",
+   "fetched_at": "2026-10-19T05:54:59+00:00",
+   "text_bytes": 30820
+  },
+  "llms-err-e8c457": {
+   "url": "https://crawlee.dev/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://crawlee.dev/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 17842,
+   "truncated": false,
+   "sha256": "1c1770921e7e43da7c94d8b13ab3757bba55dbe8614eba77fc90aa19ddd2cfe8",
+   "fetched_at": "2026-10-19T05:55:00+00:00"
+  },
+  "llms": {
+   "url": "https://crawlee.dev/llms.txt",
+   "status": 200,
+   "final_url": "https://crawlee.dev/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 30822,
+   "truncated": false,
+   "sha256": "6a7f477de0e998502263f632916fbc1b41ce2a843992192b7804241dac888fb6",
+   "fetched_at": "2026-10-19T05:55:00+00:00",
+   "text_bytes": 30820
+  },
+  "llms-full": {
+   "url": "https://crawlee.dev/llms-full.txt",
+   "status": 200,
+   "final_url": "https://crawlee.dev/llms-full.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 2923120,
+   "truncated": false,
+   "sha256": "d81605a1fdd107d9612405f148fb9a6cb30faf71b709d3facab945ddbb365e25",
+   "fetched_at": "2026-10-19T05:55:01+00:00",
+   "text_bytes": 2920685
+  },
+  "llms-err-2664d5": {
+   "url": "https://docs.crawlee.dev/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.crawlee.dev/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:55:03+00:00"
+  }
+ }
+}

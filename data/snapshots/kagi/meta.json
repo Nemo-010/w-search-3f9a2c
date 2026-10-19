@@ -1,0 +1,92 @@
+{
+ "slug": "kagi",
+ "name": "Kagi Search API",
+ "category": "search-engine",
+ "fetched_at": "2026-10-19T05:54:28+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://kagi.com/api/pricing",
+   "status": 200,
+   "final_url": "https://kagi.com/api/pricing",
+   "content_type": "text/html",
+   "bytes": 86501,
+   "truncated": false,
+   "sha256": "e4d1b0e28afa14433fe54eaa5c3c92b8f19acf8afbd27cb5adb9a68ec8fc3567",
+   "fetched_at": "2026-10-19T05:54:28+00:00",
+   "text_bytes": 1671
+  },
+  "docs": {
+   "url": "https://help.kagi.com/kagi/api/search.html",
+   "status": 200,
+   "final_url": "https://help.kagi.com/kagi/api/search.html",
+   "content_type": "text/html",
+   "bytes": 99743,
+   "truncated": false,
+   "sha256": "10025c84b776785e367de49b42a43ec56634dda7ba597e7f668a239fd9aecb06",
+   "fetched_at": "2026-10-19T05:54:29+00:00",
+   "text_bytes": 2400
+  },
+  "home": {
+   "url": "https://kagi.com/api",
+   "status": 200,
+   "final_url": "https://account.kagi.com/loginname?requestId=oidc_V2_395763180216861960",
+   "content_type": "text/html",
+   "bytes": 24355,
+   "truncated": false,
+   "sha256": "62438acf14880f1face7b67720f6bc27406b65b2a7051e3d3f667c11fc598672",
+   "fetched_at": "2026-10-19T05:54:30+00:00",
+   "text_bytes": 562
+  },
+  "llms-err-a75f7b": {
+   "url": "https://help.kagi.com/kagi/api/search.html/llms.txt",
+   "status": 404,
+   "final_url": "https://help.kagi.com/kagi/api/search.html/llms.txt",
+   "content_type": "text/html",
+   "bytes": 48027,
+   "truncated": false,
+   "sha256": "0077c32743546d8f082a76eb218c5fa4b826aff1593c4c40808d17b9f52d4927",
+   "fetched_at": "2026-10-19T05:54:33+00:00"
+  },
+  "llms-err-44ad8a": {
+   "url": "https://kagi.com/api/llms.txt",
+   "status": 404,
+   "final_url": "https://kagi.com/api/llms.txt",
+   "content_type": "text/html",
+   "bytes": 9398,
+   "truncated": false,
+   "sha256": "427ce57249e192562a8df86bb82f9fed0d76f3fa32401345f8a8e6cba18cb4c0",
+   "fetched_at": "2026-10-19T05:54:33+00:00"
+  },
+  "llms": {
+   "url": "https://kagi.com/api/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://kagi.com/api/docs/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 104,
+   "truncated": false,
+   "sha256": "b910829d3f983c9e6af9e8ce6834da321f316297f29b6e205198030e836c230d",
+   "fetched_at": "2026-10-19T05:54:34+00:00",
+   "text_bytes": 104
+  },
+  "llms-err-c43f8f": {
+   "url": "https://docs.help.kagi.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.help.kagi.com/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:54:35+00:00"
+  },
+  "llms-err-5f2894": {
+   "url": "https://docs.kagi.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.kagi.com/llms.txt",
+   "content_type": "",
+   "bytes": 62,
+   "truncated": false,
+   "sha256": "7d8afe60f5ea1138c4952cbdee4b2a35b2f5ad72aa3714a712bac4eb5d4441d5",
+   "fetched_at": "2026-10-19T05:54:35+00:00"
+  }
+ }
+}

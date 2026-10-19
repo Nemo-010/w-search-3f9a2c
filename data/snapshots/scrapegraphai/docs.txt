@@ -1,0 +1,41 @@
+Introduction - ScrapeGraphAI Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content ScrapeGraphAI home page v2 Search... ⌘ K Status Support ⭐ Star Dashboard Dashboard Search... Navigation Get Started Introduction Home Knowledge Base Cookbook API Reference Official Website Blog Get Started Introduction Installation Transition from Firecrawl to ScrapeGraph v2 Use Cases Dashboard Services Scrape Extract Search Crawl Monitor Schema History Agent Payments Official SDKs Python SDK JavaScript SDK Mocking & Testing CLI MCP Server LLM SDKs OpenAI Anthropic Gemini Frameworks Vercel AI SDK LangChain LangGraph LlamaIndex CrewAI Agno LiteLLM Orthogonal Personal AI Agents Hermes Agent OpenClaw No-code n8n Make Zapier Contribute Open Source On this page Overview Perfect For Getting Started Documentation Structure Core Services Implementation Options Official SDKs Integrations Examples & Use Cases Get Started Introduction Copy page Copy page Welcome to ScrapeGraphAI - AI-Powered Web Data Extraction Copy page Copy page 
+ ​ Overview 
+ ScrapeGraphAI is a powerful suite of LLM-driven web scraping tools designed to extract structured data from any website and HTML content. Our API is designed to be easy to use and integrate with your existing workflows. 
+ ​ Perfect For 
+ AI Applications Feed your AI agents with structured web data for enhanced decision-making Data Analysis Extract and structure web data for research and analysis Dataset Creation Build comprehensive datasets from web sources Platform Building Create scraping-powered platforms and applications 
+ ​ Getting Started 
+ 1 Get API Key Sign up and access your API key from the dashboard 2 Choose Your Service Select from our specialized extraction services based on your needs 3 Start Extracting Begin extracting data using our SDKs or direct API calls 
+ ​ Documentation Structure 
+ Dashboard Learn how to manage your account, monitor jobs, and access your API keys Services Explore our core services: SmartScraper, SearchScraper, and Markdownify SDKs & Integration Implement with Python, JavaScript, or integrate with LangChain and LlamaIndex API Reference Detailed API documentation for direct integration 
+ ​ Core Services 
+ Scrape 
+: Fetch a page in markdown, HTML, screenshot, JSON, links, images, summary, or branding 
+ Extract 
+: AI-powered structured data extraction from any URL, HTML, or markdown 
+ Search 
+: AI-powered web search that returns structured, ready-to-use results 
+ Crawl 
+: Asynchronous multi-page site crawling with start / stop / resume controls 
+ Monitor 
+: Cron-scheduled jobs that track page changes and fire webhooks 
+ Schema 
+: Define and reuse JSON schemas to enforce consistent extraction output 
+ History 
+: Browse, inspect, and retrieve the results of past requests 
+ ​ Implementation Options 
+ ​ Official SDKs 
+ Production-ready SDKs for Python and JavaScript 
+ Comprehensive error handling and retry logic 
+ Type hints and full IDE support 
+ ​ Integrations 
+ Seamless integration with LangChain 
+ Native support for LlamaIndex 
+ Perfect for AI agent workflows 
+ ​ Examples & Use Cases 
+ Visit our Cookbook to explore real-world examples and implementation patterns: 
+ E-commerce data extraction 
+ News article scraping 
+ Research data collection 
+ Content aggregation 
+ Open Source ScrapeGraphAI is built with transparency in mind. Check out our open-source core at: github.com/scrapegraphai/scrapegraph-ai 
+ Ready to Start? Get your API key and start extracting data in minutes! Was this page helpful? Yes No Installation x github linkedin Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

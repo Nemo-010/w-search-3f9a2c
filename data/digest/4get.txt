@@ -1,0 +1,4 @@
+# 4get (OSS) (4get) category=oss
+home=https://4get.ca/ pricing=None docs=https://git.4get.ca/4get/4get llms=None
+sources_ok: home:https://4get.ca/
+--- ranked fact lines ---

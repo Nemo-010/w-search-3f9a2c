@@ -1,0 +1,5 @@
+# New York Times API (nyt) category=news
+home=https://developer.nytimes.com/ pricing=https://developer.nytimes.com/pricing docs=https://developer.nytimes.com/docs/ llms=None
+sources_ok: pricing:https://developer.nytimes.com/pricing, docs:https://developer.nytimes.com/docs/, home:https://developer.nytimes.com/, llms:https://developer.nytimes.com/docs/llms.txt, llms-full:https://developer.nytimes.com/llms-full.txt, llms-https://developer.nytimes.com/llms.txt:https://developer.nytimes.com/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---

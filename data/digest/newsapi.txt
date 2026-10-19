@@ -1,0 +1,10 @@
+# NewsAPI (newsapi) category=news
+home=https://newsapi.org/ pricing=https://newsapi.org/pricing docs=https://newsapi.org/docs llms=None
+sources_ok: pricing:https://newsapi.org/pricing, docs:https://newsapi.org/docs, home:https://newsapi.org/
+--- ranked fact lines ---
+[pricing] $0.0018 per extra request help
+[pricing] $0.0009 per extra request help
+[pricing] Free for development, options if you're commercial
+[pricing] totally free, start now
+[docs] You need an API key to use the API - this is a unique key that identifies your requests. They're free while you're in development.
+[home] Free for Development

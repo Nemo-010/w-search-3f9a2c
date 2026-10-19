@@ -1,0 +1,5 @@
+# Nominatim (OSM) (nominatim) category=misc-api
+home=https://nominatim.org/ pricing=None docs=https://nominatim.org/release-docs/latest/api/Overview/ llms=None
+sources_ok: docs:https://nominatim.org/release-docs/latest/api/Overview/, home:https://nominatim.org/
+--- ranked fact lines ---
+[home] to type free-form queries (“Cafe Paris, New York”) in any language.

@@ -1,0 +1,50 @@
+{
+ "slug": "parsehub",
+ "name": "ParseHub",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:21+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.parsehub.com/pricing",
+   "status": 200,
+   "final_url": "https://www.parsehub.com/pricing",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 2627,
+   "truncated": false,
+   "sha256": "a443761563faf7c7f67c805dd9bb1621f5d53c8704e72868306817298dbad1c1",
+   "fetched_at": "2026-10-19T05:54:21+00:00",
+   "text_bytes": 60
+  },
+  "home": {
+   "url": "https://www.parsehub.com/",
+   "status": 200,
+   "final_url": "https://www.parsehub.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 2430,
+   "truncated": false,
+   "sha256": "82de9a0e85270055f2694af49d457cc2a62f9713320b937f2cb0b628e0c3122d",
+   "fetched_at": "2026-10-19T05:54:22+00:00",
+   "text_bytes": 60
+  },
+  "llms-err-0ead0f": {
+   "url": "https://www.parsehub.com/llms.txt",
+   "status": 404,
+   "final_url": "https://www.parsehub.com/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 161,
+   "truncated": false,
+   "sha256": "02ac58b4dc291a84e6616f314aecc67921e3f2081ec6d92ba4068339b56423d4",
+   "fetched_at": "2026-10-19T05:54:22+00:00"
+  },
+  "llms-err-669296": {
+   "url": "https://www.parsehub.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.parsehub.com/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 166,
+   "truncated": false,
+   "sha256": "ad277807c09652659f6f2b80c2d79f7ca60df8f1f9c60f8360fcf82e5e519064",
+   "fetched_at": "2026-10-19T05:54:23+00:00"
+  }
+ }
+}

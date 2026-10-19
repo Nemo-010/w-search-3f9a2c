@@ -1,0 +1,228 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.octen.ai/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Pricing
+
+> Prices for Octen's APIs and models, and how billing works.
+
+<p style={{ fontSize: "0.8rem", opacity: 0.6 }}>For AI agents: <a href="https://docs.octen.ai/overview/pricing.md">docs.octen.ai/overview/pricing.md</a></p>
+
+## Overview
+
+Our pricing combines a **monthly QPS Plan subscription** with **pay-as-you-go API billing**:
+
+<Steps>
+  <Step title="Subscribe to a QPS Plan">
+    New accounts start on the Free plan; adding credits unlocks Base at no monthly cost.
+  </Step>
+
+  <Step title="Top up your balance">
+    API charges are deducted from your balance in real time.
+  </Step>
+
+  <Step title="Pay as you go">
+    Charges are based on actual resource consumption (API calls, tokens).
+  </Step>
+</Steps>
+
+<Tip>All new users receive **\$5 in free balance** upon registration.</Tip>
+
+## QPS Plans
+
+**Free tier:**
+
+| Plan | Web Search QPS | Monthly Price | Notes |
+| - | - | - | - |
+| Free | Up to 10 | \$0 | Default tier for every new account |
+| Base | Up to 20 | \$0 | Unlocked automatically once you add credits |
+
+**QPS plans**, with guaranteed throughput and SLA:
+
+| Plan | Web Search QPS | Monthly Price | Best For |
+| - | - | - | - |
+| Builder | Up to 50 | <s>\$2,999</s> \$2,099 (30% off) | Early-stage teams going to production |
+| Pro | Up to 200 | \$13,999 | Growing production workloads |
+| Max | Up to 500 | \$33,999 | High-volume production at scale |
+
+**Embedding limits**, in tokens per minute (TPM):
+
+| Plan | Embedding TPM | VL Embedding TPM |
+| :- | :- | :- |
+| Free / Base | 1,000,000 | 200,000 |
+| Builder | 2,500,000 | 500,000 |
+| Pro | 10,000,000 | 2,000,000 |
+| Max | 25,000,000 | 5,000,000 |
+
+## API Pricing
+
+### Octen Fast
+
+Octen Fast includes Broad Search, Web Search, Image Search, and Video Search.
+
+| API | Search API Call | Full Content |
+| - | - | - |
+| Broad Search | <s>\$5</s> \$1 / 1k calls (80% off) | \$0.5 / 1k results |
+| Web Search | <s>\$5</s> \$1 / 1k calls (80% off) | \$0.5 / 1k results |
+| Image Search | \$2 / 1k calls | - |
+| Video Search | \$5 / 1k calls | - |
+
+A single Broad Search call may include multiple Search API calls.
+
+For Broad Search and Web Search, the full content of the first 10 results per search is free; only additional results are billed.
+
+### Octen Premier
+
+Octen Premier includes News Search and Business Search.
+
+| API | Search API Call | Full Content |
+| - | - | - |
+| News Search | \$3 / 1k calls | \$0.5 / 1k results |
+| Business Search | \$5 / 1k calls | \$0.5 / 1k results |
+
+The full content of the first 10 results per search is free; only additional results are billed.
+
+### Extract
+
+| Resource | Price (USD) |
+| - | - |
+| Standard mode | \$1 / 1k successful URLs |
+| Advanced mode | \$2.5 / 1k successful URLs |
+
+Each URL is billed at the mode it was processed in, including URLs handled by auto mode. Failed URLs are not billed.
+
+### Model Gateway
+
+Charges include Search fees (based on the number of search queries) and model usage fees (based on token consumption).
+
+**Token fees:**
+
+| Model | Input (USD / 1M tokens) | Output (USD / 1M tokens) | Cache Read (USD / 1M tokens) | Cache Write (USD / 1M tokens) |
+| - | - | - | - | - |
+| openai/gpt-6.1-sol | \$2 (≤272k) / \$4 (>272k) | \$10 (≤272k input) / \$15 (>272k input) | \$0.1 (≤272k) / \$0.2 (>272k) | \$2.5 (≤272k) / \$5 (>272k) |
+| openai/gpt-6-astra | \$10 (≤272k) / \$20 (>272k) | \$50 (≤272k input) / \$75 (>272k input) | \$1 (≤272k) / \$2 (>272k) | \$12.5 (≤272k) / \$25 (>272k) |
+| openai/gpt-5.6-sol | \$4 (≤272k) / \$8 (>272k) | \$20 (≤272k input) / \$30 (>272k input) | \$0.4 (≤272k) / \$0.8 (>272k) | \$5 (≤272k) / \$10 (>272k) |
+| openai/gpt-5.6-terra | \$2 (≤272k) / \$4 (>272k) | \$12 (≤272k input) / \$18 (>272k input) | \$0.2 (≤272k) / \$0.4 (>272k) | \$2.5 (≤272k) / \$5 (>272k) |
+| openai/gpt-5.6-luna | \$0.2 (≤272k) / \$0.4 (>272k) | \$1.2 (≤272k input) / \$1.8 (>272k input) | \$0.02 (≤272k) / \$0.04 (>272k) | \$0.25 (≤272k) / \$0.5 (>272k) |
+| openai/gpt-5.4 | \$2.5 | \$15 | \$0.25 | - |
+| anthropic/claude-fable-5.1 | \$10 | \$50 | \$0.25 | \$12.5 (5m) / \$20 (1h) |
+| anthropic/claude-fable-5 | \$10 | \$50 | \$1 | \$12.5 (5m) / \$20 (1h) |
+| anthropic/claude-opus-5.5 | \$4 | \$20 | \$0.2 | \$5 (5m) / \$8 (1h) |
+| anthropic/claude-opus-5 | \$5 | \$25 | \$0.5 | \$6.25 (5m) / \$10 (1h) |
+| anthropic/claude-opus-4.8 | \$5 | \$25 | \$0.5 | \$6.25 (5m) / \$10 (1h) |
+| anthropic/claude-opus-4.6 | \$5 | \$25 | \$0.5 | \$6.25 (5m) / \$10 (1h) |
+| anthropic/claude-sonnet-5.5 | \$2 | \$10 | \$0.1 | \$2.5 (5m) / \$4 (1h) |
+| anthropic/claude-sonnet-5 | \$2 | \$10 | \$0.2 | \$2.5 (5m) / \$4 (1h) |
+| anthropic/claude-sonnet-4.6 | \$3 | \$15 | \$0.3 | \$3.75 (5m) / \$6 (1h) |
+| anthropic/claude-haiku-5.5 | \$0.1 (≤100k) / \$0.5 (>100k) | \$0.5 (≤100k input) / \$2.5 (>100k input) | \$0.01 (≤100k) / \$0.05 (>100k) | ≤100k: \$0.125 (5m) / \$0.2 (1h); >100k: \$0.625 (5m) / \$1 (1h) |
+| anthropic/claude-haiku-4.5 | \$1 | \$5 | \$0.1 | \$1.25 (5m) / \$2 (1h) |
+| google/gemini-4-argon | \$4 | \$20 | \$0.2 | - |
+| google/gemini-3.8-flash | \$0.75 | \$3.75 | \$0.075 | - |
+| google/gemini-3.5-flash | \$1.5 | \$9 | \$0.15 | - |
+| google/gemini-3.5-flash-lite | \$0.3 | \$2.5 | \$0.03 | - |
+| google/gemini-3.1-pro-preview | \$2 (≤200k) / \$4 (>200k) | \$12 (≤200k input) / \$18 (>200k input) | \$0.2 (≤200k) / \$0.4 (>200k) | - |
+| google/gemini-3.1-flash-lite | \$0.25 | \$1.5 | \$0.025 | - |
+| google/gemini-3-flash-preview | \$0.5 | \$3 | \$0.05 | - |
+| moonshotai/kimi-k3 | \$3 | \$15 | \$0.3 | - |
+| moonshotai/kimi-k2.6 | \$0.95 | \$4 | \$0.16 | - |
+| moonshotai/kimi-k2.5 | \$0.6 | \$3 | \$0.1 | - |
+| minimax/minimax-m2.5 | \$0.3 | \$1.2 | - | - |
+| qwen/qwen3.6-plus | \$0.5 (≤256k) / \$2 (>256k) | \$3 (≤256k input) / \$6 (>256k input) | \$0.05 | \$0.625 (5m) |
+| deepseek/deepseek-v4-pro | \$1.74 | \$3.48 | \$0.145 | - |
+| deepseek/deepseek-v4-flash-0731 | \$0.14 | \$0.28 | \$0.028 | - |
+
+**Image generation token fees:**
+
+| Model | Text Input (USD / 1M tokens) | Text Output (USD / 1M tokens) | Image Input (USD / 1M tokens) | Image Output (USD / 1M tokens) |
+| - | - | - | - | - |
+| openai/gpt-image-2.5-flare | \$5 | - | \$8 | \$30 |
+| openai/gpt-image-2.5-sunburst | \$5 | - | \$8 | \$30 |
+| openai/gpt-image-2 | \$5 | - | \$8 | \$30 |
+| openai/gpt-image-1-mini | \$2 | - | \$2.50 | \$8 |
+| google/gemini-3-pro-image | \$2 | \$12 | \$2 | \$120 |
+| google/gemini-3.1-flash-image | \$0.50 | \$3 | \$0.50 | \$60 |
+
+**Video generation fees:**
+
+| Model | Per Second (USD) | Per 1M Tokens (USD) | Reference Image (USD) |
+| - | - | - | - |
+| minimax/minimax-h3 | 768p: \$0.08 / 2K: \$0.13 | - | First 5 free, then \$0.04 each |
+| bytedance/seedance-2.5 | - | 480p, 720p: \$10.7 / 1080p: \$11.7 | - |
+| google/veo-3.1 | With audio: \$0.4 / Video only: \$0.2 | - | - |
+| google/veo-3.1-fast | With audio: 720p \$0.1, 1080p \$0.12 / Video only: 720p \$0.08, 1080p \$0.1 | - | - |
+| google/veo-3.1-lite | With audio: 720p \$0.05, 1080p \$0.08 / Video only: 720p \$0.03, 1080p \$0.05 | - | - |
+
+**Example cost:**
+
+A single `anthropic/claude-sonnet-4.6` completion that runs 3 search calls, reads 40,000 cached input tokens, adds 10,000 fresh input tokens, and returns 2,000 output tokens:
+
+| Component | Usage | Rate | Cost |
+| - | - | - | - |
+| Input tokens | 10,000 | \$3 / 1M | \$0.030 |
+| Cache read | 40,000 | \$0.3 / 1M | \$0.012 |
+| Output tokens | 2,000 | \$15 / 1M | \$0.030 |
+| Search calls | 3 | \$1 / 1k | \$0.003 |
+| **Total** | | | **\$0.075** |
+
+### Embedding
+
+| Model | Price (USD / 1M tokens) | Best For |
+| - | - | - |
+| octen-embedding-8b | \$0.07 | Best accuracy |
+| octen-embedding-4b | \$0.04 | Balanced performance and cost |
+| octen-embedding-0.6b | \$0.01 | High-volume and low-cost |
+
+### VL Embedding
+
+Billed by input tokens. Text and multimodal (image / video) inputs are priced differently:
+
+| Model | Text (USD / 1M tokens) | Image / Video (USD / 1M tokens) |
+| - | - | - |
+| octen-vl-embedding | \$0.05 | \$0.12 |
+| octen-vl-embedding-large | \$0.10 | \$0.25 |
+
+## Application Pricing
+
+### Answer and Multimodal Chat
+
+Charges include Search fees (based on the number of search queries) and model usage fees (based on token consumption).
+
+### Deep Research
+
+Billed per request, based on the selected tier.
+
+| Tier | Price (USD / request) |
+| - | - |
+| lite | \$0.2 |
+| standard | \$1 |
+| pro | \$2.5 |
+| pro-visual | \$3 |
+
+### Grounded Generation
+
+Billed per generated output, based on the modality.
+
+| Modality | Price (USD) |
+| - | - |
+| Image | \$0.25 / image |
+| Video | \$1 / video |
+
+## Invoices & Receipts
+
+* Each top-up generates an invoice and receipt.
+* Monthly usage statements are available in the [Billing](https://octen.ai/platform/billing) dashboard.
+
+## Contact Us
+
+For custom QPS plans, higher rate limits, or billing inquiries:
+
+<Card title="Get in Touch" icon="envelope" href="mailto:support@octen.ai">
+  Reach out to us at **[support@octen.ai](mailto:support@octen.ai)**
+</Card>
+
+***
+
+<p style={{ fontSize: "0.8rem", opacity: 0.6 }}>Last modified on October 16, 2026</p>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

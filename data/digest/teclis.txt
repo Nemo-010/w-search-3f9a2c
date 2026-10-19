@@ -1,0 +1,4 @@
+# Teclis (teclis) category=search-engine
+home=https://teclis.com/ pricing=None docs=None llms=None
+sources_ok: home:https://teclis.com/
+--- ranked fact lines ---

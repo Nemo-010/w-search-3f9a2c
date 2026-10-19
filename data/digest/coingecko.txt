@@ -1,0 +1,63 @@
+# CoinGecko (coingecko) category=misc-api
+home=https://www.coingecko.com/en/api pricing=https://www.coingecko.com/en/api/pricing docs=https://docs.coingecko.com/ llms=None
+sources_ok: pricing:https://www.coingecko.com/en/api/pricing, docs:https://docs.coingecko.com/, home:https://www.coingecko.com/en/api, llms:https://docs.coingecko.com/llms.txt, llms-full:https://docs.coingecko.com/llms-full.txt
+--- ranked fact lines ---
+[pricing] CoinGecko API offers both free and paid plans. The Demo API plan is accessible to all CoinGecko users at zero cost, with a stable rate limit of 100 calls/min and a monthly cap of 10,000 calls. Paid plans start at $35/mo, offering a higher rate limit of 300 calls/min and a monthly cap of 100,000 calls.
+[pricing] The Demo Plan is a free plan to try out the CoinGecko API. It’s good for testing and exploration, but comes with limited call credits and a rate limit of 100 calls/min.
+[pricing] From just $103.2/month
+[pricing] Or billed yearly $29/mo
+[pricing] Or billed yearly $103.2/mo
+[pricing] Or billed yearly $399.2/mo
+[pricing] Or billed yearly $799.2/mo
+[pricing] Billed yearly: $420
+[pricing] Billed yearly: $1,548
+[pricing] Billed yearly: $5,988
+[pricing] Billed yearly: $11,988
+[pricing] You will be charged $250 for every 500,000 calls made.
+[home] Get started for free, no credit card required
+[home] Rigorous checks and algorithms ensure that all token information is accurate, trustworthy, and free from manipulation, scams or bad data — giving builders and businesses a dependable source of truth for mission-critical applications.
+[pricing] $200B Lifetime Derivatives Volume
+[pricing] $21T Onchain Transactions
+[pricing] Coins Per Call
+[pricing] Currencies Per Call
+[pricing] Build first, buy later with a free Demo plan.
+[pricing] Effortlessly try CoinGecko's API with free Demo plan account. Or start prototyping instantly with our Keyless Public API .
+[pricing] Start for Free
+[pricing] While others charge by 'data points' or 'compute units', CoinGecko uses a Flat Credit Model. 1 Request = 1 Credit, regardless of how much data is returned.
+[pricing] How much data does 1 call credit get you?
+[pricing] 1 request = 1 flat credit
+[pricing] Is CoinGecko API free?
+[pricing] Yes! You can access onchain DEX data through more than 20 endpoints on the CoinGecko API. Key datasets include crypto liquidity pools, token data by contract address and OHLCV chart data.
+[pricing] CoinGecko API provides rich onchain market data for 49M+ tokens traded across 360+ blockchain networks, including Ethereum, Solana, TON, BNB Chain, and Base. Some popular onchain data types include:
+[pricing] 1 call = 1 credit. Calling any endpoint will only count as 1 call.
+[pricing] If you start your subscription sometime after the first day of the month, you'll still receive your full quota of requests for that partial month. Then on the first day of the following month, your request will reset again.
+[pricing] Meanwhile, the Analyst , Lite , Pro , and Pro+ Plans are designed for serious analysis work and small to medium-sized projects. They come with a more complete suite of CoinGecko API features, including real-time data, 90+ endpoints, and a commercial license. The main differences between them are the call credits and rate limits.
+[pricing] Yes! Just head over to the developer dashboard and click on the Notifications tab to enable usage alerts. Note that users will receive an email once usage reaches the 80% and 100% thresholds. You may also optionally enable additional alerts at 50% and 90% credit usage.
+[pricing] Feel free to visit the pricing page and consider upgrading to a higher tier plan to accommodate your increasing usage.
+[pricing] Get the latest news, trends, and promotional materials in crypto by subscribing to our free newsletter.
+[docs] Onchain DEX data — 200+ blockchain networks, 1,800+ DEXes, 39M+ tokens, powered by GeckoTerminal
+[docs] Pro API Reference Full endpoint reference for paid plan users. Demo API Reference Free Demo API with limited endpoints and rate limits. WebSocket Ultra-low latency streaming with persistent connections. Webhooks Receive automated metadata updates via HTTP callbacks.
+[llms] - [DeFi & Onchain Analytics](https://docs.coingecko.com/docs/defi-onchain-analytics.md): Analyze onchain tokens, pools, trades, and holder distribution across 200+ networks from CoinGecko API
+[llms] - [Most Recently Updated Tokens List](https://docs.coingecko.com/reference/tokens-info-recent-updated.md): To query 100 most recently updated tokens info of a specific network or across all networks on GeckoTerminal
+[llms] - [Onchain Charts](https://docs.coingecko.com/reference/onchain-charts-overview.md): OHLCV candlestick charts for DEX pools and tokens, from second to day timeframes.
+[llms] - [Most Recently Updated Tokens List](https://docs.coingecko.com/demo/reference/tokens-info-recent-updated.md): To query 100 most recently updated tokens info of a specific network or across all networks on GeckoTerminal
+[llms] - [Onchain Charts](https://docs.coingecko.com/demo/reference/onchain-charts-overview.md): OHLCV candlestick charts for DEX pools and tokens, from second to day timeframes.
+--- llms/readme head ---
+# CoinGecko API
+> CoinGecko API delivers real-time and historical cryptocurrency data — including prices, OHLCV, market cap, trading volume, NFT, and onchain DeFi data — for coins, tokens, pools, and exchanges via REST API, WebSocket, and Webhooks, with SDK and MCP server support for AI agents.
+- [Welcome to CoinGecko API](https://docs.coingecko.com/index.md)
+- [Setting Up Your API Key](https://docs.coingecko.com/docs/setting-up-your-api-key.md): Create an API key and start making requests
+- [Errors & Rate Limits](https://docs.coingecko.com/docs/errors-and-rate-limits.md): HTTP status codes, CoinGecko error codes, and rate limit behavior
+- [API Status](https://docs.coingecko.com/docs/api-status.md): Live status, incident history, and uptime for the CoinGecko API
+- [Data Delivery Methods](https://docs.coingecko.com/docs/data-delivery-methods.md): REST API, WebSocket, and Webhooks — choose the right method for your use case
+- [How-To](https://docs.coingecko.com/docs/how-to.md): Learn how to query CoinGecko and onchain data — identifiers, common patterns, and quick answers
+- [Querying Coin Data](https://docs.coingecko.com/docs/querying-coin-data.md): Coin IDs, contract addresses, bulk queries, historical data, and common CoinGecko API patterns
+- [Querying Onchain Data](https://docs.coingecko.com/docs/querying-onchain-data.md): Network IDs, DEX IDs, pool and token queries, and common onchain API patterns
+- [Common Use Cases](https://docs.coingecko.com/docs/common-use-cases.md): Step-by-step guides for building with the CoinGecko API — trading, portfolio tracking, market research, and more
+- [Trading](https://docs.coingecko.com/docs/trading.md): Build trading bots, charting tools, and backtesting pipelines with CoinGecko API
+- [Portfolio Tracking](https://docs.coingecko.com/docs/portfolio-tracking.md): Build portfolio trackers with real-time valuation, cost basis, and multi-currency support from CoinGecko API
+- [Market Research](https://docs.coingecko.com/docs/market-research.md): Conduct deep market research with fundamentals, trending data, sector analysis, and onchain analytics from CoinGecko API
+- [DeFi & Onchain Analytics](https://docs.coingecko.com/docs/defi-onchain-analytics.md): Analyze onchain tokens, pools, trades, and holder distribution across 200+ networks from CoinGecko API
+- [Compliance & Reporting](https://docs.coingecko.com/docs/compliance-reporting.md): Build tax reporting, fund accounting, and audit pipelines with timestamped historical prices from CoinGecko API
+- [AI Agents & LLM Apps](https://docs.coingecko.com/docs/ai-agents-llm-apps.md): Build AI agents and LLM-powered apps with real-time crypto data from CoinGecko — MCP, SDK function calling, and prompt patterns
+- [Endpoint Showcase](https://docs.coingecko.com/docs/endpoint-showcase.md): See how CoinGecko API powers CoinGecko.com and GeckoTerminal.com

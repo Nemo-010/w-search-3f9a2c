@@ -1,0 +1,1478 @@
+API Documentation | The News API 
+ Home
+ Documentation
+ Pricing
+ Contact Us
+ Login
+ Sign Up
+ Documentation 
+ Sign up for free! 
+ Get instant access to the API with your free API token. No billing details required! 
+ Sign up now 
+ Getting Started 
+ Introduction 
+ Authentication 
+ API Endpoints 
+ Headlines 
+ Top Stories 
+ All News 
+ Similar News 
+ News by UUID 
+ Sources 
+ Errors 
+ Errors 
+ Examples 
+ API Examples 
+ Code Examples 
+ Getting Started 
+ Introduction 
+ Our API was developed to provide global news from thousands of sources with exceptional response times. On average we add over 1 million articles weekly, so
+ you will never be short of content. Even better, it is completely free! 
+ To get started simply sign up and use your API token in any of the available API endpoints documented below for instant access. 
+ If you have any questions or concerns, feel free to contact us . 
+ Authentication 
+ As mentioned above, when you sign up for free you will find your API token on your dashboard.
+ Simply add this to any of our API endpoints as a GET parameter to gain access. Examples of how this is done can be found below. 
+ API Endpoints 
+ Headlines Available on: Standard plan and above 
+ Endpoint 
+ GET https://api.thenewsapi.com/v1/news/headlines HTTP/1.1
+ Use this endpoint to find get the latest headlines by category along with similar articles,
+ allowing you to create the perfect news aggregation page similar to Google News . 
+ If you have issues with your requests, please ensure your GET parameters are URL-encoded . 
+ All text data returned is UTF-8 . 
+ All dates are in UTC (GMT) . 
+ HTTP GET Parameters 
+ name 
+ required 
+ description 
+ api_token 
+ true 
+ Your API token which can be found on your account dashboard. 
+ locale 
+ false 
+ Comma separated list of country codes to include in the result set. Default is all countries.
+ Click here for a list of supported countries.
+ Example: us,ca (US + Canada).
+ domains 
+ false 
+ Comma separated list of domains to include. List of domains can be obtained through our Sources endpoint, found further down this page.
+ exclude_domains 
+ false 
+ Comma separated list of domains to exclude 
+ source_ids 
+ false 
+ Comma separated list of source_ids to include. List of source_ids can be obtained through our Sources endpoint, found further down this page.
+ exclude_source_ids 
+ false 
+ Comma separated list of source_ids to exclude. 
+ language 
+ false 
+ Comma separated list of languages to include. Default is all.
+ Click here for a list of supported languages.
+ Examples: en,es (English + Spanish)
+ published_on 
+ false 
+ Find headlines for articles published on the specified date. Supported formats include: Y-m-d .
+ Examples: 2026-10-19 
+ headlines_per_category 
+ false 
+ Specify the number of articles you want to return per category. The maximum is 10 and the default is 6. 
+ include_similar 
+ false 
+ Specify if you wish to include similar articles with each base article. Default is true . 
+ Response Objects 
+ name 
+ description 
+ data > uuid 
+ The unique identifier for an article in our system. Store this and use it to find specific articles using our single article endpoint. 
+ data > title 
+ The article title. 
+ data > description 
+ The article meta description. 
+ data > keywords 
+ The article meta keywords. 
+ data > snippet 
+ The first 60 characters of the article body. 
+ data > url 
+ The URL to the article. 
+ data > image_url 
+ The URL to the article image. 
+ data > language 
+ The language of the source. 
+ data > published_at 
+ The datetime the article was published. 
+ data > source 
+ The domain of the source. 
+ data > categories 
+ Array of strings which the source is categorized as. 
+ data > locale 
+ Locale of the source. 
+ data > similar 
+ An array of similar articles to the base article. 
+ If no results are found, the data object will be empty. 
+ Example Request 
+ GET https://api.thenewsapi.com/v1/news/headlines?locale=us&language=en&api_token=YOUR_API_TOKEN
+ Example Response 
+ {
+ "data": {
+ "general": [
+ {
+ "uuid": "4ab6189b-986d-4efb-a210-9deb84794d9b",
+ "title": "Private jet skids off runway, hits fence at Las Vegas airport",
+ "description": "Officials say a private jet went off the end of a runway during a planned takeoff at the main airport in Las Vegas and hit a perimeter fence",
+ "keywords": "Aerospace and defense industry, Fashion, General news, Business, U.S. news",
+ "snippet": "Officials say a private jet went off the end of a runway during a planned takeoff at the main airport in Las Vegas and hit a perimeter fence\n\nFILE - Cars fill a...",
+ "url": "https://abcnews.com/US/wireStory/private-jet-skids-off-runway-hits-fence-las-137366264",
+ "image_url": "https://i.abcnewsfe.com/a/3a5e6a03-ae12-45b6-b1e1-9f17cc412a7f/wirestory_9df9f73f47c815328866b0efe11a4e56_16x9.jpg?w=1600",
+ "language": "en",
+ "published_at": "2026-10-18T22:49:09.000000Z",
+ "source": "abcnews.go.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "locale": "us",
+ "similar": [
+ {
+ "uuid": "14dba3e1-2e76-437c-ba7c-8566b01f5292",
+ "title": "Jet skids off runway after botched takeoff at Las Vegas airport",
+ "description": "A private jet aborted its takeoff after it ran off the end of a runway at Harry Reid International Airport Sunday morning.",
+ "keywords": "Metro, US News, airplanes, airports, las vegas",
+ "snippet": "A private jet aborted its takeoff after it ran off the end of a runway at Harry Reid International Airport Sunday morning.\n\nThe aircraft, a Dassault Falcon 50 w...",
+ "url": "https://nypost.com/2026/10/18/us-news/jet-skids-off-runway-after-botched-takeoff-at-las-vegas-airport/",
+ "image_url": "https://nypost.com/wp-content/uploads/sites/2/2026/10/comp-10-2.jpg?quality=75&strip=all&w=1200",
+ "language": "en",
+ "published_at": "2026-10-18T20:30:23.000000Z",
+ "source": "nypost.com",
+ "categories": [
+ "general"
+ ],
+ "locale": "us"
+ },
+ {
+ "uuid": "d71d1f48-9f15-4c11-9b5a-3895f6ff483d",
+ "title": "Canadian tourist accused of stealing flamingo from Las Vegas Strip says he drank up to 40 beers before pulling off heist",
+ "description": "Canadian tourist Mitchell Fairbarn testified he drank up to 40 beers before stealing a 27-year-old flamingo named Peachy from a Las Vegas casino.",
+ "keywords": "US News, animal abuse, birds, las vegas, tourists, trials",
+ "snippet": "A Canadian tourist claimed he was sleep-deprived and hammered on dozens of beers when he snatched a beloved flamingo from a Las Vegas casino and took selfies wi...",
+ "url": "https://nypost.com/2026/10/18/us-news/man-accused-of-stealing-flamingo-from-las-vegas-strip-says-he-drank-up-to-40-beers-before-pulling-off-heist/",
+ "image_url": "https://nypost.com/wp-content/uploads/sites/2/2026/10/Untitled-4_6c71a6.jpg?quality=75&strip=all&w=1200",
+ "language": "en",
+ "published_at": "2026-10-18T23:16:07.000000Z",
+ "source": "nypost.com",
+ "categories": [
+ "general"
+ ],
+ "locale": "us"
+ }
+ ]
+ },
+ {
+ "uuid": "6d8b1599-259e-44aa-b90b-20b3fc77f18a",
+ "title": "Netanyahu After Trump Endorsement: ‘Together We Will Finish the Mission’",
+ "description": "Israeli Prime Minister Benjamin Netanyahu pledged Sunday to “complete the mission” against Iran alongside President Donald Trump.",
+ "keywords": "",
+ "snippet": "Israeli Prime Minister Benjamin Netanyahu pledged Sunday to “complete the mission” against Iran alongside President Donald Trump after receiving what he cal...",
+ "url": "https://www.breitbart.com/politics/2026/10/18/netanyahu-after-trump-endorsement-together-we-will-complete-the-mission-against-iran/",
+ "image_url": "https://media.breitbart.com/media/2026/10/AP25363756466367-640x335.jpg",
+ "language": "en",
+ "published_at": "2026-10-18T21:45:29.000000Z",
+ "source": "breitbart.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "locale": "us",
+ "similar": [
+ {
+ "uuid": "55d6dd9b-268d-45a2-ba25-f9008e4f0941",
+ "title": "Trump backs Netanyahu as US slams settler violence (VIDEO) — RT World News",
+ "description": "US Secretary of State Marco Rubio has urged action against West Bank settler violence as Trump backs Netanyahu for reelection despite reported tensions",
+ "keywords": "",
+ "snippet": "Washington has criticized settler attacks despite the US president’s endorsement of the Israeli PM and reported tensions between the two leaders\n\nWashington h...",
+ "url": "https://rt-english.com/news/647367-trump-netanyahu-us-israel-settler-violence/",
+ "image_url": "https://mf.b37mrtl.ru/files/2026.10/article/6ad4fe412030275ae374f6da.jpg",
+ "language": "en",
+ "published_at": "2026-10-18T19:41:35.000000Z",
+ "source": "rt.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "locale": "us"
+ },
+ {
+ "uuid": "24b1288b-b3ba-4df1-a63d-b0e9c2c129d6",
+ "title": "Trump unveils 15-month plan to renovate historic DC golf course",
+ "description": "President Trump rolled out new renovation plans for the iconic East Potomac Golf Course and announced that it will be shut down for the next 15 months for the revamp.",
+ "keywords": "Politics, US News, donald trump, golf course, renovations, washington dc",
+ "snippet": "WASHINGTON — President Trump rolled out new renovation plans for the iconic East Potomac Golf Course and announced that it will be shut down for the next 15 m...",
+ "url": "https://nypost.com/2026/10/18/us-news/president-trump-unveils-plans-to-renovate-historic-dc-golf-course/",
+ "image_url": "https://nypost.com/wp-content/uploads/sites/2/2026/10/2026-extended-halt-tree-cutting-145603794.jpg?quality=75&strip=all&w=1200",
+ "language": "en",
+ "published_at": "2026-10-18T20:23:36.000000Z",
+ "source": "nypost.com",
+ "categories": [
+ "general"
+ ],
+ "locale": "us"
+ }
+ ]
+ }
+ ],
+ "business": ...,
+ "sports": ...,
+ "tech": ...,
+ "science": ...,
+ "health": ...
+ }
+}
+ Top Stories Available on: All plans 
+ Endpoint 
+ GET https://api.thenewsapi.com/v1/news/top HTTP/1.1
+ Use this endpoint to find live and historical top stories around the world or filter to get only top stories for specific countries. Filtering by language,
+ category, source and publish date is also possible, as well as advanced searching on title and the main text of the article. 
+ If you have issues with your requests, please ensure your GET parameters are URL-encoded . 
+ All text data returned is UTF-8 . 
+ All dates are in UTC (GMT) . 
+ HTTP GET Parameters 
+ name 
+ required 
+ description 
+ api_token 
+ true 
+ Your API token which can be found on your account dashboard. 
+ search 
+ false 
+ Use the search as a basic search tool by entering regular search terms or it has more advanced usage to build search queries: 
+ + signifies AND operation 
+ | signifies OR operation 
+ - negates a single token 
+ " wraps a number of tokens to signify a phrase for searching 
+ * at the end of a term signifies a prefix query 
+ ( and ) signify precedence
+ To use one of these characters literally, escape it with a preceding backslash ( \ ).
+ Example 1: forex + (usd | gbp) -cad (searches for forex articles which include usd or gbp but excludes cad) 
+ Example 2: "Apple Inc" (searches for articles with exact matches for "Apple Inc")
+ For more advanced query examples, see our API Examples section.
+ When using special characters (+, -, |, ", *, ()) you MUST URL-encode this parameter. 
+ search_fields 
+ false 
+ Comma separated list of fields to apply the search parameter to.
+ Supported fields: title | description | keywords | main_text 
+ Example: title,description,keywords 
+ Default: title,main_text 
+ locale 
+ false 
+ Comma separated list of country codes to include in the result set. Default is all countries.
+ Click here for a list of supported countries.
+ Example: us,ca (US + Canada).
+ categories 
+ false 
+ Comma separated list of categories to include.
+ Supported categories: general | science | sports | business | health | entertainment | tech | politics | food | travel 
+ Example: business,tech 
+ exclude_categories 
+ false 
+ Comma separated list of categories to exclude. 
+ domains 
+ false 
+ Comma separated list of domains to include. List of domains can be obtained through our Sources endpoint, found further down this page.
+ exclude_domains 
+ false 
+ Comma separated list of domains to exclude 
+ source_ids 
+ false 
+ Comma separated list of source_ids to include. List of source_ids can be obtained through our Sources endpoint, found further down this page.
+ exclude_source_ids 
+ false 
+ Comma separated list of source_ids to exclude. 
+ language 
+ false 
+ Comma separated list of languages to include. Default is all.
+ Click here for a list of supported languages.
+ Examples: en,es (English + Spanish)
+ published_before 
+ false 
+ Find all articles published before the specified date. Supported formats include:
+ Y-m-d\TH:i:s | Y-m-d\TH:i | Y-m-d\TH | Y-m-d | Y-m | Y .
+ Examples:
+ 2026-10-19T06:04:52 |
+ 2026-10-19T06:04 |
+ 2026-10-19T06 |
+ 2026-10-19 |
+ 2026-10 |
+ 2026 
+ published_after 
+ false 
+ Find all articles published after the specified date. Supported formats include:
+ Y-m-d\TH:i:s | Y-m-d\TH:i | Y-m-d\TH | Y-m-d | Y-m | Y .
+ Examples:
+ 2026-10-19T06:04:52 |
+ 2026-10-19T06:04 |
+ 2026-10-19T06 |
+ 2026-10-19 |
+ 2026-10 |
+ 2026 
+ published_on 
+ false 
+ Find all articles published on the specified date. Supported formats include: Y-m-d .
+ Examples: 2026-10-19 
+ sort 
+ false 
+ Sort by published_on or relevance_score (only available when used in conjunction with search ).
+ Default is published_at unless search is used and sorting by published_at is not included,
+ in which case relevance_score is used. 
+ limit 
+ false 
+ Specify the number of articles you want to return in the request. The maximum limit is based on your plan . The default limit is the maximum specified for your plan. 
+ page 
+ false 
+ Use this to paginate through the result set. Default is 1. Note that the max result set can't exceed 20,000. For example if your limit is 50, the max page you can have is 400 (50 * 400 = 20,000).
+ Example: page=2 
+ Response Objects 
+ name 
+ description 
+ meta > found 
+ The number of articles found for the request. 
+ meta > returned 
+ The number of articles returned on the page.
+ This is useful to determine the end of the result set as if this is lower than limit , there are no more articles after this page. 
+ meta > limit 
+ The limit based on the limit parameter. 
+ meta > page 
+ The page number based on the page parameter. 
+ data > uuid 
+ The unique identifier for an article in our system. Store this and use it to find specific articles using our single article endpoint. 
+ data > title 
+ The article title. 
+ data > description 
+ The article meta description. 
+ data > keywords 
+ The article meta keywords. 
+ data > snippet 
+ The first 60 characters of the article body. 
+ data > url 
+ The URL to the article. 
+ data > image_url 
+ The URL to the article image. 
+ data > language 
+ The language of the source. 
+ data > published_at 
+ The datetime the article was published. 
+ data > source 
+ The domain of the source. 
+ data > categories 
+ Array of strings which the source is categorized as. 
+ data > relevance_score 
+ Relevance score based on the search parameter. If the search parameter is not used, this will be null . 
+ data > locale 
+ Locale of the source. 
+ If no results are found, the data object will be empty. 
+ Example Request 
+ GET https://api.thenewsapi.com/v1/news/top?api_token=YOUR_API_TOKEN&locale=us&limit=3
+ Example Response 
+ {
+ "meta": {
+ "found": 1723468,
+ "returned": 10,
+ "limit": 10,
+ "page": 1
+ },
+ "data": [
+ {
+ "uuid": "fac0f22b-2995-43cd-aff0-36fab5f970d1",
+ "title": "‘Glee’ Costars Chris Colfer and Darren Criss Reunite for ‘Baby It’s Cold Outside’ London Performance",
+ "description": "'Glee' alums Chris Colfer and Darren Criss reunited to perform 'Baby It's Cold Outside' at Royal Albert Hall in London",
+ "keywords": "",
+ "snippet": "Christmas came early for U.K. based Gleeks over the weekend.\n\nGlee alums Chris Colfer and Darren Criss reunited, almost a decade after the hit Fox musical comed...",
+ "url": "https://www.usmagazine.com/entertainment/news/glees-chris-colfer-and-darren-criss-reunite-for-london-show/",
+ "image_url": "https://www.usmagazine.com/wp-content/uploads/2026/10/GettyImages-120524142-Glees-Chris-Colfer-and-Darren-Criss-Reunite-for-London-Show.jpg?crop=0px%2C31px%2C1397px%2C733px&resize=1200%2C630&quality=40&strip=all",
+ "language": "en",
+ "published_at": "2026-10-19T05:46:41.000000Z",
+ "source": "usmagazine.com",
+ "categories": [
+ "entertainment",
+ "general"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "5849954f-e5c6-405e-aa40-e32f82d67333",
+ "title": "Japanese Prime Minister Takaichi rejects criticism around weak yen and high interest rates",
+ "description": "The prime minister denied that her policies were responsible for the yen’s weakness or rising JGB yields.",
+ "keywords": "Japan, Foreign policy, Government and politics, Economic events, business news",
+ "snippet": "Sanae Takaichi, Japan's prime minister, during the United Nations General Assembly (UNGA) in New York, US, on Tuesday, Sept. 22, 2026. The theme of the 81st ses...",
+ "url": "https://www.cnbc.com/2026/10/19/takaichi-weak-yen-jgb-yields.html",
+ "image_url": "https://image.cnbcfm.com/api/v1/image/108366602-1790125501551-gettyimages-2296090716-UNGA_2026.jpeg?v=1790126080&w=1920&h=1080",
+ "language": "en",
+ "published_at": "2026-10-19T05:29:51.000000Z",
+ "source": "cnbc.com",
+ "categories": [
+ "general",
+ "business"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "60230ecd-51bd-4f6c-825f-698d7bae2d72",
+ "title": "Thanks to familiar miscues, the Dallas Cowboys are off to their worst start in years",
+ "description": "The Dallas Cowboys can’t run the ball or stop opposing offenses. Its resulted in their worst record through six games since 2020.",
+ "keywords": "",
+ "snippet": "The Dallas Cowboys don’t run the ball well. Their much-hoped-for defensive turnaround hasn’t materialized.\n\nUnable to count on either, the Cowboys have hing...",
+ "url": "https://www.nbcnews.com/sports/nfl/dallas-cowboys-nfl-green-bay-packers-dak-prescott-results-rcna604280",
+ "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-10/261018-cowboys-813-GWR-76b9e3.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T05:22:43.000000Z",
+ "source": "nbcnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "16569590-9b49-42e1-a8f6-51bfff141c2b",
+ "title": "Hard to convince Italians to back Ukraine – defense minister — RT World News",
+ "description": "Guido Crosetto says Rome must continue supporting Kiev despite widespread public opposition and protests over government spending",
+ "keywords": "",
+ "snippet": "Guido Crosetto has said Rome must continue to support Kiev despite public opposition and growing protests over government spending\n\nMost Italians oppose aid to ...",
+ "url": "https://rt-english.com/news/647374-hard-convince-italians-back-ukraine/",
+ "image_url": "https://mf.b37mrtl.ru/files/2026.10/article/6ad59cf82030271a8b428f14.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T04:32:11.000000Z",
+ "source": "rt.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "76aae647-ddcb-44f3-acdc-19349ec8b6b0",
+ "title": "Witnesses haunted by what they saw when pickup plowed through a Kansas youth soccer game",
+ "description": "The crash at Stryker Sports Complex in Wichita killed a 6-year-old boy and a 35-year-old man and injured several children and adults.",
+ "keywords": "",
+ "snippet": "Witnesses of Saturday’s deadly collision in which a pickup truck barreled through a youth soccer game in Kansas, killing two people and injuring nearly a doze...",
+ "url": "https://www.nbcnews.com/news/us-news/witnesses-haunted-pickup-wichita-kansas-soccer-game-crash-rcna604282",
+ "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-10/261018-wichita-kansas-soccer-game-crash-rc-1125p-7d95ab.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T04:19:55.000000Z",
+ "source": "nbcnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "cdd639b1-5cea-428a-b589-d52b201c3804",
+ "title": "Florida Attorney General James Uthmeier secures state arrest warrant for Raúl Castro",
+ "description": "Florida has obtained a state arrest warrant for former Cuban leader Raúl Castro on a conspiracy to commit first-degree murder charge tied to the 1996 Brothers ...",
+ "keywords": "cuba, homicide, us, florida, crime world",
+ "snippet": "NEW You can now listen to Fox News articles!\n\nFlorida has obtained a state arrest warrant for former Cuban leader Raúl Castro on a no-bond charge of conspiracy...",
+ "url": "https://www.foxnews.com/us/florida-attorney-general-james-uthmeier-secures-state-arrest-warrant-raul-castro",
+ "image_url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/06/raul-castro-havana-appearance.jpeg",
+ "language": "en",
+ "published_at": "2026-10-19T04:15:33.000000Z",
+ "source": "foxnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "e670e715-d0c8-4bec-9742-5f9989a8963a",
+ "title": "NFC East nearing second straight winless week as Packers beat struggling Cowboys on 'Sunday Night Football'",
+ "description": "Green Bay Packers routed the Dallas Cowboys on \"Sunday Night Football\" as the NFC North continues to dominate, while the NFC East struggles to find a single win...",
+ "keywords": "outkick sports, green bay packers, dallas cowboys, nfl, sports",
+ "snippet": "The Green Bay Packers’ win over the Dallas Cowboys, 23-13, on \"Sunday Night Football\" maintained a tale of two divisions in the NFC.\n\nThe NFC North is once ag...",
+ "url": "https://www.foxnews.com/outkick-sports/nfc-east-nearing-second-straight-winless-week-packers-beat-struggling-cowboys-sunday-night-football",
+ "image_url": "https://static.foxnews.com/foxnews.com/content/uploads/2026/10/matthew-golden-touchdown-celebration-lambeau.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T04:02:12.000000Z",
+ "source": "foxnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "4f1fbc8e-f8f2-4d98-adc4-b37267e200d5",
+ "title": "'Other Desert Cities' Broadway Review: Julia Louis-Dreyfus Gets Serious",
+ "description": "Deadline reviews Julia Louis-Dreyfus' Broadway debut in 'Other Desert Cities.",
+ "keywords": "",
+ "snippet": "It’s hard to imagine any secrets or hints of repressed trauma surviving long in the glare of Palm Springs sunshine that keeps things bright in the airy, open-...",
+ "url": "https://deadline.com/2026/10/other-desert-cities-broadway-review-julia-louis-dreyfus-1237165682/",
+ "image_url": "https://deadline.com/wp-content/uploads/2026/10/Other-Desert-Cities_Allison-Janney-as-Silda-Grauman-Julia-Louis-Dreyfus-as-Polly-Wyeth_by-Emilio-Madrid_6098.jpg?w=1024",
+ "language": "en",
+ "published_at": "2026-10-19T04:00:00.000000Z",
+ "source": "deadline.com",
+ "categories": [
+ "entertainment"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "6791b35e-b13f-4531-8603-027aa19bcea9",
+ "title": "Cindy Crawford and family break silence on Presley Gerber's death: \"We love you forever\"",
+ "description": "Cindy Crawford, Rande Gerber and their daughter, Kaia, have broken their silence for the first time since Presley Gerber's death​ last month.",
+ "keywords": "",
+ "snippet": "Cindy Crawford, Rande Gerber and their daughter, Kaia, have broken their silence for the first time since Presley Gerber's death last month.\n\n\"We are beyond hea...",
+ "url": "https://www.cbsnews.com/news/presley-gerber-death-cindy-crawford-rande-kaia-break-silence/",
+ "image_url": "https://assets3.cbsnewsstatic.com/hub/i/r/2026/10/19/8bfc9a8c-884c-4c81-85ae-818e23a30cfd/thumbnail/1200x630/6520963f7e9d527ec1d4e0ad66d8aa8a/gettyimages-1081122974.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T03:41:14.000000Z",
+ "source": "cbsnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ },
+ {
+ "uuid": "6f8fe085-9968-42d7-afea-5305ac6de93b",
+ "title": "‘No conclusive evidence’ of Amelia Earhart’s missing plane found in South Pacific expedition",
+ "description": "The expedition said the anomaly captured on satellite imagery, hypothesized to be wreckage of Earhart’s plane, was most likely “a collection of debris.”",
+ "keywords": "",
+ "snippet": "An expedition to find evidence of Amelia Earhart’s missing plane near a remote island in the South Pacific has come up empty, researchers said Sunday.\n\nResear...",
+ "url": "https://www.nbcnews.com/news/us-news/no-conclusive-evidence-amelia-earharts-missing-plane-found-south-pacif-rcna604274",
+ "image_url": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-10/261018-amelia-earhart-search-taraia-ww-1928-65c962.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T03:40:43.000000Z",
+ "source": "nbcnews.com",
+ "categories": [
+ "general",
+ "politics"
+ ],
+ "relevance_score": null,
+ "locale": "us"
+ }
+ ]
+}
+ All News Available on: All plans 
+ Endpoint 
+ GET https://api.thenewsapi.com/v1/news/all HTTP/1.1
+ Use this endpoint to find all live and historical articles we collect. Filtering by language,
+ category, source and publish date is also possible, as well as advanced searching on title and the main text of the article. 
+ If you have issues with your requests, please ensure your GET parameters are URL-encoded . 
+ All text data returned is UTF-8 . 
+ All dates are in UTC (GMT) . 
+ HTTP GET Parameters 
+ name 
+ required 
+ description 
+ api_token 
+ true 
+ Your API token which can be found on your account dashboard. 
+ search 
+ false 
+ Use the search as a basic search tool by entering regular search terms or it has more advanced usage to build search queries: 
+ + signifies AND operation 
+ | signifies OR operation 
+ - negates a single token 
+ " wraps a number of tokens to signify a phrase for searching 
+ * at the end of a term signifies a prefix query 
+ ( and ) signify precedence
+ To use one of these characters literally, escape it with a preceding backslash ( \ ).
+ Example 1: forex + (usd | gbp) -cad (searches for forex articles which include usd or gbp but excludes cad) 
+ Example 2: "Apple Inc" (searches for articles with exact matches for "Apple Inc")
+ For more advanced query examples, see our API Examples section.
+ When using special characters (+, -, |, ", *, ()) you MUST URL-encode this parameter. 
+ search_fields 
+ false 
+ Comma separated list of fields to apply the search parameter to.
+ Supported fields: title | description | keywords | main_text 
+ Example: title,description,keywords 
+ Default: title,main_text 
+ categories 
+ false 
+ Comma separated list of categories to include.
+ Supported categories: general | science | sports | business | health | entertainment | tech | politics | food | travel 
+ Example: business,tech 
+ exclude_categories 
+ false 
+ Comma separated list of categories to exclude. 
+ domains 
+ false 
+ Comma separated list of domains to include. List of domains can be obtained through our Sources endpoint, found further down this page.
+ exclude_domains 
+ false 
+ Comma separated list of domains to exclude 
+ source_ids 
+ false 
+ Comma separated list of source_ids to include. List of source_ids can be obtained through our Sources endpoint, found further down this page.
+ exclude_source_ids 
+ false 
+ Comma separated list of source_ids to exclude. 
+ language 
+ false 
+ Comma separated list of languages to include. Default is all.
+ Click here for a list of supported languages.
+ Examples: en,es (English + Spanish)
+ published_before 
+ false 
+ Find all articles published before the specified date. Supported formats include:
+ Y-m-d\TH:i:s | Y-m-d\TH:i | Y-m-d\TH | Y-m-d | Y-m | Y .
+ Examples:
+ 2026-10-19T06:04:52 |
+ 2026-10-19T06:04 |
+ 2026-10-19T06 |
+ 2026-10-19 |
+ 2026-10 |
+ 2026 
+ published_after 
+ false 
+ Find all articles published after the specified date. Supported formats include:
+ Y-m-d\TH:i:s | Y-m-d\TH:i | Y-m-d\TH | Y-m-d | Y-m | Y .
+ Examples:
+ 2026-10-19T06:04:52 |
+ 2026-10-19T06:04 |
+ 2026-10-19T06 |
+ 2026-10-19 |
+ 2026-10 |
+ 2026 
+ published_on 
+ false 
+ Find all articles published on the specified date. Supported formats include: Y-m-d .
+ Examples: 2026-10-19 
+ sort 
+ false 
+ Sort by published_on or relevance_score (only available when used in conjunction with search ).
+ Default is published_at unless search is used and sorting by published_at is not included,
+ in which case relevance_score is used. 
+ limit 
+ false 
+ Specify the number of articles you want to return in the request. The maximum limit is based on your plan . The default limit is the maximum specified for your plan. 
+ page 
+ false 
+ Use this to paginate through the result set. Default is 1. Note that the max result set can't exceed 20,000. For example if your limit is 50, the max page you can have is 400 (50 * 400 = 20,000).
+ Example: page=2 
+ Response Objects 
+ name 
+ description 
+ meta > found 
+ The number of articles found for the request. 
+ meta > returned 
+ The number of articles returned on the page.
+ This is useful to determine the end of the result set as if this is lower than limit , there are no more articles after this page. 
+ meta > limit 
+ The limit based on the limit parameter. 
+ meta > page 
+ The page number based on the page parameter. 
+ data > uuid 
+ The unique identifier for an article in our system. Store this and use it to find specific articles using our single article endpoint. 
+ data > title 
+ The article title. 
+ data > description 
+ The article meta description. 
+ data > keywords 
+ The article meta keywords. 
+ data > snippet 
+ The first 60 characters of the article body. 
+ data > url 
+ The URL to the article. 
+ data > image_url 
+ The URL to the article image. 
+ data > language 
+ The language of the source. 
+ data > published_at 
+ The datetime the article was published. 
+ data > source 
+ The domain of the source. 
+ data > categories 
+ Array of strings which the source is categorized as. 
+ data > relevance_score 
+ Relevance score based on the search parameter. If the search parameter is not used, this will be null . 
+ If no results are found, the data object will be empty. 
+ Example Request 
+ GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&language=en&limit=3
+ Example Response 
+ {
+ "meta": {
+ "found": 54389068,
+ "returned": 10,
+ "limit": 10,
+ "page": 1
+ },
+ "data": [
+ {
+ "uuid": "c74c5931-bad1-4b4c-a821-52412b8e7638",
+ "title": "Naturschutzkonferenz in Jerwan: Wo Artenschutz konkret wird",
+ "description": "Bis 2030 soll die Natur von 30 Prozent der Land- und Wasserflächen geschützt sein. Siegen-Wittgenstein könnte mit einem Nationalpark dazu beitragen.",
+ "keywords": "",
+ "snippet": "Wie viel Natur verträgt der dicht besiedelte Westen? Darüber wird im Kreis Siegen-Wittgenstein erneut gestritten: Mitte November entscheidet der Kreistag, ob ...",
+ "url": "https://taz.de/Naturschutzkonferenz-in-Jerwan/!6221638//",
+ "image_url": "https://taz.de/picture/8801010/1200/42341424.jpeg",
+ "language": "de",
+ "published_at": "2026-10-19T06:04:00.000000Z",
+ "source": "taz.de",
+ "categories": [
+ "general"
+ ],
+ "relevance_score": null
+ },
+ {
+ "uuid": "44291660-c334-4a09-b199-97c02834aaf2",
+ "title": "릴리, 경구용 GLP-1 ‘파운데요’ 유럽 승인 청신호",
+ "description": "[의약뉴스] 일라이 릴리의 경구용 GLP-1 치료제 파운데요(Foundayo, 성분명 오르포글리프론)가 유럽에서 승인에 한 걸음 더 ?...",
+ "keywords": "",
+ "snippet": "비만ㆍ당뇨병 치료 용도...체중 감소ㆍ혈당 조절 효과 확인\n\n[의약뉴스] 일라이 릴리의 경구용 GLP-1 치료제 파운데요(Founda...",
+ "url": "http://www.newsmp.com/news/articleView.html?idxno=258740",
+ "image_url": "http://www.newsmp.com/news/thumbnail/202610/258740_298229_3725_v150.jpg",
+ "language": "ko",
+ "published_at": "2026-10-19T06:02:11.000000Z",
+ "source": "newsmp.com",
+ "categories": [],
+ "relevance_score": null
+ },
+ {
+ "uuid": "1abbf0d1-052c-4e94-964d-8a5f9141eff1",
+ "title": "mRNA 암백신, 앞서가는 모더나···주춤하는 바이오엔텍 - 메디칼업저버",
+ "description": "[메디칼업저버 정연주 기자] mRNA 암백신 개발에서 선두주자인 모더나와 바이오엔텍의 최근 임상 성과가 엇갈리고 있다. ?...",
+ "keywords": "",
+ "snippet": "이미지 출처: 게티이미지뱅크.\n\n[메디칼업저버 정연주 기자] mRNA 암백신 개발에서 선두주자인 모더나와 바이오엔텍의 최?...",
+ "url": "https://www.monews.co.kr/news/articleView.html?idxno=414592",
+ "image_url": "https://cdn.monews.co.kr/news/photo/202610/414592_218355_3533.jpg",
+ "language": "ko",
+ "published_at": "2026-10-19T06:01:15.000000Z",
+ "source": "monews.co.kr",
+ "categories": [],
+ "relevance_score": null
+ },
+ {
+ "uuid": "cfcf2583-6ed8-4dfe-b118-c7f28f847ea6",
+ "title": "소아청소년 당뇨병, 발생 격차·합병증 부담···KONCORD로 해법 모색 - 메디칼업저버",
+ "description": "[메디칼업저버 이지현 기자] 국내 소아청소년 당뇨병 환자가 증가하는 가운데, 사회경제적 수준에 따른 발생 위험 격차?...",
+ "keywords": "",
+ "snippet": "분당서울대병원 김재현 교수(소아청소년과)는 15~17일 서울 코엑스 마곡에서 열린 대한당뇨병학회 국제학술대회(ICDM 2026)?...",
+ "url": "https://www.monews.co.kr/news/articleView.html?idxno=414611",
+ "image_url": "https://cdn.monews.co.kr/news/photo/202610/414611_218376_517.jpg",
+ "language": "ko",
+ "published_at": "2026-10-19T06:01:07.000000Z",
+ "source": "monews.co.kr",
+ "categories": [],
+ "relevance_score": null
+ },
+ {
+ "uuid": "e74f750c-6c20-4d7f-a89f-c9c5e49c4829",
+ "title": "CKD 지질관리, LDL-C만 낮추면 끝?···\"일반 가이드라인 적용 어려워\" - 메디칼업저버",
+ "description": "[메디칼업저버 양영구 기자] 만성콩팥병(CKD) 환자의 이상지질혈증 치료에서는 일반적인 심혈관질환 가이드라인을 적용?...",
+ "keywords": "",
+ "snippet": "한양대구리병원 유미연 교수(신장내과)는 15~17일 그랜드 워커힐 서울에서 열리는 대한심장학회 추계학술대회(KSC 2026)에?...",
+ "url": "https://www.monews.co.kr/news/articleView.html?idxno=414605",
+ "image_url": "https://cdn.monews.co.kr/news/photo/202610/414605_218369_160.jpg",
+ "language": "ko",
+ "published_at": "2026-10-19T06:01:02.000000Z",
+ "source": "monews.co.kr",
+ "categories": [],
+ "relevance_score": null
+ },
+ {
+ "uuid": "c47b42a6-0a0d-4eeb-b0da-79501c21efa8",
+ "title": "Flames' youngsters offer glimpse of brighter future in upset of Hurricanes",
+ "description": "Matvei Gridin and Zayne Parekh reminded everyone in a 69-second span on Sunday why the future in Calgary could be far more exciting than the present suggests.",
+ "keywords": "",
+ "snippet": "CALGARY – In a media world where in-depth coverage is too often trumped by quirky sound bites, the takeaway from the Calgary Flames’ shocking win over the d...",
+ "url": "https://www.sportsnet.ca/nhl/article/flames-youngsters-offer-glimpse-of-brighter-future-in-upset-of-hurricanes/",
+ "image_url": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177111569.jpg",
+ "language": "en",
+ "published_at": "2026-10-19T06:01:01.000000Z",
+ "source": "sportsnet.ca",
+ "categories": [
+ "sports"
+ ],
+ "relevance_score": null
+ },
+ {
+ "uuid": "919a8645-24db-44b9-892c-23e232ff4858",
+ "title": "FC Nantes : Phénix Sport Invest rate son premier round à la DNCG…",
+ "description": "Très attendue, l’audition de Phénix Sport Invest devant la DNCG ne commence pas vraiment de la meilleure des manières. Le rachat du FC Nantes a clairement ...",
+ "keywords": "",
+ "snippet": "FC Nantes : Phénix Sport Invest rate son premier round à la DNCG…, Crédit photo : Icon Sport\n\nTrès attendue, l’audition de Phénix Sport Invest devant l...",
+ "url": "https://www.livefoot.fr/actualite/fc-nantes-phenix-sport-invest-rate-son-premier-round-a-la-dncg.html",
+ "image_url": "https://www.livefoot.fr/images/waldemar-kita-ICONSPORT_260410_0077.jpg",
+ "language": "fr",
+ "published_at": "2026-10-19T06:00:59.000000Z",
+ "source": "livefoot.fr",
+ "categories": [
+ "sports"
+ ],
+ "relevance_score": null
+ },
+ {
+ "uuid": "0f73685f-761c-4d0b-be3b-4d57d16cc80a",
+ "title": "환자-의원 같은 소재 시도면 초진 비대면진료 가능해진다 - 메디칼업저버",
+ "description": "[메디칼업저버 신형주 기자] 같은 소재 시도의 환자와 동네의원 간 초진 비대면진료가 가능해진다. 또 비대면진료 플랫?...",
+ "keywords": "",
+ "snippet": "[메디칼업저버 신형주 기자] 같은 소재 시도의 환자와 동네의원 간 초진 비대면진료가 가능해진다. 또 비대면진료 플랫?...",
+ "url": "https://www.monews.co.kr/news/articleView.html?idxno=414619",
+ "image_url": "https://cdn.monews.co.kr/news/photo/202610/414619_218391_4033.jpg",
+ "language": "ko",
+ "published_at": "2026-10-19T06:00:33.000000Z",
+ "source": "monews.co.kr",
+ "categories": [],
+ "relevance_score": null
+ },
+ {
+ "uuid": "e2daa6ab-5907-4270-947e-bf8ee0ae5634",
+ "title": "상종같은 종병 순천향서울, 뇌졸중평가 11년 연속 1등급 - 메디칼업저버",
+ "description": "[메디칼업저버 신형주 기자] 상급종합병원같은 종합병원인 순천향대학교 서울병원이 11년 연속 급성기 뇌졸중 적정성평?...",
+ "keywords": "",
+ "snippet": "[메디칼업저버 신형주 기자] 상급종합병원같은 종합병원인 순천향대학교 서울병원이 11년 연속 급성기 뇌졸중 적정성평?...",
+ "url": "https://www.monews.co.kr/news/articleView.html?idxno=414620",
+ "image_url": "https://cdn.monews.co.kr/news/photo/202610/414620_218392_1859.jpg",
+ "language": "ko",
+ "published_at": "2026-10-19T06:00:29.000000Z",
+ "source": "monews.co.kr",
+ "categories": [],
+ "relevance_score": null
+ },
+ {
+ "uuid": "0f320337-a9c9-406b-a1a6-934f29ce94b8",
+ "title": "건보재정 적자·불법청구 ‘비상’…특사경·국고지원 정상화 촉구 - 메디칼업저버",
+ "description": "[메디칼업저버 신형주 기자] 건강보험 재정 지속 가능성을 위해 국고지원 정상화와 지출 효율화, 불법 개설기관 수사·환...",
+ "keywords": "",
+ "snippet": "[메디칼업저버 신형주 기자] 건강보험 재정 지속 가능성을 위해 국고지원 정상화와 지출 효율화, 불법 개설기관 수사·환...",
+ "url": "https://www.monews.co.kr/news/articleView.html?idxno=414621",
+ "image_url": "https://cdn.monews.co.kr/news/photo/202610/414621_218393_382.jpg",
+ "language": "ko",
+ "published_at": "2026-10-19T06:00:25.000000Z",
+ "source": "monews.co.kr",
+ "categories": [],
+ "relevance_score": null
+ }
+ ]
+}
+ Similar News Available on: All plans 
+ Endpoint 
+ GET https://api.thenewsapi.com/v1/news/similar/uuid HTTP/1.1
+ Use this endpoint to find similar stories to a specific article based on its UUID. 
+ If you have issues with your requests, please ensure your GET parameters are URL-encoded . 
+ All text data returned is UTF-8 . 
+ All dates are in UTC (GMT) . 
+ HTTP GET Parameters 
+ name 
+ required 
+ description 
+ api_token 
+ true 
+ Your API token which can be found on your account dashboard. 
+ categories 
+ false 
+ Comma separated list of categories to include.
+ Supported categories: general | science | sports | business | health | entertainment | tech | politics | food | travel 
+ Example: business,tech 
+ exclude_categories 
+ false 
+ Comma separated list of categories to exclude. 
+ domains 
+ false 
+ Comma separated list of domains to include. List of domains can be obtained through our Sources endpoint, found further down this page.
+ exclude_domains 
+ false 
+ Comma separated list of domains to exclude 
+ source_ids 
+ false 
+ Comma separated list of source_ids to include. List of source_ids can be obtained through our Sources endpoint, found further down this page.
+ exclude_source_ids 
+ false 
+ Comma separated list of source_ids to exclude. 
+ language 
+ false 
+ Comma separated list of languages to include. Default is all.
+ Click here for a list of supported languages.
+ Examples: en,es (English + Spanish)
+ published_before 
+ false 
+ Find all articles published before the specified date. Supported formats include:
+ Y-m-d\TH:i:s | Y-m-d\TH:i | Y-m-d\TH | Y-m-d | Y-m | Y .
+ Examples:
+ 2026-10-19T06:04:52 |
+ 2026-10-19T06:04 |
+ 2026-10-19T06 |
+ 2026-10-19 |
+ 2026-10 |
+ 2026 
+ published_after 
+ false 
+ Find all articles published after the specified date. Supported formats include:
+ Y-m-d\TH:i:s | Y-m-d\TH:i | Y-m-d\TH | Y-m-d | Y-m | Y .
+ Examples:
+ 2026-10-19T06:04:52 |
+ 2026-10-19T06:04 |
+ 2026-10-19T06 |
+ 2026-10-19 |
+ 2026-10 |
+ 2026 
+ published_on 
+ false 
+ Find all articles published on the specified date. Supported formats include: Y-m-d .
+ Examples: 2026-10-19 
+ limit 
+ false 
+ Specify the number of articles you want to return in the request. The maximum limit is based on your plan . The default limit is the maximum specified for your plan. 
+ page 
+ false 
+ Use this to paginate through the result set. Default is 1. Note that the max result set can't exceed 20,000. For example if your limit is 50, the max page you can have is 400 (50 * 400 = 20,000).
+ Example: page=2 
+ Response Objects 
+ name 
+ description 
+ meta > found 
+ The number of articles found for the request. 
+ meta > returned 
+ The number of articles returned on the page.
+ This is useful to determine the end of the result set as if this is lower than limit , there are no more articles after this page. 
+ meta > limit 
+ The limit based on the limit parameter. 
+ meta > page 
+ The page number based on the page parameter. 
+ data > uuid 
+ The unique identifier for an article in our system. Store this and use it to find specific articles using our single article endpoint. 
+ data > title 
+ The article title. 
+ data > description 
+ The article meta description. 
+ data > keywords 
+ The article meta keywords. 
+ data > snippet 
+ The first 60 characters of the article body. 
+ data > url 
+ The URL to the article. 
+ data > image_url 
+ The URL to the article image. 
+ data > language 
+ The language of the source. 
+ data > published_at 
+ The datetime the article was published. 
+ data > source 
+ The domain of the source. 
+ data > categories 
+ Array of strings which the source is categorized as. 
+ data > relevance_score 
+ Relevance score based on the article provided. 
+ If no results are found, the data object will be empty. 
+ Example Request 
+ GET https://api.thenewsapi.com/v1/news/similar/cc11e3ab-ced0-4a42-9146-e426505e2e67?api_token=YOUR_API_TOKEN&language=en&published_on=2020-12-01
+ Example Response 
+ {
+ "meta": {
+ "found": 3571,
+ "returned": 3,
+ "limit": 3,
+ "page": 1
+ },
+ "data": [
+ {
+ "uuid": "df4ad427-a672-4c67-b6c6-6f81aa00e164",
+ "title": "Tesla stock jumps after announcement it will join S&P 500 in one go",
+ "description": "Tesla's stock price surged early Tuesday after the company b...",
+ "keywords": "Business, s&p 500, stocks, tesla",
+ "snippet": "Tesla’s stock price surged early Tuesday after the company...",
+ "url": "https://nypost.com/2020/12/01/tesla-stock-jumps-on-news-it-will-join-sp-500-in-one-shot/",
+ "image_url": "https://nypost.com/wp-content/uploads/sites/2/2020/12/tesla-52.jpg?quality=90&strip=all&w=1200",
+ "language": "en",
+ "published_at": "2020-12-01T14:35:46.000000Z",
+ "source": "nypost.com",
+ "categories": [
+ "business"
+ ],
+ "relevance_score": 153.61266
+ },
+ {
+ "uuid": "c9a23881-12dd-4005-8982-7b6552a2eb50",
+ "title": "Tesla To Join S&P 500 With Full Market Cap On December 21",
+ "description": "Tesla will be added to the S&P 500 index all at once at its ...",
+ "keywords": "Tesla, S&P500, EV, Automotive, Stocks, Investing",
+ "snippet": "Tesla (NASDAQ: TSLA) will be added to the S&P 500 index all ...",
+ "url": "https://oilprice.com/Latest-Energy-News/World-News/Tesla-To-Join-SP-500-With-Full-Market-Cap-On-December-21.html",
+ "image_url": "https://d32r1sh890xpii.cloudfront.net/news/718x300/2020-12-01_xwjdajwctl.jpg",
+ "language": "en",
+ "published_at": "2020-12-01T16:30:00.000000Z",
+ "source": "oilprice.com",
+ "categories": [
+ "general",
+ "business"
+ ],
+ "relevance_score": 146.92773
+ },
+ {
+ "uuid": "18afdb1c-7742-4016-bf8c-a2f114e11199",
+ "title": "Tesla to Enter S&P 500 at Full Weight in December",
+ "description": "The electric-vehicle maker will be added to the broad stock-...",
+ "keywords": "Motor Vehicles, Alternative Fuel Vehicles, Trusts Funds Financial Vehicles, Diversified Holding Companies, Automotive",
+ "snippet": "S&P Dow Jones Indices said it will add Tesla Inc.’s full w...",
+ "url": "https://www.wsj.com/articles/tesla-to-enter-s-p-500-at-full-weight-in-december-11606780897?mod=pls_whats_news_us_business_f",
+ "image_url": "https://images.wsj.net/im-265933/social",
+ "language": "en",
+ "published_at": "2020-12-01T00:01:00.000000Z",
+ "source": "online.wsj.com",
+ "categories": [
+ "business"
+ ],
+ "relevance_score": 128.22346
+ }
+ ]
+ }
+ News by UUID Available on: All plans 
+ Endpoint 
+ GET https://api.thenewsapi.com/v1/news/uuid/uuid HTTP/1.1
+ Use this endpoint to find specific articles by the UUID which is returned on our search endpoints. This is useful if you wish
+ to store the UUID to return the article later. 
+ If you have issues with your requests, please ensure your GET parameters are URL-encoded . 
+ All text data returned is UTF-8 . 
+ All dates are in UTC (GMT) . 
+ HTTP GET Parameters 
+ name 
+ required 
+ description 
+ api_token 
+ true 
+ Your API token which can be found on your account dashboard. 
+ Response Objects 
+ name 
+ description 
+ uuid 
+ The unique identifier for an article in our system. Store this and use it to find specific articles using our single article endpoint. 
+ title 
+ The article title. 
+ description 
+ The article meta description. 
+ keywords 
+ The article meta keywords. 
+ snippet 
+ The first 60 characters of the article body. 
+ url 
+ The URL to the article. 
+ image_url 
+ The URL to the article image. 
+ language 
+ The language of the source. 
+ published_at 
+ The datetime the article was published. 
+ source 
+ The domain of the source. 
+ categories 
+ Array of strings which the source is categorized as. 
+ If no results are found, a resource_not_found error will be returned. 
+ Example Request 
+ GET https://api.thenewsapi.com/v1/news/uuid/147013d8-6c2c-4d50-8bad-eb3c8b7f5740?api_token=YOUR_API_TOKEN
+ Example Response 
+ {
+ "uuid": "147013d8-6c2c-4d50-8bad-eb3c8b7f5740",
+ "title": "These Are The Four American Companies Worth Over $1 Trillion Each – 24",
+ "description": "America’s major market indexes set records in the early pa...",
+ "keywords": "",
+ "snippet": "These Are The Four American Companies Worth Over $1 Trillion...",
+ "url": "https://247wallst.com/investing/2020/10/17/these-are-the-four-american-companies-worth-over-1-trillion-each/",
+ "image_url": "https://247wallst.com/wp-content/uploads/2020/08/imageForEntry2-Qrj.jpg",
+ "language": "en",
+ "published_at": "2020-10-17T11:16:20.000000Z",
+ "source": "247wallst.com",
+ "categories": [
+ "business"
+ ]
+ }
+ Sources Available on: All plans 
+ Endpoint 
+ GET https://api.thenewsapi.com/v1/news/sources HTTP/1.1
+ Use this endpoint to sources to use in your news API requests. Note that the limit is 50 for all requests. 
+ If you have issues with your requests, please ensure your GET parameters are URL-encoded . 
+ All text data returned is UTF-8 . 
+ HTTP GET Parameters 
+ name 
+ required 
+ description 
+ categories 
+ false 
+ Comma separated list of categories to include
+ Example: business,tech 
+ exclude_categories 
+ false 
+ Comma separated list of categories to exclude 
+ language 
+ false 
+ Comma separated list of languages to include. Default is all.
+ Click here for a list of supported languages.
+ Examples: en,es (English + Spanish)
+ page 
+ false 
+ Use this to paginate through the result set. Default is 1.
+ Example: page=2 
+ Response Objects 
+ name 
+ description 
+ meta > found 
+ The number of sources found for the request. 
+ meta > returned 
+ The number of sources returned on the page. 
+ meta > limit 
+ The limit is 50. This currently can not be changed. 
+ meta > page 
+ The page number based on the page parameter. 
+ data > source_id 
+ The unique ID of the source feed. Use this for the source_ids or exclude_source_ids parameters in the news endpoints.
+ There may be many source_ids for each domain, therefore we would generally suggest using the domains filter instead the source_ids filter. 
+ data > domain 
+ The domain of the source. You can use this for the domains or exclude_domains parameters in the news endpoints. 
+ data > language 
+ The source language. 
+ data > locale 
+ The source locale. Note that only select sources have locales. 
+ data > categories 
+ Array of strings which the source is categorized as. 
+ If no results are found, the data object will be empty. 
+ Example Request 
+ GET https://api.thenewsapi.com/v1/news/sources?api_token=YOUR_API_TOKEN&language=en
+ Example Response 
+ {
+ "meta": {
+ "found": 15453,
+ "returned": 50,
+ "limit": 50,
+ "page": 1
+ },
+ "data": [
+ {
+ "source_id": "arstechnica.com-1",
+ "domain": "arstechnica.com",
+ "language": "en",
+ "locale": null,
+ "categories": [
+ "tech"
+ ]
+ },
+ {
+ "source_id": "adweek.com-1",
+ "domain": "adweek.com",
+ "language": "en",
+ "locale": null,
+ "categories": [
+ "business"
+ ]
+ },
+ ...
+ Errors 
+ Errors 
+ If your request was unsuccessful, you will receive a JSON formatted error. Below you will find the potential errors you may encounter when using the API. 
+ Errors 
+ error code 
+ HTTP status 
+ description 
+ malformed_parameters 
+ 400 
+ Validation of parameters failed. The failed parameters are usually shown in the error message. 
+ invalid_api_token 
+ 401 
+ Invalid API token. 
+ usage_limit_reached 
+ 402 
+ Usage limit of your plan has been reached. Usage limit and remaining requests can be found on the X-UsageLimit-Limit header. 
+ endpoint_access_restricted 
+ 403 
+ Access to the endpoint is not available on your current subscription plan. 
+ resource_not_found 
+ 404 
+ Resource could not be found. 
+ invalid_api_endpoint 
+ 404 
+ API route does not exist. 
+ rate_limit_reached 
+ 429 
+ Too many requests in the past 60 seconds. Rate limit and remaining requests can be found on the X-RateLimit-Limit header. 
+ server_error 
+ 500 
+ A server error occured. 
+ maintenance_mode 
+ 503 
+ The service is currently under maintenance. 
+ Example Error Response 
+ {
+ "error": {
+ "code": "malformed_parameters",
+ "message": "The published_before parameter(s) are incorrectly formatted."
+ }
+ }
+ Examples 
+ API Examples 
+ Our endpoints are very useful for filtering to find only specific resources you need. Follow each example request below to see how you can build dynamic queries. 
+ Example Request 1 
+ This is a basic request which will return all articles which match the search term "usd" within the title or body of the article: 
+ GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=usd
+ Example Request 2 
+ This will return all articles which match the search term "usd" OR "gbp": 
+ GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=usd%20%7C%20gbp
+ Example Request 3 
+ This will return all articles which match the search term "usd" AND "gbp": 
+ GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=usd%20%2B%20gbp
+ Example Request 4 
+ This will return all articles which match the search term "usd" AND "gbp" but removes any articles which mentions "cad": 
+ GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=usd%20%2B%20gbp%20-cad
+ Example Request 5 
+ This will return all articles which match the search term "forex" AND "usd" OR "gbp" but removes any articles which mentions "cad": 
+ GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=forex%20%2B%20%28usd%20%7C%20gbp%29%20-cad
+ Example Request 6 
+ This is the same as Example Request 5 but will also ensure the articles returned are in English and categorized by business or tech but not travel, and are published within the last week: 
+ GET https://api.thenewsapi.com/v1/news/all?api_token=YOUR_API_TOKEN&search=forex%20%2B%20%28usd%20%7C%20gbp%29%20-cad&language=en&categories=business%2Ctech&exclude_categories=travel&published_after=2026-10-12
+ Code Examples 
+ See our prepared examples below to quickly get started implementing our API into your next project. 
+ PHP 
+ $queryString = http_build_query([
+ 'api_token' => 'YOUR_API_TOKEN',
+ 'categories' => 'business,tech',
+ 'search' => 'apple',
+ 'limit' => 50,
+ ]);
+ $ch = curl_init(sprintf('%s?%s', 'https://api.thenewsapi.com/v1/news/all', $queryString));
+ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+ $json = curl_exec($ch);
+ curl_close($ch);
+ $apiResult = json_decode($json, true);
+ print_r($apiResult);
+ Python 
+ # Python 3
+ import http.client, urllib.parse
+ conn = http.client.HTTPSConnection('api.thenewsapi.com')
+ params = urllib.parse.urlencode({
+ 'api_token': 'YOUR_API_TOKEN',
+ 'categories': 'business,tech',
+ 'limit': 50,
+ })
+ conn.request('GET', '/v1/news/all?{}'.format(params))
+ res = conn.getresponse()
+ data = res.read()
+ print(data.decode('utf-8'))
+ Go 
+ package main
+ import (
+ "fmt"
+ "io/ioutil"
+ "net/http"
+ "net/url"
+ )
+ func main() {
+ baseURL, _ := url.Parse("https://thenewsapi.com")
+ baseURL.Path += "v1/news/all"
+ params := url.Values{}
+ params.Add("api_token", "YOUR_API_TOKEN")
+ params.Add("categories", "business,tech")
+ params.Add("search", "apple")
+ params.Add("limit", "50")
+ baseURL.RawQuery = params.Encode()
+ req, _ := http.NewRequest("GET", baseURL.String(), nil)
+ res, _ := http.DefaultClient.Do(req)
+ defer res.Body.Close()
+ body, _ := ioutil.ReadAll(res.Body)
+ fmt.Println(string(body))
+ }
+ JavaScript 
+ var requestOptions = {
+ method: 'GET'
+ };
+ var params = {
+ api_token: 'YOUR_API_TOKEN',
+ categories: 'business,tech',
+ search: 'apple',
+ limit: '50'
+ };
+ var esc = encodeURIComponent;
+ var query = Object.keys(params)
+ .map(function(k) {return esc(k) + '=' + esc(params[k]);})
+ .join('&');
+ fetch("https://api.thenewsapi.com/v1/news/all?" + query, requestOptions)
+ .then(response => response.text())
+ .then(result => console.log(result))
+ .catch(error => console.log('error', error));
+ C# 
+ var client = new RestClient("https://api.thenewsapi.com/v1/news/all");
+ client.Timeout = -1;
+ var request = new RestRequest(Method.GET);
+ request.AddQueryParameter("api_token", "YOUR_API_TOKEN");
+ request.AddQueryParameter("categories", "business,tech");
+ request.AddQueryParameter("search", "apple");
+ request.AddQueryParameter("limit", "50");
+ IRestResponse response = client.Execute(request);
+ Console.WriteLine(response.Content);
+ Java 
+ OkHttpClient client = new OkHttpClient().newBuilder()
+ .build();
+ HttpUrl.Builder httpBuilder = HttpUrl.parse("https://api.thenewsapi.com/v1/news/all").newBuilder();
+ httpBuilder.addQueryParameter("api_token", "YOUR_API_TOKEN");
+ httpBuilder.addQueryParameter("categories", "business,tech");
+ httpBuilder.addQueryParameter("search", "apple");
+ httpBuilder.addQueryParameter("limit", "50");
+ Request request = new Request.Builder().url(httpBuilder.build()).build();
+ Response response = client.newCall(request).execute();
+ Supported countries for locale 
+ × 
+ code 
+ country 
+ ar 
+ Argentina 
+ am 
+ Armenia 
+ au 
+ Australia 
+ at 
+ Austria 
+ by 
+ Belarus 
+ be 
+ Belgium 
+ bo 
+ Bolivia 
+ br 
+ Brazil 
+ bg 
+ Bulgaria 
+ ca 
+ Canada 
+ cl 
+ Chile 
+ cn 
+ China 
+ co 
+ Colombia 
+ hr 
+ Croatia 
+ cz 
+ Czechia 
+ ec 
+ Ecuador 
+ eg 
+ Egypt 
+ fr 
+ France 
+ de 
+ Germany 
+ gr 
+ Greece 
+ hn 
+ Honduras 
+ hk 
+ Hong Kong 
+ in 
+ India 
+ id 
+ Indonesia 
+ ir 
+ Iran 
+ ie 
+ Ireland 
+ il 
+ Israel 
+ it 
+ Italy 
+ jp 
+ Japan 
+ kr 
+ Korea 
+ mx 
+ Mexico 
+ nl 
+ Netherlands 
+ nz 
+ New Zealand 
+ ni 
+ Nicaragua 
+ pk 
+ Pakistan 
+ pa 
+ Panama 
+ pe 
+ Peru 
+ pl 
+ Poland 
+ pt 
+ Portugal 
+ qa 
+ Qatar 
+ ro 
+ Romania 
+ ru 
+ Russia 
+ sa 
+ Saudi Arabia 
+ za 
+ South Africa 
+ es 
+ Spain 
+ ch 
+ Switzerland 
+ sy 
+ Syria 
+ tw 
+ Taiwan 
+ th 
+ Thailand 
+ tr 
+ Turkey 
+ ua 
+ Ukraine 
+ gb 
+ United Kingdom 
+ us 
+ United States Of America 
+ uy 
+ Uruguay 
+ ve 
+ Venezuela 
+ Close 
+ Supported languages for language 
+ × 
+ language code 
+ ar 
+ bg 
+ bn 
+ cs 
+ da 
+ de 
+ el 
+ en 
+ es 
+ et 
+ fa 
+ fi 
+ fr 
+ he 
+ hi 
+ hr 
+ hu 
+ id 
+ it 
+ ja 
+ ko 
+ lt 
+ multi 
+ nl 
+ no 
+ pl 
+ pt 
+ ro 
+ ru 
+ sk 
+ sv 
+ ta 
+ th 
+ tr 
+ uk 
+ vi 
+ zh 
+ Close 
+ The News API © Copyright 2026 
+ FAQs 
+ Terms and Conditions 
+ Privacy

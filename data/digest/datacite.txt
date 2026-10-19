@@ -1,0 +1,4 @@
+# DataCite API (datacite) category=academic
+home=https://support.datacite.org/docs/api pricing=None docs=https://support.datacite.org/docs/api llms=None
+sources_ok: docs:https://support.datacite.org/docs/api
+--- ranked fact lines ---

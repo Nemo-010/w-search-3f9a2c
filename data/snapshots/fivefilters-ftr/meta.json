@@ -1,0 +1,60 @@
+{
+ "slug": "fivefilters-ftr",
+ "name": "FiveFilters Full-Text RSS",
+ "category": "reader",
+ "fetched_at": "2026-10-19T05:54:36+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://fivefilters.org/content-only/#download",
+   "status": 200,
+   "final_url": "https://www.fivefilters.org/full-text-rss/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 97272,
+   "truncated": false,
+   "sha256": "1a85ad1f2de7c17268877d1f54c9f0177456191a09559e866ff23ee9168a37cc",
+   "fetched_at": "2026-10-19T05:54:36+00:00",
+   "text_bytes": 3170
+  },
+  "docs": {
+   "url": "https://fivefilters.org/content-only/",
+   "status": 200,
+   "final_url": "https://www.fivefilters.org/full-text-rss/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 97272,
+   "truncated": false,
+   "sha256": "1a85ad1f2de7c17268877d1f54c9f0177456191a09559e866ff23ee9168a37cc",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 3170
+  },
+  "llms-err-80f650": {
+   "url": "https://fivefilters.org/content-only/llms.txt",
+   "status": 404,
+   "final_url": "https://fivefilters.org/content-only/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 45466,
+   "truncated": false,
+   "sha256": "e2372fc4a50045de643a2ada24e8529b477cfc314b88cdb81572dc771823203f",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  },
+  "llms-err-887131": {
+   "url": "https://fivefilters.org/content-only/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://fivefilters.org/content-only/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 45482,
+   "truncated": false,
+   "sha256": "d39e2f010c241cb97d87663e206b0736acb1c6c34f93a256ccea3f40ad7f3359",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  },
+  "llms-err-d7279d": {
+   "url": "https://docs.fivefilters.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.fivefilters.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  }
+ }
+}

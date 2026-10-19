@@ -1,0 +1,368 @@
+SERP API for Developers - Scrape Google Results in Real-Time | Zenserp 
+ Workflow 
+ Open main menu 
+ Features 
+ Google 
+ Google SERP 
+ Organic, ads, snippets 
+ Image Search 
+ Images for a query 
+ Maps Search 
+ Local businesses 
+ News 
+ Latest news 
+ Shopping 
+ Products + pages 
+ Trends 
+ Popularity over time 
+ Reverse Image 
+ Find pages by image 
+ Youtube 
+ Video results 
+ AI Search 
+ Coming Soon 
+ AI Overview 
+ Google AI answer + citations 
+ Answer Engines 
+ ChatGPT, Perplexity, Gemini, Grok, Copilot 
+ Other Engines 
+ Bing Search 
+ Organic, ads, video 
+ Yandex Search 
+ JSON results 
+ Specialized Verticals 
+ Coming Soon 
+ Reviews 
+ Hotels 
+ Flights 
+ Jobs 
+ Try in Playground 
+ Documentation & Examples 
+ Contact Sales 
+ Pricing 
+ Blog 
+ Status
+ Contact 
+ Start Building
+ Log in
+ Fast, Accurate Search Data Built for Developers
+ Zenserp lets you fetch live Google search results through a fast and stable SERP API.
+ Get Your API Key
+ View Pricing
+ Supported Platforms 
+ Search
+ {
+ "organic" : [
+ {
+ "position" : 1 ,
+ "title" : "Pied Piper of Hamelin - Wikipedia" ,
+ "url" : "https://en.wikipedia.org/wiki/Pied_Piper_of_Hamelin" ,
+ "destination" : "https://en.wikipedia.org/wiki/Pied_Piper_of_Hamelin" ,
+ "description" : "The Pied Piper of Hamelin is the titular character of..." 
+ },
+ {
+ "position" : 2 ,
+ "questions" : [
+ {
+ "question" : "What is the meaning of the Pied Piper?" 
+ },
+ {
+ "question" : "What is the legend of the Pied Piper?" 
+ },
+ {
+ "question" : "What is the moral of the story pied piper?" 
+ }
+ ]
+ },
+ {
+ "position" : 3 ,
+ "videos" : [
+ {
+ "title" : "Walt Disney's Fables - Pied Piper" ,
+ "url" : "https://www.youtube.com/watch?v=UXOCHn7Vfec" 
+ },
+ {
+ "title" : "The True History of The Pied Piper of Hamelin | Fairy..." ,
+ "url" : "https://www.youtube.com/watch?v=obIAwAAcAAg" 
+ }
+ ]
+ }
+ ]
+}
+ Loading your response :)
+ An error occured!
+ At your fingertips 
+ One API, Endless Possibilities 
+ Scrape Google, YouTube, and Shopping Results with ease using our SERP API. We cover all major search engines and frequently add new endpoints to our search API. Try in Playground → 
+ Google Search API
+ Standard search, image search, news search, maps search, etc.
+ Google Trends API
+ Retrieve trending topics in easy-to-read JSON format.
+ Youtube Search API
+ Get video ranking information, including channel and ad results.
+ Google Shopping Product Page API
+ Gain valuable product insights and scrape product information.
+ Try Our Complete and Easy-to-use API 
+ Our Google search API provides plenty of setting parameters and filters that allow you to refine your search. For further testing, please visit our
+ Playground
+ GET
+ Request 
+ https://app.zenserp.com/api/v2/search?q=pied+piper&engine=google 
+ Response 
+ JSON 
+ {
+ "organic" : [
+ {
+ "position" : 1 ,
+ "title" : "Pied Piper of Hamelin - Wikipedia" ,
+ "url" : "https://en.wikipedia.org/wiki/Pied_Piper_of_Hamelin" ,
+ "destination" : "https://en.wikipedia.org/wiki/Pied_Piper_of_Hamelin" ,
+ "description" : "The Pied Piper of Hamelin is the titular character of..." 
+ },
+ {
+ "position" : 2 ,
+ "questions" : [
+ { "question" : "What is the meaning of the Pied Piper?" },
+ { "question" : "What is the legend of the Pied Piper?" },
+ { "question" : "What is the moral of the story pied piper?" }
+ ]
+ },
+ {
+ "position" : 3 ,
+ "videos" : [
+ {
+ "title" : "Walt Disney's Fables - Pied Piper" ,
+ "url" : "https://www.youtube.com/watch?v=UXOCHn7Vfec" 
+ },
+ {
+ "title" : "The True History of The Pied Piper of Hamelin | Fairy..." ,
+ "url" : "https://www.youtube.com/watch?v=obIAwAAcAAg" 
+ }
+ ]
+ }
+]
+} 
+ Scrape Google Search Results Without Limits 
+ Unlock the full potential of google search results with our API's many benefits 
+ Generous Free Plan 
+ We believe in fair pricing. Hence, we offer you 50 free searches per month. No strings attached! 
+ Request Builder 
+ Getting started is easy. We provide an extensive request builder, that converts your requests into production ready code snippets. 
+ Supports All Programming Languages 
+ Zenserp can be used with any programming language, as data can be simply retrieved by any HTTP client. 
+ Transform Your Search Strategy 
+ Location Based
+ Zenserp enables you to obtain accurate and geolocated search engine results.
+ Highly Scalable
+ Zenserp always provides you with enough performance, no matter how high your volume might be.
+ Maximum Speed
+ Our Google Search Results API is powered by strong infrastructure to return results in realtime.
+ Affordable
+ Only pay what you need. Choose between our free or custom plan and let our servers do the work for you.
+ Full Coverage 
+ Our Complete SERP API Covers All Available Snippets
+ Our SERP API consists of more than organic and paid results. We cover all snippet types and consistently add new ones, as they are added by the search engines. View our
+ Documentation to see a complete list of all supported SERP snippets.
+ Organic Results
+ One search result page can contain up to 100 results and over 400 results with Pagination.
+ Paid Results
+ All types of Google ads, including their position on the search result page.
+ News Results
+ Inline news as part of the organic results, including thumbnail, description and target url.
+ Video Results
+ Inline video results as part of the organic results, including their title and url.
+ Local Results
+ Zenserp features Google places search. Results include title, reviews, address, place_id, etc.
+ Knowledge Graph
+ Search results can contain a knowledge block containing search query related information
+ Related Questions
+ Zenserp features the "People also ask" results if it appears on the search result page.
+ Answerbox Results
+ Calculations, Weather Reports, Dictionary and much more.
+ Maps Results
+ Google Maps search results return information for stores, local businesses like restaurants, etc.
+ New Snippets Added Continuously
+ As new SERP types are released, we update them to our SERP API.
+ Start Scraping Google pages for free today!
+ Get Your API Key
+Simple and Economical pricing 
+Choose from a variety with different usage limits and features to match the size and scope of your project. All plans include real-time scraping capabilities and 24/7 customer support.
+ Free 
+ All basic to get started 
+ $0 
+ /mo 
+ Try Now 
+ What's included 
+ 50 Searches/mo 
+ Small 
+ Best for hobby projects 
+ $49.99 
+ /mo 
+ Try Now 
+ What's included 
+ 25,000 Searches/mo 
+ All SERP Types 
+ Medium 
+ More features, SLA 
+ $149.99 
+ /mo 
+ Try Now 
+ What's included 
+ 100,000 Searches/mo 
+ All SERP Types 
+ Batch Endpoint 
+ Keyword Search Volume 
+ Keyword CPC 
+ Bulk Index Checker (GUI) 
+ Personal Support 
+ Concierge Onboarding 
+ Service Level Agreement 
+ Large 
+ More requests 
+ $299.99 
+ /mo 
+ Try Now 
+ What's included 
+ 250,000 Searches/mo 
+ All SERP Types 
+ Batch Endpoint 
+ Keyword Search Volume 
+ Keyword CPC 
+ Bulk Index Checker (GUI) 
+ Personal Support 
+ Concierge Onboarding 
+ Service Level Agreement 
+ Premium 
+ For large SERP projects 
+ $499.99 
+ /mo 
+ Try Now 
+ What's included 
+ 500,000 Searches/mo 
+ All SERP Types 
+ Batch Endpoint 
+ Keyword Search Volume 
+ Keyword CPC 
+ Bulk Index Checker (GUI) 
+ Personal Support 
+ Concierge Onboarding 
+ Service Level Agreement 
+ Custom Queue 
+ Enterprise 
+ For large SERP projects 
+ $899.99 
+ /mo 
+ Try Now 
+ What's included 
+ 1,000,000 Searches/mo 
+ All SERP Types 
+ Batch Endpoint 
+ Keyword Search Volume 
+ Keyword CPC 
+ Bulk Index Checker (GUI) 
+ Personal Support 
+ Concierge Onboarding 
+ Service Level Agreement 
+ Custom Queue 
+ All features of Premium (or drop the line) 
+ Don't see a plan that fits your needs? 
+ Contact us for a quote if you require a volume larger than our enterprise plan. 
+ Contact Us
+ Frequently asked questions
+ Can I also pay annually?
+ Yes. We also offer you a 20% discount if you choose an annual subscription plan.
+ Will request errors be counted towards my monthly limit?
+ No, we only charge you for successful responses. Invalid requests are not going to affect your usage volume!
+ How much load can your API take?
+ Our API handles millions of API requests on a daily basis. For our standard plans, we encourage not to exceed 400 concurrent connections. If you need more, please let us know and we are happy to increase that limit for you.
+ Also, we offer an asynchronous batch endpoint, which is useful for extremely large data sets.
+ Which payment methods do you support?
+ We accept all common payment methods, including credit cards (MasterCard, Visa, American Express). Enterprise and high-volume customers may request annual bank transfer payments to be enabled.
+ What is the difference between the different plans?
+ The plans vary according to the number of the available search requests. Also, our larger plans come with unlimited support and come with a service level agreement (SLA). No matter how small or big your project is, there is the right plan for you.
+ What is zenserp.com?
+ Zenserp.com is a Google SERP API, that enables you to scrape search engine result pages in an easy and efficient way. In realtime and without interruption.
+ What is the API's uptime?
+ We are constantly tracking and monitoring the uptime of our service. We are doing every effort to ensure a maximum of availability and reliability, leading to an uptime of 99.9%, calculated on the past 12 months.
+ You can see more detailed information about our API's status, here .
+ Will you notify me if I run out of requests?
+ Sure! We will send you an email notification when your monthly usage hits 90% and 100%, so you have enough time to react and adapt your plan.
+ Still have questions? Let's talk! 
+ Still have questions or need more information? Our team is here to help.
+ Contact us today via phone, email, or live chat and we'll be more than happy
+ to assist you in finding the perfect plan for your needs.
+ [email protected] 
+ or Fill a Contact Form
+ Zenserp enables you to scrape search engine result pages in a fast and scalable way. Getting SERPs has never been easier.
+ Zenserp is not endorsed or affiliated by any search engine provider in any way and does not make use of any API provided by any search engine.
+ General
+ Pricing
+ Free Plan
+ FAQ
+ Contact
+ API Glossary
+ Support
+ API Playground
+ Documentation
+ Legal
+ Privacy Policy
+ Terms of Service (Idera)
+ Imprint
+ Content
+ Top 7 Google Search API Comparison
+ Google Index Checker Tool
+ SERP API Alternative
+ Blog
+ © 2026 Zenserp API, an APILayer product. All rights reserved.
+ Close menu 
+ Pricing 
+ Playground 
+ Documentation 
+ Features
+ Google 
+ Google SERP 
+ Organic, ads, snippets 
+ Image Search 
+ Images for a query 
+ Maps Search 
+ Local businesses 
+ News 
+ Latest news 
+ Shopping 
+ Products + pages 
+ Trends 
+ Popularity over time 
+ Reverse Image 
+ Find pages by image 
+ Youtube 
+ Video results 
+ AI Search 
+ Coming Soon 
+ AI Overview 
+ Google AI answer + citations 
+ Answer Engines 
+ ChatGPT, Perplexity, Gemini, Grok, Copilot 
+ Other Engines 
+ Bing Search 
+ Organic, ads, video 
+ Yandex Search 
+ JSON results 
+ Specialized Verticals 
+ Coming Soon 
+ Reviews 
+ Hotels 
+ Flights 
+ Jobs 
+ Log in
+ Register
+ You want to chat? We need your consent! 
+ The Freshchat Widget is a service for interacting with the Freshchat live chat platform provided, by Freshworks, Inc. 
+ Personal Data processed: Data communicated while using the service; email address; Tracker; Usage Data. 
+ Place of processing: European Union - Privacy Policy 
+ You want to chat? We need your consent! 
+ The Freshchat Widget is a service for interacting with the Freshchat live chat platform provided, by Freshworks, Inc. 
+ Personal Data processed: Data communicated while using the service; email address; Tracker; Usage Data. 
+ Place of processing: European Union - Privacy Policy 
+ Yes, I Agree
+ No, Thanks
+ By using our website you agree to our privacy policy .

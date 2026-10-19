@@ -1,0 +1,49 @@
+{
+ "slug": "playwright",
+ "name": "Playwright (OSS)",
+ "category": "oss",
+ "fetched_at": "2026-10-19T05:54:59+00:00",
+ "sources": {
+  "home": {
+   "url": "https://playwright.dev/",
+   "status": 200,
+   "final_url": "https://playwright.dev/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 20699,
+   "truncated": false,
+   "sha256": "621299380f07311fd1959316ce3ad97d1dfa74ca04110f3e1da6e37bbbf4d0a8",
+   "fetched_at": "2026-10-19T05:54:59+00:00",
+   "text_bytes": 3450
+  },
+  "llms-err-2f94e4": {
+   "url": "https://playwright.dev/llms.txt",
+   "status": 404,
+   "final_url": "https://playwright.dev/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 11940,
+   "truncated": false,
+   "sha256": "7357183fd3a9486eef51e62dd7b2749645acd87663f1794cf666d42efd40691b",
+   "fetched_at": "2026-10-19T05:54:59+00:00"
+  },
+  "llms-err-b60fa3": {
+   "url": "https://playwright.dev/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://playwright.dev/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 11940,
+   "truncated": false,
+   "sha256": "7357183fd3a9486eef51e62dd7b2749645acd87663f1794cf666d42efd40691b",
+   "fetched_at": "2026-10-19T05:54:59+00:00"
+  },
+  "llms-err-c228e7": {
+   "url": "https://docs.playwright.dev/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.playwright.dev/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:55:00+00:00"
+  }
+ }
+}

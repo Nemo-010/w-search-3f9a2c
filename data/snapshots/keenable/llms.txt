@@ -1,0 +1,63 @@
+# Keenable
+
+> Web search and knowledge access for AI agents.
+
+- [Quickstart](https://docs.keenable.ai/index.md): Install the Keenable CLI, log in, wire the MCP server into your agents, and run your first search.
+- [Authentication](https://docs.keenable.ai/authentication.md): Get an API key, pass it to the API, CLI and MCP server, and read the error responses.
+- [Rate limits](https://docs.keenable.ai/rate-limits.md): How fast you can call search and fetch — the per-second and hourly limits for authenticated and unauthenticated requests, and how they differ from the credit allowance.
+- [Credits](https://docs.keenable.ai/credits.md): The free allowance of 100,000 requests a month, how authenticated usage is metered against it, and what happens when it runs out.
+- [Auto top-up](https://docs.keenable.ai/auto-top-up.md): Refill purchased credits automatically: the threshold, amount and monthly limit you set, when your card is charged, and what happens when a charge is declined.
+- [Pay per request (x402)](https://docs.keenable.ai/pay-per-request.md): Call search and fetch with no account and no API key: each request pays $0.01 in USDC on Base over the x402 protocol, or spends prepaid credit bought through ZeroClick.
+- [MCP](https://docs.keenable.ai/mcp-server.md): Connect Keenable APIs as tools to clients that support MCP
+- [CLI](https://docs.keenable.ai/cli.md): Authenticate, configure MCP, and search from the terminal
+- [API reference](https://docs.keenable.ai/api-reference.md): The HTTP API behind the Keenable CLI, MCP server, and integrations.
+- [Search](https://docs.keenable.ai/api-reference/search.md): Search the web and return ranked results
+- [Fetch](https://docs.keenable.ai/api-reference/fetch.md): Fetch webpage contents
+- [Changelog](https://docs.keenable.ai/changelog.md): Product updates and announcements from Keenable.
+- [Integrations](https://docs.keenable.ai/integrations.md): Connect Keenable web search to your agent stack — LangChain, LlamaIndex, Haystack, MCP, and more.
+- [Baseten](https://docs.keenable.ai/integrations/baseten.md): Keenable web search and page fetch as server-side tools on Baseten Model APIs — the model calls them inside the inference loop.
+- [OpenRouter](https://docs.keenable.ai/integrations/openrouter.md): Web search and page fetch for any model on OpenRouter, as tools the model calls itself: from Python, the AI SDK, or OpenRouter's Agent SDK over MCP. Works without a Keenable key.
+- [Haystack](https://docs.keenable.ai/integrations/haystack.md): Keenable web search and page-fetch components for Haystack pipelines.
+- [LangChain](https://docs.keenable.ai/integrations/langchain.md): langchain-keenable — KeenableSearch and KeenableFetch tools for any LangChain agent.
+- [LlamaIndex](https://docs.keenable.ai/integrations/llamaindex.md): A Keenable ToolSpec so LlamaIndex agents can search and read the web.
+- [Mastra](https://docs.keenable.ai/integrations/mastra.md): @keenable/mastra — keenable-search and keenable-fetch tools for any Mastra agent.
+- [NVIDIA NeMo Agent Toolkit](https://docs.keenable.ai/integrations/nemo-agent-toolkit.md): A Keenable function group (keenable__search, keenable__fetch) for the NVIDIA NeMo Agent Toolkit.
+- [PraisonAI](https://docs.keenable.ai/integrations/praisonai.md): keenable_search, a web-search tool for PraisonAI agents from praisonai-tools, with no API key required.
+- [Vercel](https://docs.keenable.ai/integrations/vercel.md): Web search and page fetch for apps on Vercel: AI SDK tools that work without a key, and Vercel Connect to keep the key out of your environment variables.
+- [Codex](https://docs.keenable.ai/integrations/codex.md): Wire Keenable into Codex over MCP — and stop its built-in web search from winning every lookup.
+- [DeepSeek Harness](https://docs.keenable.ai/integrations/deepseek-harness.md): Keenable web search and page fetch for DeepSeek Harness's built-in web_search and web_fetch tools, with any model and no API key.
+- [OpenCode](https://docs.keenable.ai/integrations/opencode.md): opencode-keenable — a native plugin giving OpenCode agents web search and page fetch.
+- [Pi](https://docs.keenable.ai/integrations/pi.md): A Keenable web-search and page-fetch package for the Pi coding agent.
+- [AnythingLLM](https://docs.keenable.ai/integrations/anythingllm.md): Keenable is a built-in web search provider for AnythingLLM agents, with no API key required.
+- [ChatGPT](https://docs.keenable.ai/integrations/chatgpt.md): Install Keenable from OpenAI's Plugins Directory, and keep ChatGPT's own web search from competing with it.
+- [Claude](https://docs.keenable.ai/integrations/claude.md): Add Keenable to Claude and Claude Code, and keep Claude's own web search from competing with it.
+- [LibreChat](https://docs.keenable.ai/integrations/librechat.md): Keenable is the keyless search provider and content scraper built into LibreChat's web search.
+- [Convex](https://docs.keenable.ai/integrations/convex.md): @keenable/convex — a Convex component exposing search and fetch as component actions.
+- [Dify](https://docs.keenable.ai/integrations/dify.md): Keenable web search and page fetch as a plugin in the Dify marketplace.
+- [Langflow](https://docs.keenable.ai/integrations/langflow.md): A drag-and-drop Keenable search component for the Langflow canvas.
+- [n8n](https://docs.keenable.ai/integrations/n8n.md): A Keenable web-search and page-fetch community node for n8n workflows.
+- [RAGFlow](https://docs.keenable.ai/integrations/ragflow.md): A Keenable web-search agent tool built into RAGFlow, usable in the visual agent builder.
+- [Replit](https://docs.keenable.ai/integrations/replit.md): Give Replit Agent web search and page fetch through the Keenable MCP server: one click, then sign in to Keenable.
+- [de-anthropocentric research engine](https://docs.keenable.ai/integrations/de-anthropocentric-research-engine.md): Keenable is one of the MCP servers the de-anthropocentric research engine ships with, pre-wired in its bundled config.
+- [GPT Researcher](https://docs.keenable.ai/integrations/gpt-researcher.md): gpt-researcher-keenable, a retriever plugin that gives GPT Researcher Keenable web search with no API key.
+- [Hermes Agent](https://docs.keenable.ai/integrations/hermes-agent.md): Keenable is built into Hermes Agent as a web backend for web_search and web_extract, and works without a key.
+- [ketch](https://docs.keenable.ai/integrations/ketch.md): Keenable as a built-in search backend in the ketch agent CLI (Go).
+- [Lightpanda](https://docs.keenable.ai/integrations/lightpanda.md): Keenable is the keyless search engine behind the search tool in the Lightpanda headless browser.
+- [Nanobot](https://docs.keenable.ai/integrations/nanobot.md): Keenable web search built into Nanobot, with a DuckDuckGo fallback.
+- [Omnigent](https://docs.keenable.ai/integrations/omnigent.md): Keenable as a built-in web_search backend in Omnigent, selectable via the tool's search_provider config.
+- [OpenClaw](https://docs.keenable.ai/integrations/openclaw.md): A web-search provider for OpenClaw, installable from ClawHub or npm.
+- [SearXNG](https://docs.keenable.ai/integrations/searxng.md): A keenable search engine built into SearXNG (shortcut !keen), enabled in settings.yml.
+- [Vellum Assistant](https://docs.keenable.ai/integrations/vellum-assistant.md): Keenable as a built-in web-search provider in Vellum Assistant, alongside Brave, Perplexity, Tavily and Firecrawl.
+- [web-search-plus (Hermes)](https://docs.keenable.ai/integrations/web-search-plus.md): Keenable as a web-search and extract provider in the web-search-plus community plugin for the Hermes agent.
+- [WeKnora (Tencent)](https://docs.keenable.ai/integrations/weknora.md): Keenable as a built-in web-search provider in Tencent WeKnora.
+- [ZeroClaw](https://docs.keenable.ai/integrations/zeroclaw.md): Keenable as a built-in web-search provider in ZeroClaw, the Rust agent runtime — the one provider that needs no key.
+- [cognee](https://docs.keenable.ai/integrations/cognee.md): Keenable as the web-fetch backend behind cognee's URL ingestion and scheduled scraper: pages come back as clean Markdown before they enter graph memory.
+- [Pipecat](https://docs.keenable.ai/integrations/pipecat.md): KeenableWebSearch — low-latency web search for Pipecat voice agents.
+
+## OpenAPI Specs
+
+- [openapi](/api-reference/openapi.json)
+- [search-api](/api-reference/search-api.json)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

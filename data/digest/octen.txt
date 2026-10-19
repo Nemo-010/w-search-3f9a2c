@@ -1,0 +1,72 @@
+# Octen (octen) category=ai-search
+home=https://octen.ai/ pricing=None docs=https://docs.octen.ai/ llms=https://docs.octen.ai/llms.txt
+sources_ok: llms:https://docs.octen.ai/llms.txt, llms-full:https://docs.octen.ai/llms-full.txt, docs:https://docs.octen.ai/, home:https://octen.ai/
+--- ranked fact lines ---
+[llms-full] | Qualifying usage | Model Gateway usage funded by paid amounts, at least \$10 in a calendar month. Free credits, vouchers, and rebate balance do not count. |
+[llms-full] | **Welcome Credit** | Every new user receives a **\$5 free balance** upon registration |
+[llms-full] <Tip>All new users receive **\$5 in free balance** upon registration.</Tip>
+[llms-full] | Free | Up to 10 | \$0 | Default tier for every new account |
+[llms-full] | minimax/minimax-h3 | 768p: \$0.08 / 2K: \$0.13 | - | First 5 free, then \$0.04 each |
+[llms-full] The full content of the first 10 results per search is now free. Only results beyond that are billed, at \$0.5 per 1,000 results.
+[llms-full] | Base | Up to 20 | \$0 | Unlocked automatically once you add credits |
+[llms-full] | Input tokens | 10,000 | \$3 / 1M | \$0.030 |
+[llms-full] | Output tokens | 2,000 | \$15 / 1M | \$0.030 |
+[llms-full] A Customer on the **Pro plan** (\$13,999/month) experiences a Monthly Uptime Percentage of **99.5%**.
+[llms-full] * **Success-only billing.** Up to 20 URLs per request, each succeeding or failing independently, and only successful URLs are billed, at \$1 per 1,000 in standard mode and \$2.5 per 1,000 in advanced mode.
+[llms-full] * **Low cost.** \$1 per 1,000 calls, priced for high-volume production.
+[llms-full] * **Low cost.** Search at \$1 per 1,000 calls, priced for high-volume production.
+[llms-full] Any usage draws from free credits, vouchers, and rebate balance first, and from the cash you pay in last. The rebate is calculated on that paid usage.
+[llms-full] New accounts start on the Free plan; adding credits unlocks Base at no monthly cost.
+[llms-full] | Builder | Up to 50 | <s>\$2,999</s> \$2,099 (30% off) | Early-stage teams going to production |
+[llms-full] | Pro | Up to 200 | \$13,999 | Growing production workloads |
+[llms-full] | Max | Up to 500 | \$33,999 | High-volume production at scale |
+[llms-full] | Broad Search | <s>\$5</s> \$1 / 1k calls (80% off) | \$0.5 / 1k results |
+[llms-full] | Web Search | <s>\$5</s> \$1 / 1k calls (80% off) | \$0.5 / 1k results |
+[llms-full] | Image Search | \$2 / 1k calls | - |
+[llms-full] | Video Search | \$5 / 1k calls | - |
+[llms-full] | News Search | \$3 / 1k calls | \$0.5 / 1k results |
+[llms-full] | Business Search | \$5 / 1k calls | \$0.5 / 1k results |
+[llms-full] | Standard mode | \$1 / 1k successful URLs |
+[llms-full] | Advanced mode | \$2.5 / 1k successful URLs |
+[llms-full] | openai/gpt-6.1-sol | \$2 (≤272k) / \$4 (>272k) | \$10 (≤272k input) / \$15 (>272k input) | \$0.1 (≤272k) / \$0.2 (>272k) | \$2.5 (≤272k) / \$5 (>272k) |
+[llms-full] | openai/gpt-6-astra | \$10 (≤272k) / \$20 (>272k) | \$50 (≤272k input) / \$75 (>272k input) | \$1 (≤272k) / \$2 (>272k) | \$12.5 (≤272k) / \$25 (>272k) |
+[llms-full] | openai/gpt-5.6-sol | \$4 (≤272k) / \$8 (>272k) | \$20 (≤272k input) / \$30 (>272k input) | \$0.4 (≤272k) / \$0.8 (>272k) | \$5 (≤272k) / \$10 (>272k) |
+[llms-full] | openai/gpt-5.6-terra | \$2 (≤272k) / \$4 (>272k) | \$12 (≤272k input) / \$18 (>272k input) | \$0.2 (≤272k) / \$0.4 (>272k) | \$2.5 (≤272k) / \$5 (>272k) |
+[llms-full] | openai/gpt-5.6-luna | \$0.2 (≤272k) / \$0.4 (>272k) | \$1.2 (≤272k input) / \$1.8 (>272k input) | \$0.02 (≤272k) / \$0.04 (>272k) | \$0.25 (≤272k) / \$0.5 (>272k) |
+[llms-full] | openai/gpt-5.4 | \$2.5 | \$15 | \$0.25 | - |
+[llms-full] | anthropic/claude-fable-5.1 | \$10 | \$50 | \$0.25 | \$12.5 (5m) / \$20 (1h) |
+[llms-full] | anthropic/claude-fable-5 | \$10 | \$50 | \$1 | \$12.5 (5m) / \$20 (1h) |
+[llms-full] | anthropic/claude-opus-5.5 | \$4 | \$20 | \$0.2 | \$5 (5m) / \$8 (1h) |
+[llms-full] | anthropic/claude-opus-5 | \$5 | \$25 | \$0.5 | \$6.25 (5m) / \$10 (1h) |
+[llms-full] | anthropic/claude-opus-4.8 | \$5 | \$25 | \$0.5 | \$6.25 (5m) / \$10 (1h) |
+[llms-full] | anthropic/claude-opus-4.6 | \$5 | \$25 | \$0.5 | \$6.25 (5m) / \$10 (1h) |
+[llms-full] | anthropic/claude-sonnet-5.5 | \$2 | \$10 | \$0.1 | \$2.5 (5m) / \$4 (1h) |
+[llms-full] | anthropic/claude-sonnet-5 | \$2 | \$10 | \$0.2 | \$2.5 (5m) / \$4 (1h) |
+[llms-full] | anthropic/claude-sonnet-4.6 | \$3 | \$15 | \$0.3 | \$3.75 (5m) / \$6 (1h) |
+[llms-full] | anthropic/claude-haiku-5.5 | \$0.1 (≤100k) / \$0.5 (>100k) | \$0.5 (≤100k input) / \$2.5 (>100k input) | \$0.01 (≤100k) / \$0.05 (>100k) | ≤100k: \$0.125 (5m) / \$0.2 (1h); >100k: \$0.625 (5m) / \$1 (1h) |
+[llms-full] | anthropic/claude-haiku-4.5 | \$1 | \$5 | \$0.1 | \$1.25 (5m) / \$2 (1h) |
+[llms-full] | google/gemini-4-argon | \$4 | \$20 | \$0.2 | - |
+[llms-full] | google/gemini-3.8-flash | \$0.75 | \$3.75 | \$0.075 | - |
+[llms-full] | google/gemini-3.5-flash | \$1.5 | \$9 | \$0.15 | - |
+[llms-full] | google/gemini-3.5-flash-lite | \$0.3 | \$2.5 | \$0.03 | - |
+[llms-full] | google/gemini-3.1-pro-preview | \$2 (≤200k) / \$4 (>200k) | \$12 (≤200k input) / \$18 (>200k input) | \$0.2 (≤200k) / \$0.4 (>200k) | - |
+[llms-full] | google/gemini-3.1-flash-lite | \$0.25 | \$1.5 | \$0.025 | - |
+[llms-full] | google/gemini-3-flash-preview | \$0.5 | \$3 | \$0.05 | - |
+--- llms/readme head ---
+# Octen Docs
+> Octen is the search infrastructure for AI: a real-time web search foundation that lets LLMs, agents, and apps reason with the world's latest information. These are the official technical docs for the Octen API platform.
+Every page in this index is linked with a `.md` extension and returns clean Markdown, which is what agents should fetch instead of the HTML page. `https://docs.octen.ai/llms-full.txt` contains the full text of every page in a single file. Requests to any page URL with `Accept: text/markdown` also return Markdown.
+## Overview
+- [Welcome](https://docs.octen.ai/overview/welcome.md): Real-time access to the world's latest information for LLMs and agents.
+- [Introduction](https://docs.octen.ai/overview/introduction.md): What Octen is and what each API and application does.
+- [Quickstart](https://docs.octen.ai/overview/quickstart.md): Get an API key and make your first search request in minutes.
+- [Build with Coding Agent](https://docs.octen.ai/overview/build-with-coding-agent.md): What a coding agent needs to build an Octen integration.
+- [Pricing](https://docs.octen.ai/overview/pricing.md): Monthly QPS plan subscription plus pay-as-you-go API billing.
+- [Model Gateway Rebate](https://docs.octen.ai/overview/model-gateway-rebate.md): Get 15% of your Model Gateway spend back, automatically.
+## Capabilities
+### Octen Fast
+- [Broad Search](https://docs.octen.ai/capabilities/broad-search.md): One question, many sub-queries, searched concurrently in a single call.
+- [Web Search](https://docs.octen.ai/capabilities/web-search.md): Search the live web for ranked results with highlights and full content.
+- [Image Search](https://docs.octen.ai/capabilities/image-search.md): Search the web for images by text query or reference image.
+- [Video Search](https://docs.octen.ai/capabilities/video-search.md): Search the web for videos with ranked results and rich metadata.
+### Octen Premier

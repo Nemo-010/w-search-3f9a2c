@@ -1,0 +1,49 @@
+{
+ "slug": "worldbank",
+ "name": "World Bank",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:49+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
+   "status": 200,
+   "final_url": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 222866,
+   "truncated": false,
+   "sha256": "585c4d1cbaa70588399e7922a5d10707e600e8e9d03457f779cc1d7ec98ee7da",
+   "fetched_at": "2026-10-19T05:54:49+00:00",
+   "text_bytes": 8983
+  },
+  "llms-err-dbb6ff": {
+   "url": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589/llms.txt",
+   "status": 404,
+   "final_url": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 2050,
+   "truncated": false,
+   "sha256": "fb3236eec85ca7f84930ba2c48a7d5993100ab42d258d19e8e885f426f92e6ae",
+   "fetched_at": "2026-10-19T05:54:50+00:00"
+  },
+  "llms-err-40693c": {
+   "url": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 2050,
+   "truncated": false,
+   "sha256": "fb3236eec85ca7f84930ba2c48a7d5993100ab42d258d19e8e885f426f92e6ae",
+   "fetched_at": "2026-10-19T05:54:50+00:00"
+  },
+  "llms-err-271609": {
+   "url": "https://docs.datahelpdesk.worldbank.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.datahelpdesk.worldbank.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:50+00:00"
+  }
+ }
+}

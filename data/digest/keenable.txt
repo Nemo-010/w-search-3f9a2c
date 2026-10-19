@@ -1,0 +1,61 @@
+# Keenable (keenable) category=ai-search
+home=https://keenable.ai/ pricing=None docs=https://docs.keenable.ai/ llms=https://docs.keenable.ai/llms.txt
+sources_ok: llms:https://docs.keenable.ai/llms.txt, llms-full:https://docs.keenable.ai/llms-full.txt, docs:https://docs.keenable.ai/, home:https://keenable.ai/
+--- ranked fact lines ---
+[llms-full] `credits` is what the call cost, and `paid` tells you which bucket it came from — `false` for the free monthly allowance, `true` for purchased credits. This is what to attribute cost against per call; see [Metadata for integrators](/mcp-server#metadata-for-integrators) for the full field list.
+[llms] - [Credits](https://docs.keenable.ai/credits.md): The free allowance of 100,000 requests a month, how authenticated usage is metered against it, and what happens when it runs out.
+[llms] - [Pay per request (x402)](https://docs.keenable.ai/pay-per-request.md): Call search and fetch with no account and no API key: each request pays $0.01 in USDC on Base over the x402 protocol, or spends prepaid credit bought through ZeroClick.
+[llms-full] The free allowance of 100,000 requests a month, how authenticated usage is metered against it, and what happens when it runs out.
+[llms-full] **100,000 requests a month, free.** The allowance resets each month, so it is a recurring budget rather than a one-off trial. To keep going once it is spent, buy a credit package in the [console](https://app.keenable.ai/console) — that is also where your current allowance and remaining balance are shown.
+[llms-full] Call search and fetch with no account and no API key: each request pays $0.01 in USDC on Base over the x402 protocol, or spends prepaid credit bought through ZeroClick.
+[llms-full] Rate limits cap how *fast* you can call the API. How *much* you can call it is a separate limit: authenticated usage draws on a free allowance of 100,000 requests a month — see [credits](/credits).
+[llms-full] Quoting it in requests works because a credit *is* a request for the two operations that matter here: search and fetch each cost one. Anything priced differently draws more than one credit per call, which is why the rule below still holds — read what a call cost from the response rather than counting calls.
+[llms-full] `keenable/keenable` is the connector's UID: the service, then the name you gave it. On Vercel, `getToken` authenticates with the deployment's OIDC token; locally, run `vercel env pull` first. Call it per request rather than once at startup. The SDK caches the key in process.
+[llms-full] **Paying per request**, on the `/v1/x402/*` paths, with no key and no account: each call pays \$0.01 in USDC on Base over the x402 protocol. See [Pay per request](/pay-per-request) for the payment flow and a client example.
+[llms-full] A third option sits between the two: an agent with a wallet can [pay per request](/pay-per-request) over the x402 protocol — \$0.01 per search or fetch in USDC on Base, on the `/v1/x402/*` paths, with no account and no key. It has its own limits and error responses, described on that page. For regular use an API key stays cheaper.
+[llms-full] | When balance falls below | \$5 | \$1 to \$10,000 |
+[llms-full] | Add | \$20 | \$5 to \$10,000 |
+[llms-full] | Monthly limit | \$1,000 | \$5 to \$100,000, and no less than one top-up |
+[llms-full] **The threshold watches your purchased balance**, the dollar balance shown on the Billing page. The free [monthly allowance](/credits#monthly-allowance) does not count toward it. Free requests are used first, so while some are left your purchased balance does not go down and nothing is charged.
+[llms-full] an [x402](https://www.x402.org) offer; the client pays \$0.01 in USDC on Base and retries,
+[llms-full] * **Concurrency.** Up to 5 URLs in flight at once (`KeenableConfig.concurrency`), 30-second timeout per request (`timeout`, 1 to 120).
+[llms-full] Searches count against your current organization in Keenable, with its [rate limits](/rate-limits) and the free monthly allowance in [credits](/credits).
+[llms-full] `true` when drawn from purchased credits; `false` while still on the free monthly allowance. See [credits](/credits).
+[llms-full] **\$0.01 per request**, in USDC on Base (`eip155:8453`). The buyer needs USDC only — no ETH for gas, because the payment is a signed transfer authorization (EIP-3009) that the payment network submits on your behalf.
+[llms-full] `amount` is in USDC base units (6 decimals), so `10000` is \$0.01. `asset` is the USDC contract on Base. A signed payment stays valid for `maxTimeoutSeconds`.
+[llms-full] | [Pay per request](/pay-per-request) (x402) | 50 paid requests per second per paying wallet, 100 requests per second per IP, no hourly cap |
+[llms-full] ## Paying per request without a key
+[llms-full] **Pay per request with x402** — search and fetch can now be bought one call at a time,
+[llms-full] [Pay per request](/pay-per-request).
+[llms-full] ## Reading usage per call
+[llms-full] The mode is pinned per call and hidden from the model. With a key and no `mode`, `realtime` is the default — so if your account is not entitled to it, pass `mode="pro"` explicitly, or every search fails.
+[llms-full] Every billed (authenticated) tool call returns usage under `_meta["keenable/usage"]`, so you can attribute cost per call without parsing the tool's text output. Unauthenticated calls are unbilled and omit it.
+[llms-full] # Pay per request (x402)
+[llms-full] `X-Keenable-Title` names your application and is required on the public endpoint; without it the request is rejected with `400 Missing app identifier`. Keyless calls are rate limited per IP and consume no credits — see [Authentication](/api-reference#authentication) for the details. The playground on this page calls the keyed endpoint.
+[llms-full] | `402` | No credits available — the monthly allowance is spent and no purchased credits remain (see [credits](/credits)) |
+[llms-full] Auto top-up keeps your purchased balance from running out. You choose a threshold and an amount, and whenever the balance falls below the threshold, Keenable charges your saved card that amount and adds the credits it buys. A monthly limit caps how much can be charged in one month.
+[llms-full] organization for authenticated API keys, and a 1,000 requests/hour quota for
+[llms-full] "keenable/usage": { "sku": "search.realtime", "amount": 1, "credits": 1, "paid": true }
+[llms-full] With the allowance spent and no purchased credits remaining, `/v1/search` and `/v1/fetch` return [`402`](/authentication#error-responses). Buy a package in the [console](https://app.keenable.ai/console) to resume, or wait for the allowance to reset.
+[llms-full] Run `hermes tools` and pick **Keenable · Free (keyless)** for web search and extract, or set it directly:
+[llms-full] Keenable reports a request as used only when it succeeds, so error responses draw nothing from the credit. Each agent can make 50 requests per second, with no hourly cap; a `429` carries `Retry-After`. A `503` means ZeroClick could not confirm the remaining credit at that moment: nothing was charged, and the request can be retried after `Retry-After`.
+[llms-full] | [Prepaid credits through ZeroClick](/pay-per-request#prepaid-credits-through-zeroclick) | 50 requests per second per agent, no hourly cap |
+--- llms/readme head ---
+# Keenable
+> Web search and knowledge access for AI agents.
+- [Quickstart](https://docs.keenable.ai/index.md): Install the Keenable CLI, log in, wire the MCP server into your agents, and run your first search.
+- [Authentication](https://docs.keenable.ai/authentication.md): Get an API key, pass it to the API, CLI and MCP server, and read the error responses.
+- [Rate limits](https://docs.keenable.ai/rate-limits.md): How fast you can call search and fetch — the per-second and hourly limits for authenticated and unauthenticated requests, and how they differ from the credit allowance.
+- [Credits](https://docs.keenable.ai/credits.md): The free allowance of 100,000 requests a month, how authenticated usage is metered against it, and what happens when it runs out.
+- [Auto top-up](https://docs.keenable.ai/auto-top-up.md): Refill purchased credits automatically: the threshold, amount and monthly limit you set, when your card is charged, and what happens when a charge is declined.
+- [Pay per request (x402)](https://docs.keenable.ai/pay-per-request.md): Call search and fetch with no account and no API key: each request pays $0.01 in USDC on Base over the x402 protocol, or spends prepaid credit bought through ZeroClick.
+- [MCP](https://docs.keenable.ai/mcp-server.md): Connect Keenable APIs as tools to clients that support MCP
+- [CLI](https://docs.keenable.ai/cli.md): Authenticate, configure MCP, and search from the terminal
+- [API reference](https://docs.keenable.ai/api-reference.md): The HTTP API behind the Keenable CLI, MCP server, and integrations.
+- [Search](https://docs.keenable.ai/api-reference/search.md): Search the web and return ranked results
+- [Fetch](https://docs.keenable.ai/api-reference/fetch.md): Fetch webpage contents
+- [Changelog](https://docs.keenable.ai/changelog.md): Product updates and announcements from Keenable.
+- [Integrations](https://docs.keenable.ai/integrations.md): Connect Keenable web search to your agent stack — LangChain, LlamaIndex, Haystack, MCP, and more.
+- [Baseten](https://docs.keenable.ai/integrations/baseten.md): Keenable web search and page fetch as server-side tools on Baseten Model APIs — the model calls them inside the inference loop.
+- [OpenRouter](https://docs.keenable.ai/integrations/openrouter.md): Web search and page fetch for any model on OpenRouter, as tools the model calls itself: from Python, the AI SDK, or OpenRouter's Agent SDK over MCP. Works without a Keenable key.
+- [Haystack](https://docs.keenable.ai/integrations/haystack.md): Keenable web search and page-fetch components for Haystack pipelines.

@@ -1,0 +1,70 @@
+{
+ "slug": "serpdog",
+ "name": "Serpdog",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:18+00:00",
+ "sources": {
+  "home-err-5ec5d3": {
+   "url": "https://serpdog.io/",
+   "status": 403,
+   "final_url": "https://serpdog.io/",
+   "content_type": "text/html",
+   "bytes": 1154,
+   "truncated": false,
+   "sha256": "ce72be21edf1ffbde126e891ea298aeb1e5c72b0da0b0fe3d2beca7b1ef64ffb",
+   "fetched_at": "2026-10-19T05:54:18+00:00"
+  },
+  "llms-err-86c12c": {
+   "url": "https://serpdog.io/llms.txt",
+   "status": 404,
+   "final_url": "https://serpdog.io/llms.txt",
+   "content_type": "text/html",
+   "bytes": 4878,
+   "truncated": false,
+   "sha256": "338319243f7fa7f17feba8cc51d208908ce8072131d11a2d576691b082c932e3",
+   "fetched_at": "2026-10-19T05:54:19+00:00"
+  },
+  "llms-err-2d1136": {
+   "url": "https://serpdog.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://serpdog.io/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 4878,
+   "truncated": false,
+   "sha256": "338319243f7fa7f17feba8cc51d208908ce8072131d11a2d576691b082c932e3",
+   "fetched_at": "2026-10-19T05:54:19+00:00"
+  },
+  "llms": {
+   "url": "https://docs.serpdog.io/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.serpdog.io/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 5364,
+   "truncated": false,
+   "sha256": "97c0d056a701c967548fd959ce6f7f21823793d91259398884008eab389bda1d",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 5362
+  },
+  "llms-full": {
+   "url": "https://docs.serpdog.io/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.serpdog.io/llms-full.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 543821,
+   "truncated": false,
+   "sha256": "f07d235317aa4ccde078879dd4957db6d3e4ba02d994af7b511b8d20f343d39e",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 541701
+  },
+  "pricing": {
+   "url": "https://serpdog.io/pricing",
+   "status": 404,
+   "final_url": "https://serpdog.io/pricing",
+   "content_type": "text/html",
+   "bytes": 4878,
+   "truncated": false,
+   "sha256": "338319243f7fa7f17feba8cc51d208908ce8072131d11a2d576691b082c932e3",
+   "fetched_at": "2026-10-19T05:59:39+00:00"
+  }
+ }
+}

@@ -1,0 +1,51 @@
+SauceNAO Reverse Image Search 
+ image source locator 
+ Browse, Drop, or Ctrl+V to Paste an Image~ 
+ Select Image 
+ Safe ish Search 
+ Auto 
+ All DBs 
+ Invert Selection 
+ H-Magazines 
+ H-Game CG 
+ DoujinshiDB 
+ pixiv Images 
+ Nico Nico Seiga 
+ Danbooru 
+ drawr Images 
+ Nijie Images 
+ Yande.re 
+ Shutterstock 
+ FAKKU 
+ H-Misc (nH) 
+ 2D-Market 
+ MediBang 
+ Anime 
+ H-Anime 
+ Movies 
+ Shows 
+ Gelbooru 
+ Konachan 
+ Sankaku Channel 
+ Anime-Pictures.net 
+ e621.net 
+ Idol Complex 
+ bcy.net Illust 
+ bcy.net Cosplay 
+ PortalGraphics.net 
+ deviantArt 
+ Pawoo.net 
+ Madokami (Manga) 
+ MangaDex 
+ H-Misc (eH) 
+ ArtStation 
+ FurAffinity 
+ Twitter 
+ Furry Network 
+ Kemono 
+ Skeb 
+ About 
+ Terms 
+ Tools 
+ Status 
+ Account

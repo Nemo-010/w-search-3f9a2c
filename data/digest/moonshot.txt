@@ -1,0 +1,8 @@
+# Moonshot Kimi (moonshot) category=llm-search
+home=https://platform.moonshot.ai/ pricing=https://platform.moonshot.ai/docs/pricing docs=https://platform.moonshot.ai/docs/ llms=None
+sources_ok: pricing:https://platform.moonshot.ai/docs/pricing, docs:https://platform.moonshot.ai/docs/, home:https://platform.moonshot.ai/, llms:https://platform.moonshot.ai/docs/llms.txt, llms-full:https://platform.moonshot.ai/llms-full.txt, llms-https://platform.moonshot.ai/llms.txt:https://platform.moonshot.ai/llms.txt
+--- ranked fact lines ---
+[docs] If the code runs successfully without errors, you will see output similar to: Hello, Li Lei! 1+1 equals 2. This is a basic arithmetic question. If you have any other questions or need help, feel free to let me know.
+[pricing] Here, 1M = 1,000,000. The prices in the table represent the cost per 1M tokens consumed.
+--- llms/readme head ---
+Kimi API Platform

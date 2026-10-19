@@ -1,0 +1,62 @@
+{
+ "slug": "mistral",
+ "name": "Mistral",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:52+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://mistral.ai/pricing",
+   "status": 200,
+   "final_url": "https://mistral.ai/pricing/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 411032,
+   "truncated": false,
+   "sha256": "6729f3da93a647b78b68cef180bc4ed9f5f20063280aa41772f158908dc9b920",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 8868
+  },
+  "docs": {
+   "url": "https://docs.mistral.ai/",
+   "status": 200,
+   "final_url": "https://docs.mistral.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1191255,
+   "truncated": false,
+   "sha256": "835bffcc72c07f110060205b26f5984a17c455d4ae2d2aad59159bd874b01af7",
+   "fetched_at": "2026-10-19T05:54:53+00:00",
+   "text_bytes": 4404
+  },
+  "llms": {
+   "url": "https://docs.mistral.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.mistral.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 69858,
+   "truncated": false,
+   "sha256": "b61ae7bedde65f197ebf509351b32b1c8574ba52e4278749f2e45e72fcec51a0",
+   "fetched_at": "2026-10-19T05:54:54+00:00",
+   "text_bytes": 69842
+  },
+  "llms-full": {
+   "url": "https://docs.mistral.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.mistral.ai/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 2790120,
+   "truncated": false,
+   "sha256": "c3f04a14c89974da7dc0c43bb7ff6bcb30f9aa20ae37fc715e97b63afb28629a",
+   "fetched_at": "2026-10-19T05:54:54+00:00",
+   "text_bytes": 2788011
+  },
+  "llms-err-7bd0de": {
+   "url": "https://docs.mistral.ai/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://docs.mistral.ai/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 453417,
+   "truncated": false,
+   "sha256": "cb81f68d89fbe514e2659652828f45c6bf88d88c0128bce8c943a6efa755dc45",
+   "fetched_at": "2026-10-19T05:54:55+00:00"
+  }
+ }
+}

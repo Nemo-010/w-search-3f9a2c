@@ -1,0 +1,85 @@
+{
+ "slug": "hasdata",
+ "name": "HasData",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:18+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://hasdata.com/pricing",
+   "status": 200,
+   "final_url": "https://hasdata.com/prices",
+   "content_type": "text/html",
+   "bytes": 202820,
+   "truncated": false,
+   "sha256": "ea75622c0bc0542ab9d9a3c408e17f73d40cd9e656aa38d8913049ca42ef26e8",
+   "fetched_at": "2026-10-19T05:59:38+00:00",
+   "text_bytes": 17534
+  },
+  "docs": {
+   "url": "https://docs.hasdata.com/",
+   "status": 200,
+   "final_url": "https://docs.hasdata.com/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 563536,
+   "truncated": false,
+   "sha256": "6b83bffc28048058429aade71c705894c002f4a8d1cb6cfcfc78565b8ad3af2d",
+   "fetched_at": "2026-10-19T05:54:19+00:00",
+   "text_bytes": 1819
+  },
+  "home": {
+   "url": "https://hasdata.com/",
+   "status": 200,
+   "final_url": "https://hasdata.com/",
+   "content_type": "text/html",
+   "bytes": 198139,
+   "truncated": false,
+   "sha256": "7a2e6191c7cc4ea33229bb9f562adb0c7e7ab9362a5a81e6db6ba180a335f780",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 12830
+  },
+  "llms": {
+   "url": "https://docs.hasdata.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.hasdata.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 13059,
+   "truncated": false,
+   "sha256": "6f67aced7525c0ec0bd848e6c4a2f3db8fc3ec37172b5a5f2a8d69c36971653f",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 13053
+  },
+  "llms-full": {
+   "url": "https://hasdata.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.hasdata.com/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 1085551,
+   "truncated": false,
+   "sha256": "d7e3885e92b9cd8c63fde904bc29b80bf3998639697babe942f63dcbe36f80ae",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 1084845
+  },
+  "llms-https://hasdata.com/llms.txt": {
+   "url": "https://hasdata.com/llms.txt",
+   "status": 200,
+   "final_url": "https://hasdata.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 8911,
+   "truncated": false,
+   "sha256": "110241b32d81214f4a3e18fb8b7964405f98cf2ecff6a2dbc2f9cce22a07c180",
+   "fetched_at": "2026-10-19T05:54:22+00:00",
+   "text_bytes": 8911
+  },
+  "llms-https://hasdata.com/docs/llms.txt": {
+   "url": "https://hasdata.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.hasdata.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 13059,
+   "truncated": false,
+   "sha256": "6f67aced7525c0ec0bd848e6c4a2f3db8fc3ec37172b5a5f2a8d69c36971653f",
+   "fetched_at": "2026-10-19T05:54:23+00:00",
+   "text_bytes": 13053
+  }
+ }
+}

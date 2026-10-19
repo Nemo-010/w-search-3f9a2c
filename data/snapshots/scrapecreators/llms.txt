@@ -1,0 +1,50 @@
+# Scrape Creators
+
+> Scrape Creators provides APIs for scraping public creator and social media data from TikTok, Instagram, YouTube, Twitter/X, Facebook, Reddit, LinkedIn, and other platforms.
+
+This file is a compact product-level guide for AI tools. For endpoint-level API details, use the docs LLM files below.
+
+## Main Links
+
+- [Scrape Creators API docs](https://docs.scrapecreators.com): API documentation and interactive endpoint pages.
+- [Docs llms.txt](https://docs.scrapecreators.com/llms.txt): Compact AI-readable endpoint index.
+- [Docs llms-full.txt](https://docs.scrapecreators.com/llms-full.txt): Full AI-readable API reference with endpoint parameters and sample responses.
+- [OpenAPI spec](https://docs.scrapecreators.com/openapi.json): Machine-readable API schema.
+- [Pricing](https://scrapecreators.com/#pricing): Plans and pricing.
+- [Enterprise](https://scrapecreators.com/enterprise): High-volume workloads, custom pricing, technical onboarding, and enterprise evaluation details.
+- [No rate limits](https://scrapecreators.com/no-rate-limits): Account-level concurrency policy and production guidance.
+- [Changelog](https://scrapecreators.com/changelog): Recent API and product updates.
+- [Status](https://scrapecreators.com/status): Current API status and incident history.
+
+## API Basics
+
+Base API URL: `https://api.scrapecreators.com`
+
+Authentication: pass your API key in the `x-api-key` header.
+
+Use the docs links above before writing integration code. The docs `llms-full.txt` file is the best source for AI coding tools because it includes endpoint paths, params, and sample responses in one Markdown file.
+
+## API Categories
+
+- [TikTok API](https://docs.scrapecreators.com/v1/tiktok/profile): TikTok profiles, videos, transcripts, comments, search, songs, and trending data.
+- [TikTok Shop API](https://docs.scrapecreators.com/v1/tiktok/shop/search): TikTok Shop product search, shop products, and product details.
+- [Instagram API](https://docs.scrapecreators.com/v1/instagram/profile): Instagram profiles, posts, reels, transcripts, comments, highlights, embeds, and song usage.
+- [YouTube API](https://docs.scrapecreators.com/v1/youtube/channel): YouTube channels, videos, shorts, transcripts, search, comments, playlists, and community posts.
+- [Twitter/X API](https://docs.scrapecreators.com/v1/twitter/profile): Twitter/X profiles, tweets, user timelines, transcripts, communities, and community tweets.
+- [Facebook API](https://docs.scrapecreators.com/v1/facebook/profile): Facebook profiles, posts, reels, photos, groups, comments, and transcripts.
+- [Ad Library APIs](https://docs.scrapecreators.com/v1/facebook/adLibrary/search/ads): Facebook, Google, LinkedIn, and Reddit ad library endpoints.
+- [Reddit API](https://docs.scrapecreators.com/v1/reddit/subreddit/details): Subreddits, posts, comments, search, and Reddit ads.
+- [LinkedIn API](https://docs.scrapecreators.com/v1/linkedin/profile): LinkedIn profiles, company pages, posts, and ads.
+- [Bluesky API](https://docs.scrapecreators.com/bluesky/profile): Bluesky profiles, posts, and post details.
+- [Threads API](https://docs.scrapecreators.com/v1/threads/profile): Threads profiles, user posts, post details, and user search.
+- [Pinterest API](https://docs.scrapecreators.com/v1/pinterest/search): Pinterest search, pins, user boards, and board pins.
+- [Twitch API](https://docs.scrapecreators.com/v1/twitch/profile): Twitch profiles and clips.
+- [Kick API](https://docs.scrapecreators.com/v1/kick/clip): Kick clip details.
+- [Snapchat API](https://docs.scrapecreators.com/v1/snapchat/profile): Snapchat public profile data.
+- [Link-in-bio APIs](https://docs.scrapecreators.com/v1/linktree): Linktree, Komi, Pillar, Linkbio, and Linkme profile scraping.
+- [Utility APIs](https://docs.scrapecreators.com/v1/credit-balance): Credit balance and creator image age/gender detection.
+
+## Optional
+
+- [Support](https://scrapecreators.com/contact): Contact Scrape Creators support.
+- [Website home](https://scrapecreators.com): Product overview and use cases.

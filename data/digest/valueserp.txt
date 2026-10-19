@@ -1,0 +1,39 @@
+# ValueSERP (valueserp) category=serp-scrape
+home=https://www.valueserp.com/ pricing=https://www.valueserp.com/pricing docs=https://www.valueserp.com/docs llms=None
+sources_ok: pricing:https://www.valueserp.com/pricing, docs:https://www.valueserp.com/docs, home:https://www.valueserp.com/, llms:https://www.valueserp.com/docs/llms.txt, llms-full:https://www.valueserp.com/llms-full.txt, llms-https://www.valueserp.com/llms.txt:https://www.valueserp.com/llms.txt
+--- ranked fact lines ---
+[pricing] $1.60 per 1,000 credits
+[pricing] $1.20 per 1,000 credits
+[pricing] $1.00 per 1,000 credits
+[pricing] $1,000/month
+[pricing] Pay as you go from just $2.50/1k searches
+[pricing] Flexible plans and pricing that’s meant for scale. With a per-request rate as low as $0.50 per 1K searches, VALUE SERP keeps your budget in mind.
+[pricing] 25,000 credits/month
+[pricing] 200,000 credits/month
+[pricing] 1,000,000 credits/month
+[pricing] Try for free
+[pricing] 25,000 Credits
+[pricing] 200,000 Credits
+[pricing] 1,000,000 Credits
+[pricing] Try VALUE SERP for Free
+[pricing] Access the most comprehensive SERP data from the world’s lowest cost SERP API. Try for free, when you’re ready choose a plan that is right for you.
+[pricing] Start for free today and choose a plan later.
+--- llms/readme head ---
+Value SERP | Low Cost SERP API
+Skip to content
+Traject Data joins ScraperAPI
+See what's new
+Ecommerce APIs
+Close Ecommerce APIs
+Open Ecommerce APIs
+Rainforest API
+BlueCart API
+RedCircle API
+Backyard API
+BigBox API
+Countdown API
+Serp APIs
+Close Serp APIs
+Open Serp APIs
+SerpWow
+Scale SERP

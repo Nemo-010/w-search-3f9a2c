@@ -1,0 +1,50 @@
+{
+ "slug": "restcountries",
+ "name": "REST Countries",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:50+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://restcountries.com/",
+   "status": 200,
+   "final_url": "https://restcountries.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 62308,
+   "truncated": false,
+   "sha256": "b2e5ae3992c1e5d53f95c1373719a864bb6d549065915fdba35ca7234e6c6982",
+   "fetched_at": "2026-10-19T05:54:50+00:00",
+   "text_bytes": 8223
+  },
+  "llms": {
+   "url": "https://restcountries.com/llms.txt",
+   "status": 200,
+   "final_url": "https://restcountries.com/rest-countries/static/helpers/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 4714,
+   "truncated": false,
+   "sha256": "409e275c409eef9e72262954fab04499f71f283ead13f9c254f9ee39db127f5d",
+   "fetched_at": "2026-10-19T05:54:51+00:00",
+   "text_bytes": 4714
+  },
+  "llms-err-167b40": {
+   "url": "https://restcountries.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://restcountries.com/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 20064,
+   "truncated": false,
+   "sha256": "1f738d69676d2ce662550c61012c8e9a37ca086a74d220f93bf53bcbc211c2c1",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  },
+  "llms-err-bdf029": {
+   "url": "https://docs.restcountries.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.restcountries.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:53+00:00"
+  }
+ }
+}

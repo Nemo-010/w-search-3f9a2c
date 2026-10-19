@@ -1,0 +1,27 @@
+# Mwmbl (mwmbl) category=search-engine
+home=https://mwmbl.org/ pricing=None docs=https://github.com/mwmbl/mwmbl llms=None
+sources_ok: docs:https://github.com/mwmbl/mwmbl, home:https://mwmbl.org/, llms:https://docs.github.com/llms.txt
+--- ranked fact lines ---
+[llms] * [GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions): Learn how usage of GitHub Actions is measured against your free allowance and how to pay for additional use.
+[home] famine. End apartheid. Free Palestine! Mwmbl supports Palestine. Membership Statistics Sign In The truly open source search engine Mwmbl (pronounced "mumble") is a search engine that's completely independent, open source, and
+[llms] * [Page List API](https://docs.github.com/api/pagelist/en/free-pro-team@latest): Returns every docs page path for a given language and version.
+[llms] * [Search API](https://docs.github.com/api/search/v1): Search across all docs content. Example: `curl "https://docs.github.com/api/search/v1?query=actions&language=en&version=free-pro-team@latest"`
+--- llms/readme head ---
+# GitHub Docs
+> GitHub is a developer platform for building, shipping, and maintaining software. It provides cloud-based Git repository hosting, CI/CD via GitHub Actions, project management with Issues and Projects, code review via pull requests, AI-powered development with GitHub Copilot, and APIs (REST and GraphQL) for automation and integration.
+## How to use
+To retrieve full article content, page lists, or search results programmatically, please use the APIs below. To find a specific article, use the **Search API** with a query. To browse all available pages, use the **Page List API** to get a list of paths, then fetch individual articles with the **Article API**. The `/api/article/body` endpoint returns markdown, ideal for LLM consumption. These APIs return structured markdown and JSON and are the preferred way for LLMs and automated tools to access GitHub documentation.
+* [Versions API](https://docs.github.com/api/pagelist/versions): Lists all available documentation versions.
+* [Languages API](https://docs.github.com/api/pagelist/languages): Lists all available languages.
+* [Page List API](https://docs.github.com/api/pagelist/en/free-pro-team@latest): Returns every docs page path for a given language and version.
+* [Article API](https://docs.github.com/api/article): Returns the full rendered content and context of any docs page as JSON. Example: `curl "https://docs.github.com/api/article?pathname=/en/get-started/start-your-journey/what-is-github"`
+* [Article Body API](https://docs.github.com/api/article/body): Returns the full rendered content of any docs page as markdown. Example: `curl "https://docs.github.com/api/article/body?pathname=/en/get-started/start-your-journey/what-is-github"`
+* [Search API](https://docs.github.com/api/search/v1): Search across all docs content. Example: `curl "https://docs.github.com/api/search/v1?query=actions&language=en&version=free-pro-team@latest"`
+* [GitHub MCP server](https://github.com/github/github-mcp-server): For agents that connect via Model Context Protocol, the GitHub MCP server provides tools for working with GitHub itself: repositories, issues, pull requests, workflows, and code. It does not currently include docs search.
+## Building with GitHub, for coding agents and automation
+* [Extend Copilot Chat with MCP](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/extend-copilot-chat-with-mcp): Connect MCP servers to Copilot Chat to share context from other applications.
+* [Use the GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/copilot-for-common-tasks/use-the-github-mcp-server): Learn how to use the GitHub Model Context Protocol (MCP) server to interact with repositories, issues, pull requests, and other GitHub features, directly from Copilot Chat in your IDE.
+* [Set up the GitHub MCP Server](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/set-up-the-github-mcp-server): Learn how to configure the GitHub Model Context Protocol (MCP) server.
+* [Copilot on GitHub.com](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github): Explore your repositories, plan changes, and delegate coding tasks to GitHub Copilot without leaving GitHub.com.
+* [Create custom agents in your IDE](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-custom-agents-in-your-ide): You can create specialized agents with tailored expertise for specific development tasks.
+* [GitHub CLI](https://docs.github.com/en/github-cli/github-cli): GitHub CLI is an open source tool for using GitHub from your computer's command line. When you're working from the command line, you can use the GitHub CLI to save time and avoid switching context.

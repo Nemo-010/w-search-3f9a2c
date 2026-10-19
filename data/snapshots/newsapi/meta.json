@@ -1,0 +1,71 @@
+{
+ "slug": "newsapi",
+ "name": "NewsAPI",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:39+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://newsapi.org/pricing",
+   "status": 200,
+   "final_url": "https://newsapi.org/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 79172,
+   "truncated": false,
+   "sha256": "933896d71ba78e786af490c253a3e415b9612786d79ea29af4c3ee93cf38a7d4",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 3251
+  },
+  "docs": {
+   "url": "https://newsapi.org/docs",
+   "status": 200,
+   "final_url": "https://newsapi.org/docs",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 18804,
+   "truncated": false,
+   "sha256": "61c7a2d4d55aa072beb0bff9fe121b03aec2b37068a239b9983356341f25a4d7",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 1701
+  },
+  "home": {
+   "url": "https://newsapi.org/",
+   "status": 200,
+   "final_url": "https://newsapi.org/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 107790,
+   "truncated": false,
+   "sha256": "7fe481e9c46ea7e9c50e0e6f563d9373432e7b7ed2ed2d1622c3a42a84b0fdcf",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 4013
+  },
+  "llms-err-8a6787": {
+   "url": "https://newsapi.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://newsapi.org/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 1245,
+   "truncated": false,
+   "sha256": "dc1d54dab6ec8c00f70137927504e4f222c8395f10760b6beecfcfa94e08249f",
+   "fetched_at": "2026-10-19T05:54:40+00:00"
+  },
+  "llms-err-4250ef": {
+   "url": "https://newsapi.org/llms.txt",
+   "status": 404,
+   "final_url": "https://newsapi.org/llms.txt",
+   "content_type": "text/html",
+   "bytes": 1245,
+   "truncated": false,
+   "sha256": "dc1d54dab6ec8c00f70137927504e4f222c8395f10760b6beecfcfa94e08249f",
+   "fetched_at": "2026-10-19T05:54:40+00:00"
+  },
+  "llms-err-efc287": {
+   "url": "https://docs.newsapi.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.newsapi.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:40+00:00"
+  }
+ }
+}

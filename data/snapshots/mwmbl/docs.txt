@@ -1,0 +1,156 @@
+GitHub - mwmbl/mwmbl: An open source, non-profit web search engine · GitHub 
+ Skip to content 
+ Navigation Menu Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Copilot app Direct agents from issue to merge MCP Registry Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes Code Quality Enforce quality at merge APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners View all resources Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community GitHub Stars Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search / Sign in Sign up Appearance settings 
+ You signed in with another tab or window. Reload to refresh your session. 
+ You signed out in another tab or window. Reload to refresh your session. 
+ You switched accounts on another tab or window. Reload to refresh your session. 
+ Dismiss alert 
+ {{ message }} 
+ mwmbl mwmbl Repository navigation Code Issues 100  ( 100 ) Pull requests 3  ( 3 ) Actions Projects Wiki Security and quality Insights More items 
+ mwmbl Public Notifications You must be signed in to change notification settings Fork 97  ( 97 ) Star 1.9k  ( 1.9k ) You must be signed in to star a repository About An open source, non-profit web search engine mwmbl.org Topics non-profit search-engine Resources Readme AGPL-3.0 license Code of conduct Code of conduct Contributing Contributing Activity Custom properties Stars 1.9k stars Watchers 13 watching Forks 97 forks Report repository main Branches Tags Go to file Code Open more actions menu Latest commit   History 1,714 Commits 1,714 Commits Folders and files Name Name Last commit message Last commit date .claude .claude     .github .github     .vscode .vscode     analyse analyse     devdata devdata     docs docs     front-end front-end     mwmbl mwmbl     mwmbl_rank mwmbl_rank     notes notes     rust-xgboost rust-xgboost     scripts scripts     test test     .dockerignore .dockerignore     .gcloudignore .gcloudignore     .git-blame-ignore-revs .git-blame-ignore-revs     .gitignore .gitignore     .gitlab-ci.yml .gitlab-ci.yml     .pre-commit-config.yaml .pre-commit-config.yaml     AGENTS.md AGENTS.md     CLAUDE.md CLAUDE.md     CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md     CONTRIBUTING.md CONTRIBUTING.md     Dockerfile Dockerfile     Dockerfile.crawler Dockerfile.crawler     LICENSE LICENSE     Makefile Makefile     README.md README.md     TODO.md TODO.md     app.json app.json     docker-compose.yml docker-compose.yml     manage.py manage.py     nginx.conf.sigil nginx.conf.sigil     pyproject.toml pyproject.toml     uv.lock uv.lock     View all files Repository files navigation README Code of conduct Contributing AGPL-3.0 license More items Mwmbl - the Open Source and Non-Profit Web Search Engine 
+ No ads, no tracking, no profit 
+ Mwmbl is a non-profit, open source search engine
+where the community determines the rankings. We aim to be a
+replacement for commercial search engines such as Google and
+Bing. 
+ We have our own index powered by our community - while the index itself
+is centralised, the crawling is distributed across servers run by our volunteers. 
+ Our index is currently much smaller than those of commercial search engines, but
+you can help change that by joining us! 
+ Community 
+ Our main community is on
+ Matrix but we also have a
+ Discord server for non-development
+related discussion. 
+ The community is responsible for crawling the web (see below) and
+ curating search results . We are
+friendly and welcoming. Join us! 
+ Documentation 
+ All documentation is at https://book.mwmbl.org . 
+ Development coverage 
+ make coverage measures the Python and Rust code and prints a combined,
+executable-line-weighted percentage. See the coverage guide 
+for prerequisites, exclusions, and CI details. 
+ Crawling 
+ If you have spare computer power and bandwidth, for now the best way you can help is
+by running our command line
+crawler . 
+ If you have Firefox you can help out by installing our
+extension . This
+retrieves search results from commercial search engines to use to evaluate our own ranking.
+It does not use or access any of
+your personal data. 
+ Why a non-profit search engine? 
+ The motives of ad-funded search engines are at odds with providing an
+optimal user experience. These sites are optimised for ad revenue,
+with user experience taking second place. This means that pages are
+loaded with ads which are often not clearly distinguished from search
+results. Also, eitland on Hacker News
+ comments : 
+ Thinking about it it seems logical that for a search engine that
+practically speaking has monopoly both on users and as mattgb points
+out - [to some] degree also on indexing - serving the correct answer
+first is just dumb: if they can keep me going between their search
+results and tech blogs with their ads embedded one, two or five
+times extra that means one, two or five times more ad impressions. 
+ But what about...? 
+ The space of alternative search engines has expanded rapidly in recent
+years. Here's a very incomplete list of some that have interested me: 
+ search.marginalia.nu - a search
+engine favouring text-heavy websites 
+ SearXNG - an open source meta
+search engine 
+ YaCy - an open source distributed search engine 
+ Stract - an open source, private search engine with a focus on privacy and customizability 
+ Brave 
+ DuckDuckGo 
+ Kagi 
+ Mojeek 
+ Of these, YaCy is the closest in spirit to the idea of a non-profit
+search engine. The index is distributed across a peer-to-peer
+network. Unfortunately this design decision slows the fetching of search results. 
+ Marginalia Search is fantastic, but our goals are different: we aim to
+be a replacement for commercial search engines whereas Marginalia aims to
+provide a different type of search. 
+ All other search engines that I've come across are for-profit. Please
+let me know if I've missed one! 
+ Designing for non-profit 
+ To be a good search engine, we need to store many items, but the cost
+of running the engine is at least proportional to the number of items
+stored. Our main consideration is thus to reduce the cost per item
+stored. 
+ The design is founded on the observation that most items rank for a
+small set of terms. In the extreme version of this, where each item
+ranks for a single term, the usual inverted index design is grossly
+inefficient, since we have to store each term at least twice: once in
+the index and once in the item data itself. 
+ Our design is a giant hash map. We have a single store consisting of a
+fixed number N of pages. Each page is of a fixed size (currently 4096
+bytes to match a page of memory), and consists of a compressed list of
+items. Given a term for which we want an item to rank, we compute a
+hash of the term, a value between 0 and N - 1. The item is then stored
+in the corresponding page. 
+ To retrieve pages, we simply compute the hash of the terms in the user
+query and load the corresponding pages, filter the items to those
+containing the term and rank the items. Since each page is small, this
+can be done very quickly. 
+ Because we compress the list of items, we can rank for more than a
+single term and maintain an index smaller than the inverted index
+design. At least, that's the theory. This idea has yet to be tested on
+a large scale. 
+ How to contribute 
+ There are multiple ways to help: 
+ Help us crawl the
+web 
+ Donate some money towards
+hosting costs and supporting our volunteers 
+ Give feedback/suggestions 
+ Assist in development of the engine itself 
+ If you would like to help in any of these or other ways, thank you!
+Please join our Matrix chat
+server or email the main
+author (email address is in the git commit history). 
+ Development 
+ Local Testing 
+ For trying out the service locally see the section in the Mwmbl book . 
+ Code style and checks 
+ Python code is formatted and linted with ruff and type checked
+with ty . Both are configured in pyproject.toml and pinned in
+the dev dependency group, so everyone runs the same versions. 
+ Install the git hooks once, after uv sync : 
+ make install-hooks
+ From then on every commit is formatted and checked. To run the same checks by hand: 
+ make check # format check + lint + type check, exactly what CI runs
+make fix # reformat and apply the safe lint fixes
+ ty is gated on error-level diagnostics only. There is a large warning backlog - Django's
+ Model.objects is invisible to ty, which has no django-stubs plugin support - so the rules with
+pre-existing violations are downgraded to warnings in [tool.ty.rules] . Run make typecheck-all 
+to see the whole backlog, and promote a rule back to error once its count reaches zero. 
+ Using Dokku 
+ Note: this method is not recommended as it is more involved, and your index will not include any data unless you
+set up a crawler to crawl to your server. You will need to set up your own Backblaze or S3 equivalent storage, or
+have access to the production keys, which we probably won't give you. 
+ Follow the deployment instructions 
+ Frequently Asked Question 
+ How do you pronounce "mwmbl"? 
+ Like "mumble". I live in
+ Mumbles , which is spelt
+"Mwmbwls" in Welsh. But the intended meaning is "to mumble", as in
+"don't search, just mwmbl!" 
+ Star History 
+ Acknowledgements 
+ Many thanks to Mohamed Alm for security consultations and recommendations. 
+ About An open source, non-profit web search engine mwmbl.org Topics non-profit search-engine Resources Readme AGPL-3.0 license Code of conduct Code of conduct Contributing Contributing Activity Custom properties Stars 1.9k stars Watchers 13 watching Forks 97 forks Report repository Releases Used by Contributors Languages 
+ Footer 
+ © 2026 GitHub, Inc.
+ Footer navigation 
+ Terms 
+ Privacy 
+ Security 
+ Status 
+ Community 
+ Docs 
+ Contact 
+ Manage cookies
+ Do not share my personal information
+ You can’t perform that action at this time.

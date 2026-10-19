@@ -1,0 +1,62 @@
+{
+ "slug": "browse-ai",
+ "name": "Browse AI",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:21+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.browse.ai/pricing",
+   "status": 200,
+   "final_url": "https://www.browse.ai/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 279023,
+   "truncated": false,
+   "sha256": "2fa9545aa7046ca75501c6cdaf1dc44a7d63d0f0564943c92527bad0281aa3f2",
+   "fetched_at": "2026-10-19T05:54:21+00:00",
+   "text_bytes": 18421
+  },
+  "docs": {
+   "url": "https://www.browse.ai/docs",
+   "status": 200,
+   "final_url": "https://docs.browse.ai/api/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 316058,
+   "truncated": false,
+   "sha256": "442e01ebcc66524822808a9d0c2b5b056a63c5f90994f9e19ea8c84ea5ac653e",
+   "fetched_at": "2026-10-19T05:54:21+00:00",
+   "text_bytes": 3542
+  },
+  "home": {
+   "url": "https://www.browse.ai/",
+   "status": 200,
+   "final_url": "https://www.browse.ai/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 344990,
+   "truncated": false,
+   "sha256": "02980788d626777858a59a2959ea5e011a4df9534116cc4fd7e1ea649d5fe270",
+   "fetched_at": "2026-10-19T05:54:22+00:00",
+   "text_bytes": 43924
+  },
+  "llms-err-8e28f6": {
+   "url": "https://www.browse.ai/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.browse.ai/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 563327,
+   "truncated": false,
+   "sha256": "98158081d10afbc183c227f0e5968a300c31ea1a2e526fd4a3064c15c063e5e6",
+   "fetched_at": "2026-10-19T05:54:23+00:00"
+  },
+  "llms": {
+   "url": "https://www.browse.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://www.browse.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14346,
+   "truncated": false,
+   "sha256": "5d82b904c4d09ea2ed499511e503ee40fea5763758d663473857b104030cb4d8",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 14346
+  }
+ }
+}

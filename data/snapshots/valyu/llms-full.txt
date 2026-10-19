@@ -1,0 +1,1004 @@
+# Valyu
+
+> knowledge work.
+
+One API to search specialist, proprietary and web sources, and run multi-step research with cited, structured outputs — across Finance and Science & R&D.
+
+## Table of Contents
+
+- [Home](https://www.valyu.ai/)
+
+### Products
+- [Answer & Deep Research APIs for AI Agents](https://www.valyu.ai//product-agents)
+- [API](https://www.valyu.ai//product-apis)
+
+### Company
+- [Sciences coverage](https://www.valyu.ai//coverage)
+- [Academia & Research](https://www.valyu.ai//academia-research)
+- [Physics & Engineering](https://www.valyu.ai//physics)
+- [Chemistry & Materials](https://www.valyu.ai//chemistry)
+- [Medtech & Diagnostics](https://www.valyu.ai//medtech)
+- [Medical affairs & post-market](https://www.valyu.ai//medical-affairs)
+- [Regulatory & market access](https://www.valyu.ai//regulatory-affairs)
+- [Clinical development](https://www.valyu.ai//clinical-development)
+- [Lead optimisation & preclinical](https://www.valyu.ai//preclinical)
+- [Target discovery & validation](https://www.valyu.ai//target-discovery)
+- [Biotech & Pharma](https://www.valyu.ai//biotech-pharma)
+- [Quant and systematic](https://www.valyu.ai//quant)
+- [Private equity](https://www.valyu.ai//private-equity)
+- [Research desks](https://www.valyu.ai//research-desks)
+- [Pricing](https://www.valyu.ai//pricing)
+- [Sciences](https://www.valyu.ai//sciences)
+- [AI-Powered Financial Data API | Real-Time Markets & Filings](https://www.valyu.ai//finance)
+- [Contact](https://www.valyu.ai//contact)
+- [AI Enrichment](https://www.valyu.ai//ai-enrichment)
+- [AI Distribution | Valyu](https://www.valyu.ai//ai-distribution)
+- [Company](https://www.valyu.ai//company)
+
+### Legal
+- [VALYU ACCEPTABLE USE POLICY](https://www.valyu.ai//valyu-acceptable-use-policy)
+- [VALYU PLATFORM SERVICE AGREEMENT](https://www.valyu.ai//valyu-platform-service-agreement)
+- [Terms & Conditions](https://www.valyu.ai//terms)
+- [Privacy Policy](https://www.valyu.ai//privacy-policy)
+
+---
+
+## Home
+
+### Home
+https://www.valyu.ai/
+
+# knowledge work.
+
+One API to search specialist, proprietary and web sources, and run multi-step research with cited, structured outputs — across Finance and Science & R&D.
+
+## Products
+
+### Answer & Deep Research APIs for AI Agents
+https://www.valyu.ai//product-agents
+
+# Agents that answer and research.
+
+From instant, cited answers to multi-step investigations that deliver reports, sheets and structured data.
+
+### API
+https://www.valyu.ai//product-apis
+
+# APIs for AI agents
+
+Search + content extraction in one platform. Web, research, and financial data and clean page content, in a single call.
+
+## Company
+
+### Sciences coverage
+https://www.valyu.ai//coverage
+
+# Seven layers of the scientific record.
+
+Every layer is searchable through the same API call, alongside the rest of Valyu’s 100+ sources. Filter by field to see what each page draws on.
+
+### Academia & Research
+https://www.valyu.ai//academia-research
+
+# Your library, in your terminal.
+
+Full-text papers, preprints and trial records for your own agents and tools. Add the MCP server and ask from Claude Code, or call the API from your lab’s code.
+
+### Physics & Engineering
+https://www.valyu.ai//physics
+
+# Engineering answers, with the paper attached.
+
+arXiv, USPTO and EPO patents and CERN open data in one API, for teams building AI for hardware and physical R&D.
+
+### Chemistry & Materials
+https://www.valyu.ai//chemistry
+
+# The chemistry literature, down to the table.
+
+Papers, compound data and patents in one API, with the values in tables and figures searchable alongside the text.
+
+### Medtech & Diagnostics
+https://www.valyu.ai//medtech
+
+# Clinical and regulatory evidence for every device decision.
+
+Literature, trials, device adverse event reports and patents in one API, for teams building AI for regulatory, clinical and quality work.
+
+### Medical affairs & post-market
+https://www.valyu.ai//medical-affairs
+
+# Answer the medical question with the latest evidence.
+
+Draft medical information responses, watch the literature for safety signals and check every claim in a slide against its primary source.
+
+### Regulatory & market access
+https://www.valyu.ai//regulatory-affairs
+
+# Find the precedent before the agency does.
+
+Approval precedents, label language and the evidence payers ask for, with every claim tied to a document.
+
+### Clinical development
+https://www.valyu.ai//clinical-development
+
+# Design the trial with every precedent in view.
+
+Endpoints, eligibility criteria, comparators and results from registered trials and their publications, lined up side by side.
+
+### Lead optimisation & preclinical
+https://www.valyu.ai//preclinical
+
+# Structure, activity and safety, read from the tables.
+
+Bioactivity, ADME and toxicology findings across papers and patents, pulled out with the assay conditions that make them comparable.
+
+### Target discovery & validation
+https://www.valyu.ai//target-discovery
+
+# Is this the right target? Ask the whole record.
+
+Human genetics, mechanism, tractability and the competitive field for any target, read from full text and returned with sources.
+
+### Biotech & Pharma
+https://www.valyu.ai//biotech-pharma
+
+# Evidence your R&D agents can cite, from target to label.
+
+Full-text papers, clinical trials, chemistry, structures and patents in one API, for teams building AI across discovery and development.
+
+### Quant and systematic
+https://www.valyu.ai//quant
+
+# The data your research needs, built to your spec.
+
+Vendor data decides what you can test. Valyu builds the dataset from your own definition, point-in-time and source-backed.
+
+### Private equity
+https://www.valyu.ai//private-equity
+
+# The search and research APIs behind your firm’s AI.
+
+Private companies leave little on the public record, and generic web search misses most of it. Valyu is the one API your firm’s chats, agents and workflows call instead, from first look to exit.
+
+### Research desks
+https://www.valyu.ai//research-desks
+
+# The search and research APIs behind your desk’s AI.
+
+Generic web search wasn’t built for investment research. Valyu is the one API your desk’s chats, agents and workflows call instead, with every answer traced to its source.
+
+### Pricing
+https://www.valyu.ai//pricing
+
+# Usage Based Pricing 
+
+Valyu is built to help you scale. From your agent's first search to its IPO, we grow with you.
+
+## Usage, explained
+
+### Sciences
+https://www.valyu.ai//sciences
+
+# Peer-reviewed science, one API call away.
+
+Full-text papers, clinical trials, patents and structured databases for the AI your research teams rely on. Every answer comes back with its sources.
+
+### AI-Powered Financial Data API | Real-Time Markets & Filings
+https://www.valyu.ai//finance
+
+# The retrieval layer for finance agents.
+
+One API across filings, transcripts, market data, macro, private markets, and news.
+
+### Contact
+https://www.valyu.ai//contact
+
+# Talk to our team
+
+Valyu provides powerful tools to connect AI agents to trusted, real-time data. 
+Our team is here to help you explore how Valyu can enhance your AI applications.
+
+### AI Enrichment
+https://www.valyu.ai//ai-enrichment
+
+# Your content, rebuilt for AI.
+
+Publishing formats were designed for readers, not agents. Valyu Enrichment converts your catalogue into structured, AI-retrievable content — with metadata, labelled images, and clean markdown built in. No engineering. No maintenance.
+
+## PROCESSED CONTENT UNLOCKS AI REVENUE
+
+ Unprocessed content earns nothing from AI. We handle the enrichment — chunking, table extraction, metadata structuring — so your content is ready for every AI agent, search, and citation.  
+
+## YOUR CONTENT EARNS ON EVERY RETRIEVAL
+
+Every retrieval is metered. Every citation is attributed back to the source. You see which content is being used, by which applications, and how much revenue it generates. Your 2020 work still earning in 2025     
+
+### AI Distribution | Valyu
+https://www.valyu.ai//ai-distribution
+
+# Your Next Audience Is AI Context
+
+AI agents and answer engines are reshaping how content is consumed. We help you distribute into this ecosystem, with attribution, tracking, and monetisation rails built in.
+
+
+## How Valyu enables AI distribution
+
+### Step 1
+
+We accept content in any format and at any volume, including PDFs, XML, EPUB, scanned documents, and image archives. Connect your catalogue once and we handle everything from there.
+
+### Step 2
+
+Raw files are parsed and restructured into AI-ready content. Text is chunked for context windows, tables are extracted, images are labelled, and metadata is generated. The output is clean structured markdown with a consistent schema, regardless of what went in.
+
+### Step 3
+
+Your enriched content is indexed on Valyu's retrieval platform. We build and maintain the search indices, MCP servers, and API endpoints so AI agents and applications can retrieve your content at scale.
+
+### Step 4
+
+Your content becomes available to AI agents, RAG pipelines, LLM applications, and research tools. When an agent searches for expertise in your domain, your content surfaces automatically.
+
+### Step 5
+
+Every retrieval is metered and every citation is attributed back to the source. You choose the monetisation model, whether that is pay-per-retrieval, ads, referrals, or API licensing, and we handle pricing, metering, and reporting.
+
+### Company
+https://www.valyu.ai//company
+
+# About us
+
+LLMs are guessing more than reasoning. That’s a context problem, learn how we are solving that.
+
+## Legal
+
+### VALYU ACCEPTABLE USE POLICY
+https://www.valyu.ai//valyu-acceptable-use-policy
+
+# Acceptable Use Policy
+
+VALYU ACCEPTABLE USE POLICY (AUP)
+
+Last updated: 06/11/25
+
+This Acceptable Use Policy ("AUP") applies to all access to and use of Valyu's APIs, datasets, models, indexes, and related services (the "Services"). By using the Services, you agree to comply with this AUP. Valyu may update this AUP at any time, and your continued use of the Services constitutes acceptance of the updated version.
+
+1. Definitions
+
+1.1 Restricted Partner Content
+
+"Restricted Partner Content" means any content, data, metadata, text, images, tables, charts, figures, abstracts, summaries, references, or other materials made available through the Services that are licensed to Valyu by third-party rights holders ("Partners", "Partner"), including publishers, data providers, aggregators, or research organisations, and that are subject to contractual use restrictions imposed by those Partners. Restricted Partner Content includes, without limitation, Outputs, snippets, citations, metadata, summaries, extracted entities, or any other derived material that incorporate, reference, or are generated using such Partner-licensed content, whether provided directly by Valyu or surfaced through Valyu's APIs.
+
+2. General Principles
+
+You may use the Services only for lawful purposes and in accordance with this AUP, the Platform Service Agreement, and all endpoint-specific documentation. You are responsible for all activity performed under your API keys.
+
+3. Prohibited Uses
+
+You may not use the Services to:
+
+3.1. Illegal, Harmful, or Abusive Activity
+
+Break any applicable law or regulationHarm, threaten, or harass individualsGenerate or distribute malware or security exploitsImpersonate individuals or entitiesAccess or use the Services in ways that could damage or impair Valyu systems
+
+4. Content Restrictions
+
+You may not use the Services to:
+
+4.1. Circumvent Rights, Copyrights, or Licensing Restrictions
+
+Reproduce or redistribute copyrighted contentAccess content behind paywalls or access controlsStore or display publisher content in ways not allowed by licensingExtract, store, or manipulate full-text articles from licensed sourcesUse the Services to access data you are not legally entitled to
+
+4.2. Build, Recreate, or Compete with Datasets
+
+You may not:
+
+Rebuild, replicate, or simulate any Valyu corpus, dataset, index, or scoringJoin Outputs to reassemble source materialsScrape or bulk download data via high-volume search queriesPerform "benchmark dumping" (large-scale exporting of output)
+
+4.3. Use Outputs to Create Derived or Competitive Products
+
+You may not:
+
+Develop search engines, RAG corpora, knowledge bases, embeddings, LLMs, datasets, indexes, or generative models that compete with ValyuUse Outputs as seeds for synthetic data that replicates licensed or indexed contentUse Outputs to build evaluation datasets for model training without written permission
+
+5. Model Training & Machine Learning Restrictions
+
+This is a zero-tolerance category due to Partner obligations. You may not, under any circumstances, use:
+
+OutputsCitationsSummariesMetadataExtracted entitiesAnnotations (or any other content returned by Valyu) for any machine-learning-related activity described below.
+
+5.1. Prohibited Training, Fine-Tuning, Pre-Training, and Distillation
+
+You may not use any Valyu content or publisher content to:
+
+Train, fine-tune, pre-train, adapt, or calibrate any machine learning modelTrain or update:Large Language Models (LLMs)Embedding or retrieval modelsClassifier or ranking modelsEvaluation or reward modelsSynthetic data generatorsPerform model distillation, compression, imitation or behavioural replication
+
+5.2. Prohibited Dataset Construction and Vectorisation
+
+You may not:
+
+Embed Outputs into a vector storeCreate, augment, or curate datasets partially or wholly derived from OutputsGenerate synthetic corpora seeded by OutputsStore Outputs or derivatives in structured or unstructured datasetsFeed Outputs into agentic retraining loops, auto-labelling systems, or RL pipelines
+
+5.3. Use Valyu Outputs in Model Evaluation Pipelines
+
+(e.g., to test or tune the performance of your own models) Unless expressly authorised by Valyu in writing.
+
+6. Contents Endpoint — User Responsibility for Third-Party URLs
+
+6.1. Your Obligations When Submitting URLs
+
+The Contents API endpoint (/v1/contents) extracts and processes content from URLs that you provide. By submitting any URL to the Contents endpoint, you represent and warrant that: (a) You have reviewed and are in compliance with the terms of service, acceptable use policy, and any other applicable usage terms of the target website or service from which content will be extracted. (b) You have reviewed the target website's robots.txt file and any other machine-readable access directives (including but not limited to X-Robots-Tag HTTP headers and <meta name="robots"> directives) and have confirmed that automated extraction of the requested content is not prohibited by those directives. (c) Your use of the extracted content complies with all applicable copyright, intellectual property, data protection, and other laws in the jurisdictions in which you and the target website operate.
+
+6.2. Valyu's Role
+
+Valyu processes URLs submitted by you as a technical service provider. Valyu does not independently verify the terms of service or access permissions of third-party websites submitted via the Contents endpoint. You — not Valyu — are the party responsible for ensuring that your use of the Contents endpoint in connection with any given URL is lawful and authorised.
+
+6.3. Indemnification
+
+You agree to indemnify and hold harmless Valyu, its officers, directors, employees, and agents from and against any claims, damages, losses, liabilities, costs, or expenses (including reasonable legal fees) arising out of or relating to your submission of URLs to the Contents endpoint in violation of this Section 6 or any third-party rights.
+
+6.4. Prohibited Uses of the Contents Endpoint
+
+Without limiting the generality of Section 3 and Section 4 above, you may not use the Contents endpoint to:
+
+Systematically extract content from a single domain or set of domains at a scale or frequency that constitutes scraping, crawling, or harvestingAccess or extract content from URLs that you know or reasonably should know are protected by terms that prohibit automated access or extractionReconstruct, mirror, or archive a substantial portion of any third-party website or datasetExtract content for the purpose of repackaging and redistributing it as your own, or in a manner that competes with the source website
+
+7. Caching, Retention & Storage Rules
+
+7.1. Restricted Content (Partner / Licensed Sources)
+
+You may not:
+
+CacheStoreRetainLogIndexReformatCopy any Restricted Content. All Restricted Content must be discarded once the request completes.
+
+7.2. Open Access (OA) & Open Web Content
+
+You may temporarily cache Outputs only within the durations specified by Valyu's Documentation. You may not:
+
+Store Outputs indefinitelyStore Outputs in volumes sufficient to recreate datasetsStore large batches of outputs from related queriesStore Outputs outside the permitted cache window
+
+8. Automated Usage & Query Behaviour
+
+You may not:
+
+Generate abusive query patterns (keyword enumeration, brute-force term scanning)Run high-volume queries intended to perform scraping or bulk extractionUse bots to obtain data at a scale that mimics crawling or harvestingPerform load testing without prior written approvalPerform adversarial prompts designed to bypass licensing or content restrictions Valyu may rate-limit, throttle, or block usage that appears harmful or potentially abusive.
+
+9. Security Restrictions
+
+You may not:
+
+Reverse engineer or attempt to extract Valyu's models, indexes, embeddings, or scoring logicProbe, scan, or test the security of systems without authorisationInterfere with or disrupt the integrity of the ServicesAttempt to bypass geographical, licensing, or content-access restrictions
+
+10. Misrepresentation & High-Risk Use Cases
+
+You may not:
+
+Use Outputs as factual without verifying the underlying sourcesProvide medical, legal, financial, or regulatory advice based solely on OutputsUse Outputs in automated decision-making without adequate human oversightMisrepresent Valyu's data as proprietary to your own organisation
+
+11. Competing Use
+
+You may not:
+
+Use the Services to build competing APIs, search layers, indexing systems, or retrieval infrastructuresBenchmark Valyu for publication without written consentUse knowledge of Valyu's performance or datasets to circumvent or replace the Services
+
+12. Enforcement, Suspension & Termination
+
+Valyu may:
+
+Suspend or terminate access immediatelyRevoke keysBlock IPsThrottle usageNotify rights holdersTake legal action for any suspected or confirmed violation of this AUP. We may also:Update this AUP at any timeChange endpoint rules at any timeModify caching and retention policies without notice
+
+13. Reporting Violations
+
+To report misuse or compliance issues: Valyu Network Ltd 17 Newman Street, London W1T 1PD, United Kingdom Email: contact@valyu.ai
+
+### VALYU PLATFORM SERVICE AGREEMENT
+https://www.valyu.ai//valyu-platform-service-agreement
+
+# Platform Service Agreement
+
+VALYU PLATFORM SERVICE AGREEMENT
+
+Last updated: October 20 2025
+
+1. Introduction
+
+This Platform Service Agreement (“Agreement”) governs your access to and use of the Valyu APIs, SDKs, documentation, datasets, models, and related services (“Services”).
+
+The Services are operated by Valyu.Network Ltd (“Valyu”, “we”, “us”). By using the Services, you agree to be bound by this Agreement. If you do not agree, do not use the Services.
+
+You may use the Services only if:
+
+you are at least 16 years old, andif under 18, you have parental or guardian permission, andyou have legal authority to enter into this Agreement.
+
+2. Account & Credentials
+
+You are responsible for:
+
+maintaining the confidentiality of your API keys, andall usage under your API keys.
+
+We may suspend or revoke credentials if we detect abuse or policy violations.
+
+3. Licence to Use the Services
+
+Subject to this Agreement and all applicable Acceptable Use Policies (“AUPs”), Valyu grants you a limited, revocable, non-exclusive, non-transferable licence to:
+
+access and call the Valyu APIs;use Outputs within your applications;store permitted cached Outputs in accordance with Section 7.
+
+This licence does not include:
+
+rights to Valyu’s corpora, publisher datasets, indexes, embeddings, or internal models;rights to reproduce, copy, or distribute underlying content;rights to create derivative models or datasets;rights to build competing search/indexing services.
+
+All rights not expressly granted are reserved.
+
+4. Customer Data
+
+You retain all rights in “Customer Data” you send to the API.
+
+You grant Valyu a licence to process Customer Data solely to:
+
+provide the Services,maintain security,prevent abuse, andimprove system performance and quality.
+
+We do not use Customer Data to train models unless you give explicit written permission.
+
+5. Valyu Data and Output
+
+“Output” means the results returned from the APIs (e.g., citations, summaries, search results).
+
+“Valyu Data” includes:
+
+proprietary indexes,embeddings,scoring systems,enriched publisher content,licensed corpora,metadata, annotations, and link structures.
+
+Output Rights
+
+You may:
+
+use and display Outputs within your applications;store Outputs within the caching limits of Section 7.
+
+You may not:
+
+use any Output for model training, fine-tuning, pre-training, embedding generation, or dataset construction;use Output to recreate the structure of any Valyu dataset or publisher corpus;resell or sublicense Outputs.
+
+6. Restricted Content (Publisher / Licensed Content)
+
+Some Endpoints return “Restricted Content,” including:
+
+Publisher-owned academic, medical, financial, and professional content;Content provided under agreements with rights holders;Non-publicly licensed materials.
+
+For Restricted Content:
+
+No caching is allowed.No storage is allowed.No reproduction is allowed.You must delete the content immediately after the request completes.You may not use it for training, fine-tuning, or dataset creation.You may not display or expose full-text or substantial extracts to end users.
+
+This is a strict condition of Valyu’s rights-holder agreements.
+
+7. Caching Rules
+
+(a) Restricted Content
+
+Strictly no caching or retention.
+
+(b) Open Access (OA) & Open Web Content
+
+You may temporarily cache Output in accordance with the durations specified in the Documentation.
+
+Valyu may modify caching rules per endpoint at any time.
+
+You may not cache:
+
+full documents,large-scope result sets,data in quantities that enable reconstruction of source datasets.
+
+8. Acceptable Use
+
+You must comply with:
+
+the Valyu Acceptable Use Policy (“AUP”), andany endpoint-specific usage rules.
+
+You may not use the Services to:
+
+circumvent paywalls or access restrictions;recreate datasets or build a competing search/index service;scrape, bulk extract, or systematically harvest content;perform benchmark dumping or bulk export of Outputs;use in regulated decision-making (medical, legal, financial) without human oversight;conduct security testing without permission;violate copyright or intellectual property rights.
+
+We may suspend access for violations, suspected abuse, or security risks.
+
+9. Payments & Credits
+
+Usage is billed based on the rates shown in your dashboard or order form.
+
+Usage is billed based on the rates shown in your dashboard or order form.Credits are prepaid and non-refundable.We may charge your payment method automatically for usage.Overages or failed payments may result in suspension.
+
+Enterprise customers may have negotiated payment terms.
+
+10. Availability
+
+Valyu provides the Services on a best-effort basis.
+
+We do not guarantee:
+
+uninterrupted availability,accuracy of data,completeness of content, orfitness for a particular purpose.
+
+SLAs may be available under separate written agreements.
+
+11. Intellectual Property
+
+Valyu retains all rights in:
+
+the Services,indexes, corpora, embeddings, datasets,software, models, algorithms, scoring, and pipelines,any enhancements or derivative works.
+
+You retain all rights to your own software and Customer Data.
+
+You may not:
+
+reverse engineer,attempt to extract underlying datasets,derive model parameters or embeddings,remove or alter copyright notices.
+
+12. Confidentiality
+
+Both parties must protect confidential information using reasonable safeguards.
+
+Confidential information includes:
+
+API keys,unpublished documentation,non-public technical information,customer-specific usage metrics,publisher content,pricing and commercial terms.
+
+13. Termination
+
+You may terminate at any time by stopping use of the Services.
+
+Valyu may suspend or terminate your access if:
+
+you violate the AUP or this Agreement,your usage poses risk to our systems or rights-holder obligations,required by law or publisher agreements.
+
+Upon termination:
+
+you must delete all cached data,all licences terminate immediately,unpaid fees remain due.
+
+14. Disclaimer
+
+The Services are provided “as is” and “as available” without warranties of any kind.
+
+Valyu disclaims all implied warranties, including merchantability, fitness for purpose, and non-infringement.
+
+15. Limitation of Liability
+
+To the maximum extent permitted by law:
+
+Valyu’s liability is capped to the lesser of:
+
+£100, orthe total fees paid by you in the 6 months before the claim.
+
+Valyu is not liable for:
+
+indirect, incidental, special, exemplary, or consequential damages;loss of data, revenue, or profits;decisions made based on Outputs;LLM hallucinations or inaccuracies.
+
+These limits apply even if Valyu has been advised of the possibility of such damages.
+
+16. Indemnification
+
+You will indemnify Valyu from claims arising from:
+
+misuse of the Services,violation of the AUP,infringement resulting from your applications,illegal or harmful activities conducted through your systems.
+
+17. Governing Law
+
+This Agreement is governed by and shall be interpreted in accordance with the laws of England and Wales.
+
+The parties agree that the courts of England and Wales shall have exclusive jurisdiction to resolve any dispute arising out of or in connection with this Agreement.
+
+18. Changes to the Agreement
+
+We may update this Agreement and the AUP from time to time.
+
+Changes take effect when posted.
+
+Your continued use of the Services constitutes acceptance.
+
+19. Contact
+
+If you have any questions about these Terms or the Website Services, you can contact us at:
+
+Valyu.Network Ltd17 Newman Street, London W1T 1PD, United KingdomEmail: contact@valyu.ai
+
+### Terms & Conditions
+https://www.valyu.ai//terms
+
+# Valyu Terms & Conditions
+
+Read our Terms & Conditions. They outline rights, responsibilities and rules. Review our Platform Service Agreement for full platform usage terms.
+
+Last updated: October 20 2025
+
+1.   Who we are and how to contact us
+
+We are Valyu.Network Ltd (“Valyu”, “we”, “us”, or “our”), a company registered in England and Wales.
+
+Registered office: Floor 4, 17A Newman Street, London W1T 1PD, United KingdomCompany number: 14436543Email: contact@valyu.aiWebsite: https://valyu.ai and any subdomains (the “Site”)
+
+These Website Terms and Conditions (the “Terms”) govern your access to and use of the Site and any related online interfaces that link to these Terms (together, the “Website Services”).
+
+By using the Website Services, you agree to these Terms.
+
+If you do not agree to these Terms, you must not use the Website Services.
+
+2.   How these Terms fit with our other legal documents
+
+These Terms apply to browsing and using our Site, including:
+
+viewing pages, blog posts and marketing contentreading documentation and examplescreating and logging into a Valyu accountusing any publicly available demos or playgrounds that do not have separate terms
+
+Other documents may also apply:
+
+Customer Terms / Platform Service Agreement (“Customer Terms”)These apply to your use of our APIs and paid services (for example DeepSearch, Answers, Deep Research and related endpoints).Where there is a conflict between these Terms and the Customer Terms for paid services, the Customer Terms will prevail.Acceptable Use Policy (“AUP”)The AUP sets out what you may and may not do with our services, especially for AI and agentic use cases.
+
+The AUP applies to all use of our APIs and any interactive tools we provide.
+
+Privacy PolicyOur Privacy Policy explains how we collect, use and protect personal data.
+
+Links to these documents are available on the Site. By using the Website Services, you also agree to comply with the AUP and acknowledge our Privacy Policy.
+
+Nothing in these Terms grants you any right to use Valyu’s APIs or paid services. That access is governed by the Customer Terms or a separate written agreement.
+
+3.   Who may use the Website Services
+
+You may use the Website Services only if:
+
+you are at least 16 years old; andif you are under the age of 18, you have permission from a parent or legal guardian; andyou have the legal capacity to enter into a binding agreement under the laws that apply to you.
+
+If you use the Website Services on behalf of a company or other entity, you confirm that you are authorised to accept these Terms on its behalf.
+
+4.   Changes to these Terms and to the Website Services
+
+We may update these Terms from time to time. If we make changes that we consider material, we will take reasonable steps to notify you, for example by updating the “Last updated” date, posting a notice on the Site or sending you an email.
+
+Your continued use of the Website Services after changes take effect means you accept the updated Terms.
+
+We may change, suspend or withdraw any part of the Website Services:
+
+to reflect changes in our products;for security or legal reasons; orfor business or operational reasons.
+
+We do not guarantee that the Website Services, or any content on them, will always be available or uninterrupted.
+
+ 
+
+5.   Accounts, security and access
+
+Some parts of the Website Services may require you to create an account.
+
+You agree to:
+
+provide accurate and complete information;keep your login details secure and confidential;be responsible for all activity that occurs under your account; andnotify us promptly if you suspect unauthorised access to your account.
+
+We may suspend or close accounts, or restrict access to certain features, if we believe you have breached these Terms, the Customer Terms or the AUP, or if we consider it necessary to protect Valyu, our users or our partners.
+
+6. Intellectual property and licence to use the Site
+
+6.1 Our intellectual property
+
+All intellectual property rights in the Website Services and their content are owned by us or our licensors. This includes:
+
+the Site design, layout and look and feeltext, code samples, documentation, diagrams and examplessoftware, source code and underlying infrastructureimages, graphics, videos and audioour trademarks, logos and branding
+
+You do not acquire any ownership rights in the Website Services or their content.
+
+6.2 Limited licence to you
+
+Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable licence to:
+
+access and use the Website Services for your own internal business purposes or personal use; anddownload or print copies of Valyu pages or documentation from the Site for reference, evaluation or integration planning.use Outputs returned by the Services, provided that any source attribution and/or citation to Valyu or it’s Partners is included in the Output and is displayed clearly. It will not be removed, obscured, or disabled within your service or product. You must not modify Outputs in a way that suppresses or alters attribution, and you may not circumvent any technical attribution controls included in the Services.
+
+You must not:
+
+copy, modify, adapt, translate, distribute, sell, lease, sublicense or otherwise exploit the Website Services or their content for any commercial purpose, except as allowed under the Customer Terms or a separate agreement;remove or alter any copyright, trademark or proprietary rights notices; oruse our trademarks or branding in a way that suggests endorsement without our prior written consent.
+
+7. Prohibited uses
+
+You must not use the Website Services:
+
+in any way that breaches these Terms, the AUP or any applicable law or regulation;to attempt to gain unauthorised access to any part of our systems, APIs or data;to test, scan or probe the vulnerability of any network or system without our prior written consent;to scrape, crawl or systematically collect content or data from the Site for the purpose of building or training search indexes, language models or competing products, unless this is expressly permitted in the Customer Terms or a separate written agreement;to reverse engineer, decompile or attempt to derive the source code of any software used to provide the Website Services, except to the extent permitted by law;to use bots, scripts or other automated means to access the Website Services in a way that imposes an unreasonable or disproportionately large load on our infrastructure;to upload or transmit viruses, malware or other harmful code;to harass, abuse, defame or harm Valyu staff, partners or other users;to interfere with or disrupt the operation of the Website Services or any servers or networks connected to them.
+
+For additional restrictions that apply when you use our APIs and AI endpoints, please see the Acceptable Use Policy.
+
+8. Feedback and suggestions
+
+If you send us feedback, ideas or suggestions about Valyu or the Website Services (“Feedback”), you agree that:
+
+we are free to use the Feedback without any obligation to you;we may use it to improve or develop products and services; andyou will not claim any compensation, attribution or rights in relation to our use of the Feedback.
+
+You assign to us all intellectual property rights in the Feedback to the fullest extent permitted by law.
+
+9. Third party links and content
+
+The Website Services may contain links to third party websites or services, or display content provided by third parties.
+
+We do not endorse and are not responsible for:
+
+the content, accuracy or policies of any third party websites; orany products or services offered on or through third party sites.
+
+If you access any third party site, you do so at your own risk and you should review that site’s terms and privacy policy.
+
+10. No reliance on information
+
+Content on the Site is not intended as:
+
+financial advice;legal advice;medical or clinical advice; orany other form of professional advice.
+
+You should obtain professional or specialist advice before taking, or refraining from, any action on the basis of content on the Site.
+
+11. Privacy and data protection
+
+We collect and use personal data in accordance with our Privacy Policy, which explains:
+
+what personal data we collect;how we use it;who we share it with; andyour rights in relation to that data.
+
+By using the Website Services, you acknowledge that we will process your personal data as described in the Privacy Policy.
+
+If you create an account or use our APIs, we may process additional technical and usage data. Details of that processing may also be set out in the Customer Terms and, where applicable, in a Data Processing Agreement with you.
+
+12. Disclaimers
+
+The Website Services are provided on an “as is” and “as available” basis.
+
+To the fullest extent permitted by law, we:
+
+do not make any promises or warranties about the accuracy, completeness, reliability, availability or suitability of the Website Services;do not guarantee that the Website Services will be uninterrupted, secure or free from errors, defects, viruses or harmful components; anddisclaim all implied warranties, including warranties of merchantability, fitness for a particular purpose and non infringement.
+
+Nothing in these Terms limits or excludes any warranties or rights that cannot be excluded under applicable law.
+
+13. Limitation of liability
+
+Nothing in these Terms limits or excludes liability for:
+
+death or personal injury caused by negligence;fraud or fraudulent misrepresentation; orany other liability that cannot be limited or excluded under applicable law.
+
+Subject to the above, to the fullest extent permitted by law:
+
+we will not be liable for any loss of profits, revenue, business, goodwill, data or any indirect or consequential loss arising out of or in connection with your use of the Website Services; andour total aggregate liability to you for all claims arising out of or in connection with the Website Services and these Terms will be limited to the lesser of:- £100, or- The total amount (if any) you have paid to us for Website Services in the six (6) months before the event that gave rise to the claim.
+
+If you are using our APIs or paid services, any additional or different limitations of liability will be set out in the Customer Terms or in a separate written agreement. In the event of a conflict, the Customer Terms or that agreement will govern.
+
+14. Indemnity
+
+You agree to indemnify and hold harmless Valyu, our affiliates and our respective directors, officers, employees and agents from and against any claims, losses, damages, liabilities, costs and expenses (including reasonable legal fees) arising out of or in connection with:
+
+your breach of these Terms or the AUP;your misuse of the Website Services; oryour infringement of any third party rights in connection with your use of the Website Services.
+
+15. Suspension and termination
+
+We may suspend or terminate your access to the Website Services, or delete your account, at any time if:
+
+you breach these Terms, the AUP or the Customer Terms;we are required to do so by law or by a competent authority; orwe decide to discontinue the Website Services.
+
+Where reasonably possible, we will try to give you notice before suspension or termination.
+
+You may stop using the Website Services at any time, and you may request closure of your account by contacting us.
+
+Termination of these Terms does not affect any provisions which are intended to survive, including those relating to intellectual property, liability, indemnity and governing law.
+
+16. Governing law and jurisdiction
+
+These Terms, and any dispute or claim arising out of or in connection with them or with the Website Services, are governed by the laws of England and Wales.
+
+You and Valyu agree that the courts of England and Wales will have non exclusive jurisdiction.
+
+17. Miscellaneous
+
+Entire agreement
+
+These Terms, together with the AUP, the Privacy Policy and any applicable Customer Terms, form the entire agreement between you and Valyu in relation to the Website Services.
+
+No waiver
+
+If we do not enforce a right or provision under these Terms, that does not mean we have waived it.
+
+Severability
+
+If any part of these Terms is found to be invalid or unenforceable, the rest will remain in full force and effect.
+
+Assignment
+
+We may assign or transfer our rights and obligations under these Terms to another entity. You may not assign or transfer your rights or obligations without our prior written consent.
+
+Relationship
+
+Nothing in these Terms creates a partnership, joint venture, employment or agency relationship between you and Valyu.
+
+Language
+
+These Terms are in English. If we provide a translation, the English version will prevail if there is any conflict.
+
+18. Contact us
+
+If you have any questions about these Terms or the Website Services, you can contact us at:
+
+Valyu.Network Ltd17 Newman Street, London W1T 1PD, United KingdomEmail: contact@valyu.ai
+
+ 
+
+ 
+
+ 
+
+### Privacy Policy
+https://www.valyu.ai//privacy-policy
+
+# Privacy Policy
+
+See how Valyu collects, uses, and protects your data. We explain what information we collect and how we handle it.
+
+VALYU PRIVACY POLICY
+
+Last updated: October 20 2025
+
+Valyu.Network LTD (“Valyu”, “we”, “us”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect personal data when you use our website, APIs, products, and related services (“Services”).
+
+We are the data controller for personal data processed in connection with the Services.
+
+1. Information We Collect
+
+We collect the following categories of data when you use the Services:
+
+1.1. Account Information
+
+When you create an account, we collect:
+
+ Nameemail addressorganisation (optional)password and authentication tokenbilling information (if applicable)
+
+1.2. API Usage & Logs
+
+When you call our APIs, we automatically collect:
+
+request metadata (IP address, timestamp, endpoint called)API key usedquery size / tokens / parameterslatency, error logs, performance metricsdevice and browser information (for dashboard usage)
+
+We do not use query data or logs to train machine learning models.
+
+1.3. Query Content (“Customer Data”)
+
+This includes:
+
+text promptssearch queriesdocuments you uploadinstructions or metadata you send to our API
+
+We process Customer Data only to:
+
+return resultsimprove API performance (e.g., caching, routing)secure our systemsprevent abusecomply with legal or contractual obligations
+
+We do not use Customer Data to train models or build datasets.
+
+We do not share Customer Data with publishers or third parties except as required by law.
+
+1.4. Payments
+
+If you buy credits or subscribe to a plan, your payment details are processed by our payment provider (e.g., Stripe).
+
+We do not store full payment card numbers.
+
+1.5. Communications
+
+If you contact us, we process:
+
+messagessupport requestsfeedbackemail metadata
+
+2. How We Use Your Data
+
+We use personal data for the following purposes:
+
+2.1. To provide and operate the Services
+
+creating accountprocessing API callsreturning Outputsenforcing rate limits and caching rules
+
+2.2. To secure our systems
+
+detecting abuse, misuse, or harmful behaviourpreventing violations of our AUPblocking malicious trafficprotecting Partner-licensed content
+
+2.3. To monitor and improve performance
+
+latency measurementerror debuggingendpoint optimisationAPI routingindexing and search performance
+
+2.4. To communicate with you
+
+account notificationsusage alertproduct updatesbilling communications
+
+2.5. To comply with our legal obligations
+
+Including:
+
+UK GDPRPublisher licensing agreementslaw enforcement requests (rare; disclosed only when legally required)
+
+3. Lawful Bases for Processing (GDPR)
+
+We process personal data under the following lawful bases:
+
+Purpose     .                                            Lawful Basis                      
+
+Providing the Services                              Contract
+
+Securing the platform                               Legitimate Interests (Art. 6(1)(f))
+
+Preventing abuse                                        Legitimate Interests
+
+Analytics and performance                      Legitimate Interests
+
+Account Notifications                                Consent / Legitimate Interests
+
+Marketing (optional).                                Consent (Art. 6(1)(a))
+
+Billing & payments                                     Contract
+
+Legal Compliance                                       Legal Obligation
+
+We balance legitimate interests with user rights in accordance with GDPR.
+
+4. Data Sharing
+
+We do not sell or rent personal data.
+
+We share data only with:
+
+Service providers: cloud hosting, analytics, payments, security (under strict confidentiality).Contracted publishers: never Customer Data—only aggregate usage metrics required under license terms.Regulators or authorities: only if legally required.
+
+We do not expose customer identifiers to publishers.
+
+5. International Transfers
+
+We store and process data in:
+
+United KingdomEuropean UnionUnited States (for certain infrastructure vendors)
+
+Transfers to non-UK/EU countries are protected by:
+
+adequacy decisions, orStandard Contractual Clauses (SCCs)
+
+6. Data Retention
+
+6.1. Customer Data (Query Content)
+
+Stored only as long as necessary to process a requestDeleted automatically within a short operational window (typically 24–72 hours) unless logs are legally required
+
+Restricted publisher content is never stored.
+
+6.2. API Logs
+
+We retain:
+
+security logs: up to 90 daysperformance logs: up to 30 daysbilling logs: up to 7 years (legal obligation)
+
+6.3. Account Information
+
+Retained until your account is deleted.
+
+7. Your Rights (GDPR & UK GDPR)
+
+You have the right to:
+
+access your personal datacorrect inaccurate datadelete your data (subject to legal exceptions)restrict processingobject to processing based on legitimate interestswithdraw consent (where applicable)data portability (for account data)
+
+To exercise rights: contact@valyu.ai
+
+8. Security
+
+We use industry-standard technical and organisational measures, including:
+
+encryption in transitstrict access controlsrigorous key managementaudit logsmonitoring for misusedata minimisationpublisher-specific access controls
+
+No system is 100% secure, but we take appropriate steps to protect your data.
+
+9. Children
+
+We do not knowingly collect data from children under 16.
+
+If we discover such data, we delete it promptly.
+
+10. Third-Party Links
+
+Our website may contain links to external sites.
+
+We are not responsible for their privacy practices.
+
+11. Changes to This Policy
+
+We may update this Privacy Policy.
+
+Material changes will be communicated through the dashboard, email, or website.
+
+12. Cookies and similar technologiesWe use cookies and similar technologies (pixels, tags, local storage) to run the site, understand how it's used, and — with your consent — measure our marketing.
+
+Essential — remembers your cookie choice and keeps the site working. Always on.Analytics — aggregate usage stats. Off until you accept.Marketing — measures ad campaign performance. Off until you accept.
+
+You can accept, reject, or manage your choices via the banner. Change your mind any time via "Your privacy choices" in the footer.Advertising and analytics tags are set once you accept, provided by third-party vendors whose handling is governed by their own privacy policies.13. ContactFor privacy inquiries, you can reach us at:
+
+contact@valyu.ai

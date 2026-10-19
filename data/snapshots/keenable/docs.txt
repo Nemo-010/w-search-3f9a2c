@@ -1,0 +1,23 @@
+Quickstart - Keenable Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Keenable home page Search... ⌘ K GitHub Console Console Search... Navigation Get started Quickstart Documentation Integrations Get started Quickstart Authentication Rate limits Credits Auto top-up Pay per request (x402) Tools MCP CLI API reference API reference POST Search GET Fetch Reference Changelog On this page Prefer raw HTTP? Get started Quickstart Copy page Copy page Install the Keenable CLI, log in, wire the MCP server into your agents, and run your first search. Copy page Copy page Keenable provides web search and content access for AI agents. There are three ways in — for an agent, MCP is the recommended one ; the CLI wires it up and searches from the terminal, and the REST API is there when you want to call the endpoints directly. 
+ MCP Add tools to your agent — the recommended path CLI Search from the terminal, and configure MCP in one command REST API Call the endpoints directly over HTTP 
+ Install the CLI with your preferred method: 
+ Homebrew macOS / Linux PowerShell brew install keenableai/tap/keenable-cli 
+ curl --proto '=https' --tlsv1.2 -LsSf \ 
+ https://github.com/keenableai/keenable-cli/releases/latest/download/keenable-cli-installer.sh \ 
+ | sh 
+ irm https: // github.com / keenableai / keenable - cli / releases / latest / download / keenable - cli - installer.ps1 | iex 
+ Then authenticate — this stores your credentials so every command and every MCP client the CLI configures below picks them up: 
+ keenable login 
+ To give your agents web search, set up MCP. The CLI can configure it for all supported agents in one command: 
+ keenable configure-mcp --all 
+ This sets up Claude Code, Cursor, Windsurf, and other detected clients. See MCP for manual setup. 
+ Once installed, run a search straight from the terminal: 
+ keenable search "AI news" -p 
+ ​ Prefer raw HTTP? 
+ The REST API is a first-class way in — no CLI, no MCP. POST your query with your key in the X-API-Key header: 
+ curl -X POST "https://api.keenable.ai/v1/search" \ 
+ -H "X-API-Key: keen_<your_key>" \ 
+ -H "Content-Type: application/json" \ 
+ -d '{ "query": "typescript best practices" }' 
+ See the API reference for every endpoint, the keyless /public twins, and playgrounds you can call with your own key. For an agent, though, MCP is the smoother path — it hands the tools to the model directly rather than leaving it to compose HTTP calls. 
+ That’s it. See authentication for API keys and rate limits for the request caps that apply. Authentication x Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

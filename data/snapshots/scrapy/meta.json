@@ -1,0 +1,72 @@
+{
+ "slug": "scrapy",
+ "name": "Scrapy (OSS)",
+ "category": "oss",
+ "fetched_at": "2026-10-19T05:54:58+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://docs.scrapy.org/",
+   "status": 200,
+   "final_url": "https://docs.scrapy.org/en/latest/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 29730,
+   "truncated": false,
+   "sha256": "4b6bff6217ae881cfdd9788925e24d3efa0b6c14b005843bd613ea8d72516208",
+   "fetched_at": "2026-10-19T05:54:58+00:00",
+   "text_bytes": 6026
+  },
+  "home": {
+   "url": "https://scrapy.org/",
+   "status": 200,
+   "final_url": "https://www.scrapy.org/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 207065,
+   "truncated": false,
+   "sha256": "6fd2842da4a193aca8fa2cb210303ca0a28d923cbee355be459a85859b77862c",
+   "fetched_at": "2026-10-19T05:54:59+00:00",
+   "text_bytes": 7864
+  },
+  "llms": {
+   "url": "https://docs.scrapy.org/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.scrapy.org/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3111,
+   "truncated": false,
+   "sha256": "9a4c555c2611022b2cf7cb9a4fffd998e35adb27e220f796aeb96bf1cb8d69e0",
+   "fetched_at": "2026-10-19T05:55:00+00:00",
+   "text_bytes": 3107
+  },
+  "llms-full": {
+   "url": "https://docs.scrapy.org/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.scrapy.org/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 776523,
+   "truncated": false,
+   "sha256": "f675ed847ebae814369720b2a984c3628148598e09b3136b1df891f22b5eef00",
+   "fetched_at": "2026-10-19T05:55:00+00:00",
+   "text_bytes": 774163
+  },
+  "llms-err-57adea": {
+   "url": "https://scrapy.org/llms.txt",
+   "status": 404,
+   "final_url": "https://scrapy.org/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 76651,
+   "truncated": false,
+   "sha256": "8531dc9ef92c0e38e0a358dc12c02de9793e007437e99c1ecb549b8133e95a2a",
+   "fetched_at": "2026-10-19T05:55:01+00:00"
+  },
+  "llms-err-9950da": {
+   "url": "https://scrapy.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://scrapy.org/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 76651,
+   "truncated": false,
+   "sha256": "8531dc9ef92c0e38e0a358dc12c02de9793e007437e99c1ecb549b8133e95a2a",
+   "fetched_at": "2026-10-19T05:55:03+00:00"
+  }
+ }
+}

@@ -1,0 +1,4 @@
+# iTunes Search API (itunes) category=misc-api
+home=https://performance-partners.apple.com/search-api pricing=None docs=https://performance-partners.apple.com/search-api llms=None
+sources_ok: docs:https://performance-partners.apple.com/search-api
+--- ranked fact lines ---

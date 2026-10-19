@@ -1,0 +1,39 @@
+{
+ "slug": "agenty",
+ "name": "Agenty",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:20+00:00",
+ "sources": {
+  "home": {
+   "url": "https://www.agenty.com/",
+   "status": 200,
+   "final_url": "https://agenty.com:443/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 229162,
+   "truncated": false,
+   "sha256": "9e95cdb99d21109e0c5f2c1d7d806351d3c17e4e5b9e00f7333ac45113b3834b",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 5460
+  },
+  "llms-err-12adca": {
+   "url": "https://www.agenty.com/llms.txt",
+   "status": 404,
+   "final_url": "https://www.agenty.com/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 64606,
+   "truncated": false,
+   "sha256": "1a9b97b162613b55b30b065e2a94385f3d6c29fa8fdd24f8f3610422aa2a2d02",
+   "fetched_at": "2026-10-19T05:54:21+00:00"
+  },
+  "llms-err-edc127": {
+   "url": "https://www.agenty.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.agenty.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 33670,
+   "truncated": false,
+   "sha256": "8271656aec58fafd70e18d4be20938471a4a6f7855ec0a590a595677e129aa5c",
+   "fetched_at": "2026-10-19T05:54:22+00:00"
+  }
+ }
+}

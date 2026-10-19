@@ -1,0 +1,42 @@
+# Valyu (valyu) category=ai-search
+home=https://valyu.ai/ pricing=https://docs.valyu.ai/pricing docs=https://docs.valyu.ai/ llms=None
+sources_ok: pricing:https://docs.valyu.ai/pricing, docs:https://docs.valyu.ai/, home:https://valyu.ai/, llms:https://docs.valyu.ai/llms.txt, llms-full:https://valyu.ai/llms-full.txt, llms-https://valyu.ai/llms.txt:https://valyu.ai/llms.txt
+--- ranked fact lines ---
+[pricing] Start free. New accounts get $10 in free credits ($20 with a work email), usable across every source so you can try the full catalog first. New organisations also get 50% off their first month for the first 24 hours after signup.
+[pricing] Contents API charges $0.001 per successfully extracted URL, plus $0.001 if you add summarisation or structured extraction. Failed URLs are free.
+[pricing] Optional tools (off by default, enabled via tools ) add per-use surcharges: screenshots $0.05/URL (max 15), code execution $0.10/run, deliverables $0.10 each after the first, charts free. Failed tool calls aren’t charged, and PDF output isn’t a deliverable.
+[pricing] Everything runs on credits . $1 = 1 credit, and a single credit balance is shared across every API - Search, Answer, Contents, and DeepResearch. Higher plans simply give you more credits per dollar and unlock specialised and proprietary data sources.
+[pricing] Pay-as-you-go $10 one-time top-up · 10 credits
+[pricing] ~$1.00 per credit
+[pricing] Web search + open academic. Top up any time ($10 min). Ridiculously Cheap $29 /mo · 36 credits
+[pricing] ~$0.80 per credit
+[pricing] $89 /mo · 130 credits
+[pricing] ~$0.70 per credit
+[pricing] Adds SEC filings, clinical trials, commodities, economic data, and more. Serious Business $449 /mo · 750 credits
+[pricing] ~$0.60 per credit
+[pricing] How credits work: one shared balance powers Search, Answer, Contents, and DeepResearch. Top up any time ($10 minimum). Exceed your monthly credits and overage bills pay-as-you-go at $1.00/credit. No lock-in - upgrade, downgrade, or stay pay-as-you-go anytime.
+[pricing] Answer API bills search data (CPM rates above, capped by data_max_price ) plus $12 per million tokens for AI processing.
+[pricing] Worked examples Contents - 10 URLs, 2 failed: 8 × $0.001 = $0.008 . Answer - basic web query: ~10 results × $1.50/1k ($0.015) + ~2k tokens × $12/1M ($0.024) = ~$0.039 . Answer - academic with structured output: ~8 results × $8/1k ($0.064) + ~3k tokens × $12/1M ($0.036) = ~$0.10 .
+[pricing] Data source type Per 1k retrievals What you get Open databases $0.50 Full-text arXiv, PubMed, clinical trials, and more Web search $1.50 Fresh, full-text web content Financial & market data $8.00 Real-time equities, crypto, market data Proprietary databases $30-50 Licensed journals, books, premium sources
+[pricing] Mode Cost Typical runtime Fast $0.10 ~5 min Standard $0.50 ~10-20 min Heavy $2.50 up to ~90 min Max $15.00 up to ~180 min
+[pricing] Try the API Free Get $10 in free credits ($20 with a work email) Documentation Integrate in under 5 minutes Answer API Guide Build AI-powered applications DeepResearch Guide Comprehensive async research Was this page helpful? Yes No Parallel vs Valyu Powered by Valyu Badge Valyu home page discord x github linkedin Product Platform Data sources Pricing Developers API status OpenAPI spec Cookbook Co
+[llms-full] £100, orthe total fees paid by you in the 6 months before the claim.
+[pricing] Need a source above your plan? You can request access to specific datasets without upgrading your whole plan, and during your free trial every source is available so you can test what you need first.
+[llms-full] 9. Payments & Credits
+[llms-full] we are free to use the Feedback without any obligation to you;we may use it to improve or develop products and services; andyou will not claim any compensation, attribution or rights in relation to our use of the Feedback.
+--- llms/readme head ---
+# Valyu
+> knowledge work.
+One API to search specialist, proprietary and web sources, and run multi-step research with cited, structured outputs — across Finance and Science & R&D.
+## Set up Valyu
+- [Agent onboarding runbook](https://www.valyu.ai/agents.md): Install, authenticate, and verify the Valyu CLI, MCP server, or SDK. Fetch and follow this to set Valyu up end to end.
+- [Setup guides](https://www.valyu.ai/agents): Human-readable version, with deep links for Claude Code, Codex, and Cursor.
+- [Integration reference](https://docs.valyu.ai/AGENTS.md): Endpoint choice, source presets, and how to query well.
+## Documentation
+- [Full Documentation](https://www.valyu.ai/llms-full.txt)
+## Products
+- [Answer & Deep Research APIs for AI Agents](https://www.valyu.ai/product-agents): From instant, cited answers to multi-step investigations that deliver reports, sheets and structured data
+- [API](https://www.valyu.ai/product-apis): Search + content extraction in one platform
+## Company
+- [Sciences coverage](https://www.valyu.ai/coverage)
+- [Academia & Research](https://www.valyu.ai/academia-research)

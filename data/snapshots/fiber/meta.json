@@ -1,0 +1,62 @@
+{
+ "slug": "fiber",
+ "name": "Fiber AI",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "home": {
+   "url": "https://fiber.ai/",
+   "status": 200,
+   "final_url": "https://www.fiber.ai/",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 3564,
+   "truncated": false,
+   "sha256": "0af4122271bc4200f27b3dc5b9e060f3f222f34200b805291a88036187fbec16",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 3562
+  },
+  "llms": {
+   "url": "https://fiber.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://www.fiber.ai/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14889,
+   "truncated": false,
+   "sha256": "57f7c295542d2e53f0c85f8e5c7987984ea7ae9a811a4f7a03c1ffafbfed9067",
+   "fetched_at": "2026-10-19T05:54:01+00:00",
+   "text_bytes": 14861
+  },
+  "llms-err-5851ed": {
+   "url": "https://fiber.ai/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://fiber.ai/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 58590,
+   "truncated": false,
+   "sha256": "e57961995bdb4cea7088a72430cc25298b61fcb6c742842e552b2bc6a7f344fc",
+   "fetched_at": "2026-10-19T05:54:03+00:00"
+  },
+  "llms-https://docs.fiber.ai/llms.txt": {
+   "url": "https://docs.fiber.ai/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.fiber.ai/llms.txt",
+   "content_type": "text/plain;charset=UTF-8",
+   "bytes": 13409,
+   "truncated": false,
+   "sha256": "f9452e52c2c7b4e519a54e4f9b221cc92fb23e678fe95b5696fe25ce21693640",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 13333
+  },
+  "llms-full": {
+   "url": "https://docs.fiber.ai/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.fiber.ai/llms-full.txt",
+   "content_type": "text/plain;charset=UTF-8",
+   "bytes": 795458,
+   "truncated": false,
+   "sha256": "ae1768a4cf478b2e68807cab7ce91461cbc29cd15594d44c44635f9b44328092",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 793931
+  }
+ }
+}

@@ -1,0 +1,118 @@
+Live News API for Global Coverage & Blog Articles | Mediastack 
+ Pricing 
+ Documentation 
+ News Sources 
+ Affiliates 
+ Blog 
+ Status 
+ Log In 
+ Sign Up Free 
+ Global News Data 
+ Free, Simple REST API for 
+ Live News & Blog Articles
+ Scalable JSON API delivering worldwide news, headlines and blog articles in real-time 
+ Supporting 7,500+ News Sources 
+ 100 Free Requests per month 
+ Instant access to live news data from 50+ countries in multiple languages 
+ Get API Key 
+ Global News, Made Easy 
+ Tap into a world of live news data feeds, discover trends & headlines, monitor brands and access breaking news events around the world. 
+ 7,500+ Sources, 50 Countries 
+ Access structured and readable news data from thousands of international news publishers and blogs, updated as often as every single minute. 
+ Scalable JSON REST API 
+ Our REST API is built upon scalable apilayer cloud infrastructure and delivers news results in lightweight and easy-to-use JSON format. 
+ Free Plan Available 
+ Sign up for the Free Plan, grab your API access key, and implement news data into your application. 
+ APILayer The unified suite 
+ One account, one API key, one dashboard, one bill - across a growing library of APIs. 
+ Browse All APIs
+ No credit card needed. 
+ Aviationstack 
+ Mailboxlayer 
+ Positionstack 
+ Ipstack 
+ Marketstack 
+ Scrapestack 
+ Countrylayer 
+ Mediastack 
+ Serpstack 
+ Access 7,500 News Sources Worldwide 
+ Feed the latest and most popular news articles into your application or website, fully automated & updated every minute. 
+ Real-Time News Data 
+ Historical News Data 
+ News Headlines 
+ 7,500+ News Sources 
+ 50+ Countries 
+ 13 Languages 
+ A quick and cost-effective JSON API for your news data requirements 
+ News publishers can be unpredictable, dynamic and difficult to keep track of. Using our easy-to-implement REST API you will be able to retrieve news information of any type, delivered on a silver platter — see for yourself! 
+{
+ "author" : "Dan Peck" ,
+ "title" : "Hurricane Hanna makes landfall around 5 p.m. on Saturday." ,
+ "description" : "Hurricane Hanna battered southern Texas with sustained winds of 75 mph and continued to deliver heavy rain and flash flooding as it moved inland late Saturday." ,
+ "url" : "https://abcnews.go.com/US/hurricane-hanna-makes-landfall-texas/story?id=71985566" ,
+ "source" : "ABC News" ,
+ "image" : "https://s.abcnews.com/images/US/hanna-swimmer-mo_hpMain_20200725-163152_2_4x3t_384.jpg" ,
+ "category" : "general" ,
+ "language" : "en" ,
+ "country" : "us" ,
+ "published_at" : "2020-07-26T01:04:23+00:00" 
+},
+{
+ "author" : "TMZ Staff" ,
+ "title" : "Nicki Minaj's Husband Gets Permission To Be There For Baby's Birth" ,
+ "description" : "Kenneth can be in the room when Nicki gives birth ... a judge just granted his request to tweak his pre-trial release conditions so he can travel with Nicki. With the court's order in place, KP can travel with Nicki periodically on biz…" ,
+ "url" : "https://www.tmz.com/2020/07/30/nicki-minaj-husband-asks-judge-be-there-child-birth/" ,
+ "source" : "TMZ.com" ,
+ "image" : "https://imagez.tmz.com/image/c1/4by3/2020/07/30/c115ad2dc849438a97a0ad3097b416df_md.jpg" ,
+ "category" : "general" ,
+ "language" : "en" ,
+ "country" : "us" ,
+ "published_at" : "2020-08-01T05:34:47+00:00" 
+},
+{
+ "author" : "Michael Rothstein" ,
+ "title" : "New Lions safety Jayron Kearse suspended three games" ,
+ "description" : "Kearse, 26, signed with the Lions in March after four seasons in Minnesota, where he played in 62 games with five starts, making 79 tackles and defending eight passes." ,
+ "url" : "https://www.espn.com/nfl/story/_/id/29572640/new-lions-safety-jayron-kearse-suspended-three-games" ,
+ "source" : "ESPN" ,
+ "image" : "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0111%2Fr651071_1296x729_16%2D9.jpg" ,
+ "category" : "sports" ,
+ "language" : "en" ,
+ "country" : "us" ,
+ "published_at" : "2020-07-31T23:23:14+00:00" 
+}
+ For detailed documentation and integration guides, check out our API Documentation. API Documentation 
+ What are you waiting for? Get an API key to start collecting live news data — it's free
+ Get Free API Key 
+ PRODUCT 
+ Pricing 
+ List Your API 
+ Why choose us? 
+ Marketplace 
+ Affiliates 
+ DOCS & HELP 
+ Documentation 
+ Blog 
+ FAQs 
+ ACCOUNT 
+ Log In 
+ Forgot Password 
+ FREE Signup 
+ GET IN TOUCH 
+ Contact 
+ Get a quote 
+ Imprint / Legal | Privacy | Terms | Cookie Preference | Sitemap 
+ © 2026 Mediastack API, an APILayer product. All rights reserved. 
+ × 
+ Standard Support 
+ Platinum Support 
+ General review of the issue 
+ Access to knowledge base articles 
+ Email support communication 
+ Regular product updates and fixes 
+ Dedicated account team 
+ Priority Email Support with unlimited communication 
+ Priority bug review and updates 
+ Option for quarterly briefing call with Product Management 
+ Feature requests as priority roadmap input into product

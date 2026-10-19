@@ -1,0 +1,28 @@
+# Web Scraper (webscraperio) category=serp-scrape
+home=https://webscraper.io/ pricing=https://webscraper.io/pricing docs=None llms=None
+sources_ok: pricing:https://webscraper.io/pricing, home:https://webscraper.io/, llms:https://webscraper.io/llms.txt
+--- ranked fact lines ---
+[pricing] Start 7-day free trial
+[pricing] From $0.03/1K URLs
+[pricing] "price" : "$39.99" ,
+[pricing] Free 7-day trial
+[pricing] $2.5/GB . This ensures you only pay for the bandwidth you actually use.
+[pricing] Do I need a credit card to start the free trial?
+[pricing] No. You can start your free trial without providing any credit card or payment information. This gives you the opportunity to test Web Scraper Cloud on your own websites and workflows before deciding whether a paid plan is right for you.
+[pricing] Try it free for 7 days
+[pricing] To make the Scale plan cost-effective, only a free US datacenter proxy is included.
+[pricing] A URL credit is used each time Web Scraper Cloud loads a webpage. It doesn't matter whether you extract one record or one thousand records from that page. Loading the page counts as a single URL credit. For example, scraping 100 pages uses 100 URL credits, while extracting hundreds of products from one page still uses just one.
+--- llms/readme head ---
+# Web Scraper
+> Used by over 1 million people worldwide, Web Scraper provides scalable browser-based web scraping infrastructure for automated public web data extraction workflows.
+Web Scraper combines visual scraper creation with cloud execution, scheduling, browser rendering, proxy management, and API automation, helping teams run large-scale scraping workflows without maintaining their own scraping infrastructure.
+## Products
+- [Web Scraper Extension](https://webscraper.io/)
+- [Web Scraper Cloud](https://webscraper.io/)
+- [Web Scraper API](https://webscraper.io/documentation/web-scraper-cloud/api)
+- [Web Scraper Sitemap Marketplace](https://webscraper.io/marketplace)
+## Help
+- [Web Scraper Documentation](https://webscraper.io/documentation)
+- [Web Scraper Video Tutorials](https://webscraper.io/tutorials)
+- [Web Scraper Forum](https://forum.webscraper.io/)
+- [Web Scraper Blog](https://webscraper.io/blog)

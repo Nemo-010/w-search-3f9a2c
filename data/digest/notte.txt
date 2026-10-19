@@ -1,0 +1,25 @@
+# Notte (notte) category=browser
+home=https://www.notte.cc/ pricing=https://www.notte.cc/pricing docs=https://docs.notte.cc/ llms=None
+sources_ok: pricing:https://www.notte.cc/pricing, docs:https://docs.notte.cc/, home:https://www.notte.cc/, llms:https://docs.notte.cc/llms.txt, llms-full:https://www.notte.cc/llms-full.txt, llms-https://www.notte.cc/llms.txt:https://www.notte.cc/llms.txt
+--- ranked fact lines ---
+[home] "price_per_night": "$89",
+[llms] - [Sign up](https://console.notte.cc): Create a free account with starter credits.
+--- llms/readme head ---
+# Notte
+> If you are an AI coding agent, read [SKILL.md](https://notte.cc/skill.md) for executable setup instructions.
+> For the full documentation context, see [llms-full.txt](https://notte.cc/llms-full.txt).
+> Notte is a full-stack browser platform for AI agents. It provides cloud-hosted browser sessions, AI-powered web agents, and serverless browser functions. Everything needed to automate complex, multi-step workflows on the web. Backed by Y Combinator (W25), SOC 2 Type II certified.
+Key features and benefits:
+- End-to-end **AI automation platform** for the browser. Perfect for workflows without an API.
+- Automates **dynamic, stateful web tasks** such as account creation, authenticated dashboards, form submissions, and data collection.
+- Integrates with **large language models (LLMs)** to create intelligent agents that can reason and adapt in real time.
+- Optimized for **resilience**. Achieves >95% success rates even on complex, changing sites.
+- Built for **scale**. Run thousands of concurrent browser sessions in the cloud or on-premises.
+- Works seamlessly with modern, JavaScript-heavy sites and handles CAPTCHAs, authentication flows, and anti-bot protections.
+- Provides **observability tools** including logging, monitoring, and full replay of every agent run.
+- Secure by design with credential vaulting, isolated execution, and compliance-ready deployment.
+- Offers APIs and SDKs for rapid integration into your applications, pipelines, or AI workflows.
+## Features
+- [Browser Sessions](https://docs.notte.cc/concepts/sessions): Cloud-hosted browser instances with anti-detection, residential proxies, and CAPTCHA solving.
+- [Browser Agents](https://docs.notte.cc/concepts/agents): AI-powered agents that autonomously navigate websites using natural language instructions.
+- [Browser Functions](https://docs.notte.cc/concepts/functions): Deploy any browser automation as a serverless API endpoint with cron scheduling.

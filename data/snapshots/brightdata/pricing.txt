@@ -1,0 +1,259 @@
+Top-Tier Proxies & Scraping APIs Pricing 
+ Accessibility Menu 
+ skip to content 
+ en 
+ English 
+ Español 
+ Deutsch 
+ Français 
+ 日本語 
+ Português 
+ 简体中文 
+ 한국어 
+ Start free trial 
+ User Dashboard 
+ Products 
+ Web Access APIs 
+ Unlocker API Say goodbye to blocks and CAPTCHAs 
+ SERP API Get multi-engine search results on-demand 
+ Google 
+ Bing 
+ Duckduckgo 
+ Yandex 
+ Browser API Spin up remote browsers, stealth included 
+ Data Feeds 
+ Scraper APIs Fetch real-time data from 800+ websites 
+ LinkedIn 
+ eComm 
+ Social media 
+ ChatGPT 
+ Scraper Studio Turn any website into a data pipeline 
+ Datasets Pre-collected data from 900+ domains 
+ LinkedIn 
+ eComm 
+ Social media 
+ Real estate 
+ Data Firehose Real-time web data, delivered as it’s collected 
+ Data And Insights 
+ Retail Intelligence Unlock real-time eCommerce insights & AI-powered recommendations 
+ Managed Data Acquisition Tailored enterprise-grade data acquisition 
+ Video Search API NEW Find the scenes your models need 
+ Business Search API BETA Search 700M+ fresh business profiles 
+ Proxy Services 
+ Residential Proxies 50% OFF 400M+ global IPs from real-peer devices 
+ ISP Proxies 1.3M+ blazing fast static residential proxies 
+ Datacenter Proxies 1.3M+ high-speed proxies for data extraction 
+ Data for AI 
+ Multimodal Training 
+ Video and Audio Data Train on more data, with fewer blockers 
+ Video Feeds – ready for VLA Get continuous, targeted web video for training humanoid robot policies 
+ Data Packages Get LLM-ready datasets for every industry 
+ Agentic web execution 
+ Search & Extract Instant knowledge acquisition for AI 
+ Agent Browser Enable agents to perform automated actions 
+ Bright Data MCP Free Fastest way to start 
+ resources 
+ resources 
+ Startup Program New 
+ Integrations 
+ Pricing 
+ Web Access APIs 
+ Unlocker API FREE TIER 
+ Starts from $1/1k req 
+ Crawl API 
+ Starts from $1/1k req 
+ SERP API FREE TIER 
+ Starts from $1/1k req 
+ Browser API 
+ Starts from $5/GB 
+ Data Feeds 
+ Scraper APIs FREE TIER 
+ Starts from $1 $0.75/1k rec 
+ Scraper Studio FREE TIER 
+ Starts from $1/1k req 
+ Datasets 
+ Starts from $250/100K rec 
+ Data Firehose 
+ Starts from $0.2/1k HTML 
+ Data And Insights 
+ Retail Insights 
+ Starts from $2000/mo 
+ Managed Data Acquisition 
+ Starts from $1500/mo 
+ Proxy Infrastructure 
+ Residential 50% OFF 
+ Starts from $5 $2.5/GB 
+ Datacenter 
+ Starts from $0.9/IP 
+ ISP 
+ Starts from $1.3/IP 
+ Resources 
+ Tools 
+ Integrations 
+ Browser Extension 
+ Network Status 
+ Learning Hub 
+ Blog 
+ Case Studies 
+ Webinars 
+ Proxy Locations 
+ Masterclass 
+ Videos 
+ Company 
+ Partner Program 
+ Trust Center 
+ Bright SDK 
+ Bright Initiative 
+ Docs 
+ Log in 
+ User Dashboard 
+ Contact sales 
+ Start free trial 
+ Account 
+ Change password 
+ Sign out 
+ Bright Data's Products Pricing Designed to meet enterprise companies' unique needs and challenges 
+ Proxy Networks Pricing Elevate your business with our top-tier proxy services. 
+ Largest Geographic Coverage 
+ Battle-Tested Stability & Speeds 
+ 400M+ monthly Residential IPs 
+ See Pricing 
+ Web Scraper API Pricing Easily extract web data with our powerful Web Scraper API. 
+ Pre-built scraper APIs 
+ IP rotation & CAPTCHA handling 
+ Scalable infrastructure support 
+ See Pricing 
+ Scraper Studio Pricing Launch AI-powered scrapers for any website in minutes. 
+ Collect data from any website 
+ Only pay for successful requets 
+ Free tier pricing available 
+ See Pricing 
+ Scraping Browser Pricing Access our Scraping Browser, compatible with leading web automation tools. 
+ Built-In Website Unlocking 
+ Save Time & Resources 
+ Puppeteer & Playwright Compatible 
+ See Pricing 
+ SERP API Pricing Access our powerful SERP API to retrieve live data from any search engine. 
+ Data Delivered in JSON or HTML 
+ Save Time & Resources 
+ Search Multiple Search Engines 
+ See Pricing 
+ Web Unlocker Pricing Start accessing websites smoothly by rotating IPs and solving CAPTCHAs. 
+ Handles all Website Unlocking 
+ Solves CAPTCHA 
+ Tackles headers, user agents, & cookies 
+ See Pricing 
+ Datasets Pricing Access the data you need without coding using our ready-to-use datasets. 
+ Subscription option 
+ Dedicated account manager 
+ No coding 
+ See Pricing 
+ Bright Insights Pricing Explore a world of eCommerce insights, elevating your brand to new heights. 
+ Actionable eCommerce insights 
+ Data accuracy 
+ Multiple use cases 
+ See Pricing 
+ Trusted by 50,000+ customers worldwide 
+ Bright Data is used by world's top brands 
+ Elio Narciso Co-founder and CEO at ScaleStack 
+ Jessica Zizzamia Head of Product at Vibeslist 
+ Arjun Chintapalli Co-Founder & CTO of RTRVR 
+ TJ Richardson Co-founder at Fundable 
+ Saroop Bharwani Co-founder at Senso 
+ Constantine Janashvilli Co-founder at Parallax Vision 
+ Bhavani Kalisetty Co-Founder & CTO of RTRVR 
+ Not sure what you need? Contact sales 
+ Products 
+ Unlocker API 
+ SERP API 
+ Browser API 
+ Crawl API 
+ Web Scraper APIs 
+ Scraper Studio 
+ Datasets Marketplace 
+ Web Archive 
+ Bright Insights 
+ Managed Data Acquisition 
+ Deep Lookup 
+ Top Scraper APIs 
+ LinkedIn Scraper 
+ eCommerce Scraper 
+ Social Media Scraper 
+ Proxy Services 
+ Residential Proxies 
+ ISP Proxies 
+ Datacenter Proxies 
+ Rotating Proxies 
+ Proxy Servers 
+ Proxy IP Locations 
+ Proxy Solutions 
+ Top Datasets 
+ LinkedIn Datasets 
+ eCommerce Datasets 
+ Amazon Datasets 
+ Social Media Datasets 
+ Programs 
+ Impact Report 2025 
+ Affiliate Program 
+ Referral Program 
+ Partners 
+ SDK 
+ Security Vulnerabilities 
+ Legal 
+ Patents 
+ Privacy Policy 
+ Modern Slavery Statement 
+ Do Not Sell or Share My Personal Info 
+ Service Agreement 
+ Cookies Settings 
+ Social Responsibility 
+ Learning Center 
+ Web Data Masterclass 
+ ScrapeCon 
+ Common Proxy Questions 
+ FAQ 
+ Webinars 
+ Data for Journalists 
+ Data for AI Report 
+ Company 
+ About 
+ Blog 
+ Support Services 
+ Bright Data for Enterprise 
+ Customer Stories 
+ Trust Center 
+ Careers 
+ Contact 
+ Media Center 
+ Network Status 
+ Bright VPN 
+ Bright Initiative 
+ Start free trial 
+ Follow Us 
+ AI Summary 
+ Contact Us 
+ Bright Data, Inc., The Web Data Loft, 625 2nd St., San Francisco, CA 94107, United States. 
+ Bright Data Ltd., 4 Hamahshev St, Netanya 4250714, Israel (POB 8025). 
+ Bright Data, Inc., 500 7th Ave, 9th Floor Office 9A1234, New York, NY 10018, United States. 
+ IPPN Group Ltd. 
+ Cloud partnerships 
+ AWS 
+ Databricks 
+ Snowflake 
+ Customer excellence partnerships 
+ Capterra 
+ GetApp 
+ Software Advice 
+ Top Data Provider 
+ Partnerships 
+ WIPO Alert 
+ BDV 
+ MRS 
+ Gartner 
+ SOC 
+ ISO certified 
+ GDPR ready 
+ Tag 
+ Accessibility Menu 
+ © Copyright 2026 Bright Data Ltd. |
+ All rights reserved

@@ -1,0 +1,60 @@
+# Currents News API
+
+> Real-time news API with a large historical article index, broad monitored source catalog, and 20+ languages. Developer-friendly JSON with monitored production reliability and a free tier.
+
+## Overview
+
+Currents News API provides structured news data via REST endpoints. New articles are indexed daily from a source directory of 12,000+ source entries assigned to 168 country designations.
+
+## Key endpoints
+
+- [Latest News](https://currentsapi.services/en/docs/latest_news) — breaking news with language/country/category filters
+- [Search](https://currentsapi.services/en/docs/search) — archive keyword search across indexed articles
+- [OpenAPI Specification](https://currentsapi.services/json/swagger.json) — machine-readable API reference including available language/region/category endpoints
+
+## Docs
+
+- [Getting Started](https://currentsapi.services/en/docs/) — authentication, rate limits, endpoint reference
+- [FAQ](https://currentsapi.services/en/faq) — pricing, limits, auth, reliability
+- [Introduction](https://currentsapi.services/en/introduction) — data overview and sample responses
+- [Official Python SDK](https://github.com/currentslab/currentsapi-python) — currentslab/currentsapi-python client library
+- [Facts Page](https://currentsapi.services/en/ai-info) — plain factual statements about Currents API that AI assistants may quote
+
+## Provider alternatives
+
+- [Alternative Hub](https://currentsapi.services/en/alternative) — index of every provider comparison
+- [NewsAPI.org alternative](https://currentsapi.services/en/alternative/newsapi)
+- [GNews alternative](https://currentsapi.services/en/alternative/gnews)
+- [GDELT alternative](https://currentsapi.services/en/alternative/gdelt)
+- [Mediastack alternative](https://currentsapi.services/en/alternative/mediastack)
+- [NewsData.io alternative](https://currentsapi.services/en/alternative/newsdataio)
+- [Bing News Search API alternative](https://currentsapi.services/en/alternative/bing-news-api) — Microsoft retired the Bing Search APIs on August 11, 2025
+- [AYLIEN alternative](https://currentsapi.services/en/alternative/aylien)
+- [Event Registry alternative](https://currentsapi.services/en/alternative/eventregistry)
+
+## Guides and solutions
+
+- [NewsAPI.org Alternatives Compared](https://currentsapi.services/en/blog/newsapi-alternatives) — honest free-tier comparison including new keyless entrants
+- [Bing News Search API Migration Guide](https://currentsapi.services/en/blog/bing-news-search-api-migration-guide) — step-by-step migration to Currents
+- [Python News API Guide](https://currentsapi.services/en/blog/python-news-api-guide) — plain-HTTP Python guide (no SDK required) covering latest news, search, and error handling
+- [Indonesia News API](https://currentsapi.services/en/blog/indonesia-news-api) — Bahasa Indonesia coverage and sources
+- [India News API](https://currentsapi.services/en/blog/india-news-api) — English + Hindi coverage and sources
+- [Financial & Trading News API solution](https://currentsapi.services/en/solutions/trading) — market and finance news workflows
+
+## Pricing
+
+- [Pricing Page](https://currentsapi.services/en/product/price) — full plan comparison
+- Free: 250 requests/day (resets 00:00 UTC), 20 results/request, 30-day lookback, 300-character text preview
+- Builder: $69/mo — 2,500 requests/day enforced daily (75K/mo billing allowance), 50 results/request, 6-month archive
+- Professional: $150/mo — 10,000 requests/day enforced daily (300K/mo billing allowance), 100 results/request, 1-year archive
+- Scale: $300/mo — 20,000 requests/day enforced daily (600K/mo billing allowance), 200 results/request, 1-year archive
+- Daily caps reset at 00:00 UTC; unused daily volume does not roll over; exceeding a cap returns HTTP 429 with Retry-After — no overage billing
+
+## Registration
+
+- [Sign Up](https://currentsapi.services/en/register) — free account, no credit card
+
+## Support
+
+- Email: support@currentsapi.services
+- [GitHub](https://github.com/Currents-API-services)

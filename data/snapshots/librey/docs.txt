@@ -1,0 +1,68 @@
+GitHub - Ahwxorg/LibreY: Framework and JS free privacy respecting meta search engine · GitHub 
+ Skip to content 
+ Navigation Menu Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Copilot app Direct agents from issue to merge MCP Registry Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes Code Quality Enforce quality at merge APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners View all resources Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community GitHub Stars Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search / Sign in Sign up Appearance settings 
+ You signed in with another tab or window. Reload to refresh your session. 
+ You signed out in another tab or window. Reload to refresh your session. 
+ You switched accounts on another tab or window. Reload to refresh your session. 
+ Dismiss alert 
+ {{ message }} 
+ Ahwxorg LibreY Repository navigation Code Issues 22  ( 22 ) Pull requests 3  ( 3 ) Discussions Actions Projects Security and quality 2  ( 2 ) Insights More items 
+ LibreY Public forked from hnhx / librex Sponsor Notifications You must be signed in to change notification settings Fork 32  ( 32 ) Star 322  ( 322 ) You must be signed in to star a repository About Framework and JS free privacy respecting meta search engine Resources Readme License Security policy Security policy Activity Stars 322 stars Watchers 6 watching Forks 32 forks Report repository main Branches Tags Go to file Code Open more actions menu     Latest commit   History 992 Commits 992 Commits Folders and files Name Name Last commit message Last commit date .github .github     docker docker     docs docs     engines engines     locale locale     misc misc     static static     .dockerignore .dockerignore     .gitignore .gitignore     Dockerfile Dockerfile     LICENSE LICENSE     README.md README.md     SECURITY.md SECURITY.md     api.php api.php     auto_updater.sh auto_updater.sh     config.php.example config.php.example     docker-compose.yml docker-compose.yml     donate.php donate.php     favicon.ico favicon.ico     image_proxy.php image_proxy.php     index.php index.php     instances.json instances.json     instances.php instances.php     opensearch.xml.example opensearch.xml.example     search.php search.php     settings.php settings.php     View all files Repository files navigation README License Security More items LibreY 
+ LibreY is a fork of LibreX, a framework-less and javascript-free privacy respecting meta search engine, made by hnhx . LibreY changed some features like automatic redirection (now instance fallback), added scrapers for more search engines and various other changes visible in the commit log . The original code is written by hnhx and contributors 
+ Matrix 
+ If there's an important announcement, we do have a Matrix chatroom which you can join over at #librey:ahwx.org . 
+ Instances 
+ You can find a list of instances on any LibreY instance by accessing /instances.php. 
+Alternatively look at instances.json where the list is generated from. 
+While the official instances may be more updated and have better uptime, please consider using another person's instances as these are heavily overloaded. 
+Support the community. ❤️ 
+ @codedipper 's instance: 
+ search.revvy.de 
+ Tor 
+ I2P 
+ @davidovski 's instance: 
+ search.davidovski.xyz 
+ How to host LibreY 
+ This section has been moved to clear up some README space. 
+ About LibreY 
+ LibreY gives you text results from Google, DuckDuckGo, Brave Search, Ecosia, Yandex Search and Mojeek. LibreY provides images from Qwant, and torrents from i.e. Ahmia and popular torrent sites. LibreY does this without spying on you.
+ LibreY doesn't save any type of data about the user, there are no logs (except NGINX logs if the host sets them). 
+ LibreY compared to other metasearch engines 
+ Name 
+ Works without JS 
+ Privacy frontend redirect 
+ Torrent results 
+ API 
+ No 3rd party libs used 
+ LibreY 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ ✅ 
+ SearXNG 
+ ❓ Not user friendly 
+ ❓ Only host can set it 
+ ✅ 
+ ✅ 
+ ❌ 
+ Whoogle 
+ ✅ 
+ ❓ Only host can set it 
+ ❌ 
+ ❌ 
+ ❌ 
+ About Framework and JS free privacy respecting meta search engine Resources Readme License Security policy Security policy Activity Stars 322 stars Watchers 6 watching Forks 32 forks Report repository Releases Sponsor this project Packages Used by Contributors Languages 
+ Footer 
+ © 2026 GitHub, Inc.
+ Footer navigation 
+ Terms 
+ Privacy 
+ Security 
+ Status 
+ Community 
+ Docs 
+ Contact 
+ Manage cookies
+ Do not share my personal information
+ You can’t perform that action at this time.

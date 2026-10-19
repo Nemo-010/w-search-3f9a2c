@@ -1,0 +1,4 @@
+# Brave Search API (brave) category=ai-search
+home=https://brave.com/search/api/ pricing=https://brave.com/search/api/#pricing docs=https://api.search.brave.com/app/documentation llms=None
+sources_ok: 
+--- ranked fact lines ---

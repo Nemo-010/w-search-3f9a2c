@@ -1,0 +1,30 @@
+IP-API.com - Geolocation API Documentation Sign up Contact IP Geolocation API Fast, accurate, reliable Free for non-commercial use, no API key required Easy to integrate, available in JSON, XML, CSV, Newline, PHP Serving more than 1 billion requests per day, trusted by thousands of businesses API Documentation API Demo Search any IP address/domain Search {
+ "query": query ,
+ "status": status ,
+ "continent": continent ,
+ "continentCode": continentCode ,
+ "country": country ,
+ "countryCode": countryCode ,
+ "region": region ,
+ "regionName": regionName ,
+ "city": city ,
+ "district": district ,
+ "zip": zip ,
+ "lat": lat ,
+ "lon": lon ,
+ "timezone": timezone ,
+ "offset": offset ,
+ "currency": currency ,
+ "isp": isp ,
+ "org": org ,
+ "as": as ,
+ "asname": asname ,
+ "mobile": mobile ,
+ "proxy": proxy ,
+ "hosting": hosting 
+} {
+ "dns": {
+ "geo": geo ,
+ "ip": ip 
+ }
+} Frequently Asked Questions How often do you update your database? We update our database as soon as we have new information about an IP block. For each API request, you will always have the most accurate location data, without having to worry about updating a local database. Are you still going to be here next year? Can I use your API in production? IP-API has been running since 2012 and we are now providing one of the most popular and reliable IP Geolocation API. Do I need an API key for the free endpoint? We will never require an API key or registration and the API schema will not change. How many requests can I do? Our endpoints are limited to 45 HTTP requests per minute from an IP address. If you go over this limit your requests will be throttled ( HTTP 429 ) until your rate limit window is reset. If you need unlimited queries, please see our pro service . What is the average response time of the API? With dedicated servers in US, EU and APAC, a network based on Anycast technology, and highly optimized software we achieve real response times of under 50 milliseconds in most parts of the world. Can I use your API on my commercial website? We do not allow commercial use of the free endpoint. Please see our pro service for SSL access, unlimited queries, usage statistics and commercial support. Go pro Get unlimited queries, SSL and commercial use Sign up Contact Response Formats JSON XML CSV Newline PHP API Batch API DNS API Data Correction © 2026 ip-api.com. All rights reserved. Terms and Policies Service status

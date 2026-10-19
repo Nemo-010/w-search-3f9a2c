@@ -1,0 +1,26 @@
+# Kernel (kernel) category=browser
+home=https://www.onkernel.com/ pricing=https://www.onkernel.com/pricing docs=https://docs.onkernel.com/ llms=None
+sources_ok: pricing:https://www.onkernel.com/pricing, docs:https://docs.onkernel.com/, home:https://www.onkernel.com/, llms:https://docs.onkernel.com/llms.txt, llms-full:https://www.onkernel.com/docs/llms-full.txt, llms-https://www.onkernel.com/llms.txt:https://www.onkernel.com/llms.txt, llms-https://www.onkernel.com/docs/llms.txt:https://www.onkernel.com/docs/llms.txt
+--- ranked fact lines ---
+[pricing] Pricing | Kernel platform customers pricing resources book demo sign in / up pricing pricing precios 価格 价格 self-service enterprise pricing precios 価格 价格 self-service enterprise free $0/mo. plus usage costs* get free $5 / month free credits 5 concurrent browsers live view stealth mode (captcha solver & proxy) managed auth (3 connections) session replays (1 day) file uploads & downloads vaults & pay
+[llms] - [Create or retrieve a vault by immutable name](https://kernel.sh/docs/api-reference/vaults/create-or-retrieve-a-vault-by-immutable-name.md): Free organizations can store up to 3 non-deleted vaults across all projects. Paid plans and active trials have no vault cap. Retrieving an existing vault by name succeeds even at the limit.
+[llms] - [Resolve a config](https://kernel.sh/docs/api-reference/config-registry/resolve-a-config.md): Explicitly starts or retries a project-scoped background analysis while preserving current global knowledge when available. Use `/config-registry/lookup` for side-effect-free reads.
+--- llms/readme head ---
+# Kernel
+- [wrangle the wild web](https://kernel.sh/docs/index.md)
+- [See All Features](https://kernel.sh/docs/overview/features.md): Cloud browsers, and everything your agents need to stay unblocked, log in, pay, and scale on real websites
+- [How KERNEL Fits Between Your Agent and the Internet](https://kernel.sh/docs/overview/concepts.md): The agent framework decides what to do; KERNEL provides the browser infrastructure that carries it out on real websites
+- [Why KERNEL?](https://kernel.sh/docs/overview/why-kernel.md): Fast, secure browser infrastructure for agents, paired with the agent framework you already use
+- [Quickstart](https://kernel.sh/docs/start/quickstart.md): Hand setup to your coding agent, or create your first cloud browser yourself
+- [Agent Skills](https://kernel.sh/docs/skills/overview.md): Kernel skills that teach your coding agent how to use cloud browsers
+- [Integrations](https://kernel.sh/docs/integrations/overview.md): Run Kernel browsers from the agent frameworks, models, and platforms you already use
+- [cookbooks](https://kernel.sh/docs/cookbooks.md): end-to-end recipes to teach agents to use the internet
+- [Configure](https://kernel.sh/docs/introduction/configure.md): Create a browser, pick its shape, and choose what it carries onto a site
+- [Stealth](https://kernel.sh/docs/browsers/bot-detection/overview.md): Help your browser agents access websites with anti-detection defaults, stealth mode, proxies, and opt-in Web Bot Auth (WBA).
+- [Stealth Mode](https://kernel.sh/docs/browsers/bot-detection/stealth.md)
+- [Web Bot Auth (WBA)](https://kernel.sh/docs/browsers/bot-detection/web-bot-auth.md): Use Web Bot Auth (WBA) to give your agents a verifiable identity. Request KERNEL’s opt-in WBA token on Startup and Enterprise plans.
+- [Proxies](https://kernel.sh/docs/proxies/overview.md)
+- [Residential Proxies](https://kernel.sh/docs/proxies/residential.md)
+- [ISP Proxies](https://kernel.sh/docs/proxies/isp.md)
+- [Mobile Proxies](https://kernel.sh/docs/proxies/mobile.md)
+- [Custom Proxies](https://kernel.sh/docs/proxies/custom.md)

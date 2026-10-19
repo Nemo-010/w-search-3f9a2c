@@ -1,0 +1,507 @@
+# Spider API, full reference
+
+> Base URL: https://api.spider.cloud
+> Auth: `Authorization: Bearer YOUR_API_KEY` (https://spider.cloud/api-keys)
+> Compact index: https://spider.cloud/llms.txt
+> Agent setup skill: https://spider.cloud/agent-skill/SKILL.md
+> MCP server: https://mcp.spider.cloud/mcp (setup: https://spider.cloud/mcp/connect)
+> OpenAPI: https://spider.cloud/openapi.yaml
+
+Spider turns websites into clean markdown, text, or structured JSON. The
+engine is Rust, escalates to a headless Browser only when a page needs it, and
+rotates proxies to get through bot walls.
+
+Every route below is POST with a JSON body, except `GET /data/credits`. A GET
+or PUT to a POST route returns `400`. Each POST path also accepts a `/v1/`
+prefix (`/v1/crawl` is `/crawl`). Responses are
+JSON by default; set a `content-type` request header of `application/xml`,
+`text/csv`, or `application/jsonl` to change the encoding.
+
+---
+
+## Keyless tier
+
+`POST /scrape` works with no `Authorization` header and no account.
+
+```bash
+curl -X POST https://api.spider.cloud/scrape \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://example.com", "return_format": "markdown"}'
+```
+
+It is rate limited and covers `/scrape` only. Every other route returns `402`
+with `{"error": "...", "code": "free_tier_route_blocked", "upgrade_url": "..."}`.
+On a `429`, honor `Retry-After`.
+
+Treat it as a way to make a first call and confirm connectivity. Anything
+sustained needs a key. Keyless requests are never billed.
+
+---
+
+## Route map
+
+| Route | Notes |
+|---|---|
+| `POST /scrape` | One page. Works keyless. |
+| `POST /crawl` | Many pages from one origin. |
+| `POST /links` | URLs only, no page content. |
+| `POST /search` | Web search, optionally fetch each result. |
+| `POST /screenshot` | Page image, base64 or binary. |
+| `POST /transform` | HTML you already hold. Does not fetch anything. |
+| `POST /fetch/{domain}/{path}` | One page, addressed by path, with the stored config for that domain applied. |
+| `GET /data/credits` | Remaining credit balance. |
+| `POST /ai/{scrape,crawl,search,links,browser}` | Prompt-driven. AI plan required. |
+| `POST /unlimited/{scrape,crawl,links}` | Flat rate by seats. Unlimited plan required. |
+
+There is no `GET /credits`; the balance route is `GET /data/credits`. With a
+valid key an unknown path returns `404`. Keyless, an unknown path returns the
+same `402` upgrade body as a blocked route, so a typo'd path looks like a
+billing error.
+
+### AI routes
+
+Prompt-based extraction exists **only** here. Pass a `prompt` (and optionally
+`extraction_schema`) plus the normal parameters of the base route. Requires an
+active AI plan: https://spider.cloud/ai/pricing. Without one, `402` with
+`{"error":"AI Studio subscription required","code":"ai_subscription_required"}`.
+
+### Unlimited routes
+
+Flat monthly rate billed by purchased concurrency seats, the number of
+requests allowed in flight at once, instead of per-request credits. Parameters
+match the base routes.
+
+- No queueing. With all seats busy: `429`, body
+  `{"error":"concurrency_limit_reached","seats":N,"active":n}`, plus a
+  `Retry-After` header. Retry with backoff.
+- Every response carries `X-Concurrency-Limit` and `X-Concurrency-Active`.
+- Without an active plan: `403` with `{"error":"unlimited_plan_required"}` or
+  `{"error":"unlimited_plan_inactive"}`.
+- AI parameters (`prompt`, `extraction_schema`, model or vision params) are
+  rejected with `400`. Bill AI work through `/ai/*` instead.
+
+Unlimited complements pay-as-you-go rather than replacing it. One key runs
+both: `/unlimited/*` for steady bulk volume, credits for search,
+screenshots, and bursts.
+Docs: https://spider.cloud/docs/api/unlimited
+
+---
+
+## POST /crawl
+
+Crawl a site and return content per page. `/scrape` is the same call without
+`limit`, `depth`, or `delay`. Most parameters below apply to every content
+route.
+
+```json
+{ "url": "https://example.com", "limit": 10, "return_format": "markdown" }
+```
+
+### Target and traversal
+
+| Parameter | Type | Description |
+|---|---|---|
+| `url` | string | Required. Comma-split for several URLs. |
+| `limit` | integer | Max pages per site. Default: unset, which is auto-capped to your remaining credit balance. |
+| `depth` | integer | Max crawl depth. Default `25`. `0` for no limit. |
+| `budget` | object | Per-path page budget, e.g. `{"*": 100}`. |
+| `blacklist` | array | Paths to skip. Regex supported. |
+| `whitelist` | array | Paths to allow. Regex supported. |
+| `external_domains` | array | Treat these as the same site. `*` for all. |
+| `subdomains` | boolean | Follow subdomains. Default `false`. |
+| `tld` | boolean | Follow other TLDs of the same name. Default `false`. |
+| `sitemap` | boolean | Seed from sitemaps. |
+| `sitemaps` | array | Explicit sitemap URLs. |
+| `respect_robots` | boolean | Default `true`. |
+| `redirect_policy` | string | `Loose` (default), `Strict`, `None`. |
+| `delay` | integer | Milliseconds between requests, max 60000. Disables concurrency. |
+| `concurrency_limit` | integer | Cap parallel requests for fragile sites. |
+
+### Fetch mode
+
+| Parameter | Type | Description |
+|---|---|---|
+| `request` | string | `http`, `browser`, or `smart`. Default `smart`. |
+| `smart_mode` | boolean | Standalone boolean, separate from the `request` string. Setting `request` is the clearer way to do this. |
+| `wait_for` | object | Browser readiness. See below. |
+| `automation` | object | Browser actions: Click, Fill, Wait, Scroll, and more. |
+| `viewport` | object | `width`, `height`, `device_scale_factor`, `emulating_mobile`, `is_landscape`, `has_touch`. |
+| `locale` | string | e.g. `en-US`. |
+| `timezone` | string | Browser timezone. |
+| `fingerprint` | boolean | Advanced browser fingerprinting. Default `true`. |
+| `service_worker_enabled` | boolean | Default `true`. |
+| `disable_intercept` | boolean | Disable request interception. Default `false`. |
+| `block_ads` / `block_analytics` / `block_stylesheets` | boolean | All default `true`. |
+| `full_resources` | boolean | Download assets too. |
+
+`request` values: `"http"` is fastest and runs no JavaScript. `"browser"` is
+a headless Browser. `"smart"` (the default) tries HTTP and escalates only when
+the page needs it. `"chrome"` and `"headless"` are accepted legacy aliases for
+`"browser"`; `"smart_mode"` and `"smartmode"` are accepted legacy aliases for
+`"smart"`. Matching is a fixed spelling list, not case-insensitive:
+`"smart"`, `"Smart"` and `"SMART"` are accepted, other casings are not.
+**An unrecognized value silently
+falls back to `"http"`** rather than erroring, which looks like a page that
+failed to render.
+
+`wait_for` sub-keys, browser and smart only: `selector`
+(`{selector, timeout}`), `idle_network` (`{timeout}`), `idle_network0`,
+`almost_idle_network0`, `dom` (`{selector, timeout}`), `delay` (`{timeout}`),
+`page_navigations` (boolean). Every `timeout` is `{"secs": n, "nanos": n}`.
+
+### Output
+
+| Parameter | Type | Description |
+|---|---|---|
+| `return_format` | string or array | `raw` (default), `markdown`, `commonmark`, `text`, `html2text`, `xml`, `bytes`, `screenshot`, `empty`. Array returns several. |
+| `readability` | boolean | Strip boilerplate before converting. Default `false`. |
+| `metadata` | boolean | Add title, description, keywords, og:image. Default `false`. |
+| `return_page_links` | boolean | Add each page's links. Default `false`. |
+| `return_json_data` | boolean | Add JSON found in SSR script tags. Default `false`. |
+| `return_headers` / `return_cookies` | boolean | Add response headers or cookies. Default `false`. |
+| `return_embeddings` | boolean | Add vector embeddings. |
+| `css_extraction_map` | object | Selector-based field extraction. See below. |
+| `root_selector` | string | Limit extraction to a subtree, e.g. `#container`. |
+| `exclude_selector` | string | Drop matching content. |
+| `filter_output_main_only` | boolean | Drop nav, aside, footer from output. |
+| `filter_output_images` / `filter_output_svg` | boolean | Drop images or SVG from output. |
+| `filter_main_only` / `filter_images` / `filter_svg` | boolean | Same, applied to the markup instead. |
+| `clean_html` | boolean | Strip unwanted attributes. |
+| `chunking_alg` | object | Segment content: `bysentence`, `bylines`, `bycharacterlength`, `bywords`. |
+
+`return_format` defaults to `raw`, not markdown. Pass `"markdown"` explicitly
+when the output is going into an LLM. There is no `"html"` value; `raw` is the
+unmodified HTML and `html2text` is the plain-text conversion. Like `request`,
+an unrecognized value silently falls back to the default (`raw`) instead of
+erroring.
+
+### Network and identity
+
+| Parameter | Type | Description |
+|---|---|---|
+| `proxy` | string | Every request goes through a proxy. This picks the pool: `residential` (x1.2), `mobile` (x2), `isp` or `datacenter` (x1.2). |
+| `remote_proxy` | string | Your own proxy, `http://user:pass@host:port`. Saves 50% on data transfer. |
+| `country_code` | string | ISO code for proxy egress, e.g. `gb`. |
+| `user_agent` | string | Default is a rotating real agent. |
+| `cookies` | string | Cookie header for authenticated pages. |
+| `session` | boolean | Persist headers and cookies across the crawl. Default `true`. |
+| `preserve_host` | boolean | Keep the original HOST header. Default `false`. |
+| `request_timeout` / `timeout` | integer | Per-request and overall, milliseconds. |
+| `request_max_retries` | integer | Retries per request. |
+| `request_redirect_limit` | integer | Max redirects followed. |
+| `cache` | boolean or object | HTTP caching. Default `true`, with a 2-day freshness window; send `false` to always fetch fresh. Object takes `maxAge`, `allowStale`, `skipBrowser`, `period`, camelCase only, and rejects unknown keys with a `400`. |
+
+### Delivery
+
+| Parameter | Type | Description |
+|---|---|---|
+| `webhooks` | object | Event delivery: `on_find`, `on_credits_depleted`, and more. |
+| `run_in_background` | boolean | Return immediately. Requires webhooks. |
+| `event_tracker` | object | Record requests, responses, and automation steps. |
+
+### css_extraction_map
+
+Keyed by URL-path pattern, `"/"` matching everything. Each value is a list of
+named selector groups; extra selectors act as fallbacks. Results arrive under
+`css_extracted`.
+
+```json
+{
+  "url": "https://store.example.com/product/123",
+  "request": "browser",
+  "wait_for": {
+    "selector": { "selector": "h1.product-title", "timeout": { "secs": 10, "nanos": 0 } },
+    "idle_network": { "timeout": { "secs": 5, "nanos": 0 } }
+  },
+  "css_extraction_map": {
+    "/": [
+      { "name": "title",  "selectors": ["h1.product-title"] },
+      { "name": "price",  "selectors": [".price-value"] },
+      { "name": "images", "selectors": ["img.hero-image", "img.gallery"] }
+    ]
+  }
+}
+```
+
+---
+
+## POST /scrape
+
+One page, no traversal. Same parameters as `/crawl` minus `limit`, `depth`,
+and `delay`. Accepts the screenshot parameters below as well. Works keyless.
+
+## POST /links
+
+Same parameters as `/crawl`. Returns URLs instead of content.
+
+```json
+[{
+  "url": "https://example.com",
+  "status": 200,
+  "error": null,
+  "links": ["https://example.com/about", "https://example.com/pricing"],
+  "costs": { "file_cost": 0.0001, "bytes_transferred_cost": 0.0000001,
+             "compute_cost": 0.00001, "total_cost": 0.00011 }
+}]
+```
+
+## POST /search
+
+The body is flat: search fields sit alongside the normal crawl parameters.
+The query field is named `search`, not `query`.
+
+```json
+{ "search": "rust web crawler", "search_limit": 5, "fetch_page_content": true }
+```
+
+| Parameter | Type | Description |
+|---|---|---|
+| `search` | string | Required. The query. |
+| `num` | integer | Max results to return. |
+| `search_limit` | integer | Max results to actually fetch or crawl. `0` for all. Shorthand alternative to `num`. |
+| `fetch_page_content` | boolean | Fetch each result's content. Default `false`. |
+| `page` | integer | Result page number. |
+| `country` | string | Two-letter code, e.g. `us`. |
+| `language` | string | Two-letter code, e.g. `en`. |
+| `location` | string | Origin for the search, e.g. `United Kingdom`. |
+| `latitude` / `longitude` | number | Exact-coordinate localization, Google engine only. Must be paired. Takes precedence over `location`. |
+| `radius` | integer | Bias radius in meters for coordinates. Default `-1`, unset. |
+| `tbs` | string | Time range: `qdr:h`, `qdr:d`, `qdr:w`, `qdr:m`, `qdr:y`. |
+| `quick_search` | boolean | Favor speed over result count. Default `true`. Set `false` for fuller result sets. |
+| `auto_pagination` | boolean | Paginate to reach the requested count. Costs more. |
+
+## POST /screenshot
+
+Same parameters as `/crawl` minus `request`, `return_format`, `readability`.
+
+| Parameter | Type | Description |
+|---|---|---|
+| `screenshot` | boolean | Enable capture. |
+| `full_page` | boolean | Whole page rather than viewport. Default `true`. |
+| `binary` | boolean | Raw image instead of base64. |
+| `block_images` | boolean | Default `false`. |
+| `omit_background` | boolean | Transparent background. Default `false`. |
+| `cdp_params` | object | Chrome DevTools settings: `clip`, `format`, `quality`, `fromSurface`, `captureBeyondViewport`. |
+
+## POST /transform
+
+Converts HTML you already have. Fetches nothing, so it needs no proxy or
+browser. Up to 10 MB per request. From 0.1 credits for HTML, up to 10 credits
+per page for PDF.
+
+```json
+{
+  "return_format": "markdown",
+  "data": [{ "html": "<html>...</html>", "url": "https://example.com" }]
+}
+```
+
+| Parameter | Type | Description |
+|---|---|---|
+| `data` | array | Required. Objects of `html` (required) and `url` (optional, used by readability). |
+| `return_format` | string or array | Same values as elsewhere. |
+| `readability` | boolean | Boilerplate removal. |
+| `clean_full` | boolean | Strip unwanted attributes. Default `false`. |
+| `clean` | boolean | Strip footers and navigation for AI use. Default `false`. |
+
+`/transform` is the one route that returns a single object rather than an
+array, and it reports no cost in the response.
+
+## POST /fetch/{domain}/{path}
+
+Reads one page, with one difference from `/scrape`: the target is the path
+rather than a `url` field, and the settings you saved for that domain are
+applied before the fetch.
+
+    POST /fetch/news.ycombinator.com/newest
+
+reads `https://news.ycombinator.com/newest`. `/v1/fetch/...` behaves the same.
+The domain is the first segment and everything after it is the path, so
+`POST /fetch/example.com/` reads the site root.
+
+The body is optional, which no other content route allows. Send one and its
+fields override the stored settings for that domain, taking the same parameters
+as `/scrape`. Send nothing, or send something too large to read, and the stored
+settings apply on their own.
+
+```bash
+curl -X POST https://api.spider.cloud/fetch/example.com/ \
+  -H "Authorization: Bearer $SPIDER_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"return_format":"markdown"}'
+```
+
+Three things that surprise callers:
+
+- `url` in the body is dropped. So are `custom_prompt`, `extraction_prompt`,
+  `extraction_schema`, `vision_model` and `openrouter_fallback_model`. The
+  target comes from the path, and those fields are refused rather than merged,
+  so sending them is bytes you pay for and do not use.
+- `limit` above 1 turns the call into a crawl, capped at 100 pages, with depth
+  raised to at least 1. Set it only if that is what you want.
+- The first call for a path with no stored config runs discovery, which takes
+  30 to 120 seconds and can return `503 config_discovery_failed`, which is
+  retryable. Later calls on that path are the fast case, around 5 seconds.
+
+Because a stored config usually asks for named fields, the answer normally
+arrives in `css_extracted` rather than as page text.
+
+Reach for `/scrape` when you are passing a page in once, and `/fetch` when the
+site is one you have already configured and do not want to describe again on
+every call.
+
+Only POST is accepted here. A GET returns `400`, not `404`, because the path
+matched a route that refused the method.
+
+## GET /data/credits
+
+```bash
+curl https://api.spider.cloud/data/credits \
+  -H "Authorization: Bearer $SPIDER_API_KEY"
+```
+
+---
+
+## Response shape
+
+Every content route except `/transform` returns a JSON **array**, one
+object per page, including
+`/scrape` for its single page.
+
+```json
+[{
+  "url": "https://example.com",
+  "content": "# Example Domain\n\n...",
+  "status": 200,
+  "error": null,
+  "duration_elasped_ms": 122,
+  "costs": {
+    "total_cost": 0.00004,
+    "ai_cost": 0,
+    "compute_cost": 0.00001,
+    "file_cost": 0.00002,
+    "bytes_transferred_cost": 0.00002,
+    "transform_cost": 0
+  }
+}]
+```
+
+Present only when requested: `metadata`, `css_extracted`, `links`, `headers`,
+`cookies`, `json_data`. Every cost key is accompanied by a `_formatted`
+string twin carrying full precision, and the values are USD. When nothing
+was billed, `costs` is `null` rather than an object of zeros, so guard
+before reading `costs.total_cost`. Note that `duration_elasped_ms` is
+misspelled in the API itself; that spelling is the wire key.
+
+`status` is the *page's* HTTP status, independent of the API call's own
+status. A `200` API response routinely contains pages with `"status": 404`,
+so check both. Read `error` per object rather than assuming success.
+
+---
+
+## Errors
+
+| Code | Meaning |
+|---|---|
+| 200 | Success. |
+| 204 | No content. |
+| 400 | Bad parameters or malformed JSON. On `/unlimited/*`, AI params were sent. |
+| 401 | Missing, invalid, or expired key. |
+| 402 | Out of credits, or a keyless request to any route other than `/scrape`, including unknown paths. Also `/ai/*` without an active AI plan (`ai_subscription_required`). |
+| 403 | `/unlimited/*` without an active Unlimited plan (`unlimited_plan_required` / `unlimited_plan_inactive`), or a funded key refused for any other reason. |
+| 413 | Payload too large. |
+| 429 | Rate limited. On `/unlimited/*`, all concurrency seats are busy. |
+| 500 | Server error. |
+| 503 | Temporarily unavailable. |
+
+Attempts are billed for what they actually consumed in bytes and compute,
+error statuses included. Do not assume a failed page is free.
+
+## Rate limits
+
+Headers on every response: `RateLimit-Limit`, `RateLimit-Remaining`,
+`RateLimit-Reset` (seconds until the window resets). `Retry-After` appears on
+429 and is the value to honor.
+
+- Keyless: rate limited. See the keyless tier section above.
+- Pay as you go: 10,000 requests per minute per account, counted in a fixed
+  one-minute window.
+- Enterprise: 50,000 requests per minute, higher on request.
+- Unlimited: limited by concurrency, not by requests per minute. Your
+  concurrency count is how many requests can be in flight at once on
+  `/unlimited/*`. When all of them are busy the API returns `429` at once, without
+  queueing, and reports usage via `X-Concurrency-Limit` and `X-Concurrency-Active`.
+  The same 10,000 requests per minute cap as every plan sits underneath and is
+  rarely reached, so size the plan by concurrency.
+- AI Studio (`/ai/*`): a per-second cap set by the tier. Starter 1, Lite 5,
+  Standard 10, Scale 25 requests per second, Enterprise custom beyond 25. Past
+  the cap the API returns `429` with `Retry-After` rounded up to the next second.
+
+Pricing is $1 per 10,000 credits. `/unlimited/*` meters no credits.
+Details: https://spider.cloud/docs/core/rate-limits
+
+---
+
+## Code
+
+```bash
+curl -X POST https://api.spider.cloud/crawl \
+  -H "Authorization: Bearer $SPIDER_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"url":"https://example.com","limit":10,"return_format":"markdown"}'
+```
+
+```python
+import os, requests
+
+r = requests.post(
+    "https://api.spider.cloud/crawl",
+    headers={"Authorization": f"Bearer {os.environ['SPIDER_API_KEY']}"},
+    json={"url": "https://example.com", "limit": 10, "return_format": "markdown"},
+)
+r.raise_for_status()
+for page in r.json():
+    if page["error"] or page["status"] >= 400:
+        continue
+    print(page["url"], len(page["content"]))
+```
+
+```javascript
+const r = await fetch("https://api.spider.cloud/crawl", {
+  method: "POST",
+  headers: {
+    Authorization: `Bearer ${process.env.SPIDER_API_KEY}`,
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ url: "https://example.com", limit: 10, return_format: "markdown" }),
+});
+const pages = await r.json();
+const ok = pages.filter((p) => !p.error && p.status < 400);
+```
+
+SDKs for Python, JavaScript, Rust, and Go: https://spider.cloud/docs/libraries
+
+---
+
+## Links
+
+- Agent setup skill: https://spider.cloud/agent-skill/SKILL.md
+- Compact index: https://spider.cloud/llms.txt
+- Docs: https://spider.cloud/docs
+- API reference: https://spider.cloud/docs/api
+- OpenAPI: https://spider.cloud/openapi.yaml
+- MCP setup: https://spider.cloud/mcp/connect
+- Integrations overview: https://spider.cloud/docs/integrations/overview
+  (LangChain, LlamaIndex, CrewAI, Agno, FlowiseAI, Zapier, and x402 each live
+  at https://spider.cloud/docs/integrations/{name})
+- Concepts: https://spider.cloud/docs/concepts
+- Quickstart: https://spider.cloud/docs/quickstart
+- Use cases: https://spider.cloud/use-cases/ (rag, ai-agents, coding-agents,
+  ai-platforms, ai-training, price-monitoring, seo-tracking,
+  content-aggregation, lead-generation, market-research,
+  compliance-monitoring, website-archiving)
+- AI pricing: https://spider.cloud/ai/pricing
+- Unlimited pricing: https://spider.cloud/pricing?plan=unlimited
+- Research and benchmarks: https://spider.cloud/research/
+- Support: support@spider.cloud
+- Discord: https://discord.spider.cloud

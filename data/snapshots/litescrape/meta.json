@@ -1,0 +1,50 @@
+{
+ "slug": "litescrape",
+ "name": "Litescrape",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:06+00:00",
+ "sources": {
+  "home": {
+   "url": "https://litescrape.com/",
+   "status": 200,
+   "final_url": "https://litescrape.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 133882,
+   "truncated": false,
+   "sha256": "e6a7b2afe0d016d628357270307f300e26ca23716aee608ddec5f63b9b46157e",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 30639
+  },
+  "llms": {
+   "url": "https://litescrape.com/llms.txt",
+   "status": 200,
+   "final_url": "https://litescrape.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 65904,
+   "truncated": false,
+   "sha256": "58dc981ec40705eeef5503fed00b9ec3705476029e0331016180acae4057514c",
+   "fetched_at": "2026-10-19T05:54:07+00:00",
+   "text_bytes": 65902
+  },
+  "llms-err-ca099f": {
+   "url": "https://litescrape.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://litescrape.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 30038,
+   "truncated": false,
+   "sha256": "840ae2d710774ff864956bd963f2b0eade159dfe97d36ae7e265abf42102aaef",
+   "fetched_at": "2026-10-19T05:54:08+00:00"
+  },
+  "llms-err-020f83": {
+   "url": "https://docs.litescrape.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.litescrape.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:08+00:00"
+  }
+ }
+}

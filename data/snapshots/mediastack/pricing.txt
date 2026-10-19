@@ -1,0 +1,153 @@
+Plans for News APIs | Mediastack Prices 
+ Pricing 
+ Documentation 
+ News Sources 
+ Affiliates 
+ Blog 
+ Status 
+ Log In 
+ Sign Up Free 
+ News API Data Subscriptions 
+ Monthly Billing 
+ Yearly Billing 
+ Free 
+ Free forever. 
+ $0 
+ per month 
+ $0 
+ per month 
+ Get Free API Key 
+ 100 Calls / mo 
+ All News Sources 
+ Delayed News Data 
+ All 13 Languages 
+ No Support 
+ Non-Commercial Use 
+ HTTPS Encryption 
+ Standard 
+ Advanced news data coverage and real-time data, up to 10,000 API calls per month. 
+ $24.99 
+ per month 
+ or $22.99 if billed yearly 
+ $22.99 
+ per month 
+ billed yearly 
+ Sign Up 
+ 10,000 Calls / mo 
+ + 0.009996 each 
+ All News Sources 
+ Live News Data 
+ All 13 Languages 
+ Commercial Use 
+ HTTPS Encryption 
+ Historical Data 
+ Standard Support 
+ Professional 
+ Enjoy the full set of features, supporting up to 50,000 news requests per month. 
+ $99.99 
+ per month 
+ or $87.99 if billed yearly 
+ $87.99 
+ per month 
+ billed yearly 
+ Sign Up 
+ 50,000 Calls / mo 
+ + 0.0079992 each 
+ All News Sources 
+ Live News Data 
+ All 13 Languages 
+ Commercial Use 
+ HTTPS Encryption 
+ Historical Data 
+ Standard Support 
+ Business 
+ For advanced needs, supporting up to 250,000 news requests per month. 
+ $249.99 
+ per month 
+ or $212.99 if billed yearly 
+ $212.99 
+ per month 
+ billed yearly 
+ Sign Up 
+ 250,000 Calls / mo 
+ + 0.00399984 each 
+ All News Sources 
+ Live News Data 
+ All 13 Languages 
+ Commercial Use 
+ HTTPS Encryption 
+ Historical Data 
+ Standard Support 
+ Enterprise 
+ Need more? Reach out for a custom plan. 
+ Custom Pricing 
+ Tailored to your needs 
+ Request Quote 
+ Volume Calls / mo 
+ All News Sources 
+ Live News Data 
+ All 13 Languages 
+ HTTPS Encryption 
+ Commercial Use 
+ Historical Data 
+ Custom Solutions 
+ 7,500+ 
+ News Sources 
+ 50+ 
+ Countries 
+ 13 
+ Languages 
+ 2,000+ 
+ Happy Customers 
+ Thousands 
+ of Daily Articles 
+ Frequently Asked Questions 
+ Stock Data & API 
+ Where is mediastack's news data coming from? 
+ Every minute, the mediastack API interface is automatically collecting news articles from 7,500+ global news sources and blogs worldwide, parsing it and converting it into a standardized programmatic format for the purpose of ease of use. In order to ensure the highest possible level of accuracy and data consistency, each of the sources used is monitored closely and around the clock for technical or content anomalies. Additional news sources are added continously as they become available. Do you have a suggestion? Feel free to get in touch with our team . 
+ How scalable is this service? 
+ This API service is hosted on the apilayer cloud, a rock-solid, scalable and highly available technical infrastructure capable of dealing with millions of API requests per minute. No matter which volume you are looking to process, our system has got you covered. 
+ What is the API's uptime? 
+ The mediastack API is built on top of a highly available cloud infrastructure, leading to an uptime of nearly 100%. For more information, feel free to take a quick look at our dedicated API status page, available at: status.mediastack.com . 
+ Plans, Pricing & Payment 
+ Which subscription plan is the right one for me? 
+ Your subscription plan requirements primarily depend on the monthly volume of API requests you would like to process through the mediastack API. If you are able to stay below 100 monthly API requests, you are fine staying on the Free Plan. If you require more advanced features, such as real-time news data and historical articles, the Basic or Professional Plan will be the way to go. In case you need a higher volume than what is offered on the website, you can always reach out to get a quote . 
+ Which payment methods are supported? 
+ Payments can be made using any major credit card, including Visa, MasterCard, American Express, Diner's Club, Discover, as well as using your PayPal account. For large contracts with annual billing, payment via bank transfer is offered as well. 
+ Can I also pay yearly? 
+ Yes. If you choose annual billing, the total price of your subscription plan will be up to 15% lower than the total amount you would pay with a monthly payment frequency. 
+ How do I cancel/downgrade? 
+ You can initiate a cancellation or downgrade by selecting a new plan and providing at least one reason for your decision. The customer service team will cancel or downgrade your plan. Downgrades are not effective immediately; your premium subscription will remain active until the end of the current billing period. 
+ How do I change between monthly and yearly billing? 
+ To change your subscription from monthly to yearly billing, submit a request on the Contact Us page on the website following these steps: Step 1: Sign in to your account Step 2: Go to Contact Us page Step 3: Fill out the form and choose the “Sales” category for this request. Step 4: In the text box, include your specific request for example “Change from Monthly to Yearly subscription.” 
+ PRODUCT 
+ Pricing 
+ List Your API 
+ Why choose us? 
+ Marketplace 
+ Affiliates 
+ DOCS & HELP 
+ Documentation 
+ Blog 
+ FAQs 
+ ACCOUNT 
+ Log In 
+ Forgot Password 
+ FREE Signup 
+ GET IN TOUCH 
+ Contact 
+ Get a quote 
+ Imprint / Legal | Privacy | Terms | Cookie Preference | Sitemap 
+ © 2026 Mediastack API, an APILayer product. All rights reserved. 
+ × 
+ Standard Support 
+ Platinum Support 
+ General review of the issue 
+ Access to knowledge base articles 
+ Email support communication 
+ Regular product updates and fixes 
+ Dedicated account team 
+ Priority Email Support with unlimited communication 
+ Priority bug review and updates 
+ Option for quarterly briefing call with Product Management 
+ Feature requests as priority roadmap input into product

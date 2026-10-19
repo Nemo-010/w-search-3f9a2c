@@ -1,0 +1,26 @@
+# Nodemaven (nodemaven) category=serp-scrape
+home=https://nodemaven.com/ pricing=None docs=None llms=None
+sources_ok: home:https://nodemaven.com/, llms:https://nodemaven.com/llms.txt, llms-https://docs.nodemaven.com/llms.txt:https://docs.nodemaven.com/llms.txt
+--- ranked fact lines ---
+[llms] - [Do you offer a free trial?](https://docs.nodemaven.com/en/articles/9582651-do-you-offer-a-free-trial.md): We offer a paid trial: 750 MB for $3.50, covering Residential and Mobile.
+[home] Try our premium proxies for $3.50 and get 750MB of bandwidth
+[home] Try now about Try our premium proxies for $3.50 and get 750MB of bandwidth
+--- llms/readme head ---
+# NodeMaven Help Center
+> A selection of Help resources from the NodeMaven Team
+## English
+### Get Started with NodeMaven
+- [Create an Account](https://docs.nodemaven.com/en/articles/9596394-create-an-account.md): Sign up, verify your email, choose a plan, and generate your first proxy.
+- [How to add more traffic to your account](https://docs.nodemaven.com/en/articles/9596734-how-to-add-more-traffic-to-your-account.md): Top up your current plan mid-cycle. Note that a top-up will not unfreeze frozen traffic.
+- [How to upgrade your subscription](https://docs.nodemaven.com/en/articles/9596774-how-to-upgrade-your-subscription.md): Upgrading moves you to a larger plan. Your remaining traffic transfers and your per-GB rate drops.
+- [How to unfreeze your traffic](https://docs.nodemaven.com/en/articles/9596806-how-to-unfreeze-your-traffic.md): Traffic freezes when your subscription ends. Only reactivating or starting a subscription releases it.
+- [How to cancel your subscription](https://docs.nodemaven.com/en/articles/9596822-how-to-cancel-your-subscription.md): Cancelling stops the next payment. Remaining traffic freezes and returns when you subscribe again.
+- [MyBrocard](https://docs.nodemaven.com/en/articles/9652281-mybrocard.md)
+- [Proxy usage statistics](https://docs.nodemaven.com/en/articles/9652267-proxy-usage-statistics.md): Your Dashboard shows traffic used, requests made and top domains. How to read them together to find where your traffic went.
+- [Change password](https://docs.nodemaven.com/en/articles/9652292-change-password.md)
+- [The Sub-user feature](https://docs.nodemaven.com/en/articles/10225129-the-sub-user-feature.md): Create multiple proxy credentials under one main account
+- [Changing the proxy password](https://docs.nodemaven.com/en/articles/10245794-changing-the-proxy-password.md)
+- [How do monthly subscriptions work?](https://docs.nodemaven.com/en/articles/10263215-how-do-monthly-subscriptions-work.md): A monthly subscription gives you set traffic each month, and unused traffic carries over when you renew.
+- [How does Pay-as-you-go work?](https://docs.nodemaven.com/en/articles/10290028-how-does-pay-as-you-go-work.md): Pay-as-you-go is a one-off purchase with no expiry. Traffic from a cancelled subscription does not transfer to it.
+- [How to apply a coupon?](https://docs.nodemaven.com/en/articles/10316413-how-to-apply-a-coupon.md)
+- [Nodemaven referral program](https://docs.nodemaven.com/en/articles/10328111-nodemaven-referral-program.md)

@@ -1,0 +1,13 @@
+# Open-Meteo (open-meteo) category=misc-api
+home=https://open-meteo.com/ pricing=https://open-meteo.com/en/pricing docs=https://open-meteo.com/en/docs llms=None
+sources_ok: pricing:https://open-meteo.com/en/pricing, docs:https://open-meteo.com/en/docs, home:https://open-meteo.com/
+--- ranked fact lines ---
+[home] workloads or air-gapped environments. All data served by the API is licenced under CC BY 4.0 — free to use and redistribute, including for commercial purposes, with attribution. Free API No API key, no sign-up, no credit card. Non-commercial use up to 10,000 daily API calls is
+[pricing] are not enforced. What sets apart the free API from the customer API? The free API is for non-commercial use, rate-limited to 10,000 calls/day, and carries no
+[pricing] to the free API. Using the Standard API Plan can I use historical, climate and ensemble data? Historical, climate, ensemble, and satellite radiation APIs require the Professional API Plan or higher. Upgrade via the customer portal . How is one API call defined? Typically, one API call corresponds to one HTTP API request. However, if you select 200
+[home] Open-Meteo Home Features Pricing API Docs Animations Toggle theme Free Weather API Free weather forecast and historical weather API — 30+ models, historical weather from 1940, no API key required. Features Try the API here Free weather API — forecasts to archives, no sign-up 30+ weather models from ECMWF, NOAA, DWD, Météo-France, JMA, KMA, KNMI, DMI,
+[home] hourly model output elsewhere. Multiple Historical Data Layers Four complementary historical datasets — each suited to a different use case: ERA5 reanalysis — 1940 to present, 0.1–0.25°, gap-free global grid. For climate baselines and long-range
+[home] free. Attribution is required under the CC BY 4.0 data licence. For commercial use or higher call volumes, subscription plans are available with rate-limit increases and priority support. Simple JSON API All APIs use plain HTTP GET requests with query parameters and return JSON. No SDK or
+[pricing] free tier — only the domain and key parameter differ. Use the free tier for evaluation and prototyping. For custom volume requirements or
+[pricing] call Variables 14 days Time length Models Locations Is it necessary to provide attribution to Open-Meteo? Open-Meteo relies on open data that is licenced under Attribution 4.0 International (CC BY 4.0) . This licence mandates giving appropriate credit and indicating any modifications made
+[home] 🌤️ Free Open-Source Weather API | Open-Meteo.com

@@ -1,0 +1,96 @@
+{
+ "slug": "gnews",
+ "name": "GNews",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:39+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://gnews.io/#pricing",
+   "status": 200,
+   "final_url": "https://gnews.io/#pricing",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 225281,
+   "truncated": false,
+   "sha256": "f3e678ec5e993c0d09c1657f6f2ab72e1e81a1d4fbbf267642f67dd83ee16623",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 23417
+  },
+  "docs": {
+   "url": "https://gnews.io/docs/v4",
+   "status": 200,
+   "final_url": "https://docs.gnews.io/",
+   "content_type": "text/html",
+   "bytes": 22885,
+   "truncated": false,
+   "sha256": "e6bf6ce03ba1df42e4de3467d17bf8b959a6eee1bd8d1eae1aad1a21385aaea6",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 3277
+  },
+  "home": {
+   "url": "https://gnews.io/",
+   "status": 200,
+   "final_url": "https://gnews.io/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 225281,
+   "truncated": false,
+   "sha256": "1889a856e54537393e8237b80de8a5c6bb45bf8e4ab79b0c70e6418fb782c30f",
+   "fetched_at": "2026-10-19T05:54:40+00:00",
+   "text_bytes": 23417
+  },
+  "llms": {
+   "url": "https://gnews.io/docs/v4/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.gnews.io/",
+   "content_type": "text/html",
+   "bytes": 22885,
+   "truncated": false,
+   "sha256": "e6bf6ce03ba1df42e4de3467d17bf8b959a6eee1bd8d1eae1aad1a21385aaea6",
+   "fetched_at": "2026-10-19T05:54:40+00:00",
+   "text_bytes": 3277
+  },
+  "llms-full": {
+   "url": "https://gnews.io/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.gnews.io/",
+   "content_type": "text/html",
+   "bytes": 22885,
+   "truncated": false,
+   "sha256": "e6bf6ce03ba1df42e4de3467d17bf8b959a6eee1bd8d1eae1aad1a21385aaea6",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 3277
+  },
+  "llms-https://gnews.io/llms.txt": {
+   "url": "https://gnews.io/llms.txt",
+   "status": 200,
+   "final_url": "https://gnews.io/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 3657,
+   "truncated": false,
+   "sha256": "4eec7a2c7358ac8ef62c72ae6e8e60b0186de41dec7a6633e80ff844d973b914",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 3629
+  },
+  "llms-https://gnews.io/docs/llms.txt": {
+   "url": "https://gnews.io/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.gnews.io/",
+   "content_type": "text/html",
+   "bytes": 22885,
+   "truncated": false,
+   "sha256": "e6bf6ce03ba1df42e4de3467d17bf8b959a6eee1bd8d1eae1aad1a21385aaea6",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 3277
+  },
+  "llms-https://docs.gnews.io/llms.txt": {
+   "url": "https://docs.gnews.io/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.gnews.io/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 2382,
+   "truncated": false,
+   "sha256": "9cef2b3485e8204236ccbd8d985d82616f31bc4df5048fc5d99408a1c9b045b2",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 2382
+  }
+ }
+}

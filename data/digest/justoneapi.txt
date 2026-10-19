@@ -1,0 +1,23 @@
+# Just One API (justoneapi) category=ai-search
+home=https://justoneapi.com/ pricing=None docs=None llms=None
+sources_ok: home:https://justoneapi.com/, llms:https://justoneapi.com/llms.txt, llms-https://docs.justoneapi.com/llms.txt:https://docs.justoneapi.com/llms.txt
+--- ranked fact lines ---
+[llms] - Authentication declarations in the current specification: Required token in form-encoded request body (14 endpoints); Required token in query parameter (289 endpoints).
+--- llms/readme head ---
+# Just One API Docs
+Official documentation for Just One API - All-in-one API Integration Platform.
+Professional, stable, and efficient all-in-one data integration service, covering high-quality API interfaces in multiple fields.
+## Core Information
+- Website: https://docs.justoneapi.com/
+- Main Languages: English (en), Simplified Chinese (zh)
+- OpenAPI Release ID: `020eb8317b33ea29`
+- Authentication: Follow each endpoint's OpenAPI declaration. Keep required `token` values in the declared parameter or request-body location; for standard OpenAPI security requirements, use one complete declared alternative and all schemes within that alternative.
+- Authentication declarations in the current specification: Required token in form-encoded request body (14 endpoints); Required token in query parameter (289 endpoints).
+- API Servers (OpenAPI declaration order):
+- Default: `https://api.justoneapi.com` — Global production API (default)
+## API Categories & Endpoints
+### Social Media / 社交媒体
+Cross-platform social media discovery, monitoring, and trend research across supported content platforms. / 跨平台社交媒体发现、监控和趋势研究，覆盖所支持的内容平台。
+- [Cross-Platform Search (V1) / 跨平台搜索 (V1)](https://docs.justoneapi.com/en/api/social-media/cross-platform-search-v1): Searches recent content across news, Weibo, WeChat, Zhihu, Douyin, Xiaohongshu, Bilibili, and Kuaishou with source and time filters. Use it to monitor a topic across multiple platforms. / 搜索新闻、微博、微信、知乎、抖音、小红书、哔哩哔哩和快手上的最新内容，可按来源和时间过滤。用于跨平台监控话题。
+### Taobao and Tmall / 淘宝和天猫
+Taobao and Tmall marketplace product, review, search, and shop catalog data for commerce intelligence workflows. / 淘宝和天猫市场商品、评价、搜索和店铺目录数据，用于商业智能工作流程。

@@ -1,0 +1,6 @@
+# Bluesky AT Protocol (bluesky) category=misc-api
+home=https://docs.bsky.app/ pricing=None docs=https://docs.bsky.app/docs/api/app-bsky-feed-search-posts llms=None
+sources_ok: docs:https://docs.bsky.app/docs/api/app-bsky-feed-search-posts, home:https://docs.bsky.app/, llms:https://docs.bsky.app/docs/api/app-bsky-feed-search-posts/llms.txt, llms-full:https://docs.bsky.app/docs/api/app-bsky-feed-search-posts/llms-full.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+Bluesky HTTP API Reference

@@ -1,0 +1,23 @@
+# Europe PMC (europepmc) category=academic
+home=https://europepmc.org/RestfulWebService pricing=None docs=https://europepmc.org/RestfulWebService llms=None
+sources_ok: docs:https://europepmc.org/RestfulWebService, llms:https://europepmc.org/RestfulWebService/llms.txt, llms-full:https://europepmc.org/RestfulWebService/docs/llms-full.txt, llms-https://europepmc.org/RestfulWebService/docs/llms.txt:https://europepmc.org/RestfulWebService/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+Europe PMC Europe PMC
+RESTful Web Service - Developers - Europe PMC
+1
+Sign in | Create an account
+https://orcid.org
+https://plus.europepmc.org
+Europe PMC
+Menu
+About
+About Europe PMC
+Preprints in Europe PMC
+Governance & funding
+Mission & roadmap
+Outreach
+Tools
+Tools overview
+Article status monitor
+ORCID article claiming

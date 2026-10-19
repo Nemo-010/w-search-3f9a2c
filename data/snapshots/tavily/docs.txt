@@ -1,0 +1,173 @@
+Index - Tavily Docs Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all available pages before exploring further. Skip to main content Tavily Docs home page Search... ⌘ K Ask Assistant ⌘ I Support Get an API key Get an API key Search... Navigation Home Agents Introduction API & SDKs Ecosystem Examples Changelog Help API Playground Community Blog Welcome 
+ For AI agents: Use llms.txt for a full index of all documentation. Build with Tavily Your journey to state-of-the-art web search starts right here. Onboard your agent Let your coding agent install and configure Tavily for you. Read and execute tavily.com/agent-setup/SKILL.md 
+ Open in Claude Code Codex Cursor View SKILL.md Install the SDK Add the Tavily client to your project. Python pip install tavily-python 
+ JavaScript npm i @tavily/core 
+ Try it now Make your first request to any Tavily endpoint. Search the web Extract webpages Crawl webpages Map webpages Create Research Task Python JavaScript cURL from tavily import TavilyClient 
+ tavily_client = TavilyClient( api_key = "tvly-YOUR_API_KEY" ) 
+ response = tavily_client.search( "Who is Leo Messi?" ) 
+ print (response) 
+ const { tavily } = require ( "@tavily/core" ); 
+ const tvly = tavily ({ apiKey: "tvly-YOUR_API_KEY" }); 
+ const response = await tvly . search ( "Who is Leo Messi?" ); 
+ console . log ( response ); 
+ curl --request POST \ 
+ --url https://api.tavily.com/search \ 
+ --header 'Authorization: Bearer <token>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data ' 
+ { 
+ "query": "who is Leo Messi?", 
+ "auto_parameters": false, 
+ "topic": "general", 
+ "search_depth": "basic", 
+ "chunks_per_source": 3, 
+ "max_results": 1, 
+ "time_range": null, 
+ "start_date": "2025-02-09", 
+ "end_date": "2025-12-29", 
+ "include_answer": false, 
+ "include_raw_content": false, 
+ "include_images": false, 
+ "include_image_descriptions": false, 
+ "include_favicon": false, 
+ "include_domains": [], 
+ "exclude_domains": [], 
+ "country": null, 
+ "include_usage": false 
+ } 
+ ' 
+ Learn more about the Search API → Python JavaScript cURL from tavily import TavilyClient 
+ tavily_client = TavilyClient( api_key = "tvly-YOUR_API_KEY" ) 
+ response = tavily_client.extract( "https://en.wikipedia.org/wiki/Artificial_intelligence" ) 
+ print (response) 
+ const { tavily } = require ( "@tavily/core" ); 
+ const tvly = tavily ({ apiKey: "tvly-YOUR_API_KEY" }); 
+ const response = await tvly . extract ( "https://en.wikipedia.org/wiki/Artificial_intelligence" ); 
+ console . log ( response ); 
+ curl --request POST \ 
+ --url https://api.tavily.com/extract \ 
+ --header 'Authorization: Bearer <token>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data ' 
+ { 
+ "urls": "https://en.wikipedia.org/wiki/Artificial_intelligence", 
+ "query": "<string>", 
+ "chunks_per_source": 3, 
+ "extract_depth": "basic", 
+ "include_images": false, 
+ "include_favicon": false, 
+ "format": "markdown", 
+ "timeout": "None", 
+ "include_usage": false 
+ } 
+ ' 
+ Learn more about the Extract API → Python JavaScript cURL from tavily import TavilyClient 
+ tavily_client = TavilyClient( api_key = "tvly-YOUR_API_KEY" ) 
+ response = tavily_client.crawl( "https://docs.tavily.com" , instructions = "Find all pages on the Python SDK" ) 
+ print (response) 
+ const { tavily } = require ( "@tavily/core" ); 
+ const tvly = tavily ({ apiKey: "tvly-YOUR_API_KEY" }); 
+ const response = await tvly . crawl ( "https://docs.tavily.com" , { instructions: "Find all pages on the Python SDK" }); 
+ console . log ( response ); 
+ curl --request POST \ 
+ --url https://api.tavily.com/crawl \ 
+ --header 'Authorization: Bearer <token>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data ' 
+ { 
+ "url": "docs.tavily.com", 
+ "instructions": "Find all pages about the Python SDK", 
+ "chunks_per_source": 3, 
+ "max_depth": 1, 
+ "max_breadth": 20, 
+ "limit": 50, 
+ "select_paths": null, 
+ "select_domains": null, 
+ "exclude_paths": null, 
+ "exclude_domains": null, 
+ "allow_external": true, 
+ "include_images": false, 
+ "extract_depth": "basic", 
+ "format": "markdown", 
+ "include_favicon": false, 
+ "timeout": 150, 
+ "include_usage": false 
+ } 
+ ' 
+ Learn more about the Crawl API → Python JavaScript cURL from tavily import TavilyClient 
+ tavily_client = TavilyClient( api_key = "tvly-YOUR_API_KEY" ) 
+ response = tavily_client.map( "https://docs.tavily.com" ) 
+ print (response) 
+ const { tavily } = require ( "@tavily/core" ); 
+ const tvly = tavily ({ apiKey: "tvly-YOUR_API_KEY" }); 
+ const response = await tvly . map ( "https://docs.tavily.com" ); 
+ console . log ( response ); 
+ curl --request POST \ 
+ --url https://api.tavily.com/map \ 
+ --header 'Authorization: Bearer <token>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data ' 
+ { 
+ "url": "docs.tavily.com", 
+ "instructions": "Find all pages about the Python SDK", 
+ "max_depth": 1, 
+ "max_breadth": 20, 
+ "limit": 50, 
+ "select_paths": null, 
+ "select_domains": null, 
+ "exclude_paths": null, 
+ "exclude_domains": null, 
+ "allow_external": true, 
+ "timeout": 150, 
+ "include_usage": false 
+ } 
+ ' 
+ Learn more about the Map API → Python JavaScript cURL from tavily import TavilyClient 
+ tavily_client = TavilyClient( api_key = "tvly-YOUR_API_KEY" ) 
+ response = tavily_client.research( "What are the latest developments in AI?" ) 
+ print (response) 
+ const { tavily } = require ( "@tavily/core" ); 
+ const tvly = tavily ({ apiKey: "tvly-YOUR_API_KEY" }); 
+ const response = await tvly . research ( "What are the latest developments in AI?" ); 
+ console . log ( response ); 
+ curl --request POST \ 
+ --url https://api.tavily.com/research \ 
+ --header 'Authorization: Bearer <token>' \ 
+ --header 'Content-Type: application/json' \ 
+ --data ' 
+ { 
+ "input": "What are the latest developments in AI?", 
+ "model": "auto", 
+ "stream": false, 
+ "output_schema": { 
+ "properties": { 
+ "company": { 
+ "type": "string", 
+ "description": "The name of the company" 
+ }, 
+ "key_metrics": { 
+ "type": "array", 
+ "description": "List of key performance metrics", 
+ "items": { 
+ "type": "string" 
+ } 
+ }, 
+ "financial_details": { 
+ "type": "object", 
+ "description": "Detailed financial breakdown", 
+ "properties": { 
+ "operating_income": { 
+ "type": "number", 
+ "description": "Operating income for the period" 
+ } 
+ } 
+ } 
+ }, 
+ "required": [ 
+ "company" 
+ ] 
+ }, 
+ "citation_format": "numbered" 
+ } 
+ ' 
+ Learn more about the Research API → Developer Resources Credits, limits, and a place to test your queries. API Credits Overview Learn how Tavily API credits work. Rate Limits Understand Tavily’s rate limits and policies. Playground Try Tavily’s APIs interactively. Question? Contact Us Integration issues? Join Community Using LLMs? Read LLMs.txt Building agents? Read the Agents guide Something not right? Check Status © Tavily Privacy Policy · Website Terms of Use · Platform Terms of Use · Cookie Notice · Cookies Settings · Accessibility Menu Assistant Responses are generated using AI and may contain mistakes.

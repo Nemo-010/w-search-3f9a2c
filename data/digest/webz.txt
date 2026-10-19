@@ -1,0 +1,30 @@
+# Webz.io (webz) category=news
+home=https://webz.io/ pricing=https://webz.io/pricing docs=https://docs.webz.io/ llms=None
+sources_ok: pricing:https://webz.io/pricing, docs:https://docs.webz.io/, home:https://webz.io/, llms:https://docs.webz.io/llms.txt
+--- ranked fact lines ---
+[pricing] Includes $5 in free credits every month
+[pricing] $5 free monthly usage credits
+[llms] - [Pricing & Credits](https://docs.webz.io/docs/webz/archive-pricing-credits) — [Markdown](https://docs.webz.io/markdown/webz/archive-pricing-credits): Archive runs on prepaid credits - one credit per post, with a free sample.
+[pricing] Start free, pay only for what you use, and move to custom high-volume pricing as your needs grow.
+[pricing] Start For free
+[pricing] START FOR FREE
+[home] Create your free account
+--- llms/readme head ---
+# Webz.io Documentation
+> Official product documentation, guides, API references, and tutorials for Webz.io products.
+## Documentation
+- [Webz.io](https://docs.webz.io/docs/webz): Documentation for Webz.io
+- [Start Here](https://docs.webz.io/docs/webz/start-here) — [Markdown](https://docs.webz.io/markdown/webz/start-here)
+- [Get Started](https://docs.webz.io/docs/webz/archive-get-started) — [Markdown](https://docs.webz.io/markdown/webz/archive-get-started)
+- [News, Blogs, Forums & Reviews APIs](https://docs.webz.io/docs/webz/news-blogs-forums) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums)
+- [News API](https://docs.webz.io/docs/webz/news) — [Markdown](https://docs.webz.io/markdown/webz/news)
+- [Build a Dataset](https://docs.webz.io/docs/webz/archive-build) — [Markdown](https://docs.webz.io/markdown/webz/archive-build)
+- [News Search API](https://docs.webz.io/docs/webz/news-search) — [Markdown](https://docs.webz.io/markdown/webz/news-search)
+- [API Reference](https://docs.webz.io/docs/webz/archive-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/archive-api-reference)
+- [Blogs API](https://docs.webz.io/docs/webz/blogs) — [Markdown](https://docs.webz.io/markdown/webz/blogs)
+- [Forums API](https://docs.webz.io/docs/webz/forums) — [Markdown](https://docs.webz.io/markdown/webz/forums)
+- [Firehose](https://docs.webz.io/docs/webz/firehose) — [Markdown](https://docs.webz.io/markdown/webz/firehose)
+- [API Reference](https://docs.webz.io/docs/webz/cyber-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/cyber-api-reference)
+- [API Reference](https://docs.webz.io/docs/webz/news-blogs-forums-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/news-blogs-forums-api-reference)
+- [API Reference](https://docs.webz.io/docs/webz/reviews-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/reviews-api-reference)
+- [API Reference](https://docs.webz.io/docs/webz/news-search-api-reference) — [Markdown](https://docs.webz.io/markdown/webz/news-search-api-reference)

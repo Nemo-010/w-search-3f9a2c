@@ -1,0 +1,30 @@
+# Linkup (linkup) category=ai-search
+home=https://www.linkup.so/ pricing=https://www.linkup.so/pricing docs=https://docs.linkup.so/ llms=None
+sources_ok: pricing:https://www.linkup.so/pricing, docs:https://docs.linkup.so/, home:https://www.linkup.so/, llms:https://docs.linkup.so/llms.txt, llms-full:https://docs.linkup.so/llms-full.txt, llms-https://www.linkup.so/llms.txt:https://www.linkup.so/llms.txt
+--- ranked fact lines ---
+[llms] - [OpenAI deep research API vs Gemini vs Linkup: 2026 guide](https://www.linkup.so/blog/best-deep-research-api-in-2026-openai-gemini-and-linkup-compared): OpenAI and Gemini deep research APIs price by token with no public benchmark. Linkup /research: $0.25–$2.50/request, 61% SealQA-0, SOC 2 Type II.
+[llms] - [AI Search API Cost: Why Tokens Matter More Than Price Per Call](https://www.linkup.so/blog/your-search-api-isn-t-what-s-expensive-your-tokens-are): Cost Per Resolved Query: The Right Way to Evaluate Search APIs. Why Your Search API Looks Cheap But Isn't
+[llms] - [Startups](https://www.linkup.so/startups): Free API credits for startups building with real-time web search.
+[llms] - [SPARSEUP - Open-Source Sparse Retrieval Model (SOTA on BEIR-13)](https://www.linkup.so/blog/introducing-sparseup-by-linkup): SPARSEUP is Linkup Research's open-source sparse embedding model - under 150M params, SOTA on BEIR-13, sub-millisecond retrieval. Apache 2.0, free to use.
+[llms] - [Linkup x x402: Web Search for AI Agents, No Human Account Needed](https://www.linkup.so/blog/linkup-web-search-for-ai-agents-no-human-account-needed): Linkup is the first web search API to support x402, the open payment protocol by Coinbase. AI agents can now search the web and pay per request — no signup, no API key, no human in the loop.
+[llms] - [Linkup raises $10M to build web search for AIs](https://www.linkup.so/blog/linkup-raises-10m-seed-to-build-web-search-for-ai): We’re thrilled to announce that Linkup has raised a $10M seed round led by Gradient to build the Google Search for AIs and released /fast, the world's most accurate sub-second web search API
+[llms] - [App](https://app.linkup.so): Sign up and get a free API key. Dashboard pages are noindex; do not crawl them for content.
+--- llms/readme head ---
+# Linkup
+> The production-grade Web Search API for AI. Used by McKinsey, SNCF, Cohere, Legora, Polymarket, and Artisan AI. #1 on OpenAI's SimpleQA.
+Linkup is a web search API that gives AI applications and agents real-time, grounded access to the web through a single API call, or deployed inside your own cloud for enterprise needs. Prefer the Documentation links below (markdown) for API usage; use Key pages for product, pricing, and proof.
+## Key pages
+- [Linkup](https://www.linkup.so/): Product overview and live API playground.
+- [Enterprise](https://www.linkup.so/product/enterprise): Private and on-prem deployments for enterprise AI systems.
+- [Pricing](https://www.linkup.so/pricing): Pay-as-you-go, transparent pricing for the search API.
+- [Blog](https://www.linkup.so/blog): Guides, benchmarks, and engineering notes on web search for AI.
+- [Benchmarks](https://www.linkup.so/benchmarks): SimpleQA, SealQA-0, GTM, Legal, and Finance benchmark results.
+- [Case Studies](https://www.linkup.so/case-studies): How customers build with Linkup APIs.
+- [Startups](https://www.linkup.so/startups): Free API credits for startups building with real-time web search.
+- [About](https://www.linkup.so/about): The team and mission behind Linkup.
+- [Careers](https://www.linkup.so/careers): Open roles at Linkup.
+- [Contact](https://www.linkup.so/contact): Talk to the team and start building.
+## Documentation
+- [Full documentation index](https://docs.linkup.so/llms.txt): Complete llms.txt for API reference, tutorials, SDKs, and integrations.
+- [Introduction](https://docs.linkup.so/pages/documentation/get-started/introduction.md): What the Linkup API is and when to use it.
+- [Quickstart](https://docs.linkup.so/pages/documentation/get-started/quickstart.md): Integrate with Linkup in about five minutes.

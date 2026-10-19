@@ -1,0 +1,458 @@
+SerpApi: Plans and Pricing 
+ APIs 
+ Solutions 
+ Integrations 
+ Features 
+ Pricing 
+ Company 
+ Sign In 
+ Register 
+ APIs 
+ Integrations 
+ Features 
+ Pricing 
+ Use cases 
+ Team 
+ Careers 
+ FAQ 
+ Contact us 
+ Sign In 
+ Register 
+ Pricing 
+ Choose the plan that suits you best. 
+ Standard 
+ Enterprise 
+ APIs 
+ Explore all search engines we support or check out our complete API list. 
+ Google Search API 
+ Google Light Search API 
+ Google AI Mode API 
+ Google AI Overview API 
+ Google Ads API 
+ Google Ads Transparency API 
+ Google Autocomplete API 
+ Google Events API 
+ Google Finance API 
+ Google Finance Markets API 
+ Google Flights API 
+ Google Flights Autocomplete API 
+ Google Flights Deals API 
+ Google Forums API 
+ Google Gemini API 
+ Google Hotels API 
+ Google Hotels Autocomplete API 
+ Google Hotels Photos API 
+ Google Hotels Reviews API 
+ Google Images API 
+ Google Images Light API 
+ Google Images Related Content API 
+ Google Immersive Product API 
+ Google Jobs API 
+ Google Lens API 
+ Google Local API 
+ Google Local Services API 
+ Google Maps API 
+ Google Maps Autocomplete API 
+ Google Maps Contributor Reviews API 
+ Google Maps Directions API 
+ Google Maps Photos API 
+ Google Maps Posts API 
+ Google Maps Reviews API 
+ Google News API 
+ Google News Light API 
+ Google Patents API 
+ Google Patents Details API 
+ Google Play Books API 
+ Google Play Games API 
+ Google Play Movies API 
+ Google Play Product API 
+ Google Play Store API 
+ Google Product API 
+ Google Related Questions API 
+ Google Reverse Image API 
+ Google Scholar API 
+ Google Scholar Author API 
+ Google Scholar Case Law API 
+ Google Shopping API 
+ Google Shopping Light API 
+ Google Short Videos API 
+ Google Sports API 
+ Google Travel Explore API 
+ Google Trends API 
+ Google Trends Autocomplete API 
+ Google Trends Trending Now API 
+ Google Videos API 
+ Google Videos Light API 
+ Airbnb Search API 
+ Amazon Search API 
+ Amazon Autocomplete API 
+ Amazon Product API 
+ Apple App Store API 
+ Apple Maps API 
+ Apple Maps Places API 
+ Apple App Store Product API 
+ Apple App Store Reviews API 
+ Baidu Search API 
+ Baidu News API 
+ Bing Search API 
+ Bing Copilot API 
+ Bing Images API 
+ Bing Maps API 
+ Bing News API 
+ Bing Product API 
+ Bing Reverse Image API 
+ Bing Shopping API 
+ Bing Videos API 
+ Brave AI Mode API 
+ Duck AI API 
+ DuckDuckGo Search API 
+ DuckDuckGo Light API 
+ DuckDuckGo Maps API 
+ DuckDuckGo News API 
+ eBay Search API 
+ eBay Product API 
+ eBay Seller API 
+ Extract API 
+ Facebook Profile API 
+ The Home Depot Search API 
+ The Home Depot Product API 
+ The Home Depot Reviews API 
+ Instagram Profile API 
+ Naver Search API 
+ Naver AI Mode API 
+ Naver AI Overview API 
+ OpenTable Reviews API 
+ Search Index 
+ Target Search API 
+ Tripadvisor Search API 
+ Tripadvisor Place API 
+ Tripadvisor Reviews API 
+ Walmart Search API 
+ Walmart Product API 
+ Walmart Reviews API 
+ Yahoo! Search API 
+ Yahoo! Images API 
+ Yahoo! Trends API 
+ Yahoo! Videos API 
+ Yandex Search API 
+ Yandex Images API 
+ Yandex Videos API 
+ Yelp Search API 
+ Yelp Place API 
+ Yelp Reviews API 
+ YouTube Search API 
+ YouTube Channel API 
+ YouTube Video API 
+ YouTube Video Transcript API 
+ Zillow Search API 
+ Extra APIs 
+ Status and Error Codes 
+ API Status 
+ API Metrics 
+ Public Roadmap 
+ Release Notes 
+ Playground 
+ By Industry 
+ Find the right data solutions tailored to your market. 
+ Web Search & Discovery
+ Ecommerce & Retail
+ AI & LLM Insights
+ Advertising
+ Events & Entertainment
+ Finance & Markets
+ Travel & Hospitality
+ Images & Visual Search
+ Jobs & Careers
+ Local & Maps
+ News & Media
+ Academic & Legal Research
+ App Stores & Digital Content
+ Trends & Analytics
+ Video & Multimedia
+ Social Media
+ By Use Case 
+ Automate your projects with structured SERP data. 
+ SEO 
+ Local SEO 
+ Web Search API 
+ AI Search Engine API 
+ AI SEO (GEO) 
+ Product Research 
+ Background Check Automation 
+ AI Models 
+ News Monitoring 
+ Voice Assistant 
+ Price Monitoring 
+ Travel Information 
+ Copyright Checker Tool 
+ Cyber Threat Intelligence 
+ Easy Integrations 
+ Start integration with your preferred language. 
+ Ruby 
+ Python 
+ JavaScript 
+ Golang 
+ PHP 
+ Java 
+ Rust 
+ .NET 
+ MCP 
+ Swift 
+ C++ 
+ CLI 
+ Features 
+ Dive deeper into our advanced features. 
+ X-Ray 
+ ZeroTrace Mode 
+ U.S. Legal Shield 
+ JSON Restrictor 
+ Team Management 
+ Ludicrous Speed 
+ Ludicrous Speed Max 
+ Pixel Position 
+ Markdown Output 
+ Company 
+ Explore company information and helpful guides. 
+ Team 
+ Security 
+ FAQ 
+ Blog 
+ YouTube 
+ Release notes 
+ Media kit 
+ Careers 
+ Contact us 
+ Simple Pricing 
+ Month-to-month. Cancel anytime. 
+ Starter 
+ $ 
+ 25 
+ / month 
+ Get Started 
+ 1,000 searches per month 
+ 200 throughput per hour 200 successful searches per hour is the guaranteed throughput for this plan. To improve performance, distribute your searches evenly throughout the hour and across multiple hours. " aria-expanded="false"> 
+ U.S. Legal Shield U.S. Legal Shield provides up to $2 million in coverage for the scraping and parsing of search engine data, as long as your use of the data or service is not illegal. " aria-expanded="false"> 
+ Developer 
+ $ 
+ 75 
+ / month 
+ Get Started 
+ 5,000 searches per month 
+ 1,000 throughput per hour 1,000 successful searches per hour is the guaranteed throughput for this plan. To improve performance, distribute your searches evenly throughout the hour and across multiple hours. " aria-expanded="false"> 
+ U.S. Legal Shield U.S. Legal Shield provides up to $2 million in coverage for the scraping and parsing of search engine data, as long as your use of the data or service is not illegal. " aria-expanded="false"> 
+ Most popular 
+ Production 
+ $ 
+ 150 
+ / month 
+ Get Started 
+ 15,000 searches per month 
+ 3,000 throughput per hour 3,000 successful searches per hour is the guaranteed throughput for this plan. To improve performance, distribute your searches evenly throughout the hour and across multiple hours. " aria-expanded="false"> 
+ U.S. Legal Shield U.S. Legal Shield provides up to $2 million in coverage for the scraping and parsing of search engine data, as long as your use of the data or service is not illegal. " aria-expanded="false"> 
+ Big Data 
+ $ 
+ 275 
+ / month 
+ Get Started 
+ 30,000 searches per month 
+ 6,000 throughput per hour 6,000 successful searches per hour is the guaranteed throughput for this plan. To improve performance, distribute your searches evenly throughout the hour and across multiple hours. " aria-expanded="false"> 
+ U.S. Legal Shield U.S. Legal Shield provides up to $2 million in coverage for the scraping and parsing of search engine data, as long as your use of the data or service is not illegal. " aria-expanded="false"> 
+ Flexible options for every stage 
+ Start for free, upgrade as you grow, or contact our team about an enterprise plan tailored to your volume, performance, and compliance needs. 
+ View all plans 
+ Free 
+ $ 
+ 0 
+ / month 
+ Get Started 
+ 250 searches per month 
+ 50 throughput per hour 50 successful searches per hour is the guaranteed throughput for this plan. To improve performance, distribute your searches evenly throughout the hour and across multiple hours. " aria-expanded="false"> 
+ U.S. Legal Shield U.S. Legal Shield provides up to $2 million in coverage for the scraping and parsing of search engine data, as long as your use of the data or service is not illegal. " aria-expanded="false"> 
+ ZeroTrace Mode ZeroTrace Mode prevents search data from being stored on our systems. When enabled, we do not retain search parameters, queries, or results, and each request is discarded after completion, reducing traceability and supporting privacy and compliance requirements. " aria-expanded="false"> 
+ Priority support 
+ Enterprise 
+ Contact sales for pricing 
+ contact@serpapi.com 
+ Contact us 
+ Custom searches per month 
+ Custom throughput per hour 
+ U.S. Legal Shield U.S. Legal Shield provides up to $2 million in coverage for the scraping and parsing of search engine data, as long as your use of the data or service is not illegal. " aria-expanded="false"> 
+ ZeroTrace Mode ZeroTrace Mode prevents search data from being stored on our systems. When enabled, we do not retain search parameters, queries, or results, and each request is discarded after completion, reducing traceability and supporting privacy and compliance requirements. " aria-expanded="false"> 
+ Priority support 
+ Need more volume? 
+ Contact us at contact@serpapi.com . We'll be glad to help. 
+ Contact us 
+ Enterprise-grade security & support 
+ Engineered for total data privacy, industry-leading compliance, and guaranteed global reliability. 
+ ZeroTrace Mode 
+ With ZeroTrace Mode enabled, we don't store your search parameters, files, or data. Once a search completes, it's as if it never happened. 
+ Security & Compliance 
+ We're SOC 2 Type II, SOC 3, and ISO 27001 certified - Independently audited controls for security, availability, and confidentiality. 
+ Premium support 
+ Get help from a global team of experts, ready to guide you through any issue. Backed by uptime SLAs of up to 99.97%. 
+ They trust us 
+ You are in good company. Join them. 
+ FAQs 
+ How are searches counted? 
+ Only successful searches are counted toward your monthly searches. Cached, errored, and failed searches are not. The number of results returned per response will not affect the number of credits used—responses with 100 results or empty result sets will both count as 1 search. 
+ Can we upgrade, downgrade, or cancel at any time? 
+ Yes, you can upgrade, downgrade, or cancel your plan at any time without any restrictions. 
+ What happens if I cancel before my plan expires? 
+ If you cancel before your plan expires, you can continue to use your remaining searches until the renewal date. After that, your plan will not be renewed. 
+ What happens when I upgrade my plan? 
+ When you upgrade your plan, you'll only pay the difference between your current plan and the new one. Your renewal date will remain the same. 
+ What happens when I downgrade my plan? 
+ When you downgrade your plan, you'll keep your current renewal date, and your subscription will renew at the lower plan rate. Any remaining searches from your previous plan will be added to your 'Extra Credits' balance. 
+ What happens if I run out of searches in a month? 
+ You can set your plan to Automatic Early Renewal. It will trigger an early renewal once you've used all your searches. You can toggle the Automatic Early Renewal anytime by visiting this page . You can also renew your plan manually. In both cases, your searches will be fully replenished, your renewal date will be updated, and your searches will reset at the start of the new billing cycle. 
+ What's your refund policy? 
+ We offer a full refund within 7 days of the date you subscribed to a plan unless you've used more than 20% of your searches. 
+ APIs 
+ Google Search API 
+ Google Light Search API 
+ Google AI Mode API 
+ Google AI Overview API 
+ Google Ads API 
+ Google Ads Transparency API 
+ Google Autocomplete API 
+ Google Events API 
+ Google Finance API 
+ Google Finance Markets API 
+ Google Flights API 
+ Google Flights Autocomplete API 
+ Google Flights Deals API 
+ Google Forums API 
+ Google Gemini API 
+ Google Hotels API 
+ Google Hotels Autocomplete API 
+ Google Hotels Photos API 
+ Google Hotels Reviews API 
+ Google Images API 
+ Google Images Light API 
+ Google Images Related Content API 
+ Google Immersive Product API 
+ Google Jobs API 
+ Google Lens API 
+ Google Local API 
+ Google Local Services API 
+ Google Maps API 
+ Google Maps Autocomplete API 
+ Google Maps Contributor Reviews API 
+ Google Maps Directions API 
+ Google Maps Photos API 
+ Google Maps Posts API 
+ Google Maps Reviews API 
+ Google News API 
+ Google News Light API 
+ Google Patents API 
+ Google Patents Details API 
+ Google Play Books API 
+ Google Play Games API 
+ Google Play Movies API 
+ Google Play Product API 
+ Google Play Store API 
+ Google Product API 
+ Google Related Questions API 
+ Google Reverse Image API 
+ Google Scholar API 
+ Google Scholar Author API 
+ Google Scholar Case Law API 
+ Google Shopping API 
+ Google Shopping Light API 
+ Google Short Videos API 
+ Google Sports API 
+ Google Travel Explore API 
+ Google Trends API 
+ Google Trends Autocomplete API 
+ Google Trends Trending Now API 
+ Google Videos API 
+ Google Videos Light API 
+ Airbnb Search API 
+ Amazon Search API 
+ Amazon Autocomplete API 
+ Amazon Product API 
+ Apple App Store API 
+ Apple Maps API 
+ Apple Maps Places API 
+ Apple App Store Product API 
+ Apple App Store Reviews API 
+ Baidu Search API 
+ Baidu News API 
+ Bing Search API 
+ Bing Copilot API 
+ Bing Images API 
+ Bing Maps API 
+ Bing News API 
+ Bing Product API 
+ Bing Reverse Image API 
+ Bing Shopping API 
+ Bing Videos API 
+ Brave AI Mode API 
+ Duck AI API 
+ DuckDuckGo Search API 
+ DuckDuckGo Light API 
+ DuckDuckGo Maps API 
+ DuckDuckGo News API 
+ eBay Search API 
+ eBay Product API 
+ eBay Seller API 
+ Extract API 
+ Facebook Profile API 
+ The Home Depot Search API 
+ The Home Depot Product API 
+ The Home Depot Reviews API 
+ Instagram Profile API 
+ Naver Search API 
+ Naver AI Mode API 
+ Naver AI Overview API 
+ OpenTable Reviews API 
+ Search Index 
+ Target Search API 
+ Tripadvisor Search API 
+ Tripadvisor Place API 
+ Tripadvisor Reviews API 
+ Walmart Search API 
+ Walmart Product API 
+ Walmart Reviews API 
+ Yahoo! Search API 
+ Yahoo! Images API 
+ Yahoo! Trends API 
+ Yahoo! Videos API 
+ Yandex Search API 
+ Yandex Images API 
+ Yandex Videos API 
+ Yelp Search API 
+ Yelp Place API 
+ Yelp Reviews API 
+ YouTube Search API 
+ YouTube Channel API 
+ YouTube Video API 
+ YouTube Video Transcript API 
+ Zillow Search API 
+ Extra APIs 
+ Status and Error Codes 
+ About 
+ Home 
+ APIs 
+ Status 
+ Integrations 
+ Features 
+ Pricing 
+ Use cases 
+ Team 
+ Careers 
+ FAQ 
+ Legal 
+ Security 
+ Contact us 
+ Blog 
+ Media Kit 
+ Contact 
+ SerpApi, LLC 
+ 5540 N Lamar Blvd #12 
+ Austin, TX 78751 
+ +1 (512) 666-8245 
+ contact@serpapi.com 
+ Our Values 
+ We value full transparency and painful honesty both in our internal and external communications. We believe a world with complete and open transparency is a better world. 
+ Built with love in Austin, TX. © 2026 SerpApi, LLC.

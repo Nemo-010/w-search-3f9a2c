@@ -1,0 +1,4 @@
+# Wikidata SPARQL (wikidata) category=misc-api
+home=https://query.wikidata.org/ pricing=None docs=https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service llms=None
+sources_ok: docs:https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service, home:https://query.wikidata.org/
+--- ranked fact lines ---

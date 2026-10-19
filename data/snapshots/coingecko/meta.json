@@ -1,0 +1,83 @@
+{
+ "slug": "coingecko",
+ "name": "CoinGecko",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:49+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.coingecko.com/en/api/pricing",
+   "status": 200,
+   "final_url": "https://www.coingecko.com/en/api/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 918231,
+   "truncated": false,
+   "sha256": "0dccbdca0cd42ee000b3b53282ec3c6012b8d3b1cb464ae51a7f3e12fdfc0214",
+   "fetched_at": "2026-10-19T05:54:49+00:00",
+   "text_bytes": 85806
+  },
+  "docs": {
+   "url": "https://docs.coingecko.com/",
+   "status": 200,
+   "final_url": "https://docs.coingecko.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 291579,
+   "truncated": false,
+   "sha256": "8903299fee5df94211cb0e5cc6ae57b0e628f73f01d002286ca17f68125fb01a",
+   "fetched_at": "2026-10-19T05:54:50+00:00",
+   "text_bytes": 2142
+  },
+  "home": {
+   "url": "https://www.coingecko.com/en/api",
+   "status": 200,
+   "final_url": "https://www.coingecko.com/en/api",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 616195,
+   "truncated": false,
+   "sha256": "f864df61f3f7a43d6dac6c25bbefe88ef40811280db94e025602c1c643e87741",
+   "fetched_at": "2026-10-19T05:54:51+00:00",
+   "text_bytes": 82839
+  },
+  "llms": {
+   "url": "https://docs.coingecko.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.coingecko.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 49119,
+   "truncated": false,
+   "sha256": "8c586809e2640f080a4e6ebebaa2b5a7170f8704782d57c2d8154d1b4c8d8fd6",
+   "fetched_at": "2026-10-19T05:54:51+00:00",
+   "text_bytes": 49085
+  },
+  "llms-full": {
+   "url": "https://docs.coingecko.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.coingecko.com/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 588860,
+   "truncated": false,
+   "sha256": "93ad257f4f8fc4e43c82fa0d8f50669b29e6f269c04a70be8d4a90da934aa8d8",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 586769
+  },
+  "llms-err-442206": {
+   "url": "https://www.coingecko.com/en/api/llms.txt",
+   "status": 404,
+   "final_url": "https://www.coingecko.com/en/api/llms.txt",
+   "content_type": "application/json; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "67795bf3846287322b92aee164b5745a75b6835d1fbefdcb0361745ec47cdf26",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  },
+  "llms-err-602a80": {
+   "url": "https://www.coingecko.com/en/api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.coingecko.com/en/api/docs/llms.txt",
+   "content_type": "application/json; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "67795bf3846287322b92aee164b5745a75b6835d1fbefdcb0361745ec47cdf26",
+   "fetched_at": "2026-10-19T05:54:52+00:00"
+  }
+ }
+}

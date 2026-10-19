@@ -1,0 +1,52 @@
+{
+ "slug": "diffbot",
+ "name": "Diffbot",
+ "category": "ai-search",
+ "fetched_at": "2026-10-19T05:54:00+00:00",
+ "sources": {
+  "llms": {
+   "url": "https://www.diffbot.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.diffbot.com/llms.txt",
+   "content_type": "text/plain",
+   "bytes": 943,
+   "truncated": false,
+   "sha256": "59ec529114d2fceb261acd4a23000dc3601e8e8be789e89c75a0848918fe3d30",
+   "fetched_at": "2026-10-19T05:54:00+00:00",
+   "text_bytes": 939
+  },
+  "pricing": {
+   "url": "https://www.diffbot.com/pricing/",
+   "status": 200,
+   "final_url": "https://www.diffbot.com/pricing",
+   "content_type": "text/html",
+   "bytes": 146422,
+   "truncated": false,
+   "sha256": "a863d19ee897f5b2d5809245dad121ce2a41264724574541a243c8519548a885",
+   "fetched_at": "2026-10-19T05:54:02+00:00",
+   "text_bytes": 3861
+  },
+  "docs": {
+   "url": "https://docs.diffbot.com/",
+   "status": 200,
+   "final_url": "https://www.diffbot.com/docs/",
+   "content_type": "text/html",
+   "bytes": 178963,
+   "truncated": false,
+   "sha256": "54408b01e25967e21f7043500df40874219d4bcf2aae742fc652507d5df62d04",
+   "fetched_at": "2026-10-19T05:54:04+00:00",
+   "text_bytes": 4782
+  },
+  "home": {
+   "url": "https://www.diffbot.com/",
+   "status": 200,
+   "final_url": "https://www.diffbot.com/",
+   "content_type": "text/html",
+   "bytes": 181488,
+   "truncated": false,
+   "sha256": "b91a8ec5838faf00492c2cacc4aa9c0c407658260e60824ba7dc9c976a8c6adf",
+   "fetched_at": "2026-10-19T05:54:06+00:00",
+   "text_bytes": 2758
+  }
+ }
+}

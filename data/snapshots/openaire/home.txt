@@ -1,0 +1,284 @@
+OpenAIRE 
+ Skip to main content 
+ Services 
+ Service Catalogue 
+ Policies 
+ SLA 
+ For RPOs 
+ For University Alliances 
+ For Funders 
+ Training 
+ Webinars 
+ Bootcamps 
+ Community of Practice 
+ Openplato 
+ Support 
+ Guides 
+ Factsheets 
+ FAQs 
+ Ask a Question 
+ Community 
+ Community Calls 
+ Podcasts 
+ News 
+ Blogs 
+ Newsletters 
+ NOADs 
+ Events 
+ Open Science In Europe 
+ Background 
+ Overview 
+ OpenAIRE and EOSC 
+ EC Policies and mandates 
+ In practice 
+ EU+ member states 
+ About Us 
+ What we do 
+ Activities 
+ Organisation 
+ Strategy 2026-28 
+ Members 
+ Become a member 
+ Partnerships 
+ Projects 
+ Job opportunities 
+ Services 
+ OpenAIRE Service Catalogue 
+ Explore our catalogue of 15+ services to support you in publishing, building infrastructure and monitoring Open Science 
+ View 
+ Shortcuts 
+ OpenAIRE. EXPLORE Discover research, find connections, claim your outputs 
+ OpenAIRE. PROVIDE Connect repositories, share knowledge 
+ OpenAIRE. MONITOR Connect repositories, share knowledge 
+ OpenAIRE. CONNECT Empower communities, showcase results 
+ ARGOS Plan data, ensure FAIRness 
+ Policies How to provide content, how to use our services and data 
+ SLAs Levels of availability, serviceability, performance, operation 
+ Services for Research Performing Organisations 
+ A bundle of services to help you transition to Open Science 
+ Explore 
+ Services for University Alliances 
+ Services to support your members' collaboration 
+ Explore 
+ Services for Funding Agencies 
+ Services to support your members' collaboration 
+ Explore 
+ Training 
+ Community 
+ Webinars Learn best practices 
+ Trainer bootcamps Become an Open Science trainer 
+ Community of Practice For training practitioners 
+ eLearning 
+ OpenAIRE's collaborative platform for Open Science 
+ Explore 
+ Need customised training? 
+ We offer opportunities to work with you and provide on-site training via our national experts (NOADs) or virtual sessions with OpenAIRE trainers. 
+ Get in touch 
+ Support 
+ Resources 
+ Guides Learn how to perform Open Science 
+ Factsheets Quick views on open science topics 
+ FAQs Questions on the basics? Start here 
+ Want to register your data source 
+ Repository, OA Journal, CRIS? 
+ Goto OpenAIRE. PROVIDE 
+ Ask a Question 
+ Need help? Contact the OpenAIRE support team. 
+ Helpdesk 
+ Community 
+ Our Network 
+ Learn about our National Open Access Desks. Who they are, what they do, how they can help you.
+ Find out more on their activities 
+ See who they are and how to contact them 
+ News 
+ Blogs 
+ Events 
+ Newsletters 
+ Podcasts A journey in the world of Open Science 
+ Co-shape OpenAIRE services 
+ Community Calls 
+ Best practices, Q&As with our developers, technical developments. 
+ Be part of the broader OpenAIRE Community and help support build the global Open Scholarly Infrastructure. 
+ Join 
+ Open Science In Europe 
+ The context 
+ Overview Learn on major EC and global policies 
+ EC Policies and Mandates On Open Access to publications and research data, FAIR data 
+ OpenAIRE & EOSC An overview of how OpenAIRE contributes to EOSC 
+ In Practice 
+ EU+ Member States 
+ Information on national Open Science developments gathered by OpenAIRE's National Open Access Desks (NOADs). 
+ View details 
+ About Us 
+ Overview 
+ About 
+ Activities 
+ Partnerships 
+ Projects 
+ Strategy 
+ Annual Reports 
+ Organisation 
+ Governance 
+ Executive Board 
+ Management Office 
+ Standing Committees 
+ Working Groups 
+ Membership 
+ Members 
+ Membership 
+ Join 
+ Open Positions 
+ See All 
+ Sign In 
+ Open Science Starts Here 
+ Open Scholarly Communication Infrastructure 
+ Supporting global research excellence through trusted infrastructure for open access, data sharing, and scholarly communication. 
+ Explore Services 
+ Join our Community 
+ OpenAIRE has launched OpenAIRE Innovation, a new initiative bringing together its open research infrastructure, expertise and community to strengthen connections between research and innovation. 
+ Learn more about the initiative 
+ In the Netherlands, a new wave of initiatives is turning long-standing ambitions around openness, interoperability, and digital sovereignty into concrete implementation. 
+ Learn more 
+ OpenAIRE is scaling its funding metadata ecosystem by linking grants, funders, and research outputs via persistent identifiers like Grant DOIs. 
+ See how we do it 
+ Our Annual Report for 2025 is out! Capturing a year of growth, collaboration and change. 
+ Read the report 
+ Open Science in Practice: From Discovery to Impact 
+ Whether you are a researcher, institutional leader, funder, or infrastructure provider, OpenAIRE transforms the principles of Open Science into practice. Our services support the full research lifecycle, making your work actionable, measurable, and trusted. 
+ Uncover the full picture of global research with a rich, interlinked graph of publications, data, software, projects and more. A powerful tool for scientometrics. 
+ Create FAIR, machine-actionable Data and Software Management Plans that evolve with your project. 
+ Link and showcase your community’s research outputs through customizable, EOSC-ready gateways. 
+ Track research trends, assess impact, and align practices with real-time analytics across funders, institutions, and disciplines. 
+ Coming Soon 
+ Build your narrative CV and Open Science profile to highlight contributions beyond publications. 
+ Aggregate and interconnect content from repositories, CRIS systems, and journals with EOSC-compliant metadata. 
+ An easy-to-use tool to anonymize research data and protect privacy while preserving utility. 
+ Disambiguate and map research-performing organizations across data sources with trusted identifiers. 
+ Ensure your repository or data source meets OpenAIRE and EOSC interoperability standards. 
+ Run overlay journals that peer review preprints and connect seamlessly to the open publishing ecosystem. 
+ Ensure your repository or data source meets OpenAIRE and EOSC interoperability standards. 
+ Share and preserve research outputs of any kind with a trusted, FAIR-aligned repository powered by CERN. 
+ Search, discover, and link open research outputs across publications, data, software, and projects in one trusted space. 
+ Track and compare standardized usage metrics (views and downloads) across repositories and journals. 
+ Discover links between datasets and publications worldwide through an open, global Scholix index. 
+ See all Services 
+ Driving the future of Open Research 
+ OpenAIRE is more than services. It is a force for systemic change in how research is shared, assessed, and reused. Through a strong European network and growing global partnerships , we build bridges across borders, powering core EOSC infrastructure and shaping the EOSC Federation. We advance Responsible Research Assessment aligned with CoARA , promote FAIR data worldwide, and reinforce Europe’s leadership in open, trusted, community-driven research infrastructure. 
+ 15+ years empowering Open Science across Europe 
+ 200+ M 
+ linked publications, data, and software 
+ 30+ National Nodes 
+ Federated support for Open Science across Europe. 
+ EOSC Interoperability Backbone 
+ for EOSC EU Node and Federation 
+ CoARA-aligned tools 
+ for research assessment reform 
+ News & Highligths 
+ Oct 15, 2026 
+ RAISE Observatory launches to help Europe explore AI in Science 
+ Discover where, how and by whom AI is being used across European Science. 
+Where is AI being… 
+ Oct 13, 2026 
+ 10th OpenAIRE Open Science Train-the-Trainer Bootcamp 
+ OpenAIRE's train-the-trainer bootcamps aim at empowering trainers with the knowledge and the… 
+ Oct 8, 2026 
+ Free Knowledge Africa and OpenAIRE Partner to Advance African Research Visibility 
+ Free Knowledge Africa and OpenAIRE have signed a memorandum of understanding to strengthen the… 
+ Oct 1, 2026 
+ Making Engagement Count: What’s Next for OpenAIRE’s OCE Standing Committee 
+ Gina Pavone and Irina Cojocaru have taken on the roles of Chair and Co-Chair in OpenAIRE's… 
+ View all 
+ Blogs from our Network 
+ Understanding Science, Technology and Innovation in a fragmented world 
+ Written by 
+ Natalia Manola 
+ on 
+ 2026/10/13 
+ .
+ Posted in
+ infrastructure 
+ policies & funders 
+ Libraries in the Middle: What We Learned About Supporting Citizen Science 
+ Written by 
+ Sandra Franco Iborra 
+ on 
+ 2026/10/07 
+ .
+ Posted in
+ infrastructure 
+ Thank you, Pauli: A Warm Farewell and Best Wishes for Retirement 
+ Written by 
+ Sandra Franco Iborra 
+ on 
+ 2026/09/28 
+ .
+ Posted in
+ country highlights 
+ ARION project launches in Athens: partners set out to turn research assessment reform into everyday practice 
+ Written by 
+ Zenia Xenou 
+ on 
+ 2026/09/24 
+ .
+ Posted in
+ presentations & publications 
+ View all 
+ Be Part of Europe’s Open Science Future 
+ OpenAIRE is a non-profit, community-driven initiative shaping the policies, infrastructures, and services for Open Science in Europe and beyond. 
+ Become a Member 
+ Join a Project 
+ Get Indexed 
+ Contact Us 
+ Upcoming Events 
+ 19 Oct ACROSS Open Science Week 2026: The Importance of Open Science in the European Funding Scheme Online Mon, 12:30PM - 02:00PM 
+ 20 Oct ACROSS Open Science Week 2026: Advancing Open Science and Scholarly Communication in Europe Online Tue, 09:30AM - 11:00AM 
+ 21 Oct Sharing Science, Opening Knowledge Online Wed, 09:30AM - 01:00PM 
+ 21 Oct Understanding the Costs and Economic Benefits of Open Science – Towards Sustainable Open Infrastructures Zoom Wed, 01:00PM - 02:00PM 
+ View Full Calendar 
+ Stay Informed 
+ Receive updates on policy developments, infrastructure enhancements, and research community initiatives.
+ Subscribe 
+ Connecting the global research community through Open Science infrastructure and services. 
+ Keep in touch 
+ Subscribe to our Newsletter 
+ Subscribe 
+ Follow Us 
+ Support 
+ Helpdesk 
+ FAQ 
+ Guides 
+ Factsheets 
+ OpenPlato LMS 
+ Organisation 
+ About Us 
+ Governance 
+ Partners 
+ Newsletters 
+ Annual Reports 
+ Community 
+ NOAD Network 
+ Service Community Calls 
+ Training Community of Practice 
+ News 
+ Blogs 
+ Newsletter 
+ Events 
+ Legal 
+ Privacy Policy 
+ Terms of Services 
+ Accessibility Statement 
+ Cookies Policy 
+ Code of Ethics 
+ Services 
+ OpenAIRE EXPLORE 
+ OpenAIRE PROVIDE 
+ OpenAIRE CONNECT 
+ OpenAIRE MONITOR 
+ Argos 
+ Amnesia 
+ OpenOrgs 
+ Zenodo 
+ Episciences 
+ View all 
+ Unless otherwise indicated, all materials created by OpenAIRE are licenced under  CC ATTRIBUTION 4.0 INTERNATIONAL LICENSE . 
+ Go to Top

@@ -1,0 +1,185 @@
+Get Started | ScreenshotAPI.net Docs Products Tools Docs Pricing Resources Playground Get Started for Free Search Ctrl + K Docs Get Started Render a screenshot Cached & Fresh Viewport & Full Page File Type & Quality Lazy Loading & Delay Element Screenshot CSS & JavaScript Injection Emulation Web Scraping Block Resources PDF Rendering Scrolling screenshots Bulk screenshots Schedule screenshots Errors Query Builder Proxy Support Integrations Storage Integration Getting Started ScreenshotAPI is an advanced and dynamic solution that allows users to take screenshots of a website programmatically without breaking a sweat. Users can select from several available formats: JPEG, PNG, WebP, or PDF, and this gives them the advantage of suiting their images to their needs. The API is simple and extremely configurable with features such as a full-page image of the screen or a certain file type, adding a custom CSS, or even a geolocation. To begin, go ahead and register or sign in to the DASHBOARD to obtain your unique API KEY . Use this key by replacing TOKEN with this in the API URL's requests. You can set which url to be captured using the url parameter. The API allows integration through GET and POST methods, which makes it easy to incorporate the API into your existing workflows. If you request a screenshot that has been returned before, and you want to return a current screenshot, please include the fresh=true parameter to shed off the cache. Other advanced capabilities are the ability to inject JS or CSS into the page, hide some parts of the page, or take scrolling screenshots in WebM, MP4, or GIF videos. The API additionally offers capabilities for taking screenshots in multiple scrolling dimensions and on how to extract HTML or text from webpages. When dealing with PDF outputs, it is possible to set the output to certain pages only. Handling errors is very simple as it has status codes that are fully informative for handling problems. There is also a Query Builder which lets users play around with the parameters of the API, making it easy to build requests. Code examples can also be found for use by developers in language libraries like Node.js and Python for fast development. In addition, please feel free to reach out to our dedicated team for any support or assistance you may need through email or the Help Desk . Any user, be it developers, marketers, and businesses ScreenshotAPI is designed with a soothing design yet great functionality. Code Examples Below is sample code for the following languages: Node.JS, PHP, Go, Java, Python, and Ruby. If you need assistance integrating into our API with a given language please contact us . Copy 
+var fs = require("fs");
+var request = require("request");
+// @param {String} token - String containing your API Key
+// @param {String} url - Encoded URI string container the URI you're targeting
+// @param {String} output - String specifying the output format, 'image' or 'json'
+// @param {String} file_type - String specifying the output type
+var token = "Your API Key";
+var url = encodeURIComponent("https://google.com");
+var output = "image";
+var file_type = "png";
+// Construct the query params and URL
+var query = "https://shot.screenshotapi.net/screenshot";
+query += `?token=${token}&url=${url}&output=${output}&file_type=${file_type}`;
+// Call the API and save the screenshot
+request.get({ url: query, encoding: "binary" }, (err, response, body) => {
+ fs.writeFile("screenshot.png", body, "binary", (err) => {
+ if (err) {
+ console.log(err);
+ } else {
+ console.log("The file was saved!");
+ } 
+ }); 
+}); Copy 
+// @param {String} $token - String containing your API Key 
+// @param {String} $url - Encoded URI string container the URI you're targeting 
+// @param {String} output - String specifying the output format, "image" or "json"
+// @param {String} file_type - String specifying the output type
+$token = 'Your API Key';
+$url = urlencode('https://google.com');
+$output = 'image';
+$file_type = 'png';
+// Construct the query params and URL
+$query = "https://shot.screenshotapi.net/screenshot";
+$query .= "?token=$token&url=$url&output=$output&file_type=$file_type";
+// Call the API
+$image = file_get_contents($query);
+// Save the screenshot
+file_put_contents('./screenshot.png', $image); Copy 
+package main
+import (
+ "fmt"
+ "io"
+ "io/ioutil"
+ "net/http"
+ url2 "net/url"
+ "os"
+)
+func main() {
+ // @param {String} token - String containing your API Key 
+ // @param {String} url - Encoded URI string container the URI you're targeting
+ // @param {String} output - String specifying the output format, 'image' or 'json'
+ // @param {String} file_type - String specifying the output type 
+ token := "Your API Key"
+ url := url2.QueryEscape("https://google.com")
+ output := "image"
+ file_type := "png"
+ // Construct the query params and URL
+ query := "https://shot.screenshotapi.net/screenshot"
+ query += fmt.Sprintf("?token=%s&url=%s&output=%s&file_type=%s",
+ token, url, output, file_type)
+ // Call the API
+ resp, err := http.Get(query)
+ if err != nil{ 
+ panic(err)
+ } 
+ defer resp.Body.Close()
+ // Raise error if call was unsucessfull
+ if resp.StatusCode != 200 {
+ errorBody, _ := ioutil.ReadAll(resp.Body)
+ panic(fmt.Errorf("error while calling api %s", errorBody))
+ } 
+ // Save the screenshot
+ file, err := os.Create("./screenshot.png")
+ if err != nil {
+ panic(err)
+ } 
+ defer file.Close()
+ _, err = io.Copy(file, resp.Body)
+ if err != nil {
+ panic(err)
+ } 
+} Copy 
+package main;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLEncoder;
+public class Main{
+ public static void main(String[] args) {
+ try {
+ // @param {String} $token - String containing your API Key 
+ // @param {String} $url - Encoded URI string container the URI you're targeting 
+ // @param {String} $output - String specifying the output format, 'image' or 'json'
+ // @param {String} file_type - String specifying the output type
+ String token = "Your API Key";
+ String url = URLEncoder.encode("https://google.com");
+ String output = "image";
+ String file_type = "png";
+ // Construct the query params and URL
+ String query = "https://shot.screenshotapi.net/screenshot";
+ query += String.format("?token=%s&url=%s&output=%s&file_type=%s",
+ token, url, output, file_type);
+ URL apiUrl = new URL(query);
+ // Call the API and save the screenshot
+ InputStream inputStream = apiUrl.openStream();
+ OutputStream outputStream = new FileOutputStream("./screenshot.png");
+ inputStream.transferTo(outputStream);
+ inputStream.close();
+ outputStream.close();
+ } catch(Exception ex) {
+ ex.printStackTrace();
+ }
+ } 
+} Copy 
+import urllib.parse
+import urllib.request
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+# @param {String} $token - String containing your API Key
+# @param {String} $url - Encoded URI string container the URI you're targeting 
+# @param {String} $output - String specifying the output format, 'image' or 'json'
+# @param {String} file_type - String specifying the output type
+token = "Your API Key"
+url = urllib.parse.quote_plus("https://google.com")
+output = "image"
+file_type = "png"
+# Construct the query params and URL
+query = "https://shot.screenshotapi.net/screenshot"
+query += "?token=%s&url=%s&output=%s&file_type=%s" % (token, url, output, file_type)
+# Call the API
+urllib.request.urlretrieve(query, "./screenshot.png") Copy 
+require "net/http"
+require "uri"
+# Define your API Key, URL, output type, and file type
+token = "Your API key"
+url = URI.encode("https://google.com")
+output = "image"
+file_type = "png"
+# Construct the query URL
+query = "https://shot.screenshotapi.net/screenshot"
+query += "?token=#{token}&url=#{url}&output=#{output}&file_type=#{file_type}"
+# Send a GET request to the API
+uri = URI.parse(query)
+response = Net::HTTP.get_response(uri)
+# Check if the response was successful
+if response.code == "200"
+ # Save the screenshot as a binary file
+ File.open("screenshot.png", "wb") do |file|
+ file.write(response.body)
+ end
+ puts "The file was saved!"
+else
+ puts "Error: #{response.code} - #{response.message}"
+end Copy 
+const requestOptions = { 
+method : "GET", 
+redirect : "follow"
+}; 
+fetch (
+ "https://shot.screenshotapi.net/v3/screenshot?token={token}&url={url}&output={output}&file_type={file_type}";
+ requestOptions
+)
+.then((response) => response.text())
+.then((result) => console.log(result))
+.catch((error) => console.error(error)); Copy 
+/**
+ * Takes a website URL as input and returns a screenshot of the website using the ScreenshotAPI service.
+ * @param {string} websiteUrl - The URL of the website to take a screenshot of.
+ * @return {string} screenshotUrl - The URL of the screenshot image.
+ * @customfunction
+ */ 
+async function SCREENSHOT(websiteUrl) {
+ const YOUR_API_KEY = "XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX"; // Your ScreenshotAPI API key
+ const query = "https://shot.screenshotapi.net/v3/screenshot?token={YOUR_API_KEY}&url={websiteUrl} &output=image&file_type=png"; // Construct the query params and URL
+ const options = {
+ "method" : "get",
+ "contentType": "application/json",
+ "followRedirects":false
+ }; // The options for the fetch request
+ const response = await UrlFetchApp.fetch(query,options); // Make the fetch request to ScreenshotAPI
+ const screenshotUrl = response.getHeaders()["Location"]; // Get the URL of the screenshot from the response headers
+ return screenshotUrl; // Return the URL of the screenshot
+} Next Render a Screenshot PRODUCTS URL to Screenshot URL to PDF Schedule Website Screenshot Scrolling Screenshot Bulk Screenshot Website Scraping Full Page Screenshot URL to PDF Generator CONNECT WITH US Contact Us Log In Sign Up INTEGRATIONS All Integrations MCP Server Storage Integration Zapier Google Sheets Make n8n viaSocket LEGAL Privacy Policy Terms of Service RESOURCES Blog Guide Documentation FAQs Playground Free Tools Testimonials QUICK LINKS Role of Website Screenshot in SEO Analyze your Competitors Track Industry Trends Scheduled Screenshots: Streamline Your Workflow Screenshot of CAPTCHA-Protected Pages Extract Text from a Screenshot Take Screenshots of Web Pages Behind a Login Systems Status © 2026 ScreenshotAPI.net. All Rights Reserved.

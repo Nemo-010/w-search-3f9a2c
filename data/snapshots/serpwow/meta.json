@@ -1,0 +1,74 @@
+{
+ "slug": "serpwow",
+ "name": "SerpWow",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:18+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.serpwow.com/pricing",
+   "status": 200,
+   "final_url": "https://trajectdata.com/serp/serp-wow-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 350288,
+   "truncated": false,
+   "sha256": "fdfc94feaf534a43f9d784ef64745bc0f708fc524b990dd2d2e1b0b6157fe052",
+   "fetched_at": "2026-10-19T05:54:18+00:00",
+   "text_bytes": 10181
+  },
+  "docs": {
+   "url": "https://www.serpwow.com/docs",
+   "status": 200,
+   "final_url": "https://docs.trajectdata.com/serpwow",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 259901,
+   "truncated": false,
+   "sha256": "f1984ad22bcdd91cb817d9233cdc6fb16a183d736c029e9334040b72a3677deb",
+   "fetched_at": "2026-10-19T05:54:20+00:00",
+   "text_bytes": 1862
+  },
+  "home": {
+   "url": "https://www.serpwow.com/",
+   "status": 200,
+   "final_url": "https://trajectdata.com/serp/serp-wow-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 350288,
+   "truncated": false,
+   "sha256": "69d11ad369e7fe945c4adadc6b609eeed6458cfcdf324d374c41c74bfbf46e24",
+   "fetched_at": "2026-10-19T05:54:21+00:00",
+   "text_bytes": 10181
+  },
+  "llms": {
+   "url": "https://www.serpwow.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://trajectdata.com/serp/serp-wow-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 350288,
+   "truncated": false,
+   "sha256": "1cd96bc8fd48a119f05a17f2955389596f86e531bc8de25c08bc9f769c8f320c",
+   "fetched_at": "2026-10-19T05:54:22+00:00",
+   "text_bytes": 10181
+  },
+  "llms-full": {
+   "url": "https://www.serpwow.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://trajectdata.com/serp/serp-wow-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 350288,
+   "truncated": false,
+   "sha256": "c5cc6ee697b9354b6c14d2fb6574b079ac7c109d8aaa336bed11b0db8bd589f8",
+   "fetched_at": "2026-10-19T05:54:25+00:00",
+   "text_bytes": 10181
+  },
+  "llms-https://www.serpwow.com/llms.txt": {
+   "url": "https://www.serpwow.com/llms.txt",
+   "status": 200,
+   "final_url": "https://trajectdata.com/serp/serp-wow-api/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 350288,
+   "truncated": false,
+   "sha256": "32c0389f2e398403765cbbd43333951a065201757799d8f810928a6c5f127c42",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 10181
+  }
+ }
+}

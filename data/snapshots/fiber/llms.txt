@@ -1,0 +1,87 @@
+# Documentation
+
+- [Fiber AI Documentation](/): Find any company or person, get their verified contact information, and know the moment something changes about them.
+- [Using the Fiber Dashboard](/using-the-ui): Build audiences, reveal verified contacts, and export to CSV or ad platforms — the full workflow with no code required.
+- [Operations index](/operations): Every Fiber AI API operation by reader-facing name — find the one call you need, then open its API reference.
+- Billing
+  - [Billing & Credits](/billing): How Fiber's credit-based pricing works — per-item costs, free operations, and cost-control levers.
+  - [Pricing by operation](/billing/pricing): Default credit prices for every product family, what each one bills per, and how volume pricing works.
+  - [Payment Troubleshooting](/billing/troubleshooting): Fixes for common payment and billing problems, and how to reach us when something doesn't look right.
+- Search & discovery
+  - [Search](/search): Query 50M+ companies and 500M+ professional profiles with structured filters — count for a credit, then pull only the results you want.
+  - [Getting accurate results from search](/search/using-search-apis): Write people and company searches that return exactly the people you mean — the rules that matter, what's available today, and worked examples of common mistakes with their fixes.
+  - [Search counts](/search/counts): Count matching companies and people before you pull a single result — what's exact, what's estimated, and the two caveats that matter when a count feeds a report or a benchmark.
+  - [Industry filtering](/search/industry-filtering): The two meanings of "industry", which filter expresses each, and how to pick valid values so an industry filter never silently matches nothing.
+  - [Migrating from another data provider](/search/migrating-from-other-providers): Translation tables for the filter vocabularies that differ between providers (departments, seniority levels, job-title matching), so a search means the same thing here as it did there.
+  - [Sizing and locating companies](/search/sizing-and-locating-companies): Filter companies by headcount with any range you need, and by headquarters location down to city level — both fully supported on company search and combined search.
+  - [Natural-language search](/search/agentic-search): Ask in plain English and get a matching list of companies or people — plus a clear list of anything the query could not apply.
+  - [Job title matching](/search/job-title-matching): How people search matches job titles — normal, phrase, and prefix modes, opt-in stemming, exact equality, and when to generate titles instead of listing them.
+  - [Job Search](/search/job-search): Filter 13M+ open roles by title, pay, and location, then count matches before you pull postings.
+  - [Blue-collar job search](/search/blue-collar-jobs): Search US trade, warehouse, and service job listings by company, keyword, and location.
+  - [Typeaheads](/search/typeaheads): Autocomplete endpoints for companies, schools, investors, locations, and skills — plus job-title synonym expansion and preset metro regions.
+  - [Reference lists](/search/reference-lists): Free lists of every valid value for search filters — industries, NAICS codes, regions, metros, skills, technologies, tags, languages, and more.
+  - [Google Maps / Local Business Search](/search/google-maps): Find any local business in any geography, then let AI agents identify the owners and their contact info.
+  - [Stealth Tracking](/search/stealth): Find people in stealth mode on LinkedIn, and the ones who just came out of it — a signature capability, especially popular with VCs.
+  - [Fortune & Forbes Lists](/search/fortune-forbes-lists): Filter searches by Fortune 500 or Forbes Global 2000 membership, or download a ranked edition with financials attached.
+  - [Accelerators](/search/accelerators): Find, filter, and get alerts on startups by accelerator and batch — Y Combinator, Techstars, a16z Speedrun, and 16 more, with new batches added within days of going public.
+- Enrichment
+  - [Contact Reveal](/enrichment/contact-reveal): Reveal verified work emails, personal emails, and phone numbers for a person you already know — pick a stack for cost, speed, or coverage.
+  - [Reverse Email Lookup](/enrichment/reverse-email-lookup): Turn an email address (or phone number) into the person behind it — LinkedIn profile, name, and full enriched identity.
+  - [Hashed Email Lookup](/enrichment/hashed-email-lookup): Turn SHA-256, MD5, or SHA-1 hashed emails (HEMs) back into the real address and the LinkedIn profile behind it — up to 100 per call, billed only on hits.
+  - [Email validation](/enrichment/email-validation): Find out whether an email will bounce before you send to it, including catch-all addresses most validators can't judge.
+  - [Phone validation](/enrichment/phone-validation): Check whether a phone number is real and reachable right now, and see its carrier, line status, and caller ID name.
+  - [Kitchen Sink](/enrichment/kitchen-sink): Resolve a person or company from whatever partial data you already have — no need to know which field is "the right one."
+  - [Resolving identifiers](/enrichment/resolving-identifiers): Turn the LinkedIn URLs, slugs, IDs, URNs, domains, and company names you already have into clean, canonical records in bulk.
+  - [Logos and profile photos](/enrichment/logos-and-photos): Get company logos and LinkedIn profile photos for one record or up to 10,000 at a time, for CRMs, dashboards, and apps.
+- Company insights
+  - [Company insights](/company-insights): Answer the questions behind an account — how big it is, who it hires and loses, how its teams are built, and what's happening there now.
+  - [Company revenue](/company-insights/revenue): Get a company's most recent annual revenue as a range, with the fiscal year and the sources behind it.
+  - [Talent flow](/company-insights/talent-flow): See where a company hires from and where its people go, by company, school, region, seniority, and function, over any time window.
+  - [Team breakdown](/company-insights/team-breakdown): Count a company's employees by department and seniority, or size the exact teams you define by job title.
+  - [Scouting report](/company-insights/scouting-report): A one-call briefing on a company — news, founders, funding, media, open roles, and headcount history.
+- Audiences & lists
+  - [Audiences](/audiences): Build a saved list of companies and the people at them from search filters, enrich it with contact details, and export it — all over the API.
+  - [Exclusion lists](/audiences/exclusion-lists): Keep customers, competitors, and past contacts out of every search — free lists of companies or people that filter your results automatically.
+  - [Saved searches](/audiences/saved-search): Re-run a company or people search on a schedule and track who joins, departs, or stays — you're billed only for what's new.
+- Social media APIs
+  - [Social media APIs](/social): Pull live profiles, posts, audiences, transcripts, and search across X, GitHub, YouTube, Instagram, TikTok, and Reddit — then turn a handle into a contactable person.
+  - [X (Twitter)](/social/twitter): X profiles, keyword search, follower graphs, and tweet-level engagement — plus a synchronous handle-to-LinkedIn lookup that makes an X identity contactable.
+  - [GitHub](/social/github): Match a GitHub username to a LinkedIn profile and work emails, or go the other way from a LinkedIn URL or a name to a GitHub account.
+  - [YouTube](/social/youtube): YouTube channel stats, video metadata, timestamped transcripts, comments, and video search as structured API responses.
+  - [Instagram](/social/instagram): Instagram creator and brand profiles, posts and Reels with engagement metrics, and post comments — plus finding someone's Instagram from their name or LinkedIn.
+  - [TikTok](/social/tiktok): TikTok creator profiles, video catalogs and follower lists, spoken-word transcripts, keyword and hashtag search, trending feeds, and sound-based discovery.
+  - [Reddit](/social/reddit): Reddit search across every subreddit, list posts by Hot/New/Top, and read threaded comments with their nested replies.
+- LinkedIn data
+  - [Live Fetch](/linkedin/live-fetch): Fetch a LinkedIn profile or company as it stands right now, by whatever identifier you happen to hold.
+  - [LinkedIn Activities](/linkedin/activities): Read public LinkedIn posts, comments, and reactions — by author, by post, or by keyword across the whole platform.
+  - [Known Quirks of Activity Data](/linkedin/activity-quirks): Why LinkedIn posts, comments, and reactions can differ between two fetches.
+  - [Standardize identifiers](/linkedin/standardize-identifiers): Turn messy LinkedIn slugs, org IDs and URNs into clean canonical URLs, or hand us a whole spreadsheet and get it back repaired and enriched.
+- Monitoring & signals
+  - [Tracker](/monitoring/tracker): Watch companies and people for the changes that matter — 55 rule types, refresh cadences from daily to every six months, signals delivered by webhook and API.
+  - [Webhooks & Notifications](/monitoring/webhooks): Get notified when background jobs finish — machine-readable webhooks for your systems, configurable in the dashboard or through the API.
+  - [In-app notifications](/monitoring/notifications): Every background job, scheduled run, and credit alert lands in a shared team inbox in the dashboard — zero setup, visible to your whole organization.
+  - [Job changes](/monitoring/job-changes): Find out when the people you care about change jobs. Use Tracker for new integrations; job-change lists stay available for existing ones.
+- Market intelligence
+  - [Market Intelligence APIs](/market-intelligence): Hotels, Booking.com stays, flights and fare deals, live market quotes, and North American real estate listings, returned as JSON from the same Fiber API.
+  - [Hotels API](/market-intelligence/hotels): Search hotels and vacation rentals the way you would on a travel site, then open a property for rates, amenities, and booking offers.
+  - [Flights API](/market-intelligence/flights): Search one-way, round-trip, and multi-city flights with live fares, open an itinerary for booking options, or find cheap deals from a departure city.
+  - [Real estate listings](/market-intelligence/real-estate): Search homes for sale, for rent, or recently sold across the US and Canada, with prices, estimates, and listing details.
+  - [Financial instruments](/market-intelligence/finance): Live market data for a stock, ETF, index, mutual fund, or currency pair — quote, price movement, fundamentals, news, and price history in one call.
+  - [Yelp](/market-intelligence/yelp): Search Yelp businesses, pull a full business page, and page through reviews — ratings, hours, services, and normalized contact data.
+- Web research
+  - [Website screenshots](/web-research/website-screenshots): Turn any public URL into a permanently hosted PNG — desktop or mobile, viewport or full page, captured from the country you choose.
+- Account
+  - [Account & team](/account): Inviting teammates, what each role can do, how trials start and end, and where spending controls live.
+  - [Quickstart](/account/quickstart): Get a working Fiber API key in one command, straight from a terminal or an AI agent.
+  - [API keys](/account/api-keys): Create a Fiber API key, pass it on every request, give each key its own credit limit, and manage sandbox keys, expiration, and revocation.
+- Build
+  - [Build with Fiber](/build): Connect Fiber through MCP, the REST API, TypeScript and Python SDKs, the AI plugin, or OpenFiber — then consume results with webhooks or polling.
+  - [Sync vs async](/build/sync-vs-async): Which Fiber operations return in one call, which run as background jobs, how batch jobs are charged, and how to paginate every family correctly.
+  - [Performance & timeouts](/build/performance): How long Fiber calls take, what client timeout to set for each, and how to keep large jobs fast.
+  - [Errors & status codes](/build/errors): What every Fiber error means, which ones are safe to retry, and whether you were charged.
+  - [Rate limits](/build/rate-limits): How Fiber's per-minute rate limits work, how to see the exact limit for every endpoint, and how to stay under them.
+  - [SDKs](/build/sdks): Official TypeScript and Python SDKs for the Fiber AI API — typed requests, typed responses, and credit costs on every call.
+  - [MCP for AI agents](/build/mcp): Connect Fiber to Claude, ChatGPT, Cursor, Claude Code, Codex, VS Code, and Windsurf via Model Context Protocol (MCP) — search companies, enrich contacts, and check credits from your agent.
+  - [Developing with AI Agents](/build/ai-agents): Wire Fiber AI into Claude Code, Cursor, Codex, OpenCode, and 40+ other agents — plugins, MCP servers, and skills that search and enrich for you.
+  - [Building UIs on the Fiber API](/build/building-ui): The pattern book for wrapping Fiber in your own web UI — autocomplete that resolves, live match counts, cursor-paginated tables, progress for slow jobs, and credits on screen. With toy Next.js examples.
+  - [OpenFiber](/build/openfiber): An MIT-licensed, open-source prospecting UI built on the Fiber API — run it as-is, white-label it into your product, or fork it into something new.

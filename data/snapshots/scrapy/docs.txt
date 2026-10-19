@@ -1,0 +1,144 @@
+Scrapy 2.19 documentation — Scrapy 2.19.0 documentation 
+ scrapy.org / docs 
+ First steps 
+ Scrapy at a glance 
+ Installation guide 
+ Scrapy Tutorial 
+ Examples 
+ Basic concepts 
+ Scrapy’s building blocks 
+ Command line tool 
+ Spiders 
+ Selectors 
+ Items 
+ Item Loaders 
+ Scrapy shell 
+ Item Pipeline 
+ Feed exports 
+ Requests and Responses 
+ Cookies 
+ Link Extractors 
+ Settings 
+ Exceptions 
+ Built-in services 
+ Logging 
+ Stats Collection 
+ Telnet Console 
+ Solving specific problems 
+ Frequently Asked Questions 
+ Using Scrapy with coding agents 
+ Debugging Spiders 
+ Spiders Contracts 
+ Common Practices 
+ Security 
+ Optimization 
+ Using your browser’s Developer Tools for scraping 
+ Selecting dynamically-loaded content 
+ Debugging memory leaks 
+ Downloading and processing files and images 
+ Deploying Spiders 
+ AutoThrottle extension 
+ Benchmarking 
+ Jobs: pausing and resuming crawls 
+ Coroutines 
+ asyncio 
+ Extending Scrapy 
+ Architecture overview 
+ Add-ons 
+ Downloader Middleware 
+ Spider Middleware 
+ Extensions 
+ Signals 
+ Scheduler 
+ Item Exporters 
+ Download handlers 
+ Components 
+ Core API 
+ All the rest 
+ Release notes 
+ Contributing to Scrapy 
+ Versioning and API stability 
+ Scrapy 
+ Scrapy 2.19 documentation 
+ Edit on GitHub 
+ Scrapy 2.19 documentation  
+ Scrapy is a fast high-level web crawling and web scraping framework, used
+to crawl websites and extract structured data from their pages. It can be used
+for a wide range of purposes, from data mining to monitoring and automated
+testing. 
+ Getting help  
+ Having trouble? We’d like to help! 
+ Try the FAQ – it’s got answers to some common questions. 
+ Looking for specific information? Try the Index or Module Index . 
+ Ask or search questions in StackOverflow using the scrapy tag . 
+ Ask or search questions in the Scrapy subreddit . 
+ Search for questions on the archives of the scrapy-users mailing list . 
+ Ask a question in the #scrapy IRC channel . 
+ Report bugs with Scrapy in our issue tracker . 
+ Join the Discord community Scrapy Discord . 
+ First steps  
+ Scrapy at a glance Understand what Scrapy is and how it can help you. 
+ Installation guide Get Scrapy installed on your computer. 
+ Scrapy Tutorial Write your first Scrapy project. 
+ Examples Learn more by playing with a pre-made Scrapy project. 
+ Basic concepts  
+ Scrapy’s building blocks Get a quick map of Scrapy’s main concepts and when to use each. 
+ Command line tool Learn about the command-line tool used to manage your Scrapy project. 
+ Spiders Write the rules to crawl your websites. 
+ Selectors Extract the data from web pages using XPath. 
+ Items Define the data you want to scrape. 
+ Item Loaders Populate your items with the extracted data. 
+ Scrapy shell Test your extraction code in an interactive environment. 
+ Item Pipeline Post-process and store your scraped data. 
+ Feed exports Output your scraped data using different formats and storages. 
+ Requests and Responses Understand the classes used to represent HTTP requests and responses. 
+ Cookies Send and receive cookies. 
+ Link Extractors Convenient classes to extract links to follow from pages. 
+ Settings Learn how to configure Scrapy and see all available settings . 
+ Exceptions See all available exceptions and their meaning. 
+ Built-in services  
+ Logging Learn how to use Python’s built-in logging on Scrapy. 
+ Stats Collection Collect statistics about your scraping crawler. 
+ Telnet Console Inspect a running crawler using a built-in Python console. 
+ Solving specific problems  
+ Frequently Asked Questions Get answers to most frequently asked questions. 
+ Using Scrapy with coding agents Learn how to use Scrapy with coding agents efficiently. 
+ Debugging Spiders Learn how to debug common problems of your Scrapy spider. 
+ Spiders Contracts Learn how to use contracts for testing your spiders. 
+ Common Practices Get familiar with some Scrapy common practices. 
+ Security Understand the security implications of Scrapy defaults and how to harden
+them. 
+ Optimization Find the bottleneck of your crawls and learn how to address it. 
+ Using your browser’s Developer Tools for scraping Learn how to scrape with your browser’s developer tools. 
+ Selecting dynamically-loaded content Read webpage data that is loaded dynamically. 
+ Debugging memory leaks Learn how to find and get rid of memory leaks in your crawler. 
+ Downloading and processing files and images Download files and/or images associated with your scraped items. 
+ Deploying Spiders Deploying your Scrapy spiders and run them in a remote server. 
+ AutoThrottle extension Adjust crawl rate dynamically based on load. 
+ Benchmarking Check how Scrapy performs on your hardware. 
+ Jobs: pausing and resuming crawls Learn how to pause and resume crawls for large spiders. 
+ Coroutines Use the coroutine syntax . 
+ asyncio Use asyncio and asyncio -powered libraries. 
+ Extending Scrapy  
+ Architecture overview Understand the Scrapy architecture. 
+ Add-ons Enable and configure third-party extensions. 
+ Downloader Middleware Customize how pages get requested and downloaded. 
+ Spider Middleware Customize the input and output of your spiders. 
+ Extensions Extend Scrapy with your custom functionality 
+ Signals See all available signals and how to work with them. 
+ Scheduler Understand the scheduler component. 
+ Item Exporters Quickly export your scraped items to a file (XML, CSV, etc). 
+ Download handlers Customize how requests are downloaded or add support for new URL schemes. 
+ Components Learn the common API and some good practices when building custom Scrapy
+components. 
+ Core API Use it on extensions and middlewares to extend Scrapy functionality. 
+ All the rest  
+ Release notes See what has changed in recent Scrapy versions. 
+ Contributing to Scrapy Learn how to contribute to the Scrapy project. 
+ Versioning and API stability Understand Scrapy versioning and API stability. 
+ Next 
+ © Copyright Scrapy developers.
+ Last updated on Sep 10, 2026.
+ Built with Sphinx using a
+ theme 
+ provided by Read the Docs .

@@ -1,0 +1,84 @@
+{
+ "slug": "scraperapi",
+ "name": "ScraperAPI",
+ "category": "serp-scrape",
+ "fetched_at": "2026-10-19T05:54:08+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.scraperapi.com/pricing/",
+   "status": 200,
+   "final_url": "https://www.scraperapi.com/pricing/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 468667,
+   "truncated": false,
+   "sha256": "2f21cead80426128880b271a153cbb64ee28177f33586545ea7d5b495ba9452e",
+   "fetched_at": "2026-10-19T05:54:08+00:00",
+   "text_bytes": 15303
+  },
+  "docs": {
+   "url": "https://docs.scraperapi.com/",
+   "status": 200,
+   "final_url": "https://docs.scraperapi.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 603596,
+   "truncated": false,
+   "sha256": "345cd4a1a70871646108651f6ea3f5283a8225727f645adaa3d25d7dc952dcce",
+   "fetched_at": "2026-10-19T05:54:09+00:00",
+   "text_bytes": 3811
+  },
+  "home": {
+   "url": "https://www.scraperapi.com/",
+   "status": 200,
+   "final_url": "https://www.scraperapi.com/",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 392901,
+   "truncated": false,
+   "sha256": "b28ccf2584e47651f91aae189c5de68728c0f3ffecb30f96eb561b9bf7dfdd3e",
+   "fetched_at": "2026-10-19T05:54:10+00:00",
+   "text_bytes": 9377
+  },
+  "llms": {
+   "url": "https://docs.scraperapi.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.scraperapi.com/llms.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 26069,
+   "truncated": false,
+   "sha256": "b8f1f2c3d94daec709a23c991cfe27c65fa00d698bd49ac5dd8e54be1149d7e6",
+   "fetched_at": "2026-10-19T05:54:11+00:00",
+   "text_bytes": 26041
+  },
+  "llms-full": {
+   "url": "https://docs.scraperapi.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.scraperapi.com/llms-full.txt",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 1142610,
+   "truncated": false,
+   "sha256": "83623f2094de8c44aa8b07e5f987eaa34a217f5fce3f9b4b5814cf1f4ec9e502",
+   "fetched_at": "2026-10-19T05:54:12+00:00",
+   "text_bytes": 1141179
+  },
+  "llms-https://www.scraperapi.com/llms.txt": {
+   "url": "https://www.scraperapi.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.scraperapi.com/llms.txt",
+   "content_type": "text/plain; charset=UTF-8",
+   "bytes": 6719,
+   "truncated": false,
+   "sha256": "4f2e64efb9f0475dc4e4799a71b32b36c3edefa67361e5686e3f2f3e0406adcd",
+   "fetched_at": "2026-10-19T05:54:12+00:00",
+   "text_bytes": 6719
+  },
+  "llms-err-3e9d35": {
+   "url": "https://www.scraperapi.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://www.scraperapi.com/docs/llms.txt",
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 312020,
+   "truncated": false,
+   "sha256": "d6c5700ca3af2b4fc219e8cbb734b911d26fdc394d7aa7f9bacb9d58ea46b109",
+   "fetched_at": "2026-10-19T05:54:19+00:00"
+  }
+ }
+}

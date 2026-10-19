@@ -1,0 +1,49 @@
+{
+ "slug": "internetarchive-scholar",
+ "name": "Internet Archive Scholar",
+ "category": "archive",
+ "fetched_at": "2026-10-19T05:54:38+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://scholar.archive.org/",
+   "status": 200,
+   "final_url": "https://scholar.archive.org/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 8007,
+   "truncated": false,
+   "sha256": "47a1a5d24fa24abdf9eb950c8c8369299c35614073e56d0e40fd5e2475cdeb7f",
+   "fetched_at": "2026-10-19T05:54:38+00:00",
+   "text_bytes": 551
+  },
+  "llms-err-d6d290": {
+   "url": "https://scholar.archive.org/llms.txt",
+   "status": 404,
+   "final_url": "https://scholar.archive.org/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 179,
+   "truncated": false,
+   "sha256": "5547992afdadb59737c5c0feb1a35dff294cd27145bf290c031737ecf8a2577d",
+   "fetched_at": "2026-10-19T05:54:40+00:00"
+  },
+  "llms-err-e2f5b4": {
+   "url": "https://scholar.archive.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://scholar.archive.org/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 179,
+   "truncated": false,
+   "sha256": "5547992afdadb59737c5c0feb1a35dff294cd27145bf290c031737ecf8a2577d",
+   "fetched_at": "2026-10-19T05:54:40+00:00"
+  },
+  "llms-err-d560ed": {
+   "url": "https://docs.scholar.archive.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.scholar.archive.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:41+00:00"
+  }
+ }
+}

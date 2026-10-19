@@ -1,0 +1,37 @@
+# ScrapingDog (scrapingdog) category=serp-scrape
+home=https://www.scrapingdog.com/ pricing=https://www.scrapingdog.com/pricing/ docs=https://docs.scrapingdog.com/ llms=None
+sources_ok: pricing:https://www.scrapingdog.com/pricing/, docs:https://docs.scrapingdog.com/, home:https://www.scrapingdog.com/, llms:https://www.scrapingdog.com/llms.txt
+--- ranked fact lines ---
+[home] "price": "$218.00 with 38 percent savings",
+[home] "previous_price": "$349.00",
+[llms] Scrapingdog provides 60+ scraping and data-extraction APIs covering Google Search, Amazon, social media, e-commerce, AI/LLM pipelines, and more. All APIs return clean, structured JSON. Plans start with a free trial and scale to millions of requests per month.
+[home] Search Query * Football Location * New York Run API for Free Get > curl "https://api.scrapingdog.com/google_news?api_key=YOUR_API_KEY&query=football&results=10&country=us"
+[home] Search Query * Coffee Location * New York Run API for Free Get > curl "https://api.scrapingdog.com/google_maps?api_key=API_KEY&q=coffee&ll=@40.7455096,-74.0083012,15.1z"
+[home] ASIN Code * B07GSW5D2V Postal Code * 10001 Run API for Free Get {
+[home] "shipping_info": "FREE Tomorrow, April 14",
+[home] Target URL * https://www.walmart.com/ip/Papatui-Enriching-Men-s-Bar-Soap-Lush-Coconut-7oz/14693950426 Run API for Free Get {
+[home] Search Query * Scrapingdog Location * United States Run API for Free Get "organic_results": [
+[home] "source": "Detroit Free Press",
+[home] "description": "House-roasted coffee, snacks & free WiFi. Outpost of a chain of sleek coffeehouses offering house-roasted coffee, free WiFi & light bites.",
+[llms] ## Free Tools
+[llms] - [YouTube Transcript Extractor](https://www.scrapingdog.com/youtube-transcript-extractor/): Free tool to extract transcripts from YouTube videos.
+[llms] - [Free Local Leads Extraction Tool](https://www.scrapingdog.com/free-local-leads-extraction-tool/): Extract local business leads from Google Maps for free.
+--- llms/readme head ---
+# Scrapingdog
+> Scrapingdog is a web scraping API platform that handles proxies, CAPTCHAs, headless browsers, and JavaScript rendering so developers can extract structured data from any website at scale without getting blocked.
+Scrapingdog provides 60+ scraping and data-extraction APIs covering Google Search, Amazon, social media, e-commerce, AI/LLM pipelines, and more. All APIs return clean, structured JSON. Plans start with a free trial and scale to millions of requests per month.
+## Core Product
+- [Home](https://www.scrapingdog.com/): Platform overview, key features, and pricing tiers.
+- [All APIs](https://www.scrapingdog.com/apis/): Full catalogue of every scraping API offered.
+- [Pricing](https://www.scrapingdog.com/pricing/): Plan comparison — Lite, Standard, Pro, and Premium with monthly and annual billing.
+- [Documentation](https://www.scrapingdog.com/documentation/): Developer docs, quickstart guides, and full API reference.
+- [Integration](https://www.scrapingdog.com/integration/): Guides for integrating Scrapingdog with popular languages and frameworks.
+## Google APIs
+- [Google SERP API](https://www.scrapingdog.com/google-serp-api/): Scrape Google search results — organic listings, ads, People Also Ask, knowledge graph, and more.
+- [Google AI Mode API](https://www.scrapingdog.com/google-ai-mode-api/): Extract AI-generated summaries from Google's AI Mode search results.
+- [Google AI Overview API](https://www.scrapingdog.com/documentation/google-ai-overview-api/): Scrape Google AI Overview snippets that appear at the top of search results.
+- [Google Immersive Product API](https://www.scrapingdog.com/google-immersive-product-api/): Extract product data from Google's immersive product panels.
+- [Google Maps Search API](https://www.scrapingdog.com/documentation/google-maps-search-api/): Scrape Google Maps business listings, ratings, hours, and contact details.
+- [Google Maps Posts API](https://www.scrapingdog.com/documentation/google-maps-posts-api/): Extract Google Business Profile posts for any Maps listing.
+- [Google Maps Reviews API](https://www.scrapingdog.com/documentation/google-maps-reviews-api/): Scrape customer reviews and ratings from Google Maps listings.
+- [Google Maps Photos API](https://www.scrapingdog.com/documentation/google-maps-photos-api/): Retrieve photos associated with Google Maps business listings.

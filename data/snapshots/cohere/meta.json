@@ -1,0 +1,74 @@
+{
+ "slug": "cohere",
+ "name": "Cohere",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:52+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://cohere.com/pricing",
+   "status": 200,
+   "final_url": "https://cohere.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 577517,
+   "truncated": false,
+   "sha256": "8bb7cba26c3ed5484543f856e7bbb535b2d6d1eef02dea43742434361b8862ae",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 12598
+  },
+  "docs": {
+   "url": "https://docs.cohere.com/",
+   "status": 200,
+   "final_url": "https://docs.cohere.com/index.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 602,
+   "truncated": false,
+   "sha256": "4dc8c0e8616305242c42cc32d417edcf699979dbd4d2f4992f2aded6739e90d7",
+   "fetched_at": "2026-10-19T05:54:53+00:00",
+   "text_bytes": 602
+  },
+  "llms": {
+   "url": "https://docs.cohere.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.cohere.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 662,
+   "truncated": false,
+   "sha256": "2a3cbdf36e61a6da9ca7fe0c2db5685e156c2b7634192d9b2d0e916b2c17d1d3",
+   "fetched_at": "2026-10-19T05:54:54+00:00",
+   "text_bytes": 662
+  },
+  "llms-full": {
+   "url": "https://docs.cohere.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.cohere.com/docs/welcome.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 4266,
+   "truncated": false,
+   "sha256": "38c15109db0b4a55a8a532b1306ccd78c97cc76bc50d477de4bcb9cec778024b",
+   "fetched_at": "2026-10-19T05:54:58+00:00",
+   "text_bytes": 4260
+  },
+  "llms-https://docs.cohere.com/docs/llms.txt": {
+   "url": "https://docs.cohere.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.cohere.com/docs/welcome.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 4266,
+   "truncated": false,
+   "sha256": "38c15109db0b4a55a8a532b1306ccd78c97cc76bc50d477de4bcb9cec778024b",
+   "fetched_at": "2026-10-19T05:54:56+00:00",
+   "text_bytes": 4260
+  },
+  "trial": {
+   "url": "https://docs.cohere.com/docs/rate-limits",
+   "status": 200,
+   "final_url": "https://docs.cohere.com/docs/rate-limits.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 4045,
+   "truncated": false,
+   "sha256": "83e5955a25c6cefb2f523bce797ee99d2537766da1edea468d78cb3a39a6411d",
+   "fetched_at": "2026-10-19T06:01:31+00:00",
+   "text_bytes": 4045
+  }
+ }
+}

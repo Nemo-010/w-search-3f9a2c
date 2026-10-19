@@ -1,0 +1,23 @@
+# HAL API (hal) category=academic
+home=https://api.archives-ouvertes.fr/docs pricing=None docs=https://api.archives-ouvertes.fr/docs llms=None
+sources_ok: docs:https://api.archives-ouvertes.fr/docs, llms:https://api.archives-ouvertes.fr/docs/llms.txt, llms-full:https://api.archives-ouvertes.fr/docs/docs/llms-full.txt, llms-https://api.archives-ouvertes.fr/docs/docs/llms.txt:https://api.archives-ouvertes.fr/docs/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+Documentation API-HAL | API Archive Ouverte HAL
+Toggle navigation
+Documentation API-HAL
+Les APIs (Application Programming Interface) sont des interfaces qui permettent une communication machine à
+machine. Cette page vous donne accès à la documentation des APIs de HAL v3.0.
+Recherche HAL
+Search HAL resources via an API.
+Référentiels HAL
+Search HAL fields of reference via an API.
+SWORD import
+Effectuer un dépôt sur HAL grâce à l'API SWORD .
+OAI-PMH
+Serveur OAI-PMH de HAL.
+Contact
+Support
+Resources
+Documentation
+FAQ

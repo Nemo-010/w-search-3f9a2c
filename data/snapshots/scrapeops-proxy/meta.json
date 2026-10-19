@@ -1,0 +1,78 @@
+{
+ "slug": "scrapeops-proxy",
+ "name": "ScrapeOps Proxy",
+ "category": "marketplace",
+ "fetched_at": "2026-10-19T05:55:01+00:00",
+ "sources": {
+  "pricing-err-93a4f3": {
+   "url": "https://scrapeops.io/pricing/",
+   "status": 404,
+   "final_url": "https://scrapeops.io/pricing/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 13942,
+   "truncated": false,
+   "sha256": "0a75df93f195d4abd93c5d797735a73669cc33dcc09d4d68aa6edda3e76ebdbb",
+   "fetched_at": "2026-10-19T05:55:01+00:00"
+  },
+  "docs-err-682a21": {
+   "url": "https://scrapeops.io/docs/",
+   "status": 403,
+   "final_url": "https://scrapeops.io/docs/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864",
+   "fetched_at": "2026-10-19T05:55:02+00:00"
+  },
+  "home-err-875921": {
+   "url": "https://scrapeops.io/proxy-api/",
+   "status": 404,
+   "final_url": "https://scrapeops.io/proxy-api/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 13942,
+   "truncated": false,
+   "sha256": "0a75df93f195d4abd93c5d797735a73669cc33dcc09d4d68aa6edda3e76ebdbb",
+   "fetched_at": "2026-10-19T05:55:03+00:00"
+  },
+  "llms-err-abc982": {
+   "url": "https://scrapeops.io/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://scrapeops.io/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 13942,
+   "truncated": false,
+   "sha256": "0a75df93f195d4abd93c5d797735a73669cc33dcc09d4d68aa6edda3e76ebdbb",
+   "fetched_at": "2026-10-19T05:55:04+00:00"
+  },
+  "llms-err-8933f8": {
+   "url": "https://scrapeops.io/proxy-api/llms.txt",
+   "status": 404,
+   "final_url": "https://scrapeops.io/proxy-api/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 13942,
+   "truncated": false,
+   "sha256": "0a75df93f195d4abd93c5d797735a73669cc33dcc09d4d68aa6edda3e76ebdbb",
+   "fetched_at": "2026-10-19T05:55:04+00:00"
+  },
+  "llms-err-5b4876": {
+   "url": "https://scrapeops.io/proxy-api/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://scrapeops.io/proxy-api/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 13942,
+   "truncated": false,
+   "sha256": "0a75df93f195d4abd93c5d797735a73669cc33dcc09d4d68aa6edda3e76ebdbb",
+   "fetched_at": "2026-10-19T05:55:05+00:00"
+  },
+  "llms-err-f2b066": {
+   "url": "https://docs.scrapeops.io/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.scrapeops.io/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:55:05+00:00"
+  }
+ }
+}

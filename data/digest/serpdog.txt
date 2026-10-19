@@ -1,0 +1,23 @@
+# Serpdog (serpdog) category=serp-scrape
+home=https://serpdog.io/ pricing=None docs=None llms=None
+sources_ok: llms:https://docs.serpdog.io/llms.txt, llms-full:https://docs.serpdog.io/llms-full.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+# Serpdog's Documentation
+## Serpdog
+- [Getting Started](https://docs.serpdog.io/getting-started.md): Extract large amounts of data with our scalable data extraction API. Whether you need to scrape search engine results or want to collect data in bulk from LinkedIn, we have already covered you.
+- [Account API](https://docs.serpdog.io/account-api.md): The Serpdog Account API will allow users to get information about their account, including email address, plan name, quota, number of requests left, etc.
+- [Web Scraping API](https://docs.serpdog.io/web-scraping-api.md): Learn to use our Web Scraping API by reading this documentation and kickstart your data extraction journey!
+- [Yelp Search API](https://docs.serpdog.io/yelp-search-api.md): The Yelp Search API allows developers to Yelp Search Results in real-time. It can be easily accessed by requesting at the following endpoint: api.serpdog.io/yelp.
+- [Walmart Scraper API](https://docs.serpdog.io/walmart-scraper-api.md): The Walmart Scraper API allows businesses to extract data from Walmart in real-time. It can be easily accessed by requesting at the following endpoint: api.serpdog.io/walmart\_{type}.
+- [Amazon Scraper API](https://docs.serpdog.io/amazon-scraper-api.md): The Amazon Scraper API allows businesses to extract data from Amazon in real time. It can be easily accessed by requesting at the following endpoint: api.serpdog.io/amazon\_{type}.
+- [LinkedIn Jobs API](https://docs.serpdog.io/linkedin-jobs-api.md): The LinkedIn Jobs API allows developers to scrape job postings from LinkedIn. It can be easily accessed by making request at the following endpoint: api.serpdog.io/linkedin\_jobs.
+- [YouTube Search API](https://docs.serpdog.io/youtube-search-api.md): The YouTube Search API allows businesses to extract data from YouTube in real-time. It can be easily accessed by requesting at the following endpoint: api.serpdog.io/youtube.
+- [Bing Search API](https://docs.serpdog.io/bing-search-api.md): Scrape the Bing Search Search Results from any country in the world in both JSON and HTML format using this API. All featured snippets are supported.
+- [Google Search API](https://docs.serpdog.io/google-search-api.md): Scrape the Google Search Search Results from any country in the world in both JSON and HTML format using this API. All featured snippets are supported.
+- [Google Maps API](https://docs.serpdog.io/google-maps-api.md): Discover limitless possibilities with our Google Maps API integration. Effortlessly leverage location-based services, geocoding, mapping functionalities, and more.
+- [Google Maps Posts API](https://docs.serpdog.io/google-maps-api/google-maps-posts-api.md): Get the Google Maps Posts data using this API, consisting of posts description, date, images and link.
+- [Google Maps Photos API](https://docs.serpdog.io/google-maps-api/google-maps-photos-api.md): Get the Google Maps Photos data using this API.
+- [Google Maps Reviews API](https://docs.serpdog.io/google-maps-api/google-maps-reviews-api.md): Get the Google Maps Reviews data using this API, consisting of location details, user info, reviews and more.
+- [Google News API](https://docs.serpdog.io/google-news-api.md): Get access to real-time Google news data from over a thousand sources, including CNN, BBC, Reuters, New York Times, Washington Post, Wall Street Journal, Financial Times, and more.
+- [Google Finance API](https://docs.serpdog.io/google-finance-api.md): Using this API, you get the JSON data of Google Finance results consisting of stock pricing, financials, market news, and more.

@@ -1,0 +1,93 @@
+{
+ "slug": "currents",
+ "name": "Currents API",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:39+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://currentsapi.services/en/pricing",
+   "status": 200,
+   "final_url": "https://currentsapi.services/en/product/price",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 80748,
+   "truncated": false,
+   "sha256": "ac9bea6dc26ba44ad9ddd611ca2eac41e9a1c092eca979907e7886daee8dab17",
+   "fetched_at": "2026-10-19T05:54:39+00:00",
+   "text_bytes": 7406
+  },
+  "docs": {
+   "url": "https://currentsapi.services/en/docs/",
+   "status": 200,
+   "final_url": "https://currentsapi.services/en/docs/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 43283,
+   "truncated": false,
+   "sha256": "f5d614325fe02e57c723e4c5d6e43373e2f3541a233accc9cead9aba4cb6b687",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 7409
+  },
+  "home": {
+   "url": "https://currentsapi.services/",
+   "status": 200,
+   "final_url": "https://currentsapi.services/en",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 64287,
+   "truncated": false,
+   "sha256": "a36d372db6f9ac4f235bf9f061f9aca78672db4628258b3f47708b10df51517d",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 11221
+  },
+  "llms-err-88d72b": {
+   "url": "https://currentsapi.services/en/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://currentsapi.services/en/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 4569,
+   "truncated": false,
+   "sha256": "a5eab4211d85a48e6bcbcf415d3edb94ca0387dbb985e03ca0985fdcb4c85450",
+   "fetched_at": "2026-10-19T05:54:43+00:00"
+  },
+  "llms": {
+   "url": "https://currentsapi.services/llms.txt",
+   "status": 200,
+   "final_url": "https://currentsapi.services/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 4061,
+   "truncated": false,
+   "sha256": "50535fb60452676db57418351baf9f936d3157621076eecbc03e47c22dea9930",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 4017
+  },
+  "llms-full": {
+   "url": "https://currentsapi.services/llms-full.txt",
+   "status": 200,
+   "final_url": "https://currentsapi.services/llms-full.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 8485,
+   "truncated": false,
+   "sha256": "1d1d5d91383b2d2dbe6759a7bf67b221013aa18ee968b9c27d7a5ab2528760bf",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 8357
+  },
+  "llms-err-8c6e65": {
+   "url": "https://currentsapi.services/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://currentsapi.services/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 4569,
+   "truncated": false,
+   "sha256": "a5eab4211d85a48e6bcbcf415d3edb94ca0387dbb985e03ca0985fdcb4c85450",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  },
+  "llms-err-de8fdb": {
+   "url": "https://docs.currentsapi.services/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.currentsapi.services/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  }
+ }
+}

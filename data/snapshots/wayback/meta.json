@@ -1,0 +1,79 @@
+{
+ "slug": "wayback",
+ "name": "Wayback Machine CDX",
+ "category": "archive",
+ "fetched_at": "2026-10-19T05:54:38+00:00",
+ "sources": {
+  "docs-err-038d44": {
+   "url": "https://archive.org/help/wayback_api.jsp",
+   "status": 404,
+   "final_url": "https://archive.org/help/wayback_api.jsp",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 153,
+   "truncated": false,
+   "sha256": "c7ab5848485a7ce5ee9e599923e155f945b60d327218c07eab3e0f90dff727cf",
+   "fetched_at": "2026-10-19T05:54:38+00:00"
+  },
+  "home": {
+   "url": "https://web.archive.org/",
+   "status": 200,
+   "final_url": "https://web.archive.org/",
+   "content_type": "text/html",
+   "bytes": 145499,
+   "truncated": false,
+   "sha256": "bbfd2fbaff3fca714a28633656a6cf5c9254851273edf0945ae81a1e526dd5fb",
+   "fetched_at": "2026-10-19T05:54:38+00:00",
+   "text_bytes": 2974
+  },
+  "llms-err-9bf0d6": {
+   "url": "https://archive.org/help/wayback_api.jsp/llms.txt",
+   "status": 404,
+   "final_url": "https://archive.org/help/wayback_api.jsp/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 153,
+   "truncated": false,
+   "sha256": "c7ab5848485a7ce5ee9e599923e155f945b60d327218c07eab3e0f90dff727cf",
+   "fetched_at": "2026-10-19T05:54:39+00:00"
+  },
+  "llms-err-95eeae": {
+   "url": "https://web.archive.org/llms.txt",
+   "status": 404,
+   "final_url": "https://web.archive.org/llms.txt",
+   "content_type": "text/html",
+   "bytes": 142489,
+   "truncated": false,
+   "sha256": "423b4e41891b6fbb97bcece8c16c366d23e68827fa0749fb6148f688f6b0a64b",
+   "fetched_at": "2026-10-19T05:54:40+00:00"
+  },
+  "llms-err-934cc7": {
+   "url": "https://web.archive.org/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://web.archive.org/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 207,
+   "truncated": false,
+   "sha256": "e9639e3c4681ce85f852fbac48e2eeee5ba51296dbfec57c200d59b76237ab80",
+   "fetched_at": "2026-10-19T05:54:41+00:00"
+  },
+  "llms-err-02d924": {
+   "url": "https://docs.archive.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.archive.org/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:42+00:00"
+  },
+  "llms-err-0bebbd": {
+   "url": "https://docs.web.archive.org/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.web.archive.org/llms.txt",
+   "content_type": "",
+   "bytes": 161,
+   "truncated": false,
+   "sha256": "5bb147ef3e4821463e485b5f76acf495ad9f27bae2e86620952873a7ad89e041",
+   "fetched_at": "2026-10-19T05:54:42+00:00"
+  }
+ }
+}

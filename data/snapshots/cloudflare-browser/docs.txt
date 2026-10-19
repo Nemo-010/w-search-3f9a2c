@@ -1,0 +1,58 @@
+Browser Run · Cloudflare Browser Run docs Skip to content Documentation Index Fetch the complete documentation index at: https://developers.cloudflare.com/browser-run/llms.txt Use this file to discover all available pages before exploring further. Docs Directory API SDKs Changelog Search Ctrl K Log in Dashboard Browser Run / Overview Get started Quick Actions Overview /content - Fetch HTML /screenshot - Capture screenshot /pdf - Render PDF /markdown - Extract Markdown from a webpage /snapshot - Capture multiple page formats /accessibilityTree - Capture accessibility tree /scrape - Scrape HTML elements /json - Capture structured data using AI /links - Retrieve links from a webpage /crawl - Crawl web content Beta Reference ↗︎ API Chrome DevTools Protocol (CDP) Overview Session management (HTTP) Using with Puppeteer (CDP) Using with Playwright (CDP) Using with MCP clients (CDP) Playwright Overview Playwright MCP Beta Puppeteer Stagehand Beta Kitesurf Beta Additional features Live View Beta Human in the Loop Beta Session recording Beta WebMCP Beta Custom fonts Reuse sessions Guardrails Beta Outbound Workers Examples Tutorials Deploy a Browser Run Worker Generate PDFs Using HTML and CSS Build a web crawler with Queues and Browser Run ↗︎ Deploy a Browser Run Worker with Durable Objects Generate OG images for Astro sites Pre-render pages for crawlers Extract a brand kit from any website Reference Automatic request headers Supported fonts Quick Actions timeouts robots.txt and sitemaps Browser close reasons Wrangler Wrangler commands Browser binding API FAQ Limits Pricing Changelog MCP server MCP Agent resources Agent setup ↗︎ Cloudflare Skills ↗︎ Code Mode MCP Server ↗︎ Domain-specific MCP Servers ↗︎ MCP Browser Run llms.txt ↗︎ Browser Run llms-full.txt ↗︎ Cloudflare Docs llms.txt ↗︎ Cloudflare Docs llms-full.txt ↗︎ Home / Browser Run Browser Run Last updated Aug 11, 2026 | Copy as Markdown | View as Markdown | Agent setup Overview Use cases Integration methods Key features Related products More resources Run headless Chrome on Cloudflare's global network for browser automation, web scraping, testing, and content generation. 
+ Available on Free and Paid plans 
+ Browser Run, formerly known as Browser Rendering, enables developers to programmatically control and interact with headless browser instances running on Cloudflare’s global network. 
+ Use cases 
+ Programmatically load and fully render dynamic webpages or raw HTML and capture specific outputs such as: 
+ Markdown 
+ Screenshots 
+ PDFs 
+ Snapshots 
+ Links 
+ HTML elements 
+ Structured data 
+ Crawled web content 
+ Integration methods 
+ Browser Run offers two categories of integration methods: 
+ Quick Actions : Simple, stateless browser tasks like screenshots, PDFs, and scraping. No code deployment needed. 
+ Browser Sessions : Direct browser control via Puppeteer , Playwright , CDP , or Stagehand . Deploy within Cloudflare Workers or connect from any environment via CDP. 
+ Use case 
+ Recommended 
+ Why 
+ Simple screenshot, PDF, or scrape 
+ Quick Actions 
+ No code deployment; single HTTP request 
+ Browser automation 
+ Playwright , Puppeteer , or CDP 
+ Full browser control with scripting 
+ Porting existing scripts 
+ Puppeteer , Playwright , or CDP 
+ Minimal code changes from standard libraries 
+ AI-powered data extraction 
+ JSON endpoint 
+ Structured data via natural language prompts 
+ Site-wide crawling 
+ Crawl endpoint 
+ Multi-page content extraction with async results 
+ AI agent browsing 
+ Playwright MCP or CDP with MCP clients 
+ LLMs control browsers via MCP 
+ Resilient scraping 
+ Stagehand 
+ AI finds elements by intent, not selectors 
+ Direct browser control from any environment 
+ CDP 
+ WebSocket access from local machines, CI/CD, or external servers 
+ Key features 
+ Scale to thousands of browsers : Instant access to a global pool of browsers with low cold-start time, ideal for high-volume screenshot generation, data extraction, or automation at scale 
+ Global by default : Browser sessions run on Cloudflare's edge network, opening close to your users for better speed and availability worldwide 
+ Easy to integrate : Quick Actions for common tasks, Puppeteer and Playwright for complex workflows, and CDP for direct browser control from any environment 
+ Session management : Reuse browser sessions across requests to improve performance and reduce cold-start overhead 
+ Flexible pricing : Pay only for browser time used with generous free tier ( view pricing ) 
+ Related products 
+ Workers Build serverless applications and deploy instantly across the globe for exceptional performance, reliability, and scale. 
+ Durable Objects A globally distributed coordination API with strongly consistent storage. Using Durable Objects to persist browser sessions improves performance by eliminating the time that it takes to spin up a new browser session. 
+ Agents Build AI-powered agents that autonomously navigate websites and perform tasks using Playwright MCP or Stagehand . 
+ More resources 
+ *]:my-0!"> Get started Choose an integration method and deploy your first project. Limits Learn about Browser Run limits. Pricing Learn about Browser Run pricing. Playwright API Use Cloudflare's fork of Playwright for testing and automation. Developer Discord Connect with the Workers community on Discord to ask questions, show what you
+are building, and discuss the platform with other developers. @CloudflareDev Follow @CloudflareDev on Twitter to learn about product announcements, and
+what is new in Cloudflare Workers. Next Get started Was this helpful? Yes No Edit page Report issue On this page Overview Use cases Integration methods Key features Related products More resources Edit page Report issue Getting started Plans Contact sales Partners Find a partner Startups Under attack? Domain name search Company About Careers Investors Press Press kit Global network Public interest Project Galileo Athenian Project Cloudflare for Campaigns Project Fairshot Impact/ESG Compliance Compliance resources Trust Hub Data Protection Responsible AI Transparency report Report abuse Resources App innovation report Cloudflare Radar Case studies Status Support Events Blog Developers Documentation Learning center Community Solutions SSE and SASE platform Cloudflare AI Cloud AI Security Frontend Development Platform Multi-Tenant Platform Development Web Security Platform Start Building Log In © 2026 Cloudflare, Inc. Privacy policy | Report security issues | Terms of use | Trademark | Your privacy choices Docs

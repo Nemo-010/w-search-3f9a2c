@@ -1,0 +1,28 @@
+# Exa (exa) category=ai-search
+home=https://exa.ai/ pricing=https://exa.ai/pricing docs=https://docs.exa.ai/ llms=https://exa.ai/docs/llms.txt
+sources_ok: llms:https://exa.ai/docs/llms.txt, llms-full:https://exa.ai/docs/llms-full.txt, pricing:https://exa.ai/pricing, home:https://exa.ai/
+--- ranked fact lines ---
+[llms] - [Nevermined](https://exa.ai/docs/integrations/payments/nevermined.md): Autonomous agent payments for Exa via Nevermined x402 card delegation. A 7 USD purchase provisions or tops up an Exa API key with 7 USD of credits.
+[pricing] Exa API Pricing | Pay-as-You-Go Plans for AI Search Exa Site Index Fetch the Exa site index at: https://exa.ai/llms.txt Use this file to discover Exa products, pricing, evaluations, comparisons, use cases, agent interfaces, and technical documentation before exploring further. Introducing ATLAS Introducing ATLAS: A new benchmark for agentic search Learn more Products Search API Contents API Agent 
+[llms] - [Pay with x402](https://exa.ai/docs/integrations/payments/x402/quickstart.md): Use Exa's Search and Contents APIs without an API key. Pay per request with USDC on Arc, Base, World Chain, or Solana via the x402 protocol, including Circle Gateway nanopayments.
+[llms] - [Pay with MPP (Tempo)](https://exa.ai/docs/integrations/payments/mpp/quickstart.md): Call Exa's Search and Contents APIs without an API key by paying per request with USDC.e on Tempo.
+[llms] - [World AgentKit](https://exa.ai/docs/integrations/payments/x402/agentkit.md): Let verified human-backed AI agents access Exa for free using World AgentKit — no USDC needed.
+--- llms/readme head ---
+# Exa
+> A powerful web search tool designed for agents. Everything optimized to get you token-efficient, accurate results.
+> ## Agent Instructions
+> The Exa API is served at https://api.exa.ai. Authenticate with `Authorization: Bearer $EXA_API_KEY` (or `x-api-key: $EXA_API_KEY`); create keys at https://dashboard.exa.ai/api-keys.
+> Prefer the official SDKs, `exa-py` (`pip install exa-py`) and `exa-js` (`npm install exa-js`); both read `EXA_API_KEY` from the environment.
+> Tool-using agents can call Exa without writing code through the hosted MCP server at https://mcp.exa.ai/mcp, or install the Exa agent skill with `npx skills add exa-labs/agent-skills` (skill file: https://exa.ai/docs/skill.md).
+> The OpenAPI specs at https://exa.ai/docs/exa-spec.yaml and https://exa.ai/docs/team-management-spec.yaml are the source of truth for request and response schemas.
+- [Start building with Exa](https://exa.ai/docs/index.md): A powerful web search tool designed for agents. Everything optimized to get you token-efficient, accurate results.
+- [Developer quickstart](https://exa.ai/docs/get-started/quickstart.md): Get an API key, then use Exa from your code or your agent.
+- [Exa MCP](https://exa.ai/docs/get-started/exa-mcp.md): Exa MCP server: connect ChatGPT, Codex, Claude, Grok, Cursor, and any other MCP client to Exa's web search, page fetching, Exa Agent, and Exa Connect tools.
+- [Agent Skills](https://exa.ai/docs/get-started/agent-skills/overview.md): Install Exa skills in Claude Code, Codex, and other coding agents.
+- [Build with Exa Skill](https://exa.ai/docs/get-started/agent-skills/build-with-exa.md): An agent skill to help developers implement any part of the Exa API platform.
+- [Exa Search Skill](https://exa.ai/docs/get-started/agent-skills/exa-search.md): Find relevant web pages and return synthesized content in under two seconds with Exa Search.
+- [Exa Contents Skill](https://exa.ai/docs/get-started/agent-skills/exa-contents.md): Extract page content with Exa Contents when you already have the URLs.
+- [Exa Search API](https://exa.ai/docs/search/quickstart.md): Search the web in natural language and get clean, relevant page content in one request.
+- [Deep Search](https://exa.ai/docs/search/deep-search.md): Use iterative search, reasoning, and grounded synthesis for complex research tasks.
+- [Highlights](https://exa.ai/docs/search/highlights.md): Return query-relevant excerpts from Exa Search results while controlling context size and latency.
+- [Exa Snapshot](https://exa.ai/docs/search/snapshot.md): Pin Search and Contents to a stored version of a page at a datetime you choose.

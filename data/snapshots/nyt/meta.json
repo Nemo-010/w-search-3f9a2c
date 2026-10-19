@@ -1,0 +1,84 @@
+{
+ "slug": "nyt",
+ "name": "New York Times API",
+ "category": "news",
+ "fetched_at": "2026-10-19T05:54:41+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://developer.nytimes.com/pricing",
+   "status": 200,
+   "final_url": "https://developer.nytimes.com/pricing",
+   "content_type": "text/html",
+   "bytes": 2138,
+   "truncated": false,
+   "sha256": "88aecdd8627dc01d61aee78915f5928e58aa99c34b74628d6bfbaca6d24990a1",
+   "fetched_at": "2026-10-19T05:54:41+00:00",
+   "text_bytes": 0
+  },
+  "docs": {
+   "url": "https://developer.nytimes.com/docs/",
+   "status": 200,
+   "final_url": "https://developer.nytimes.com/docs/",
+   "content_type": "text/html",
+   "bytes": 2138,
+   "truncated": false,
+   "sha256": "88aecdd8627dc01d61aee78915f5928e58aa99c34b74628d6bfbaca6d24990a1",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 0
+  },
+  "home": {
+   "url": "https://developer.nytimes.com/",
+   "status": 200,
+   "final_url": "https://developer.nytimes.com/",
+   "content_type": "text/html",
+   "bytes": 2138,
+   "truncated": false,
+   "sha256": "88aecdd8627dc01d61aee78915f5928e58aa99c34b74628d6bfbaca6d24990a1",
+   "fetched_at": "2026-10-19T05:54:42+00:00",
+   "text_bytes": 0
+  },
+  "llms": {
+   "url": "https://developer.nytimes.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://developer.nytimes.com/docs/llms.txt",
+   "content_type": "text/html",
+   "bytes": 2138,
+   "truncated": false,
+   "sha256": "88aecdd8627dc01d61aee78915f5928e58aa99c34b74628d6bfbaca6d24990a1",
+   "fetched_at": "2026-10-19T05:54:43+00:00",
+   "text_bytes": 0
+  },
+  "llms-full": {
+   "url": "https://developer.nytimes.com/llms-full.txt",
+   "status": 200,
+   "final_url": "https://developer.nytimes.com/llms-full.txt",
+   "content_type": "text/html",
+   "bytes": 2138,
+   "truncated": false,
+   "sha256": "88aecdd8627dc01d61aee78915f5928e58aa99c34b74628d6bfbaca6d24990a1",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 0
+  },
+  "llms-https://developer.nytimes.com/llms.txt": {
+   "url": "https://developer.nytimes.com/llms.txt",
+   "status": 200,
+   "final_url": "https://developer.nytimes.com/llms.txt",
+   "content_type": "text/html",
+   "bytes": 2138,
+   "truncated": false,
+   "sha256": "88aecdd8627dc01d61aee78915f5928e58aa99c34b74628d6bfbaca6d24990a1",
+   "fetched_at": "2026-10-19T05:54:44+00:00",
+   "text_bytes": 0
+  },
+  "llms-err-db1525": {
+   "url": "https://docs.developer.nytimes.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.developer.nytimes.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:44+00:00"
+  }
+ }
+}

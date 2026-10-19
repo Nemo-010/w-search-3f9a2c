@@ -1,0 +1,31 @@
+# REST Countries (restcountries) category=misc-api
+home=https://restcountries.com/ pricing=None docs=https://restcountries.com/ llms=None
+sources_ok: docs:https://restcountries.com/, llms:https://restcountries.com/llms.txt
+--- ranked fact lines ---
+[docs] One lookup on an address returns the operator handling its mail, its SPF and DMARC posture, and flags for free, disposable and role-based addresses.
+[docs] What's free, what's paid?
+[docs] The free tier covers most prototypes and small apps outright. See plans →
+[docs] Free Flag CDN
+[docs] Free Favicon CDN
+[llms] > REST Countries is a read-only data API family: a Countries API (250+ countries, 90+ fields each) and a Currencies API (currency conversion and exchange rates, fiat and crypto), sharing one key and one quota at 99.995% uptime.
+[llms] - Auth: same bearer token (or `?api-key=`); draws on the same account quota and the same 20 req/s edge limit
+[llms] - Snapshot-backed: every convert/rates object carries an `as_of` stamp; refresh cadence is 24h (free) / 1h (paid)
+--- llms/readme head ---
+# REST Countries
+> REST Countries is a read-only data API family: a Countries API (250+ countries, 90+ fields each) and a Currencies API (currency conversion and exchange rates, fiat and crypto), sharing one key and one quota at 99.995% uptime.
+REST Countries is a read-only HTTP API served as JSON over HTTPS from a long-term-stable, license-cleaned dataset. It spans two APIs that share one account, one API key, and one monthly request quota: the Countries API (`/countries/v5`) for structured country data, and the Currencies API (`/currencies/v1`) for currency conversion and exchange rates across fiat and crypto. Each API versions independently: additive changes ship inside the current major, and breaking changes would get a new major. Authentication is `Authorization: Bearer {key}` on every request; sign up at https://restcountries.com/sign-up for a key. A demo key `rc_live_demo` works on any endpoint without an account (returns sample payloads, no quota burn).
+## Quick reference
+### Countries API
+- Base URL: `https://api.restcountries.com/countries/v5`
+- Auth header: `Authorization: Bearer {api-key}` (or `?api-key={api-key}` for browser-side testing)
+- Default page size: 25; max 100 via `?limit=`
+- Pretty JSON: append `?pretty=1`
+- Trim response: `?response_fields=names.common,codes.alpha_2` (dot-path projection)
+- Drop heavy branches: `?response_fields_omit=names.translations`
+- Full-text search across searchable properties: `?q=`
+- Per-property filter chains with AND-semantics: `?region=Europe&landlocked=1`
+- Aggregate searches: `/code?q=` spans every code property; `/name?q=` spans common/official/native/alternates
+### Currencies API
+- Base URL: `https://api.restcountries.com/currencies/v1`
+- Auth: same bearer token (or `?api-key=`); draws on the same account quota and the same 20 req/s edge limit
+- Convert: `/convert?from=USD&to=EUR&amount=100`; `to` takes up to 5 comma-separated targets, `amount` defaults to 1, all-or-nothing on any unknown code

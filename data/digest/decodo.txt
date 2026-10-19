@@ -1,0 +1,37 @@
+# Decodo (decodo) category=serp-scrape
+home=https://decodo.com/ pricing=https://decodo.com/pricing docs=https://help.decodo.com/ llms=None
+sources_ok: pricing:https://decodo.com/pricing, docs:https://help.decodo.com/, home:https://decodo.com/, llms:https://help.decodo.com/llms.txt, llms-full:https://help.decodo.com/llms-full.txt, llms-https://decodo.com/llms.txt:https://decodo.com/llms.txt
+--- ranked fact lines ---
+[llms] - [ISP Proxies](https://decodo.com/proxies/isp-proxies): Residential ISP proxies from $0.27/IP with free trial
+[llms] - [Datacenter Proxies](https://decodo.com/proxies/datacenter-proxies): Datacenter proxies from $0.026/IP with free trial
+[llms] - [Residential Proxies](https://decodo.com/proxies/residential-proxies): Residential proxies from $2/GB with global IP coverage
+[llms] - [Static Residential Proxies](https://decodo.com/proxies/static-residential-proxies): Static residential (ISP-backed) proxies from $0.27/IP
+[llms] - [Buy Proxies](https://decodo.com/proxies/buy): Buy proxy servers from $0.45/GB
+[llms] - [Cheap Proxies](https://decodo.com/proxies/cheap): Budget proxies from $0.026/IP
+[llms] - [Private Proxies](https://decodo.com/proxies/private-proxies): Dedicated private IPs from $1.15/IP
+[docs] Free Trials Free trial options for Decodo products.
+[llms] - [Mobile Proxies](https://decodo.com/proxies/mobile): 5G/4G/3G/LTE mobile proxies with free trial
+[llms] - [Rotating Proxies](https://decodo.com/proxies/rotating-proxies): Unlimited rotating proxies with free trial
+[llms] - [Proxy Extension](https://decodo.com/apps/proxy-extension): Free Chrome proxy extension
+[llms] - [Proxy Checker](https://decodo.com/apps/proxy-checker): Free proxy checker tool
+[llms] - [What Is My IP](https://decodo.com/what-is-my-ip): Free IP address lookup tool
+[llms] - [Do You Offer a Free Trial](https://decodo.com/faq/billing/do-you-offer-a-free-trial): Free trial availability
+--- llms/readme head ---
+# Decodo
+> Decodo (formerly Smartproxy) is a proxy and web scraping platform for large-scale public web data collection. It provides residential, ISP, datacenter, and mobile proxies, as well as Web Scraping API (including Web, SERP, eCommerce, and social media targets) that help businesses bypass IP bans and CAPTCHAs, enabling efficient and reliable access to public web data. Decodo serves market research, eCommerce, SEO, and data science teams with scalable networks, granular geo-targeting, and developer-focused tooling.
+## Proxy types
+- [Residential Proxies](https://decodo.com/proxies/residential-proxies): Residential proxies from $2/GB with global IP coverage
+- [Static Residential Proxies](https://decodo.com/proxies/static-residential-proxies): Static residential (ISP-backed) proxies from $0.27/IP
+- [ISP Proxies](https://decodo.com/proxies/isp-proxies): Residential ISP proxies from $0.27/IP with free trial
+- [Mobile Proxies](https://decodo.com/proxies/mobile): 5G/4G/3G/LTE mobile proxies with free trial
+- [Datacenter Proxies](https://decodo.com/proxies/datacenter-proxies): Datacenter proxies from $0.026/IP with free trial
+- [Sticky Residential Proxies](https://decodo.com/proxies/sticky-residential-proxies): Residential proxies with persistent sticky sessions
+- [YouTube Proxies](https://decodo.com/proxies/youtube-proxies): Proxies optimized for YouTube access and automation
+## Proxy features & options
+- [Buy Proxies](https://decodo.com/proxies/buy): Buy proxy servers from $0.45/GB
+- [Proxy Features](https://decodo.com/proxies/features): Overview of Decodo proxy network features
+- [Cheap Proxies](https://decodo.com/proxies/cheap): Budget proxies from $0.026/IP
+- [SOCKS5 Proxies](https://decodo.com/proxies/socks5): SOCKS5 residential, dedicated, and other proxy types
+- [Rotating Proxies](https://decodo.com/proxies/rotating-proxies): Unlimited rotating proxies with free trial
+- [Private Proxies](https://decodo.com/proxies/private-proxies): Dedicated private IPs from $1.15/IP
+- [IPv4 Proxies](https://decodo.com/proxies/ipv4-proxies): IPv4 proxies across 195+ locations

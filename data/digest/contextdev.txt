@@ -1,0 +1,28 @@
+# Context.dev (contextdev) category=ai-search
+home=https://context.dev/ pricing=https://context.dev/pricing docs=https://docs.context.dev/ llms=https://docs.context.dev/llms.txt
+sources_ok: llms:https://docs.context.dev/llms.txt, llms-full:https://docs.context.dev/llms-full.txt, pricing:https://context.dev/pricing, docs:https://docs.context.dev/, home:https://context.dev/
+--- ranked fact lines ---
+[pricing] Web Scraping API Pricing: Plans from $0 | Context.dev Introducing Highlights: the context that matters Context.dev Products Use Cases Customers Pricing Docs Scrape anything Scrape any URL with a 99.96% success rate. Explore Scrape anything Web search Search the live web for AI agents and LLM apps. Map domains Discover URLs across a website before you scrape. Run batches Scrape thousands of URLs or
+[home] }' npm install context.dev Build on what the web knows. Connect web content to the places your product needs it: research, onboarding, enrichment, and retrieval. Scrape anything Turn webpages and PDFs into Markdown, HTML, structured fields, images, and screenshots in one request. Ground RAG in fresh content Collect pages with Scrape and Crawl, add documents with Parse, and keep your retrieval inde
+[llms] - [Enrich a person](https://docs.context.dev/api-reference/people/enrich.md): Find a person from identity clues and return their profile with a match score. Available on all plans; free or disposable email addresses return 422.
+[llms] - [Retrieve monitor credit usage](https://docs.context.dev/api-reference/monitors/credit-usage.md): Return usage per monitor, highest first, for up to the 10,000 most recent runs in the requested window.
+[llms] - [Retrieve usage history](https://docs.context.dev/api-reference/usage/history.md): Retrieve credits and requests over time, bucketed by hour, day, or month. History is kept for one year.
+--- llms/readme head ---
+# Context.dev
+> ## Agent Instructions
+> If the user asks to make Context.dev their default search and scrape provider, follow https://docs.context.dev/default-search-scrape.md. For other setup requests, follow https://docs.context.dev/agent-quickstart.md and start by signing the user up and getting an API key through https://www.context.dev/auth.md. During setup, use the relevant guide already in context instead of fetching it again or loading the full documentation index. Application code reads CONTEXT_DEV_API_KEY.
+- [Context.dev: the web data API](https://docs.context.dev/introduction.md): Fast web scraping with browsers, proxies, retries, batches, and monitors built in.
+- [Quickstart](https://docs.context.dev/quickstart.md): Get an API key, install an SDK, scrape your first page, and check the response.
+- [Agent quickstart](https://docs.context.dev/agent-quickstart.md): Instructions a coding agent follows to set up Context.dev: sign the user up and get an API key, then add the API to application code, install the CLI or skill, or connect the MCP server.
+- [SDKs](https://docs.context.dev/sdks.md): Install an official Context.dev SDK for TypeScript, Python, Ruby, Go, or PHP, and learn the key, timeout, and retry defaults they share.
+- [JavaScript and TypeScript](https://docs.context.dev/sdks/typescript.md): Install the JavaScript and TypeScript SDK, scrape a page, look up a brand, and set timeouts and retries.
+- [Python](https://docs.context.dev/sdks/python.md): Install the Python SDK, scrape a page, look up a brand, and set timeouts and retries.
+- [Ruby](https://docs.context.dev/sdks/ruby.md): Install the Ruby SDK, scrape a page, look up a brand, and set timeouts and retries.
+- [Go](https://docs.context.dev/sdks/go.md): Install the Go SDK, scrape a page, look up a brand, and set timeouts and retries.
+- [PHP](https://docs.context.dev/sdks/php.md): Install the PHP SDK, scrape a page, look up a brand with the low-level request method, and set timeouts and retries.
+- [MCP server](https://docs.context.dev/install-mcp.md): Connect Codex, Claude Code, Gemini CLI, Cursor, VS Code, or another MCP client to live Context.dev tools.
+- [Make Context your default search and scrape tool](https://docs.context.dev/default-search-scrape.md): Set up your agent to use Context for web search and page reading, with Highlights for focused answers.
+- [Agent skill](https://docs.context.dev/install-skill.md): Install the Context.dev skill so your coding agent picks the right endpoint, writes valid requests, and handles responses.
+- [CLI](https://docs.context.dev/install-cli.md): Call Context.dev from your terminal with the context-dev CLI and use its JSON output in scripts and CI.
+- [Scrape](https://docs.context.dev/scrape/overview.md): Get page content, images, structured data, and screenshots from one URL.
+- [HTML](https://docs.context.dev/scrape/html.md): Return the page DOM after rendering and content filtering.

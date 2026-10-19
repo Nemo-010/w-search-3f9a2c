@@ -1,0 +1,32 @@
+# SerpApi (serpapi) category=serp-scrape
+home=https://serpapi.com/ pricing=https://serpapi.com/pricing docs=https://serpapi.com/search-api llms=None
+sources_ok: pricing:https://serpapi.com/pricing, docs:https://serpapi.com/search-api, home:https://serpapi.com/, llms:https://serpapi.com/llms.txt
+--- ranked fact lines ---
+[pricing] U.S. Legal Shield U.S. Legal Shield provides up to $2 million in coverage for the scraping and parsing of search engine data, as long as your use of the data or service is not illegal. " aria-expanded="false">
+[docs] "price": "$50.00",
+[docs] "price": "$125.00",
+[docs] "price": "$49.95",
+[home] Included with the Production Plan and above, with up to $2 million in coverage.
+[home] U.S. Legal Shield is included with the Production Plan and above, with up to $2 million in coverage. Learn more.
+[pricing] Start for free, upgrade as you grow, or contact our team about an enterprise plan tailored to your volume, performance, and compliance needs.
+[pricing] Only successful searches are counted toward your monthly searches. Cached, errored, and failed searches are not. The number of results returned per response will not affect the number of credits used—responses with 100 results or empty result sets will both count as 1 search.
+[docs] + 0 extra credits
+[docs] "description": "Wikipedia is a free content, multilingual online encyclopedia written and maintained by a community of volunteers through a model of open collaboration, using a wiki-based editing system. Individual contributors, also called editors, are known as Wikipedians.",
+[home] Only successful searches are counted towards your monthly searches. Cached, errored, and failed searches are not. The number of results returned per response will not affect the number of credits used - responses with 100 results or empty result sets will both cost 1 search credit.
+[home] We provide a 99.95% SLA guarantee with all plans. The SLA guarantee comes with a 100% penalty, and we offer credits up to 100% of the monthly price of your plan on your next invoice.
+--- llms/readme head ---
+# SerpApi
+> SerpApi provides a real-time JSON API for accessing structured search engine results from Google, Bing, Baidu, and more. Trusted by Nvidia, Shopify, Perplexity, Adobe, Samsung, KPMG, Ahrefs, Grubhub, AI21 Labs, Salesforce, Thomson Reuters, Morgan Stanley, United Nations, Experian, BrightLocal, and thousands of other companies.
+- Website: https://serpapi.com
+- Sign up: https://serpapi.com/users/sign_up
+- API: https://serpapi.com/search
+- Example: `GET https://serpapi.com/search?api_key=YOUR_API_KEY&engine=google&q=Coffee`
+- Supported engines: Google, Airbnb, Apple App Store, Apple Maps, Baidu, Bing, Brave AI Mode, Amazon, DuckDuckGo, eBay, Facebook, Instagram, Naver, OpenTable, Search Index, The Home Depot, Target, Tripadvisor, Walmart, Yahoo!, Yandex, Yelp, YouTube, Extract, Zillow
+## Pricing
+- [Plans and Pricing](https://serpapi.com/pricing.md): Choose your plan. Month to month contract. Cancel anytime. SerpApi provides simple pricing to suit your every need.
+## Integrations
+- [Language Libraries and Tools](https://serpapi.com/integrations.md): Official libraries for Ruby, Python, JavaScript, Golang, PHP, Java, Rust, .NET, Swift, C++, and CLI, plus MCP support
+## Markdown Output
+- [Markdown Output for AI Agents](https://serpapi.com/markdown-output.md): Get search results as clean, token-efficient markdown instead of JSON. Built for LLMs, AI agents, and agentic workflows.
+- Usage: Add `output=md` to any search request, or use `/search.md`, or request `Accept: text/markdown`
+## API Documentation

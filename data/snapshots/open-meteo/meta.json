@@ -1,0 +1,81 @@
+{
+ "slug": "open-meteo",
+ "name": "Open-Meteo",
+ "category": "misc-api",
+ "fetched_at": "2026-10-19T05:54:48+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://open-meteo.com/en/pricing",
+   "status": 200,
+   "final_url": "https://open-meteo.com/en/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 49655,
+   "truncated": false,
+   "sha256": "9a0d7ee0a7b9a14b11a96487cdd9880f282bb72e595d1943dd4fc5f22fe4cba7",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 6402
+  },
+  "docs": {
+   "url": "https://open-meteo.com/en/docs",
+   "status": 200,
+   "final_url": "https://open-meteo.com/en/docs",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 607658,
+   "truncated": false,
+   "sha256": "ee4a76ca54818d7f54f5d95d0c330a341b9654eddf5102ff905d3c7db1938e64",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 52554
+  },
+  "home": {
+   "url": "https://open-meteo.com/",
+   "status": 200,
+   "final_url": "https://open-meteo.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 51666,
+   "truncated": false,
+   "sha256": "6b277794aef8c5d6614fc9f47a210ce205d108b34dbce64389dad382fba62e54",
+   "fetched_at": "2026-10-19T05:54:48+00:00",
+   "text_bytes": 4972
+  },
+  "llms-err-3c4200": {
+   "url": "https://open-meteo.com/en/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://open-meteo.com/en/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 25655,
+   "truncated": false,
+   "sha256": "7ec4bb9be18d9bc809e565a80423c5eb81fcf0c877ef7897a575e9790e17bf8e",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  },
+  "llms-err-2e8e19": {
+   "url": "https://open-meteo.com/llms.txt",
+   "status": 404,
+   "final_url": "https://open-meteo.com/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 25655,
+   "truncated": false,
+   "sha256": "7ec4bb9be18d9bc809e565a80423c5eb81fcf0c877ef7897a575e9790e17bf8e",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  },
+  "llms-err-3f7c2f": {
+   "url": "https://open-meteo.com/docs/llms.txt",
+   "status": 404,
+   "final_url": "https://open-meteo.com/docs/llms.txt",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 25655,
+   "truncated": false,
+   "sha256": "7ec4bb9be18d9bc809e565a80423c5eb81fcf0c877ef7897a575e9790e17bf8e",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  },
+  "llms-err-2e8b5c": {
+   "url": "https://docs.open-meteo.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.open-meteo.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:49+00:00"
+  }
+ }
+}

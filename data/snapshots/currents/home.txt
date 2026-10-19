@@ -1,0 +1,259 @@
+Currents News API | Free JSON News API for Developers 
+ Platform
+ Introduction 
+ Sources 
+ Solutions
+ Use Cases 
+ Compare Alternatives 
+ Pricing Comparison 
+ Features Comparison 
+ Pricing
+ Developers
+ Documentation 
+ FAQ 
+ Blog
+ ◐ 
+ Comfort off 
+ Login 
+ Sign Up Free 
+ ◐ 
+ Comfort off 
+ Login 
+ Sign Up Free 
+ News API for Real-Time JSON News Data 
+ Get a free API key, test latest-news feeds and keyword search, and access real-time and historical news from a source directory spanning 168 countries and 20+ languages. Start with 250 free requests per day, no credit card required.
+ Start for Free
+ Get Free API Key 
+ API Key Setup 
+ Read Docs 
+ No credit card required. Start with 250 daily requests.
+ Free News API 
+ Latest News API 
+ Pricing and quotas 
+ Free Tier 
+ Start with 250 daily requests at no cost. View pricing 
+ No Credit Card 
+ Sign up instantly without payment details 
+ Easy to Use 
+ Simple JSON API with comprehensive docs 
+ What is Currents News API? 
+ Currents is a REST news API that delivers real-time and historical articles from a source directory spanning 168 countries and 20+ languages. Responses are clean JSON with metadata, descriptions, source URLs, available content fields, and filters for country, language, category, date range, and search keywords.
+ How the News API Works 
+ Send one HTTP request with your API key. The API returns a JSON list of articles. 
+ 1. Send a request 
+ curl -G https://api.currentsapi.services/v1/latest-news \
+ -H "Authorization: Bearer YOUR_API_KEY" \
+ -d language=en -d page_size=3 
+ /v1/latest-news returns the newest indexed articles. Filter them by language , country , and category . 
+ /v1/search finds articles by keywords in a date window set by start_date and end_date . 
+ A free key allows 250 requests per UTC day and up to 20 articles per request. Free searches have a 30-day lookback and a 7-day max date span per request. 
+ Get a free API key · Latest news reference · Search reference 
+ 2. Read the JSON response 
+ {
+ "status": "ok",
+ "news": [
+ {
+ "id": "f8f18e4b-c66e-47ca-9f7d-54f03e431a77",
+ "title": "Chipmaker expands data-center investment",
+ "description": "The company announced a new multi-year expansion plan...",
+ "url": "https://example.com/business/chipmaker-expands",
+ "author": "Editorial Desk",
+ "image": "https://example.com/images/chipmaker.jpg",
+ "language": "en",
+ "category": ["science_technology", "economy_business_finance"],
+ "published": "2026-03-24 11:10:00 +0000"
+ }
+ ],
+ "page": 1
+} 
+ Each article has an ID, title, description, link to the original story, language, categories, and publication time. author and image are null when the publisher does not provide them. The values above are examples. 
+ POWERED BY CURRENTS 
+ Built for developers who need reliable news data 
+ 168 
+ Country Designations 
+ Global and regional news with country-level filtering. 
+ 26M+ 
+ Total Articles 
+ A large and diverse news collection archived over the past 4 years. 
+ 20+ 
+ Languages Supported 
+ Use language filters for multilingual news workflows. 
+ Why Choose Currents? 
+ Generous free tier 
+ Start with 250 requests per day, no credit card required. See free plan details . 
+ Broad source coverage 
+ Use a global source catalog with entries assigned to 168 country designations and 20+ languages. 
+ Historical archive 
+ Search 26M+ archived articles for research, monitoring, and trend analysis. 
+ Developer-friendly JSON 
+ Use consistent REST endpoints with clean JSON responses and predictable metadata. Get your API key . 
+ Transparent pricing 
+ Simple plans from free tier to enterprise scale, with clear monthly quotas. Compare plans . 
+ Fast, reliable access 
+ Built for predictable API access and monitored production reliability. 
+ What Does Our News API Provide? 
+ Comprehensive news data infrastructure for developers and enterprises 
+ Latest News Endpoint 
+ Access breaking news and recent articles with the /latest-news endpoint. Filter by language, country, or category to get precisely the content you need delivered in clean JSON format. 
+ Powerful Search API 
+ The /search endpoint lets you query our entire archive of 26M+ articles. Search by keywords, date ranges, sources, and more. Perfect for research, monitoring, and content curation. 
+ Rich Article Metadata 
+ Each article includes title, description, source URL, available content fields, published date, source domain, language, category, and author information when available. Structured data ready for your application. 
+ Consistent JSON Format 
+ All API responses follow a consistent schema with pagination support. Integrate once and trust that your implementation will work reliably across all endpoints and use cases. 
+ Built for Every Use Case 
+ See how developers and businesses use Currents API 
+ News Aggregators 
+ Build news aggregation platforms with newly indexed articles from a broad source catalog, delivered as clean JSON without maintaining your own scraping pipeline. 
+ Market Research 
+ Track industry trends, competitors, and market-moving narratives across global news sources with keyword search, source filters, date ranges, and country/language filters. 
+ AI & NLP Workflows 
+ Build summarization, classification, and sentiment-analysis workflows using metadata, source links, and available content fields subject to plan terms. 
+ Crisis Monitoring 
+ Monitor breaking events across regions with real-time article delivery, country/language filters, and source-level metadata for dashboards and alerts. 
+ Brand Monitoring 
+ Track mentions of your brand, products, executives, and competitors across global news sources in 20+ languages using keyword search and date filtering. 
+ Academic Research 
+ Access structured current and historical news data for journalism studies, media analysis, and social science research, with source attribution and consistent metadata. 
+ Global Coverage by Country & Language 
+ News from every corner of the world, delivered to your application 
+ 168 Countries in the Source Directory 
+ From major markets like the United States, United Kingdom, Germany, and Japan to emerging markets across Asia, Africa, and Latin America. Counts reflect directory country designations; coverage depth varies by market. 
+ North America: US, Canada, Mexico 
+ Europe: UK, Germany, France, Spain, Italy, Netherlands 
+ Asia-Pacific: Japan, China, India, Singapore, Australia 
+ Middle East & Africa: UAE, Saudi Arabia, South Africa, Egypt 
+ Latin America: Brazil, Argentina, Chile, Colombia 
+ 20+ Languages Supported 
+ Access news in the language your users prefer. Our language detection and classification ensures accurate filtering and delivery of multilingual content. 
+ 🇺🇸 English 
+ 🇩🇪 German 
+ 🇪🇸 Spanish 
+ 🇫🇷 French 
+ 🇮🇹 Italian 
+ 🇵🇹 Portuguese 
+ 🇨🇳 Chinese 
+ 🇯🇵 Japanese 
+ 🇰🇷 Korean 
+ 🇷🇺 Russian 
+ 🇦🇪 Arabic 
+ 🇮🇳 Hindi 
+ 🇳🇱 Dutch 
+ 🇵🇱 Polish 
+ 🇹🇷 Turkish 
+ 🇮🇩 Indonesian 
+ Simple Integration 
+ Get started in minutes with our RESTful API 
+ Python Example 
+ import requests
+API_KEY = "your-api-key"
+URL = "https://api.currentsapi.services/v1/latest-news"
+response = requests.get(
+ URL,
+ headers={"Authorization": API_KEY},
+ params={"language": "en", "country": "US"}
+)
+data = response.json()
+for article in data["news"]:
+ print(article["title"]) 
+ JavaScript Example 
+ const API_KEY = 'your-api-key';
+const URL = 'https://api.currentsapi.services/v1/search';
+fetch(`${URL}?keywords=technology&language=en`, {
+ headers: { 'Authorization': API_KEY }
+})
+ .then(res => res.json())
+ .then(data => {
+ data.news.forEach(article => {
+ console.log(article.title);
+ });
+ }); 
+ Works with any language that can make HTTP requests. 
+ View full documentation → 
+ | 
+ Get an API key 
+ Transparent, Affordable Pricing 
+ From free tier to enterprise scale 
+ Free 
+ 250 requests/day 
+ $69 /mo 
+ 75K requests/month 
+ $150 /mo 
+ 300K requests/month 
+ $300 /mo 
+ 600K requests/month 
+ Transparent request tiers — clear quotas, history access, and result caps.
+ No hidden fees, no surprise charges. Scale as you grow.
+ View Full Pricing 
+ Core API Endpoints 
+ Everything you need to build news-powered applications 
+ GET 
+ /v1/latest-news 
+ Latest News 
+ Retrieve the most recent news articles. Filter by language, country, and category to get targeted results for your application. 
+ Real-time article delivery 
+ Multiple filter parameters 
+ Paginated results 
+ GET 
+ /v1/search 
+ Search Archive 
+ Search through millions of archived articles. Perfect for research, historical analysis, and comprehensive content discovery. 
+ Full-text keyword search 
+ Date range filtering 
+ Source-specific queries 
+ Explore API Documentation 
+ Frequently Asked Questions 
+ Is Currents News API free? 
+ Yes! Currents offers a free tier with 250 daily requests. No credit card required to sign up. Simply register and start using the API immediately. 
+ How much does Currents News API cost? 
+ Pricing starts at $0 for the free tier (250 daily requests). Paid plans begin at $69/month for Builder (75K monthly requests), $150/month for Professional (300K monthly requests), and $300/month for Scale (600K monthly requests). 
+ What countries does Currents News API cover? 
+ Our source directory contains entries assigned to 168 country designations, including the United States, United Kingdom, India, China, Germany, France, Japan, Brazil, Australia, and many more. See the sources directory for per-country counts. 
+ Does Currents News API offer real-time data? 
+ Yes. Currents provides newly indexed news without an artificial plan delay. Observed freshness varies by publisher and source. 
+ What programming languages can I use with Currents API? 
+ Currents News API is a REST API that returns JSON, so you can use it with any programming language including Python, JavaScript, PHP, Ruby, Go, Java, Node.js, and more. 
+ How fast is Currents API? 
+ Response time varies by query, result size, and network path. Test representative requests with the endpoints and plan limits your application will use. 
+ Ready to Get Started? 
+ Use Currents API to power news aggregators, dashboards, research tools, and AI workflows with clean, structured news data.
+ Start free with 250 daily requests — no credit card required.
+ Get Free API Key
+ API Key Setup
+ View Pricing
+ Read Documentation
+ Questions? Contact our support team 
+ Currents News API 
+ Access real-time news from a source directory spanning 168 countries in 20+ languages with our developer-friendly JSON API.
+ Use Cases 
+ News Aggregator API 
+ Media Monitoring API 
+ Google News API Alternative 
+ Solutions & Docs 
+ Free News API (250 req/day) 
+ Documentation Home 
+ Latest News Stream 
+ Search API Reference 
+ Financial & Trading News 
+ News API for AI / RAG 
+ AI Agent Integration Spec 
+ Python Integration Guide 
+ Comparisons 
+ News API Alternatives Hub 
+ Compare News APIs 
+ NewsAPI.org Alternatives 
+ Bing News API Migration 
+ AYLIEN News API Alternative 
+ Event Registry Alternative 
+ Mediastack Alternative 
+ NewsData.io Alternative 
+ Top 9 News APIs Guide 
+ Platform & Legal 
+ Pricing & Plans 
+ About Currents 
+ Frequently Asked Questions 
+ Terms of Service 
+ Privacy Policy 
+ GitHub 
+ Contact Support 
+ © 2026 Currents API. All rights reserved. Made with ♥ for developers.

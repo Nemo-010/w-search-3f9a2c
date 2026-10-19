@@ -1,0 +1,9 @@
+# Mojeek Search API (mojeek) category=search-engine
+home=https://www.mojeek.com/services/search/web-search-api/ pricing=https://www.mojeek.com/services/search/web-search-api/ docs=https://www.mojeek.com/support/api/ llms=None
+sources_ok: pricing:https://www.mojeek.com/services/search/web-search-api/, docs:https://www.mojeek.com/support/api/
+--- ranked fact lines ---
+[pricing] £2 per 1,000 requests
+[pricing] £3 per 1,000 requests
+[pricing] Yes, sign up to our Startup Plan and claim a free credit. A bank card is required to open an account however no automatic payments are processed and you can cancel anytime. Check out our Quickstart guide with an example of recommended parameters to start testing.
+[pricing] Results Per Request
+[pricing] Is there a free Search API available for testing?

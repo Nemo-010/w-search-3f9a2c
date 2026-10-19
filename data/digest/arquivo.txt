@@ -1,0 +1,4 @@
+# Arquivo.pt (arquivo) category=archive
+home=https://arquivo.pt/ pricing=None docs=https://arquivo.pt/api llms=None
+sources_ok: docs:https://arquivo.pt/api, home:https://arquivo.pt/
+--- ranked fact lines ---

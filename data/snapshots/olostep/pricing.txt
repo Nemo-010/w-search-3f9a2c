@@ -1,0 +1,162 @@
+Olostep Pricing | Start Free and Scale 
+ Olostep Manifesto | read more → 
+ Product 
+ Product 
+ Playground 
+ Test the APIs 
+ API Endpoints 
+ Explore available endpoints 
+ Integrations 
+ Connect to AI tools 
+ MCP Server & CLI 
+ Enable agent access 
+ Agent 
+ Automate web research with a prompt 
+ Resources 
+ Docs 
+ Docs to get started 
+ API Reference 
+ Detailed API specs 
+ Use Cases 
+ Real-world applications 
+ Glossary 
+ Key terms and definitions 
+ Tools 
+ See Olostep in action 
+ Company 
+ Careers 
+ We're hiring 
+ Join the team 
+ Changelog 
+ Product updates from Olostep 
+ Blog 
+ Read the latest blog posts 
+ Slack 
+ Join the community 
+ About us 
+ Get to know Olostep 
+ Pricing 
+ Docs 
+ Contact Sales 
+ Sign Up → 
+ Pricing that Makes Sense 
+ Most cost-effective web data API on the market 
+ No credit card required 
+ Trial 
+ $0 
+ Includes: 
+ 500 successful requests 
+ All requests are JS rendered + utilizing residential IP addresses 
+ Low rate limits 
+ Get started 
+ COST/1K $1.800 
+ Starter 
+ $9 
+ / month 
+ Everything in Free, Plus: 
+ 5000 successful requests 
+ 150 concurrent requests 
+ Purchase now 
+ COST/1K $0.495 
+ Standard 
+ $99 
+ / month 
+ Everything in Starter, Plus: 
+ 200K successful requests 
+ 500 concurrent requests 
+ Purchase now 
+ COST/1K $ 0.399 
+ Scale 
+ $399 
+ / month 
+ Everything in Standard, Plus: 
+ 1 Million successful requests 
+ AI-powered Browser Automations 
+ Purchase now 
+ Top-ups 
+ Have spiky usage or don't like subscriptions? You can buy credit packs. They are valid for 6 months. 
+ Credit pack 
+ 10k credits 
+ $20 
+ Purchase Credit Pack 
+ Credit pack 
+ 250k credits 
+ $200 
+ Purchase Credit Pack 
+ Credit pack 
+ 2M credits 
+ $1000 
+ Purchase Credit Pack 
+ Enterprise 
+ Hundreds of millions of credits with enterprise-grade reliability. We offer custom discounts 
+ Contact Sales 
+ Trusted by the best startups startups in the world 
+ Ready to start? 
+ Get clean data for your AI from any website with Olostep Most cost-effective API. Built for scale 
+ Start for free 
+ See Pricing 
+ Are you an AI Agent? Get started here 
+ Frequently asked questions 
+ Pricing & Plans 
+ Does Olostep offer a free trial? 
+ Yes, Olostep includes a free plan with 500 requests to help you test the API before upgrading. Paid plans start from $9/month and include 5,000 credits per month. This gives teams a low-risk way to evaluate Olostep's reliability, scalability and cost-effectiveness before moving to higher-volume usage. 
+ Can I switch plans after signing up? 
+ Yes, you can switch plans at any time. Plans are pro-rated, meaning any unused value from your current plan is carried over to your new plan. This ensures you don't pay twice for usage you've already covered, giving you flexibility as your needs grow. 
+ Can I ask for a refund if I don't use it? 
+ Yes. If you're not satisfied with the Olostep API or it doesn't end up being useful for your use case, you can email info@olostep.com to request a refund. If you cancel after a period of non-use, Olostep can also refund the unused portion of your plan where applicable. 
+ How can I pay? 
+ You can pay through Stripe Payment Links. To access billing, you must be logged in to your Olostep account. Go to your dashboard, navigate to Billing & Invoices, click Manage on Stripe, and add your card details. Once your card is added, you’re good to go. 
+ Web Infra for knowledge work AI 
+ Product 
+ Playground 
+ Agent 
+ Orbit 
+ MCP Server 
+ Integrations 
+ Tools 
+ Pricing 
+ Developers 
+ API Reference 
+ API Endpoints 
+ Scrape API 
+ Crawl API 
+ Map API 
+ Batch API 
+ Search API 
+ Answer API 
+ Monitor API 
+ People and Company Search API 
+ Solutions 
+ Tools 
+ Connect to Slack 
+ Use Cases 
+ AI Platforms 
+ Deep Research 
+ Competitive Intelligence 
+ Sales Lead Enrichment 
+ SEO & GEO Teams 
+ Brand Protection 
+ Resources 
+ Documentation 
+ Blog 
+ Glossary 
+ Changelog 
+ Company 
+ About 
+ Careers 
+ Customers 
+ Contact Sales 
+ AI Instructions 
+ Legal 
+ Privacy Policy 
+ Terms of Service 
+ Data Processing Agreement 
+ Socials 
+ X 
+ LinkedIn 
+ Join Slack 
+ Need a hand with anything? Join our Slack or send an email to info@olostep.com 
+ Made in Italy | United States 
+ © 2026 Olostep Technologies, Inc. 
+ English 
+ English Deutsch Italiano

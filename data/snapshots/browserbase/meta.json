@@ -1,0 +1,85 @@
+{
+ "slug": "browserbase",
+ "name": "Browserbase",
+ "category": "browser",
+ "fetched_at": "2026-10-19T05:54:23+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://www.browserbase.com/pricing",
+   "status": 200,
+   "final_url": "https://www.browserbase.com/pricing",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 286451,
+   "truncated": false,
+   "sha256": "503bc17b310143f728c2a0f341a86dbb8181860da09f5cc2f9ce1f266730f96c",
+   "fetched_at": "2026-10-19T05:54:23+00:00",
+   "text_bytes": 10422
+  },
+  "docs": {
+   "url": "https://docs.browserbase.com/",
+   "status": 200,
+   "final_url": "https://docs.browserbase.com/welcome/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 351968,
+   "truncated": false,
+   "sha256": "bcd0ba996f096c0bea08d63816b2736c5e16e118b10ce3955fd08a6d6f62c12e",
+   "fetched_at": "2026-10-19T05:54:24+00:00",
+   "text_bytes": 3825
+  },
+  "home": {
+   "url": "https://www.browserbase.com/",
+   "status": 200,
+   "final_url": "https://www.browserbase.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 380293,
+   "truncated": false,
+   "sha256": "73653c060cf85f0f6d7cff3e3fb1f641e3f16ef32e3067c5602b76f97586acd5",
+   "fetched_at": "2026-10-19T05:54:26+00:00",
+   "text_bytes": 5893
+  },
+  "llms": {
+   "url": "https://docs.browserbase.com/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.browserbase.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 39750,
+   "truncated": false,
+   "sha256": "6c3ef91eeebd8075c76f06722e4c93ec7a53a39550e5a2773174c94be892337f",
+   "fetched_at": "2026-10-19T05:59:38+00:00",
+   "text_bytes": 39742
+  },
+  "llms-full": {
+   "url": "https://www.browserbase.com/docs/llms-full.txt",
+   "status": 200,
+   "final_url": "https://docs.browserbase.com/welcome/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 351968,
+   "truncated": false,
+   "sha256": "bcd0ba996f096c0bea08d63816b2736c5e16e118b10ce3955fd08a6d6f62c12e",
+   "fetched_at": "2026-10-19T05:54:33+00:00",
+   "text_bytes": 3825
+  },
+  "llms-https://www.browserbase.com/llms.txt": {
+   "url": "https://www.browserbase.com/llms.txt",
+   "status": 200,
+   "final_url": "https://www.browserbase.com/llms.txt",
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 17112,
+   "truncated": false,
+   "sha256": "51fbad8bad7c4ab5704242b2bb65ff7f0c55db0a812788061bc7b7ab6c8df441",
+   "fetched_at": "2026-10-19T05:54:29+00:00",
+   "text_bytes": 16878
+  },
+  "llms-https://www.browserbase.com/docs/llms.txt": {
+   "url": "https://www.browserbase.com/docs/llms.txt",
+   "status": 200,
+   "final_url": "https://docs.browserbase.com/welcome/introduction",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 351968,
+   "truncated": false,
+   "sha256": "bcd0ba996f096c0bea08d63816b2736c5e16e118b10ce3955fd08a6d6f62c12e",
+   "fetched_at": "2026-10-19T05:54:31+00:00",
+   "text_bytes": 3825
+  }
+ }
+}

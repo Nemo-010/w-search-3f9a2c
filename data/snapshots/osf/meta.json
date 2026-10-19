@@ -1,0 +1,49 @@
+{
+ "slug": "osf",
+ "name": "OSF API",
+ "category": "academic",
+ "fetched_at": "2026-10-19T05:54:45+00:00",
+ "sources": {
+  "docs": {
+   "url": "https://developer.osf.io/",
+   "status": 200,
+   "final_url": "https://developer.osf.io/",
+   "content_type": "text/html",
+   "bytes": 551,
+   "truncated": false,
+   "sha256": "8fcdce0773fb855ff9a8cd1da929347522aed744a5b20516ba94829d0094494e",
+   "fetched_at": "2026-10-19T05:54:45+00:00",
+   "text_bytes": 23
+  },
+  "llms-err-ee2675": {
+   "url": "https://developer.osf.io/llms.txt",
+   "status": 403,
+   "final_url": "https://developer.osf.io/llms.txt",
+   "content_type": "application/xml",
+   "bytes": 263,
+   "truncated": false,
+   "sha256": "b42f0ab9d46861d258b36f35113cd418b70e56441066df63b9ccfc98989151b6",
+   "fetched_at": "2026-10-19T05:54:45+00:00"
+  },
+  "llms-err-992ace": {
+   "url": "https://developer.osf.io/docs/llms.txt",
+   "status": 403,
+   "final_url": "https://developer.osf.io/docs/llms.txt",
+   "content_type": "application/xml",
+   "bytes": 243,
+   "truncated": false,
+   "sha256": "4f5219b31d08fba9a49ebb075383739cbfc3a3a57e49ec73854ed4cd55a2a849",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  },
+  "llms-err-5f4045": {
+   "url": "https://docs.developer.osf.io/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.developer.osf.io/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:46+00:00"
+  }
+ }
+}

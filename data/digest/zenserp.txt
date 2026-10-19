@@ -1,0 +1,37 @@
+# Zenserp (zenserp) category=serp-scrape
+home=https://zenserp.com/ pricing=https://zenserp.com/pricing docs=None llms=None
+sources_ok: pricing:https://zenserp.com/pricing, home:https://zenserp.com/, llms:https://zenserp.com/llms.txt, llms-full:https://zenserp.com/docs/llms-full.txt, llms-https://zenserp.com/docs/llms.txt:https://zenserp.com/docs/llms.txt, llms-https://docs.zenserp.com/llms.txt:https://docs.zenserp.com/llms.txt
+--- ranked fact lines ---
+[pricing] Start with 50 free searches a month, then pick a plan for the volume you need. Only successful requests are billed, and you can upgrade, downgrade or cancel at any time.
+[pricing] Cost per 1,000 searches
+[home] We believe in fair pricing. Hence, we offer you 50 free searches per month. No strings attached!
+[llms] - [Sign Up](https://app.apilayer.com/signup): Create a free account — no credit card required
+[llms] - [Mediastack](https://apilayer.com/products/mediastack): Free, simple REST API for live news and blog articles from 7,500+ sources
+[pricing] Free forever
+[pricing] AI Overview 3 credits each Answer Engines
+[pricing] AI Overview 3 credits each Answer Engines New
+[pricing] AI Overview (3 credits each)
+[pricing] Only pay what you need. Choose between our free or custom plan and let our servers do the work.
+[home] Generous Free Plan
+[home] Only pay what you need. Choose between our free or custom plan and let our servers do the work for you.
+[home] Start Scraping Google pages for free today!
+[llms] - [Aviationstack](https://apilayer.com/products/aviationstack): Free, real-time flight status and global aviation data API — flights, airlines, airports, routes
+--- llms/readme head ---
+# APILayer
+> APILayer is a unified API marketplace: one account, one API key, and one dashboard unlock production-ready REST APIs for geolocation, finance, news, aviation, scraping, and data validation. Trusted by 2.2M+ developers handling 30M+ API calls per month. Every API is manually reviewed for quality, reliability, and performance, and free plans are available on every API. APILayer is an Idera, Inc. brand.
+The APILayer suite includes IPstack (IP geolocation), Positionstack (forward/reverse geocoding), Scrapestack (proxy and web scraping), Marketstack (stock market data), Mediastack (news data), Aviationstack (flight data), Mailboxlayer (email validation), Countrylayer (country data), and Serpstack (Google search results data). Each API has its own pricing plans; signup is free with no credit card required at https://app.apilayer.com/signup.
+## Getting Started
+- [APILayer Homepage](https://apilayer.com/): Main site — one account, one API key, every API you need
+- [All Products](https://apilayer.com/products/): Browse the complete API portfolio by category
+- [Documentation Hub](https://docs.apilayer.com/): Unified documentation for every APILayer API — organized, searchable, with changelogs
+- [Sign Up](https://app.apilayer.com/signup): Create a free account — no credit card required
+- [Login](https://app.apilayer.com/login): Access your dashboard, API keys, and usage
+## Geolocation APIs
+- [IPstack](https://apilayer.com/products/ipstack): Locate and identify website visitors by IP address — 2M+ locations, IPv4/IPv6, VPN/proxy detection
+- [IPstack Documentation](https://docs.apilayer.com/apilayer/docs/ipstack): IPstack API reference and integration guides
+- [Positionstack](https://apilayer.com/products/positionstack): Accurate forward and reverse batch geocoding REST API covering 2B+ addresses and places
+- [Positionstack Documentation](https://docs.apilayer.com/apilayer/docs/positionstack): Forward/reverse geocoding endpoints, authentication, and errors
+- [Aviationstack](https://apilayer.com/products/aviationstack): Free, real-time flight status and global aviation data API — flights, airlines, airports, routes
+- [Aviationstack Documentation](https://docs.apilayer.com/apilayer/docs/aviationstack): Flight tracking endpoints and parameters
+## Scraping APIs
+- [Scrapestack](https://apilayer.com/products/scrapestack): Real-time, scalable proxy and web scraping REST API — 35M+ IPs, JavaScript rendering, CAPTCHA handling

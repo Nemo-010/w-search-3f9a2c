@@ -1,0 +1,23 @@
+# HasData (hasdata) category=serp-scrape
+home=https://hasdata.com/ pricing=https://hasdata.com/pricing docs=https://docs.hasdata.com/ llms=None
+sources_ok: pricing:https://hasdata.com/pricing, docs:https://docs.hasdata.com/, home:https://hasdata.com/, llms:https://docs.hasdata.com/llms.txt, llms-full:https://hasdata.com/docs/llms-full.txt, llms-https://hasdata.com/llms.txt:https://hasdata.com/llms.txt, llms-https://hasdata.com/docs/llms.txt:https://hasdata.com/docs/llms.txt
+--- ranked fact lines ---
+--- llms/readme head ---
+# HasData Documentation
+- [Introduction](https://docs.hasdata.com/introduction.md): HasData extracts data quickly and reliably from any source.
+- [Quickstart](https://docs.hasdata.com/quickstart.md): Start scraping data in under 5 minutes
+- [Credits & Concurrency](https://docs.hasdata.com/credits-and-concurrency.md)
+- [API Status Codes](https://docs.hasdata.com/api-codes.md)
+- [CLI](https://docs.hasdata.com/cli.md): Single-binary CLI for the HasData APIs — wired for shell scripts, LLM agents, and RAG pipelines.
+- [MCP Server](https://docs.hasdata.com/mcp-server.md): Connect LLM clients and AI agents to HasData via the Model Context Protocol.
+- [OpenClaw Skill](https://docs.hasdata.com/openclaw.md): Drop the HasData skill into OpenClaw for real-time web data via the hasdata CLI.
+- [Agent Skills](https://docs.hasdata.com/agent-skill.md): Ready-made skills that teach AI coding agents how to use HasData.
+- [Pricing](https://docs.hasdata.com/basics/pricing.md)
+- [API vs Scraper Jobs](https://docs.hasdata.com/basics/api-vs-scraper-jobs.md)
+- [Quickstart - Web Scraping API](https://docs.hasdata.com/apis/web-scraping-api/quickstart.md)
+- [Web Scraping API Request Cost](https://docs.hasdata.com/apis/web-scraping-api/request-cost.md)
+- [Web Scraping API Parameters](https://docs.hasdata.com/apis/web-scraping-api/api-params.md)
+- [LLM Extraction](https://docs.hasdata.com/apis/web-scraping-api/llm-extraction.md)
+- [Batch Scrape](https://docs.hasdata.com/apis/web-scraping-api/batch-scrape.md)
+- [Output Formats](https://docs.hasdata.com/apis/web-scraping-api/features/output-formats.md)
+- [Structured Data Extraction](https://docs.hasdata.com/apis/web-scraping-api/features/structured-data-extraction.md)

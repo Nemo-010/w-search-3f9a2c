@@ -1,0 +1,26 @@
+# Airtop
+
+- [Introduction](https://www.airtop.ai/help/guides/introduction.md): Get a quick overview of Airtop
+- [Meet Mark: Your go-to-market AI agent](https://www.airtop.ai/help/guides/mark.md): Use Mark to turn your go-to-market goals into repeatable, scalable agent workflows.
+- [Quick Start](https://www.airtop.ai/help/guides/quick-start.md): Start building awesome agents in minutes
+- [What you can do with the Agent Builder](https://www.airtop.ai/help/guides/agent-builder.md): Supported features within the Agent Builder
+- [Authentication](https://www.airtop.ai/help/guides/authentication.md): Learn how to authenticate to services with Airtop
+- [Bot Detection Avoidance](https://www.airtop.ai/help/guides/bot-detection.md): Understanding and configuring bot detection avoidance strategies
+- [Self-Healing](https://www.airtop.ai/help/guides/self-healing.md): Keep your deployed agents running without constant supervision
+- [Changelog](https://www.airtop.ai/help/changelog.md): New Airtop features, improvements, and fixes.
+- [FAQ](https://www.airtop.ai/help/guides/FAQ.md): Frequently Asked Questions about Airtop Agents.
+- [Billing & Credits](https://www.airtop.ai/help/billing/billing.md): This guide explains how Airtop billing works, how credits are renewed, and how you can manage your subscription. Whether you’re on the Free plan or a paid plan, the basics are the same.
+- [List of Integrations](https://www.airtop.ai/help/integrations/overview.md): Connect Airtop to the tools you already use. Browse the full list of available integrations and what each one does.
+- [Connect to Google Ads](https://www.airtop.ai/help/integrations/google-ads.md): The Google Ads integration lets Mark connect to a Google Ads advertiser account to audit performance, research keywords, plan campaigns, and make changes. All changes that can affect spend require your explicit approval before they are applied.
+- [Connect Airtop with Make](https://www.airtop.ai/help/connections/make.md): Connect Airtop Agents with Make to create code-free automations and integrate with hundreds of apps and services.
+- [Connect Airtop with n8n](https://www.airtop.ai/help/connections/n8n.md): Connect Airtop Agents with n8n to build workflow automations and integrate with various apps and services.
+- [Connect Airtop with Zapier](https://www.airtop.ai/help/connections/zapier.md): Connect Airtop Agents with Zapier to automate workflows and integrate with thousands of apps.
+- [Trigger Agent Webhook](https://www.airtop.ai/help/api-reference/trigger-agent-webhook.md): Triggers an agent execution via webhook. You can optionally provide configuration variables and a callback URL.
+- [Get Invocation Result](https://www.airtop.ai/help/api-reference/get-invocation-result.md): Retrieves the status and result of a specific agent invocation.
+
+## OpenAPI Specs
+
+- [openapi](/help/openapi.json)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

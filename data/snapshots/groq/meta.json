@@ -1,0 +1,59 @@
+{
+ "slug": "groq",
+ "name": "Groq Compound",
+ "category": "llm-search",
+ "fetched_at": "2026-10-19T05:54:52+00:00",
+ "sources": {
+  "pricing": {
+   "url": "https://groq.com/pricing",
+   "status": 200,
+   "final_url": "https://groq.com/",
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 55004,
+   "truncated": false,
+   "sha256": "a2e774bce11cb0c82ce7c1d8abf1d4ca728d7ab8d134577d118cda7f1ab6f227",
+   "fetched_at": "2026-10-19T05:54:52+00:00",
+   "text_bytes": 945
+  },
+  "docs-err-990b2a": {
+   "url": "https://console.groq.com/docs/compound",
+   "status": 403,
+   "final_url": "https://console.groq.com/docs/compound",
+   "content_type": "application/json",
+   "bytes": 33,
+   "truncated": false,
+   "sha256": "ecf2a039bd5dda23f13e80536f9c7594ff18b5d28ac40c65eccb8512ff10e69b",
+   "fetched_at": "2026-10-19T05:54:53+00:00"
+  },
+  "llms-err-dda63d": {
+   "url": "https://console.groq.com/docs/compound/llms.txt",
+   "status": 403,
+   "final_url": "https://console.groq.com/docs/compound/llms.txt",
+   "content_type": "application/json",
+   "bytes": 33,
+   "truncated": false,
+   "sha256": "ecf2a039bd5dda23f13e80536f9c7594ff18b5d28ac40c65eccb8512ff10e69b",
+   "fetched_at": "2026-10-19T05:54:53+00:00"
+  },
+  "llms-err-6218b0": {
+   "url": "https://console.groq.com/docs/compound/docs/llms.txt",
+   "status": 403,
+   "final_url": "https://console.groq.com/docs/compound/docs/llms.txt",
+   "content_type": "application/json",
+   "bytes": 33,
+   "truncated": false,
+   "sha256": "ecf2a039bd5dda23f13e80536f9c7594ff18b5d28ac40c65eccb8512ff10e69b",
+   "fetched_at": "2026-10-19T05:54:53+00:00"
+  },
+  "llms-err-0d23a6": {
+   "url": "https://docs.console.groq.com/llms.txt",
+   "status": 0,
+   "final_url": "https://docs.console.groq.com/llms.txt",
+   "content_type": "",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
+   "fetched_at": "2026-10-19T05:54:54+00:00"
+  }
+ }
+}

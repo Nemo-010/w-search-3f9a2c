@@ -1,0 +1,200 @@
+News API Quick Start: Get Your API Key in Minutes | Currents 
+ ◐ 
+ Comfort off 
+ Login 
+ Sign Up 
+ Introduction
+ Getting Started
+ Authentication
+ Rate Limit
+ Error Responses
+ API Endpoints 
+ Latest News
+ Search
+ SDK 
+ Official SDKs
+ AI Agents 
+ Agent Skills
+ News API Documentation 
+ Get an API key and make your first request 
+ Use this quick start to create a free Currents account, copy your API key, and test a JSON response from the Latest News API before choosing a paid plan.
+ New to Currents? Start here: create a free account , copy your key, then run the first request below.
+ First-request path 
+ 1. Get a free key. Sign up and open your account dashboard. 
+ 2. Request JSON. Use the cURL, JavaScript, Python, or R example below. 
+ 3. Pick a plan later. Upgrade only when quota, history, or result limits become real blockers. 
+ Get Free API Key 
+ API Key Setup 
+ Code Examples 
+ Step 1: Get Your API Key 
+ To use the Currents API, you need an API key. You can get one by: 
+ Free Account 
+ Sign up for free, get an API key, and test up to 250 requests per day. 
+ Create Free Account 
+ Existing Account 
+ Login to your account and view your API key in the dashboard. 
+ View API Key 
+ Plan your first integration 
+ Most teams start by testing the free request quota, then choosing whether latest-news feeds or keyword search fits their workflow.
+ News API Key 
+ Free News API 
+ Pricing 
+ Latest News API 
+ Search News API 
+ Aggregator Tutorial 
+ Media Monitoring API 
+ News Data for RAG 
+ Examples 
+ Step 2: Make Your First Request 
+ Here is a simple example to fetch the latest news as JSON: 
+ GET 
+ https://api.currentsapi.services/v1/latest-news 
+ With cURL 
+ curl -H "Authorization: YOUR_API_KEY" \
+ https://api.currentsapi.services/v1/latest-news 
+ With JavaScript (fetch) 
+ fetch('https://api.currentsapi.services/v1/latest-news', {
+ headers: {
+ 'Authorization': 'YOUR_API_KEY'
+ }
+})
+ .then(response => response.json())
+ .then(data => console.log(data)); 
+ With Python (requests) 
+ import requests
+headers = {
+ 'Authorization': 'YOUR_API_KEY'
+}
+response = requests.get(
+ 'https://api.currentsapi.services/v1/latest-news',
+ headers=headers
+)
+data = response.json()
+print(data) 
+ Using Python's built-in urllib ? Set a User-Agent header. Our CDN rejects the default Python-urllib/3.x User-Agent with HTTP 403 and error code: 1010 , before the request reaches the API. These blocked requests do not count against your quota. requests , httpx , cURL, and JavaScript fetch send an accepted User-Agent by default. Perl's LWP is also blocked, so set a User-Agent there too. 
+ import json
+import urllib.request
+req = urllib.request.Request(
+ "https://api.currentsapi.services/v1/latest-news?language=en&page_size=3",
+ headers={
+ "Authorization": "Bearer YOUR_API_KEY",
+ "User-Agent": "my-news-app/1.0",
+ "Accept": "application/json",
+ },
+)
+with urllib.request.urlopen(req) as resp:
+ data = json.load(resp)
+print(data) 
+ Examples by Programming Language (Tab View) 
+ Use the same API call in different client languages. 
+ cURL 
+ JavaScript 
+ Python 
+ R 
+ Request 
+ curl -H "Authorization: Bearer YOUR_API_KEY" "https://api.currentsapi.services/v1/latest-news?language=en&page_size=3" 
+ Request 
+ fetch("https://api.currentsapi.services/v1/latest-news?language=en&page_size=3", {
+ headers: { Authorization: "Bearer YOUR_API_KEY" }
+})
+ .then((res) => res.json())
+ .then((data) => console.log(data)); 
+ Request 
+ import requests
+response = requests.get(
+ "https://api.currentsapi.services/v1/latest-news",
+ params={"language": "en", "page_size": 3},
+ headers={"Authorization": "Bearer YOUR_API_KEY"},
+)
+print(response.json()) 
+ Request 
+ library(httr)
+res 
+ Response Structure (What Every Successful Call Looks Like) 
+ {
+ "status": "ok",
+ "news": [
+ {
+ "id": "uuid",
+ "title": "string",
+ "description": "string",
+ "url": "string",
+ "author": "string|null",
+ "image": "string|null",
+ "language": "string",
+ "category": ["string", "..."],
+ "published": "timestamp string"
+ }
+ ],
+ "page": 1
+} 
+ What your first request should show 
+ After you sign up and copy your API key, start with a simple /v1/latest-news 
+ request. If the key is valid, the API returns HTTP 200 , "status": "ok" ,
+ and a news array. Then try /v1/search with your own keywords.
+ What happened 
+ What you will see 
+ Next step 
+ It worked and found articles 
+ 200 , "status": "ok" , news contains articles. 
+ Your key works. Build the feed, search, or monitoring flow. 
+ It worked, but found no articles 
+ 200 , "status": "ok" , "news": [] . 
+ The request was valid. Broaden the keyword, country, language, date window, or page. 
+ The API key is missing or wrong 
+ 401 , "msg": "Authentication required" or "Invalid token" . 
+ Copy the key again from your profile and send it as Authorization: Bearer YOUR_API_KEY . 
+ The search query needs fixing 
+ 400 , "code": "INVALID_QUERY" . 
+ Fix malformed boolean syntax, unsupported parameters, or version-specific filters. 
+ The search backend timed out 
+ 503 , "code": "SEARCH_BACKEND_TIMEOUT" , usually with Retry-After . 
+ Retry with backoff. Do not treat this as a no-result search. 
+ Once the API call works, keep building on the free plan until you need more daily requests,
+ longer history, larger result windows, or more room to grow. That is when
+ Builder or Professional 
+ is worth comparing.
+ Step 3: Understand API Versions 
+ Currents exposes both /v1 and /v2 paths. V1 remains stable for existing integrations. V2 is the canonical taxonomy path and includes cursor pagination for search. 
+ Category migration note: use /v2/available/categories as the authoritative list for category filtering on /v2/* . The canonical set is:
+ general, society, science_technology, politics_government, economy_business_finance, arts_culture_entertainment, lifestyle_leisure, human_interest, sport, crime_law_justice, education, environment, labour, health, automotive, real_estate .
+ On /v1/* use legacy v1 categories (for example, technology or science instead of science_technology ).
+ Parameter compatibility: keywords , query , start_date , end_date , limit , has_image , and has_description are only supported on /v1/search and /v2/search . cursor is supported only on /v2/search . Passing these parameters to /v1/latest-news or /v2/latest-news returns 400 Invalid parameters .
+ Capability 
+ V1 
+ V2 
+ Latest News 
+ /v1/latest-news 
+ /v2/latest-news 
+ Search 
+ /v1/search (offset pagination) 
+ /v2/search (offset + cursor pagination) 
+ Auth Check 
+ /v1/auth 
+ Not available on /v2 
+ Available Filters 
+ /v1/available/* 
+ /v2/available/* 
+ Category Source of Truth 
+ Legacy compatibility path 
+ Canonical category taxonomy 
+ Step 4: Explore the API 
+ Now that you have your API key, you can: 
+ Search for news on specific topics 
+ Filter by country, language, category, author, and domain 
+ Get latest news or search historical articles 
+ Limit results and paginate with page numbers or cursor ( /v2/search ) 
+ Ready for More? 
+ After the first request works, compare endpoint behavior and plan limits: 
+ Authentication 
+ Latest News 
+ Search 
+ Pricing 
+ Troubleshooting 
+ 401 Unauthorized 
+ Make sure you're using the correct API key from your dashboard. 
+ 429 Too Many Requests 
+ You've exceeded your daily request limit. Check your usage in the dashboard. 
+ Need more help? Contact our support team or check out our pricing plans .
+ © 2026 Currents API. All rights reserved. 
+ Terms • Privacy
