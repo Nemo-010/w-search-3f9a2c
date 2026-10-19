@@ -4,7 +4,7 @@
 - Home: https://ai.google.dev/gemini-api/docs/grounding
 - Pricing: https://ai.google.dev/gemini-api/docs/pricing
 - Docs: https://ai.google.dev/gemini-api/docs/grounding
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20231213 (ai.google.dev)
 
 ## Free tier

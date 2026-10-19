@@ -4,7 +4,7 @@
 - Home: https://apiflash.com/
 - Pricing: https://apiflash.com/#pricing
 - Docs: https://apiflash.com/documentation
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20180726 (apiflash.com)
 
 ## Free tier

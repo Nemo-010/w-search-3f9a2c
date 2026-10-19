@@ -4,7 +4,7 @@
 - Home: https://web.archive.org/
 - Pricing: —
 - Docs: https://archive.org/help/wayback_api.jsp
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20040401 (web.archive.org)
 
 ## Free tier

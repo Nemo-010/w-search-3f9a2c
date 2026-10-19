@@ -159,7 +159,7 @@ No independent measurement: this provider is not routed by the treg Web Arena le
 | Home | https://brave.com/search/api/ |
 | Pricing | https://brave.com/search/api/#pricing |
 | Docs | https://api.search.brave.com/app/documentation |
-| llms.txt | none published at the probed paths |
+| llms.txt | none usable — no response (connection failed or refused) |
 | Recurring free volume | **1,000 calls/month** |
 | Evidence confidence | **high** |
 | Facts row | `data/facts.json` → `brave` |
@@ -235,7 +235,7 @@ No independent measurement: this provider is not routed by the treg Web Arena le
 | Home | https://scrapingant.com/ |
 | Pricing | https://scrapingant.com/pricing |
 | Docs | https://docs.scrapingant.com/ |
-| llms.txt | none published at the probed paths |
+| llms.txt | none usable — HTTP 404 |
 | Recurring free volume | **10,000 calls/month** |
 | Evidence confidence | **high** |
 | Facts row | `data/facts.json` → `scrapingant` |

@@ -4,7 +4,7 @@
 - Home: https://developer.osf.io/
 - Pricing: —
 - Docs: https://developer.osf.io/
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20170606 (developer.osf.io)
 
 ## Free tier

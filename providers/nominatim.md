@@ -4,7 +4,7 @@
 - Home: https://nominatim.org/
 - Pricing: —
 - Docs: https://nominatim.org/release-docs/latest/api/Overview/
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20110514 (nominatim.org)
 
 ## Free tier

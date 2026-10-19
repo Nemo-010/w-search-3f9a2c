@@ -4,7 +4,7 @@
 - Home: https://console.groq.com/docs/compound
 - Pricing: https://groq.com/pricing
 - Docs: https://console.groq.com/docs/compound
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20110202 (groq.com)
 
 ## Free tier

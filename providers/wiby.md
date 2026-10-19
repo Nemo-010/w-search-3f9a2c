@@ -4,7 +4,7 @@
 - Home: https://wiby.me/
 - Pricing: —
 - Docs: —
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20170816 (wiby.me)
 
 ## Free tier

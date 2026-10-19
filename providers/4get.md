@@ -4,7 +4,7 @@
 - Home: https://4get.ca/
 - Pricing: —
 - Docs: https://git.4get.ca/4get/4get
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20150801 (4get.ca)
 
 ## Free tier

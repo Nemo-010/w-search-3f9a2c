@@ -58,7 +58,10 @@ def header(slug, title, extra=None):
     L.append(f"| Home | {r['home']} |")
     L.append(f"| Pricing | {r['pricing'] or '—'} |")
     L.append(f"| Docs | {r['docs'] or '—'} |")
-    L.append(f"| llms.txt | {r['llms'] or 'none published at the probed paths'} |")
+    if r.get("llms"):
+        L.append(f"| llms.txt | {r['llms']} |")
+    else:
+        L.append(f"| llms.txt | none usable — {r.get('llms_reject') or 'not found at the probed paths'} |")
     if r.get("monthly_calls"):
         L.append(f"| Recurring free volume | **{fmt(r['monthly_calls'])} calls/month** |")
     else:

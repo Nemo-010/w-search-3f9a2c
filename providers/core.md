@@ -4,7 +4,7 @@
 - Home: https://core.ac.uk/services/api
 - Pricing: https://core.ac.uk/services/api
 - Docs: https://api.core.ac.uk/docs/v3
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20040206 (core.ac.uk)
 
 ## Free tier

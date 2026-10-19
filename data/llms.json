@@ -1,7 +1,7 @@
 {
  "4get": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "agenty": {
@@ -31,7 +31,7 @@
  },
  "apiflash": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "apify": {
@@ -51,7 +51,7 @@
  },
  "bing-api": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "biorxiv": {
@@ -76,7 +76,7 @@
  },
  "brave": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "brightdata": {
@@ -136,7 +136,7 @@
  },
  "core": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "crawl4ai": {
@@ -271,7 +271,7 @@
  },
  "gemini-grounding": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "github-search": {
@@ -301,12 +301,12 @@
  },
  "groq": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "guardian": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "hal": {
@@ -331,12 +331,12 @@
  },
  "internetarchive-scholar": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "ip-api": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "ipapi-co": {
@@ -346,7 +346,7 @@
  },
  "itunes": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "jina": {
@@ -366,7 +366,7 @@
  },
  "kakao": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "katana": {
@@ -511,7 +511,7 @@
  },
  "nominatim": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "notte": {
@@ -541,12 +541,12 @@
  },
  "open-meteo": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "openai-websearch": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "openaire": {
@@ -586,7 +586,7 @@
  },
  "osf": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "oxylabs": {
@@ -866,7 +866,7 @@
  },
  "trafilatura": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "treg": {
@@ -911,7 +911,7 @@
  },
  "wayback": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "webscraperio": {
@@ -931,7 +931,7 @@
  },
  "wiby": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "wikidata": {
@@ -946,7 +946,7 @@
  },
  "worldbank": {
   "bytes": 0,
-  "reason": "HTTP 0",
+  "reason": "no response (connection failed or refused)",
   "url": null
  },
  "xai-live-search": {

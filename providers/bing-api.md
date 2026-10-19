@@ -4,7 +4,7 @@
 - Home: https://www.microsoft.com/en-us/bing/apis/bing-web-search-api
 - Pricing: —
 - Docs: https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20040110 (microsoft.com)
 
 ## Free tier

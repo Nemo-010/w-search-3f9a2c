@@ -4,7 +4,7 @@
 - Home: https://trafilatura.readthedocs.io/
 - Pricing: —
 - Docs: https://trafilatura.readthedocs.io/
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20210510 (trafilatura.readthedocs.io)
 
 ## Free tier

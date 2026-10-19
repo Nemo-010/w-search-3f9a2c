@@ -4,7 +4,7 @@
 - Home: https://platform.openai.com/docs/guides/tools-web-search
 - Pricing: https://openai.com/api/pricing/
 - Docs: https://platform.openai.com/docs/guides/tools-web-search
-- llms.txt: none usable — HTTP 0
+- llms.txt: none usable — no response (connection failed or refused)
 - First Wayback capture of domain: 20040328 (openai.com)
 
 ## Free tier

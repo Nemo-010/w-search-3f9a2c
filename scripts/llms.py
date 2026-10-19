@@ -47,7 +47,10 @@ def host_of(url):
 def judge(slug, entry, home_host):
     url = entry.get("url") or ""
     if entry.get("status") != 200:
-        return None, None, f"HTTP {entry.get('status')}"
+        code = entry.get("status")
+        if code in (0, None):
+            return None, None, "no response (connection failed or refused)"
+        return None, None, f"HTTP {code}"
     path = os.path.join(SNAP, slug, "llms.txt")
     body = b""
     if os.path.exists(path):
