@@ -1,6 +1,6 @@
 # Zyte (zyte) category=serp-scrape
 home=https://www.zyte.com/ pricing=https://www.zyte.com/pricing/ docs=https://docs.zyte.com/ llms=None
-sources_ok: pricing:https://www.zyte.com/pricing/, docs:https://docs.zyte.com/, home:https://www.zyte.com/, llms:https://docs.zyte.com/llms.txt, llms-https://www.zyte.com/llms.txt:https://www.zyte.com/llms.txt
+sources_ok: pricing:https://www.zyte.com/pricing/, docs:https://docs.zyte.com/, home:https://www.zyte.com/, llms:https://docs.zyte.com/llms.txt, llms-https://www.zyte.com/llms.txt:https://www.zyte.com/llms.txt, trial:https://www.zyte.com/pricing/
 --- ranked fact lines ---
 --- llms/readme head ---
 # Zyte – The complete toolbox for web scraping, data extraction, and proxy infrastructure at scale. Trusted by thousands of companies worldwide.

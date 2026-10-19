@@ -1,8 +1,9 @@
 # Oxylabs (oxylabs) category=serp-scrape
 home=https://oxylabs.io/ pricing=https://oxylabs.io/pricing docs=https://developers.oxylabs.io/ llms=None
-sources_ok: pricing:https://oxylabs.io/pricing, docs:https://developers.oxylabs.io/, home:https://oxylabs.io/, llms:https://developers.oxylabs.io/llms.txt, llms-full:https://docs.oxylabs.io/llms-full.txt, llms-https://oxylabs.io/llms.txt:https://oxylabs.io/llms.txt, llms-https://docs.oxylabs.io/llms.txt:https://docs.oxylabs.io/llms.txt
+sources_ok: pricing:https://oxylabs.io/pricing, docs:https://developers.oxylabs.io/, home:https://oxylabs.io/, llms:https://developers.oxylabs.io/llms.txt, llms-full:https://docs.oxylabs.io/llms-full.txt, llms-https://oxylabs.io/llms.txt:https://oxylabs.io/llms.txt, llms-https://docs.oxylabs.io/llms.txt:https://docs.oxylabs.io/llms.txt, trial:https://oxylabs.io/products/scraper-api/serp
 --- ranked fact lines ---
 [llms] - [Proxy Rotation](https://developers.oxylabs.io/products/proxies/dedicated-datacenter-proxies/self-service/proxy-rotation.md): Enable proxy rotation for Dedicated Datacenter Proxies using port 8000. Get random IPs per request with optional country-specific rotation.
+[trial] "price" : "$99.99" ,
 [llms] - [Proxy Rotator - Optional](https://developers.oxylabs.io/products/proxies/dedicated-datacenter-proxies/enterprise/proxy-rotator-optional.md): Proxy Rotator provides single endpoint access to your Enterprise Dedicated Datacenter Proxies list. Get different IPs per request with session control.
 [llms] - [Whitelisting IPs](https://developers.oxylabs.io/products/proxies/isp-proxies/whitelisting-ips.md): Learn how to use ISP Proxies with password-free authentication. Secure your connection by adding trusted IPs to the whitelist via the dashboard.
 [llms] - [Free Datacenter IPs](https://developers.oxylabs.io/products/proxies/datacenter-proxies/free-datacenter-ips.md): Free datacenter IPs provide an opportunity to easily test Oxylabs proxies. However, for full product functionality and flexibility consider migrating to paid plans.

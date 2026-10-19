@@ -71,7 +71,7 @@ Reported but not re-verified in this snapshot run (excluded from the total above
 One-time, first-month totals (not recurring, ×5 accounts where the grant is per account):
 
 - Airtop: 30,000 credits one-time signup grant (starts at 31,000)
-- Apify: $500 free usage for 6 months for own Actors/agents program
+- Apify: $500 of prepaid usage for the first 6 months, for Actor developers on the Creator plan (not a general signup grant)
 - Bright Data: $2 trial credit (7 days) + $5 bonus when payment method added
 - Crawlbase: up to 5,000 requests
 - DataForSEO: $1 trial credit

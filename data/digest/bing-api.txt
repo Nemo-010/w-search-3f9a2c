@@ -1,5 +1,5 @@
 # Bing Web Search API (bing-api) category=search-engine
 home=https://www.microsoft.com/en-us/bing/apis/bing-web-search-api pricing=None docs=https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview llms=
-sources_ok: docs:https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview
+sources_ok: docs:https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview, lifecycle:https://learn.microsoft.com/en-us/lifecycle/announcements/bing-search-api-retirement
 --- ranked fact lines ---
 [docs] Bing Web Search API enables safe, ad-free, location-aware search results, surfacing relevant information from billions of web documents. Help your users find what they're looking for from the world-wide-web by harnessing Bing's ability to comb billions of webpages, images, videos, and news with a single API call.

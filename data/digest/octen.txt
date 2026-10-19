@@ -1,6 +1,6 @@
 # Octen (octen) category=ai-search
 home=https://octen.ai/ pricing=None docs=https://docs.octen.ai/ llms=https://docs.octen.ai/llms.txt
-sources_ok: llms:https://docs.octen.ai/llms.txt, llms-full:https://docs.octen.ai/llms-full.txt, docs:https://docs.octen.ai/, home:https://octen.ai/
+sources_ok: llms:https://docs.octen.ai/llms.txt, llms-full:https://docs.octen.ai/llms-full.txt, docs:https://docs.octen.ai/, home:https://octen.ai/, pricing:https://docs.octen.ai/overview/pricing.md
 --- ranked fact lines ---
 [llms-full] | Qualifying usage | Model Gateway usage funded by paid amounts, at least \$10 in a calendar month. Free credits, vouchers, and rebate balance do not count. |
 [llms-full] | **Welcome Credit** | Every new user receives a **\$5 free balance** upon registration |

@@ -1,9 +1,11 @@
 # You.com (you) category=ai-search
 home=https://you.com/ pricing=https://api.you.com/ docs=https://you.com/docs llms=https://you.com/docs/llms.txt
-sources_ok: llms:https://you.com/docs/llms.txt, llms-full:https://you.com/docs/llms-full.txt, pricing:https://api.you.com/, docs:https://you.com/docs, home:https://you.com/
+sources_ok: llms:https://you.com/docs/llms.txt, llms-full:https://you.com/docs/llms-full.txt, pricing:https://api.you.com/, docs:https://you.com/docs, home:https://you.com/, api-pricing:https://you.com/docs/api-reference, welcome:https://you.com/docs/welcome.md
 --- ranked fact lines ---
 [llms] > Web Search, Answer, Contents, Research, and Finance Research APIs that give your AI app real-time web intelligence. Start with free credits.
 [llms] - [Build agentic apps with real-time web intelligence.](https://you.com/docs/welcome.md): Web Search, Answer, Contents, Research, and Finance Research APIs that give your AI app real-time web intelligence. Start with free credits—no credit card required.
+[api-pricing] - `X-API-Key` header (required) — A unique API Key is required to authorize API access. [Get your API Key with free credits](https://you.com/platform).
+[api-pricing] "description": "NVIDIA Corporation Total Revenues (Normalized) (Quarterly)'s latest value was $81,615,000,000 in Apr 2026, up 6,424.0% since Jan 2015. Quarterly data from Jan 2015 to Apr 2026, with a maximum of $81,615,000,000 in Apr 2026 and a minimum of $1,151,000,000 in Apr 2015.",
 [llms] - [Factory Droid](https://you.com/docs/agents/agent-harnesses/factory-droid.md): Give Factory Droid real-time web search, content extraction, and citation-backed research through the You.com MCP Server. OAuth 2.1, API key, or free tier.
 [llms] - [Machine Payments](https://you.com/docs/administration/machine-payments.md): You.com accepts x402 and MPP machine payments for the Web Search and Finance Research APIs. Agents pay per request in USDC inside the same HTTP exchange.
 [llms] - [x402](https://you.com/docs/administration/machine-payments/x402.md): Call the You.com Web Search and Finance Research APIs with no API key and pay per request in USDC on Base or Solana using the x402 protocol.
@@ -20,6 +22,10 @@ sources_ok: llms:https://you.com/docs/llms.txt, llms-full:https://you.com/docs/l
 [llms] - [Hermes Agent](https://you.com/docs/agents/agent-harnesses/hermes.md): Install the You.com plugin for Hermes Agent: four skills plus the You.com MCP servers for web search, page content, cited research, and finance research. Or add the MCP server alone, with a free tier.
 [llms] - [you-web](https://github.com/youdotcom-oss/agent-skills/tree/main/skills/you-web): Use You.com MCP tools for current web search, URL content extraction, cited web synthesis, and x402-aware web access. Falls back to keyless `you-search` on the free MCP profile when no credentials are set.
 [pricing] > Call live You.com APIs: Product MCP at https://api.you.com/mcp (keyless `?profile=free` exposes `you-search` and `you-discover`. Research and finance use `/mcp/research`, `/mcp/finance`, or `?tools=` on `/mcp`). To pick an API or integration path, call `you-discover` on that server instead of guessing.
+[api-pricing] - `total_max_tokens` (integer, optional) — Approximate maximum number of highlight tokens across the whole response, shared by every web result. Must be between 1024 and 8192. Omit it to get the default budget of 8192. To get fewer results with more text each, lower `count` as well.
+[api-pricing] "title": "Session or token? Auth choices for 2026 architectures",
+[api-pricing] "url": "https://www.infoworld.com/article/session-vs-token-auth-2026",
+[api-pricing] "markdown": "# Session or token? Auth choices for 2026 architectures\n\nThe split is mostly about where revocation lives. A session can be deleted server-side the moment it is compromised, while a JWT stays valid until it expires unless you keep a denylist...\n"
 --- llms/readme head ---
 # You.com | Documentation
 > Web Search, Answer, Contents, Research, and Finance Research APIs that give your AI app real-time web intelligence. Start with free credits.

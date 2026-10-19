@@ -1,6 +1,6 @@
 # Microlink (microlink) category=reader
 home=https://microlink.io/ pricing=https://microlink.io/#pricing docs=https://microlink.io/docs/api/getting-started llms=None
-sources_ok: pricing:https://microlink.io/#pricing, home:https://microlink.io/, llms:https://microlink.io/llms.txt
+sources_ok: pricing:https://microlink.io/pricing, home:https://microlink.io/, llms:https://microlink.io/llms.txt
 --- ranked fact lines ---
 [llms] - [URL2PNG Alternative for a More Modern Screenshot API](https://microlink.io/alternative/url2png.md): URL2PNG still covers simple screenshots, but Microlink gives you a free plan or 46,000 requests for $49 versus URL2PNG 50,000 for $199.
 [llms] - [Microlink API: Rate limit](https://microlink.io/docs/api/basics/rate-limit.md): Understand Microlink API rate limits for free and pro endpoints. Monitor usage via x-rate-limit headers, handle HTTP 429, and scale your quota for high-concurrency.

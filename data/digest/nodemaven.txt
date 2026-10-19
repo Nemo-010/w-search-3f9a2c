@@ -1,10 +1,16 @@
 # Nodemaven (nodemaven) category=serp-scrape
 home=https://nodemaven.com/ pricing=None docs=None llms=None
-sources_ok: home:https://nodemaven.com/, llms:https://nodemaven.com/llms.txt, llms-https://docs.nodemaven.com/llms.txt:https://docs.nodemaven.com/llms.txt
+sources_ok: home:https://nodemaven.com/, llms:https://nodemaven.com/llms.txt, llms-https://docs.nodemaven.com/llms.txt:https://docs.nodemaven.com/llms.txt, pricing:https://nodemaven.com/pricing/
 --- ranked fact lines ---
 [llms] - [Do you offer a free trial?](https://docs.nodemaven.com/en/articles/9582651-do-you-offer-a-free-trial.md): We offer a paid trial: 750 MB for $3.50, covering Residential and Mobile.
+[pricing] You can start with a $3.50 trial that includes 750 MB of bandwidth , usable across residential & mobile proxies . The lowest monthly plan starts at $8.5 for 2 GB. There are no free plans, but unused traffic always rolls over to the next billing period so you never lose what you paid for.
+[pricing] NodeMaven doesn't offer a free trial, but you can get started with a $3.50 paid trial including 750 MB of real bandwidth . This lets you test performance, success rates, and integration before committing to a larger plan.
 [home] Try our premium proxies for $3.50 and get 750MB of bandwidth
 [home] Try now about Try our premium proxies for $3.50 and get 750MB of bandwidth
+[pricing] Buy Residential & Mobile Proxies from $2.20/GB | NodeMaven
+[pricing] Buy High-Quality Residential, Mobile, and ISP Proxies Proxies from $2.20/GB. Includes IP quality filter,
+[pricing] NodeMaven residential proxies start at $2.20/GB on monthly plans. Pay-as-you-go rates are also available. All plans include access to both the residential and mobile proxy pools, traffic rollover, and cashback on used bandwidth.
+[pricing] Is there a free trial?
 --- llms/readme head ---
 # NodeMaven Help Center
 > A selection of Help resources from the NodeMaven Team

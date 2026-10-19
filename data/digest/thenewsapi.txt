@@ -25,7 +25,6 @@ sources_ok: pricing:https://www.thenewsapi.com/pricing, docs:https://www.thenews
 [docs] Sign up for free!
 [docs] you will never be short of content. Even better, it is completely free!
 [docs] If you have any questions or concerns, feel free to contact us .
-[docs] "url": "https://www.gurufocus.com/news/9129134/barclays-faces-scrutiny-over-private-credit-loan-practices",
 [home] Free live and top story JSON news API | The News API
 [home] Free worldwide news API
 [home] GET FREE API KEY

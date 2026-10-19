@@ -1,6 +1,6 @@
 # treg (treg) category=ai-search
 home=https://treg.to/ pricing=https://treg.to/web-access docs=https://treg.to/llms.txt llms=https://treg.to/llms.txt
-sources_ok: llms:https://treg.to/llms.txt, pricing:https://treg.to/web-access, home:https://treg.to/
+sources_ok: llms:https://treg.to/llms.txt, pricing:https://treg.to/web-access, home:https://treg.to/, leaderboard:https://treg.to/web-arena/api/leaderboard
 --- ranked fact lines ---
 [llms] cent (a TikTok profile is ~$0.001); new verified accounts receive **$1.00 free once**, when creating an eligible team (a team made
 [llms] `X-Treg-Route-Max-Cost` (default $1 per call; misses on per-success providers are free, others bill

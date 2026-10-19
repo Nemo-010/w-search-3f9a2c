@@ -1,6 +1,6 @@
 # Linkup (linkup) category=ai-search
 home=https://www.linkup.so/ pricing=https://www.linkup.so/pricing docs=https://docs.linkup.so/ llms=None
-sources_ok: pricing:https://www.linkup.so/pricing, docs:https://docs.linkup.so/, home:https://www.linkup.so/, llms:https://docs.linkup.so/llms.txt, llms-full:https://docs.linkup.so/llms-full.txt, llms-https://www.linkup.so/llms.txt:https://www.linkup.so/llms.txt
+sources_ok: pricing:https://www.linkup.so/pricing, docs:https://docs.linkup.so/, home:https://www.linkup.so/, llms:https://docs.linkup.so/llms.txt, llms-full:https://docs.linkup.so/llms-full.txt, llms-https://www.linkup.so/llms.txt:https://www.linkup.so/llms.txt, startups:https://www.linkup.so/startups
 --- ranked fact lines ---
 [llms] - [OpenAI deep research API vs Gemini vs Linkup: 2026 guide](https://www.linkup.so/blog/best-deep-research-api-in-2026-openai-gemini-and-linkup-compared): OpenAI and Gemini deep research APIs price by token with no public benchmark. Linkup /research: $0.25–$2.50/request, 61% SealQA-0, SOC 2 Type II.
 [llms] - [AI Search API Cost: Why Tokens Matter More Than Price Per Call](https://www.linkup.so/blog/your-search-api-isn-t-what-s-expensive-your-tokens-are): Cost Per Resolved Query: The Right Way to Evaluate Search APIs. Why Your Search API Looks Cheap But Isn't

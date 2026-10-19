@@ -1,6 +1,6 @@
 # NetNut (netnut) category=serp-scrape
 home=https://netnut.io/ pricing=https://netnut.io/pricing/ docs=https://help.netnut.io/ llms=None
-sources_ok: pricing:https://netnut.io/pricing/, docs:https://help.netnut.io/, home:https://netnut.io/, llms:https://help.netnut.io/llms.txt, llms-full:https://docs.netnut.io/llms-full.txt, llms-https://netnut.io/llms.txt:https://netnut.io/llms.txt, llms-https://netnut.io/docs/llms.txt:https://netnut.io/docs/llms.txt, llms-https://docs.netnut.io/llms.txt:https://docs.netnut.io/llms.txt
+sources_ok: pricing:https://netnut.io/pricing/, docs:https://help.netnut.io/, home:https://netnut.io/, llms:https://help.netnut.io/llms.txt, llms-full:https://docs.netnut.io/llms-full.txt, llms-https://netnut.io/llms.txt:https://netnut.io/llms.txt, llms-https://netnut.io/docs/llms.txt:https://netnut.io/docs/llms.txt, llms-https://docs.netnut.io/llms.txt:https://docs.netnut.io/llms.txt, trial:https://netnut.io/free-trial/
 --- ranked fact lines ---
 --- llms/readme head ---
 Seized by the Federal Bureau of Investigation

@@ -171,7 +171,7 @@ FACTS = {
    one_time="$5 credit", card=None, bonus=["pay per successful response"], confidence=H,
    quote="Try Zyte API with $5 free credit", url="https://www.zyte.com/pricing/", snap="zyte/trial.txt"),
  "apify": dict(monthly_calls=None, monthly_note="Free plan $0 with $5/month in platform usage (spend in Apify Store or own Actors), no card",
-   one_time="$500 free usage for 6 months for own Actors/agents program", card=False,
+   one_time="$500 of prepaid usage for the first 6 months, for Actor developers on the Creator plan (not a general signup grant)", card=False,
    bonus=["$5/month platform credits", "store discount on paid plans"], confidence=H,
    quote="Free $0 $5 to spend in Apify Store or on your own Actors",
    url="https://apify.com/pricing", snap="apify/pricing.txt"),

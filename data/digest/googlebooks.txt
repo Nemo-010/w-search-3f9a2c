@@ -1,4 +1,18 @@
 # Google Books API (googlebooks) category=misc-api
 home=https://developers.google.com/books pricing=None docs=https://developers.google.com/books llms=None
-sources_ok: docs:https://developers.google.com/books
+sources_ok: docs:https://developers.google.com/books, docs2:https://developers.google.com/books/docs/v1/using
 --- ranked fact lines ---
+[docs2] Requests to the API require identification using an OAuth 2.0 token for authorized requests or an API key for public data.
+[docs2] Every request your application sends to the Books API needs to identify your application to Google. There are two ways to identify your application: using an OAuth 2.0 token (which also authorizes the request) and/or using the application's API key . Here's how to determine which of those options to use:
+[docs2] If the request requires authorization (such as a request for an individual's private data), then the application must provide an OAuth 2.0 token with the request. The application may also provide the API key, but it doesn't have to.
+[docs2] If the request doesn't require authorization (such as a request for public data), then the application must provide either the API key or an OAuth 2.0 token, or both—whatever option is most convenient for you.
+[docs2] Some flows include additional steps, such as using refresh tokens to acquire new access tokens. For detailed information about flows for various types of applications, see Google's OAuth 2.0 documentation .
+[docs2] data, it must send an OAuth 2.0 token along with the request. Your
+[docs2] obtain a token. You can generate OAuth 2.0 credentials for web
+[docs2] A request that does not provide an OAuth 2.0 token must send an API
+[docs2] free-ebooks - Only returns results that are free Google
+[docs2] free. Examples of non-eBooks would be publisher content that is available in
+[docs2] The following example restricts search results to those available as free
+[docs2] GET https://www.googleapis.com/books/v1/volumes?q=flowers&filter=free-ebooks& key = yourAPIKey
+[docs2] filter=free-ebooks - Restrict results to free Google eBooks.
+[docs2] filter=ebooks - Restrict results to Google eBooks, paid or free.Examples of non-eBooks would be publisher content that is available in

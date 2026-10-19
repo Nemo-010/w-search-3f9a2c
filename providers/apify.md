@@ -11,7 +11,7 @@
 
 - Documented recurring free volume: not quantified in fetched sources
 - Detail: Free plan $0 with $5/month in platform usage (spend in Apify Store or own Actors), no card
-- One-time grant: $500 free usage for 6 months for own Actors/agents program
+- One-time grant: $500 of prepaid usage for the first 6 months, for Actor developers on the Creator plan (not a general signup grant)
 - Card required for free tier: no
 - Signup extras: $5/month platform credits; store discount on paid plans
 - Confidence: **high**

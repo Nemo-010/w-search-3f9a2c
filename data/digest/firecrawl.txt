@@ -1,16 +1,57 @@
 # Firecrawl (firecrawl) category=ai-search
 home=https://www.firecrawl.dev/ pricing=https://www.firecrawl.dev/pricing docs=https://docs.firecrawl.dev/ llms=https://docs.firecrawl.dev/llms.txt
-sources_ok: llms:https://docs.firecrawl.dev/llms.txt, llms-full:https://docs.firecrawl.dev/llms-full.txt, pricing:https://www.firecrawl.dev/pricing, docs:https://docs.firecrawl.dev/, home:https://www.firecrawl.dev/
+sources_ok: llms:https://docs.firecrawl.dev/llms.txt, llms-full:https://docs.firecrawl.dev/llms-full.txt, pricing:https://www.firecrawl.dev/pricing, docs:https://docs.firecrawl.dev/, home:https://www.firecrawl.dev/, billing-md:https://docs.firecrawl.dev/billing.md, rate-limits-md:https://docs.firecrawl.dev/rate-limits.md
 --- ranked fact lines ---
+[billing-md] * **1,000 credits per month.** The allotment resets at the start of each monthly cycle. Unused free credits do not roll over.
+[billing-md] You buy credits in increments of 5 USD. When your credit balance reaches zero, we add one increment to your account and charge your card on file.
+[billing-md] You can also buy credits yourself at any time. Use **Load more credits** in your [billing settings](https://www.firecrawl.dev/app/settings?tab=billing). Enter a multiple of 5 USD, and pay with your card on file. This works whether pay-as-you-go is on or off.
+[billing-md] | Plan | Credits per 5 USD |
+[billing-md] | **Hobby, Standard, Growth, Scale** | On | Firecrawl charges your card for one 5 USD increment and adds its credits. Your requests continue. This repeats each time the balance reaches zero, until your **monthly pay-as-you-go limit** is reached. Leave the limit blank for no cap. |
+[billing-md] For example, processing a typical post or thread request costs **30 credits** (`1` base + `29` Grok X Query) and returns Grok-generated structured data, thread context, and summaries. If JSON format (LLM extraction) is also enabled, the total is **34 credits** per request.
+[billing-md] The free plan does not include pay-as-you-go, so requests return an HTTP 402 once the monthly allotment runs out. See [Running Out of Credits](#running-out-of-credits). It also does not include credit rollover, a Data Processing Agreement, or Slack support. Support is community support.
+[billing-md] Scrape, Search and Interact also work with no API key at all, through the keyless free tier, which is capped per IP address per day rather than by a credit allotment. See [Keyless (no API key)](/rate-limits#keyless-no-api-key).
+[billing-md] Your limit is the most that pay-as-you-go can spend in one month. It rounds down to whole 5 USD increments.
+[billing-md] For example, a limit of 25 USD allows five increments each month. A limit of 22 USD allows four increments, because 22 USD rounds down to 20 USD.
+[billing-md] | **Free** | Not available | Requests that consume credits return **HTTP 402 (Payment Required)** until the monthly reset. |
+[billing-md] Your limit caps what pay-as-you-go spends each month. It rounds down to whole 5 USD increments. A limit of 25 USD allows five increments each month. Leave your limit blank, and pay-as-you-go has no monthly limit. Set your limit to `0`, and pay-as-you-go turns off.
+[rate-limits-md] [Sign up for a free API key](https://firecrawl.dev) to get 1,000 credits and higher rate limits at no cost — official clients automatically use your key once it's configured.
 [docs] "snippet" : "It's now placed three new ads on YC's job board for “AI agents only” and has set aside a $1 million budget total to make it happen." ,
 [docs] "markdown" : "Launch Week I is here! [See our Day 2 Release 🚀](https://www.firecrawl.dev/blog/launch-week-i-day-2-doubled-rate-limits)[💥 Get 2 months free..." ,
 [docs] "output" : "The iPhone 16 Pro Max (256GB) is priced at $1,199.00." ,
 [home] 3 " output " : " Keyboard available at $100 " ,
+[rate-limits-md] Keyless usage is free and capped per IP address per day by **two limits**, and exceeding either returns a `429`:
 [docs] "title" : "Y Combinator startup Firecrawl is ready to pay $1M to hire three AI agents as employees" ,
+[billing-md] | **Agent** | Dynamic | Autonomous web research agent. 5 daily runs free; usage-based pricing beyond that. |
+[billing-md] * **Unused plan credits do not roll over by default**: your monthly allotment resets each month. **Annual Scale plans roll unused plan credits over 1 month**, and **annual Enterprise plans roll them over 2 months**.
+[billing-md] **Plan credits** do not roll over by default: your monthly allotment resets each month. **Annual Scale plans roll unused plan credits over 1 month**, and **annual Enterprise plans roll them over 2 months**.
 [pricing] auth, API key setup, and Firecrawl capabilities. Prefer a free account
 [pricing] describes a keyless free tier to search, scrape, and interact:
 [docs] Get your API key Create a free account for direct API access and higher limits Try it in the Playground Test Firecrawl in the browser without writing code
 [home] Firecrawl | Web Data API for AI Agents Introducing Alexandria and our $75M Series B. Read the announcement → Products Resources Pricing Docs Blog Playground 192.9K Sign up 2 Months Free - Annually Give your AI agents web data and beyond The web data API to search and scrape with access to more sources through Alexandria . It's also open source. Start for free Setup for agents Search Scrape Map Cra
+[billing-md] | **Scrape** | 1 credit / page | Convert a single URL into clean markdown, HTML, or structured data. Additional credits apply when using scrape options (see below). |
+[billing-md] | **Crawl** | 1 credit / page | Scrape an entire website by following links from a starting URL. The same per-page scrape option costs apply to each page crawled. |
+[billing-md] | **Map** | 1 credit / call | Discover all URLs on a website without scraping their content. |
+[billing-md] | **Search** | 2 credits / 10 results | Search the web and optionally scrape the results. Rounded up per 10 results (e.g., 11 results = 4 credits). Additional per-page scrape costs apply to each result that is scraped. See [here](/features/search#zero-data-retention-zdr) for enterprise ZDR search pricing. |
+[billing-md] | PDF parsing | +1 credit / PDF page | Extract content from PDF documents |
+[billing-md] | JSON format (LLM extraction) | +4 credits / page | Use an LLM to extract structured JSON data from the page |
+[billing-md] | Prompt injection check | +4 credits / page | Opt-in `checkPromptInjection` scrape option, available with any format (see [Prompt injection detection](/features/llm-extract#prompt-injection-detection)). If the scrape fails after the check has run, 5 credits are billed. See [When credits are charged](#when-credits-are-charged). |
+[billing-md] | Zero Data Retention (ZDR) | +1 credit / page | Ensures no data is persisted beyond the request (see [Scrape ZDR](/features/scrape#zero-data-retention-zdr)) |
+[billing-md] | `question` or `query` format | +4 credits / page | LLM-generated answer to a question about the page (see [Scrape](/features/scrape)) |
+[billing-md] | `highlights` format | +4 credits / page | LLM-selected relevant passages from the page (see [Scrape](/features/scrape)) |
+[billing-md] | `audio` format | +4 credits / page | Transcribe audio found on the page (see [Scrape](/features/scrape)) |
+[billing-md] | `video` format | +4 credits / page | Transcribe video found on the page (see [Scrape](/features/scrape)) |
+[billing-md] | PII redaction (`redactPII`) | +4 credits / page | Redact personal data from the returned markdown. Each additional PDF page adds another +4 on top of its +1 parsing cost (see [PII redaction](/features/pii-redaction)) |
+[billing-md] | `lockdown` (cache hit) | +4 credits / page | Serve from cache only, never fetching the target. A cache miss returns no document and bills 1 credit (see [Lockdown](/features/lockdown) and the table below) |
+[billing-md] | Enhanced proxy (`proxy: "enhanced"` or `auto` escalation) | +0 | Billed at the same 1 credit as a basic request. An escalated retry is not charged separately (see [Enhanced Mode](/features/enhanced-mode)) |
+[billing-md] These modifiers stack. For example, scraping a page with both JSON format and Zero Data Retention costs **1 + 4 + 1 = 6 credits** per page, and JSON format with PII redaction costs **1 + 4 + 4 = 9 credits**. These same modifiers apply to the Crawl and Search endpoints since they use scrape internally for each page.
+[billing-md] * **Firecrawl returned no document: 0 credits.** A scrape that fails outright, for example because the site never responded or every rendering attempt failed, is not charged.
+[billing-md] | Threat protection scan | 2 credits per scanned URL, including a scrape that the scan itself blocked |
+[billing-md] | Prompt injection check | 5 credits, once the `checkPromptInjection` guard has run |
+[billing-md] | `lockdown` cache miss | 1 credit |
+[billing-md] | Monitor check | A page that errors during a check is charged the base 1 credit per page |
+[billing-md] ### Free plan
+[billing-md] New accounts start on the free plan. It costs nothing and does not need a card. Here is what it includes:
+[billing-md] * **Yearly plans**: You are billed annually, but credits still reset each month on your virtual monthly renewal date
 --- llms/readme head ---
 # Firecrawl Docs
 - [v2 (221 pages)](https://docs.firecrawl.dev/_llms/en/v2.txt): Documentation for v2.

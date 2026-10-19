@@ -1,4 +1,27 @@
 # Brave Search API (brave) category=ai-search
 home=https://brave.com/search/api/ pricing=https://brave.com/search/api/#pricing docs=https://api.search.brave.com/app/documentation llms=None
-sources_ok: 
+sources_ok: api-page:https://r.jina.ai/https://brave.com/search/api/
 --- ranked fact lines ---
+[api-page] Up to $20 in free calls every month · Prepaid credits, no subscription
+[api-page] All-in cost per 1,000 questions (search plus model tokens). Brave's own published runs; methodology public.
+[api-page] #### Includes _$5 in free_ credits _every month_
+[api-page] + $5 per million input/output tokens
+[api-page] Accuracy vs. cost per 1,000 questions, FreshQA Top left is better: more accurate, lower cost
+[api-page] Brave: 85.3% at $18
+[api-page] Parallel Advanced: 79.0% at $49
+[api-page] Exa: 78.0% at $84
+[api-page] Tavily: 78.0% at $89
+[api-page] $0$20$40$60$80$100
+[api-page] In FreshQA, Brave scored 85.3% accuracy at $18 per 1,000 questions (vs. $49 - $89 for competitors).
+[api-page] $5 per 1,000 requests
+[api-page] $4 per 1,000 requests
+[api-page] In head-to-head evals, open-weights like Qwen3 and Nemotron outperform free frontier models from ChatGPT, Google AI Mode, Grok, and Perplexity.
+[api-page] 9            "X-Subscription-Token": "<BRAVE_SEARCH_API_KEY>",
+[api-page] 4  -H "X-Subscription-Token: <YOUR_API_KEY>"
+[api-page] 9      "X-Subscription-Token": "<BRAVE_SEARCH_API_KEY>",
+[api-page] 18    req.Header.Set("X-Subscription-Token", "<YOUR_API_KEY>")
+[api-page] 6  -H "x-subscription-token: <YOUR_BRAVE_SEARCH_API_KEY>"
+[api-page] 13      "X-Subscription-Token": "<BRAVE_SEARCH_API_KEY>",
+[api-page] 29    req.Header.Set("X-Subscription-Token", "<YOUR_API_KEY>")
+[api-page] 12      "X-Subscription-Token": "<BRAVE_SEARCH_API_KEY>",
+[api-page] 20	req.Header.Set("X-Subscription-Token", "<BRAVE_SEARCH_API_KEY>")

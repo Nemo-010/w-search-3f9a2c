@@ -1,12 +1,18 @@
 # Context.dev (contextdev) category=ai-search
 home=https://context.dev/ pricing=https://context.dev/pricing docs=https://docs.context.dev/ llms=https://docs.context.dev/llms.txt
-sources_ok: llms:https://docs.context.dev/llms.txt, llms-full:https://docs.context.dev/llms-full.txt, pricing:https://context.dev/pricing, docs:https://docs.context.dev/, home:https://context.dev/
+sources_ok: llms:https://docs.context.dev/llms.txt, llms-full:https://docs.context.dev/llms-full.txt, pricing:https://context.dev/pricing, docs:https://docs.context.dev/, home:https://context.dev/, credits:https://docs.context.dev/account/credits.md
 --- ranked fact lines ---
+[credits] Free organizations receive 1,000 credits monthly on their grant-anchor day, whether they signed up with a work or personal email. Only one unpaid organization is allowed per person. Extra grants above the Free allowance are preserved at refill.
 [pricing] Web Scraping API Pricing: Plans from $0 | Context.dev Introducing Highlights: the context that matters Context.dev Products Use Cases Customers Pricing Docs Scrape anything Scrape any URL with a 99.96% success rate. Explore Scrape anything Web search Search the live web for AI agents and LLM apps. Map domains Discover URLs across a website before you scrape. Run batches Scrape thousands of URLs or
 [home] }' npm install context.dev Build on what the web knows. Connect web content to the places your product needs it: research, onboarding, enrichment, and retrieval. Scrape anything Turn webpages and PDFs into Markdown, HTML, structured fields, images, and screenshots in one request. Ground RAG in fresh content Collect pages with Scrape and Crawl, add documents with Parse, and keep your retrieval inde
+[credits] Use **Earn free credits** or **Redeem a code** in the dashboard when available. Paid plans can enable [Auto-Topup](/account/billing#auto-topup-and-spend-alerts). Dollar prices and Logo Link allowances are on the [pricing page](https://www.context.dev/pricing).
 [llms] - [Enrich a person](https://docs.context.dev/api-reference/people/enrich.md): Find a person from identity clues and return their profile with a match score. Available on all plans; free or disposable email addresses return 422.
+[credits] | [Brand search](/brand/search) | 1 on Free and Developer; free on Pro, Growth, and Scale. |
+[credits] | [People](/people/overview) | 20 per returned match; `not_found` is free. |
+[credits] | [Monitor runs](/monitors/overview) | 1 for page or sitemap; 2 for a page with browser actions; 10 for extract. Baseline runs count. Failed and skipped runs are free. |
 [llms] - [Retrieve monitor credit usage](https://docs.context.dev/api-reference/monitors/credit-usage.md): Return usage per monitor, highest first, for up to the 10,000 most recent runs in the requested window.
 [llms] - [Retrieve usage history](https://docs.context.dev/api-reference/usage/history.md): Retrieve credits and requests over time, bucketed by hour, day, or month. History is kept for one year.
+[credits] ## Free balance and refills
 --- llms/readme head ---
 # Context.dev
 > ## Agent Instructions

@@ -1,11 +1,14 @@
 # TinyFish (tinyfish) category=ai-search
 home=https://www.tinyfish.ai/ pricing=None docs=https://docs.tinyfish.ai/ llms=https://docs.tinyfish.ai/llms.txt
-sources_ok: llms:https://docs.tinyfish.ai/llms.txt, llms-full:https://docs.tinyfish.ai/llms-full.txt, docs:https://docs.tinyfish.ai/, home:https://www.tinyfish.ai/
+sources_ok: llms:https://docs.tinyfish.ai/llms.txt, llms-full:https://docs.tinyfish.ai/llms-full.txt, docs:https://docs.tinyfish.ai/, home:https://www.tinyfish.ai/, search-doc:https://docs.tinyfish.ai/search-api/index.md, fetch-doc:https://docs.tinyfish.ai/fetch-api/index.md, search-ref:https://docs.tinyfish.ai/search-api/reference.md
 --- ranked fact lines ---
+[search-ref] | `402` | Daily free allowance used and wallet balance is zero or below (`INSUFFICIENT_CREDITS`) — add funds at the [wallet page](https://agent.tinyfish.ai/wallet) or wait for the daily reset. `FREE_ALLOWANCE_EXHAUSTED` when the allowance is used and the product does not charge the wallet (beta) — wait for the daily reset |
 [llms] - [Start multiple automations asynchronously](https://docs.tinyfish.ai/api-reference/automation/start-multiple-automations-asynchronously.md): Creates and enqueues multiple automation runs in a single request, returning run_ids immediately without waiting for completion. Maximum 100 runs per request.
 [llms] - [Get multiple runs by IDs](https://docs.tinyfish.ai/api-reference/runs/get-multiple-runs-by-ids.md): Retrieve multiple runs by their IDs in a single request. Returns found runs and lists any IDs that were not found or not owned. Maximum 100 IDs per request.
 [llms] - [Cancel multiple runs by IDs](https://docs.tinyfish.ai/api-reference/runs/cancel-multiple-runs-by-ids.md): Cancel multiple runs by their IDs in a single request. Returns per-run results including cancelled runs, already-terminal runs, and not-found IDs. Maximum 100 IDs per request. Idempotent: calling twice returns consistent results.
 [docs] Search and Fetch are free within a daily allowance. Agent, Research, and Browser draw from your wallet as they run.
+[search-doc] Search is free up to 12,000 requests per day. Beyond that, requests need a positive wallet balance.
+[fetch-doc] Fetch is free up to 1,000 URLs per day. Beyond that, requests need a positive wallet balance.
 --- llms/readme head ---
 # TinyFish Web Agent
 - [TinyFish Developer Documentation](https://docs.tinyfish.ai/index.md): Choose the right TinyFish API, authenticate quickly, and start integrating faster

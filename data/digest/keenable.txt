@@ -1,6 +1,6 @@
 # Keenable (keenable) category=ai-search
 home=https://keenable.ai/ pricing=None docs=https://docs.keenable.ai/ llms=https://docs.keenable.ai/llms.txt
-sources_ok: llms:https://docs.keenable.ai/llms.txt, llms-full:https://docs.keenable.ai/llms-full.txt, docs:https://docs.keenable.ai/, home:https://keenable.ai/
+sources_ok: llms:https://docs.keenable.ai/llms.txt, llms-full:https://docs.keenable.ai/llms-full.txt, docs:https://docs.keenable.ai/, home:https://keenable.ai/, credits:https://docs.keenable.ai/credits.md, rate-limits:https://docs.keenable.ai/rate-limits.md
 --- ranked fact lines ---
 [llms-full] `credits` is what the call cost, and `paid` tells you which bucket it came from — `false` for the free monthly allowance, `true` for purchased credits. This is what to attribute cost against per call; see [Metadata for integrators](/mcp-server#metadata-for-integrators) for the full field list.
 [llms] - [Credits](https://docs.keenable.ai/credits.md): The free allowance of 100,000 requests a month, how authenticated usage is metered against it, and what happens when it runs out.
@@ -9,6 +9,7 @@ sources_ok: llms:https://docs.keenable.ai/llms.txt, llms-full:https://docs.keena
 [llms-full] **100,000 requests a month, free.** The allowance resets each month, so it is a recurring budget rather than a one-off trial. To keep going once it is spent, buy a credit package in the [console](https://app.keenable.ai/console) — that is also where your current allowance and remaining balance are shown.
 [llms-full] Call search and fetch with no account and no API key: each request pays $0.01 in USDC on Base over the x402 protocol, or spends prepaid credit bought through ZeroClick.
 [llms-full] Rate limits cap how *fast* you can call the API. How *much* you can call it is a separate limit: authenticated usage draws on a free allowance of 100,000 requests a month — see [credits](/credits).
+[credits] > The free allowance of 100,000 requests a month, how authenticated usage is metered against it, and what happens when it runs out.
 [llms-full] Quoting it in requests works because a credit *is* a request for the two operations that matter here: search and fetch each cost one. Anything priced differently draws more than one credit per call, which is why the rule below still holds — read what a call cost from the response rather than counting calls.
 [llms-full] `keenable/keenable` is the connector's UID: the service, then the name you gave it. On Vercel, `getToken` authenticates with the deployment's OIDC token; locally, run `vercel env pull` first. Call it per request rather than once at startup. The SDK caches the key in process.
 [llms-full] **Paying per request**, on the `/v1/x402/*` paths, with no key and no account: each call pays \$0.01 in USDC on Base over the x402 protocol. See [Pay per request](/pay-per-request) for the payment flow and a client example.

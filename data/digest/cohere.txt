@@ -1,6 +1,6 @@
 # Cohere (cohere) category=llm-search
 home=https://docs.cohere.com/ pricing=https://cohere.com/pricing docs=https://docs.cohere.com/ llms=None
-sources_ok: pricing:https://cohere.com/pricing, docs:https://docs.cohere.com/, llms:https://docs.cohere.com/llms.txt, llms-full:https://docs.cohere.com/docs/llms-full.txt, llms-https://docs.cohere.com/docs/llms.txt:https://docs.cohere.com/docs/llms.txt
+sources_ok: pricing:https://cohere.com/pricing, docs:https://docs.cohere.com/, llms:https://docs.cohere.com/llms.txt, llms-full:https://docs.cohere.com/docs/llms-full.txt, llms-https://docs.cohere.com/docs/llms.txt:https://docs.cohere.com/docs/llms.txt, trial:https://docs.cohere.com/docs/rate-limits
 --- ranked fact lines ---
 --- llms/readme head ---
 > This page is for version v2 API (default).

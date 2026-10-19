@@ -104,12 +104,12 @@
   "pricing": "https://apiflash.com/#pricing",
   "docs": "https://apiflash.com/documentation",
   "llms": null,
-  "ok_sources": 3,
+  "ok_sources": 2,
   "llms_ok": false,
   "github": null,
   "status_codes": {
-   "200": 3,
-   "404": 3,
+   "404": 4,
+   "200": 2,
    "0": 1
   }
  },
@@ -121,11 +121,11 @@
   "pricing": "https://apify.com/pricing",
   "docs": "https://docs.apify.com/",
   "llms": "https://docs.apify.com/llms.txt",
-  "ok_sources": 5,
+  "ok_sources": 6,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 5
+   "200": 6
   }
  },
  {
@@ -170,11 +170,11 @@
   "pricing": null,
   "docs": "https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview",
   "llms": "",
-  "ok_sources": 1,
+  "ok_sources": 2,
   "llms_ok": false,
   "github": null,
   "status_codes": {
-   "200": 1,
+   "200": 2,
    "404": 4,
    "0": 1
   }
@@ -251,12 +251,13 @@
   "pricing": "https://brave.com/search/api/#pricing",
   "docs": "https://api.search.brave.com/app/documentation",
   "llms": null,
-  "ok_sources": 0,
+  "ok_sources": 1,
   "llms_ok": false,
   "github": null,
   "status_codes": {
    "0": 5,
-   "403": 2
+   "403": 2,
+   "200": 1
   }
  },
  {
@@ -377,11 +378,11 @@
   "pricing": "https://cohere.com/pricing",
   "docs": "https://docs.cohere.com/",
   "llms": null,
-  "ok_sources": 5,
+  "ok_sources": 6,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 5
+   "200": 6
   }
  },
  {
@@ -425,11 +426,11 @@
   "pricing": "https://context.dev/pricing",
   "docs": "https://docs.context.dev/",
   "llms": "https://docs.context.dev/llms.txt",
-  "ok_sources": 5,
+  "ok_sources": 6,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 5
+   "200": 6
   }
  },
  {
@@ -596,7 +597,7 @@
   "github": null,
   "status_codes": {
    "200": 4,
-   "404": 2
+   "404": 3
   }
  },
  {
@@ -641,11 +642,11 @@
   "pricing": "https://api-docs.deepseek.com/quick_start/pricing",
   "docs": "https://api-docs.deepseek.com/",
   "llms": null,
-  "ok_sources": 4,
+  "ok_sources": 5,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 4,
+   "200": 5,
    "403": 3,
    "0": 2
   }
@@ -869,11 +870,11 @@
   "pricing": "https://www.firecrawl.dev/pricing",
   "docs": "https://docs.firecrawl.dev/",
   "llms": "https://docs.firecrawl.dev/llms.txt",
-  "ok_sources": 5,
+  "ok_sources": 7,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 5
+   "200": 7
   }
  },
  {
@@ -999,11 +1000,11 @@
   "pricing": null,
   "docs": "https://developers.google.com/books",
   "llms": null,
-  "ok_sources": 1,
+  "ok_sources": 2,
   "llms_ok": false,
   "github": null,
   "status_codes": {
-   "200": 1,
+   "200": 2,
    "404": 2,
    "0": 1
   }
@@ -1066,11 +1067,11 @@
   "pricing": "https://open-platform.theguardian.com/access/",
   "docs": "https://open-platform.theguardian.com/documentation/",
   "llms": null,
-  "ok_sources": 3,
+  "ok_sources": 5,
   "llms_ok": false,
   "github": null,
   "status_codes": {
-   "200": 3,
+   "200": 5,
    "404": 3,
    "0": 1
   }
@@ -1113,11 +1114,11 @@
   "pricing": null,
   "docs": "https://hn.algolia.com/api",
   "llms": null,
-  "ok_sources": 1,
+  "ok_sources": 2,
   "llms_ok": false,
   "github": null,
   "status_codes": {
-   "200": 1,
+   "200": 2,
    "404": 2,
    "0": 1
   }
@@ -1217,7 +1218,7 @@
   "github": null,
   "status_codes": {
    "200": 4,
-   "404": 1
+   "404": 2
   }
  },
  {
@@ -1261,11 +1262,12 @@
   "pricing": "https://developers.kakao.com/docs/latest/en/daum-search/common",
   "docs": "https://developers.kakao.com/docs/latest/en/daum-search/common",
   "llms": null,
-  "ok_sources": 0,
+  "ok_sources": 2,
   "llms_ok": false,
   "github": null,
   "status_codes": {
-   "0": 4
+   "0": 5,
+   "200": 2
   }
  },
  {
@@ -1309,11 +1311,11 @@
   "pricing": null,
   "docs": "https://docs.keenable.ai/",
   "llms": "https://docs.keenable.ai/llms.txt",
-  "ok_sources": 4,
+  "ok_sources": 6,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 4
+   "200": 6
   }
  },
  {
@@ -1406,11 +1408,11 @@
   "pricing": "https://www.linkup.so/pricing",
   "docs": "https://docs.linkup.so/",
   "llms": null,
-  "ok_sources": 6,
+  "ok_sources": 7,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 6,
+   "200": 7,
    "404": 1
   }
  },
@@ -1719,11 +1721,11 @@
   "pricing": "https://developers.naver.com/docs/serviceapi/search/blog/blog.md",
   "docs": "https://developers.naver.com/docs/serviceapi/search/blog/blog.md",
   "llms": null,
-  "ok_sources": 4,
+  "ok_sources": 5,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 4,
+   "200": 5,
    "0": 1
   }
  },
@@ -1735,11 +1737,11 @@
   "pricing": "https://netnut.io/pricing/",
   "docs": "https://help.netnut.io/",
   "llms": null,
-  "ok_sources": 8,
+  "ok_sources": 9,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 8,
+   "200": 9,
    "0": 1
   }
  },
@@ -1815,11 +1817,11 @@
   "pricing": null,
   "docs": null,
   "llms": null,
-  "ok_sources": 3,
+  "ok_sources": 4,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 3,
+   "200": 4,
    "404": 1
   }
  },
@@ -1880,11 +1882,11 @@
   "pricing": null,
   "docs": "https://docs.octen.ai/",
   "llms": "https://docs.octen.ai/llms.txt",
-  "ok_sources": 4,
+  "ok_sources": 5,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 4
+   "200": 5
   }
  },
  {
@@ -2090,11 +2092,11 @@
   "pricing": "https://oxylabs.io/pricing",
   "docs": "https://developers.oxylabs.io/",
   "llms": null,
-  "ok_sources": 7,
+  "ok_sources": 8,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 7,
+   "200": 8,
    "404": 1,
    "0": 1
   }
@@ -2413,11 +2415,11 @@
   "pricing": null,
   "docs": null,
   "llms": null,
-  "ok_sources": 2,
+  "ok_sources": 3,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 2,
+   "200": 3,
    "403": 1
   }
  },
@@ -2433,7 +2435,7 @@
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "404": 2,
+   "404": 3,
    "200": 3,
    "0": 1
   }
@@ -2501,7 +2503,7 @@
   "llms_ok": false,
   "github": null,
   "status_codes": {
-   "404": 3,
+   "404": 4,
    "200": 1,
    "0": 1
   }
@@ -2533,7 +2535,7 @@
   "llms_ok": false,
   "github": null,
   "status_codes": {
-   "404": 4,
+   "404": 5,
    "200": 2
   }
  },
@@ -2614,7 +2616,8 @@
   "github": null,
   "status_codes": {
    "200": 6,
-   "0": 1
+   "0": 1,
+   "404": 1
   }
  },
  {
@@ -2712,7 +2715,7 @@
   "github": null,
   "status_codes": {
    "403": 1,
-   "404": 2,
+   "404": 3,
    "200": 2
   }
  },
@@ -2724,13 +2727,13 @@
   "pricing": "https://serper.dev/pricing",
   "docs": "https://docs.serper.dev/",
   "llms": null,
-  "ok_sources": 1,
+  "ok_sources": 2,
   "llms_ok": false,
   "github": null,
   "status_codes": {
    "404": 3,
    "0": 2,
-   "200": 1
+   "200": 2
   }
  },
  {
@@ -2957,7 +2960,8 @@
   "github": null,
   "status_codes": {
    "200": 3,
-   "403": 2
+   "403": 2,
+   "404": 1
   }
  },
  {
@@ -3017,11 +3021,12 @@
   "pricing": null,
   "docs": "https://docs.tinyfish.ai/",
   "llms": "https://docs.tinyfish.ai/llms.txt",
-  "ok_sources": 4,
+  "ok_sources": 7,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 4
+   "200": 7,
+   "404": 1
   }
  },
  {
@@ -3049,11 +3054,11 @@
   "pricing": "https://treg.to/web-access",
   "docs": "https://treg.to/llms.txt",
   "llms": "https://treg.to/llms.txt",
-  "ok_sources": 3,
+  "ok_sources": 4,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 3
+   "200": 4
   }
  },
  {
@@ -3064,11 +3069,11 @@
   "pricing": null,
   "docs": "https://unpaywall.org/products/api",
   "llms": null,
-  "ok_sources": 4,
+  "ok_sources": 6,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 4,
+   "200": 6,
    "0": 1
   }
  },
@@ -3177,12 +3182,12 @@
   "pricing": null,
   "docs": "https://archive.org/help/wayback_api.jsp",
   "llms": null,
-  "ok_sources": 1,
+  "ok_sources": 2,
   "llms_ok": false,
   "github": null,
   "status_codes": {
    "404": 4,
-   "200": 1,
+   "200": 2,
    "0": 2
   }
  },
@@ -3358,11 +3363,11 @@
   "pricing": "https://api.you.com/",
   "docs": "https://you.com/docs",
   "llms": "https://you.com/docs/llms.txt",
-  "ok_sources": 5,
+  "ok_sources": 7,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 5
+   "200": 7
   }
  },
  {
@@ -3437,11 +3442,11 @@
   "pricing": "https://www.zyte.com/pricing/",
   "docs": "https://docs.zyte.com/",
   "llms": null,
-  "ok_sources": 5,
+  "ok_sources": 6,
   "llms_ok": true,
   "github": null,
   "status_codes": {
-   "200": 5,
+   "200": 6,
    "404": 1
   }
  }

@@ -1,4 +1,4 @@
 # Kakao/Daum Search API (kakao) category=search-engine
 home=https://developers.kakao.com/docs/latest/en/daum-search/common pricing=https://developers.kakao.com/docs/latest/en/daum-search/common docs=https://developers.kakao.com/docs/latest/en/daum-search/common llms=None
-sources_ok: 
+sources_ok: docs2:https://developers.kakao.com/docs/latest/en/daum-search/common, quota:https://developers.kakao.com/docs/latest/en/quota
 --- ranked fact lines ---

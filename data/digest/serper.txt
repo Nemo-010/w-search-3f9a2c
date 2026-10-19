@@ -1,4 +1,4 @@
 # Serper (serper) category=serp-scrape
 home=https://serper.dev/ pricing=https://serper.dev/pricing docs=https://docs.serper.dev/ llms=None
-sources_ok: home:https://serper.dev/
+sources_ok: home:https://serper.dev/, pricing:https://r.jina.ai/https://serper.dev/pricing
 --- ranked fact lines ---

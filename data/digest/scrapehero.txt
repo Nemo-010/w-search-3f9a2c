@@ -1,10 +1,19 @@
 # ScrapeHero Cloud (scrapehero) category=serp-scrape
 home=https://www.scrapehero.com/ pricing=None docs=None llms=None
-sources_ok: home:https://www.scrapehero.com/, llms:https://www.scrapehero.com/llms.txt
+sources_ok: home:https://www.scrapehero.com/, llms:https://www.scrapehero.com/llms.txt, pricing:https://www.scrapehero.com/pricing/
 --- ranked fact lines ---
+[pricing] Minimum price is $1500 per month and the Final plan pricing depends on website complexity, number of pages scraped and number of websites that need to be setup and maintained
+[pricing] Minimum price is $8000 per month and the Final plan pricing depends on website complexity, number of pages scraped and number of dedicated resources needed
+[pricing] Minimum price per site is $550 and the Final plan pricing depends on website complexity and number of pages scraped
+[pricing] $650+ per million pages
+[pricing] Range between $650 and $2200 per million page based on site complexity, volume and frequency
+[pricing] $500+ per million pages
+[pricing] Range between $500 and $1800 per million pages based on site complexity, volume and frequency
 [home] Get a free quote
 [home] You will hear back from our team within minutes to discuss your project and get a no-obligation and hassle-free quote.
 [home] Our experts have decades of experience in various industries. Talking to them is free and comes with no obligations to sign up with us. Get insights into what other companies in your industry are doing. Learn how you can use web based data to stay relevant in this fast changing world and shift to online services.
+[pricing] Our tested process ensures seamless transition, free of hassle or delay.
+[pricing] Free, Trial Plans or Cheaper Self-Service Options
 --- llms/readme head ---
 # ScrapeHero
 > ScrapeHero is a Top 3 global, fully managed, enterprise-grade web scraping service and web scraping company based in the United States. It provides end-to-end data pipeline management,  from data extraction and web crawling to robotic process automation and custom AI model development, serving businesses that depend on large-scale, reliable web data.
