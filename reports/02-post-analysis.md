@@ -107,22 +107,22 @@ Providers with **no free tier** documented in this run (excluded): Perplexity, B
 
 Two separate evidence classes, kept apart.
 
-**Measured (independent).** treg's Web Arena leaderboard aggregates live routed calls over a 30-day window: per provider, per task, the share of calls that returned a usable result, plus median provider latency and the catalog price at capture time. Snapshot: `data/snapshots/treg/leaderboard.txt`, `updated_at` `2026-10-19T07:18:11.566849Z`, window 30 days, observed since `2026-09-23`, cached calls and treg refusals excluded, minimum 20 comparable runs and 20 hit samples per row.
+**Measured (independent).** treg's Web Arena leaderboard aggregates live routed calls over a 30-day window: per provider, per task, the share of calls that returned a usable result, plus median provider latency and the catalog price at capture time. Snapshot: `data/snapshots/treg/leaderboard.txt`, `updated_at` `2026-10-19T08:20:41.644590Z`, window 30 days, observed since `2026-09-23`, cached calls and treg refusals excluded, minimum 20 comparable runs and 20 hit samples per row.
 
 `success_rate` is successes over `hit_samples` (the calls where a hit or miss was recorded); `runs` is every routed run including the ones without a recorded hit, so the two denominators differ. `ok calls` is `success_rate × hit_samples`, rounded.
 
 | Task | Provider | Success rate | ok calls | Rate samples | Routed runs | Median ms | Price/call |
 |------|----------|---:|---:|---:|---:|---:|---:|
-| search | tinyfish | 86.8% | 447,972 | 516,097 | 568,415 | 1712 | $0 / call |
-| search | serper | 89.5% | 482,021 | 538,571 | 539,041 | 1415 | $0.001 / call |
-| search | crawl4ai | 84.9% | 126,992 | 149,578 | 158,610 | 1654 | $0.00015 / call |
-| search | exa | 98.1% | 102,629 | 104,617 | 125,272 | 1633 | $0.007 / call |
+| search | tinyfish | 86.7% | 449,448 | 518,394 | 570,712 | 1711 | $0 / call |
+| search | serper | 89.5% | 483,146 | 539,828 | 540,298 | 1415 | $0.001 / call |
+| search | crawl4ai | 84.9% | 127,449 | 150,117 | 159,149 | 1643 | $0.00015 / call |
+| search | exa | 98.1% | 102,669 | 104,657 | 125,312 | 1634 | $0.007 / call |
 | search | perplexity | 94.1% | 28,649 | 30,445 | 30,570 | 281 | $0.001 / call |
 | search | search1api | 51.8% | 7,868 | 15,190 | 15,307 | 4668 | $0.001 / call |
-| search | spidercloud | 35.4% | 5,315 | 15,014 | 15,065 | 3591 | $0.001 / call |
+| search | spidercloud | 35.4% | 5,316 | 15,016 | 15,067 | 3591 | $0.001 / call |
 | search | keenable | 99.1% | 14,649 | 14,782 | 14,814 | 841 | $0.004 / call |
-| search | firecrawl | 99.8% | 9,471 | 9,490 | 9,604 | 687 | $0.01 / call |
-| search | branddev | 78.1% | 5,496 | 7,037 | 7,148 | 1258 | $0.002534 / call |
+| search | firecrawl | 99.8% | 9,487 | 9,506 | 9,620 | 687 | $0.01 / call |
+| search | branddev | 78.2% | 5,532 | 7,074 | 7,185 | 1257 | $0.002534 / call |
 | search | parallel | 45.8% | 805 | 1,757 | 3,075 | 600 | $0.001 / call |
 | search | tavily | 87.2% | 2,333 | 2,676 | 2,865 | 2300 | $0.016 / call |
 | search | olostep | 97.0% | 2,417 | 2,492 | 2,499 | 1803 | $0.01 / call |
@@ -131,79 +131,81 @@ Two separate evidence classes, kept apart.
 | search | octen | 86.9% | 153 | 176 | 178 | 270 | $0.005 / call |
 | search | scrapegraphai | 69.0% | 120 | 174 | 174 | 10466 | $0.16 / result |
 | search | diffbot | 32.0% | 32 | 100 | 100 | 162 | $0.001196 / call |
-| maps | dataforseo | 100.0% | 333,244 | 333,244 | 345,842 | 5574 | $0.002 / call |
+| maps | dataforseo | 100.0% | 333,279 | 333,279 | 345,917 | 5574 | $0.002 / call |
 | maps | serpapi | 100.0% | 5,079 | 5,079 | 5,350 | 1005 | $0.015 / call |
 | maps | apify | 91.8% | 1,136 | 1,238 | 2,362 | 20086 | $0.009 / result |
-| news | serper | 70.7% | 97,032 | 137,244 | 137,244 | 860 | $0.001 / call |
-| news | tinyfish | 80.4% | 82,150 | 102,176 | 106,120 | 1298 | $0 / call |
-| news | dataforseo | 100.0% | 47,732 | 47,732 | 56,521 | 3955 | $0.002 / call |
-| news | anyapi | 85.0% | 23,758 | 27,950 | 28,036 | 948 | $0.00099 / call |
-| news | exa | 99.4% | 9,942 | 10,002 | 10,408 | 507 | $0.007 / call |
-| news | litescrape | 46.4% | 1,536 | 3,311 | 4,077 | 4927 | $0.00015 / call |
-| news | cloro | 15.9% | 263 | 1,657 | 1,657 | 10700 | $0.002 / call |
+| news | serper | 70.7% | 97,173 | 137,444 | 137,444 | 860 | $0.001 / call |
+| news | tinyfish | 80.4% | 82,287 | 102,347 | 106,291 | 1298 | $0 / call |
+| news | dataforseo | 100.0% | 47,732 | 47,732 | 56,522 | 3955 | $0.002 / call |
+| news | anyapi | 85.0% | 23,846 | 28,054 | 28,140 | 948 | $0.00099 / call |
+| news | exa | 99.4% | 9,943 | 10,003 | 10,409 | 507 | $0.007 / call |
+| news | litescrape | 46.4% | 1,546 | 3,331 | 4,097 | 4910 | $0.00015 / call |
+| news | cloro | 15.9% | 264 | 1,658 | 1,658 | 10700 | $0.002 / call |
 | news | search1api | 82.9% | 1,090 | 1,315 | 1,320 | 2239 | $0.001 / call |
 | news | serpapi | —% | — | 26 | 988 | 3311 | $0.015 / call |
 | news | tavily | —% | — | 193 | 419 | 1419 | $0.008 / call |
-| youtube | tikhub | 96.3% | 17,634 | 18,312 | 19,242 | 1558 | $0.002 / call |
-| youtube | justoneapi | 70.5% | 539 | 764 | 886 | 2414 | $0.01476 / call |
+| youtube | tikhub | 96.3% | 17,637 | 18,315 | 19,245 | 1558 | $0.002 / call |
+| youtube | justoneapi | 70.6% | 540 | 765 | 887 | 2415 | $0.01476 / call |
 | youtube | serpapi | 100.0% | 721 | 721 | 793 | 2489 | $0.015 / call |
 | sitemap | anyapi | 95.8% | 205 | 214 | 221 | 9078 | $0.001 / call |
 | sitemap | firecrawl | 100.0% | 155 | 155 | 188 | 7859 | $0.005 / call |
 | sitemap | search1api | 91.5% | 75 | 82 | 83 | 3568 | $0.001 / call |
 | sitemap | tavily | 78.1% | 25 | 32 | 41 | 2554 | $0.0016 / page |
 | sitemap | branddev | —% | — | 7 | 7 | None | $0.002534 / call |
-| fetch | crawl4ai | 45.2% | 394,672 | 873,168 | 1,107,727 | 1771 | $0.00015 / page |
-| fetch | tinyfish | 81.8% | 294,598 | 360,144 | 513,708 | 2704 | $0 / call |
-| fetch | firecrawl | 32.2% | 44,490 | 138,169 | 148,841 | 2085 | $0.005 / page |
-| fetch | exa | 89.2% | 102,389 | 114,786 | 117,266 | 87 | $0.001 / page |
-| fetch | anyapi | 37.4% | 29,699 | 79,408 | 115,636 | 3578 | $0.0009 / call |
-| fetch | olostep | 79.5% | 18,326 | 23,052 | 29,251 | 6073 | $0.002 / call |
-| fetch | search1api | 41.7% | 9,182 | 22,018 | 27,390 | 5001 | $0.001 / call |
-| fetch | you | 43.3% | 7,339 | 16,950 | 16,960 | 1812 | $0.001 / page |
-| fetch | linkup | 100.0% | 6,013 | 6,013 | 14,705 | 1644 | $0.01 / call |
+| fetch | crawl4ai | 45.3% | 396,030 | 874,238 | 1,109,244 | 1770 | $0.00015 / page |
+| fetch | tinyfish | 81.8% | 295,404 | 361,129 | 515,045 | 2705 | $0 / call |
+| fetch | firecrawl | 32.2% | 44,493 | 138,177 | 148,849 | 2086 | $0.005 / page |
+| fetch | exa | 89.0% | 103,084 | 115,825 | 118,306 | 87 | $0.001 / page |
+| fetch | anyapi | 37.4% | 29,723 | 79,474 | 115,949 | 3578 | $0.0009 / call |
+| fetch | olostep | 79.5% | 18,329 | 23,055 | 29,260 | 6080 | $0.002 / call |
+| fetch | search1api | 41.7% | 9,183 | 22,022 | 27,403 | 5001 | $0.001 / call |
+| fetch | you | 43.1% | 7,344 | 17,039 | 17,049 | 1822 | $0.001 / page |
+| fetch | linkup | 100.0% | 6,068 | 6,068 | 14,817 | 1669 | $0.01 / call |
 | fetch | branddev | 63.5% | 8,094 | 12,746 | 12,877 | 2282 | $0.002534 / call |
-| fetch | tavily | 75.1% | 8,899 | 11,849 | 12,765 | 1204 | $0.0032 / result |
-| fetch | parallel | 26.6% | 1,262 | 4,746 | 4,848 | 4194 | $0.001 / page |
+| fetch | tavily | 75.1% | 8,899 | 11,850 | 12,766 | 1204 | $0.0032 / result |
+| fetch | parallel | 26.6% | 1,264 | 4,752 | 4,854 | 4170 | $0.001 / page |
 | fetch | keenable | 17.8% | 765 | 4,297 | 4,758 | 345 | $0.004 / call |
-| fetch | scrapegraphai | 63.3% | 1,244 | 1,965 | 4,339 | 2385 | $0.004 / call |
+| fetch | scrapegraphai | 63.3% | 1,245 | 1,967 | 4,341 | 2379 | $0.004 / call |
 | fetch | serper | 67.0% | 274 | 409 | 527 | 1180 | $0.01 / call |
 | papers | serper | 97.9% | 1,069 | 1,092 | 1,092 | 761 | $0.001 / call |
-| papers | exa | 100.0% | 473 | 473 | 497 | 571 | $0.007 / call |
-| papers | tinyfish | 98.4% | 424 | 431 | 447 | 947 | $0 / call |
+| papers | exa | 100.0% | 488 | 488 | 512 | 567 | $0.007 / call |
+| papers | tinyfish | 98.4% | 427 | 434 | 450 | 947 | $0 / call |
 
 Read the rate-sample column before the percentage. Rates cover the provider's own answer on treg's routed workload, not a controlled head-to-head scrape of identical URLs.
 
+These numbers move: the window is rolling, so a re-fetch an hour later shifts every count slightly. Comparing the 07:18Z and 08:20Z captures the same day, six of sixty-five success rates changed and all by 0.2 points or less (tinyfish search 86.8 -> 86.7, exa fetch 89.2 -> 89.0, crawl4ai fetch 45.2 -> 45.3, you fetch 43.3 -> 43.1, branddev search 78.1 -> 78.2, justoneapi youtube 70.5 -> 70.6). Treat differences smaller than about a point as noise, and read the rate-sample column before treating any gap as real.
+
 **Who actually returns results, by task.** Derived from the table above.
 
-- `search`: best measured firecrawl 99.8% (n=9,490), keenable 99.1% (n=14,782), exa 98.1% (n=104,617). Highest routed volume: tinyfish (568,415 runs, 86.8%).
-- `maps`: best measured dataforseo 100.0% (n=333,244), serpapi 100.0% (n=5,079), apify 91.8% (n=1,238). Highest routed volume: dataforseo (345,842 runs, 100.0%).
-- `news`: best measured dataforseo 100.0% (n=47,732), exa 99.4% (n=10,002), anyapi 85.0% (n=27,950). Highest routed volume: serper (137,244 runs, 70.7%).
-- `youtube`: best measured serpapi 100.0% (n=721), tikhub 96.3% (n=18,312), justoneapi 70.5% (n=764). Highest routed volume: tikhub (19,242 runs, 96.3%).
+- `search`: best measured firecrawl 99.8% (n=9,506), keenable 99.1% (n=14,782), exa 98.1% (n=104,657). Highest routed volume: tinyfish (570,712 runs, 86.7%).
+- `maps`: best measured dataforseo 100.0% (n=333,279), serpapi 100.0% (n=5,079), apify 91.8% (n=1,238). Highest routed volume: dataforseo (345,917 runs, 100.0%).
+- `news`: best measured dataforseo 100.0% (n=47,732), exa 99.4% (n=10,003), anyapi 85.0% (n=28,054). Highest routed volume: serper (137,444 runs, 70.7%).
+- `youtube`: best measured serpapi 100.0% (n=721), tikhub 96.3% (n=18,315), justoneapi 70.6% (n=765). Highest routed volume: tikhub (19,245 runs, 96.3%).
 - `sitemap`: best measured firecrawl 100.0% (n=155), anyapi 95.8% (n=214), search1api 91.5% (n=82). Highest routed volume: anyapi (221 runs, 95.8%).
-- `fetch`: best measured linkup 100.0% (n=6,013), exa 89.2% (n=114,786), tinyfish 81.8% (n=360,144). Highest routed volume: crawl4ai (1,107,727 runs, 45.2%).
-- `papers`: best measured exa 100.0% (n=473), tinyfish 98.4% (n=431), serper 97.9% (n=1,092). Highest routed volume: serper (1,092 runs, 97.9%).
+- `fetch`: best measured linkup 100.0% (n=6,068), exa 89.0% (n=115,825), tinyfish 81.8% (n=361,129). Highest routed volume: crawl4ai (1,109,244 runs, 45.3%).
+- `papers`: best measured exa 100.0% (n=488), tinyfish 98.4% (n=434), serper 97.9% (n=1,092). Highest routed volume: serper (1,092 runs, 97.9%).
 
 **Hardest bot protection.** The `fetch` task is the one that exercises anti-bot defences: it asks a provider to retrieve a real page, so a challenge page, a 403 or an empty body counts as a miss. Measured spread on that task:
 
 | Provider | Fetch success | ok calls | Rate samples | Routed runs | Median ms |
 |----------|---:|---:|---:|---:|---:|
-| crawl4ai | 45.2% | 394,672 | 873,168 | 1,107,727 | 1771 |
-| tinyfish | 81.8% | 294,598 | 360,144 | 513,708 | 2704 |
-| firecrawl | 32.2% | 44,490 | 138,169 | 148,841 | 2085 |
-| exa | 89.2% | 102,389 | 114,786 | 117,266 | 87 |
-| anyapi | 37.4% | 29,699 | 79,408 | 115,636 | 3578 |
-| olostep | 79.5% | 18,326 | 23,052 | 29,251 | 6073 |
-| search1api | 41.7% | 9,182 | 22,018 | 27,390 | 5001 |
-| you | 43.3% | 7,339 | 16,950 | 16,960 | 1812 |
-| linkup | 100.0% | 6,013 | 6,013 | 14,705 | 1644 |
+| crawl4ai | 45.3% | 396,030 | 874,238 | 1,109,244 | 1770 |
+| tinyfish | 81.8% | 295,404 | 361,129 | 515,045 | 2705 |
+| firecrawl | 32.2% | 44,493 | 138,177 | 148,849 | 2086 |
+| exa | 89.0% | 103,084 | 115,825 | 118,306 | 87 |
+| anyapi | 37.4% | 29,723 | 79,474 | 115,949 | 3578 |
+| olostep | 79.5% | 18,329 | 23,055 | 29,260 | 6080 |
+| search1api | 41.7% | 9,183 | 22,022 | 27,403 | 5001 |
+| you | 43.1% | 7,344 | 17,039 | 17,049 | 1822 |
+| linkup | 100.0% | 6,068 | 6,068 | 14,817 | 1669 |
 | branddev | 63.5% | 8,094 | 12,746 | 12,877 | 2282 |
-| tavily | 75.1% | 8,899 | 11,849 | 12,765 | 1204 |
-| parallel | 26.6% | 1,262 | 4,746 | 4,848 | 4194 |
+| tavily | 75.1% | 8,899 | 11,850 | 12,766 | 1204 |
+| parallel | 26.6% | 1,264 | 4,752 | 4,854 | 4170 |
 | keenable | 17.8% | 765 | 4,297 | 4,758 | 345 |
-| scrapegraphai | 63.3% | 1,244 | 1,965 | 4,339 | 2385 |
+| scrapegraphai | 63.3% | 1,245 | 1,967 | 4,341 | 2379 |
 | serper | 67.0% | 274 | 409 | 527 | 1180 |
 
-Spread: linkup 100.0% down to keenable 17.8%, on 6,013 and 4,297 rate samples respectively. linkup scores 94.1% on `search` against 100.0% on `fetch`, so a search hit rate says nothing about page retrieval.
+Spread: linkup 100.0% down to keenable 17.8%, on 6,068 and 4,297 rate samples respectively. linkup scores 94.1% on `search` against 100.0% on `fetch`, so a search hit rate says nothing about page retrieval.
 
 What this does and does not show. It shows which provider was the one that returned the page when treg routed a fetch to it. It does not isolate the defence that was hit (Cloudflare interstitial, DataDome, plain 403, JS-only shell), it does not separate a residential from a datacenter egress, and a provider that fails is not necessarily blocked — it may simply have timed out or returned an empty body. No vendor publishes a per-defence breakdown, so any claim of the form "provider X beats Cloudflare" is not testable from this data and is not made here.
 

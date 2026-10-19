@@ -32,7 +32,7 @@ Measured on treg's routed workload, 30-day window (`data/snapshots/treg/leaderbo
 | Task | Success | ok calls | Rate samples | Median ms |
 |------|---:|---:|---:|---:|
 | search | 87.2% | 2,333 | 2,676 | 2300 |
-| fetch | 75.1% | 8,899 | 11,849 | 1204 |
+| fetch | 75.1% | 8,899 | 11,850 | 1204 |
 | news | —% | — | 193 | 1419 |
 | sitemap | 78.1% | 25 | 32 | 2554 |
 
@@ -69,10 +69,10 @@ Measured on treg's routed workload, 30-day window (`data/snapshots/treg/leaderbo
 
 | Task | Success | ok calls | Rate samples | Median ms |
 |------|---:|---:|---:|---:|
-| search | 98.1% | 102,629 | 104,617 | 1633 |
-| fetch | 89.2% | 102,389 | 114,786 | 87 |
-| news | 99.4% | 9,942 | 10,002 | 507 |
-| papers | 100.0% | 473 | 473 | 571 |
+| search | 98.1% | 102,669 | 104,657 | 1634 |
+| fetch | 89.0% | 103,084 | 115,825 | 87 |
+| news | 99.4% | 9,943 | 10,003 | 507 |
+| papers | 100.0% | 488 | 488 | 567 |
 
 The largest measured sample in the inventory. A high rate on 100k+ samples is a materially stronger claim than the same rate on 200.
 
@@ -108,8 +108,8 @@ Measured on treg's routed workload, 30-day window (`data/snapshots/treg/leaderbo
 
 | Task | Success | ok calls | Rate samples | Median ms |
 |------|---:|---:|---:|---:|
-| search | 99.8% | 9,471 | 9,490 | 687 |
-| fetch | 32.2% | 44,490 | 138,169 | 2085 |
+| search | 99.8% | 9,487 | 9,506 | 687 |
+| fetch | 32.2% | 44,493 | 138,177 | 2086 |
 | sitemap | 100.0% | 155 | 155 | 7859 |
 
 The 32% fetch figure is the sharpest contradiction of vendor marketing in this inventory, and it comes with a 138k sample.
@@ -122,7 +122,7 @@ The 32% fetch figure is the sharpest contradiction of vendor marketing in this i
 | One-time grant | — | $10 onboarding bonus credits | — |
 | Card required | no | no | no |
 | Measured search | 87.2% | 98.1% | 99.8% |
-| Measured fetch | 75.1% | 89.2% | 32.2% |
+| Measured fetch | 75.1% | 89.0% | 32.2% |
 
 All three are enough for interactive personal use and none is enough for unattended crawling. Only Exa is measured above 85% on both search and fetch. Their failure modes differ and each is usable as a routing signal: Tavily degrades to thin results, Firecrawl returns 402 at the boundary, Exa stops when the balance is empty. A zero-marginal-cost chain is Tavily keyless search, then Exa's monthly balance for the queries that need quality, then Firecrawl's keyless scrape, then a recurring-credit scraper for pages that still fail.
 
