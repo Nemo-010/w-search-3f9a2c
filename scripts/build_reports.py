@@ -4,7 +4,7 @@ treg leaderboard snapshot.
 
 Outputs:
   reports/01-top-100.md          ranked free-tier inventory
-  reports/03-post-analysis.md    five post-analysis sections
+  reports/02-post-analysis.md    five post-analysis sections
   providers/<slug>.md            one report per provider (198)
   README.md
 """
@@ -313,7 +313,7 @@ def build_post_analysis(ranked):
              "rails (x402 on Tavily/Exa/Keenable, MPP on Exa), and free model/API tiers that require "
              "no card at all.")
     L.append("")
-    open(os.path.join(REP, "03-post-analysis.md"), "w").write("\n".join(L))
+    open(os.path.join(REP, "02-post-analysis.md"), "w").write("\n".join(L))
 
 
 def build_readme(ranked):
@@ -324,11 +324,8 @@ def build_readme(ranked):
     L.append("")
     L.append("- `reports/01-top-100.md` — 198 providers, ranked: documented recurring monthly free "
              "volume first, one-time grants second, unquantified free tiers last.")
-    L.append("- `reports/02-deep-reviews-1.md` — deep reviews: Tavily, Exa, Firecrawl.")
-    L.append("- `reports/03-post-analysis.md` — 5-account totals, measured hit rates vs vendor "
+    L.append("- `reports/02-post-analysis.md` — 5-account totals, measured hit rates vs vendor "
              "claims, one-time vs monthly, maturity, signup bonuses.")
-    L.append("- `reports/04-deep-reviews-2.md` — deep reviews: Jina, Brave, SERP scrapers, "
-             "LLM-native grounding, self-hosted stacks.")
     L.append("- `providers/<slug>.md` — one report per provider with links, free-tier facts, "
              "evidence quote and snapshot path.")
     L.append("")

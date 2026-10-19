@@ -5,9 +5,7 @@ Compiled 2026-10-19. Every claim is tied to a snapshot in `data/snapshots/`.
 ## What this is
 
 - `reports/01-top-100.md` — 198 providers, ranked: documented recurring monthly free volume first, one-time grants second, unquantified free tiers last.
-- `reports/02-deep-reviews-1.md` — deep reviews: Tavily, Exa, Firecrawl.
-- `reports/03-post-analysis.md` — 5-account totals, measured hit rates vs vendor claims, one-time vs monthly, maturity, signup bonuses.
-- `reports/04-deep-reviews-2.md` — deep reviews: Jina, Brave, SERP scrapers, LLM-native grounding, self-hosted stacks.
+- `reports/02-post-analysis.md` — 5-account totals, measured hit rates vs vendor claims, one-time vs monthly, maturity, signup bonuses.
 - `providers/<slug>.md` — one report per provider with links, free-tier facts, evidence quote and snapshot path.
 
 ## Method

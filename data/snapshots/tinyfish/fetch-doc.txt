@@ -1,0 +1,340 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.tinyfish.ai/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Fetch API
+
+> Fetch URLs and extract clean text — no external APIs required
+
+<Note>
+  Fetch is free up to 1,000 URLs per day. Beyond that, requests need a positive wallet balance.
+</Note>
+
+The TinyFish Fetch API fetches web pages, renders JavaScript-heavy pages when needed, and returns clean extracted text in your preferred format. Submit a URL, get back structured content.
+
+```bash theme={null}
+POST https://api.fetch.tinyfish.ai
+```
+
+`api.fetch.tinyfish.ai` is the public Fetch API endpoint.
+
+## Before You Start
+
+<Steps>
+  <Step title="Get your API key">
+    Visit [agent.tinyfish.ai/api-keys](https://agent.tinyfish.ai/api-keys) and create a key. Store it in your environment:
+
+    ```bash theme={null}
+    export TINYFISH_API_KEY="your_api_key_here"
+    ```
+  </Step>
+</Steps>
+
+All requests require the `X-API-Key` header. See [Authentication](/authentication) for the full setup and troubleshooting guide.
+
+## Your First Request
+
+<CodeGroup>
+  ```python Python theme={null}
+  from tinyfish import TinyFish
+
+  client = TinyFish()
+  result = client.fetch.get_contents(urls=["https://www.tinyfish.ai/"])
+  print(result.results[0].title)
+  print(result.results[0].text)
+  ```
+
+  ```typescript TypeScript theme={null}
+  import { TinyFish } from "@tiny-fish/sdk";
+
+  const client = new TinyFish();
+  const result = await client.fetch.getContents({
+    urls: ["https://www.tinyfish.ai/"],
+  });
+  console.log(result.results[0].title);
+  console.log(result.results[0].text);
+  ```
+
+  ```bash cURL theme={null}
+  curl -X POST https://api.fetch.tinyfish.ai \
+    -H "X-API-Key: $TINYFISH_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d '{"urls": ["https://www.tinyfish.ai/"]}'
+  ```
+</CodeGroup>
+
+## What Success Looks Like
+
+```json theme={null}
+{
+  "results": [
+    {
+      "url": "https://www.tinyfish.ai/",
+      "final_url": "https://www.tinyfish.ai/",
+      "title": "TinyFish | Enterprise Web Agent Infrastructure",
+      "description": "TinyFish provides enterprise infrastructure for AI web agents.",
+      "language": "en",
+      "format": "markdown",
+      "text": "# TinyFish | Enterprise Web Agent Infrastructure\n\nTinyFish provides enterprise infrastructure for AI web agents...\n"
+    }
+  ],
+  "errors": []
+}
+```
+
+## When to Use Fetch vs the Other APIs
+
+* Use **Fetch** when you already know the URL and need clean extracted page content.
+* Use **Search** when you need help finding the right URLs first.
+* Use **Agent** when TinyFish should perform a multi-step workflow on the site.
+* Use **Browser** when you need direct browser control from your own code.
+
+***
+
+## Fetching Multiple URLs
+
+Submit up to 10 URLs in a single request. Each URL is processed independently — one failure doesn't affect the others.
+
+<CodeGroup>
+  ```python Python theme={null}
+  from tinyfish import TinyFish
+
+  client = TinyFish()
+  result = client.fetch.get_contents(
+      urls=[
+          "https://www.tinyfish.ai/",
+          "https://en.wikipedia.org/wiki/Web_scraping",
+          "https://docs.python.org/3/tutorial/index.html",
+      ]
+  )
+
+  for page in result.results:
+      print(page.url, "→", page.title)
+
+  for error in result.errors:
+      print("Failed:", error.url, "–", error.error)
+  ```
+
+  ```typescript TypeScript theme={null}
+  import { TinyFish } from "@tiny-fish/sdk";
+
+  const client = new TinyFish();
+  const result = await client.fetch.getContents({
+    urls: [
+      "https://www.tinyfish.ai/",
+      "https://en.wikipedia.org/wiki/Web_scraping",
+      "https://docs.python.org/3/tutorial/index.html",
+    ],
+  });
+
+  result.results.forEach((r) => console.log(r.url, "→", r.title));
+  result.errors.forEach((e) => console.log("Failed:", e.url, "–", e.error));
+  ```
+
+  ```bash cURL theme={null}
+  curl -X POST https://api.fetch.tinyfish.ai \
+    -H "X-API-Key: $TINYFISH_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "urls": [
+        "https://www.tinyfish.ai/",
+        "https://en.wikipedia.org/wiki/Web_scraping",
+        "https://docs.python.org/3/tutorial/index.html"
+      ]
+    }'
+  ```
+</CodeGroup>
+
+<Note>
+  Per-URL failures (timeouts, DNS errors, anti-bot blocks) appear in `errors[]` alongside a `200` response — they do not cause the entire request to fail.
+</Note>
+
+***
+
+## Output Formats
+
+Control the format of the `text` field with the `format` parameter. When omitted, the default is `markdown`.
+
+<Tabs>
+  <Tab title="html">
+    Semantic HTML.
+
+    ```json theme={null}
+    {
+      "format": "html",
+      "text": "<h1>Async Fn in Traits Are Now Available</h1>
+    <p>Starting with Rust 1.75, you can use <code>async fn</code> directly inside traits.</p>
+    <h2>What Changed</h2>
+    <ul>
+    <li>Works in all stable traits</li>
+    <li>No heap allocation for simple cases</li>
+    </ul>"
+    }
+    ```
+  </Tab>
+
+  <Tab title="markdown">
+    Clean Markdown. Ideal for LLM consumption and readable storage.
+
+    ```json theme={null}
+    {
+      "format": "markdown",
+      "text": "# Async Fn in Traits Are Now Available
+
+    Starting with Rust 1.75, you can use `async fn` directly inside traits.
+
+    ## What Changed
+
+    Previously, writing async functions in traits required the `async-trait` crate...
+
+    - Works in all stable traits
+    - No heap allocation for simple cases
+    - Compatible with `Send` bounds"
+    }
+    ```
+  </Tab>
+
+  <Tab title="json">
+    Structured document tree. Useful for programmatic content processing.
+
+    ```json theme={null}
+    {
+      "format": "json",
+      "text": {
+        "type": "document",
+        "children": [
+          { "type": "heading", "level": 1, "text": "Async Fn in Traits Are Now Available" },
+          { "type": "paragraph", "text": "Starting with Rust 1.75, you can use async fn directly inside traits." },
+          { "type": "heading", "level": 2, "text": "What Changed" },
+          { "type": "list", "ordered": false, "items": ["Works in all stable traits", "No heap allocation for simple cases"] }
+        ]
+      }
+    }
+    ```
+  </Tab>
+</Tabs>
+
+***
+
+## Cache Freshness
+
+By default, Fetch may serve an existing cached entry for the URL when one is available. Pass `ttl` to set a freshness preference in seconds.
+
+```json theme={null}
+{
+  "urls": ["https://example.com"],
+  "ttl": 3600
+}
+```
+
+* Omit `ttl` to accept any cached entry.
+* Set `ttl` to `0` when you want a live fetch.
+* Set `ttl` to a positive integer to accept cached entries younger than that many seconds.
+
+***
+
+## Conditional Requests
+
+Skip reprocessing pages that haven't changed since your last fetch. Set `include_etag_and_last_modified: true` to get `etag` / `last_modified` validators back on each result, save them, then replay the `etag` as `if_none_match` (or the `last_modified` as `if_modified_since`) the next time you fetch that URL.
+
+```json theme={null}
+{
+  "urls": ["https://example.com"],
+  "if_none_match": "W/\"abc123\"",
+  "include_etag_and_last_modified": true
+}
+```
+
+* `if_none_match` and `if_modified_since` are single-URL only — combining either with a batch of URLs returns a `400`.
+* When the origin confirms nothing changed, the result comes back with `not_modified: true` so you can skip re-processing.
+* Fetch persists nothing — you own storing and replaying the validators.
+
+See the [full reference](/fetch-api/reference#parameters) and a [worked example](/fetch-api/examples#detect-page-changes-with-conditional-requests).
+
+***
+
+## CSS Selector Scoping
+
+Extract only the part of the page you care about. Pass `include_selectors` (an array of CSS selectors, max 20) to scope extracted content to elements matching any entry, and/or `exclude_selectors` to strip matching elements before extraction.
+
+```json theme={null}
+{
+  "urls": ["https://example.com/blog/post"],
+  "include_selectors": ["article"],
+  "exclude_selectors": [".comments", ".newsletter-signup"]
+}
+```
+
+* Selected content is returned verbatim in your requested format — automatic boilerplate removal is bypassed. Page-level metadata (`title`, `description`, etc.) still comes from the full document.
+* `exclude_selectors` is applied first, then `include_selectors` scopes what remains.
+* If some entries match and others don't, the URL still succeeds and the misses are listed in the result's `unmatched_selectors`. If no entry matches anything, that URL fails with `selector_not_matched` in `errors[]`, carrying `unmatched_selectors` plus `candidate_selectors` retry hints — agents can retry with `include_selectors` drawn from that list. `exclude_selectors` entries that match nothing are a no-op.
+
+See the [full reference](/fetch-api/reference#parameters) and a [worked example](/fetch-api/examples#scope-extraction-to-part-of-the-page).
+
+***
+
+## Highlights
+
+Add a `highlights` object to a normal Fetch request and, for each URL, get back the passages from that page that best answer your question — ranked, and quoted word-for-word from the page. Highlights are extracted, never generated: every passage is an exact substring of the fetched page, so they can't paraphrase or hallucinate. When the page doesn't answer the question, you get an explicit empty list instead of a forced guess.
+
+<Info>
+  **Beta:** Highlights is in beta and is enabled per-account — contact support to enable it for your account. Requests that include `highlights` from an account that isn't enabled return `403 FORBIDDEN`; requests without the field are unaffected.
+</Info>
+
+```json theme={null}
+{
+  "urls": ["https://example.com/"],
+  "format": "markdown",
+  "highlights": {
+    "query": "what does this company do and who are its main customers",
+    "max_snippets": 5
+  }
+}
+```
+
+* `highlights` requires `format: "markdown"`.
+* Each result gains a `highlights` array of ranked verbatim passages, best first. An **empty list** means the page was fetched and analyzed and does not answer the query — a deliberate, calibrated signal, not a failure. A **missing field** means highlights could not be computed for that URL (rare and transient — the fetch itself still succeeded, and a retry is safe).
+* Include the entity or topic in the query (e.g. "who founded Acme Corp", not "who founded this company") — retrieval works on vocabulary overlap with the page, and keyword-poor queries return empty results far more often.
+* Typical single-URL highlights request on a live page render: \~1.5–2s; JavaScript-heavy sites can take 10–20s to render server-side. Multi-URL requests process in parallel, so request latency ≈ the slowest URL in the batch.
+
+See the [full reference](/fetch-api/reference#parameters) and a [worked example](/fetch-api/examples#extract-ranked-passages-with-highlights).
+
+***
+
+## Supported Content Types
+
+The Fetch API handles more than just HTML. See the [full content types table](/fetch-api/reference#supported-content-types) in the reference — in short: PDF text extraction works, JSON endpoints return raw JSON, but binary files (images, video) return an error.
+
+***
+
+## Fetch Intent
+
+The optional `purpose` parameter lets you state *why* you are fetching — the underlying goal or task the content will be used for. A URL alone says nothing about what you need from the page. Passing `purpose` gives us additional signal to further inform and deliver better-quality results. It works the same way as the [Search API's `purpose` parameter](/search-api/index#search-intent).
+
+* `purpose` is always optional. Omitting it leaves fetch behaviour unchanged.
+* Keep it to a short phrase or sentence (maximum 2000 characters), for example `Compare pricing tiers across vendors for a procurement report`.
+
+***
+
+## Read Next
+
+<CardGroup cols={2}>
+  <Card title="API Reference" icon="code" href="/fetch-api/reference">
+    Full request and response schema
+  </Card>
+
+  <Card title="Authentication" icon="key" href="/authentication">
+    API key setup
+  </Card>
+
+  <Card title="Fetch Examples" icon="bolt" href="/fetch-api/examples">
+    Common Fetch request patterns
+  </Card>
+
+  <Card title="For coding agents" icon="robot" href="/for-coding-agents">
+    One page that routes an agent to the right TinyFish API
+  </Card>
+</CardGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -10,14 +10,14 @@
 ## Free tier
 
 - Documented recurring free volume: **360,000**
-- Detail: Search free up to 12,000 requests/day (~360k/month); Fetch free within a daily allowance (amount not stated); Agent/Research/Browser bill from wallet
+- Detail: Search free up to 12,000 requests/day (~360k/month); Fetch free up to 1,000 URLs/day (~30k/month); Agent/Research/Browser bill from wallet
 - Card required for free tier: no
 - Signup extras: Search and Fetch free within daily allowance
 - Confidence: **high**
 
 ## Evidence
 
-> Search is free up to 12,000 requests per day. Beyond that, requests need a positive wallet balance.
+> Search is free up to 12,000 requests per day. Beyond that, requests need a positive wallet balance. Fetch is free up to 1,000 URLs per day.
 
 Source: https://docs.tinyfish.ai/search-api/index.md  
 Snapshot: `data/snapshots/tinyfish/search-doc.txt`  

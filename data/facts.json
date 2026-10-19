@@ -671,7 +671,7 @@
   "ok_sources": 4,
   "llms_ok": true,
   "monthly_calls": 360000,
-  "monthly_note": "Search free up to 12,000 requests/day (~360k/month); Fetch free within a daily allowance (amount not stated); Agent/Research/Browser bill from wallet",
+  "monthly_note": "Search free up to 12,000 requests/day (~360k/month); Fetch free up to 1,000 URLs/day (~30k/month); Agent/Research/Browser bill from wallet",
   "one_time": null,
   "card": false,
   "bonus": [
@@ -681,7 +681,7 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Search is free up to 12,000 requests per day. Beyond that, requests need a positive wallet balance.",
+    "quote": "Search is free up to 12,000 requests per day. Beyond that, requests need a positive wallet balance. Fetch is free up to 1,000 URLs per day.",
     "url": "https://docs.tinyfish.ai/search-api/index.md",
     "snapshot": "data/snapshots/tinyfish/search-doc.txt"
    }
@@ -1717,15 +1717,17 @@
   "ok_sources": 6,
   "llms_ok": true,
   "monthly_calls": 1000,
-  "monthly_note": "Free plan: 1,000 credits every month, renews monthly",
-  "one_time": null,
+  "monthly_note": "Free plan: 1,000 credits/month, renews monthly",
+  "one_time": "30,000 credits one-time signup grant (starts at 31,000)",
   "card": null,
-  "bonus": [],
+  "bonus": [
+   "one-time signup grant of 30,000 credits"
+  ],
   "confidence": "high",
   "verified": true,
   "evidence": [
    {
-    "quote": "The **Free plan includes 1,000 credits every month**.",
+    "quote": "The **Free plan includes 1,000 credits every month**. ... also receive a **one-time signup grant of 30,000 credits**, so you start with **31,000 credits**.",
     "url": "https://www.airtop.ai/help/billing/billing.md",
     "snapshot": "data/snapshots/airtop/llms-full.txt"
    }

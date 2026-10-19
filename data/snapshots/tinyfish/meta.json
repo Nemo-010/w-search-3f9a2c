@@ -68,6 +68,17 @@
    "truncated": false,
    "sha256": "c17e6fcd6968ce5d25170f0f64d1807708cbea4b8df29e3f7fa27c3adb72c979",
    "fetched_at": "2026-10-19T05:58:15+00:00"
+  },
+  "fetch-doc": {
+   "url": "https://docs.tinyfish.ai/fetch-api/index.md",
+   "status": 200,
+   "final_url": "https://docs.tinyfish.ai/fetch-api/index.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 12369,
+   "truncated": false,
+   "sha256": "d4fec665c7e67c4a5f56717203cb84ee77406ddedd54084a6c6dd966a3edd144",
+   "fetched_at": "2026-10-19T06:25:52+00:00",
+   "text_bytes": 12327
   }
  }
 }

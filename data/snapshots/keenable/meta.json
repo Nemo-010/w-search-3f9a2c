@@ -58,6 +58,17 @@
    "sha256": "1f04508253403e85be74854dc125167f3934d0015d0451720d0726f563f83113",
    "fetched_at": "2026-10-19T05:58:13+00:00",
    "text_bytes": 3630
+  },
+  "rate-limits": {
+   "url": "https://docs.keenable.ai/rate-limits.md",
+   "status": 200,
+   "final_url": "https://docs.keenable.ai/rate-limits.md",
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 2017,
+   "truncated": false,
+   "sha256": "840e9eb7eb0e34600b566a2d99471b46d8b4c2791598a6ed8b7b8fb38865d878",
+   "fetched_at": "2026-10-19T06:25:52+00:00",
+   "text_bytes": 2013
   }
  }
 }

@@ -9,12 +9,14 @@
 ## Free tier
 
 - Documented recurring free volume: **1,000**
-- Detail: Free plan: 1,000 credits every month, renews monthly
+- Detail: Free plan: 1,000 credits/month, renews monthly
+- One-time grant: 30,000 credits one-time signup grant (starts at 31,000)
+- Signup extras: one-time signup grant of 30,000 credits
 - Confidence: **high**
 
 ## Evidence
 
-> The **Free plan includes 1,000 credits every month**.
+> The **Free plan includes 1,000 credits every month**. ... also receive a **one-time signup grant of 30,000 credits**, so you start with **31,000 credits**.
 
 Source: https://www.airtop.ai/help/billing/billing.md  
 Snapshot: `data/snapshots/airtop/llms-full.txt`  

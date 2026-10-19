@@ -33,7 +33,7 @@ Method: documented recurring monthly free volume × 5. One-time grants are kept 
 | Tavily AI | 1,000 | **5,000** | 1,000 credits/month, resets monthly |
 | HasData | 1,000 | **5,000** | Free plan: 1,000 credits every month, no card |
 | Scrape.do | 1,000 | **5,000** | Free plan: 1,000 successful API calls per month, full proxies/captcha/JS, no car |
-| Airtop | 1,000 | **5,000** | Free plan: 1,000 credits every month, renews monthly |
+| Airtop | 1,000 | **5,000** | Free plan: 1,000 credits/month, renews monthly |
 | Browserless | 1,000 | **5,000** | Free plan: 1k sessions/month, no card |
 | Cohere | 1,000 | **5,000** | Trial (free) keys: 1,000 API calls/month, 20 req/min |
 | Cloro | 500 | **2,500** | Free plan $0/month: 500 credits/month |
@@ -63,6 +63,7 @@ Reported but not re-verified in this snapshot run (excluded from the total above
 
 One-time, first-month totals (not recurring, ×5 accounts where the grant is per account):
 
+- Airtop: 30,000 credits one-time signup grant (starts at 31,000)
 - Apify: $500 free usage for 6 months for own Actors/agents program
 - Bright Data: $2 trial credit (7 days) + $5 bonus when payment method added
 - Crawlbase: up to 5,000 requests
@@ -108,7 +109,7 @@ Two separate evidence classes, kept apart:
 ## 3. One-time vs monthly credits
 
 - **Recurring monthly free volume documented:** 46 providers.
-- **Recurring + one-time bonus:** 4 providers (Exa, Parallel, Bright Data, Hyperbrowser).
+- **Recurring + one-time bonus:** 5 providers (Exa, Parallel, Bright Data, Airtop, Hyperbrowser).
 - **One-time only:** 23 providers (Octen, ScrapeGraphAI, Search1API, TikHub, treg, Valyu, You.com, Apify, Crawlbase, DataForSEO, ScrapeOps, ScraperAPI, Scrapfly, ScrapingBee, ScrapingDog, SearchCans, Serply, Web Scraper, Zyte, Notte, Skyvern, Steel.dev, NewsCatcher).
 - **Free tier exists but no number in fetched sources, or no free tier:** 123 providers.
 
@@ -355,6 +356,7 @@ Documented extras beyond the base free tier (as stated in the fetched pricing/do
 | ZenRows | every primitive unlocked on free plan; budget preview per request | https://www.zenrows.com/ |
 | Zenserp | only successful requests billed | https://zenserp.com/ |
 | Zyte | pay per successful response | https://www.zyte.com/pricing/ |
+| Airtop | one-time signup grant of 30,000 credits | https://www.airtop.ai/help/billing/billing.md |
 | Browserbase | runtime included; Stagehand framework open source | https://www.browserbase.com/pricing |
 | Cloudflare Browser Rendering | works on Workers Free plan | https://developers.cloudflare.com/browser-rendering/platform/pricing/ |
 | Hyperbrowser | all four products included on free tier | https://www.hyperbrowser.ai/pricing |

@@ -1,0 +1,32 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.keenable.ai/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Rate limits
+
+> How fast you can call search and fetch — the per-second and hourly limits for authenticated and unauthenticated requests, and how they differ from the credit allowance.
+
+Keenable applies rate limits across search and fetch endpoints in accordance with the authentication
+status of the request. To learn more about authentication, see [authentication](/authentication).
+
+| Authentication status | Rate limit |
+| - | - |
+| Authenticated | 10 requests per second (per organization) |
+| Unauthenticated | 1,000 requests per hour, max 10 requests per second (per IP) |
+| [Pay per request](/pay-per-request) (x402) | 50 paid requests per second per paying wallet, 100 requests per second per IP, no hourly cap |
+| [Prepaid credits through ZeroClick](/pay-per-request#prepaid-credits-through-zeroclick) | 50 requests per second per agent, no hourly cap |
+
+A few things worth keeping in mind:
+
+* Rate limits on authenticated requests are applied on the organization-level.
+* Authentication removes the hourly request cap; the per-second limit still applies.
+* Higher per-second limits are available on some plans.
+* The unauthenticated pool is shared per IP address, so its available headroom depends on other traffic from the same address.
+* On the pay-per-request paths, the per-IP limit counts both the unpaid request that returns the offer and the paid retry, which is why it is twice the per-wallet limit.
+
+To increase rate limits on the authenticated tier, please [talk to us](https://keenable.ai/contact).
+
+Rate limits cap how *fast* you can call the API. How *much* you can call it is a separate limit: authenticated usage draws on a free allowance of 100,000 requests a month — see [credits](/credits).
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.
