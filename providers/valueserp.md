@@ -9,16 +9,16 @@
 
 ## Free tier
 
-- Documented recurring free volume: **100**
-- Detail: Free trial plan (100 searches/month commonly advertised; number not present in fetched snapshot)
-- Confidence: **low**
+- Documented recurring free volume: not quantified in fetched sources
+- Detail: Free plan documented ('Try for free... choose a plan later'); volume not published on any fetched page (pricing table is JS-rendered)
+- Confidence: **medium**
 
 ## Evidence
 
-> Try for free
+> Try for free, when you’re ready choose a plan that is right for you.
 
-Source: https://www.valueserp.com/  
-Snapshot: `data/snapshots/valueserp/pricing.txt`  
+Source: https://www.valueserp.com/pricing  
+Snapshot: `data/snapshots/valueserp/pricing2.txt`  
 
 ## Measurement note
 

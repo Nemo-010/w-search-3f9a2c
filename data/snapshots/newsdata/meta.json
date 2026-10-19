@@ -90,6 +90,17 @@
    "truncated": false,
    "sha256": "c4ec53247fbe7aa814b1101a3b139273fa194a3956ed873ab3d0bab39f2c1a2f",
    "fetched_at": "2026-10-19T05:54:42+00:00"
+  },
+  "pricing-jina": {
+   "url": "https://newsdata.io/pricing",
+   "status": 200,
+   "final_url": "https://r.jina.ai/https://newsdata.io/pricing",
+   "content_type": "text/plain",
+   "bytes": 8050,
+   "truncated": false,
+   "sha256": "2992b21bd434f1e449df683a745576024e234bb9ad4f663ac544fed2127cd7d7",
+   "fetched_at": "2026-10-19T09:39:07+00:00",
+   "text_bytes": 8034
   }
  }
 }

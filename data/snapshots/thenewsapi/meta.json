@@ -66,6 +66,17 @@
    "truncated": false,
    "sha256": "6b01e7a8485b5dc1ac31e48856d072d2d2ffc6b55ad71bbfd823560ed1ceb03f",
    "fetched_at": "2026-10-19T05:54:41+00:00"
+  },
+  "pricing2": {
+   "url": "https://www.thenewsapi.com/pricing",
+   "status": 200,
+   "final_url": "https://www.thenewsapi.com/pricing",
+   "content_type": "text/html",
+   "bytes": 86193,
+   "truncated": false,
+   "sha256": "b5b6503e6fad03a3bb8f13f152fe88082364839a9098a24270ae3fc5682bc2a3",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 2557
   }
  }
 }

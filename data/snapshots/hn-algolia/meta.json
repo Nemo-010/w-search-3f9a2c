@@ -55,6 +55,17 @@
    "sha256": "d05432c450dbf604b62611ec012cdf18ca15e31005a3c2ab071d6bb8de82e61b",
    "fetched_at": "2026-10-19T07:48:04+00:00",
    "text_bytes": 12878
+  },
+  "api2": {
+   "url": "https://hn.algolia.com/api",
+   "status": 200,
+   "final_url": "https://hn.algolia.com/api",
+   "content_type": "text/html",
+   "bytes": 2383,
+   "truncated": false,
+   "sha256": "8202c101c8174f3deac845075f6ff80e9bb471e78cfcaa0862cd41544cb5613f",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 37
   }
  }
 }

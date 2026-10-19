@@ -10,13 +10,15 @@
 ## Free tier
 
 - Documented recurring free volume: **500**
-- Detail: Free API keys with per-endpoint daily limits (commonly 500/day); not captured
-- Confidence: **low**
+- Detail: Free API key per API: 500 requests/day and 5 requests/minute (per API, so several APIs multiply the daily budget)
+- Confidence: **high**
 
 ## Evidence
 
-Source: https://developer.nytimes.com/pricing  
-Snapshot: `data/snapshots/nyt/home.txt`  
+> Yes, there are two rate limits per API: 500 requests per day and 5 requests per minute. You should sleep 12 seconds between calls to avoid hitting the per minute rate limit.
+
+Source: https://developer.nytimes.com/faq  
+Snapshot: `data/snapshots/nyt/faq.txt`  
 
 ## Measurement note
 

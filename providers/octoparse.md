@@ -10,15 +10,16 @@
 ## Free tier
 
 - Documented recurring free volume: not quantified in fetched sources
-- Detail: Free plan exists; volume not stated in fetched snapshot
-- Confidence: **low**
+- Detail: Free forever plan: 10 tasks, 1 device, local extraction, 50,000 rows/month export, 2 concurrent runs
+- Card required for free tier: no
+- Confidence: **high**
 
 ## Evidence
 
-> Octoparse Pricing: Free Plan & Paid Plans from $69/Month
+> Octoparse starts at $0 with a free forever plan that includes 10 tasks and 50,000 rows of monthly data export
 
 Source: https://www.octoparse.com/pricing  
-Snapshot: `data/snapshots/octoparse/pricing.txt`  
+Snapshot: `data/snapshots/octoparse/pricing2.txt`  
 
 ## Measurement note
 

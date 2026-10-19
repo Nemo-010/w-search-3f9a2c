@@ -10,16 +10,17 @@
 ## Free tier
 
 - Documented recurring free volume: **1,000**
-- Detail: Free plan: 1k sessions/month, no card
+- Detail: Free plan: 1k units/month, 2 concurrent browsers, BrowserQL, no card
 - Card required for free tier: no
-- Confidence: **medium**
+- Signup extras: free CAPTCHA solving
+- Confidence: **high**
 
 ## Evidence
 
-> Free plan: 1k sessions/month. No credit card required.
+> No card required Free $ 0 /month billed annually 2 max concurrent browsers BrowserQL language and editor 1k units/month 2 max concurrent
 
-Source: https://www.browserless.io/  
-Snapshot: `data/snapshots/browserless/home.txt`  
+Source: https://browserless.io/pricing  
+Snapshot: `data/snapshots/browserless/pricing2.txt`  
 
 ## Measurement note
 

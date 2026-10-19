@@ -69,6 +69,17 @@
    "sha256": "32c0389f2e398403765cbbd43333951a065201757799d8f810928a6c5f127c42",
    "fetched_at": "2026-10-19T05:54:24+00:00",
    "text_bytes": 10181
+  },
+  "pricing2": {
+   "url": "https://www.serpwow.com/pricing",
+   "status": 200,
+   "final_url": "https://www.serpwow.com/pricing",
+   "content_type": "text/html",
+   "bytes": 350288,
+   "truncated": false,
+   "sha256": "f228fbb1db7c8ee37f30bdc5ca2badce44fb18bcb9a4a00d6d4e1176583ac507",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 10181
   }
  }
 }

@@ -80,6 +80,17 @@
    "sha256": "1c9fe8440bde6bef97aa34af56dc7f20a0ef5511c9d7a3d560265a4b5331723c",
    "fetched_at": "2026-10-19T05:54:34+00:00",
    "text_bytes": 26942
+  },
+  "pricing2": {
+   "url": "https://hyperbrowser.ai/pricing",
+   "status": 200,
+   "final_url": "https://hyperbrowser.ai/pricing",
+   "content_type": "text/html",
+   "bytes": 113527,
+   "truncated": false,
+   "sha256": "082a21742f1942976e43f05d59da9fa670844c148c706467be247ed89b98eddf",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 4231
   }
  }
 }

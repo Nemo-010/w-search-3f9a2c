@@ -1118,17 +1118,17 @@
   "llms_bytes": 43447,
   "llms_reject": "ok",
   "monthly_calls": null,
-  "monthly_note": "Free plan exists; volume not stated in fetched snapshot",
+  "monthly_note": "Free forever plan: 10 tasks, 1 device, local extraction, 50,000 rows/month export, 2 concurrent runs",
   "one_time": null,
-  "card": null,
+  "card": false,
   "bonus": [],
-  "confidence": "low",
+  "confidence": "high",
   "verified": true,
   "evidence": [
    {
-    "quote": "Octoparse Pricing: Free Plan & Paid Plans from $69/Month",
+    "quote": "Octoparse starts at $0 with a free forever plan that includes 10 tasks and 50,000 rows of monthly data export",
     "url": "https://www.octoparse.com/pricing",
-    "snapshot": "data/snapshots/octoparse/pricing.txt"
+    "snapshot": "data/snapshots/octoparse/pricing2.txt"
    }
   ]
  },
@@ -1655,18 +1655,18 @@
   "llms_ok": false,
   "llms_bytes": 10230,
   "llms_reject": "not a markdown index (no heading or summary)",
-  "monthly_calls": 100,
-  "monthly_note": "Free trial (100 requests commonly advertised; number not in fetched snapshot)",
+  "monthly_calls": null,
+  "monthly_note": "Free trial documented ('Start a free trial to see results instantly'); volume not published on any fetched page",
   "one_time": null,
   "card": null,
   "bonus": [],
-  "confidence": "low",
-  "verified": false,
+  "confidence": "medium",
+  "verified": true,
   "evidence": [
    {
-    "quote": "Start a free trial to see results instantly.",
+    "quote": "Absolutely! Start a free trial to see results instantly.",
     "url": "https://www.serpwow.com/pricing",
-    "snapshot": "data/snapshots/serpwow/pricing.txt"
+    "snapshot": "data/snapshots/serpwow/pricing2.txt"
    }
   ]
  },
@@ -1705,18 +1705,18 @@
   "llms_ok": false,
   "llms_bytes": 5964,
   "llms_reject": "not a markdown index (no heading or summary)",
-  "monthly_calls": 100,
-  "monthly_note": "Free trial plan (100 searches/month commonly advertised; number not present in fetched snapshot)",
+  "monthly_calls": null,
+  "monthly_note": "Free plan documented ('Try for free... choose a plan later'); volume not published on any fetched page (pricing table is JS-rendered)",
   "one_time": null,
   "card": null,
   "bonus": [],
-  "confidence": "low",
-  "verified": false,
+  "confidence": "medium",
+  "verified": true,
   "evidence": [
    {
-    "quote": "Try for free",
-    "url": "https://www.valueserp.com/",
-    "snapshot": "data/snapshots/valueserp/pricing.txt"
+    "quote": "Try for free, when you\u2019re ready choose a plan that is right for you.",
+    "url": "https://www.valueserp.com/pricing",
+    "snapshot": "data/snapshots/valueserp/pricing2.txt"
    }
   ]
  },
@@ -1936,17 +1936,19 @@
   "llms_bytes": 3255,
   "llms_reject": "ok",
   "monthly_calls": 1000,
-  "monthly_note": "Free plan: 1k sessions/month, no card",
+  "monthly_note": "Free plan: 1k units/month, 2 concurrent browsers, BrowserQL, no card",
   "one_time": null,
   "card": false,
-  "bonus": [],
-  "confidence": "medium",
+  "bonus": [
+   "free CAPTCHA solving"
+  ],
+  "confidence": "high",
   "verified": true,
   "evidence": [
    {
-    "quote": "Free plan: 1k sessions/month. No credit card required.",
-    "url": "https://www.browserless.io/",
-    "snapshot": "data/snapshots/browserless/home.txt"
+    "quote": "No card required Free $ 0 /month billed annually 2 max concurrent browsers BrowserQL language and editor 1k units/month 2 max concurrent",
+    "url": "https://browserless.io/pricing",
+    "snapshot": "data/snapshots/browserless/pricing2.txt"
    }
   ]
  },
@@ -1993,10 +1995,10 @@
   "llms_ok": true,
   "llms_bytes": 26946,
   "llms_reject": "ok",
-  "monthly_calls": 5000,
-  "monthly_note": "Free account: 5,000 credits (enough for ~50 browser hours or 5,000 fetched pages), 1 concurrent session, 7-day data retention",
+  "monthly_calls": null,
+  "monthly_note": "Free plan: 5,000 credits one-time (Startup $30/mo = 30,000 credits; 1 credit = $0.001), 1 concurrent session, 7-day retention",
   "one_time": "5,000 credits",
-  "card": null,
+  "card": false,
   "bonus": [
    "all four products included on free tier"
   ],
@@ -2004,9 +2006,9 @@
   "verified": true,
   "evidence": [
    {
-    "quote": "Free $0 to start \u00b7 5,000 credits included All four products \u00b7 1 concurrent session \u00b7 7 days of data retention",
-    "url": "https://www.hyperbrowser.ai/pricing",
-    "snapshot": "data/snapshots/hyperbrowser/pricing.txt"
+    "quote": "Included with a free account 5,000 credits ... Free $0 to start \u00b7 5,000 credits included All four products \u00b7 1 concurrent session \u00b7 7 days of data retention",
+    "url": "https://hyperbrowser.ai/pricing",
+    "snapshot": "data/snapshots/hyperbrowser/pricing2.txt"
    }
   ]
  },
@@ -2273,17 +2275,19 @@
   "llms_bytes": 0,
   "llms_reject": "no response (connection failed or refused)",
   "monthly_calls": 900000,
-  "monthly_note": "Kakao/Daum search API: 30,000 calls/day free (~900k/month) (not re-verified in this snapshot run)",
+  "monthly_note": "Daum Search: 30,000 calls/day per endpoint (web/video/image/blog/book/cafe each ~30k/day => ~900k/month for the web endpoint); plus an app-wide free quota of 3,000,000 calls/month",
   "one_time": null,
   "card": null,
-  "bonus": [],
-  "confidence": "low",
-  "verified": false,
+  "bonus": [
+   "each Daum endpoint (image/blog/book/cafe/video) has its own 30,000/day quota"
+  ],
+  "confidence": "high",
+  "verified": true,
   "evidence": [
    {
-    "quote": "Kakao API applies monthly and daily quotas for stable service. You can check the currently applied quota information in the Quota .",
-    "url": "https://developers.kakao.com/docs/latest/en/daum-search/common",
-    "snapshot": "data/snapshots/kakao/docs2.txt"
+    "quote": "Daum Search 50,000 calls Search web document 30,000 calls Search video 30,000 calls Search image 30,000 calls Search blog 30,000 calls Search book 30,000 calls Search cafe 30,000 calls",
+    "url": "https://developers.kakao.com/docs/latest/en/getting-started/quota",
+    "snapshot": "data/snapshots/kakao/quota-en.txt"
    }
   ]
  },
@@ -3035,17 +3039,17 @@
   "llms_bytes": 0,
   "llms_reject": "empty body",
   "monthly_calls": 500,
-  "monthly_note": "Free API keys with per-endpoint daily limits (commonly 500/day); not captured",
+  "monthly_note": "Free API key per API: 500 requests/day and 5 requests/minute (per API, so several APIs multiply the daily budget)",
   "one_time": null,
   "card": null,
   "bonus": [],
-  "confidence": "low",
-  "verified": false,
+  "confidence": "high",
+  "verified": true,
   "evidence": [
    {
-    "quote": "",
-    "url": "https://developer.nytimes.com/pricing",
-    "snapshot": "data/snapshots/nyt/home.txt"
+    "quote": "Yes, there are two rate limits per API: 500 requests per day and 5 requests per minute. You should sleep 12 seconds between calls to avoid hitting the per minute rate limit.",
+    "url": "https://developer.nytimes.com/faq",
+    "snapshot": "data/snapshots/nyt/faq.txt"
    }
   ]
  },
@@ -3119,17 +3123,17 @@
   "llms_bytes": 59,
   "llms_reject": "not a markdown index (no heading or summary)",
   "monthly_calls": 6000,
-  "monthly_note": "Free tier commonly 200 credits/day (~6,000/month); not captured in this snapshot run",
+  "monthly_note": "Free plan: 200 API credits/day (~6,000/month), 1-10 articles per credit, no card; delayed 12h on free",
   "one_time": null,
   "card": false,
   "bonus": [],
-  "confidence": "low",
-  "verified": false,
+  "confidence": "high",
+  "verified": true,
   "evidence": [
    {
-    "quote": "",
+    "quote": "### Free ##### $0/month API Credits 200/day Articles Per credit 1 - 10",
     "url": "https://newsdata.io/pricing",
-    "snapshot": "data/snapshots/newsdata/home.txt"
+    "snapshot": "data/snapshots/newsdata/pricing-jina.txt"
    }
   ]
  },
@@ -3177,17 +3181,17 @@
   "llms_bytes": 0,
   "llms_reject": "HTTP 404",
   "monthly_calls": 3000,
-  "monthly_note": "Free plan (100 requests/day commonly advertised); free plan needs no payment details",
+  "monthly_note": "Free plan $0: 100 requests/day, 3 articles/request, headlines+top stories+real-time+historical",
   "one_time": null,
   "card": false,
   "bonus": [],
-  "confidence": "medium",
-  "verified": false,
+  "confidence": "high",
+  "verified": true,
   "evidence": [
    {
-    "quote": "Our service is 100% free to use on our free plan - no payment details are required.",
+    "quote": "Free $ 0.00 /mo $0.00/mo if billed annually 100 requests daily 3 articles / news request Headlines data Top stories data Real time data Historical data",
     "url": "https://www.thenewsapi.com/pricing",
-    "snapshot": "data/snapshots/thenewsapi/home.txt"
+    "snapshot": "data/snapshots/thenewsapi/pricing2.txt"
    }
   ]
  },
@@ -3893,7 +3897,7 @@
   "llms_bytes": 0,
   "llms_reject": "HTTP 404",
   "monthly_calls": 3000,
-  "monthly_note": "Free: 1,000 requests/day per project (Google Books API quota; not captured)",
+  "monthly_note": "Free: 1,000 requests/day per project (Google Books API default quota)",
   "one_time": null,
   "card": false,
   "bonus": [],
@@ -3903,7 +3907,7 @@
    {
     "quote": "",
     "url": "https://developers.google.com/books",
-    "snapshot": "data/snapshots/googlebooks/docs.txt"
+    "snapshot": "data/snapshots/googlebooks/docs2.txt"
    }
   ]
  },
@@ -3977,17 +3981,17 @@
   "llms_bytes": 13017,
   "llms_reject": "not a markdown index (no heading or summary)",
   "monthly_calls": 30000,
-  "monthly_note": "Free: 1,000 requests/day (~30k/month), no key, HTTPS on free tier",
+  "monthly_note": "Free trial: up to 1,000 IP lookups/day (~30k/month), for a limited time, HTTPS included",
   "one_time": null,
   "card": false,
   "bonus": [],
-  "confidence": "low",
-  "verified": false,
+  "confidence": "high",
+  "verified": true,
   "evidence": [
    {
-    "quote": "",
-    "url": "https://ipapi.co/api/",
-    "snapshot": "data/snapshots/ipapi-co/docs.txt"
+    "quote": "Under the free trial, you get up-to 1000 IP lookups in a day (approximately 30K/month) for a limited time",
+    "url": "https://ipapi.co/",
+    "snapshot": "data/snapshots/ipapi-co/home.txt"
    }
   ]
  },
@@ -4260,20 +4264,20 @@
   "llms_ok": false,
   "llms_bytes": 0,
   "llms_reject": "HTTP 400",
-  "monthly_calls": 9000,
-  "monthly_note": "Free: 300 requests/day without key, 10,000/day with a free key",
+  "monthly_calls": 300000,
+  "monthly_note": "Free: 300 requests/day per IP without key; 10,000/day per user/app pair with a free key",
   "one_time": null,
   "card": false,
   "bonus": [
    "free app key raises quota"
   ],
-  "confidence": "medium",
-  "verified": false,
+  "confidence": "high",
+  "verified": true,
   "evidence": [
    {
-    "quote": "",
-    "url": "https://api.stackexchange.com/docs",
-    "snapshot": "data/snapshots/stackexchange/docs.txt"
+    "quote": "If an application does have an access_token, then the application is on a distinct user/app pair daily quota (default size of 10,000).",
+    "url": "https://api.stackexchange.com/docs/throttle",
+    "snapshot": "data/snapshots/stackexchange/throttle.txt"
    }
   ]
  },

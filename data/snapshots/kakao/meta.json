@@ -75,6 +75,17 @@
    "sha256": "cab1335f3b903506eefebdf1bacd201caaf4cecaee51eb8ee9f60082ab81946a",
    "fetched_at": "2026-10-19T08:09:40+00:00",
    "text_bytes": 2602
+  },
+  "quota-en": {
+   "url": "https://developers.kakao.com/docs/latest/en/getting-started/quota",
+   "status": 200,
+   "final_url": "https://developers.kakao.com/docs/latest/en/getting-started/quota",
+   "content_type": "text/html;",
+   "bytes": 266270,
+   "truncated": false,
+   "sha256": "d746a8e3ed8fb0470b1a19fac47d141fd77d1158ef2e67ee2538294cd5e28a91",
+   "fetched_at": "2026-10-19T09:24:27+00:00",
+   "text_bytes": 7016
   }
  }
 }

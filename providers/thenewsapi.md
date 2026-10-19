@@ -10,16 +10,16 @@
 ## Free tier
 
 - Documented recurring free volume: **3,000**
-- Detail: Free plan (100 requests/day commonly advertised); free plan needs no payment details
+- Detail: Free plan $0: 100 requests/day, 3 articles/request, headlines+top stories+real-time+historical
 - Card required for free tier: no
-- Confidence: **medium**
+- Confidence: **high**
 
 ## Evidence
 
-> Our service is 100% free to use on our free plan - no payment details are required.
+> Free $ 0.00 /mo $0.00/mo if billed annually 100 requests daily 3 articles / news request Headlines data Top stories data Real time data Historical data
 
 Source: https://www.thenewsapi.com/pricing  
-Snapshot: `data/snapshots/thenewsapi/home.txt`  
+Snapshot: `data/snapshots/thenewsapi/pricing2.txt`  
 
 ## Measurement note
 

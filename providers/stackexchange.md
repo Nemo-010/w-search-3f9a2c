@@ -9,16 +9,18 @@
 
 ## Free tier
 
-- Documented recurring free volume: **9,000**
-- Detail: Free: 300 requests/day without key, 10,000/day with a free key
+- Documented recurring free volume: **300,000**
+- Detail: Free: 300 requests/day per IP without key; 10,000/day per user/app pair with a free key
 - Card required for free tier: no
 - Signup extras: free app key raises quota
-- Confidence: **medium**
+- Confidence: **high**
 
 ## Evidence
 
-Source: https://api.stackexchange.com/docs  
-Snapshot: `data/snapshots/stackexchange/docs.txt`  
+> If an application does have an access_token, then the application is on a distinct user/app pair daily quota (default size of 10,000).
+
+Source: https://api.stackexchange.com/docs/throttle  
+Snapshot: `data/snapshots/stackexchange/throttle.txt`  
 
 ## Measurement note
 

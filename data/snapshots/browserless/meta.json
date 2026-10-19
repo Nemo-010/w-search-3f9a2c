@@ -79,6 +79,17 @@
    "truncated": false,
    "sha256": "26c6cbfa2230ba6024d4afcb30d28a070f6aab0bdcfa70450aa9586ccfcb7cd5",
    "fetched_at": "2026-10-19T05:54:32+00:00"
+  },
+  "pricing2": {
+   "url": "https://browserless.io/pricing",
+   "status": 200,
+   "final_url": "https://browserless.io/pricing",
+   "content_type": "text/html",
+   "bytes": 164868,
+   "truncated": false,
+   "sha256": "abebace5e6f05f56fdbd96a0f432724a4d23010e9426b569ce18ad1d38a23a3c",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 5883
   }
  }
 }

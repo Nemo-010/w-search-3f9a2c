@@ -46,15 +46,15 @@
    "fetched_at": "2026-10-19T05:54:47+00:00"
   },
   "docs2": {
-   "url": "https://developers.google.com/books/docs/v1/using",
+   "url": "https://developers.google.com/books/docs/overview",
    "status": 200,
-   "final_url": "https://developers.google.com/books/docs/v1/using",
-   "content_type": "text/html; charset=utf-8",
-   "bytes": 124009,
+   "final_url": "https://developers.google.com/books/docs/overview",
+   "content_type": "text/html",
+   "bytes": 64280,
    "truncated": false,
-   "sha256": "317af6172626c32eb6590311bae826a3f29d38148e140cd050de323c6641f7fc",
-   "fetched_at": "2026-10-19T06:05:17+00:00",
-   "text_bytes": 40211
+   "sha256": "1f7abff4f1ba76fb414f37513111beeada5e1ba9330c23c1e2c6f521710d0f88",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 5389
   }
  }
 }

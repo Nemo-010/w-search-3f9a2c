@@ -9,14 +9,16 @@
 ## Free tier
 
 - Documented recurring free volume: **30,000**
-- Detail: Free: 1,000 requests/day (~30k/month), no key, HTTPS on free tier
+- Detail: Free trial: up to 1,000 IP lookups/day (~30k/month), for a limited time, HTTPS included
 - Card required for free tier: no
-- Confidence: **low**
+- Confidence: **high**
 
 ## Evidence
 
-Source: https://ipapi.co/api/  
-Snapshot: `data/snapshots/ipapi-co/docs.txt`  
+> Under the free trial, you get up-to 1000 IP lookups in a day (approximately 30K/month) for a limited time
+
+Source: https://ipapi.co/  
+Snapshot: `data/snapshots/ipapi-co/home.txt`  
 
 ## Measurement note
 

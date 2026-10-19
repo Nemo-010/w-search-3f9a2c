@@ -1,0 +1,117 @@
+본문 바로가기 메인 메뉴 바로가기 사이드 메뉴 바로가기 App Docs Tools DevTalk Enter your search term. Related sites Languages Login Menu Docs Usage Guide Quota 사이드 메뉴 Docs Home Getting started Tutorial Getting started with Kakao API Test with sample code Implement Kakao Login Send a custom message to yourself Send Kakao Talk messages between service users Share Kakao Talk messages with JavaScript SDK REST API Getting started Reference Error code JavaScript Getting started Download Hybrid app guide Upgrade v1 to v2 Reference Android Getting started Download Migrate v1 to v2 Reference iOS Getting started Download Migrate v1 to v2 Reference Rx Reference Flutter Getting started Download Migrate v1 to v2 Reference Kakao Developers App Settings App Paid API Usage Guide Kakao Developers website and mobile app Quota Permissions Webhooks Statistics Scope of support Security guidelines FAQ App and app key changes Tools Introduction REST API test Webhook test Login Kakao Login Concepts Utilize Prerequisites REST API JavaScript Android iOS Flutter Webhook Design guide FAQ Error code Kakao Sync Concepts Marketing guide Prerequisites Development guide Design guide FAQ Communication Kakao Talk Share Concepts JavaScript Android iOS Flutter Webhook Troubleshooting FAQ Kakao Talk Social Concepts REST API JavaScript Android iOS Flutter FAQ Error code Kakao Talk Message Concepts REST API JavaScript Android iOS Flutter FAQ Error code Message Template Common Default template Custom template FAQ Kakao Talk Channel Concepts REST API JavaScript Android iOS Flutter Webhook Troubleshooting Push Notification Concepts Prerequisites REST API Talk Calendar Concepts REST API Design guide FAQ Map Kakao Map Concepts REST API Map SDK Navigation Kakao Navi Concepts JavaScript Android iOS Flutter Directions SDK & API Advertisement Business Authentication Concepts Prerequisites REST API Troubleshooting Kakao Moment Concepts Ad creation: Ad account Ad creation: Campaign Ad creation: Ad group Targeting for ad group Custom audience targeting for ad group Ad creation: Creative common Ad creation: Display creative Ad creation: Message creative Ad creation: Personalized message creative Bizboard landing settings Report Message management Personalized message management Message ad management Message ad operation Ad View management Business Form+ management Business Form linkage management Pixel & SDK linkage management Audience management Engagement targeting management Customer data management Customer file management Friend group management Ad account management Reference Type information Error code Search Daum Search Concepts REST API More Reference Firewall Utility API Admin key - API category Documentation Glossary Notation guide Usage Guide Quota 
+ This document guides the quota information for the Kakao Developers. 
+ Quotas are counted as either the number of requests or data throughput, depending on the usage of the App. Some APIs are restricted in terms of request or quota depending on permissions. The quota information can be found below. 
+ App's current quotas: [My Applications] > [Statistics] > [Quotas] 
+ Requesting a quota increase or permission: [Concepts document in the applicable API] > [Usage policy] 
+ Free quotas 
+ Monthly quotas 
+ APIs with additional quota usage are not counted toward the free monthly quota. 
+ API No. of Requests All APIs 3,000,000 calls 
+ * The monthly provided amount is subject to change. 
+ Daily quotas 
+ API No. of Requests Kakao Talk profile 30,000 calls Kakao Talk Message 30,000 calls 
+ 100 calls per sender 
+ 100 calls per recipient 
+ 20 calls per sender/recipient pair 
+ Kakao Talk Share 30,000 calls Talk Calendar 30,000 calls Kakao Map (Kakao SDK) ** 
+ Map Web (JavaScript) SDK 
+ 300,000 calls 
+ Map Android/iOS SDK 
+ 300,000 calls Kakao Map (REST API) ** 
+ Convert address to coordinates 
+ 100,000 calls 
+ Convert coordinates to region code 
+ 100,000 calls 
+ Convert coordinates to address 
+ 100,000 calls 
+ Transform coordinates 
+ 100,000 calls 
+ Search place by keyword 
+ 100,000 calls 
+ Search place by category 
+ 100,000 calls 
+ Get public transit routes 
+ 1,000 calls 
+ Get walking routes 
+ 1,000 calls 
+ Get bicycle routes 
+ 1,000 calls 
+ Get static maps 
+ 1,000 calls Kakao Navi (SDK) 
+ Navigate route 
+ 30,000 calls 
+ Share destination 
+ 30,000 calls Kakao Navi (REST API) 
+ Navigate for driving route 
+ 10,000 calls 
+ Navigate via multiple waypoints 
+ 5,000 calls 
+ Navigate from multiple origins 
+ 1,000 calls 
+ Navigate to multiple destinations 
+ 1,000 calls 
+ Estimate future driving 
+ 5,000 calls Kakao Navi (Directions SDK, Embedded) 
+ Real-time navigation mode 
+ 100,000 calls 
+ Safe driving mode 
+ 100,000 calls 
+ Finding location mode 
+ 100,000 calls Daum Search 50,000 calls 
+ Search web document 
+ 30,000 calls 
+ Search video 
+ 30,000 calls 
+ Search image 
+ 30,000 calls 
+ Search blog 
+ 30,000 calls 
+ Search book 
+ 30,000 calls 
+ Search cafe 
+ 30,000 calls 
+ * The daily provided amount is subject to change. 
+ ** Kakao Map APIs provide free quotas only to the first app activated per developer account. For details, see Kakao Map Usage policy . 
+ Rate limits 
+ API Limit Kakao Login 
+ Number of tokens that can be issued via the Get token API and the Refresh token API (per user) 
+ Access tokens: 20 tokens per 10 minutes 
+ Refresh tokens: 30 tokens per 60 minutes 
+ * The rate limit values are subject to change. 
+ Additional quota usage price 
+ The list of API-specific unit prices charged when Paid APIs are applied. 
+ API calls that use additional quota are not deducted from the free monthly quota . 
+ Kakao Talk Share 
+ API Price Send message with default template 50 KRW/call Send message with custom template 50 KRW/call Send scrap message 50 KRW/call 
+ Price information 
+ From February 2, 2026, to December 31, 2027, 10 KRW per call is applied with an 80% discount. 
+ After the benefit period, the price may revert to the regular price (50 KRW per call) or change according to the policy at that time. 
+ Any price changes will be announced at least one month in advance. 
+ For high-volume usage, contact us via DevTalk . 
+ Kakao Map 
+ API Price Kakao SDK 
+ Map Web (JavaScript) SDK 
+ 0.1 KRW/call 
+ Map Android/iOS SDK 
+ 0.1 KRW/call REST API 
+ Convert address to coordinates 
+ 0.5 KRW/call 
+ Convert coordinates to region code 
+ 0.5 KRW/call 
+ Convert coordinates to address 
+ 0.5 KRW/call 
+ Transform coordinates 
+ 0.5 KRW/call 
+ Search place by keyword 
+ 2 KRW/call 
+ Search place by category 
+ 2 KRW/call 
+ Get public transit routes 
+ 10 KRW/call 
+ Get walking routes 
+ 10 KRW/call 
+ Get bicycle routes 
+ 10 KRW/call 
+ Get static maps 
+ 2 KRW/call 
+ * The price are subject to change. Was this helpful? Helpful Not helpful Quota Free quotas Monthly quotas Daily quotas Rate limits Additional quota usage price Kakao Talk Share Kakao Map Go to top © Kakao Corp. Terms and Policies Kakao Business Terms of Service Terms of Service Operating Policy Quota Privacy Policy © Kakao Corp. Family Site Usage Guide > Quota - Kakao Developers | Docs

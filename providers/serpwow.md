@@ -9,16 +9,16 @@
 
 ## Free tier
 
-- Documented recurring free volume: **100**
-- Detail: Free trial (100 requests commonly advertised; number not in fetched snapshot)
-- Confidence: **low**
+- Documented recurring free volume: not quantified in fetched sources
+- Detail: Free trial documented ('Start a free trial to see results instantly'); volume not published on any fetched page
+- Confidence: **medium**
 
 ## Evidence
 
-> Start a free trial to see results instantly.
+> Absolutely! Start a free trial to see results instantly.
 
 Source: https://www.serpwow.com/pricing  
-Snapshot: `data/snapshots/serpwow/pricing.txt`  
+Snapshot: `data/snapshots/serpwow/pricing2.txt`  
 
 ## Measurement note
 

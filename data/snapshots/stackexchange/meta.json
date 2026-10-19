@@ -45,6 +45,17 @@
    "truncated": false,
    "sha256": "1eb9aaf41e14d587784383acfa0526d19f3fa54771dd591a1c2d0aa46cafb0b5",
    "fetched_at": "2026-10-19T05:54:47+00:00"
+  },
+  "throttle": {
+   "url": "https://api.stackexchange.com/docs/throttle",
+   "status": 200,
+   "final_url": "https://api.stackexchange.com/docs/throttle",
+   "content_type": "text/html",
+   "bytes": 8944,
+   "truncated": false,
+   "sha256": "a6085761ea229401f9190fd6c662236495056f52b3a9be554f83deaee6043bb6",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 2671
   }
  }
 }

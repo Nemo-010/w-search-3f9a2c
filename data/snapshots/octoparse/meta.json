@@ -58,6 +58,17 @@
    "sha256": "20d34dd952f4d165638cd652bdbeb4b1805593cf61136fccab0075ffac3c7f07",
    "fetched_at": "2026-10-19T05:54:26+00:00",
    "text_bytes": 783121
+  },
+  "pricing2": {
+   "url": "https://www.octoparse.com/pricing",
+   "status": 200,
+   "final_url": "https://www.octoparse.com/pricing",
+   "content_type": "text/html",
+   "bytes": 189242,
+   "truncated": false,
+   "sha256": "f511a9fae74d9657e033a284c02f567183f015658e46733b1dc45dcc5116c4d4",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 6551
   }
  }
 }

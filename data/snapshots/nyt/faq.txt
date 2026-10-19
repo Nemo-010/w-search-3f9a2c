@@ -1,0 +1,87 @@
+Title: FAQ | Dev Portal
+
+URL Source: https://developer.nytimes.com/faq
+
+Markdown Content:
+[1. What are the Times APIs?](https://developer.nytimes.com/faq#a1)
+
+[2. Who is the intended audience for your APIs?](https://developer.nytimes.com/faq#a2)
+
+[3. Why are you offering APIs?](https://developer.nytimes.com/faq#a3)
+
+[4. What kinds of data can I access with Times APIs?](https://developer.nytimes.com/faq#a4)
+
+[5. How do I use the Times APIs?](https://developer.nytimes.com/faq#a5)
+
+[6. Why can't I access all NYTimes.com content?](https://developer.nytimes.com/faq#a6)
+
+[7. Why do I have to register for a key to use your APIs?](https://developer.nytimes.com/faq#a7)
+
+[8. Do I have to agree to your Terms of Use just to test an API?](https://developer.nytimes.com/faq#a8)
+
+[9. Can I use your APIs commercially?](https://developer.nytimes.com/faq#a9)
+
+[10. What do you mean by "commercial purposes"?](https://developer.nytimes.com/faq#a10)
+
+[11. Is there an API call limit?](https://developer.nytimes.com/faq#a11)
+
+[12. What response formats do you support?](https://developer.nytimes.com/faq#a12)
+
+[13. What happened to the Community API?](https://developer.nytimes.com/faq#a13)
+
+[14. Can I make suggestions for future development?](https://developer.nytimes.com/faq#a14)
+
+* * *
+
+[1. What are the Times APIs?](https://developer.nytimes.com/)  
+ Our APIs ([Application Programming Interfaces](https://en.wikipedia.org/wiki/Application_programming_interface)) allow you to programmatically access New York Times data for use in your own applications. Our goal is to facilitate a wide range of uses, from custom link lists to complex visualizations. Why just read the news when you can hack it?
+
+NYT currently has ten public APIs: Archive, Article Search, Books, Most Popular, Semantic, Times Newswire, TimesTags, and Top Stories.
+
+[2. Who is the intended audience for the Times APIs?](https://developer.nytimes.com/)  
+ We've designed our APIs for the web developer community, but all non-commercial users are welcome. See our [Terms of Use](https://developer.nytimes.com/terms) for more information.
+
+[3. Why are you offering APIs?](https://developer.nytimes.com/)  
+ Like many organizations, we hope to encourage innovation through collaboration. When you build applications, create mashups and otherwise reveal the potential of our data, we learn more about what our readers want and gain insight into how news and information can be reimagined. We're hoping you'll show us what's next for The Times.
+
+But we also have a simpler, more compelling reason: journalism. To inform the public or tell a story, we use articles, photos, videos, interactive graphics, slideshows and more. Data has always been the primary force behind those features, and now it can become a feature in its own right. Our APIs help us fulfill the newspaper's journalistic mission by putting more information in the hands of the public — and they also expand that mission by giving users the ability to find and tell their own stories.
+
+[4. What kinds of data can I access with Times APIs?](https://developer.nytimes.com/)  
+ Please see our APIs page for the current list of available APIs.
+
+[5. How do I use the Times APIs?](https://developer.nytimes.com/)  
+ Our APIs use a RESTful style and a resource-oriented architecture. Calls are made via HTTPS requests. Your request URIs should be patterned after the examples in the API documentation, and you should always include your API key in a query string. See the documentation for each API for more details on request parameters and URI structure.
+
+[6. Why can't I access all NYTimes.com content?](https://developer.nytimes.com/)  
+ For each set of data we open up to the developer community, we have to consider a host of issues, ranging from load balancing to copyright law. If you have ideas for our APIs or are hoping to get access to a specific kind of data, contact us at code@nytimes.com.
+
+[7. Why do I have to register for a key to use your APIs?](https://developer.nytimes.com/)  
+ Key registration allows us to monitor usage levels and ensure that developers are complying with our [Terms of Use](https://developer.nytimes.com/terms). We respect your privacy and will not share your registration information with third parties.
+
+[8. Do I have to agree to your Terms of Use just to test an API?](https://developer.nytimes.com/)  
+ Our [Terms of Use](https://developer.nytimes.com/terms) apply to all uses of our APIs. Please agree to the terms before testing or using an API.
+
+[9. Can I use your APIs commercially?](https://developer.nytimes.com/)  
+ Our APIs are for non-commercial use only. For details, see our [Terms of Use](https://developer.nytimes.com/terms). If you have a commercial use case, please contact us at [https://nytlicensing.com/contact/](https://nytlicensing.com/contact/). For Text & Data Mining options, please visit [https://nytlicensing.com/data-solutions/](https://nytlicensing.com/data-solutions/).
+
+[10. What do you mean by "commercial purposes"?](https://developer.nytimes.com/)  
+ Here are a few examples of what we consider commercial purposes:
+
+*   Selling New York Times content or data in any application.
+*   Charging a subscription fee or selling advertising for any service or application that includes New York Times content or data.
+*   Selling any application built with one of our APIs.
+*   Using our content inside an application that is paid or has a paid tier currently or in the future.
+
+If you aren't sure whether your plans constitute "commercial purposes," please contact us at [https://nytlicensing.com/contact/](https://nytlicensing.com/contact/). For commercial use, please visit [https://nytlicensing.com/contact/](https://nytlicensing.com/contact/) and for Text & Data Mining, please visit [https://nytlicensing.com/data-solutions/](https://nytlicensing.com/data-solutions/).
+
+[11. Is there an API call limit?](https://developer.nytimes.com/)  
+ Yes, there are two rate limits per API: 500 requests per day and 5 requests per minute. You should sleep 12 seconds between calls to avoid hitting the per minute rate limit. If you need a higher rate limit, please contact us at code@nytimes.com.
+
+[12. What response formats do you support?](https://developer.nytimes.com/)  
+ Data is returned as JSON. Specific APIs may also return other formats. See the documentation for each API for more details.
+
+[13. What happened to the Community API?](https://developer.nytimes.com/)  
+ The Times is no longer providing reader comments for non-commercial use cases via the Developer Portal. We apologize for any inconvenience that this might cause. We expect to have details regarding a commercial offering in 2025 and for further information, please contact us at [https://nytlicensing.com/contact/](https://nytlicensing.com/contact/).
+
+[14. Can I make suggestions for future development?](https://developer.nytimes.com/)  
+ Yes, please! You can email us at code@nytimes.com.

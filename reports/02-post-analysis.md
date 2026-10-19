@@ -9,24 +9,28 @@ Method: documented recurring monthly free volume × 5. One-time grants are kept 
 | Provider | Per account /mo | ×5 | Basis |
 |----------|---:|---:|-------|
 | Unpaywall | 3,000,000 | **15,000,000** | Free API: 100,000 calls/day (~3M/month) with an email in the request |
+| Kakao/Daum Search API | 900,000 | **4,500,000** | Daum Search: 30,000 calls/day per endpoint (web/video/image/blog/book/cafe each  |
 | Naver Search API | 750,000 | **3,750,000** | Naver search API: 25,000 calls/day free (~750k/month) with client ID/secret |
 | TinyFish | 360,000 | **1,800,000** | Search free up to 12,000 requests/day (~360k/month) |
 | Open-Meteo | 300,000 | **1,500,000** | Free API: 10,000 calls/day non-commercial (~300k/month), no key or signup |
+| StackExchange API | 300,000 | **1,500,000** | Free: 300 requests/day per IP without key |
 | Keenable | 100,000 | **500,000** | 100,000 requests/month free, resets monthly |
+| ipapi.co | 30,000 | **150,000** | Free trial: up to 1,000 IP lookups/day (~30k/month), for a limited time, HTTPS i |
 | The Guardian Open Platform | 15,000 | **75,000** | Free tier: up to 1 call/second and 500 calls/day (~15,000/month), non-commercial |
 | ScrapingAnt | 10,000 | **50,000** | 10,000 free credits every month, no card |
 | CoinGecko | 10,000 | **50,000** | Demo (free) key: 100 calls/min, 10,000 calls/month cap |
 | Diffbot | 9,500 | **47,500** | Free plan $0: 9,500 credits/month (2,000 pages + 5,000 KG + 500 NLP + 2,000 web  |
 | Currents API | 7,500 | **37,500** | Free developer plan: 250 requests/day, no card |
+| NewsData.io | 6,000 | **30,000** | Free plan: 200 API credits/day (~6,000/month), 1-10 articles per credit, no card |
 | Parallel | 5,000 | **25,000** | Up to 5,000 requests/month free |
 | Bright Data | 5,000 | **25,000** | 5,000 credits/month (~$7.50) shared across Web Unlocker, SERP API, Web Scraper A |
 | ZenRows | 5,000 | **25,000** | 5,000 credits/month recurring, no card |
-| Hyperbrowser | 5,000 | **25,000** | Free account: 5,000 credits (enough for ~50 browser hours or 5,000 fetched pages |
 | Google Gemini Grounding | 5,000 | **25,000** | Free tier: 5,000 requests/month shared across Gemini 3+ models for Grounding wit |
 | Linkup | 4,000 | **20,000** | 'Run 4,000 queries for free' (Standard search at $0.001-0.006/request) |
 | Google Programmable Search | 3,000 | **15,000** | 100 free queries/day (~3,000/month) |
 | GNews | 3,000 | **15,000** | Free plan: 100 requests/day, 10 articles/request, 12h delay, 30-day archive |
 | NewsAPI | 3,000 | **15,000** | Developer plan: 100 requests/day, delayed/non-commercial |
+| TheNewsAPI | 3,000 | **15,000** | Free plan $0: 100 requests/day, 3 articles/request, headlines+top stories+real-t |
 | Exa | 2,500 | **12,500** | $10 credits/month (Search from $4/1k => ~2,500 searches) |
 | Brave Search API | 1,000 | **5,000** | $5 free credits every month on the $5/1k-requests Search API (~1,000 requests) |
 | Context.dev | 1,000 | **5,000** | 1,000 credits/month refilled monthly on the grant-anchor day |
@@ -35,38 +39,31 @@ Method: documented recurring monthly free volume × 5. One-time grants are kept 
 | HasData | 1,000 | **5,000** | Free plan: 1,000 credits every month, no card |
 | Scrape.do | 1,000 | **5,000** | Free plan: 1,000 successful API calls per month, full proxies/captcha/JS, no car |
 | Airtop | 1,000 | **5,000** | Free plan: 1,000 credits/month, renews monthly |
-| Browserless | 1,000 | **5,000** | Free plan: 1k sessions/month, no card |
+| Browserless | 1,000 | **5,000** | Free plan: 1k units/month, 2 concurrent browsers, BrowserQL, no card |
 | Cohere | 1,000 | **5,000** | Trial (free) keys: 1,000 API calls/month, 20 req/min |
 | Cloro | 500 | **2,500** | Free plan $0/month: 500 credits/month |
+| New York Times API | 500 | **2,500** | Free API key per API: 500 requests/day and 5 requests/minute (per API, so severa |
 | SerpStack | 100 | **500** | Free plan: 100 searches/month, non-commercial, JSON only |
 | ApiFlash | 100 | **500** | 100 screenshots/month free, no card |
 | Microlink | 100 | **500** | Free plan: 100 requests/month, no card |
 | ScreenshotOne | 100 | **500** | Free: up to 100 screenshots of any URL per month, including rendering HTML and P |
 | Mediastack | 100 | **500** | Free plan: 100 requests/month, delayed news, all sources/languages, HTTPS |
 | Zenserp | 50 | **250** | 50 free searches/month, no strings attached |
-| **Total** | | **23,062,750** | |
+| **Total** | | **29,235,250** | |
 
-Documented recurring free volume across all re-verified providers, 5 accounts each: **23,062,750 calls/month**. The largest single contributors: Unpaywall 15,000,000, Naver Search API 3,750,000, TinyFish 1,800,000, Open-Meteo 1,500,000, Keenable 500,000, The Guardian Open Platform 75,000.
+Documented recurring free volume across all re-verified providers, 5 accounts each: **29,235,250 calls/month**. The largest single contributors: Unpaywall 15,000,000, Kakao/Daum Search API 4,500,000, Naver Search API 3,750,000, TinyFish 1,800,000, Open-Meteo 1,500,000, StackExchange API 1,500,000.
 
 **Read the total as calls, not as pages.** It adds allowances that are not interchangeable: a DOI lookup, a news search, a weather reading and a rendered page all count as one call here. The two largest rows are the clearest cases:
 
 - Unpaywall (15,000,000/month at 5 accounts) — Free API: 100,000 calls/day (~3M/month) with an email in the request
 - Naver Search API (3,750,000/month at 5 accounts) — Naver search API: 25,000 calls/day free (~750k/month) with client ID/secret
 
-Restricting the sum to categories that actually fetch or search the open web (`ai-search`, `serp-scrape`, `browser`, `search-engine`, `reader`) gives **6,339,750 calls/month** across 26 providers. That is the number to plan a web gateway against; the larger total above is only meaningful as a ceiling.
+Restricting the sum to categories that actually fetch or search the open web (`ai-search`, `serp-scrape`, `browser`, `search-engine`, `reader`) gives **10,814,750 calls/month** across 26 providers. That is the number to plan a web gateway against; the larger total above is only meaningful as a ceiling.
 
 Reported but not re-verified in this snapshot run (excluded from the total above):
 
-- Kakao/Daum Search API: 900,000/month reported — Kakao/Daum search API: 30,000 calls/day free (~900k/month) (not re-verified in this snapshot run) (`kakao`, confidence low)
-- ipapi.co: 30,000/month reported — Free: 1,000 requests/day (~30k/month), no key, HTTPS on free tier (`ipapi-co`, confidence low)
-- StackExchange API: 9,000/month reported — Free: 300 requests/day without key, 10,000/day with a free key (`stackexchange`, confidence medium)
-- NewsData.io: 6,000/month reported — Free tier commonly 200 credits/day (~6,000/month); not captured in this snapshot run (`newsdata`, confidence low)
-- TheNewsAPI: 3,000/month reported — Free plan (100 requests/day commonly advertised); free plan needs no payment details (`thenewsapi`, confidence medium)
-- Google Books API: 3,000/month reported — Free: 1,000 requests/day per project (Google Books API quota; not captured) (`googlebooks`, confidence low)
+- Google Books API: 3,000/month reported — Free: 1,000 requests/day per project (Google Books API default quota) (`googlebooks`, confidence low)
 - ScrapeNinja: 550/month reported — RapidAPI free tier: 50 non-JS requests/month + 500 JS requests/month (`scrapeninja`, confidence medium)
-- New York Times API: 500/month reported — Free API keys with per-endpoint daily limits (commonly 500/day); not captured (`nyt`, confidence low)
-- SerpWow: 100/month reported — Free trial (100 requests commonly advertised; number not in fetched snapshot) (`serpwow`, confidence low)
-- ValueSERP: 100/month reported — Free trial plan (100 searches/month commonly advertised; number not present in fetched snapshot) (`valueserp`, confidence low)
 
 One-time, first-month totals (not recurring, ×5 accounts where the grant is per account):
 
@@ -99,7 +96,7 @@ One-time, first-month totals (not recurring, ×5 accounts where the grant is per
 - Zyte: $5 credit
 - treg: $1.00 free once for new verified accounts/teams
 
-Providers with a documented free tier but no published monthly cap (excluded from the sum): Jina AI, Litescrape, Olostep, Spider, Browserbase, Cloudflare Browser Rendering, Kernel, DuckDuckGo Instant Answer, Marginalia, Mwmbl, Stract, Arquivo.pt, Common Crawl, urlscan.io, Wayback Machine CDX, GDELT, arXiv API, bioRxiv API, CORE, Crossref REST API, DataCite API, DOAJ API, Europe PMC, Figshare API, HAL API, OpenAIRE, OpenAlex, OSF API, PubMed E-utilities, Semantic Scholar, Zenodo API, Bluesky AT Protocol, crt.sh, DBpedia, FRED, GitHub Search API, Hacker News (Algolia), ip-api, iTunes Search API, Mastodon API, Nominatim (OSM), Open Library, RDAP, REST Countries, USPTO, Wikidata SPARQL, Wikimedia REST, World Bank, Mistral, OpenRouter.
+Providers with a documented free tier but no published monthly cap (excluded from the sum): Jina AI, Litescrape, Olostep, Spider, Octoparse, SerpWow, ValueSERP, Browserbase, Cloudflare Browser Rendering, Kernel, DuckDuckGo Instant Answer, Marginalia, Mwmbl, Stract, Arquivo.pt, Common Crawl, urlscan.io, Wayback Machine CDX, GDELT, arXiv API, bioRxiv API, CORE, Crossref REST API, DataCite API, DOAJ API, Europe PMC, Figshare API, HAL API, OpenAIRE, OpenAlex, OSF API, PubMed E-utilities, Semantic Scholar, Zenodo API, Bluesky AT Protocol, crt.sh, DBpedia, FRED, GitHub Search API, Hacker News (Algolia), ip-api, iTunes Search API, Mastodon API, Nominatim (OSM), Open Library, RDAP, REST Countries, USPTO, Wikidata SPARQL, Wikimedia REST, World Bank, Mistral, OpenRouter.
 
 Providers with **no free tier** documented in this run (excluded): Perplexity, Bing Web Search API, Urlbox, Anthropic Web Search, DeepSeek, OpenAI Web Search.
 
@@ -217,12 +214,12 @@ What this does and does not show. It shows which provider was the one that retur
 
 The six buckets below partition all 198 providers, so no row is counted twice or dropped.
 
-- **Recurring monthly free volume documented:** 46 providers, 41 of them recurring only.
-- **Recurring volume plus a one-time bonus:** 5 providers (Exa, Parallel, Bright Data, Airtop, Hyperbrowser).
-- **One-time grant only, no recurring volume:** 23 providers (Octen, ScrapeGraphAI, Search1API, TikHub, treg, Valyu, You.com, Apify, Crawlbase, DataForSEO, ScrapeOps, ScraperAPI, Scrapfly, ScrapingBee, ScrapingDog, SearchCans, Serply, Web Scraper, Zyte, Notte, Skyvern, Steel.dev, NewsCatcher).
-- **Free tier documented but no published number:** 50 providers (rate-limited or unpriced free access; excluded from every total).
+- **Recurring monthly free volume documented:** 43 providers, 39 of them recurring only.
+- **Recurring volume plus a one-time bonus:** 4 providers (Exa, Parallel, Bright Data, Airtop).
+- **One-time grant only, no recurring volume:** 24 providers (Octen, ScrapeGraphAI, Search1API, TikHub, treg, Valyu, You.com, Apify, Crawlbase, DataForSEO, ScrapeOps, ScraperAPI, Scrapfly, ScrapingBee, ScrapingDog, SearchCans, Serply, Web Scraper, Zyte, Hyperbrowser, Notte, Skyvern, Steel.dev, NewsCatcher).
+- **Free tier documented but no published number:** 53 providers (rate-limited or unpriced free access; excluded from every total).
 - **No free tier, priced only:** 6 providers (Perplexity, Bing Web Search API, Urlbox, Anthropic Web Search, DeepSeek, OpenAI Web Search).
-- **Nothing usable found in the captured pages:** 73 providers.
+- **Nothing usable found in the captured pages:** 72 providers.
 
 Practical reading: a grant that resets monthly is a standing budget; a one-time grant is a trial with an expiry. Five providers document both. The distinction that matters for a gateway is not the size of the grant but whether the allowance returns: a provider with a small monthly reset is usable indefinitely, while a large one-time grant buys a fixed number of calls and then stops.
 
@@ -230,7 +227,6 @@ Practical reading: a grant that resets monthly is a standing budget; a one-time 
 |----------|---:|-------|
 | Parallel | 5,000 | signup credit for new accounts |
 | Bright Data | 5,000 | $2 trial credit (7 days) + $5 bonus when payment method added |
-| Hyperbrowser | 5,000 | 5,000 credits |
 | Exa | 2,500 | $10 onboarding bonus credits |
 | Airtop | 1,000 | 30,000 credits one-time signup grant (starts at 31,000) |
 
@@ -477,12 +473,14 @@ Documented extras beyond the base free tier (as stated in the fetched pricing/do
 | Zyte | pay per successful response | https://www.zyte.com/pricing/ |
 | Airtop | one-time signup grant of 30,000 credits | https://www.airtop.ai/help/billing/billing.md |
 | Browserbase | runtime included; Stagehand framework open source | https://www.browserbase.com/pricing |
+| Browserless | free CAPTCHA solving | https://browserless.io/pricing |
 | Cloudflare Browser Rendering | works on Workers Free plan | https://developers.cloudflare.com/browser-rendering/platform/pricing/ |
-| Hyperbrowser | all four products included on free tier | https://www.hyperbrowser.ai/pricing |
+| Hyperbrowser | all four products included on free tier | https://hyperbrowser.ai/pricing |
 | Notte | no Notte markup; credits cover sessions, proxies, LLMs, functions | https://www.notte.cc/pricing |
 | Skyvern | open-source Skyvern available | https://www.skyvern.com/pricing |
 | Steel.dev | open-source browser infra | https://steel.dev/pricing |
 | Google Programmable Search | Programmable Search Engine UI free | https://developers.google.com/custom-search/v1/overview |
+| Kakao/Daum Search API | each Daum endpoint (image/blog/book/cafe/video) has its own 30,000/day quota | https://developers.kakao.com/docs/latest/en/getting-started/quota |
 | Marginalia | no ads, no tracking | https://api.marginalia.nu/ |
 | Mwmbl | open source | https://mwmbl.org/ |
 | Microlink | every feature unlocked on free plan | https://microlink.io/pricing |
@@ -494,7 +492,7 @@ Documented extras beyond the base free tier (as stated in the fetched pricing/do
 | CoinGecko | free demo key for all users | https://docs.coingecko.com/ |
 | Open Library | free monthly data dumps | https://openlibrary.org/developers/api |
 | Open-Meteo | no key, no sign-up | https://open-meteo.com/en/pricing |
-| StackExchange API | free app key raises quota | https://api.stackexchange.com/docs |
+| StackExchange API | free app key raises quota | https://api.stackexchange.com/docs/throttle |
 | Wikimedia REST | free community access on Enterprise | https://api.wikimedia.org/ |
 | Cohere | evaluation keys free | https://docs.cohere.com/docs/rate-limits |
 | Google Gemini Grounding | Gemini free tier includes grounding quota | https://ai.google.dev/gemini-api/docs/pricing |

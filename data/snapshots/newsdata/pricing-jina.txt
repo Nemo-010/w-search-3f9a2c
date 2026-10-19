@@ -1,0 +1,327 @@
+Title: Pricing Plan by Newsdata.io
+
+URL Source: https://newsdata.io/pricing
+
+Published Time: Wed, 10 Sep 2025 21:05:01 GMT
+
+Markdown Content:
+Follow Us
+
+[![Image 1: newsdata_logo](https://s.newsdata.io/assets/logoUpdated-DtPdDjwG.png?v=1.1.0)](https://newsdata.io/)
+
+*   
+Products
+
+    [* Breaking News API Get Real Time Breaking News API](https://newsdata.io/breaking-news-api)
+    [* Historical News API Search for Historical News Data](https://newsdata.io/historical-news-api)
+    [* Google News API Best Google News API Alternative](https://newsdata.io/google-news-api)
+    [* Crypto News API Collect Worldwide Crypto News](https://newsdata.io/crypto-news-api)
+    [* News Analysis Analyze your News Data](https://newsdata.io/text-analysis)
+    [* Real-Time Streaming API Receive live news updates instantly](https://newsdata.io/real-time-streaming-news-api)
+
+*   
+Solutions
+
+    [* Media Intelligence Power Media Intelligence with Our API](https://newsdata.io/solutions/media-intelligence)
+    [* Market Intelligence Drive Market Intelligence with API](https://newsdata.io/solutions/market-intelligence)
+    [* Risk Monitoring Automate Compliance Monitoring via News API](https://newsdata.io/solutions/risk-compliance-monitoring)
+    [* Competitive Intelligence Track Competitors with Our API](https://newsdata.io/solutions/competitive-intelligence)
+
+*   [Pricing](https://newsdata.io/pricing)
+*   [Documentation](https://newsdata.io/documentation)
+*   
+Resources
+
+    [* Blog Explore various insightful blogs](https://newsdata.io/blog/)
+    [* News Sources Discover news sources](https://newsdata.io/news-sources)
+    [* Free Datasets Download free News Datasets](https://newsdata.io/datasets)
+    [* API Changelog Stay updated with latest Changes](https://newsdata.io/changelog)
+    [* Integration News Integration made easy](https://newsdata.io/integration)
+
+*   [Login](https://newsdata.io/login)
+
+## Choose the pricing plan which suits you the best!
+
+You can upgrade or cancel your plan anytime
+
+### Free
+
+##### $0/month
+
+API Credits
+
+200/day
+
+Articles Per credit
+
+1 - 10*
+
+* * *
+
+Real-time Streaming API
+
+Latest News API
+
+Crypto & Coin News API
+
+Market News API
+
+AI Tags
+
+Sentiment Analysis
+
+Delayed by 12 hours
+
+### Basic
+
+##### $199.99/month
+
+API Credits
+
+20,000/month
+
+Articles Per credit
+
+1 - 50*
+
+Credits Add-on
+
+$0.006/credit
+
+* * *
+
+6 months Historical data access
+
+Real-time Streaming API
+
+Latest News API
+
+Crypto & Coin News API
+
+Market News API
+
+News Archive API
+
+News Count API
+
+Realtime article availability
+
+AI Tags
+
+Sentiment Analysis
+
+AI Summary
+
+![Image 2: best-selling-tag](https://s.newsdata.io/images/pricing/card/best-selling-tag.png)
+
+### Professional
+
+##### $349.99/month
+
+API Credits
+
+50,000/month
+
+Articles Per credit
+
+1 - 50*
+
+Credits Add-on
+
+$0.006/credit
+
+* * *
+
+2 Year Historical data access
+
+Real-time Streaming API
+
+Latest News API
+
+Crypto & Coin News API
+
+Market News API
+
+News Archive API
+
+News Count API
+
+Realtime article availability
+
+AI Tags
+
+Sentiment Analysis
+
+AI Summary
+
+### Corporate
+
+##### $1,299.99/month
+
+API Credits
+
+1,000,000/month
+
+Articles Per credit
+
+1 - 50*
+
+Credits Add-on
+
+$0.006/credit
+
+* * *
+
+10 Years Historical data access
+
+Real-time Streaming API
+
+Latest News API
+
+Crypto & Coin News API
+
+Market News API
+
+News Archive API
+
+News Count API
+
+Realtime article availability
+
+AI Tags
+
+Custom AI Tag
+
+Sentiment Analysis
+
+AI Region
+
+AI Organization
+
+99.95 SLA Agreement
+
+AI Summary
+
+## Custom Requirements
+
+Get unlimited API credits and articles with lots of filters and customization.
+
+API Credits
+
+Unlimited
+
+* * *
+
+Articles Per credit
+
+Custom
+
+* * *
+
+[Contact Us](https://newsdata.io/contact)
+
+#### API Features:
+
+![Image 3: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+Advanced search
+
+![Image 4: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+Analytics
+
+![Image 5: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+Save Searches
+
+![Image 6: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+Download data in Excel & CSV
+
+![Image 7: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+CORS enabled for all origins
+
+![Image 8: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+Custom AI Tag
+
+![Image 9: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+Real-time Streaming API
+
+#### Advance Features:
+
+![Image 10: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+Track upcoming news and articles
+
+![Image 11: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+Uptime SLA & CSV
+
+![Image 12: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+10 years Historical data
+
+![Image 13: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+Realtime article availability
+
+![Image 14: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+News Count API
+
+![Image 15: accept](https://s.newsdata.io/images/pricing/card/accept.png)
+
+Dedicated support
+
+## Frequently Asked  Questions
+
+What is an API credit?
+
+An API credit is an HTTP request to any of our endpoints considered as a single request. The API credit is counted only when it is executed and displays a result, it won’t count if the parameters or filters are wrongly mentioned, or you didn’t get any result.
+
+What are monthly and yearly pricing?
+
+NewsData.io has two payment options where you get to choose if you want to make monthly payments or yearly payments. If you choose monthly payments, you will be billed for your chosen plan every month. The monthly plan renews automatically every month.
+
+If you choose the yearly pricing plan, you will be required to make a pre-payment for 12 months. The yearly plan comes inclusive with a 20% discount.
+
+Other than Credit/debit cards, what other payment options do i have?
+
+If you are unable to make the payment through our default payment gateway and require any other payment method, kindly drop us a mail at [contact@newsdata.io](https://newsdata.io/contact) and we will explore alternative payment options for you.
+
+We accept payments through Paypal, Stripe, Razorpay, and Payoneer.
+
+What if my requests aren’t consumed till the month end?
+
+The number of requests is refreshed each month. If you have some requests remaining at the month-end, they will lapse. A remaining number of requests won’t be carried over to the next month and you will get a fresh number of requests as per your plan in the next month.
+
+Do you require Credit/debit card details for the free plan?
+
+No Credit/debit card details required for the free plan.
+
+How can I upgrade my plan?
+
+Upgrading your plan is super easy. Simply log in to your account and choose a different pricing plan. Your new plan will be activated immediately once you make the payment.
+
+What if my question is not in the FAQs?
+
+What about cancellations? Can I cancel my plan at any time?
+
+It would be sad to see you go but yes, you can cancel your plan anytime you want. Once you cancel the subscription, you will not be billed for the subsequent months. However, if any trackers are active on your account, they will continue to collect data till the end of your subscription validity
+
+What if my request quota gets finished during my pricing plan validity?
+
+Every pricing plan comes with a number of requests that can be consumed. If your request quota is about to get depleted, you can add requests to the existing plan by contacting us at [contact@newsdata.io.](https://newsdata.io/contact)
+
+How can I downgrade my plan?
+
+To **downgrade your current plan,** please reach out to our support team at [hello@newsdata.io](mailto:hello@newsdata.io) — we’ll be happy to assist you.
+
+If you prefer to **cancel your subscription,** you can do so anytime directly from your **Dashboard** by clicking on **“Cancel Subscription”.**This will stop automatic renewal and ensure that no further charges are applied.
+
+How many credits does the Archive endpoint use?
+
+Each Archive endpoint call uses 5 API credits, regardless of the filters applied or the number of articles returned.

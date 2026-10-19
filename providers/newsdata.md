@@ -10,14 +10,16 @@
 ## Free tier
 
 - Documented recurring free volume: **6,000**
-- Detail: Free tier commonly 200 credits/day (~6,000/month); not captured in this snapshot run
+- Detail: Free plan: 200 API credits/day (~6,000/month), 1-10 articles per credit, no card; delayed 12h on free
 - Card required for free tier: no
-- Confidence: **low**
+- Confidence: **high**
 
 ## Evidence
 
+> ### Free ##### $0/month API Credits 200/day Articles Per credit 1 - 10
+
 Source: https://newsdata.io/pricing  
-Snapshot: `data/snapshots/newsdata/home.txt`  
+Snapshot: `data/snapshots/newsdata/pricing-jina.txt`  
 
 ## Measurement note
 

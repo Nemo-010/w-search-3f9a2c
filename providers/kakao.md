@@ -10,15 +10,16 @@
 ## Free tier
 
 - Documented recurring free volume: **900,000**
-- Detail: Kakao/Daum search API: 30,000 calls/day free (~900k/month) (not re-verified in this snapshot run)
-- Confidence: **low**
+- Detail: Daum Search: 30,000 calls/day per endpoint (web/video/image/blog/book/cafe each ~30k/day => ~900k/month for the web endpoint); plus an app-wide free quota of 3,000,000 calls/month
+- Signup extras: each Daum endpoint (image/blog/book/cafe/video) has its own 30,000/day quota
+- Confidence: **high**
 
 ## Evidence
 
-> Kakao API applies monthly and daily quotas for stable service. You can check the currently applied quota information in the Quota .
+> Daum Search 50,000 calls Search web document 30,000 calls Search video 30,000 calls Search image 30,000 calls Search blog 30,000 calls Search book 30,000 calls Search cafe 30,000 calls
 
-Source: https://developers.kakao.com/docs/latest/en/daum-search/common  
-Snapshot: `data/snapshots/kakao/docs2.txt`  
+Source: https://developers.kakao.com/docs/latest/en/getting-started/quota  
+Snapshot: `data/snapshots/kakao/quota-en.txt`  
 
 ## Measurement note
 

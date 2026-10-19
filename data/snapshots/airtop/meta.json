@@ -79,6 +79,17 @@
    "sha256": "8b0b90e9414f823d5edc863a3350be4d55ddea6069a360b3506b2b5e692114a5",
    "fetched_at": "2026-10-19T05:54:32+00:00",
    "text_bytes": 2987
+  },
+  "pricing2": {
+   "url": "https://www.airtop.ai/pricing",
+   "status": 200,
+   "final_url": "https://www.airtop.ai/pricing",
+   "content_type": "text/html",
+   "bytes": 124110,
+   "truncated": false,
+   "sha256": "4c76988bdd4e82024379fcdb009acde6e8581cfa61182f54747e0cc3a173d317",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 2489
   }
  }
 }

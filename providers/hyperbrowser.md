@@ -9,18 +9,19 @@
 
 ## Free tier
 
-- Documented recurring free volume: **5,000**
-- Detail: Free account: 5,000 credits (enough for ~50 browser hours or 5,000 fetched pages), 1 concurrent session, 7-day data retention
+- Documented recurring free volume: not quantified in fetched sources
+- Detail: Free plan: 5,000 credits one-time (Startup $30/mo = 30,000 credits; 1 credit = $0.001), 1 concurrent session, 7-day retention
 - One-time grant: 5,000 credits
+- Card required for free tier: no
 - Signup extras: all four products included on free tier
 - Confidence: **high**
 
 ## Evidence
 
-> Free $0 to start · 5,000 credits included All four products · 1 concurrent session · 7 days of data retention
+> Included with a free account 5,000 credits ... Free $0 to start · 5,000 credits included All four products · 1 concurrent session · 7 days of data retention
 
-Source: https://www.hyperbrowser.ai/pricing  
-Snapshot: `data/snapshots/hyperbrowser/pricing.txt`  
+Source: https://hyperbrowser.ai/pricing  
+Snapshot: `data/snapshots/hyperbrowser/pricing2.txt`  
 
 ## Measurement note
 

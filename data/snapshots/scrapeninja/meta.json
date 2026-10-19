@@ -76,6 +76,17 @@
    "truncated": false,
    "sha256": "14ee54a9dfebe8ebef030d3b94d718ede4357549ff628a5807c62bff8dbc1ae5",
    "fetched_at": "2026-10-19T07:50:27+00:00"
+  },
+  "home2": {
+   "url": "https://scrapeninja.net/",
+   "status": 200,
+   "final_url": "https://scrapeninja.net/",
+   "content_type": "text/html",
+   "bytes": 68633,
+   "truncated": false,
+   "sha256": "47ce82d38e90fcaa7541aac08954969b30f757e7cb46c4512bcb97e19a40df7b",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 6452
   }
  }
 }

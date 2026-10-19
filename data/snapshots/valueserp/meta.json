@@ -69,6 +69,17 @@
    "sha256": "a849f91ab2318a0fe9cfd2bb5ef8c5a9033b58b8a0fd8f157c1611c01c252be5",
    "fetched_at": "2026-10-19T05:54:22+00:00",
    "text_bytes": 5935
+  },
+  "pricing2": {
+   "url": "https://www.valueserp.com/pricing",
+   "status": 200,
+   "final_url": "https://www.valueserp.com/pricing",
+   "content_type": "text/html",
+   "bytes": 257924,
+   "truncated": false,
+   "sha256": "54e980fc08850db21bbc33de81d7568ca0f50796998d08f69ded60d236e03ab6",
+   "fetched_at": "2026-10-19T09:27:36+00:00",
+   "text_bytes": 5935
   }
  }
 }

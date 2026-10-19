@@ -10,14 +10,14 @@
 ## Free tier
 
 - Documented recurring free volume: **3,000**
-- Detail: Free: 1,000 requests/day per project (Google Books API quota; not captured)
+- Detail: Free: 1,000 requests/day per project (Google Books API default quota)
 - Card required for free tier: no
 - Confidence: **low**
 
 ## Evidence
 
 Source: https://developers.google.com/books  
-Snapshot: `data/snapshots/googlebooks/docs.txt`  
+Snapshot: `data/snapshots/googlebooks/docs2.txt`  
 
 ## Measurement note
 

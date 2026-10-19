@@ -56,6 +56,17 @@
    "truncated": false,
    "sha256": "8b96c776e8ad9391ae499ec30783d22f5d25651edf2796531568b8fe6ca0142f",
    "fetched_at": "2026-10-19T05:54:44+00:00"
+  },
+  "pricing2": {
+   "url": "https://help.openalex.org/access/pricing/",
+   "status": 200,
+   "final_url": "https://help.openalex.org/access/pricing/",
+   "content_type": "text/html",
+   "bytes": 33098,
+   "truncated": false,
+   "sha256": "7b95a2df9d55f5d4ca6550a80f00b4631742e043a5dedb5b158d7a827b55ce40",
+   "fetched_at": "2026-10-19T09:27:37+00:00",
+   "text_bytes": 5125
   }
  }
 }
