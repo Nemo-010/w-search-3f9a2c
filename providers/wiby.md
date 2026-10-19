@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: —
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20170816 (wiby.me)
 
 ## Free tier
 

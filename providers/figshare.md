@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://docs.figshare.com/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20110113 (figshare.com)
 
 ## Free tier
 

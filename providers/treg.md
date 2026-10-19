@@ -5,6 +5,7 @@
 - Pricing: https://treg.to/web-access
 - Docs: https://treg.to/llms.txt
 - llms.txt: https://treg.to/llms.txt
+- First Wayback capture of domain: 20260825 (treg.to)
 
 ## Free tier
 

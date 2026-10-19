@@ -5,6 +5,7 @@
 - Pricing: https://mistral.ai/pricing
 - Docs: https://docs.mistral.ai/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/mistral/llms.txt`
+- First Wayback capture of domain: 20211218 (mistral.ai)
 
 ## Free tier
 

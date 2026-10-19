@@ -5,6 +5,7 @@
 - Pricing: https://dataforseo.com/pricing
 - Docs: https://docs.dataforseo.com/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/dataforseo/llms.txt`
+- First Wayback capture of domain: 20170307 (dataforseo.com)
 
 ## Free tier
 

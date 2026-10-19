@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://github.com/crtsh
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/crtsh/llms.txt`
+- First Wayback capture of domain: 20151224 (crt.sh)
 
 ## Free tier
 

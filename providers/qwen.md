@@ -5,6 +5,7 @@
 - Pricing: https://help.aliyun.com/zh/dashscope/
 - Docs: —
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/qwen/llms.txt`
+- First Wayback capture of domain: 20071017 (aliyun.com)
 
 ## Free tier
 

@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://nominatim.org/release-docs/latest/api/Overview/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20110514 (nominatim.org)
 
 ## Free tier
 

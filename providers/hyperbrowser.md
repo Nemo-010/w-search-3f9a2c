@@ -5,6 +5,7 @@
 - Pricing: https://www.hyperbrowser.ai/pricing
 - Docs: https://docs.hyperbrowser.ai/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/hyperbrowser/llms.txt`
+- First Wayback capture of domain: 20241121 (hyperbrowser.ai)
 
 ## Free tier
 

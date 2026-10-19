@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://performance-partners.apple.com/search-api
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20220513 (performance-partners.apple.com)
 
 ## Free tier
 

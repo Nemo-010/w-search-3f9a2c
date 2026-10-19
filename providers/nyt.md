@@ -5,6 +5,7 @@
 - Pricing: https://developer.nytimes.com/pricing
 - Docs: https://developer.nytimes.com/docs/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/nyt/llms.txt`
+- First Wayback capture of domain: 20080912 (developer.nytimes.com)
 
 ## Free tier
 

@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://docs.searxng.org/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20220103 (searxng.org)
 
 ## Free tier
 

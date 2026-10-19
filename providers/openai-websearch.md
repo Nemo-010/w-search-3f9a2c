@@ -5,6 +5,7 @@
 - Pricing: https://openai.com/api/pricing/
 - Docs: https://platform.openai.com/docs/guides/tools-web-search
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20040328 (openai.com)
 
 ## Free tier
 

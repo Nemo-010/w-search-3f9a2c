@@ -5,6 +5,7 @@
 - Pricing: https://newsapi.org/pricing
 - Docs: https://newsapi.org/docs
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20121230 (newsapi.org)
 
 ## Free tier
 

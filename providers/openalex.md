@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://docs.openalex.org/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/openalex/llms.txt`
+- First Wayback capture of domain: 20130711 (openalex.org)
 
 ## Free tier
 

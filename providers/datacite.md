@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://support.datacite.org/docs/api
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20170708 (support.datacite.org)
 
 ## Free tier
 

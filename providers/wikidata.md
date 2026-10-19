@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20150919 (query.wikidata.org)
 
 ## Free tier
 

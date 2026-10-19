@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://ip-api.com/docs/api:json
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20120801 (ip-api.com)
 
 ## Free tier
 

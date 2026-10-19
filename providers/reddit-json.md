@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://www.reddit.com/dev/api/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20050725 (reddit.com)
 
 ## Free tier
 

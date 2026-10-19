@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://api.marginalia.nu/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20241206 (marginalia-search.com)
 
 ## Free tier
 

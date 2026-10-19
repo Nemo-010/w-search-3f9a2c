@@ -5,6 +5,7 @@
 - Pricing: https://ai.google.dev/gemini-api/docs/pricing
 - Docs: https://ai.google.dev/gemini-api/docs/grounding
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20231213 (ai.google.dev)
 
 ## Free tier
 

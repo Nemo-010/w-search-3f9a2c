@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://docs.scrapy.org/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scrapy/llms.txt`
+- First Wayback capture of domain: 20081015 (scrapy.org)
 
 ## Free tier
 

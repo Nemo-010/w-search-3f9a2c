@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: —
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/cloro/llms.txt`
+- First Wayback capture of domain: 20251105 (cloro.dev)
 
 ## Free tier
 

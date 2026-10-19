@@ -5,6 +5,7 @@
 - Pricing: https://www.scrapingdog.com/pricing/
 - Docs: https://docs.scrapingdog.com/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scrapingdog/llms.txt`
+- First Wayback capture of domain: 20200430 (scrapingdog.com)
 
 ## Free tier
 

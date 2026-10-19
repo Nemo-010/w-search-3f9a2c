@@ -5,6 +5,7 @@
 - Pricing: https://www.semanticscholar.org/product/api
 - Docs: https://api.semanticscholar.org/api-docs/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20151103 (semanticscholar.org)
 
 ## Free tier
 

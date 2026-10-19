@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://developers.zenodo.org/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20130531 (zenodo.org)
 
 ## Free tier
 

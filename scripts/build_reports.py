@@ -366,26 +366,49 @@ def build_post_analysis(ranked):
              "stars where the project is open source (community size), and funding claims made in the "
              "providers' own docs (market awareness; vendor-announced, not audited).")
     L.append("")
-    L.append("| Provider | First web capture | GitHub stars | Funding / company signal |")
-    L.append("|----------|-------------------|--------------|--------------------------|")
     fund = {
         "firecrawl": "$75M Series B (announced on site)",
         "nimble": "$47M Series B (blog)",
         "linkup": "$10M seed led by Gradient (blog)",
         "keenable": "$26M from Accel and Conviction (site)",
     }
+    def first_of(slug):
+        m = mat.get(slug) or {}
+        if m.get("first_seen"):
+            return m["first_seen"]
+        if "error" in m:
+            return "lookup failed"
+        return "no capture"
+
     rows = sorted(facts, key=lambda x: (
-        -(int(mat.get(x["slug"], {}).get("first_seen") or 0)),
+        -(int((mat.get(x["slug"]) or {}).get("first_seen") or 0)),
         -(x["github"]["stargazers_count"] if x.get("github") else 0),
         x["name"]))
+    L.append("Rows with a first capture, oldest domain first; OSS projects with a star count but no "
+             "dated domain follow. `no capture` and `lookup failed` are different claims and are "
+             "printed differently: the first means the archive answered and has nothing, the second "
+             "means the archive did not answer and nothing is known.")
+    L.append("")
+    L.append("| Provider | First web capture | GitHub stars | Funding / company signal |")
+    L.append("|----------|-------------------|--------------|--------------------------|")
     for r in rows:
-        first = mat.get(r["slug"], {}).get("first_seen") or "—"
+        first = first_of(r["slug"])
         stars = f"★{r['github']['stargazers_count']}" if r.get("github") else "—"
+        if first in ("no capture", "lookup failed") and stars == "—":
+            continue
         L.append(f"| {r['name']} | {first} | {stars} | {fund.get(r['slug'], '—')} |")
     L.append("")
-    L.append("Caveats: a Wayback capture only proves a domain existed, not that the company was "
-             "operating the same product; stars measure attention, not reliability. Providers "
-             "launched 2024-2026 (Firecrawl, TinyFish, Keenable, Octen, Linkup) are the youngest.")
+    dated = [r for r in facts if (mat.get(r["slug"]) or {}).get("first_seen")]
+    L.append(f"{len(dated)} of {len(facts)} providers have a dated first capture. Oldest domains: "
+             + ", ".join(f"{r['name']} {mat[r['slug']]['first_seen'][:4]}" for r in sorted(
+                 dated, key=lambda x: mat[x["slug"]]["first_seen"])[:6]) + ". Youngest: "
+             + ", ".join(f"{r['name']} {mat[r['slug']]['first_seen'][:4]}" for r in sorted(
+                 dated, key=lambda x: mat[x["slug"]]["first_seen"])[-6:]) + ".")
+    L.append("")
+    L.append("Caveats: a first capture only proves a domain existed at that date, not that the same "
+             "company or product was operating it — several of these domains changed hands. A domain "
+             "registered recently says nothing about the API's reliability, and stars measure "
+             "attention, not uptime. Neither signal is evidence about free-tier terms.")
     L.append("")
 
     # 5. signup bonuses

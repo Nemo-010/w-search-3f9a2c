@@ -5,6 +5,7 @@
 - Pricing: https://scraperbox.com/pricing
 - Docs: —
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20130806 (scraperbox.com)
 
 ## Free tier
 

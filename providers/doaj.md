@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://doaj.org/api/docs
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20040129 (doaj.org)
 
 ## Free tier
 

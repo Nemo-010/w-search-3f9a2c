@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://api.stackexchange.com/docs
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20040324 (stackexchange.com)
 
 ## Free tier
 

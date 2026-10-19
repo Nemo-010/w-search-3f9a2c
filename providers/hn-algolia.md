@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://hn.algolia.com/api
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20140127 (hn.algolia.com)
 
 ## Free tier
 

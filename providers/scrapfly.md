@@ -5,6 +5,7 @@
 - Pricing: https://scrapfly.io/pricing
 - Docs: https://scrapfly.io/docs/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scrapfly/llms.txt`
+- First Wayback capture of domain: 20201104 (scrapfly.io)
 
 ## Free tier
 

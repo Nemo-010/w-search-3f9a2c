@@ -5,6 +5,7 @@
 - Pricing: https://groq.com/pricing
 - Docs: https://console.groq.com/docs/compound
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20110202 (groq.com)
 
 ## Free tier
 

@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://www.crossref.org/documentation/retrieve-metadata/rest-api/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20040325 (crossref.org)
 
 ## Free tier
 

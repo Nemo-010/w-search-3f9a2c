@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://docs.scrapecreators.com/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scrapecreators/llms.txt`
+- First Wayback capture of domain: 20240517 (scrapecreators.com)
 
 ## Free tier
 

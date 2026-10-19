@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://github.com/Ahwxorg/LibreY
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/librey/llms.txt`
+- First Wayback capture of domain: 20230831 (librey.org)
 
 ## Free tier
 

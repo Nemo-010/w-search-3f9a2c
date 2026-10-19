@@ -5,6 +5,7 @@
 - Pricing: https://developers.google.com/custom-search/v1/overview#pricing
 - Docs: https://developers.google.com/custom-search/v1/overview
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20040103 (google.com)
 
 ## Free tier
 

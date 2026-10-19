@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://learn.microsoft.com/en-us/bing/search-apis/bing-web-search/overview
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20040110 (microsoft.com)
 
 ## Free tier
 

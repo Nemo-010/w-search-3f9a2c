@@ -5,6 +5,7 @@
 - Pricing: https://www.valueserp.com/pricing
 - Docs: https://www.valueserp.com/docs
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/valueserp/llms.txt`
+- First Wayback capture of domain: 20210220 (valueserp.com)
 
 ## Free tier
 

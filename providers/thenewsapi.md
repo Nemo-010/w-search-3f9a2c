@@ -5,6 +5,7 @@
 - Pricing: https://www.thenewsapi.com/pricing
 - Docs: https://www.thenewsapi.com/documentation
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20210228 (thenewsapi.com)
 
 ## Free tier
 

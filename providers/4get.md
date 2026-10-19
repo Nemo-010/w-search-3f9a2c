@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://git.4get.ca/4get/4get
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20150801 (4get.ca)
 
 ## Free tier
 

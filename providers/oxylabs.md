@@ -5,6 +5,7 @@
 - Pricing: https://oxylabs.io/pricing
 - Docs: https://developers.oxylabs.io/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/oxylabs/llms.txt`
+- First Wayback capture of domain: 20160227 (oxylabs.io)
 
 ## Free tier
 

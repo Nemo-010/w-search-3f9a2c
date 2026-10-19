@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://trafilatura.readthedocs.io/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20210510 (trafilatura.readthedocs.io)
 
 ## Free tier
 

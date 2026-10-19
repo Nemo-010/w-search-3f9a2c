@@ -5,6 +5,7 @@
 - Pricing: https://screenshotone.com/pricing/
 - Docs: https://screenshotone.com/docs/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/screenshotone/llms.txt`
+- First Wayback capture of domain: 20220210 (screenshotone.com)
 
 ## Free tier
 

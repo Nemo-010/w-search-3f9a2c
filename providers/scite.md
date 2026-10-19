@@ -5,6 +5,7 @@
 - Pricing: https://scite.ai/pricing
 - Docs: https://api.scite.ai/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scite/llms.txt`
+- First Wayback capture of domain: 20180527 (scite.ai)
 
 ## Free tier
 

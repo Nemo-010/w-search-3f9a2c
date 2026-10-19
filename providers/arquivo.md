@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://arquivo.pt/api
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20090211 (arquivo.pt)
 
 ## Free tier
 

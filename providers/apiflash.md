@@ -5,6 +5,7 @@
 - Pricing: https://apiflash.com/#pricing
 - Docs: https://apiflash.com/documentation
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20180726 (apiflash.com)
 
 ## Free tier
 

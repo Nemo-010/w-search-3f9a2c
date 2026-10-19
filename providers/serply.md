@@ -5,6 +5,7 @@
 - Pricing: https://serply.io/pricing
 - Docs: —
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/serply/llms.txt`
+- First Wayback capture of domain: 20211221 (serply.io)
 
 ## Free tier
 

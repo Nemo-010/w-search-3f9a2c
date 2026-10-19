@@ -5,6 +5,7 @@
 - Pricing: https://www.zenrows.com/pricing
 - Docs: https://docs.zenrows.com/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/zenrows/llms.txt`
+- First Wayback capture of domain: 20210208 (zenrows.com)
 
 ## Free tier
 

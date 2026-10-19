@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: —
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20040103 (agenty.com)
 
 ## Free tier
 

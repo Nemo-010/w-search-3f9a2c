@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://api.biorxiv.org/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20130715 (biorxiv.org)
 
 ## Free tier
 

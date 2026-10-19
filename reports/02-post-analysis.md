@@ -224,208 +224,208 @@ Practical reading: a free tier that resets monthly is a permanent budget; a one-
 
 Signals used: first Wayback Machine capture of the primary domain (longevity), GitHub stars where the project is open source (community size), and funding claims made in the providers' own docs (market awareness; vendor-announced, not audited).
 
+Rows with a first capture, oldest domain first; OSS projects with a star count but no dated domain follow. `no capture` and `lookup failed` are different claims and are printed differently: the first means the archive answered and has nothing, the second means the archive did not answer and nothing is known.
+
 | Provider | First web capture | GitHub stars | Funding / company signal |
 |----------|-------------------|--------------|--------------------------|
+| Litescrape | 20261009 | — | — |
+| treg | 20260825 | — | — |
 | Octen | 20260214 | — | — |
+| SearchCans | 20260121 | — | — |
 | Keenable | 20251231 | — | $26M from Accel and Conviction (site) |
+| Cloro | 20251105 | — | — |
+| Just One API | 20250712 | — | — |
+| Marginalia | 20241206 | — | — |
+| Anchor Browser | 20241128 | — | — |
+| Hyperbrowser | 20241121 | — | — |
+| Browser Use (OSS) | 20241113 | — | — |
+| Bocha AI | 20241011 | — | — |
+| Notte | 20240925 | — | — |
 | TinyFish | 20240821 | — | — |
+| Airtop | 20240811 | — | — |
+| Steel.dev | 20240724 | — | — |
+| ScrapeCreators | 20240517 | — | — |
+| ScrapeGraphAI | 20240509 | — | — |
 | Linkup | 20240501 | — | $10M seed led by Gradient (blog) |
+| Spider | 20240422 | — | — |
 | Firecrawl | 20240413 | — | $75M Series B (announced on site) |
 | Search1API | 20240402 | — | — |
+| Lightpanda (OSS) | 20240322 | — | — |
+| Google Gemini Grounding | 20231213 | — | — |
+| LibreY (OSS) | 20230831 | — | — |
 | Brand.dev | 20230724 | — | — |
 | Olostep | 20230724 | — | — |
+| OpenRouter | 20230525 | — | — |
+| TikHub | 20230316 | — | — |
+| arXiv API | 20221207 | — | — |
+| Bluesky AT Protocol | 20221018 | — | — |
+| Serper | 20221006 | — | — |
+| Crawlee (OSS) | 20220804 | — | — |
+| Serpdog | 20220711 | — | — |
+| iTunes Search API | 20220513 | — | — |
+| URLtoMarkdown | 20220505 | — | — |
+| ScreenshotOne | 20220210 | — | — |
+| ScrapeNinja | 20220126 | — | — |
+| SearXNG (OSS) | 20220103 | — | — |
+| AnyAPI | 20211229 | — | — |
+| Mwmbl | 20211226 | — | — |
+| Serply | 20211221 | — | — |
+| Mistral | 20211218 | — | — |
 | Perplexity | 20211218 | — | — |
+| MiniMax | 20211217 | — | — |
+| ScrapeOps | 20211207 | — | — |
+| ScrapeOps Proxy | 20211207 | — | — |
 | Fiber AI | 20211204 | — | — |
+| Moonshot Kimi | 20211202 | — | — |
 | Context.dev | 20211129 | — | — |
+| Trafilatura (OSS) | 20210510 | — | — |
+| NewsData.io | 20210417 | — | — |
+| REST Countries | 20210228 | — | — |
+| TheNewsAPI | 20210228 | — | — |
+| ValueSERP | 20210220 | — | — |
+| ZenRows | 20210208 | — | — |
+| Right Dao | 20201202 | — | — |
+| Scrapfly | 20201104 | — | — |
+| Scrape.do | 20201031 | — | — |
+| Internet Archive Scholar | 20201004 | — | — |
 | Valyu | 20200626 | — | — |
+| Rainforest API | 20200610 | — | — |
+| NewsCatcher | 20200512 | — | — |
+| Playwright (OSS) | 20200509 | — | — |
 | Jina AI | 20200505 | — | — |
+| ScrapingDog | 20200430 | — | — |
+| ScrapingAnt | 20200411 | — | — |
+| Currents API | 20200104 | — | — |
+| Simplescraper | 20191024 | — | — |
+| ScreenshotAPI.net | 20191014 | — | — |
+| ScrapingBee | 20191006 | — | — |
+| SerpWow | 20190719 | — | — |
+| Zenserp | 20190314 | — | — |
 | Tavily AI | 20180807 | — | — |
+| Nodemaven | 20180805 | — | — |
+| SerpStack | 20180805 | — | — |
+| ApiFlash | 20180726 | — | — |
+| Browse AI | 20180724 | — | — |
+| ScraperAPI | 20180612 | — | — |
+| Scite | 20180527 | — | — |
+| Microlink | 20171120 | — | — |
+| Webz.io | 20171101 | — | — |
+| Browserless | 20170911 | — | — |
+| Wiby | 20170816 | — | — |
+| DataCite API | 20170708 | — | — |
+| Kernel | 20170616 | — | — |
+| OSF API | 20170606 | — | — |
+| Mastodon API | 20170603 | — | — |
 | Parallel | 20170521 | — | — |
+| Unpaywall | 20170314 | — | — |
+| urlscan.io | 20170314 | — | — |
+| DataForSEO | 20170307 | — | — |
+| NetNut | 20170114 | — | — |
+| FRED | 20160617 | — | — |
+| Octoparse | 20160324 | — | — |
+| USPTO | 20160322 | — | — |
+| Oxylabs | 20160227 | — | — |
 | Exa | 20160204 | — | — |
+| crt.sh | 20151224 | — | — |
+| Semantic Scholar | 20151103 | — | — |
+| Wikidata SPARQL | 20150919 | — | — |
+| 4get (OSS) | 20150801 | — | — |
+| GNews | 20150130 | — | — |
+| Web Scraper | 20140917 | — | — |
+| ScrapeHero Cloud | 20140804 | — | — |
+| CoinGecko | 20140410 | — | — |
+| GDELT | 20140131 | — | — |
+| Hacker News (Algolia) | 20140127 | — | — |
+| Crawlbase | 20131122 | — | — |
+| ParseHub | 20131028 | — | — |
+| ScraperBox | 20130806 | — | — |
 | Nimble | 20130717 | — | $47M Series B (blog) |
+| bioRxiv API | 20130715 | — | — |
+| OpenAlex | 20130711 | — | — |
+| RapidAPI | 20130617 | — | — |
+| Zenodo API | 20130531 | — | — |
+| Skyvern | 20130424 | — | — |
+| SerpApi | 20130413 | — | — |
+| World Bank | 20130401 | — | — |
+| NewsAPI | 20121230 | — | — |
+| Event Registry | 20121223 | — | — |
+| ip-api | 20120801 | — | — |
+| RDAP | 20111118 | — | — |
+| Europe PMC | 20110704 | — | — |
+| Nominatim (OSM) | 20110514 | — | — |
+| xAI Live Search | 20110222 | — | — |
+| HasData | 20110207 | — | — |
+| Groq Compound | 20110202 | — | — |
+| Open-Meteo | 20110202 | — | — |
+| Figshare API | 20110113 | — | — |
+| Z.ai / Zhipu | 20100712 | — | — |
+| OpenAIRE | 20100116 | — | — |
+| FiveFilters Full-Text RSS | 20091111 | — | — |
+| Cloudflare Browser Rendering | 20090901 | — | — |
+| Arquivo.pt | 20090211 | — | — |
+| SauceNAO | 20081101 | — | — |
+| Scrapy (OSS) | 20081015 | — | — |
+| New York Times API | 20080912 | — | — |
+| DuckDuckGo Instant Answer | 20080820 | — | — |
+| Common Crawl | 20080328 | — | — |
+| Alibaba Qwen (DashScope) | 20071017 | — | — |
+| Apify | 20070531 | — | — |
+| BASE | 20070427 | — | — |
+| DBpedia | 20070207 | — | — |
 | Diffbot | 20070203 | — | — |
+| HAL API | 20070110 | — | — |
+| Open Library | 20051028 | — | — |
+| Reddit JSON | 20050725 | — | — |
+| Mojeek Search API | 20041127 | — | — |
+| DeepSeek | 20040827 | — | — |
 | You.com | 20040626 | — | — |
+| Wikimedia REST | 20040413 | — | — |
+| Urlbox | 20040401 | — | — |
+| Wayback Machine CDX | 20040401 | — | — |
+| OpenAI Web Search | 20040328 | — | — |
+| Crossref REST API | 20040325 | — | — |
+| Presearch | 20040324 | — | — |
+| StackExchange API | 20040324 | — | — |
+| Decodo | 20040317 | — | — |
+| Kagi Search API | 20040304 | — | — |
+| Stract | 20040228 | — | — |
+| Bright Data | 20040210 | — | — |
+| Zyte | 20040208 | — | — |
+| CORE | 20040206 | — | — |
+| Naver Search API | 20040130 | — | — |
+| DOAJ API | 20040129 | — | — |
+| Teclis | 20040128 | — | — |
+| Cohere | 20040127 | — | — |
+| Mediastack | 20040124 | — | — |
+| Anthropic Web Search | 20040123 | — | — |
+| Openverse API | 20040123 | — | — |
+| Browserbase | 20040121 | — | — |
+| Yep | 20040121 | — | — |
+| Bing Web Search API | 20040110 | — | — |
+| PubMed E-utilities | 20040105 | — | — |
+| Agenty | 20040103 | — | — |
+| Google Books API | 20040103 | — | — |
+| Google Programmable Search | 20040103 | — | — |
 | Brave Search API | 20040102 | — | — |
-| Firecrawl self-host (OSS) | — | ★192859 | — |
-| MarkItDown (OSS) | — | ★190961 | — |
-| Crawl4AI (OSS) | — | ★85801 | — |
-| MinerU (OSS) | — | ★82013 | — |
-| Docling (OSS) | — | ★69086 | — |
-| Khoj (OSS) | — | ★37741 | — |
-| Perplexica (OSS) | — | ★37392 | — |
-| STORM (OSS) | — | ★31665 | — |
-| GPT Researcher (OSS) | — | ★30164 | — |
-| Stagehand (OSS) | — | ★25729 | — |
-| Maxun (OSS) | — | ★17901 | — |
-| Katana (OSS) | — | ★17686 | — |
-| Whoogle (OSS) | — | ★11564 | — |
-| Morphic (OSS) | — | ★9176 | — |
-| 4get (OSS) | — | — | — |
-| Agenty | — | — | — |
-| Airtop | — | — | — |
-| Alibaba Qwen (DashScope) | — | — | — |
-| Anchor Browser | — | — | — |
-| Anthropic Web Search | — | — | — |
-| AnyAPI | — | — | — |
-| ApiFlash | — | — | — |
-| Apify | — | — | — |
-| Arquivo.pt | — | — | — |
-| BASE | — | — | — |
-| Bing Web Search API | — | — | — |
-| Bluesky AT Protocol | — | — | — |
-| Bocha AI | — | — | — |
-| Bright Data | — | — | — |
-| Browse AI | — | — | — |
-| Browser Use (OSS) | — | — | — |
-| Browserbase | — | — | — |
-| Browserless | — | — | — |
-| CORE | — | — | — |
-| Cloro | — | — | — |
-| Cloudflare Browser Rendering | — | — | — |
-| Cohere | — | — | — |
-| CoinGecko | — | — | — |
-| Common Crawl | — | — | — |
-| Crawlbase | — | — | — |
-| Crawlee (OSS) | — | — | — |
-| Crossref REST API | — | — | — |
-| Currents API | — | — | — |
-| DBpedia | — | — | — |
-| DOAJ API | — | — | — |
-| DataCite API | — | — | — |
-| DataForSEO | — | — | — |
-| Decodo | — | — | — |
-| DeepSeek | — | — | — |
-| DuckDuckGo Instant Answer | — | — | — |
-| Europe PMC | — | — | — |
-| Event Registry | — | — | — |
-| FRED | — | — | — |
-| Fetchin | — | — | — |
-| Figshare API | — | — | — |
-| FiveFilters Full-Text RSS | — | — | — |
-| GDELT | — | — | — |
-| GNews | — | — | — |
-| GitHub Search API | — | — | — |
-| Google Books API | — | — | — |
-| Google Gemini Grounding | — | — | — |
-| Google Programmable Search | — | — | — |
-| Groq Compound | — | — | — |
-| HAL API | — | — | — |
-| Hacker News (Algolia) | — | — | — |
-| HasData | — | — | — |
-| Hyperbrowser | — | — | — |
-| Internet Archive Scholar | — | — | — |
-| Just One API | — | — | — |
-| Kagi Search API | — | — | — |
-| Kakao/Daum Search API | — | — | — |
-| Kernel | — | — | — |
-| LibreY (OSS) | — | — | — |
-| Lightpanda (OSS) | — | — | — |
-| Litescrape | — | — | — |
-| Marginalia | — | — | — |
-| Mastodon API | — | — | — |
-| Mediastack | — | — | — |
-| Microlink | — | — | — |
-| MiniMax | — | — | — |
-| Mistral | — | — | — |
-| Mojeek Search API | — | — | — |
-| Moonshot Kimi | — | — | — |
-| Mwmbl | — | — | — |
-| Naver Search API | — | — | — |
-| NetNut | — | — | — |
-| New York Times API | — | — | — |
-| NewsAPI | — | — | — |
-| NewsCatcher | — | — | — |
-| NewsData.io | — | — | — |
-| Nodemaven | — | — | — |
-| Nominatim (OSM) | — | — | — |
-| Notte | — | — | — |
-| OSF API | — | — | — |
-| Octoparse | — | — | — |
-| Open Library | — | — | — |
-| Open-Meteo | — | — | — |
-| OpenAI Web Search | — | — | — |
-| OpenAIRE | — | — | — |
-| OpenAlex | — | — | — |
-| OpenRouter | — | — | — |
-| Openverse API | — | — | — |
-| Oxylabs | — | — | — |
-| ParseHub | — | — | — |
-| Playwright (OSS) | — | — | — |
-| Presearch | — | — | — |
-| PubMed E-utilities | — | — | — |
-| RDAP | — | — | — |
-| REST Countries | — | — | — |
-| Rainforest API | — | — | — |
-| RapidAPI | — | — | — |
-| Reddit JSON | — | — | — |
-| Right Dao | — | — | — |
-| SauceNAO | — | — | — |
-| Scite | — | — | — |
-| Scrape.do | — | — | — |
-| ScrapeCreators | — | — | — |
-| ScrapeGraphAI | — | — | — |
-| ScrapeHero Cloud | — | — | — |
-| ScrapeNinja | — | — | — |
-| ScrapeOps | — | — | — |
-| ScrapeOps Proxy | — | — | — |
-| ScraperAPI | — | — | — |
-| ScraperBox | — | — | — |
-| Scrapfly | — | — | — |
-| ScrapingAnt | — | — | — |
-| ScrapingBee | — | — | — |
-| ScrapingDog | — | — | — |
-| Scrapy (OSS) | — | — | — |
-| ScreenshotAPI.net | — | — | — |
-| ScreenshotOne | — | — | — |
-| SearXNG (OSS) | — | — | — |
-| SearchCans | — | — | — |
-| Semantic Scholar | — | — | — |
-| SerpApi | — | — | — |
-| SerpStack | — | — | — |
-| SerpWow | — | — | — |
-| Serpdog | — | — | — |
-| Serper | — | — | — |
-| Serply | — | — | — |
-| Simplescraper | — | — | — |
-| Skyvern | — | — | — |
-| Spider | — | — | — |
-| StackExchange API | — | — | — |
-| Steel.dev | — | — | — |
-| Stract | — | — | — |
-| Teclis | — | — | — |
-| The Guardian Open Platform | — | — | — |
-| TheNewsAPI | — | — | — |
-| TikHub | — | — | — |
-| Trafilatura (OSS) | — | — | — |
-| URLtoMarkdown | — | — | — |
-| USPTO | — | — | — |
-| Unpaywall | — | — | — |
-| Urlbox | — | — | — |
-| ValueSERP | — | — | — |
-| Wayback Machine CDX | — | — | — |
-| Web Scraper | — | — | — |
-| Webz.io | — | — | — |
-| Wiby | — | — | — |
-| Wikidata SPARQL | — | — | — |
-| Wikimedia REST | — | — | — |
-| World Bank | — | — | — |
-| Yep | — | — | — |
-| Z.ai / Zhipu | — | — | — |
-| ZenRows | — | — | — |
-| Zenodo API | — | — | — |
-| Zenserp | — | — | — |
-| Zyte | — | — | — |
-| arXiv API | — | — | — |
-| bioRxiv API | — | — | — |
-| crt.sh | — | — | — |
-| iTunes Search API | — | — | — |
-| ip-api | — | — | — |
-| ipapi.co | — | — | — |
-| treg | — | — | — |
-| urlscan.io | — | — | — |
-| xAI Live Search | — | — | — |
+| Kakao/Daum Search API | 20040102 | — | — |
+| Firecrawl self-host (OSS) | no capture | ★192859 | — |
+| MarkItDown (OSS) | no capture | ★190961 | — |
+| Crawl4AI (OSS) | no capture | ★85801 | — |
+| MinerU (OSS) | no capture | ★82013 | — |
+| Docling (OSS) | no capture | ★69086 | — |
+| Khoj (OSS) | no capture | ★37741 | — |
+| Perplexica (OSS) | no capture | ★37392 | — |
+| STORM (OSS) | no capture | ★31665 | — |
+| GPT Researcher (OSS) | no capture | ★30164 | — |
+| Stagehand (OSS) | no capture | ★25729 | — |
+| Maxun (OSS) | no capture | ★17901 | — |
+| Katana (OSS) | no capture | ★17686 | — |
+| Whoogle (OSS) | no capture | ★11564 | — |
+| Morphic (OSS) | no capture | ★9176 | — |
 
-Caveats: a Wayback capture only proves a domain existed, not that the company was operating the same product; stars measure attention, not reliability. Providers launched 2024-2026 (Firecrawl, TinyFish, Keenable, Octen, Linkup) are the youngest.
+180 of 198 providers have a dated first capture. Oldest domains: Brave Search API 2004, Kakao/Daum Search API 2004, Agenty 2004, Google Programmable Search 2004, Google Books API 2004, PubMed E-utilities 2004. Youngest: Cloro 2025, Keenable 2025, SearchCans 2026, Octen 2026, treg 2026, Litescrape 2026.
+
+Caveats: a first capture only proves a domain existed at that date, not that the same company or product was operating it — several of these domains changed hands. A domain registered recently says nothing about the API's reliability, and stars measure attention, not uptime. Neither signal is evidence about free-tier terms.
 
 ## 5. Post-signup bonuses
 

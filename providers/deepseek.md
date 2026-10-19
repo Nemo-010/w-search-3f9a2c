@@ -5,6 +5,7 @@
 - Pricing: https://api-docs.deepseek.com/quick_start/pricing
 - Docs: https://api-docs.deepseek.com/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/deepseek/llms.txt`
+- First Wayback capture of domain: 20040827 (deepseek.com)
 
 ## Free tier
 

@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://developers.google.com/books
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20040103 (google.com)
 
 ## Free tier
 

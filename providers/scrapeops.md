@@ -5,6 +5,7 @@
 - Pricing: https://scrapeops.io/pricing/
 - Docs: https://scrapeops.io/docs/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scrapeops/llms.txt`
+- First Wayback capture of domain: 20211207 (scrapeops.io)
 
 ## Free tier
 

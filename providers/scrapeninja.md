@@ -5,6 +5,7 @@
 - Pricing: https://scrapeninja.net/pricing
 - Docs: —
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scrapeninja/llms.txt`
+- First Wayback capture of domain: 20220126 (scrapeninja.net)
 
 ## Free tier
 

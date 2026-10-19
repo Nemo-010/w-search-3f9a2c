@@ -5,6 +5,7 @@
 - Pricing: https://z.ai/subscribe
 - Docs: https://docs.z.ai/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/zhipu/llms.txt`
+- First Wayback capture of domain: 20100712 (z.ai)
 
 ## Free tier
 

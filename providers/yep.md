@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: —
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/yep/llms.txt`
+- First Wayback capture of domain: 20040121 (yep.com)
 
 ## Free tier
 

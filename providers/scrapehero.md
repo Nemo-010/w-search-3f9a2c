@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: —
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scrapehero/llms.txt`
+- First Wayback capture of domain: 20140804 (scrapehero.com)
 
 ## Free tier
 

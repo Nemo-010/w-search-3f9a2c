@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://graph.openaire.eu/docs/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20100116 (openaire.eu)
 
 ## Free tier
 

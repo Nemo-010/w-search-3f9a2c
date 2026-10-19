@@ -5,6 +5,7 @@
 - Pricing: https://decodo.com/pricing
 - Docs: https://help.decodo.com/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/decodo/llms.txt`
+- First Wayback capture of domain: 20040317 (decodo.com)
 
 ## Free tier
 

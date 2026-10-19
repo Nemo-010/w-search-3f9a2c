@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://docs.joinmastodon.org/api/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20170603 (joinmastodon.org)
 
 ## Free tier
 

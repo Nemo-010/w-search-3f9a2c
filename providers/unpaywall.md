@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://unpaywall.org/products/api
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/unpaywall/llms.txt`
+- First Wayback capture of domain: 20170314 (unpaywall.org)
 
 ## Free tier
 

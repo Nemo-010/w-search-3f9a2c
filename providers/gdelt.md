@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20140131 (gdeltproject.org)
 
 ## Free tier
 

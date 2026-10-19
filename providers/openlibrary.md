@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://openlibrary.org/developers/api
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/openlibrary/llms.txt`
+- First Wayback capture of domain: 20051028 (openlibrary.org)
 
 ## Free tier
 

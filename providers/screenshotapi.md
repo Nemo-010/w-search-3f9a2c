@@ -5,6 +5,7 @@
 - Pricing: https://screenshotapi.net/pricing
 - Docs: —
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/screenshotapi/llms.txt`
+- First Wayback capture of domain: 20191014 (screenshotapi.net)
 
 ## Free tier
 

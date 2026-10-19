@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://info.arxiv.org/help/api/index.html
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20221207 (info.arxiv.org)
 
 ## Free tier
 

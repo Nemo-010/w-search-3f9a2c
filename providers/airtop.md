@@ -5,6 +5,7 @@
 - Pricing: https://www.airtop.ai/pricing
 - Docs: https://docs.airtop.ai/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/airtop/llms.txt`
+- First Wayback capture of domain: 20240811 (airtop.ai)
 
 ## Free tier
 

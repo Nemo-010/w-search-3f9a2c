@@ -5,6 +5,7 @@
 - Pricing: https://webz.io/pricing
 - Docs: https://docs.webz.io/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/webz/llms.txt`
+- First Wayback capture of domain: 20171101 (webz.io)
 
 ## Free tier
 

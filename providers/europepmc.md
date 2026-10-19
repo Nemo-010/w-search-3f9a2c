@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://europepmc.org/RestfulWebService
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/europepmc/llms.txt`
+- First Wayback capture of domain: 20110704 (europepmc.org)
 
 ## Free tier
 

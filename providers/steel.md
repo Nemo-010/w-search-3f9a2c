@@ -5,6 +5,7 @@
 - Pricing: https://steel.dev/pricing
 - Docs: https://docs.steel.dev/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/steel/llms.txt`
+- First Wayback capture of domain: 20240724 (steel.dev)
 
 ## Free tier
 

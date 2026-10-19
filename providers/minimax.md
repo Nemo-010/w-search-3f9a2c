@@ -5,6 +5,7 @@
 - Pricing: https://www.minimax.io/platform/document
 - Docs: https://www.minimax.io/platform/document
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/minimax/llms.txt`
+- First Wayback capture of domain: 20211217 (minimax.io)
 
 ## Free tier
 

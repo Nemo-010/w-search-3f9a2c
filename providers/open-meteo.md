@@ -5,6 +5,7 @@
 - Pricing: https://open-meteo.com/en/pricing
 - Docs: https://open-meteo.com/en/docs
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20110202 (open-meteo.com)
 
 ## Free tier
 

@@ -5,6 +5,7 @@
 - Pricing: https://www.scraperapi.com/pricing/
 - Docs: https://docs.scraperapi.com/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/scraperapi/llms.txt`
+- First Wayback capture of domain: 20180612 (scraperapi.com)
 
 ## Free tier
 

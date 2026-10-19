@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://about.rdap.org/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20111118 (rdap.org)
 
 ## Free tier
 

@@ -16,21 +16,36 @@ DATA = os.path.join(ROOT, "data")
 UA = "w-search-research/0.1 (+https://github.com/Nemo-010/w-search-3f9a2c)"
 
 
+RETRIES = 3
+
+
 def first_seen(domain):
+    """First CDX capture for a domain.
+
+    Distinguishes three outcomes, because they are not the same claim:
+      first_seen set  -> the archive has a capture, with its timestamp
+      first_seen None -> the archive answered and has no capture
+      error set       -> the lookup failed; nothing can be said about the domain
+    A failed lookup must never be recorded as "no capture".
+    """
     q = urllib.parse.urlencode({
         "url": domain, "output": "json", "limit": "1", "fl": "timestamp,statuscode",
         "from": "2004", "collapse": "digest",
     })
     url = f"https://web.archive.org/cdx/search/cdx?{q}"
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            d = json.load(r)
-        if len(d) > 1:
-            return {"domain": domain, "first_seen": d[1][0][:8], "http_status": d[1][1]}
-    except Exception as e:  # noqa: BLE001
-        return {"domain": domain, "error": str(e)[:80]}
-    return {"domain": domain, "first_seen": None}
+    last = None
+    for attempt in range(RETRIES):
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                d = json.load(r)
+            if len(d) > 1:
+                return {"domain": domain, "first_seen": d[1][0][:8], "http_status": d[1][1]}
+            return {"domain": domain, "first_seen": None, "captured": False}
+        except Exception as e:  # noqa: BLE001
+            last = e
+            time.sleep(1.5 * (attempt + 1))
+    return {"domain": domain, "error": str(last)[:120]}
 
 
 def domain_of(url):
@@ -46,25 +61,37 @@ def domain_of(url):
     return d
 
 
+PATH_OUT = os.path.join(DATA, "maturity.json")
+
+
 def main():
+    """Resumable: keeps successful lookups, retries the ones that errored.
+
+    The CDX endpoint refuses connections under sustained load, so this runs with
+    low concurrency and a delay, and re-running it only re-attempts failures.
+    """
     cands = json.load(open(os.path.join(DATA, "candidates.json")))["providers"]
-    out = {}
-    tasks = {}
-    with cf.ThreadPoolExecutor(8) as ex:
-        for p in cands:
-            d = domain_of(p.get("home"))
-            if not d or d in ("github.com",):
-                continue
-            tasks[ex.submit(first_seen, d)] = (p["slug"], d)
-        for f in cf.as_completed(tasks):
-            slug, d = tasks[f]
-            try:
-                out[slug] = f.result()
-            except Exception as e:  # noqa: BLE001
-                out[slug] = {"domain": d, "error": str(e)[:80]}
-            time.sleep(0.02)
-    json.dump(out, open(os.path.join(DATA, "maturity.json"), "w"), indent=1)
-    print("maturity records:", len(out))
+    out = json.load(open(PATH_OUT)) if os.path.exists(PATH_OUT) else {}
+    todo = []
+    for p in cands:
+        d = domain_of(p.get("home"))
+        if not d or d == "github.com":
+            continue
+        prev = out.get(p["slug"]) or {}
+        if prev.get("first_seen") or (prev.get("first_seen") is None and "error" not in prev):
+            continue
+        todo.append((p["slug"], d))
+    print("records kept:", len(out) - len(todo), "to retry:", len(todo), flush=True)
+    for slug, d in todo:
+        out[slug] = first_seen(d)
+        status = out[slug].get("first_seen") or ("no capture" if "error" not in out[slug] else "ERROR")
+        print(f"  {slug:22s} {d:32s} {status}", flush=True)
+        json.dump(out, open(PATH_OUT, "w"), indent=1)
+        time.sleep(4.0)
+    json.dump(out, open(PATH_OUT, "w"), indent=1)
+    got = sum(1 for v in out.values() if v.get("first_seen"))
+    err = sum(1 for v in out.values() if v.get("error"))
+    print(f"maturity records: {len(out)} with capture: {got} unresolved: {err}")
 
 
 if __name__ == "__main__":

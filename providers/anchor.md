@@ -5,6 +5,7 @@
 - Pricing: https://anchorbrowser.io/pricing
 - Docs: https://docs.anchorbrowser.io/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/anchor/llms.txt`
+- First Wayback capture of domain: 20241128 (anchorbrowser.io)
 
 ## Free tier
 

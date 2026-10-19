@@ -5,6 +5,7 @@
 - Pricing: https://www.mojeek.com/services/search/web-search-api/
 - Docs: https://www.mojeek.com/support/api/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20041127 (mojeek.com)
 
 ## Free tier
 

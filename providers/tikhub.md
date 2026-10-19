@@ -5,6 +5,7 @@
 - Pricing: https://tikhub.io/pricing
 - Docs: https://docs.tikhub.io/
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/tikhub/llms.txt`
+- First Wayback capture of domain: 20230316 (tikhub.io)
 
 ## Free tier
 

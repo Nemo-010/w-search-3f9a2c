@@ -5,6 +5,7 @@
 - Pricing: https://apify.com/pricing
 - Docs: https://docs.apify.com/
 - llms.txt: https://docs.apify.com/llms.txt
+- First Wayback capture of domain: 20070531 (apify.com)
 
 ## Free tier
 

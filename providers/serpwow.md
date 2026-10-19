@@ -5,6 +5,7 @@
 - Pricing: https://www.serpwow.com/pricing
 - Docs: https://www.serpwow.com/docs
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/serpwow/llms.txt`
+- First Wayback capture of domain: 20190719 (serpwow.com)
 
 ## Free tier
 

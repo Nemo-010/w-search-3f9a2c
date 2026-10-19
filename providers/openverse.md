@@ -5,6 +5,7 @@
 - Pricing: https://api.openverse.org/
 - Docs: https://api.openverse.org/v1/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20040123 (openverse.org)
 
 ## Free tier
 

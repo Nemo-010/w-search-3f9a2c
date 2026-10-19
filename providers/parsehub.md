@@ -5,6 +5,7 @@
 - Pricing: https://www.parsehub.com/pricing
 - Docs: —
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20131028 (parsehub.com)
 
 ## Free tier
 

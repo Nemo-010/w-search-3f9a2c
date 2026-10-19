@@ -5,6 +5,7 @@
 - Pricing: https://urlbox.com/pricing
 - Docs: https://urlbox.com/docs
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/urlbox/llms.txt`
+- First Wayback capture of domain: 20040401 (urlbox.com)
 
 ## Free tier
 

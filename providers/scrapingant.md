@@ -5,6 +5,7 @@
 - Pricing: https://scrapingant.com/pricing
 - Docs: https://docs.scrapingant.com/
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20200411 (scrapingant.com)
 
 ## Free tier
 

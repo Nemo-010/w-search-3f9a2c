@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: https://commoncrawl.org/cc-index
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20080328 (commoncrawl.org)
 
 ## Free tier
 

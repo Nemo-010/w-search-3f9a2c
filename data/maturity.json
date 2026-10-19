@@ -1,22 +1,12 @@
 {
- "tavily": {
-  "domain": "tavily.com",
-  "first_seen": "20180807",
-  "http_status": "200"
- },
  "jina": {
   "domain": "jina.ai",
   "first_seen": "20200505",
   "http_status": "200"
  },
- "brave": {
-  "domain": "brave.com",
-  "first_seen": "20040102",
-  "http_status": "200"
- },
- "firecrawl": {
-  "domain": "firecrawl.dev",
-  "first_seen": "20240413",
+ "tavily": {
+  "domain": "tavily.com",
+  "first_seen": "20180807",
   "http_status": "200"
  },
  "perplexity": {
@@ -24,9 +14,29 @@
   "first_seen": "20211218",
   "http_status": "200"
  },
+ "exa": {
+  "domain": "exa.ai",
+  "first_seen": "20160204",
+  "http_status": "200"
+ },
  "you": {
   "domain": "you.com",
   "first_seen": "20040626",
+  "http_status": "200"
+ },
+ "firecrawl": {
+  "domain": "firecrawl.dev",
+  "first_seen": "20240413",
+  "http_status": "200"
+ },
+ "brave": {
+  "domain": "brave.com",
+  "first_seen": "20040102",
+  "http_status": "200"
+ },
+ "parallel": {
+  "domain": "parallel.ai",
+  "first_seen": "20170521",
   "http_status": "200"
  },
  "fiber": {
@@ -39,14 +49,9 @@
   "first_seen": "20200626",
   "http_status": "200"
  },
- "linkup": {
-  "domain": "linkup.so",
-  "first_seen": "20240501",
-  "http_status": "200"
- },
- "parallel": {
-  "domain": "parallel.ai",
-  "first_seen": "20170521",
+ "contextdev": {
+  "domain": "context.dev",
+  "first_seen": "20211129",
   "http_status": "200"
  },
  "nimble": {
@@ -54,9 +59,24 @@
   "first_seen": "20130717",
   "http_status": "200"
  },
+ "olostep": {
+  "domain": "olostep.com",
+  "first_seen": "20230724",
+  "http_status": "301"
+ },
  "keenable": {
   "domain": "keenable.ai",
   "first_seen": "20251231",
+  "http_status": "200"
+ },
+ "branddev": {
+  "domain": "brand.dev",
+  "first_seen": "20230724",
+  "http_status": "301"
+ },
+ "linkup": {
+  "domain": "linkup.so",
+  "first_seen": "20240501",
   "http_status": "200"
  },
  "diffbot": {
@@ -69,686 +89,827 @@
   "first_seen": "20260214",
   "http_status": "200"
  },
- "spider": {
-  "domain": "spider.cloud",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
  "tinyfish": {
   "domain": "tinyfish.ai",
   "first_seen": "20240821",
   "http_status": "200"
- },
- "scrapegraphai": {
-  "domain": "scrapegraphai.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "anyapi": {
-  "domain": "anyapi.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "litescrape": {
-  "domain": "litescrape.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "cloro": {
-  "domain": "cloro.dev",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "fetchin": {
-  "domain": "fetchin.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "scrapecreators": {
-  "domain": "scrapecreators.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
  },
  "search1api": {
   "domain": "search1api.com",
   "first_seen": "20240402",
   "http_status": "200"
  },
+ "spider": {
+  "domain": "spider.cloud",
+  "first_seen": "20240422",
+  "http_status": "308"
+ },
+ "scrapegraphai": {
+  "domain": "scrapegraphai.com",
+  "first_seen": "20240509",
+  "http_status": "301"
+ },
+ "anyapi": {
+  "domain": "anyapi.io",
+  "first_seen": "20211229",
+  "http_status": "301"
+ },
+ "litescrape": {
+  "domain": "litescrape.com",
+  "first_seen": "20261009",
+  "http_status": "200"
+ },
+ "cloro": {
+  "domain": "cloro.dev",
+  "first_seen": "20251105",
+  "http_status": "200"
+ },
+ "fetchin": {
+  "domain": "fetchin.io",
+  "first_seen": null,
+  "captured": false
+ },
  "justoneapi": {
   "domain": "justoneapi.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20250712",
+  "http_status": "-"
  },
  "tikhub": {
   "domain": "tikhub.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20230316",
+  "http_status": "-"
  },
- "treg": {
-  "domain": "treg.to",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "scrapecreators": {
+  "domain": "scrapecreators.com",
+  "first_seen": "20240517",
+  "http_status": "200"
  },
  "dataforseo": {
   "domain": "dataforseo.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "serpapi": {
-  "domain": "serpapi.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20170307",
+  "http_status": "200"
  },
  "serper": {
   "domain": "serper.dev",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20221006",
+  "http_status": "301"
+ },
+ "treg": {
+  "domain": "treg.to",
+  "first_seen": "20260825",
+  "http_status": "200"
  },
  "scrapingdog": {
   "domain": "scrapingdog.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20200430",
+  "http_status": "301"
  },
- "scrape.do": {
-  "domain": "scrape.do",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "serpapi": {
+  "domain": "serpapi.com",
+  "first_seen": "20130413",
+  "http_status": "200"
  },
  "scrapingbee": {
   "domain": "scrapingbee.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20191006",
+  "http_status": "200"
  },
  "scraperapi": {
   "domain": "scraperapi.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20180612",
+  "http_status": "301"
+ },
+ "scrape.do": {
+  "domain": "scrape.do",
+  "first_seen": "20201031",
+  "http_status": "200"
  },
  "scrapfly": {
   "domain": "scrapfly.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "zenrows": {
-  "domain": "zenrows.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "brightdata": {
-  "domain": "brightdata.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "oxylabs": {
-  "domain": "oxylabs.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20201104",
+  "http_status": "301"
  },
  "decodo": {
   "domain": "decodo.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040317",
+  "http_status": "200"
  },
- "branddev": {
-  "domain": "brand.dev",
-  "first_seen": "20230724",
+ "oxylabs": {
+  "domain": "oxylabs.io",
+  "first_seen": "20160227",
+  "http_status": "200"
+ },
+ "brightdata": {
+  "domain": "brightdata.com",
+  "first_seen": "20040210",
+  "http_status": "200"
+ },
+ "zenrows": {
+  "domain": "zenrows.com",
+  "first_seen": "20210208",
   "http_status": "301"
- },
- "netnut": {
-  "domain": "netnut.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "crawlbase": {
-  "domain": "crawlbase.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
  },
  "zyte": {
   "domain": "zyte.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040208",
+  "http_status": "403"
+ },
+ "crawlbase": {
+  "domain": "crawlbase.com",
+  "first_seen": "20131122",
+  "http_status": "200"
+ },
+ "netnut": {
+  "domain": "netnut.io",
+  "first_seen": "20170114",
+  "http_status": "200"
  },
  "apify": {
   "domain": "apify.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20070531",
+  "http_status": "200"
  },
  "scraperbox": {
   "domain": "scraperbox.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "scrapehero": {
-  "domain": "scrapehero.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "scrapeops": {
-  "domain": "scrapeops.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20130806",
+  "http_status": "200"
  },
  "scrapingant": {
   "domain": "scrapingant.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20200411",
+  "http_status": "301"
  },
- "zenserp": {
-  "domain": "zenserp.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "scrapehero": {
+  "domain": "scrapehero.com",
+  "first_seen": "20140804",
+  "http_status": "200"
+ },
+ "scrapeops": {
+  "domain": "scrapeops.io",
+  "first_seen": "20211207",
+  "http_status": "200"
  },
  "valueserp": {
   "domain": "valueserp.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20210220",
+  "http_status": "200"
+ },
+ "zenserp": {
+  "domain": "zenserp.com",
+  "first_seen": "20190314",
+  "http_status": "200"
  },
  "searchcans": {
   "domain": "searchcans.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "serply": {
-  "domain": "serply.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "serpdog": {
-  "domain": "serpdog.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20260121",
+  "http_status": "200"
  },
  "hasdata": {
   "domain": "hasdata.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20110207",
+  "http_status": "301"
+ },
+ "serpdog": {
+  "domain": "serpdog.io",
+  "first_seen": "20220711",
+  "http_status": "200"
+ },
+ "serply": {
+  "domain": "serply.io",
+  "first_seen": "20211221",
+  "http_status": "302"
  },
  "nodemaven": {
   "domain": "nodemaven.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20180805",
+  "http_status": "200"
  },
  "serpwow": {
   "domain": "serpwow.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20190719",
+  "http_status": "200"
  },
  "serpstack": {
   "domain": "serpstack.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "rainforest": {
-  "domain": "rainforestapi.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20180805",
+  "http_status": "200"
  },
  "scrapeninja": {
   "domain": "scrapeninja.net",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20220126",
+  "http_status": "200"
+ },
+ "rainforest": {
+  "domain": "rainforestapi.com",
+  "first_seen": "20200610",
+  "http_status": "301"
  },
  "agenty": {
   "domain": "agenty.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "browse-ai": {
-  "domain": "browse.ai",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040103",
+  "http_status": "200"
  },
  "simplescraper": {
   "domain": "simplescraper.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20191024",
+  "http_status": "200"
  },
  "webscraperio": {
   "domain": "webscraper.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20140917",
+  "http_status": "200"
+ },
+ "browse-ai": {
+  "domain": "browse.ai",
+  "first_seen": "20180724",
+  "http_status": "200"
  },
  "parsehub": {
   "domain": "parsehub.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20131028",
+  "http_status": "200"
  },
  "octoparse": {
   "domain": "octoparse.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "browserless": {
-  "domain": "browserless.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20160324",
+  "http_status": "200"
  },
  "browserbase": {
   "domain": "browserbase.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040121",
+  "http_status": "200"
+ },
+ "browserless": {
+  "domain": "browserless.io",
+  "first_seen": "20170911",
+  "http_status": "200"
  },
  "steel": {
   "domain": "steel.dev",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "hyperbrowser": {
-  "domain": "hyperbrowser.ai",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "kernel": {
-  "domain": "onkernel.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20240724",
+  "http_status": "406"
  },
  "anchor": {
   "domain": "anchorbrowser.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "airtop": {
-  "domain": "airtop.ai",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "notte": {
-  "domain": "notte.cc",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20241128",
+  "http_status": "200"
  },
  "skyvern": {
   "domain": "skyvern.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20130424",
+  "http_status": "200"
  },
- "cloudflare-browser": {
-  "domain": "cloudflare.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "kernel": {
+  "domain": "onkernel.com",
+  "first_seen": "20170616",
+  "http_status": "200"
  },
- "google-cse": {
-  "domain": "google.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "hyperbrowser": {
+  "domain": "hyperbrowser.ai",
+  "first_seen": "20241121",
+  "http_status": "200"
  },
- "bing-api": {
-  "domain": "microsoft.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "kagi": {
-  "domain": "kagi.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "airtop": {
+  "domain": "airtop.ai",
+  "first_seen": "20240811",
+  "http_status": "308"
  },
  "mojeek": {
   "domain": "mojeek.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20041127",
+  "http_status": "200"
+ },
+ "notte": {
+  "domain": "notte.cc",
+  "first_seen": "20240925",
+  "http_status": "200"
+ },
+ "cloudflare-browser": {
+  "domain": "cloudflare.com",
+  "first_seen": "20090901",
+  "http_status": "200"
+ },
+ "google-cse": {
+  "domain": "google.com",
+  "first_seen": "20040103",
+  "http_status": "302"
+ },
+ "bing-api": {
+  "domain": "microsoft.com",
+  "first_seen": "20040110",
+  "http_status": "200"
+ },
+ "kagi": {
+  "domain": "kagi.com",
+  "first_seen": "20040304",
+  "http_status": "302"
  },
  "marginalia": {
   "domain": "marginalia-search.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20241206",
+  "http_status": "301"
  },
  "stract": {
   "domain": "stract.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040228",
+  "http_status": "200"
  },
  "presearch": {
   "domain": "presearch.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040324",
+  "http_status": "302"
  },
  "yep": {
   "domain": "yep.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "wiby": {
-  "domain": "wiby.me",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "rightdao": {
-  "domain": "rightdao.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "teclis": {
-  "domain": "teclis.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "mwmbl": {
-  "domain": "mwmbl.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040121",
+  "http_status": "302"
  },
  "naver": {
   "domain": "naver.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040130",
+  "http_status": "200"
  },
  "kakao": {
   "domain": "kakao.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040102",
+  "http_status": "200"
  },
  "bocha": {
   "domain": "open.bochaai.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "duckduckgo-ia": {
-  "domain": "duckduckgo.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "4get": {
-  "domain": "4get.ca",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20241011",
+  "http_status": "200"
  },
  "searxng": {
   "domain": "searxng.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20220103",
+  "http_status": "200"
+ },
+ "4get": {
+  "domain": "4get.ca",
+  "first_seen": "20150801",
+  "http_status": "302"
+ },
+ "wiby": {
+  "domain": "wiby.me",
+  "first_seen": "20170816",
+  "http_status": "301"
+ },
+ "rightdao": {
+  "domain": "rightdao.com",
+  "first_seen": "20201202",
+  "http_status": "200"
  },
  "librey": {
   "domain": "librey.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20230831",
+  "http_status": "200"
  },
- "microlink": {
-  "domain": "microlink.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "teclis": {
+  "domain": "teclis.com",
+  "first_seen": "20040128",
+  "http_status": "200"
  },
  "opensaucenao": {
   "domain": "saucenao.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20081101",
+  "http_status": "200"
+ },
+ "microlink": {
+  "domain": "microlink.io",
+  "first_seen": "20171120",
+  "http_status": "200"
+ },
+ "mwmbl": {
+  "domain": "mwmbl.org",
+  "first_seen": "20211226",
+  "http_status": "200"
  },
  "apiflash": {
   "domain": "apiflash.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "screenshotone": {
-  "domain": "screenshotone.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "urlbox": {
-  "domain": "urlbox.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "screenshotapi": {
-  "domain": "screenshotapi.net",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "urltomarkdown": {
-  "domain": "urltomarkdown.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "trafilatura": {
-  "domain": "trafilatura.readthedocs.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "fivefilters-ftr": {
-  "domain": "fivefilters.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20180726",
+  "http_status": "200"
  },
  "wayback": {
   "domain": "web.archive.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040401",
+  "http_status": "302"
  },
  "commoncrawl": {
   "domain": "commoncrawl.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20080328",
+  "http_status": "200"
+ },
+ "screenshotapi": {
+  "domain": "screenshotapi.net",
+  "first_seen": "20191014",
+  "http_status": "200"
+ },
+ "duckduckgo-ia": {
+  "domain": "duckduckgo.com",
+  "first_seen": "20080820",
+  "http_status": "200"
+ },
+ "screenshotone": {
+  "domain": "screenshotone.com",
+  "first_seen": "20220210",
+  "http_status": "301"
+ },
+ "urlbox": {
+  "domain": "urlbox.com",
+  "first_seen": "20040401",
+  "http_status": "200"
+ },
+ "urltomarkdown": {
+  "domain": "urltomarkdown.com",
+  "first_seen": "20220505",
+  "http_status": "200"
+ },
+ "fivefilters-ftr": {
+  "domain": "fivefilters.org",
+  "first_seen": "20091111",
+  "http_status": "200"
+ },
+ "trafilatura": {
+  "domain": "trafilatura.readthedocs.io",
+  "first_seen": "20210510",
+  "http_status": "302"
  },
  "arquivo": {
   "domain": "arquivo.pt",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20090211",
+  "http_status": "200"
  },
  "urlscan": {
   "domain": "urlscan.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20170314",
+  "http_status": "301"
  },
  "openverse": {
   "domain": "openverse.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040123",
+  "http_status": "200"
  },
  "internetarchive-scholar": {
   "domain": "scholar.archive.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "gnews": {
-  "domain": "gnews.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20201004",
+  "http_status": "301"
  },
  "newsapi": {
   "domain": "newsapi.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20121230",
+  "http_status": "200"
+ },
+ "gnews": {
+  "domain": "gnews.io",
+  "first_seen": "20150130",
+  "http_status": "200"
  },
  "newsdata": {
   "domain": "newsdata.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20210417",
+  "http_status": "301"
  },
  "thenewsapi": {
   "domain": "thenewsapi.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20210228",
+  "http_status": "200"
  },
  "mediastack": {
   "domain": "mediastack.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "eventregistry": {
-  "domain": "eventregistry.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040124",
+  "http_status": "200"
  },
  "currents": {
   "domain": "currentsapi.services",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20200104",
+  "http_status": "302"
  },
- "webz": {
-  "domain": "webz.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "eventregistry": {
+  "domain": "eventregistry.org",
+  "first_seen": "20121223",
+  "http_status": "302"
  },
  "newscatcher": {
   "domain": "newscatcherapi.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20200512",
+  "http_status": "200"
+ },
+ "webz": {
+  "domain": "webz.io",
+  "first_seen": "20171101",
+  "http_status": "200"
  },
  "gdelt": {
   "domain": "gdeltproject.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20140131",
+  "http_status": "200"
  },
  "guardian": {
   "domain": "open-platform.theguardian.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "error": "HTTP Error 403: FORBIDDEN"
  },
  "nyt": {
   "domain": "developer.nytimes.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20080912",
+  "http_status": "401"
  },
  "semanticscholar": {
   "domain": "semanticscholar.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20151103",
+  "http_status": "301"
  },
  "openalex": {
   "domain": "openalex.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20130711",
+  "http_status": "200"
  },
  "core": {
   "domain": "core.ac.uk",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040206",
+  "http_status": "200"
  },
  "arxiv": {
   "domain": "info.arxiv.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20221207",
+  "http_status": "200"
  },
  "pubmed": {
   "domain": "ncbi.nlm.nih.gov",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040105",
+  "http_status": "200"
  },
  "crossref": {
   "domain": "crossref.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040325",
+  "http_status": "200"
  },
  "unpaywall": {
   "domain": "unpaywall.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20170314",
+  "http_status": "200"
  },
  "doaj": {
   "domain": "doaj.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040129",
+  "http_status": "200"
  },
  "europepmc": {
   "domain": "europepmc.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20110704",
+  "http_status": "302"
  },
  "scite": {
   "domain": "scite.ai",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "openalex-base": {
-  "domain": "base-search.net",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "openaire": {
-  "domain": "openaire.eu",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "zenodo": {
-  "domain": "zenodo.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "figshare": {
-  "domain": "figshare.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "osf": {
-  "domain": "developer.osf.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "biorxiv": {
-  "domain": "biorxiv.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "datacite": {
-  "domain": "support.datacite.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20180527",
+  "http_status": "200"
  },
  "hal": {
   "domain": "archives-ouvertes.fr",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "exa": {
-  "domain": "exa.ai",
-  "first_seen": "20160204",
+  "first_seen": "20070110",
   "http_status": "200"
+ },
+ "datacite": {
+  "domain": "support.datacite.org",
+  "first_seen": "20170708",
+  "http_status": "301"
  },
  "openlibrary": {
   "domain": "openlibrary.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20051028",
+  "http_status": "200"
  },
- "googlebooks": {
-  "domain": "google.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "openalex-base": {
+  "domain": "base-search.net",
+  "first_seen": "20070427",
+  "http_status": "200"
  },
- "hn-algolia": {
-  "domain": "hn.algolia.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "openaire": {
+  "domain": "openaire.eu",
+  "first_seen": "20100116",
+  "http_status": "200"
  },
- "stackexchange": {
-  "domain": "stackexchange.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "zenodo": {
+  "domain": "zenodo.org",
+  "first_seen": "20130531",
+  "http_status": "200"
  },
- "reddit-json": {
-  "domain": "reddit.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "osf": {
+  "domain": "developer.osf.io",
+  "first_seen": "20170606",
+  "http_status": "200"
  },
- "wikidata": {
-  "domain": "query.wikidata.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "figshare": {
+  "domain": "figshare.com",
+  "first_seen": "20110113",
+  "http_status": "200"
+ },
+ "biorxiv": {
+  "domain": "biorxiv.org",
+  "first_seen": "20130715",
+  "http_status": "200"
  },
  "wikipedia": {
   "domain": "wikimedia.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040413",
+  "http_status": "200"
+ },
+ "wikidata": {
+  "domain": "query.wikidata.org",
+  "first_seen": "20150919",
+  "http_status": "200"
+ },
+ "googlebooks": {
+  "domain": "google.com",
+  "first_seen": "20040103",
+  "http_status": "302"
+ },
+ "hn-algolia": {
+  "domain": "hn.algolia.com",
+  "first_seen": "20140127",
+  "http_status": "200"
+ },
+ "stackexchange": {
+  "domain": "stackexchange.com",
+  "first_seen": "20040324",
+  "http_status": "200"
+ },
+ "reddit-json": {
+  "domain": "reddit.com",
+  "first_seen": "20050725",
+  "http_status": "200"
  },
  "dbpedia": {
   "domain": "dbpedia.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "itunes": {
-  "domain": "performance-partners.apple.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "nominatim": {
-  "domain": "nominatim.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "open-meteo": {
-  "domain": "open-meteo.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "ipapi-co": {
-  "domain": "ipapi.co",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "ip-api": {
-  "domain": "ip-api.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20070207",
+  "http_status": "302"
  },
  "coingecko": {
   "domain": "coingecko.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "worldbank": {
-  "domain": "datahelpdesk.worldbank.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "fred": {
-  "domain": "fred.stlouisfed.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20140410",
+  "http_status": "200"
  },
  "uspto": {
   "domain": "developer.uspto.gov",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20160322",
+  "http_status": "301"
+ },
+ "itunes": {
+  "domain": "performance-partners.apple.com",
+  "first_seen": "20220513",
+  "http_status": "200"
+ },
+ "fred": {
+  "domain": "fred.stlouisfed.org",
+  "first_seen": "20160617",
+  "http_status": "200"
+ },
+ "worldbank": {
+  "domain": "datahelpdesk.worldbank.org",
+  "first_seen": "20130401",
+  "http_status": "301"
+ },
+ "nominatim": {
+  "domain": "nominatim.org",
+  "first_seen": "20110514",
+  "http_status": "200"
+ },
+ "open-meteo": {
+  "domain": "open-meteo.com",
+  "first_seen": "20110202",
+  "http_status": "302"
  },
  "crtsh": {
   "domain": "crt.sh",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "rdap": {
-  "domain": "rdap.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20151224",
+  "http_status": "200"
  },
  "restcountries": {
   "domain": "restcountries.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20210228",
+  "http_status": "200"
  },
- "bluesky": {
-  "domain": "bsky.app",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "ipapi-co": {
+  "domain": "ipapi.co",
+  "error": "HTTP Error 403: FORBIDDEN"
  },
- "mastodon": {
-  "domain": "joinmastodon.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "openai-websearch": {
-  "domain": "openai.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "anthropic-websearch": {
-  "domain": "anthropic.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "gemini-grounding": {
-  "domain": "ai.google.dev",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "xai-live-search": {
-  "domain": "x.ai",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "ip-api": {
+  "domain": "ip-api.com",
+  "first_seen": "20120801",
+  "http_status": "200"
  },
  "mistral": {
   "domain": "mistral.ai",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20211218",
+  "http_status": "301"
+ },
+ "rdap": {
+  "domain": "rdap.org",
+  "first_seen": "20111118",
+  "http_status": "200"
+ },
+ "gemini-grounding": {
+  "domain": "ai.google.dev",
+  "first_seen": "20231213",
+  "http_status": "200"
  },
  "cohere": {
   "domain": "cohere.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040127",
+  "http_status": "200"
  },
- "groq": {
-  "domain": "groq.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "mastodon": {
+  "domain": "joinmastodon.org",
+  "first_seen": "20170603",
+  "http_status": "301"
  },
- "zhipu": {
-  "domain": "z.ai",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "qwen": {
-  "domain": "aliyun.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "moonshot": {
-  "domain": "moonshot.ai",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "bluesky": {
+  "domain": "bsky.app",
+  "first_seen": "20221018",
+  "http_status": "200"
  },
  "deepseek": {
   "domain": "deepseek.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20040827",
+  "http_status": "302"
  },
  "minimax": {
   "domain": "minimax.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20211217",
+  "http_status": "200"
  },
  "openrouter": {
   "domain": "openrouter.ai",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20230525",
+  "http_status": "308"
  },
- "crawlee": {
-  "domain": "crawlee.dev",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+ "openai-websearch": {
+  "domain": "openai.com",
+  "first_seen": "20040328",
+  "http_status": "200"
+ },
+ "anthropic-websearch": {
+  "domain": "anthropic.com",
+  "first_seen": "20040123",
+  "http_status": "200"
+ },
+ "xai-live-search": {
+  "domain": "x.ai",
+  "first_seen": "20110222",
+  "http_status": "200"
+ },
+ "groq": {
+  "domain": "groq.com",
+  "first_seen": "20110202",
+  "http_status": "200"
+ },
+ "zhipu": {
+  "domain": "z.ai",
+  "first_seen": "20100712",
+  "http_status": "200"
+ },
+ "qwen": {
+  "domain": "aliyun.com",
+  "first_seen": "20071017",
+  "http_status": "200"
+ },
+ "moonshot": {
+  "domain": "moonshot.ai",
+  "first_seen": "20211202",
+  "http_status": "301"
  },
  "scrapy": {
   "domain": "scrapy.org",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20081015",
+  "http_status": "200"
+ },
+ "crawlee": {
+  "domain": "crawlee.dev",
+  "first_seen": "20220804",
+  "http_status": "200"
  },
  "playwright": {
   "domain": "playwright.dev",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20200509",
+  "http_status": "200"
  },
  "browser-use": {
   "domain": "browser-use.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20241113",
+  "http_status": "200"
  },
  "lightpanda": {
   "domain": "lightpanda.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20240322",
+  "http_status": "200"
  },
  "rapidapi": {
   "domain": "rapidapi.com",
-  "error": "<urlopen error [Errno 111] Connection refused>"
+  "first_seen": "20130617",
+  "http_status": "200"
  },
  "scrapeops-proxy": {
   "domain": "scrapeops.io",
-  "error": "<urlopen error [Errno 111] Connection refused>"
- },
- "contextdev": {
-  "domain": "context.dev",
-  "first_seen": "20211129",
+  "first_seen": "20211207",
   "http_status": "200"
- },
- "olostep": {
-  "domain": "olostep.com",
-  "first_seen": "20230724",
-  "http_status": "301"
  }
 }

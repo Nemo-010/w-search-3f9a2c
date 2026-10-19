@@ -5,6 +5,7 @@
 - Pricing: https://simplescraper.io/pricing
 - Docs: —
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/simplescraper/llms.txt`
+- First Wayback capture of domain: 20191024 (simplescraper.io)
 
 ## Free tier
 

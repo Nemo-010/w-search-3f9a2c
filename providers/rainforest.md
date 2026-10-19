@@ -5,6 +5,7 @@
 - Pricing: https://www.rainforestapi.com/pricing
 - Docs: https://www.rainforestapi.com/docs
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/rainforest/llms.txt`
+- First Wayback capture of domain: 20200610 (rainforestapi.com)
 
 ## Free tier
 

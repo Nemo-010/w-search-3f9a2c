@@ -5,6 +5,7 @@
 - Pricing: —
 - Docs: —
 - llms.txt: none found at the probed locations
+- First Wayback capture of domain: 20241011 (open.bochaai.com)
 
 ## Free tier
 

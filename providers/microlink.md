@@ -5,6 +5,7 @@
 - Pricing: https://microlink.io/#pricing
 - Docs: https://microlink.io/docs/api/getting-started
 - llms.txt: not configured for this entry; one was detected and snapshotted under `data/snapshots/microlink/llms.txt`
+- First Wayback capture of domain: 20171120 (microlink.io)
 
 ## Free tier
 
